@@ -129,19 +129,30 @@ describe('curriculos de cursos en espanol', () => {
       languageCode: 'es',
     });
     expect(englishFoundations.modules.map((moduleData) => moduleData.slug)).toEqual(['a1-saludos']);
-    expect(englishFoundations.modules.map((moduleData) => moduleData.lessons.length)).toEqual([4]);
-    expect(englishFoundationsLessons).toHaveLength(4);
+    expect(englishFoundations.modules.map((moduleData) => moduleData.lessons.length)).toEqual([15]);
+    expect(englishFoundationsLessons).toHaveLength(15);
     expect(englishFoundationsLessons.map((lesson) => lesson.order)).toEqual(
-      Array.from({ length: 4 }, (_, index) => index + 1),
+      Array.from({ length: 15 }, (_, index) => index + 1),
     );
     expect(
       englishFoundationsLessons.filter((lesson) => lesson.type === 'explanatory'),
-    ).toHaveLength(2);
+    ).toHaveLength(13);
     expect(englishFoundationsLessons.map((lesson) => lesson.mediaUrl)).toEqual([
       'listening',
       'matching',
       null,
       'dialogue',
+      'fill-blank',
+      'type-choice',
+      'correct-word',
+      'correct-sentence',
+      'word-order',
+      'word-build',
+      'listen-choice',
+      'dictation',
+      'dialogue-choice',
+      'branching-dialogue',
+      'mini-review',
     ]);
     expect(englishFoundationsLessons[0]).toMatchObject({
       type: 'explanatory',
@@ -162,10 +173,15 @@ describe('curriculos de cursos en espanol', () => {
     });
     expect(
       englishFoundationsLessons.filter((lesson) => lesson.audioUrl).map((lesson) => lesson.order),
-    ).toEqual([1, 4]);
-    for (const lesson of englishFoundationsLessons.filter((item) => item.audioUrl)) {
+    ).toEqual([1, 4, 11, 12, 13, 14]);
+    for (const lesson of englishFoundationsLessons.filter((item) => item.order <= 4 && item.audioUrl)) {
       expect(lesson.audioUrl).toBe(
         `/audio/es/english-foundations-a1-a2/lesson-${lesson.order}-en.mp3`,
+      );
+    }
+    for (const lesson of englishFoundationsLessons.filter((item) => item.order > 4 && item.audioUrl)) {
+      expect(lesson.audioUrl).toBe(
+        `/audio/en/english-foundations-a1-a2/lesson-${lesson.order}-en.mp3`,
       );
     }
   });

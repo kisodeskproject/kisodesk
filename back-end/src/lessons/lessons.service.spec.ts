@@ -89,10 +89,17 @@ describe('LessonsService mastery', () => {
     );
     expect(tx.userLessonProgress.upsert).toHaveBeenCalledWith(
       expect.objectContaining({
-        where: { userId_lessonId: { userId: 'user-1', lessonId: lesson.id } },
+        where: {
+          userId_lessonId_localeCode: {
+            userId: 'user-1',
+            lessonId: lesson.id,
+            localeCode: 'es-latam',
+          },
+        },
         create: expect.objectContaining({
           status: LessonProgressStatus.MASTERED,
           successfulAttempts: 1,
+          localeCode: 'es-latam',
         }),
       }),
     );
@@ -118,10 +125,17 @@ describe('LessonsService mastery', () => {
     expect(result.recommendation).toBe('review');
     expect(tx.userLessonProgress.upsert).toHaveBeenCalledWith(
       expect.objectContaining({
-        where: { userId_lessonId: { userId: 'user-1', lessonId: lesson.id } },
+        where: {
+          userId_lessonId_localeCode: {
+            userId: 'user-1',
+            lessonId: lesson.id,
+            localeCode: 'es-latam',
+          },
+        },
         create: expect.objectContaining({
           userId: 'user-1',
           lessonId: lesson.id,
+          localeCode: 'es-latam',
           status: LessonProgressStatus.IN_PROGRESS,
           attemptsCount: 1,
         }),

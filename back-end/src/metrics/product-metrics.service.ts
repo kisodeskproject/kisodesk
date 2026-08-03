@@ -44,7 +44,7 @@ const asNumber = (value: bigint | number | null): number => (value === null ? 0 
 @Injectable()
 export class ProductMetricsService implements OnModuleInit, OnModuleDestroy {
   private readonly logger = new Logger(ProductMetricsService.name);
-  private timer?: NodeJS.Timeout;
+  private timer?: ReturnType<typeof setInterval>;
   private lastAnalyticsAt = 0;
   private readonly analyticsRefreshMs: number;
 

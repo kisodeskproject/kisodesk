@@ -27,12 +27,14 @@ describe('JwtStrategy', () => {
     };
     const { strategy } = createStrategy(user);
 
+    const authTime = 1_700_000_000;
     await expect(
-      strategy.validate({ sub: 'user-1', email: 'old@example.com', role: 'ADMIN', ver: 2 }),
+      strategy.validate({ sub: 'user-1', email: 'old@example.com', role: 'ADMIN', ver: 2, authTime }),
     ).resolves.toEqual({
       id: user.id,
       email: user.email,
       role: user.role,
+      authTime,
     });
   });
 

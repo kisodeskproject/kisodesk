@@ -1,4 +1,5 @@
 import { UsersController } from './users.controller';
+import { REFRESH_TOKEN_COOKIE_PATH } from '../auth/auth-session.config';
 
 describe('UsersController account self-service', () => {
   function createController() {
@@ -48,16 +49,21 @@ describe('UsersController account self-service', () => {
     };
     usersService.removeMe.mockResolvedValue(undefined);
 
-    await controller.removeMe({ user: { id: 'user-1' } } as any, dto, reply as any);
+    const authTime = 1_700_000_000;
+    await controller.removeMe({ user: { id: 'user-1', authTime } } as any, dto, reply as any);
 
-    expect(usersService.removeMe).toHaveBeenCalledWith('user-1', dto);
+    expect(usersService.removeMe).toHaveBeenCalledWith('user-1', dto, authTime);
     expect(reply.clearCookie).toHaveBeenCalledWith(
       'access_token',
       expect.objectContaining({ httpOnly: true, sameSite: 'lax', path: '/' }),
     );
     expect(reply.clearCookie).toHaveBeenCalledWith(
       'refresh_token',
-      expect.objectContaining({ httpOnly: true, sameSite: 'lax', path: '/' }),
+      expect.objectContaining({
+        httpOnly: true,
+        sameSite: 'lax',
+        path: REFRESH_TOKEN_COOKIE_PATH,
+      }),
     );
   });
 });
