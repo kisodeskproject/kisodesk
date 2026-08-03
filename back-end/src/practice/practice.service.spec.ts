@@ -10,6 +10,7 @@ describe('PracticeService', () => {
       },
       practiceSession: {
         create: jest.fn(),
+        findUnique: jest.fn(),
         findMany: jest.fn().mockResolvedValue([]),
       },
       userRankingCache: { upsert: jest.fn() },
@@ -48,6 +49,10 @@ describe('PracticeService', () => {
       errorTracking as any,
       progressService as any,
       telemetryService as any,
+      counter as any,
+      counter as any,
+      counter as any,
+      counter as any,
       counter as any,
       histogram as any,
       histogram as any,
@@ -144,5 +149,16 @@ describe('PracticeService', () => {
       where: { id: 'user-1', OR: [{ bestGrossWpm: null }, { bestGrossWpm: { lt: 40 } }] },
       data: { bestGrossWpm: 40 },
     });
+  });
+
+  it('no cuenta una práctica completada cuando PostgreSQL detecta un reintento duplicado', async () => {
+    const { service, tx, counter } = createService();
+    tx.practiceSession.findUnique.mockResolvedValue({ id: 'session-1', createdAt: new Date() });
+
+    const result = await service.savePractice('user-1', createDto({ clientSessionId: '5cb5bf29-0d5c-4d3f-8494-8041e73a3f42' }));
+
+    expect(result).toEqual(expect.objectContaining({ result: 'duplicate' }));
+    expect(tx.practiceSession.create).not.toHaveBeenCalled();
+    expect(counter.labels).toHaveBeenCalledWith('direct');
   });
 });

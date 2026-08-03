@@ -169,6 +169,7 @@ export async function syncGuestPracticeResults(): Promise<void> {
           errorSummary: session.errorSummary!,
           telemetry: session.telemetry,
           clientSessionId: session.clientSessionId,
+          source: 'guest_sync',
         });
         syncedIds.add(session.clientSessionId);
       } catch {

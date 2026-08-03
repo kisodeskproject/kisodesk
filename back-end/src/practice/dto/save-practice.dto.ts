@@ -68,6 +68,10 @@ export class TypingTelemetryDto {
 }
 
 export class SavePracticeDto {
+  @IsOptional()
+  @IsIn(['direct', 'guest_sync'])
+  source?: 'direct' | 'guest_sync';
+
   @IsInt()
   @Min(0)
   netWpm!: number;

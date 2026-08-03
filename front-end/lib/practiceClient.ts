@@ -20,6 +20,7 @@ export interface AdaptivePracticeText extends PracticeText {
 }
 
 export interface SavePracticePayload {
+  source?: 'direct' | 'guest_sync';
   netWpm: number;
   grossWpm: number;
   accuracy: number;
@@ -36,6 +37,7 @@ export interface SavePracticePayload {
 export interface SavePracticeResponse {
   id: string;
   savedAt: string;
+  result?: 'created' | 'duplicate';
 }
 
 const PRACTICE_TEXT_HISTORY_LIMIT = 100;

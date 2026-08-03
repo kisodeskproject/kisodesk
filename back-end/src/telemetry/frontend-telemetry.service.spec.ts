@@ -11,7 +11,9 @@ describe('FrontendTelemetryService', () => {
     const vitals = metric();
     const service = new FrontendTelemetryService(
       { get: () => 'v1.2.3' } as any,
+      { $executeRawUnsafe: jest.fn() } as any,
       vitals as any, metric() as any, metric() as any, metric() as any,
+      metric() as any, metric() as any, metric() as any, metric() as any, metric() as any,
       metric() as any, metric() as any, metric() as any, metric() as any,
     );
 
@@ -25,8 +27,10 @@ describe('FrontendTelemetryService', () => {
     const failed = metric();
     const service = new FrontendTelemetryService(
       { get: () => undefined } as any,
+      { $executeRawUnsafe: jest.fn() } as any,
       metric() as any, metric() as any, metric() as any, metric() as any,
-      failed as any, requests as any, metric() as any, metric() as any,
+      failed as any, requests as any, metric() as any, metric() as any, metric() as any,
+      metric() as any, metric() as any, metric() as any, metric() as any,
     );
 
     service.record([{ type: 'request', route: '/es-latam/practice', statusClass: '5xx', value: 0.5 }]);

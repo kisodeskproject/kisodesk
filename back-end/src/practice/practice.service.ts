@@ -42,6 +42,14 @@ export class PracticeService {
     private telemetryService: TelemetryService,
     @InjectMetric('typing_practice_sessions_completed_total')
     private readonly practiceSessionsCounter: Counter,
+    @InjectMetric('typing_practice_results_persisted_total')
+    private readonly practiceResultsPersistedCounter: Counter,
+    @InjectMetric('typing_practice_result_duplicates_total')
+    private readonly practiceResultDuplicatesCounter: Counter,
+    @InjectMetric('typing_practice_result_rejected_total')
+    private readonly practiceResultRejectedCounter: Counter,
+    @InjectMetric('typing_practice_result_errors_total')
+    private readonly practiceResultErrorsCounter: Counter,
     @Optional()
     @InjectMetric('typing_practice_duration_seconds')
     private readonly practiceDurationHistogram?: Histogram,
@@ -136,6 +144,8 @@ export class PracticeService {
   }
 
   async savePractice(userId: string, dto: SavePracticeDto) {
+    const source = dto.source === 'guest_sync' ? 'guest_sync' : 'direct';
+    try {
     if (dto.layoutId && !SUPPORTED_LAYOUT_IDS.has(dto.layoutId))
       throw new BadRequestException('layoutId no soportado');
     if (dto.telemetry) this.validateTelemetry(dto.telemetry);
@@ -157,7 +167,7 @@ export class PracticeService {
             where: { userId_clientSessionId: { userId, clientSessionId: dto.clientSessionId } },
           })
         : null;
-      if (duplicate) return duplicate;
+      if (duplicate) return { practice: duplicate, created: false };
       const existingPracticeText = dto.textId
         ? await tx.practiceText.findUnique({
             where: { id: dto.textId },
@@ -228,19 +238,34 @@ export class PracticeService {
       await this.updateRankingCache(tx, userId, 'global');
       await this.updateBestGrossWpm(tx, userId, dto.grossWpm);
 
-      return savedPractice;
+      return { practice: savedPractice, created: true };
     });
+
+    if (!practice.created) {
+      this.practiceResultDuplicatesCounter.labels(source).inc();
+      return { id: practice.practice.id, savedAt: practice.practice.createdAt.toISOString(), result: 'duplicate' as const };
+    }
 
     const layoutLabel = dto.layoutId ?? 'unknown';
     this.practiceSessionsCounter.labels('true', dto.language, layoutLabel).inc();
+    this.practiceResultsPersistedCounter.labels(source).inc();
     this.practiceDurationHistogram?.labels(dto.language, layoutLabel).observe(dto.timeElapsed);
     this.practiceNetWpmHistogram?.labels(dto.language, layoutLabel).observe(dto.netWpm);
     this.practiceAccuracyHistogram?.labels(dto.language, layoutLabel).observe(dto.accuracy);
 
     return {
-      id: practice.id,
-      savedAt: practice.createdAt.toISOString(),
+      id: practice.practice.id,
+      savedAt: practice.practice.createdAt.toISOString(),
+      result: 'created' as const,
     };
+    } catch (error) {
+      if (error instanceof BadRequestException) {
+        this.practiceResultRejectedCounter.labels(source, 'invalid_content').inc();
+      } else {
+        this.practiceResultErrorsCounter.labels(source, 'persistence').inc();
+      }
+      throw error;
+    }
   }
 
   private validateTelemetry(telemetry: NonNullable<SavePracticeDto['telemetry']>) {

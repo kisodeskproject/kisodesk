@@ -2,7 +2,7 @@ import { Injectable, Logger, OnModuleDestroy, OnModuleInit } from '@nestjs/commo
 import { ConfigService } from '@nestjs/config';
 import { InjectMetric } from '@willsoto/nestjs-prometheus';
 import { Prisma } from '@prisma/client';
-import { Gauge } from 'prom-client';
+import { Counter, Gauge, Histogram } from 'prom-client';
 
 import { COUNTRY_CODE_SET } from '../common/country-codes';
 import { PrismaService } from '../prisma/prisma.service';
@@ -46,6 +46,7 @@ export class ProductMetricsService implements OnModuleInit, OnModuleDestroy {
   private readonly logger = new Logger(ProductMetricsService.name);
   private timer?: ReturnType<typeof setInterval>;
   private lastAnalyticsAt = 0;
+  private readonly lastSuccessAt = new Map<string, string>();
   private readonly analyticsRefreshMs: number;
 
   constructor(
@@ -55,6 +56,9 @@ export class ProductMetricsService implements OnModuleInit, OnModuleDestroy {
     @InjectMetric('typing_product_new_users') private readonly newUsers: Gauge,
     @InjectMetric('typing_product_recurring_users') private readonly recurringUsers: Gauge,
     @InjectMetric('typing_product_metrics_last_refresh_timestamp_seconds') private readonly lastRefresh: Gauge,
+    @InjectMetric('typing_product_metrics_update_total') private readonly updates: Counter,
+    @InjectMetric('typing_product_metrics_last_success_timestamp_seconds') private readonly lastSuccess: Gauge,
+    @InjectMetric('typing_product_metrics_update_duration_seconds') private readonly updateDuration: Histogram,
     @InjectMetric('typing_product_retention_percent') private readonly retention: Gauge,
     @InjectMetric('typing_product_retention_cohort_size') private readonly retentionCohort: Gauge,
     @InjectMetric('typing_product_country_events') private readonly countryEvents: Gauge,
@@ -83,7 +87,7 @@ export class ProductMetricsService implements OnModuleInit, OnModuleDestroy {
 
   private async refresh() {
     const now = new Date();
-    try {
+    const coreUpdated = await this.runOperation('core', async () => {
       await Promise.all(
         WINDOWS.map(async ({ label, milliseconds }) => {
           const since = new Date(now.getTime() - milliseconds);
@@ -104,21 +108,45 @@ export class ProductMetricsService implements OnModuleInit, OnModuleDestroy {
           this.recurringUsers.labels(label).set(recurring);
         }),
       );
+    });
+    if (coreUpdated) this.lastRefresh.setToCurrentTime();
 
-      if (now.getTime() - this.lastAnalyticsAt >= this.analyticsRefreshMs) {
-        await this.refreshAnalytics(now);
-        this.lastAnalyticsAt = now.getTime();
-      }
-      this.lastRefresh.setToCurrentTime();
-    } catch (error) {
-      this.logger.warn(
-        `No se actualizaron métricas de producto: ${error instanceof Error ? error.name : 'UnknownError'}`,
-      );
+    if (now.getTime() - this.lastAnalyticsAt >= this.analyticsRefreshMs) {
+      const results = await Promise.all([
+        this.runOperation('countries', () => this.refreshCountryMetrics(now)),
+        this.runOperation('retention', () => this.refreshRetention(now)),
+        this.runOperation('learning', () => this.refreshLearning()),
+      ]);
+      if (results.every(Boolean)) this.lastAnalyticsAt = now.getTime();
     }
   }
 
-  private async refreshAnalytics(now: Date) {
-    await Promise.all([this.refreshCountryMetrics(now), this.refreshRetention(now), this.refreshLearning()]);
+  private async runOperation(operation: 'core' | 'countries' | 'retention' | 'learning', action: () => Promise<void>) {
+    const startedAt = performance.now();
+    try {
+      await action();
+      this.updates.labels('success', operation).inc();
+      this.lastSuccess.labels(operation).setToCurrentTime();
+      this.lastSuccessAt.set(operation, new Date().toISOString());
+      return true;
+    } catch (error) {
+      this.updates.labels('error', operation).inc();
+      const prismaError = error as { code?: unknown; meta?: unknown; stack?: unknown; message?: unknown; constructor?: { name?: unknown } };
+      this.logger.warn({
+        event: 'product_metrics_update_failed',
+        operation,
+        errorClass: prismaError?.constructor?.name ?? 'UnknownError',
+        code: typeof prismaError?.code === 'string' ? prismaError.code : undefined,
+        message: typeof prismaError?.message === 'string' ? prismaError.message.slice(0, 500) : undefined,
+        metaKeys: prismaError?.meta && typeof prismaError.meta === 'object' ? Object.keys(prismaError.meta as object) : undefined,
+        stack: typeof prismaError?.stack === 'string' ? prismaError.stack : undefined,
+        durationSeconds: (performance.now() - startedAt) / 1000,
+        lastSuccessTimestamp: this.lastSuccessAt.get(operation),
+      });
+      return false;
+    } finally {
+      this.updateDuration.labels(operation).observe((performance.now() - startedAt) / 1000);
+    }
   }
 
   private normalizeCountry(value: string | null): string {

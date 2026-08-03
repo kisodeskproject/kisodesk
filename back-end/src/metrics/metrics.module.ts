@@ -70,6 +70,23 @@ const frontendSessionsCounter = makeCounterProvider({
   labelNames: ['frontend_version'],
 });
 
+// Compatibilidad: emitir ambas hasta completar la retención configurada de Prometheus (7 días en producción),
+// y retirar typing_frontend_sessions_observed_total en el siguiente despliegue posterior a ese periodo.
+const frontendInitializationsCounter = makeCounterProvider({
+  name: 'typing_frontend_initializations_sampled_total',
+  help: 'Inicializaciones muestreadas del frontend; no representa usuarios ni sesiones únicas',
+  labelNames: ['frontend_version'],
+});
+const frontendPageViewsCounter = makeCounterProvider({
+  name: 'typing_frontend_page_views_observed_total',
+  help: 'Vistas de página observadas con consentimiento; no representa visitantes únicos',
+  labelNames: ['route'],
+});
+const anonymousSessionsCounter = makeCounterProvider({
+  name: 'typing_anonymous_sessions_observed_total',
+  help: 'Sesiones anónimas observadas con consentimiento; no representa visitantes únicos',
+});
+
 const frontendSessionsByLocaleCounter = makeCounterProvider({
   name: 'typing_frontend_sessions_by_locale_total',
   help: 'Sesiones frontend observadas por locale canónico de la ruta',
@@ -100,6 +117,42 @@ const practiceSessionsCounter = makeCounterProvider({
   name: 'typing_practice_sessions_completed_total',
   help: 'Total de sesiones de práctica libre completadas',
   labelNames: ['authenticated', 'language', 'layout'],
+});
+
+const practiceResultsPersistedCounter = makeCounterProvider({
+  name: 'typing_practice_results_persisted_total',
+  help: 'Resultados de práctica creados y confirmados por PostgreSQL',
+  labelNames: ['source'],
+});
+const practiceResultDuplicatesCounter = makeCounterProvider({
+  name: 'typing_practice_result_duplicates_total',
+  help: 'Reintentos idempotentes de resultados de práctica ya persistidos',
+  labelNames: ['source'],
+});
+const practiceResultRejectedCounter = makeCounterProvider({
+  name: 'typing_practice_result_rejected_total',
+  help: 'Resultados de práctica rechazados por validación',
+  labelNames: ['source', 'reason'],
+});
+const practiceResultErrorsCounter = makeCounterProvider({
+  name: 'typing_practice_result_errors_total',
+  help: 'Errores inesperados al guardar resultados de práctica',
+  labelNames: ['source', 'operation'],
+});
+const practiceStartedObservedCounter = makeCounterProvider({
+  name: 'typing_practice_started_observed_total',
+  help: 'Prácticas iniciadas observadas en el navegador; no confirmadas por el backend',
+  labelNames: ['auth_state', 'language', 'layout'],
+});
+const practiceCompletedObservedCounter = makeCounterProvider({
+  name: 'typing_practice_completed_observed_total',
+  help: 'Prácticas completadas observadas en el navegador; no confirmadas por el backend',
+  labelNames: ['auth_state', 'language', 'layout'],
+});
+const practiceAbandonedObservedCounter = makeCounterProvider({
+  name: 'typing_practice_abandoned_observed_total',
+  help: 'Prácticas abandonadas observadas explícitamente en el navegador',
+  labelNames: ['auth_state', 'language', 'layout'],
 });
 
 const practiceDurationHistogram = makeHistogramProvider({
@@ -189,6 +242,22 @@ const productMetricsRefreshGauge = makeGaugeProvider({
   name: 'typing_product_metrics_last_refresh_timestamp_seconds',
   help: 'Marca de tiempo de la última actualización correcta de métricas de producto',
 });
+const productMetricsUpdateCounter = makeCounterProvider({
+  name: 'typing_product_metrics_update_total',
+  help: 'Actualizaciones de métricas de producto por operación y resultado',
+  labelNames: ['result', 'operation'],
+});
+const productMetricsLastSuccessGauge = makeGaugeProvider({
+  name: 'typing_product_metrics_last_success_timestamp_seconds',
+  help: 'Fecha de la última actualización exitosa por operación de producto',
+  labelNames: ['operation'],
+});
+const productMetricsUpdateDuration = makeHistogramProvider({
+  name: 'typing_product_metrics_update_duration_seconds',
+  help: 'Duración de cada actualización de métricas de producto',
+  labelNames: ['operation'],
+  buckets: [0.01, 0.05, 0.1, 0.25, 0.5, 1, 2, 5, 10, 30],
+});
 
 const productRetentionGauge = makeGaugeProvider({
   name: 'typing_product_retention_percent',
@@ -257,6 +326,9 @@ const productLearningSampleGauge = makeGaugeProvider({
     frontendRequestDurationHistogram,
     frontendSessionsCounter,
     frontendSessionsByLocaleCounter,
+    frontendInitializationsCounter,
+    frontendPageViewsCounter,
+    anonymousSessionsCounter,
     prismaQueryDurationHistogram,
     prismaQueriesCounter,
     prismaErrorsCounter,
@@ -266,6 +338,13 @@ const productLearningSampleGauge = makeGaugeProvider({
       useClass: MetricsInterceptor,
     },
     practiceSessionsCounter,
+    practiceResultsPersistedCounter,
+    practiceResultDuplicatesCounter,
+    practiceResultRejectedCounter,
+    practiceResultErrorsCounter,
+    practiceStartedObservedCounter,
+    practiceCompletedObservedCounter,
+    practiceAbandonedObservedCounter,
     practiceDurationHistogram,
     practiceNetWpmHistogram,
     practiceAccuracyHistogram,
@@ -281,6 +360,9 @@ const productLearningSampleGauge = makeGaugeProvider({
     productNewUsersGauge,
     productRecurringUsersGauge,
     productMetricsRefreshGauge,
+    productMetricsUpdateCounter,
+    productMetricsLastSuccessGauge,
+    productMetricsUpdateDuration,
     productRetentionGauge,
     productRetentionCohortGauge,
     productCountryGauge,
@@ -303,10 +385,20 @@ const productLearningSampleGauge = makeGaugeProvider({
     frontendRequestDurationHistogram,
     frontendSessionsCounter,
     frontendSessionsByLocaleCounter,
+    frontendInitializationsCounter,
+    frontendPageViewsCounter,
+    anonymousSessionsCounter,
     prismaQueryDurationHistogram,
     prismaQueriesCounter,
     prismaErrorsCounter,
     practiceSessionsCounter,
+    practiceResultsPersistedCounter,
+    practiceResultDuplicatesCounter,
+    practiceResultRejectedCounter,
+    practiceResultErrorsCounter,
+    practiceStartedObservedCounter,
+    practiceCompletedObservedCounter,
+    practiceAbandonedObservedCounter,
     practiceDurationHistogram,
     practiceNetWpmHistogram,
     practiceAccuracyHistogram,
@@ -322,6 +414,9 @@ const productLearningSampleGauge = makeGaugeProvider({
     productNewUsersGauge,
     productRecurringUsersGauge,
     productMetricsRefreshGauge,
+    productMetricsUpdateCounter,
+    productMetricsLastSuccessGauge,
+    productMetricsUpdateDuration,
     productRetentionGauge,
     productRetentionCohortGauge,
     productCountryGauge,
