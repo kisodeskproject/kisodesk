@@ -14,7 +14,7 @@ export default function Footer() {
   const t = useTranslations(toSupportedLocale(lang));
 
   const contactEmail = 'kisodesk.project@gmail.com';
-  const githubUrl = 'https://github.com/kisodeskproject';
+  const githubUrl = 'https://github.com/kisodeskproject/kisodesk';
 
   return (
     <footer className="relative z-10 mt-[-50px] border-t border-slate-700 bg-slate-900">

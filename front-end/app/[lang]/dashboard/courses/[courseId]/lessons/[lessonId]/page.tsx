@@ -646,7 +646,7 @@ export default function LessonPracticePage() {
                     className="mb-3 rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-2 text-sm text-amber-700 dark:text-amber-300"
                     role="status"
                   >
-                    {t(`lessonid.general.audioWarning.`)}
+                    {t('lessonid.general.audioWarning')}
                   </p>
                 ) : null}
                 {currentLesson.audioUrl ? (
@@ -1207,7 +1207,7 @@ export default function LessonPracticePage() {
             className="mb-3 rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-2 text-sm text-amber-700 dark:text-amber-300"
             role="status"
           >
-            {t(`lessonid.general.audioWarning.`)}
+            {t('lessonid.general.audioWarning')}
           </p>
         )}
         <audio
@@ -1338,7 +1338,7 @@ export default function LessonPracticePage() {
                   className="mb-3 rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-2 text-sm text-amber-700 dark:text-amber-300"
                   role="status"
                 >
-                  {t(`lessonid.general.audioWarning.`)}
+                  {t('lessonid.general.audioWarning')}
                 </p>
               )}
               {usesManualAudio ? (
