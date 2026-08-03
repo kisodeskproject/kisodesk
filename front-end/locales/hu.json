@@ -1,0 +1,1278 @@
+{
+  "auth": {
+    "login": {
+      "metadata": {
+        "title": "Bejelentkezés",
+        "description": "Jelentkezzen be a Kiso Deskbe a gépelési gyakorlás folytatásához."
+      },
+      "general": {
+        "googleError": "Nem sikerült bejelentkezni a Google-lel.",
+        "tooManyAttempts": "Túl sok próbálkozás. Várjon egy percet.",
+        "requiredFields": "Töltse ki az összes mezőt.",
+        "invalidCredentials": "Helytelen e-mail-cím vagy jelszó",
+        "signIn": "Bejelentkezés",
+        "continueWithGoogle": "Folytatás Google-lel",
+        "or": "vagy",
+        "email": "E-mail-cím",
+        "password": "Jelszó",
+        "sending": "Küldés...",
+        "noAccount": "Nincs még fiókja?",
+        "createAccount": "Fiók létrehozása",
+        "forgotPassword": "Elfelejtette a jelszavát?"
+      }
+    },
+    "register": {
+      "metadata": {
+        "title": "Fiók létrehozása",
+        "description": "Hozzon létre Kiso Desk-fiókot, és kezdje el a vakírás gyakorlását."
+      },
+      "general": {
+        "acceptLegalRequired": "A fiók létrehozásához el kell fogadnia a Felhasználási feltételeket és az Adatvédelmi szabályzatot",
+        "googleError": "Nem sikerült regisztrálni a Google-lel.",
+        "tooManyAttempts": "Túl sok próbálkozás. Várjon egy percet.",
+        "unknownError": "Ismeretlen hiba",
+        "createAccount": "Fiók létrehozása",
+        "registerWithGoogle": "Regisztráció Google-lel",
+        "or": "vagy",
+        "name": "Név",
+        "email": "E-mail-cím",
+        "password": "Jelszó",
+        "acceptTermsPrefix": "Elfogadom a(z)",
+        "acceptTermsLink": "Felhasználási feltételeket",
+        "acceptPrivacyPrefix": "Elolvastam a(z)",
+        "acceptPrivacyLink": "Adatvédelmi szabályzatot",
+        "alreadyHaveAccount": "Már van fiókja?",
+        "signIn": "Bejelentkezés",
+        "socialFeaturesNotice": "A közösségi funkciók opcionálisak, adatvédelmi beállításaikat pedig a profiljában konfigurálhatja."
+      }
+    },
+    "resetPassword": {
+      "general": {
+        "invalidLink": "A hivatkozás nem tartalmaz érvényes tokent.",
+        "passwordTooShort": "A jelszónak legalább 8 karakter hosszúnak kell lennie.",
+        "passwordsDoNotMatch": "A jelszavak nem egyeznek.",
+        "invalidOrExpired": "A hivatkozás érvénytelen, már felhasználták vagy lejárt.",
+        "successTitle": "Jelszó frissítve",
+        "successMessage": "Most már bejelentkezhet az új jelszavával.",
+        "backToLogin": "Vissza a bejelentkezéshez",
+        "title": "Új jelszó létrehozása",
+        "instructions": "Válasszon egy legalább 8 karakterből álló új jelszót.",
+        "newPassword": "Új jelszó",
+        "confirmPassword": "Jelszó megerősítése",
+        "submit": "Jelszó módosítása",
+        "requestNewLink": "Új hivatkozás kérése"
+      }
+    }
+  },
+  "profile": {
+    "general": {
+      "title": "Profil",
+      "guestModeMessage": "Jelentkezzen be profilja és statisztikái megtekintéséhez.",
+      "signIn": "Bejelentkezés",
+      "loadError": "Hiba a profil betöltésekor",
+      "loadErrorText": "Nem sikerült betölteni a profilt",
+      "nameRequired": "Adja meg a nevét",
+      "name": "Név",
+      "email": "E-mail-cím",
+      "emailReadOnly": "Az e-mail-cím nem szerkeszthető a profilból.",
+      "editProfile": "Profil szerkesztése",
+      "changePassword": "Jelszó módosítása",
+      "save": "Mentés",
+      "savingText": "Mentés...",
+      "cancel": "Mégse",
+      "retry": "Újrapróbálkozás",
+      "savedSuccessfully": "A profil sikeresen frissítve.",
+      "saveError": "Nem sikerült menteni a profilt. Próbálja újra.",
+      "conflictError": "A profil egy másik lapon módosult. Töltse újra az adatokat, mielőtt ismét mentene.",
+      "required": "Ez a mező kötelező.",
+      "accountSection": "Fiók",
+      "preferencesSection": "Beállítások",
+      "securitySection": "Biztonság",
+      "memberSince": "Tagság kezdete",
+      "lastLogin": "Utolsó bejelentkezés",
+      "lastUpdate": "Utolsó frissítés",
+      "interfaceLanguage": "Felület nyelve",
+      "keyboardLayout": "Billentyűzetkiosztás",
+      "accessibility": "Akadálymentesség",
+      "adminRole": "Rendszergazda",
+      "userRole": "Felhasználó",
+      "passwordSectionTitle": "Jelszó",
+      "passwordSectionDescription": "Bármikor kérhet jelszó-visszaállítási hivatkozást.",
+      "dataControlsTitle": "Adatai és fiókja",
+      "dataControlsDescription": "Töltse le adatainak másolatát, vagy véglegesen törölje fiókját.",
+      "exportTitle": "Adataim letöltése",
+      "exportDescription": "JSON-fájlt hoz létre a fiókadataival, előrehaladásával, gyakorlásaival, hibáival és kapcsolataival. Jelszavakat és tokeneket nem tartalmaz.",
+      "exportButton": "Adatok letöltése",
+      "exporting": "Letöltés előkészítése...",
+      "exportSuccess": "Az adatletöltés sikeresen elindult.",
+      "exportError": "Nem sikerült létrehozni az exportálást. Próbálja újra.",
+      "deleteTitle": "Fiókom törlése",
+      "deleteDescription": "Törli a fiókot és a hozzá kapcsolódó aktív adatokat. Ez a művelet nem vonható vissza.",
+      "deleteButton": "Fiók törlése",
+      "deleteModalTitle": "Fiók végleges törlése",
+      "deleteModalDescription": "Profilja, előrehaladása, munkamenetei, statisztikái, hibái, baráti kapcsolatai és hozzáférési munkamenetei törlődnek az aktív adatbázisból. A biztonsági mentésekre továbbra is az alkalmazandó megőrzési ciklus vonatkozik.",
+      "deleteConfirmEmailInstruction": "A megerősítéshez adja meg e-mail-címét:",
+      "deleteConfirmEmail": "Megerősítő e-mail-cím",
+      "deleteCurrentPassword": "Jelenlegi jelszó",
+      "deleteConfirmButton": "Végleges törlés",
+      "deleting": "Törlés...",
+      "deleteEmailMismatch": "A megerősítő e-mail-cím nem egyezik.",
+      "deletePasswordRequired": "Adja meg jelenlegi jelszavát",
+      "deleteInvalidPassword": "A jelenlegi jelszó helytelen.",
+      "deleteError": "Nem sikerült törölni a fiókot. Próbálja újra.",
+      "socialPrivacyTitle": "Közösségi adatvédelem",
+      "publicAlias": "Nyilvános álnév",
+      "publicAliasPlaceholder": "pelda_felhasznalo",
+      "publicAliasHelp": "3–30 karakter: betűk, számok, kötőjelek és aláhúzásjelek.",
+      "publicAliasInvalid": "A közösségi funkciók engedélyezése előtt állítson be érvényes álnevet.",
+      "showInRanking": "Megjelenés a ranglistán",
+      "showInRankingHelp": "Megjeleníti az álnevét és összesített eredményeit. Valódi neve és e-mail-címe rejtve marad",
+      "searchableByAlias": "Keresés engedélyezése álnév alapján",
+      "searchableByAliasHelp": "Más felhasználók kizárólag a nyilvános álneve alapján találhatják meg.",
+      "allowFriendRequests": "Barátkérelmek fogadása",
+      "allowFriendRequestsHelp": "Lehetővé teszi, hogy az álneve alapján megtaláló felhasználók kérelmet küldjenek.",
+      "showPresenceToFriends": "Jelenléti állapot megosztása barátokkal",
+      "showPresenceToFriendsHelp": "Online állapotát és utolsó aktivitását csak az elfogadott barátoknak mutatja.",
+      "shareStatsWithFriends": "Statisztikák megosztása barátokkal",
+      "shareStatsWithFriendsHelp": "Összesített gyakorlási statisztikáit csak az elfogadott barátoknak mutatja.",
+      "notConfigured": "Nincs beállítva",
+      "enabled": "Engedélyezve",
+      "disabled": "Letiltva",
+      "spanish": "Spanyol",
+      "english": "Angol",
+      "cookieConsentSaveError": "Nem sikerült menteni a sütikkel kapcsolatos döntését. Próbálja újra.",
+      "googleReauthFailed": "Nem sikerült befejezni a Google-lal történő újbóli hitelesítést.",
+      "googleReauthRequired": "Fiókja törléséhez hitelesítse magát újra a Google-lal.",
+      "privacyCookiesTitle": "Adatvédelem és sütik",
+      "privacyCookiesDescription": "Kezelje a nem alapvető technológiákkal kapcsolatos döntését.",
+      "cookieConsentAccepted": "Elfogadta a nem alapvető technológiák használatát.",
+      "cookieConsentRejected": "Elutasította a nem alapvető technológiák használatát.",
+      "cookieConsentUnset": "Még nem adta meg a nem alapvető technológiákra vonatkozó beállítását.",
+      "cookieConsentUpdatedAt": "Frissítve:",
+      "cookieConsentAccept": "Elfogadás",
+      "cookieConsentReject": "Elutasítás",
+      "googleReauthButton": "Újbóli hitelesítés Google-lal"
+    }
+  },
+  "friends": {
+    "general": {
+      "title": "Barátok",
+      "subtitle": "Kövesse barátai online állapotát, és csak a szabad gyakorlásuk eredményeit hasonlítsa össze.",
+      "guestModeMessage": "Jelentkezzen be barátai és aktivitásuk megtekintéséhez.",
+      "signIn": "Bejelentkezés",
+      "refresh": "Frissítés",
+      "retry": "Újrapróbálkozás",
+      "snapshotTitle": "Legutóbbi barátok",
+      "snapshotDescription": "Nézze meg, hányan vannak online, és nyissa meg a teljes panelt.",
+      "openFriends": "Barátok megnyitása",
+      "totalFriends": "Barátok",
+      "onlineNow": "jelenleg online",
+      "requests": "Kérelmek",
+      "searchTitle": "Felhasználók keresése",
+      "searchLabel": "Nyilvános álnév",
+      "searchPlaceholder": "Adjon meg legalább 3 karaktert az álnévből",
+      "searchButton": "Keresés",
+      "searchError": "Nem sikerült végrehajtani a keresést",
+      "noSearchResults": "Nem találhatók felhasználók.",
+      "statusFriends": "Barátok",
+      "statusPendingOutgoing": "Kérelem elküldve",
+      "statusPendingIncoming": "Kérelmet küldött Önnek",
+      "statusNotConnected": "Nincs kapcsolat",
+      "online": "Online",
+      "offline": "Offline",
+      "lastSeen": "Utolsó aktivitás",
+      "requestedAt": "Kérelem dátuma",
+      "freePractice": "Szabad gyakorlás",
+      "viewStats": "Statisztikák megtekintése",
+      "sendRequest": "Hozzáadás",
+      "accept": "Elfogadás",
+      "reject": "Elutasítás",
+      "remove": "Eltávolítás",
+      "incomingRequests": "Beérkező kérelmek",
+      "outgoingRequests": "Kimenő kérelmek",
+      "noIncomingRequests": "Nincsenek beérkező kérelmei.",
+      "noOutgoingRequests": "Nincsenek kimenő kérelmei.",
+      "myFriends": "Barátaim",
+      "noFriendsYet": "Még nem adott hozzá barátokat",
+      "block": "Letiltás",
+      "unblock": "Tiltás feloldása",
+      "blockedUsers": "Letiltott felhasználók",
+      "blockedUsersDescription": "Nem találhatják meg Önt, nem küldhetnek kérelmet, és nem férhetnek hozzá jelenléti állapotához vagy statisztikáihoz.",
+      "noBlockedUsers": "Nincsenek letiltott felhasználói.",
+      "presenceHidden": "Rejtett jelenléti állapot",
+      "statsHidden": "Ez a felhasználó nem osztja meg a statisztikáit.",
+      "friendNotFound": "Nem találtuk ezt a barátot.",
+      "backToFriends": "Vissza a barátokhoz",
+      "totalSessions": "Munkamenetek",
+      "averageWpm": "Átlagos WPM",
+      "averageAccuracy": "Átlagos pontosság",
+      "bestWpm": "Legjobb WPM",
+      "totalPracticeTime": "Teljes gyakorlási idő",
+      "byLanguage": "Nyelv szerinti bontás"
+    }
+  },
+  "ranking": {
+    "general": {
+      "title": "Ranglista",
+      "subtitle": "Hasonlítsa össze eredményeit más felhasználókéval.",
+      "yourStats": "Az Ön statisztikái",
+      "basedOnLast10": "Az utolsó 10 gyakorlás alapján.",
+      "score": "Pontszám",
+      "grossWpm": "Bruttó WPM",
+      "accuracy": "Pontosság",
+      "currentRank": "Jelenlegi helyezés",
+      "level": "Szint",
+      "topPercent": "Legjobb {percent}%",
+      "filterByLanguage": "Szűrés nyelv szerint",
+      "allLanguages": "Minden nyelv",
+      "user": "Felhasználó",
+      "noData": "Nincs megjeleníthető adat",
+      "errorFetchingRanking": "Nem sikerült betölteni a ranglistát. Próbálja újra.",
+      "errorFetchingStats": "Nem sikerült betölteni a statisztikáit. Próbálja újra.",
+      "retry": "Újrapróbálkozás",
+      "privateProfile": "Profilja nem jelenik meg a ranglistán. Ezt a profil Közösségi adatvédelem részében módosíthatja.",
+      "insufficientData": "Végezzen el legalább 5 gyakorlást, hogy lássa a helyezését a ranglistán.",
+      "noDataYet": "Ehhez a nyelvhez még nincsenek eredmények.",
+      "currentUser": "Ön",
+      "speedAxis": "Sebesség (WPM)",
+      "accuracyAxis": "Pontosság (%)",
+      "showing": "Megjelenítve",
+      "of": "/",
+      "previous": "Előző",
+      "next": "Következő",
+      "signInToParticipate": "Jelentkezzen be, hogy részt vehessen a ranglistán."
+    },
+    "topPerformers": {
+      "general": {
+        "wpm": "Nettó WPM"
+      }
+    },
+    "userStatsCard": {
+      "general": {
+        "levels": {
+          "bronze": "Bronz",
+          "silver": "Ezüst",
+          "gold": "Arany"
+        }
+      }
+    }
+  },
+  "marketing": {
+    "about": {
+      "metadata": {
+        "title": "A Kiso Deskről",
+        "description": "Ismerje meg a Kiso Desket és a vakírás tanulásának gyakorlatias megközelítését."
+      },
+      "general": {
+        "title": "A Kiso Deskről",
+        "subtitle": "Platform az átlátható, rendszeres és mérhető gépelési gyakorláshoz",
+        "project_title": "A projekt",
+        "project_text": "A Kiso Desk egy független projekt, amelynek célja egy átlátható és gyakorlatias vakírástanulási élmény létrehozása.",
+        "project_status_text": "Olyan térnek készült, ahol tapasztalati szinttől függetlenül bárki rendszeresen gyakorolhat és valódi fejlődést érhet el. A hangsúly a folyamatos tanuláson, a gyakorlatias használaton és a részletekre való odafigyelésen van, a mai igényekhez hasznos eszközt kínálva.",
+        "mission_title": "Küldetésünk",
+        "mission_text": "A Kiso Desknél úgy véljük, hogy a vakírás alapvető készség a digitális világban. Küldetésünk, hogy a gyors és pontos gépelés elsajátítása mindenki számára hozzáférhető, gyakorlatias és hatékony legyen, tapasztalati szinttől függetlenül.",
+        "vision_title": "Jövőképünk",
+        "vision_text": "Hasznos eszköz létrehozása a gépelési sebesség, pontosság és magabiztosság javításához, modern, átlátható és rendszeres gyakorlásra épülő élménnyel.",
+        "history_title": "Történetünk",
+        "history_text": "A Kiso Desk független projektként indult, hogy modern gépelésgyakorlási élményt hozzon létre. Ami egyszerű ötletként kezdődött, mára leckékre, előrehaladásra, statisztikákra és folyamatos fejlődésre összpontosító platformmá alakul."
+      }
+    },
+    "cookies": {
+      "metadata": {
+        "title": "Süti- és helyi tárolási szabályzat",
+        "description": "Információk a Kiso Desk sütijeiről és helyi tárolásáról."
+      },
+      "general": {
+        "title": "Süti- és helyi tárolási szabályzat",
+        "contentsLabel": "Tartalom",
+        "relatedLabel": "Kapcsolódó dokumentumok",
+        "relatedPrivacy": "Adatvédelmi szabályzat",
+        "relatedTerms": "Felhasználási feltételek"
+      },
+      "definition": {
+        "title": "1. Mik azok a sütik és a helyi tárolás?",
+        "paragraph1": "Ez az alkalmazás sütiket és a böngésző helyi tárolóját használja a szolgáltatás szükséges funkcióihoz, valamint bizonyos használati beállítások megjegyzéséhez.",
+        "paragraph2": "A sütik kis szövegfájlok, amelyeket a webhelyek a böngészőjében tárolnak. Arra szolgálnak, hogy megjegyezzék a látogatásával kapcsolatos információkat, például a beállításait vagy a hitelesítési állapotát.",
+        "paragraph3": "A helyi tárolás, más néven localStorage, a böngésző olyan funkciója, amely lehetővé teszi az adatok közvetlen tárolását az eszközön. A sütikkel ellentétben ezek az adatok nem kerülnek automatikusan elküldésre a szervernek minden kéréskor, hanem az eszközön maradnak, amíg Ön, a böngésző vagy az eszköz beállításai nem törlik őket."
+      },
+      "data": {
+        "title": "2. E technológiákhoz kapcsolódó személyes és technikai adatok",
+        "paragraph1": "A gépelési szolgáltatás biztosítása érdekében az alkalmazás a sütik, a helyi tárolás és a hálózati kérések használatához kapcsolódó személyes vagy technikai adatokat kezelhet.",
+        "paragraph2": "A regisztrált fiókokhoz kapcsolódó mérőszámokat a szolgáltatás az Adatvédelmi tájékoztatóban leírtak szerint tárolja. Vendég módban az előrehaladás és a gyakorlási előzmények egy része helyben, a böngészőben tárolódhat.",
+        "paragraph3": "A helyi tároló felületbeállításokat, a nem alapvető technológiákról hozott döntést és a vendégként elért előrehaladást tartalmazhatja. Jelszavakat vagy hitelesítési tokeneket közvetlenül nem tartalmaz.",
+        "item1": "Munkamenet-azonosítók: az access_token és refresh_token sütikben tárolódnak, és lehetővé teszik az alkalmazás számára a fiók felismerését, a kérések hitelesítését és a munkamenet aktívan tartását.",
+        "item2": "IP-cím és technikai kapcsolati adatok: a szerverrel való kommunikáció és külső erőforrások, például a flagcdn.com oldalról származó zászlóképek betöltése során kerülnek továbbításra.",
+        "item3": "Beállítások és helyi adatok: ide tartozhat a téma, a billentyűzetkiosztás, a betűtípus, a szövegméret, a billentyűzet megjelenítése, a nem alapvető technológiákról hozott döntés, a vendégként elért előrehaladás és a használt szövegek helyi előzményei."
+      },
+      "necessaryCookies": {
+        "title": "3. Feltétlenül szükséges sütik (hitelesítés)",
+        "paragraph1": "Az alkalmazás feltétlenül szükséges sütiket használ a bejelentkezéshez, az Ön személyazonosságának megőrzéséhez böngészés közben, a munkamenet megújításához és a hitelesített kérések védelméhez.",
+        "note": "Ezeket a sütiket nem használjuk reklámozásra, remarketingre vagy kereskedelmi profilalkotásra.",
+        "tableHeaderName": "Név",
+        "tableHeaderPurpose": "Cél",
+        "tableHeaderDuration": "Maximális időtartam",
+        "tableHeaderConfiguration": "Technikai beállítás",
+        "accessTokenName": "access_token",
+        "accessTokenPurpose": "A kérések hitelesítése és a hozzáférési munkamenet aktívan tartása.",
+        "accessTokenDuration": "2 óra",
+        "accessTokenConfiguration": "HttpOnly, SameSite=Lax, éles környezetben Secure.",
+        "refreshTokenName": "refresh_token",
+        "refreshTokenPurpose": "A munkamenet biztonságos megújítása és visszavonásának lehetővé tétele.",
+        "refreshTokenDuration": "7 nap",
+        "refreshTokenConfiguration": "HttpOnly, SameSite=Lax, éles környezetben Secure."
+      },
+      "localStorage": {
+        "title": "4. Helyi tárolás (felhasználói beállítások)",
+        "paragraph1": "A felhasználói élmény személyre szabása és bizonyos beállítások megőrzése érdekében az alkalmazás adatokat tárol a böngészőben.",
+        "paragraph2": "Ezek az adatok az eszközön maradnak, és nem kerülnek automatikusan elküldésre a szervernek minden kéréskor, bár az alkalmazás elolvashatja őket a beállítások alkalmazásához vagy a helyi előrehaladás visszaállításához.",
+        "tableHeaderKey": "Kulcs",
+        "tableHeaderPurpose": "Cél",
+        "tableHeaderDuration": "Időtartam",
+        "themeKey": "theme",
+        "themePurpose": "A világos vagy sötét téma beállításának megjegyzése.",
+        "themeDuration": "Tartós, kézi törlésig vagy felülírásig.",
+        "keyboardLayoutKey": "typing-keyboard-layout",
+        "keyboardLayoutPurpose": "A gyakorlatokhoz kiválasztott billentyűzetkiosztás megjegyzése.",
+        "keyboardLayoutDuration": "Tartós, törlésig vagy felülírásig.",
+        "typingFontKey": "typing-font",
+        "typingFontPurpose": "A gyakorlatokban használt betűtípuscsalád megjegyzése.",
+        "typingFontDuration": "Tartós, törlésig vagy felülírásig.",
+        "typingFontSizeKey": "typing-font-size",
+        "typingFontSizePurpose": "A gyakorlatokhoz beállított szövegméret megjegyzése.",
+        "typingFontSizeDuration": "Tartós, törlésig vagy felülírásig."
+      },
+      "providers": {
+        "title": "5. Külső szolgáltatók, adatfeldolgozók és lehetséges adattovábbítások",
+        "paragraph1": "Az alkalmazás külső szolgáltatókat használ vagy használhat a szolgáltatás szükséges funkcióihoz, például infrastruktúrához, hitelesítéshez, biztonsághoz és erőforrások kézbesítéséhez. A jövőbeli funkciókhoz előkészített integrációk nem tekinthetők aktívnak mindaddig, amíg nincsenek beállítva és üzembe helyezve.",
+        "paragraph2": "Ha egy szolgáltató a Kiso Desk nevében és utasításai alapján személyes adatokat kezel, az adott helyzettől függően adatfeldolgozóként vagy szolgáltatóként jár el.",
+        "paragraph3": "A Kiso Desk a Google Cloud Platform (GCP) infrastruktúráját használja a szolgáltatás technikai összetevőinek üzemeltetésére és tárhelyének biztosítására. Az ebben az infrastruktúrában kezelt adatokat a fiókok fenntartására, az előrehaladás megőrzésére és a platform működtetésére használjuk.",
+        "paragraph4": "Az alkalmazás lehetővé teszi a Google-fiókkal történő bejelentkezést. Ebben a folyamatban a Kiso Desk kizárólag a fiók hitelesítéséhez szükséges és engedélyezett adatokat kapja meg, például a Google-azonosítót, az e-mail-címet, annak ellenőrzési állapotát és a profilnevet.",
+        "paragraph5": "Az alkalmazás a flagcdn.com szolgáltatást használja zászlóképek betöltésére. Ezen erőforrások lekérésekor a szolgáltató szokásos technikai adatokat kaphat, például IP-címet, felhasználói ügynököt, dátumot, időpontot és hivatkozó URL-címet.",
+        "paragraph6": "Ha adatokat olyan harmadik féllel közlünk vagy részére továbbítunk, amely nem adatfeldolgozó, az az alkalmazandó jogszabályokkal összhangban történik, ideértve azokat az eseteket is, amikor ez a szolgáltatás nyújtásához, a felhasználóval fennálló kapcsolat fenntartásához, jogok védelméhez vagy jogi kötelezettségek teljesítéséhez szükséges.",
+        "paragraph7": "A Cloudflare Turnstile feltételesen használható botok és visszaélések megelőzésére, ami magában foglalhatja a technikai kapcsolati adatok Cloudflare általi kezelését. Az e-mailes fiók-helyreállítás elő van készítve, de addig nem aktív, amíg nincs e-mail-szolgáltató beállítva. Jelenleg nem használunk analitikai sütiket, hirdetési hálózatokat, remarketinget vagy más nem alapvető nyomkövető rendszereket."
+      },
+      "legalBasis": {
+        "title": "6. Jogalap és adatvédelmi alapelvek",
+        "paragraph1": "A feltétlenül szükséges sütikhez kapcsolódó adatkezelés célja a felhasználók bejelentkeztetése, a munkamenetek aktívan tartása, a kérések hitelesítése és a fiók működésének védelme.",
+        "paragraph2": "A Kiso Desk az adatokat az alkalmazandó jogszabályokkal összhangban kezeli. Ha az információ a kért szolgáltatás biztosításához vagy a felhasználóval fennálló kapcsolatból eredő kötelezettségek teljesítéséhez szükséges, további hozzájárulást nem kérünk, kivéve, ha azt az alkalmazandó jog előírja.",
+        "paragraph3": "A Kiso Desk nemzetközileg elismert adatvédelmi alapelveket is irányadónak tekint, beleértve az átláthatóságot, a célhoz kötöttséget, az adattakarékosságot, a pontosságot, a korlátozott megőrzést, a biztonságot, a felhasználói ellenőrzést és az elszámoltathatóságot. Ez a hivatkozás nem minősül tanúsításnak vagy a nem alkalmazandó külföldi jogszabályoknak való teljes megfelelés kijelentésének.",
+        "paragraph4": "Ha a jövőben nem alapvető technológiákat, például analitikát, reklámot, remarketinget vagy más nyomkövető mechanizmusokat vezetünk be, ezt a szabályzatot frissítjük, és szükség esetén az aktiválás előtt kérjük a megfelelő hozzájárulást."
+      },
+      "arco": {
+        "title": "7. Adatkezelési jogok és a hozzájárulás visszavonása",
+        "paragraph1": "Kérheti a fiókjához kapcsolódó személyes adatokhoz való hozzáférést, azok helyesbítését vagy törlését, illetve tiltakozhat az adatkezelés ellen. Adott esetben visszavonhatja az olyan adatkezelésekhez adott hozzájárulását is, amelyekhez hozzájárulás szükséges.",
+        "paragraph2": "E jogok gyakorlásához kérelmet küldhet a következő címre: kisodesk.project@gmail.com.",
+        "paragraph3": "Az adatkezelő az alkalmazandó törvényi határidőn belül közli döntését, és jóváhagyott kérelem esetén a megfelelő határidőn belül végrehajtja azt.",
+        "paragraph4": "Ezek a határidők meghosszabbíthatók, ha azt az alkalmazandó jog lehetővé teszi, és a körülmények indokolják.",
+        "paragraph5": "A hozzájárulás visszavonása nem érinti a korábban végzett adatkezelést, illetve az olyan adatkezelést, amelyet jogi kötelezettség, fennálló kapcsolat, biztonság, jogok védelme vagy szükséges megőrzés miatt folytatni kell.",
+        "item1": "Az alkalmazásban használt álnév vagy fiókazonosító, ha van ilyen.",
+        "item2": "A fiókhoz kapcsolódó e-mail-cím.",
+        "item3": "Az értesítések fogadására szolgáló elérhetőség.",
+        "item4": "Az Ön személyazonosságának vagy a fiók tulajdonjogának ellenőrzéséhez észszerűen szükséges adatok, lehetőleg a kapcsolódó e-mail-címen keresztül. Képviselő eljárása esetén a képviseleti jogosultságot igazoló dokumentumok.",
+        "item5": "A gyakorolni kívánt jog: hozzáférés, helyesbítés, törlés, tiltakozás vagy a hozzájárulás visszavonása.",
+        "item6": "A kérelemmel érintett személyes adatok világos és pontos leírása, például e-mail-cím, álnév, beállítások vagy a fiókhoz kapcsolódó gépelési mérőszámok.",
+        "item7": "Helyesbítési kérelem esetén a helyes adatok és szükség esetén a kért módosítást alátámasztó információk.",
+        "item8": "Bármely más adat, amely a fiók azonosításához és a kérelem megfelelő kezeléséhez észszerűen szükséges."
+      },
+      "management": {
+        "title": "8. Ezen adatok kezelése és törlése",
+        "paragraph1": "Kezelheti a sütiket, a helyi tárolót és a nem alapvető technológiákkal kapcsolatos döntését.",
+        "item1": "Kijelentkezés: kijelentkezéskor az access_token és refresh_token hitelesítési sütik törlődnek a böngészőből.",
+        "item2": "Adatvédelmi és süti-beállítások: a profiljában megtekintheti és módosíthatja a nem alapvető technológiákkal kapcsolatos döntését. A sütiket és a helyi adatokat a böngésző beállításaiban is törölheti.",
+        "item3": "Figyelmeztetés: a feltétlenül szükséges sütik blokkolása megakadályozhatja a bejelentkezést vagy a hitelesítést igénylő funkciók használatát."
+      },
+      "changes": {
+        "title": "9. A szabályzat módosításai",
+        "paragraph1": "Az alkalmazás frissítheti ezt a szabályzatot a jogi, technikai vagy működési változások tükrözése érdekében. A frissítéseket ezen az oldalon tesszük közzé a megfelelő utolsó frissítési dátummal.",
+        "paragraph2": "Jelentős módosítás esetén látható alkalmazáson belüli értesítéssel, sütiértesítéssel vagy más elérhető elektronikus módon tájékoztatjuk a felhasználókat."
+      },
+      "contact": {
+        "title": "10. Kapcsolat",
+        "paragraph1": "Ha kérdése van, gyakorolni szeretné jogait, vagy információra van szüksége az adatkezelésről, írjon a kisodesk.project@gmail.com címre.",
+        "paragraph2": "Az adatkezelő személyazonosságáról és elérhetőségeiről, az általános célokról, szolgáltatókról, megőrzési időkről és az adatkezelés további részleteiről az alkalmazás Adatvédelmi tájékoztatójában olvashat."
+      }
+    },
+    "privacy": {
+      "metadata": {
+        "title": "Adatvédelmi szabályzat",
+        "description": "Információk arról, hogyan kezeli a Kiso Desk a személyes adatokat."
+      },
+      "general": {
+        "eyebrow": "Jogi információk",
+        "title": "Adatvédelmi tájékoztató",
+        "description": "Információk a személyes adatok kezeléséről az alkalmazandó jog és a nemzetközileg elismert adatvédelmi alapelvek szerint.",
+        "introduction": "Ez a tájékoztató ismerteti, hogy a Kiso Desk milyen adatokat kezel, hogyan használja azokat, kivel oszthatja meg őket, és milyen ellenőrzési lehetőségeik vannak a felhasználóknak. A nemzetközi alapelvekre való hivatkozás nem minősül tanúsításnak vagy a nem alkalmazandó külföldi jogszabályoknak való teljes megfelelés kijelentésének.",
+        "lastUpdatedLabel": "Utolsó frissítés",
+        "lastUpdated": "2026. július 23.",
+        "contentsLabel": "Tartalom",
+        "relatedLabel": "Kapcsolódó dokumentumok",
+        "relatedTerms": "Felhasználási feltételek",
+        "relatedCookies": "Süti-szabályzat"
+      },
+      "data": {
+        "title": "1. Az általunk kezelt adatok",
+        "sensitiveNote": "A Kiso Desk nem kér érzékeny személyes adatokat. Az akadálymentességi vagy felületbeállításokat kizárólag az alkalmazás működési beállításaiként használjuk, és nem céljuk egészségre, fogyatékosságra, etnikai származásra, vallásra, politikai véleményre, szexuális irányultságra vagy más érzékeny adatra vonatkozó információ gyűjtése.",
+        "item1": "Fiók: e-mail-cím, adott esetben profilnév, a felhasználó által választott álnév, szerepkör, nyelv, billentyűzetkiosztás és akadálymentességi beállítások.",
+        "item2": "Hitelesítés: jelszóval létrehozott fiók esetén hash formájában tárolt jelszó, vagy Google-bejelentkezés esetén az ehhez szükséges adatok.",
+        "item3": "Tanulás: kurzusok, leckék, előrehaladás, sebesség, pontosság, gyakorlási idő, hibák, használt billentyűk és a gépelési mérőszámok kiszámításához szükséges események.",
+        "item4": "Közösségi funkciók: baráti kapcsolatok, kérelmek, tiltások, jelenléti állapot, utolsó kapcsolódás és a rendelkezésre álló beállítások szerint megosztott statisztikák.",
+        "item5": "Ranglista: álnév, sebesség, pontosság, szint, gyakorlási nyelv, helyezés és adott esetben az eredmény dátuma.",
+        "item6": "Technikai adatok: IP-cím, felhasználói ügynök, naplók, munkamenet-azonosítók, diagnosztikai adatok és az alkalmazott infrastruktúra vagy szolgáltatók által létrehozott technikai kérések.",
+        "item7": "Helyi adatok: téma, billentyűzetkiosztás, betűtípus, szövegméret, billentyűzet-megjelenítés, a nem alapvető technológiákról hozott döntés, vendégként elért előrehaladás és helyi szövegelőzmények."
+      },
+      "purposes": {
+        "title": "2. Hogyan használjuk az adatokat",
+        "item1": "Fiókok és munkamenetek létrehozása és kezelése.",
+        "item2": "Bejelentkezés lehetővé tétele jelszóval vagy Google-fiókkal, a választott módszertől függően.",
+        "item3": "Leckék biztosítása, előrehaladás mentése és gépelési statisztikák készítése.",
+        "item4": "A billentyűzetkiosztás, a felület, a betűtípus, a szövegméret és más használati beállítások személyre szabása.",
+        "item5": "Általános és nyelv szerinti ranglisták megjelenítése.",
+        "item6": "Közösségi funkciók működtetése, ideértve a baráti kapcsolatokat, a jelenléti állapotot, az utolsó kapcsolódást és a fiókbeállítások szerint látható statisztikákat.",
+        "item7": "Fiókok védelme, visszaélések megelőzése, jogosulatlan tevékenység észlelése és hibák diagnosztizálása.",
+        "item8": "Adatok letöltésének és a fiók profilból történő törlésének lehetővé tétele.",
+        "item9": "Támogatási, adatvédelmi és biztonsági kérelmek megválaszolása.",
+        "item10": "Jogi kötelezettségek teljesítése és igényekkel szembeni védekezés.",
+        "item11": "Ha a Google AdSense a jövőben aktiválásra kerül, reklámok megjelenítése és mérése, csalás megelőzése és adott esetben a hirdetések személyre szabása az alkalmazandó jog által előírt tájékoztatás és hozzájárulás mellett."
+      },
+      "legalBasis": {
+        "title": "3. Az adatkezelés alapja és alapelvei",
+        "paragraph1": "Az adatkezelés elsődlegesen a kért szolgáltatás nyújtása, a fiókok kezelése, a munkamenetek fenntartása, az előrehaladás mentése, statisztikák készítése, ranglisták és közösségi funkciók működtetése, az adatok letöltésének vagy törlésének lehetővé tétele és a platform védelme érdekében történik.",
+        "paragraph2": "A Kiso Desk az adatokat az alkalmazandó joggal összhangban kezeli. Ha az információ a szolgáltatás nyújtásához vagy a felhasználóval fennálló kapcsolatból eredő kötelezettségek teljesítéséhez szükséges, további hozzájárulást nem kérünk, kivéve, ha azt az alkalmazandó jog előírja.",
+        "paragraph3": "A Kiso Desk nemzetközileg elismert adatvédelmi alapelveket is irányadónak tekint, beleértve az átláthatóságot, a célhoz kötöttséget, az adattakarékosságot, a pontosságot, a korlátozott megőrzést, a biztonságot, a felhasználói ellenőrzést és az elszámoltathatóságot. Ez a hivatkozás nem minősül tanúsításnak vagy a nem alkalmazandó külföldi jogszabályoknak való teljes megfelelés kijelentésének.",
+        "paragraph4": "A hozzájárulást igénylő célok esetében a hozzájárulást szükség szerint kérjük, és az visszamenőleges hatály nélkül visszavonható. Ha a szolgáltatás nyújtásától eltérő vagy ahhoz nem szükséges új célokat vezetünk be, ezt a tájékoztatót szükség esetén az új adatkezelés megkezdése előtt frissítjük."
+      },
+      "recipients": {
+        "title": "4. Szolgáltatók és címzettek",
+        "paragraph1": "A Kiso Desk technológiai szolgáltatókat vesz igénybe az infrastruktúra, a tárhely, a hitelesítés, az erőforrások kézbesítése és a biztonság működtetéséhez. Az e-mail-integráció elő van készítve, de addig nem aktív, amíg nincs szolgáltató beállítva.",
+        "paragraph2": "Ha ezek a szolgáltatók a Kiso Desk nevében és utasításai alapján személyes adatokat kezelnek, adatfeldolgozóként vagy szolgáltatóként járnak el, és az információkat kizárólag a megállapodás szerinti funkciók biztosítására használják.",
+        "paragraph3": "A Google Cloud Platform biztosítja a szolgáltatás technikai összetevőinek tárhelyét és működtetését. A Google hitelesítési szolgáltatóként is eljár, ha a felhasználó Google-fiókkal jelentkezik be.",
+        "paragraph4": "Az alkalmazás zászlóképeket tölt be a flagcdn.com oldalról. Ezen erőforrások lekérésekor a szolgáltató szokásos technikai adatokat kaphat, például IP-címet, felhasználói ügynököt, dátumot, időpontot és hivatkozó URL-címet.",
+        "paragraph5": "A Cloudflare Turnstile feltételesen használható botok és visszaélések megelőzésére. Aktiválása esetén a Cloudflare megkaphatja a kérés ellenőrzéséhez szükséges technikai kapcsolati adatokat. A Google AdSense és a reklámozás nem aktív; bekapcsolásuk előtt frissítjük a tájékoztatást és alkalmazzuk a szükséges ellenőrzési mechanizmusokat.",
+        "paragraph6": "Az érintett az adatvédelmi e-mail-címen tiltakozhat az olyan közlések vagy adattovábbítások ellen, amelyekhez hozzájárulás szükséges. Ez a tiltakozás nem érinti a szolgáltatás nyújtásához, a felhasználóval fennálló kapcsolat fenntartásához, jogok védelméhez, visszaélések megelőzéséhez vagy jogi kötelezettségek teljesítéséhez szükséges közléseket vagy adattovábbításokat."
+      },
+      "transfers": {
+        "title": "5. Adattovábbítás és más joghatóságokban végzett adatkezelés",
+        "paragraph1": "A Kiso Desk különböző joghatóságokban működő technológiai szolgáltatókat vehet igénybe a szolgáltatás tárhelyének biztosításához, működtetéséhez, védelméhez és karbantartásához.",
+        "paragraph2": "Ha ezek a szolgáltatók adatfeldolgozóként járnak el, az adatokat a Kiso Desk nevében, a vonatkozó utasításokkal és célokkal összhangban kezelik.",
+        "paragraph3": "Ha az adatokat olyan harmadik féllel közöljük vagy részére továbbítjuk, amely nem adatfeldolgozó, az az alkalmazandó jog által megengedett körülmények között történik, ideértve azokat az eseteket is, amikor ez a szolgáltatás nyújtásához, jogi kötelezettségek teljesítéséhez, jogok védelméhez szükséges, vagy amikor hozzájárulás áll rendelkezésre.",
+        "paragraph4": "A Google Cloud Platform, a Google OAuth, az aktív Cloudflare Turnstile és a flagcdn.com használata technikai vagy fiókadatok más joghatóságokban történő kezelésével járhat a szolgáltatás beállításai és az egyes szolgáltatók alkalmazandó szabályzatai szerint."
+      },
+      "retention": {
+        "title": "6. Megőrzés",
+        "item1": "Az access_token süti maximális időtartama 2 óra, a refresh_token sütié pedig 7 nap.",
+        "item2": "A fiók- és előrehaladási adatokat addig őrizzük meg, amíg a fiók aktív, vagy ameddig az a szolgáltatás nyújtásához, ranglisták és közösségi funkciók működtetéséhez, jogi kötelezettségek teljesítéséhez, kérelmek kezeléséhez, visszaélések megelőzéséhez, incidensek megoldásához vagy jogok védelméhez szükséges.",
+        "item3": "A ranglistákhoz és közösségi funkciókhoz kapcsolódó adatokat addig őrizzük meg, amíg a fiók aktív, vagy ameddig e funkciók működtetéséhez szükséges, kivéve, ha a felhasználó módosítja beállításait, törli a fiókot vagy gyakorol egy alkalmazandó jogot.",
+        "item4": "A telepítések során létrehozott helyi biztonsági mentéseket legfeljebb 30 napig őrizzük meg. A technikai naplókat méret alapján rotáljuk, és addig tartjuk meg, ameddig a szolgáltatás működtetéséhez, védelméhez és diagnosztizálásához szükséges.",
+        "item5": "Ha a személyes adatokra már nincs szükség, azokat az adott esettől függően töröljük, anonimizáljuk vagy a törlés előtt zároljuk, kivéve, ha további megőrzésüket alkalmazandó kötelezettség írja elő."
+      },
+      "rights": {
+        "title": "7. Jogok és kérelmek",
+        "paragraph1": "Kérheti személyes adataihoz való hozzáférést, azok helyesbítését vagy törlését, illetve tiltakozhat az adatkezelés ellen. Adott esetben visszavonhatja az olyan adatkezelésekhez adott hozzájárulását is, amelyekhez hozzájárulás szükséges.",
+        "paragraph2": "A profilban az alkalmazás lehetővé teszi a fiókhoz kapcsolódó adatok strukturált másolatának letöltését és törlésük kérelmezését a rendelkezésre álló mechanizmusokon keresztül.",
+        "paragraph3": "A felhasználók az alkalmazás vezérlőivel korlátozhatják a ranglistákon vagy közösségi funkciókban látható adatok közzétételét, megtekinthetik vagy módosíthatják a nem alapvető technológiákról hozott döntést, és letilthatnak más felhasználókat.",
+        "paragraph4": "A tájékoztatóban megadott e-mail-címen adatvédelemmel, az adatok használatának vagy közlésének korlátozásával és jogok gyakorlásával kapcsolatos kérelmeket is benyújthat."
+      },
+      "children": {
+        "title": "8. Kiskorúak",
+        "paragraph1": "A szolgáltatás nem kiskorúaknak szól.",
+        "paragraph2": "Fiók önálló létrehozásához és a szolgáltatás önálló használatához az adott személynek el kell érnie a lakóhelyén alkalmazandó jog szerinti nagykorúságot.",
+        "paragraph3": "Ha a Kiso Desk észleli, hogy egy fiók kiskorú személyhez tartozik, korlátozhatja a nem szükséges adatkezelést, és az alkalmazandó joggal, valamint az érintett jogainak védelmével összhangban mérlegelheti a fiók felfüggesztését, törlését, zárolását vagy rendezését."
+      },
+      "security": {
+        "title": "9. Biztonság",
+        "paragraph1": "A Kiso Desk adminisztratív, technikai és fizikai intézkedéseket alkalmaz a személyes adatok károsodás, elvesztés, megváltoztatás, megsemmisítés, jogosulatlan használat, hozzáférés vagy adatkezelés elleni védelmére.",
+        "paragraph2": "Ezek az intézkedések magukban foglalhatják a hozzáférés-vezérlést, a hitelesítést, a jelszavak biztonságos tárolását, a védett munkamenet-kezelést, a HttpOnly sütiket, a visszaélések megelőzését, a technikai naplókat, a belső korlátozásokat és más, a kockázattal és a technológiai fejlődéssel arányos intézkedéseket.",
+        "paragraph3": "Egyetlen rendszer sem tévedhetetlen. Ha egy incidens jelentősen érinti a felhasználók jogait, a Kiso Desk az alkalmazandó jog által előírt értesítéseket megteszi és intézkedéseket végrehajtja."
+      },
+      "changes": {
+        "title": "10. Az Adatvédelmi tájékoztató módosításai",
+        "paragraph1": "Ez a tájékoztató frissíthető a jogi, technikai vagy működési változások tükrözése érdekében.",
+        "paragraph2": "A frissítéseket ezen az oldalon tesszük közzé a megfelelő utolsó frissítési dátummal.",
+        "paragraph3": "Jelentős módosítás esetén látható alkalmazáson belüli értesítéssel vagy más elérhető elektronikus módon tájékoztatjuk a felhasználókat.",
+        "paragraph4": "Ha egy új célhoz hozzájárulás szükséges, a kapcsolódó adatkezelés csak a hozzájárulás megszerzése után kezdődik meg, amennyiben azt az alkalmazandó jog előírja."
+      },
+      "responsible": {
+        "title": "11. Adatkezelő és kapcsolat",
+        "paragraph3": "Adatvédelmi e-mail-cím: kisodesk.project@gmail.com."
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "Felhasználási feltételek",
+        "description": "A Kiso Desk használatára vonatkozó szabályok."
+      },
+      "general": {
+        "eyebrow": "Jogi információk",
+        "title": "Felhasználási feltételek",
+        "description": "A Kiso Desk használatára vonatkozó szabályok.",
+        "introduction": "Ezek a feltételek szabályozzák az alkalmazáshoz, a fiókokhoz, a tanulási funkciókhoz és az elérhető közösségi funkciókhoz való hozzáférést.",
+        "lastUpdatedLabel": "Utolsó frissítés",
+        "lastUpdated": "2026. július 23.",
+        "contentsLabel": "Tartalom",
+        "relatedLabel": "Kapcsolódó dokumentumok",
+        "relatedPrivacy": "Adatvédelmi szabályzat",
+        "relatedCookies": "Süti-szabályzat"
+      },
+      "service": {
+        "title": "1. A szolgáltatás leírása",
+        "paragraph1": "A Kiso Desk gépelési leckéket és gyakorlatokat, előrehaladás-követést, statisztikákat, ranglistákat és a billentyűzetes gépelés tanulásához és gyakorlásához kapcsolódó közösségi funkciókat biztosít.",
+        "paragraph2": "Fiók létrehozásával, bejelentkezéssel vagy a szolgáltatás használatával Ön elfogadja ezeket a Felhasználási feltételeket.",
+        "paragraph3": "A funkciók a szolgáltatás fejlesztése és működtetése során módosulhatnak, frissülhetnek, korlátozhatók vagy megszüntethetők, mindig az alkalmazandó joggal összhangban és az el nem vonható jogok sérelme nélkül."
+      },
+      "eligibility": {
+        "title": "2. Életkor és jogosultság",
+        "paragraph1": "Fiók önálló létrehozásához és a szolgáltatás önálló használatához el kell érnie a lakóhelyén alkalmazandó jog szerinti nagykorúságot.",
+        "paragraph2": "Ha az alkalmazandó jog további cselekvőképességi, engedélyezési vagy életkori feltételeket ír elő, azokat a szolgáltatás használata előtt teljesítenie kell.",
+        "paragraph3": "A szolgáltatás nem kiskorúaknak szól. Ha az alkalmazandó jog szerint kiskorú, nem hozhat létre önállóan fiókot és nem adhat meg személyes adatokat."
+      },
+      "account": {
+        "title": "3. Fiók és biztonság",
+        "item1": "Pontos adatokat kell megadnia, és azokat naprakészen kell tartania.",
+        "item2": "Ön felelős a hitelesítő adatainak vagy hozzáférési módjainak védelméért, valamint azért, hogy megosztott eszközökön kijelentkezzen.",
+        "item3": "Más személy fiókját nem ruházhatja át, nem adhatja el, nem továbbíthatja és nem használhatja.",
+        "item4": "Minden jogosulatlan hozzáférést vagy biztonsági incidenst a jelen Feltételekben megadott kapcsolattartási csatornán kell bejelentenie."
+      },
+      "acceptableUse": {
+        "title": "4. Elfogadható használat",
+        "intro": "A szolgáltatás használatával Ön vállalja a következő szabályok betartását:",
+        "item1": "Nem zavarhatja a szolgáltatás biztonságát, elérhetőségét vagy működését.",
+        "item2": "Engedély nélkül nem nyerhet ki adatokat, nem automatizálhat kéréseket, nem végezhet scrapinget, nem terhelheti túl az infrastruktúrát és nem kerülheti meg a technikai korlátozásokat.",
+        "item3": "Nem zaklathat más felhasználókat, nem adhatja ki magát másnak, nem téveszthet meg másokat és nem próbálhat információt szerezni más felhasználóktól.",
+        "item4": "Nem tölthet fel, nem másolhat, nem terjeszthet és nem használhat tartalmat megfelelő jogosultság nélkül.",
+        "item5": "Nem használhatja a szolgáltatást jogellenes, visszaélésszerű, csalárd, káros vagy a jelen Feltételekkel ellentétes tevékenységre."
+      },
+      "social": {
+        "title": "5. Ranglisták és közösségi funkciók",
+        "paragraph1": "A szolgáltatás ranglistákat, profilokat és egyéb közösségi funkciókat tartalmaz.",
+        "paragraph2": "Ezek a funkciók a rendelkezésre álló beállításoktól függően álnevet, sebességet, pontosságot, szintet, előrehaladást, online állapotot, utolsó aktivitást vagy gépelési statisztikákat jeleníthetnek meg.",
+        "paragraph3": "Fiók létrehozásakor bizonyos közösségi funkciók alapértelmezetten aktívak. Ezeket a profiljában egyenként kikapcsolhatja. Valódi neve és e-mail-címe nem kerül nyilvánosságra, a jelenléti állapot vagy megosztott statisztikák pedig az Adatvédelmi tájékoztatóban leírtak szerint csak elfogadott barátok számára láthatók."
+      },
+      "intellectualProperty": {
+        "title": "6. Szellemi tulajdon",
+        "paragraph1": "A szoftver, a formatervezés, a felület, a szövegek, a gyakorlatok, a képek, a hanganyagok, a védjegyek, a logók és a szolgáltatás egyéb elemei a megfelelő jogosultak tulajdonát képezik.",
+        "paragraph2": "A szolgáltatáshoz való hozzáférés nem ruház át szellemi tulajdonjogokat az alkalmazásra vagy annak tartalmára.",
+        "paragraph3": "A szolgáltatáson keresztül elérhető tartalom kizárólag gépelés gyakorlására és az alkalmazás funkcióinak használatára használható, kivéve, ha erre kifejezett engedély vagy eltérő licenc vonatkozik."
+      },
+      "availability": {
+        "title": "7. Elérhetőség és módosítások",
+        "paragraph1": "A szolgáltatás karbantartás, frissítések, biztonsági intézkedések, technikai hibák, működési változások vagy a Kiso Desk észszerű ellenőrzésén kívül eső okok miatt megszakadhat, korlátozható vagy módosulhat.",
+        "paragraph2": "A jelentős változásokról akkor adunk tájékoztatást, amikor ez észszerűen lehetséges.",
+        "paragraph3": "A Kiso Desk nem garantál meghatározott javulást a sebességben, pontosságban, tanulmányi teljesítményben, munkateljesítményben, foglalkoztathatóságban vagy a szolgáltatás használatából eredő bármely más konkrét eredményben."
+      },
+      "suspension": {
+        "title": "8. Felfüggesztés és megszüntetés",
+        "paragraph1": "A Kiso Desk korlátozhatja, felfüggesztheti vagy megszüntetheti a fiókot a jelen Feltételek megsértése, a szolgáltatással való visszaélés, biztonsági kockázat, jogosulatlan használat, más felhasználók károsítása vagy jogellenes, illetve káros tevékenység esetén.",
+        "paragraph2": "Amennyiben ez észszerű, a felhasználó a jelen Feltételekben megadott kapcsolattartási csatornán kérheti az intézkedés felülvizsgálatát.",
+        "paragraph3": "A fiók megszüntetése, felfüggesztése vagy korlátozása nem érinti az intézkedést megelőzően keletkezett kötelezettségeket vagy felelősségeket.",
+        "paragraph4": "A fiókhoz kapcsolódó személyes adatok törlését vagy megőrzését az Adatvédelmi tájékoztató és az alkalmazandó jog szerint kezeljük."
+      },
+      "liability": {
+        "title": "9. Felelősség",
+        "paragraph1": "A szolgáltatást aktuális elérhetősége és működése szerint biztosítjuk.",
+        "paragraph2": "A jelen Feltételek egyetlen rendelkezése sem korlátozza a felhasználókat az alkalmazandó jog alapján megillető, el nem vonható jogokat, és nem zár ki olyan felelősséget, amely jogszerűen nem korlátozható.",
+        "paragraph3": "Az alkalmazandó jog által megengedett mértékben a Kiso Desk nem felel közvetett károkért, megszakításokért, adatvesztésért vagy olyan sérelmekért, amelyek az észszerű ellenőrzésén kívül eső okokból, a fiók nem megfelelő használatából, hamis vagy elavult adatokból, a szolgáltatáson kívüli harmadik felek hibájából vagy a felhasználó jelen Feltételeket sértő magatartásából erednek.",
+        "paragraph4": "A fentiek nem zárják ki a Kiso Desknek felróható jogsértésért, szándékos magatartásért, rosszhiszeműségért, súlyos gondatlanságért, el nem vonható jogok megsértéséért, biztonsági kötelezettségek elmulasztásáért vagy személyes adatok jogellenes kezeléséért fennálló felelősséget."
+      },
+      "law": {
+        "title": "10. Alkalmazandó jog és kapcsolat",
+        "paragraph1": "A jelen Feltételekre a szolgáltatás adatkezelőjére alkalmazandó jog irányadó, és azokat e jog szerint kell értelmezni, a felhasználókat a lakóhelyükön alkalmazandó jog alapján megillető el nem vonható jogok sérelme nélkül.",
+        "paragraph2": "A jelen Feltételek egyetlen rendelkezése sem korlátozza a felhasználó jogát arra, hogy az illetékes fogyasztóvédelmi, adatvédelmi vagy más hatóságokhoz forduljon.",
+        "paragraph3": "A jelen Feltételekkel kapcsolatos kérdések, kérelmek, biztonsági bejelentések, igények vagy közlések a kisodesk.project@gmail.com címre küldhetők."
+      }
+    },
+    "page": {
+      "metadata": {
+        "title": "Tanuljon vakon gépelni",
+        "description": "Javítsa sebességét és pontosságát interaktív gépelési leckékkel."
+      },
+      "general": {
+        "altNight": "Éjszakai szoba illusztrációja egy személlyel és egy macskával",
+        "altDay": "Nappali szoba illusztrációja egy programozó személlyel és egy macskával",
+        "interactiveLessons": "Interaktív leckék",
+        "interactiveLessonsDescription": "Tanuljon strukturált kurzusokkal",
+        "freePractice": "Szabad gyakorlás",
+        "freePracticeDescription": "Gyakoroljon a saját tempójában",
+        "dashboardDescription": "Tekintse meg statisztikáit",
+        "rankingDescription": "Versenyezzen világszerte",
+        "title1": "Sajátítsa el a",
+        "title2": "vakírást",
+        "subtitle1": "Javítsa sebességét és pontosságát ",
+        "subtitle2": "interaktív gépelési leckékkel",
+        "learn": "Tanulás",
+        "guidedLessons": "Vezetett leckék",
+        "practiceAction": "Gyakorlás",
+        "typingExercises": "Gépelési gyakorlatok",
+        "track": "Követés",
+        "progressAndStats": "Előrehaladás és statisztikák",
+        "compete": "Versenyzés",
+        "globalRanking": "Globális ranglista"
+      }
+    }
+  },
+  "public": {
+    "courses": {
+      "metadata": {
+        "title": "Gépelési kurzusok | Kiso Desk",
+        "description": "Böngésszen a kurzusok között, és próbálja ki a gépelési leckéket."
+      },
+      "lessons": {
+        "metadata": {
+          "title": "Gépelési leckék | Kiso Desk",
+          "description": "Próbáljon ki gépelési leckéket fiók létrehozása nélkül."
+        },
+        "lesson": {
+          "metadata": {
+            "title": "Leckegyakorlás | Kiso Desk",
+            "description": "Gyakoroljon egy gépelési leckét a Kiso Deskben."
+          }
+        }
+      }
+    },
+    "practice": {
+      "metadata": {
+        "title": "Gépelési sebesség és pontosság teszt | Kiso Desk",
+        "description": "Gyakorolja ingyen a gépelést, és mentse az eredményt ezen az eszközön."
+      }
+    },
+    "progress": {
+      "metadata": {
+        "title": "Helyi előrehaladás | Kiso Desk",
+        "description": "A böngészőben helyben mentett előrehaladás."
+      },
+      "general": {
+        "title": "Helyi előrehaladás",
+        "description": "Ez az előrehaladás csak ebben a böngészőben kerül mentésre.",
+        "lessonsCompleted": "Teljesített leckék",
+        "practiceSessions": "Gyakorlási munkamenetek",
+        "accuracy": "Pontosság",
+        "signInNotice": "Jelentkezzen be, hogy előrehaladását a fiókjába mentse.",
+        "signIn": "Bejelentkezés"
+      }
+    },
+    "ranking": {
+      "metadata": {
+        "title": "Gépelési ranglista | Kiso Desk",
+        "description": "Tekintse meg a nyilvános gépelési sebességranglistát."
+      }
+    }
+  },
+  "components": {
+    "courses": {
+      "courseCard": {
+        "general": {
+          "lessons": "leckék",
+          "viewCourse": "Kurzus megtekintése",
+          "yourProgress": "Az Ön előrehaladása",
+          "loginToSeeProgress": "Jelentkezzen be előrehaladása megtekintéséhez",
+          "lessonsCount": "leckék"
+        }
+      }
+    },
+    "dashboard": {
+      "errorTrends": {
+        "general": {
+          "title": "Előrehaladási panel",
+          "noData": "Nincs megjeleníthető adat",
+          "insufficientData": "Nincs elegendő adat.",
+          "highestErrorRate": "Legmagasabb hibaarány",
+          "correctAttempts": "{correctAttempts}/{totalAttempts} helyes"
+        }
+      },
+      "fingerDistribution": {
+        "general": {
+          "title": "Előrehaladási panel",
+          "noData": "Nincs megjeleníthető adat",
+          "leftHand": "Bal",
+          "rightHand": "Jobb",
+          "hand": "{hand} kéz",
+          "pinky": "Kisujj",
+          "ring": "Gyűrűsujj",
+          "middle": "Középső ujj",
+          "index": "Mutatóujj",
+          "correctPercentage": "{percentage}% helyes",
+          "noCorrectPercentage": "Nincs",
+          "errorPercentage": "{percentage}% hiba",
+          "errors": "adat"
+        }
+      },
+      "practiceCalendar": {
+        "general": {
+          "title": "Előrehaladási panel",
+          "noData": "Nincs megjeleníthető adat",
+          "noPractice": "Nincs gyakorlás",
+          "minutesShort": "perc",
+          "hoursShort": "ó",
+          "noActivity": "Nincs aktivitás",
+          "fiveMinutes": "5 perc",
+          "tenMinutes": "10 perc",
+          "fifteenMinutes": "15+ perc"
+        }
+      },
+      "progressChart": {
+        "general": {
+          "noData": "Nincs megjeleníthető adat"
+        }
+      },
+      "authBanner": {
+        "general": {
+          "message": "Jelentkezzen be statisztikái megtekintéséhez.",
+          "signIn": "Bejelentkezés"
+        }
+      },
+      "recommendationsList": {
+        "general": {
+          "title": "Előrehaladási panel",
+          "signIn": "Bejelentkezés",
+          "noRecommendations": "Nincsenek elérhető ajánlások."
+        }
+      },
+      "weakKeysPanel": {
+        "general": {
+          "title": "Előrehaladási panel",
+          "overallAccuracy": "Összesített pontosság",
+          "weakestKey": "Leggyengébb billentyű",
+          "lowestAccuracy": "Legalacsonyabb pontosság"
+        }
+      }
+    },
+    "friends": {
+      "friendsSnapshot": {
+        "general": {
+          "title": "Barátok",
+          "description": "Nézze meg, hányan vannak online, és nyissa meg a teljes panelt.",
+          "openFriends": "Barátok megnyitása",
+          "totalFriends": "Barátok",
+          "onlineNow": "jelenleg online",
+          "noFriendsYet": "Még nem adott hozzá barátokat"
+        }
+      }
+    },
+    "layout": {
+      "footer": {
+        "general": {
+          "product": "Termék",
+          "lessons": "Leckék",
+          "ranking": "Ranglista",
+          "progress": "Előrehaladás",
+          "project": "Projekt",
+          "aboutKisoDesk": "A Kiso Deskről",
+          "github": "GitHub",
+          "legal": "Jogi információk",
+          "privacyPolicy": "Adatvédelmi szabályzatot",
+          "termsOfUse": "Felhasználási feltételeket",
+          "cookiePolicy": "Süti-szabályzat",
+          "contact": "Kapcsolat",
+          "copyright": "© {year} Kiso Desk."
+        }
+      },
+      "header": {
+        "general": {
+          "defaultUser": "Felhasználó",
+          "skipToMainContent": "Ugrás a fő tartalomra",
+          "courses": "Kurzusok",
+          "userMenu": "Felhasználói menü",
+          "profile": "Saját profil",
+          "logout": "Kijelentkezés",
+          "menuToggle": "Menü megnyitása",
+          "login": "Bejelentkezés",
+          "register": "Regisztráció"
+        }
+      },
+      "sidebar": {
+        "general": {
+          "dashboard": "Irányítópult",
+          "courses": "Kurzusok",
+          "practice": "Gyakorlás",
+          "ranking": "Ranglista",
+          "friends": "Barátok",
+          "profile": "Profil",
+          "menuToggle": "Navigációs menü",
+          "expand": "Kibontás",
+          "collapse": "Összecsukás"
+        }
+      }
+    },
+    "legal": {
+      "cookieBanner": {
+        "general": {
+          "title": "Süti- és helyi tárolási szabályzat",
+          "description": "Az alkalmazás jelenlegi állapotában nem használunk analitikai sütiket, hirdetési hálózatokat, remarketinget vagy más nem alapvető nyomkövető rendszereket.",
+          "privacyNotice": "Adatvédelmi szabályzatot",
+          "cookiePolicy": "Süti- és helyi tárolási szabályzat",
+          "accept": "Elfogadás",
+          "reject": "Elutasítás"
+        }
+      }
+    },
+    "lessons": {
+      "handReference": {
+        "general": {
+          "handReference": "A kezek billentyűzeten elfoglalt helyzetének útmutatója"
+        }
+      },
+      "keyboardDetectionWizard": {
+        "general": {
+          "title": "Billentyűzetfelismerő",
+          "subtitle": "Néhány fizikai billentyű megnyomásával felismerheti billentyűzetkiosztását, és az egész alkalmazásban használhatja.",
+          "modalTitle": "Kiosztás felismerése",
+          "currentLayout": "Jelenlegi kiosztás",
+          "start": "Felismerés indítása",
+          "progress": "{current}. lépés, legfeljebb {total}",
+          "progressHint": "Korábban is befejeződhet",
+          "progressLabel": "A felismerés előrehaladása",
+          "back": "Vissza",
+          "cancel": "Mégse",
+          "close": "Bezárás",
+          "intro": {
+            "title": "Ismerjük fel a billentyűzetét",
+            "help": "Csak 1–5 billentyűt kell megnyomnia a fizikai billentyűzetén."
+          },
+          "capture": {
+            "focus": "Kattintson ide, és nyomja meg a jelzett billentyűt",
+            "instruction": "A megnyomott billentyűt csak a kiosztás felismerésére használjuk.",
+            "captured": "Felismert billentyű: {key}",
+            "deadKey": "ékezetbillentyű"
+          },
+          "questions": {
+            "rightOfL": {
+              "title": "Nyomja meg az L betűtől közvetlenül jobbra lévő billentyűt",
+              "help": "Ne használja a Shiftet. A billentyű fizikai helyzete alapján tájékozódjon, még akkor is, ha más szimbólum van rá nyomtatva."
+            },
+            "leftOfBackspace": {
+              "title": "Nyomja meg a Backspace-től közvetlenül balra lévő billentyűt",
+              "help": "Ne használja a Shiftet. A számsorban lévő billentyűt használja."
+            },
+            "shiftDigit2": {
+              "title": "Tartsa lenyomva a Shiftet, és nyomja meg a 2-es billentyűt",
+              "help": "A számsor 2-es billentyűjét használja, ne a numerikus billentyűzetet."
+            },
+            "sixthTopRow": {
+              "title": "Nyomja meg a felső sor hatodik betűbillentyűjét",
+              "help": "A Tab utáni első betűbillentyűtől számoljon. Ne használja a Shiftet."
+            },
+            "firstTopRow": {
+              "title": "Nyomja meg a Tab utáni első betűbillentyűt",
+              "help": "A billentyű fizikai helyzete alapján tájékozódjon. Ne használja a Shiftet."
+            },
+            "quoteKey": {
+              "title": "Nyomja meg az idézőjel billentyűt",
+              "help": "Ne használja a Shiftet. A billentyű fizikai helyzete alapján tájékozódjon."
+            },
+            "shiftDigit3": {
+              "title": "Tartsa lenyomva a Shiftet, és nyomja meg a 3-as billentyűt",
+              "help": "A számsor 3-as billentyűjét használja, ne a numerikus billentyűzetet."
+            }
+          },
+          "errors": {
+            "composition": "Nem tudjuk azonosítani a kiosztást, amíg a billentyűzet szöveget állít össze.",
+            "unidentified": "Nem sikerült azonosítani ezt a billentyűt. Próbálja újra.",
+            "alt-graph": "Ne használja az AltGr billentyűt ennek a billentyűnek a megnyomásakor.",
+            "modified": "Ne használjon módosítóbillentyűket ennek a billentyűnek a megnyomásakor.",
+            "wrongKey": "Ez egy másik billentyű volt. Nyomja meg a fent jelzett helyen található billentyűt.",
+            "shiftRequired": "Tartsa lenyomva a Shiftet a billentyű megnyomásakor.",
+            "shiftNotRequired": "A Shift használata nélkül nyomja meg ezt a billentyűt.",
+            "saveFailed": "Nem sikerült menteni a kiosztást. Ellenőrizze a kapcsolatot, és próbálja újra."
+          },
+          "result": {
+            "detectedTitle": "Kiosztás felismerve",
+            "confidence": "A felismerés megbízhatósága: {confidence}",
+            "useDetected": "E kiosztás használata",
+            "unidentifiedTitle": "Nem sikerült azonosítani a kiosztását",
+            "unidentifiedHelp": "Válassza ki kézzel a billentyűzetének megfelelő kiosztást.",
+            "fallbackTitle": "Nem sikerült kellő megbízhatósággal felismerni a kiosztást",
+            "fallbackHelp": "Válasszon a legközelebbi találatok közül, vagy tekintse meg az összes elérhető kiosztást.",
+            "chooseManually": "Kézi kiválasztás",
+            "retryDetection": "Felismerés újrapróbálása"
+          },
+          "manual": {
+            "title": "Válassza ki a kiosztást",
+            "help": "Válassza ki a billentyűzetén lévő billentyűknek megfelelő kiosztást."
+          },
+          "saved": {
+            "title": "Kiosztás mentve",
+            "description": "Mostantól a(z) {layout} kiosztást használjuk az egész alkalmazásban.",
+            "continueToCourses": "Tovább a kurzusokhoz",
+            "returnToPractice": "Vissza a gyakorláshoz"
+          },
+          "physicalFamily": {
+            "title": "A billentyűzet formája",
+            "subtitle": "Az egyes billentyűk alakjának azonosításával a billentyűzet helyesen jelenik meg.",
+            "enterQuestion": "Milyen alakú az Enter billentyű?",
+            "enterHorizontal": "Vízszintes Enter",
+            "enterIso": "Szabványos ISO Enter",
+            "enterBigAss": "ISO BA Enter",
+            "abntQuestion": "Hány billentyű van a / és a jobb Shift között?",
+            "eastAsianQuestion": "Hány billentyű van a 0 és a Backspace között?",
+            "eastAsianCountQuestion": "Hány billentyű van a szóköz és a jobb Alt között?",
+            "complete": "A billentyűzet formája azonosítva: {family}"
+          }
+        }
+      },
+      "keyboard": {
+        "general": {
+          "virtualKeyboard": "Virtuális billentyűzet"
+        }
+      },
+      "lessonCard": {
+        "general": {
+          "ariaLabel": "Ugrás a leckére",
+          "wpm": "WPM",
+          "score": "Pontszám",
+          "accuracy": "Pontosság",
+          "time": "Idő",
+          "placeholder": "—",
+          "secondsShort": "mp",
+          "minutesShort": "perc",
+          "minutesCompact": "p",
+          "approxPrefix": "~",
+          "rankLabel": "Rang",
+          "gradeLabel": "Osztályzat",
+          "completed": "Teljesítve",
+          "explanatoryBadge": "Magyarázó lecke",
+          "explanatoryLesson": "Magyarázó lecke",
+          "objectiveAccuracy": "Cél: {minAccuracy}% pontosság",
+          "mastered": "Elsajátítva",
+          "inProgress": "Folyamatban",
+          "lessonOrderRecommendationTitle": "Kövesse az ajánlott sorrendet",
+          "lessonOrderRecommendationDescription": "A fokozatos fejlődés érdekében javasoljuk a leckék alapértelmezett sorrendjének követését.",
+          "lessonOrderRecommendationBack": "Visszalépés",
+          "lessonOrderRecommendationContinue": "Folytatás",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Kezdő",
+            "scout": "Felderítő",
+            "ranger": "Vadőr",
+            "veteran": "Veterán",
+            "elite": "Elit",
+            "legend": "Legenda"
+          },
+          "gradesDescriptions": {
+            "novice": "Alapszint",
+            "scout": "Kezdeti fejlődés",
+            "ranger": "Jó jártasság",
+            "veteran": "Magas szint",
+            "elite": "Szakértő",
+            "legend": "Legmagasabb szint"
+          }
+        }
+      },
+      "personalizedLessonCard": {
+        "general": {
+          "title": "Ajánlott gyakorlás",
+          "noData": "Nincs megjeleníthető adat",
+          "error": "Nem sikerült betölteni az ajánlásait. Próbálja újra.",
+          "retry": "Újrapróbálkozás",
+          "insufficientData": "Gyakoroljon többet, hogy azonosíthassuk a fejlesztendő billentyűket.",
+          "noCourse": "Ehhez a nyelvhez még nem érhető el gépelési kurzus.",
+          "noLessons": "Ehhez a kurzushoz még nem érhetők el leckék.",
+          "description": "A felismert gyenge pontjai alapján.",
+          "weakKeys": "A legutóbbi munkameneteiben alacsonyabb pontosságú billentyűk.",
+          "noMatches": "Ebben a kurzusban még nincsenek a gyenge billentyűihez kapcsolódó leckék.",
+          "worksKeys": "Gyakorlás: {keys}"
+        }
+      },
+      "results": {
+        "general": {
+          "saveWarning": "Nem sikerült menteni az eredményeket",
+          "wpm": "WPM",
+          "score": "Pontszám",
+          "accuracy": "Pontosság",
+          "correctChars": "Helyes karakterek",
+          "lowResultTitle": "Az eredménye kissé alacsony",
+          "lowResultMessage": "A további fejlődéshez fontolja meg a gépelési kurzus elvégzését.",
+          "lowResultCourseLink": "Ugrás a gépelési kurzushoz",
+          "accuracyFocusTitle": "A pontosság legyen az első",
+          "accuracyFocusMessage": "Jól halad. A sebesség növelése előtt próbáljon meg legalább 95%-os pontosságot elérni.",
+          "masteredResult": "Lecke elsajátítva",
+          "masteredMessage": "Teljesítette a pontossági követelményt, és továbbléphet.",
+          "needsReview": "Ismétlés szükséges",
+          "reviewMessage": "Cél: legalább {minAccuracy}% pontosság. Lassítson, és ismételje meg a blokkot.",
+          "rankLabel": "Rang",
+          "gradeLabel": "Osztályzat",
+          "retryAriaLabel": "Lecke újrapróbálása",
+          "retry": "Újrapróbálkozás",
+          "next": "Következő",
+          "newText": "Új szöveg",
+          "backToCourses": "Vissza a kurzusokhoz",
+          "backToDashboard": "Vissza az irányítópulthoz",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Kezdő",
+            "scout": "Felderítő",
+            "ranger": "Vadőr",
+            "veteran": "Veterán",
+            "elite": "Elit",
+            "legend": "Legenda"
+          },
+          "gradesDescriptions": {
+            "novice": "Alapszint",
+            "scout": "Kezdeti fejlődés",
+            "ranger": "Jó jártasság",
+            "veteran": "Magas szint",
+            "elite": "Szakértő",
+            "legend": "Legmagasabb szint"
+          }
+        }
+      },
+      "typingArea": {
+        "general": {
+          "wpm": "WPM",
+          "score": "Pontszám",
+          "accuracy": "Pontosság",
+          "characters": "Karakterek",
+          "backspace": "Backspace",
+          "backspaceEnabled": "Backspace engedélyezve",
+          "backspaceDisabled": "Backspace letiltva",
+          "font": "Betűtípus",
+          "size": "Méret",
+          "pixels": "px",
+          "fontAndSize": "Betűtípus és méret",
+          "textToType": "Begépelendő szöveg",
+          "inactivityPaused": "Inaktivitás miatt szüneteltetve",
+          "clickToResume": "Kattintson a folytatáshoz",
+          "congratulations": "Gratulálunk! Sebesség: {wpm} WPM, pontosság: {accuracy}%",
+          "detectKeyboard": "Billentyűzet felismerése",
+          "keyboardConfigTitle": "Billentyűzetbeállítások",
+          "keyboardPreferenceMissing": "Nincs mentett billentyűzet-beállítás. A billentyűzetbeállításokban módosíthatja.",
+          "recommendedKeyboardLayout": "Ajánlott billentyűzetkiosztás: {layout}",
+          "useRecommendedKeyboardLayout": "Kiosztás módosítása",
+          "detectionHelp": "Automatikusan azonosítja a jelenlegi kiosztást, és a teljes gyakorlás során ezt használja.",
+          "identifyKeyboardShape": "Forma azonosítása",
+          "keyboardShapeHeading": "A billentyűzet formája",
+          "logicalDistributionHeading": "Logikai kiosztás",
+          "logicalDistributionHint": "billentyűzetkarakterek"
+        }
+      }
+    },
+    "ui": {
+      "themeToggle": {
+        "general": {
+          "switchToLight": "Téma",
+          "switchToDark": "Téma"
+        }
+      }
+    },
+    "i18n": {
+      "languageSwitcher": {
+        "general": {
+          "interfaceLanguage": "Felület nyelve"
+        }
+      }
+    }
+  },
+  "general": {
+    "Accessibility": {
+      "button": "Gomb",
+      "expandMenu": "Menü kibontása",
+      "collapseMenu": "Menü összecsukása"
+    },
+    "Common": {
+      "loading": "Betöltés...",
+      "retry": "Újrapróbálkozás",
+      "close": "Bezárás"
+    }
+  },
+  "lessonid": {
+    "general": {
+      "lockedLesson": "Zárolt lecke",
+      "lockedLessonDescription": "A folytatás előtt sajátítsa el az előző feladatot.",
+      "backToLessons": "Vissza a leckékhez",
+      "lessonNotFound": "A lecke nem található",
+      "typeTheTextBelow": "Gépelje be az alábbi szöveget",
+      "hideKeyboard": "Billentyűzet elrejtése",
+      "showKeyboard": "Billentyűzet megjelenítése",
+      "exitPractice": "Kilépés a gyakorlásból",
+      "saveError": "Hiba az eredmény mentésekor",
+      "saveErrorMessage": "Eredményei megjelennek a képernyőn, de nem kerültek mentésre az előrehaladásába. Próbálja megismételni a leckét, amikor elérhető a kapcsolat.",
+      "audioGuide": "Hallgassa meg a magyarázatot",
+      "audioUnsupported": "Böngészője nem tudja lejátszani ezt a hangsávot.",
+      "experimentalGreetings": {
+        "lessonPosition": "{current}. lecke / {total}",
+        "supportContent": "Kiegészítő tartalom",
+        "englishColumn": "Angol",
+        "spanishColumn": "Spanyol",
+        "continue": "Folytatás",
+        "dialogue": "Párbeszéd",
+        "selectEnglishFirst": "Először válasszon egy angol nyelvű lehetőséget",
+        "tryAgain": "Próbálja újra",
+        "correct": "Helyes",
+        "complete": "Tevékenység befejezve"
+      },
+      "manualAudioPlay": "Meghallgatás",
+      "manualAudioReplay": "Újrahallgatás",
+      "lessonAudio": "Lecke hanganyaga",
+      "interactions": {
+        "dictationPrompt": "Írja le, amit hall",
+        "unitProgress": "Egység előrehaladása",
+        "stepProgress": "{step}. lépés a 4-ből {current}",
+        "currentStep": "aktuális",
+        "reviewTask": "{current}. feladat a 3-ból",
+        "completedPairs": "Befejezett párok",
+        "availableOptions": "Elérhető lehetőségek",
+        "options": "Lehetőségek",
+        "answer": "Válasz",
+        "check": "Ellenőrzés",
+        "undo": "Visszavonás",
+        "correct": "Helyes",
+        "incorrect": "Még nem. Helyes válasz: {answer} {detail}",
+        "spellingFeedback": "Helyesírás: a szó két betűt tartalmaz, vagy az elején",
+        "sentenceFeedback": "Kezdő nagybetű és írásjelek: ellenőrizzen minden mondatot",
+        "dictationFeedback": "Tollbamondás: hallgasson meg minden szót, és tartsa meg az írásjeleket",
+        "correctAnswer": "Helyes válasz",
+        "nextTask": "Következő feladat"
+      }
+    }
+  },
+  "courses": {
+    "general": {
+      "title": "Kurzusok",
+      "subtitle": "Böngésszen kurzusaink között, és fejlessze vakírását",
+      "searchPlaceholder": "Kurzusok keresése...",
+      "allLevels": "Minden szint",
+      "beginner": "Kezdő",
+      "intermediate": "Középhaladó",
+      "advanced": "Haladó",
+      "guestModeMessage": "Jelentkezzen be előrehaladása mentéséhez",
+      "signIn": "Bejelentkezés",
+      "retry": "Újrapróbálkozás",
+      "noCourseYetTitle": "Még nincsenek elérhető kurzusok",
+      "noCourseYetDescription": "Kurzusokat készítünk ehhez a nyelvhez. Látogasson vissza hamarosan.",
+      "noCourses": "Nem találhatók kurzusok",
+      "all": "Minden kurzus",
+      "completed": "Teljesítve",
+      "notCompleted": "Nincs teljesítve"
+    }
+  },
+  "lessons": {
+    "general": {
+      "title": "Leckék",
+      "subtitle": "Gyakoroljon a szintjéhez igazított leckékkel",
+      "searchPlaceholder": "Leckék keresése...",
+      "allDifficulties": "Minden nehézségi szint",
+      "beginner": "Kezdő",
+      "intermediate": "Középhaladó",
+      "advanced": "Haladó",
+      "guestModeMessage": "Jelentkezzen be előrehaladása mentéséhez",
+      "signIn": "Bejelentkezés",
+      "retry": "Újrapróbálkozás",
+      "errorTitle": "Hiba a leckék betöltésekor",
+      "noLessonsTitle": "Nincsenek elérhető leckék",
+      "noLessonsDescription": "Ehhez a kurzushoz még nincsenek leckék. Látogasson vissza később, vagy lépjen kapcsolatba a rendszergazdával.",
+      "noCompletedLessonsTitle": "Még egyetlen leckét sem teljesített",
+      "noCompletedLessonsDescription": "Teljesítsen egy leckét, hogy megjelenjen ebben a listában.",
+      "noPendingLessonsTitle": "Nincsenek függőben lévő leckéi",
+      "noPendingLessonsDescription": "A kurzus összes leckéje teljesítettként van megjelölve.",
+      "all": "Minden lecke",
+      "completed": "Teljesítve",
+      "notCompleted": "Nincs teljesítve",
+      "moduleLabel": "{order}. modul",
+      "masteredCount": "{mastered}/{total} elsajátítva"
+    }
+  },
+  "dashboard": {
+    "general": {
+      "title": "Előrehaladási panel",
+      "subtitle": "Tekintse meg előrehaladását és gépelési statisztikáit",
+      "averageWpm": "Átlagos WPM",
+      "wordsPerMinute": "Szó percenként",
+      "averageAccuracy": "Átlagos pontosság",
+      "accuracy": "Pontosság",
+      "totalPracticeTime": "Teljes gyakorlási idő",
+      "thisWeek": "Ezen a héten",
+      "weeklyWpmProgress": "Heti WPM-előrehaladás",
+      "monthlyWpmProgress": "Havi WPM-előrehaladás",
+      "noData": "Nincs elérhető adat",
+      "bestWpm": "Legjobb WPM",
+      "grossWpm": "Bruttó WPM",
+      "record": "Rekord",
+      "streak": "Sorozat",
+      "days": "nap",
+      "consecutivePractice": "Egymást követő gyakorlás",
+      "totalKeystrokes": "Összes billentyűleütés",
+      "typed": "Begépelt",
+      "recommendations": "Ajánlások Önnek",
+      "recommendation1": "Gyakoroljon középhaladó szintű leckékkel sebessége javításához.",
+      "recommendation2": "Próbáljon 95% feletti pontosságot fenntartani.",
+      "recommendation3": "Sorozata fenntartásához naponta legalább egy leckét teljesítsen.",
+      "retry": "Újrapróbálkozás",
+      "error": "Hiba",
+      "completedText": "% teljesítve",
+      "completedTitle": "Leckék / Kurzusok",
+      "lessons": "leckék",
+      "courses": "kurzusok",
+      "completedLessons": "Teljesített leckék",
+      "completedCourses": "Teljesített kurzusok",
+      "guestModeMessage": "Jelentkezzen be előrehaladása megtekintéséhez",
+      "signIn": "Bejelentkezés",
+      "recommendationsGuest": "Jelentkezzen be, hogy előrehaladása alapján személyre szabott ajánlásokat kapjon.",
+      "weakKeys": "Gyenge billentyűk",
+      "errorTrends": "Hibatrendek",
+      "fingerDistribution": "Ujjak szerinti eloszlás",
+      "personalizedPractice": "Személyre szabott gyakorlás",
+      "personalizedPracticeDesc": "Kapjon személyre szabott leckéket gyenge pontjai alapján.",
+      "signInToSee": "Jelentkezzen be statisztikái megtekintéséhez",
+      "noDataYet": "Teljesítsen leckéket gyenge pontjai megtekintéséhez"
+    }
+  },
+  "practice": {
+    "general": {
+      "title": "Gépelési teszt",
+      "subtitle": "Javítsa sebességét és pontosságát személyre szabott szövegekkel",
+      "freeTitle": "Gépelési sebességteszt",
+      "freeSubtitle": "Próbáljon ki egy rövid szöveget, és ismerje meg gépelési sebességét és pontosságát.",
+      "adaptiveTitle": "Gyakorolja azokat a billentyűket, amelyeknél a legtöbbet hibázik",
+      "adaptiveSubtitle": "Összpontosítson a legtöbb hibát okozó karakterekre, és gépeljen pontosabban.",
+      "session": "Gyakorlási munkamenet",
+      "newText": "Új szöveg",
+      "perKeyStats": "Billentyűnkénti statisztikák (hamarosan)",
+      "loadingText": "Szöveg betöltése...",
+      "errorLoadingText": "Hiba a szöveg betöltésekor.",
+      "errorTitle": "Nem sikerült betölteni a szöveget",
+      "retry": "Újrapróbálkozás",
+      "saving": "Eredmények mentése...",
+      "errorSavingResult": "Hiba az eredmények mentésekor.",
+      "saveWarning": "Nem sikerült menteni az eredményeket",
+      "backToDashboard": "Vissza az irányítópulthoz",
+      "guestSavePrompt": "Jelentkezzen be, hogy mentse előrehaladását és tovább fejlődjön.",
+      "signInToSave": "Bejelentkezés",
+      "guestPlaceholder": "—",
+      "guestAdaptiveReason": "Az eszközön mentett hibák alapján",
+      "adaptiveKeys": "Billentyűk: {keys}",
+      "adaptiveBigrams": "Bigramok: {bigrams}",
+      "modeRandom": "Szabad szöveg",
+      "modeWords": "Ajánlott gyakorlás",
+      "modeText": "Adaptív szöveg",
+      "adaptivePracticeKeys": "Gyakorolt billentyűk"
+    }
+  },
+  "notFound": {
+    "general": {
+      "title": "Az oldal nem található",
+      "description": "Sajnáljuk, a keresett oldal nem létezik vagy áthelyezték.",
+      "backHome": "Vissza a kezdőlapra",
+      "dashboard": "Irányítópult",
+      "lessons": "Leckék",
+      "ranking": "Ranglista"
+    }
+  }
+}

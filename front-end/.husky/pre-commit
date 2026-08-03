@@ -1,0 +1,2 @@
+npm run security:secrets
+npx lint-staged

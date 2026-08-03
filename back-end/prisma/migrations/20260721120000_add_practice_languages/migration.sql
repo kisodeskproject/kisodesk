@@ -1,0 +1,2 @@
+ALTER TYPE "LanguageCode" ADD VALUE IF NOT EXISTS 'pt';
+ALTER TYPE "LanguageCode" ADD VALUE IF NOT EXISTS 'fr';

@@ -1,0 +1,1278 @@
+{
+  "marketing": {
+    "cookies": {
+      "metadata": {
+        "title": "Zásady používání cookies a místního úložiště",
+        "description": "Informace o cookies a místním úložišti v Kiso Desk."
+      },
+      "general": {
+        "title": "Zásady používání cookies a místního úložiště",
+        "contentsLabel": "Obsah",
+        "relatedLabel": "Související dokumenty",
+        "relatedPrivacy": "Zásady ochrany osobních údajů",
+        "relatedTerms": "Podmínky používání"
+      },
+      "definition": {
+        "title": "1. Co jsou cookies a místní úložiště?",
+        "paragraph1": "Tato aplikace používá cookies a místní úložiště prohlížeče pro nezbytné funkce služby a k zapamatování některých uživatelských nastavení.",
+        "paragraph2": "Cookies jsou malé textové soubory, které webové stránky ukládají do vašeho prohlížeče. Používají se k zapamatování informací o vaší návštěvě, například vašich preferencí nebo stavu přihlášení.",
+        "paragraph3": "Místní úložiště, známé také jako localStorage, je funkce prohlížeče, která umožňuje ukládat data přímo ve vašem zařízení. Na rozdíl od cookies se tato data neposílají automaticky serveru při každém požadavku a zůstávají v zařízení, dokud je neodstraníte vy, prohlížeč nebo nastavení zařízení."
+      },
+      "data": {
+        "title": "2. Osobní a technické údaje související s těmito technologiemi",
+        "paragraph1": "Za účelem poskytování služby procvičování psaní může aplikace zpracovávat osobní nebo technické údaje související s používáním cookies, místního úložiště a síťových požadavků.",
+        "paragraph2": "Metriky spojené s registrovanými účty jsou ukládány službou podle Zásad ochrany osobních údajů. V režimu hosta může být část pokroku a historie procvičování uložena místně v prohlížeči.",
+        "paragraph3": "Místní úložiště může obsahovat nastavení rozhraní, rozhodnutí o nepovinných technologiích a pokrok hosta. Neobsahuje přímo hesla ani ověřovací tokeny.",
+        "item1": "Identifikátory relace: jsou uloženy v cookies access_token a refresh_token a umožňují aplikaci rozpoznat váš účet, ověřovat požadavky a udržovat relaci aktivní.",
+        "item2": "IP adresa a technické údaje o připojení: přenášejí se při komunikaci se serverem a při načítání externích zdrojů, například obrázků vlajek ze služby flagcdn.com.",
+        "item3": "Předvolby a místní data: mohou zahrnovat motiv, rozložení klávesnice, písmo, velikost textu, zobrazení klávesnice, rozhodnutí o nepovinných technologiích, pokrok hosta a místní historii použitých textů."
+      },
+      "necessaryCookies": {
+        "title": "3. Nezbytně nutné cookies (ověřování)",
+        "paragraph1": "Aplikace používá nezbytně nutné cookies k přihlášení, zachování vaší identity během procházení, obnovení relace a ochraně ověřených požadavků.",
+        "note": "Tyto cookies se nepoužívají pro reklamu, remarketing ani komerční profilování.",
+        "tableHeaderName": "Název",
+        "tableHeaderPurpose": "Účel",
+        "tableHeaderDuration": "Maximální doba platnosti",
+        "tableHeaderConfiguration": "Technická konfigurace",
+        "accessTokenName": "access_token",
+        "accessTokenPurpose": "Ověřovat vaše požadavky a udržovat přístupovou relaci aktivní.",
+        "accessTokenDuration": "2 hodiny",
+        "accessTokenConfiguration": "HttpOnly, SameSite=Lax, v produkčním prostředí Secure.",
+        "refreshTokenName": "refresh_token",
+        "refreshTokenPurpose": "Bezpečně obnovovat relaci a umožnit její zneplatnění.",
+        "refreshTokenDuration": "7 dní",
+        "refreshTokenConfiguration": "HttpOnly, SameSite=Lax, v produkčním prostředí Secure."
+      },
+      "localStorage": {
+        "title": "4. Místní úložiště (uživatelské předvolby)",
+        "paragraph1": "Za účelem přizpůsobení prostředí a zachování některých nastavení ukládá aplikace informace v prohlížeči.",
+        "paragraph2": "Tato data zůstávají v zařízení a neposílají se automaticky serveru při každém požadavku, aplikace je však může načíst, aby použila vaše předvolby nebo obnovila místní pokrok.",
+        "tableHeaderKey": "Klíč",
+        "tableHeaderPurpose": "Účel",
+        "tableHeaderDuration": "Doba uchování",
+        "themeKey": "theme",
+        "themePurpose": "Zapamatovat si volbu světlého nebo tmavého motivu.",
+        "themeDuration": "Trvale, dokud nejsou ručně odstraněna nebo přepsána.",
+        "keyboardLayoutKey": "typing-keyboard-layout",
+        "keyboardLayoutPurpose": "Zapamatovat si rozložení klávesnice zvolené pro cvičení.",
+        "keyboardLayoutDuration": "Trvale, dokud nejsou odstraněna nebo přepsána.",
+        "typingFontKey": "typing-font",
+        "typingFontPurpose": "Zapamatovat si rodinu písma používanou ve cvičeních.",
+        "typingFontDuration": "Trvale, dokud nejsou odstraněna nebo přepsána.",
+        "typingFontSizeKey": "typing-font-size",
+        "typingFontSizePurpose": "Zapamatovat si velikost textu nastavenou pro cvičení.",
+        "typingFontSizeDuration": "Trvale, dokud nejsou odstraněna nebo přepsána."
+      },
+      "providers": {
+        "title": "5. Externí poskytovatelé, zpracovatelé a možné předávání údajů",
+        "paragraph1": "Aplikace používá nebo může používat externí poskytovatele pro nezbytné funkce služby, například infrastrukturu, ověřování, zabezpečení a doručování zdrojů. Integrace připravené pro budoucí funkce se nepovažují za aktivní, dokud nejsou nakonfigurovány a uvedeny do provozu.",
+        "paragraph2": "Pokud poskytovatel zpracovává osobní údaje jménem Kiso Desk a podle jeho pokynů, vystupuje podle okolností jako zpracovatel nebo poskytovatel služby.",
+        "paragraph3": "Kiso Desk používá infrastrukturu Google Cloud Platform (GCP) k hostování a provozu technických součástí služby. Údaje zpracovávané v této infrastruktuře se používají ke správě účtů, uchovávání pokroku a provozu platformy.",
+        "paragraph4": "Aplikace umožňuje přihlášení prostřednictvím Googlu. V tomto procesu Kiso Desk získává pouze povolené údaje nezbytné k ověření účtu, například identifikátor Google, e-mailovou adresu, stav jejího ověření a jméno profilu.",
+        "paragraph5": "Aplikace používá flagcdn.com k načítání obrázků vlajek. Při požadavku na tyto zdroje může poskytovatel získat běžné technické údaje, například IP adresu, uživatelského agenta, datum, čas a odkazující URL.",
+        "paragraph6": "Pokud jsou údaje zpřístupněny nebo předány třetí straně, která není zpracovatelem, bude s nimi nakládáno v souladu s použitelnými právními předpisy, včetně případů nezbytných k poskytování služby, zachování vztahu s uživatelem, ochraně práv nebo splnění zákonných povinností.",
+        "paragraph7": "Cloudflare Turnstile může být podmíněně používán k prevenci botů a zneužití, což může zahrnovat zpracování technických údajů o připojení společností Cloudflare. Obnovení účtu e-mailem je připraveno, ale není aktivní, dokud nebude nakonfigurován poskytovatel e-mailových služeb. V současnosti se nepoužívají analytické cookies, reklamní sítě, remarketing ani jiné nepovinné systémy sledování."
+      },
+      "legalBasis": {
+        "title": "6. Právní základ a zásady ochrany soukromí",
+        "paragraph1": "Zpracování spojené s nezbytně nutnými cookies se provádí za účelem přihlášení uživatelů, udržování relací, ověřování požadavků a ochrany fungování účtu.",
+        "paragraph2": "Kiso Desk zpracovává údaje v souladu s použitelnými právními předpisy. Pokud jsou informace nezbytné k poskytnutí požadované služby nebo splnění povinností vyplývajících ze vztahu s uživatelem, nebude požadován další souhlas, pokud jej nevyžadují použitelné právní předpisy.",
+        "paragraph3": "Kiso Desk se rovněž řídí mezinárodně uznávanými zásadami ochrany soukromí, včetně transparentnosti, určení účelu, minimalizace údajů, přesnosti, omezené doby uchování, bezpečnosti, kontroly uživatele a odpovědnosti. Tento odkaz nepředstavuje certifikaci ani prohlášení o úplném souladu se zahraničními právními předpisy, které se nepoužijí.",
+        "paragraph4": "Pokud budou v budoucnu zavedeny nepovinné technologie, například analytika, reklama, remarketing nebo jiné mechanismy sledování, budou tyto Zásady aktualizovány a před jejich aktivací bude v případě potřeby vyžádán odpovídající souhlas."
+      },
+      "arco": {
+        "title": "7. Práva k údajům a odvolání souhlasu",
+        "paragraph1": "Můžete požádat o přístup k osobním údajům spojeným s vaším účtem, jejich opravu, výmaz nebo vznést námitku proti jejich zpracování a případně odvolat souhlas se zpracováním, které jej vyžaduje.",
+        "paragraph2": "Pro uplatnění těchto práv můžete zaslat žádost na adresu: kisodesk.project@gmail.com.",
+        "paragraph3": "Správce sdělí své rozhodnutí v příslušné zákonné lhůtě a v případě vyhovění žádosti ji provede v odpovídající lhůtě.",
+        "paragraph4": "Tyto lhůty mohou být prodlouženy, pokud to použitelné právní předpisy umožňují a okolnosti to odůvodňují.",
+        "paragraph5": "Odvolání souhlasu neovlivní již provedené zpracování ani zpracování, které musí pokračovat z důvodu zákonné povinnosti, trvajícího vztahu, bezpečnosti, ochrany práv nebo nezbytného uchování.",
+        "item1": "Alias nebo identifikátor účtu používaný v aplikaci, pokud existuje.",
+        "item2": "E-mailová adresa spojená s vaším účtem.",
+        "item3": "Způsob, kterým chcete přijímat oznámení.",
+        "item4": "Přiměřené informace k ověření vaší totožnosti nebo vlastnictví účtu, nejlépe prostřednictvím přidružené e-mailové adresy. Pokud jedná zástupce, také dokumenty potvrzující jeho oprávnění.",
+        "item5": "Právo, které chcete uplatnit: přístup, opravu, výmaz, námitku nebo odvolání souhlasu.",
+        "item6": "Jasný a přesný popis osobních údajů, kterých se žádost týká, například e-mailové adresy, aliasu, předvoleb nebo metrik psaní spojených s účtem.",
+        "item7": "U žádosti o opravu správné informace a v případě potřeby podklady podporující požadovanou opravu.",
+        "item8": "Jakékoli další informace, které jsou přiměřeně nezbytné k identifikaci účtu a řádnému vyřízení žádosti."
+      },
+      "management": {
+        "title": "8. Jak spravovat a odstranit tato data",
+        "paragraph1": "Můžete spravovat cookies, místní úložiště a své rozhodnutí o nepovinných technologiích.",
+        "item1": "Odhlášení: při odhlášení se cookies access_token a refresh_token odstraní z prohlížeče.",
+        "item2": "Předvolby ochrany soukromí a cookies: ve svém profilu můžete zkontrolovat a změnit rozhodnutí o nepovinných technologiích. Cookies a místní data můžete odstranit také v nastavení prohlížeče.",
+        "item3": "Upozornění: zablokování nezbytně nutných cookies vám může zabránit v přihlášení nebo používání funkcí, které vyžadují ověření."
+      },
+      "changes": {
+        "title": "9. Změny těchto Zásad",
+        "paragraph1": "Aplikace může tyto Zásady aktualizovat tak, aby odrážely právní, technické nebo provozní změny. Aktualizace budou zveřejněny na této stránce s příslušným datem poslední aktualizace.",
+        "paragraph2": "Pokud budou změny významné, budou oznámeny prostřednictvím viditelného upozornění v aplikaci, oznámení o cookies nebo jiným dostupným elektronickým způsobem."
+      },
+      "contact": {
+        "title": "10. Kontakt",
+        "paragraph1": "Máte-li dotazy, chcete-li uplatnit svá práva nebo potřebujete informace o zpracování údajů, napište na kisodesk.project@gmail.com.",
+        "paragraph2": "Informace o totožnosti a kontaktních údajích správce, obecných účelech, poskytovatelích, době uchování a dalších podrobnostech zpracování naleznete v Zásadách ochrany osobních údajů aplikace."
+      }
+    },
+    "privacy": {
+      "metadata": {
+        "title": "Zásady ochrany osobních údajů",
+        "description": "Informace o tom, jak Kiso Desk zpracovává osobní údaje."
+      },
+      "general": {
+        "eyebrow": "Právní informace",
+        "title": "Oznámení o ochraně osobních údajů",
+        "description": "Informace o zpracování osobních údajů podle použitelných právních předpisů a mezinárodně uznávaných zásad ochrany soukromí.",
+        "introduction": "Toto oznámení vysvětluje, jaké informace Kiso Desk zpracovává, jak je používá, s kým je může sdílet a jaké možnosti kontroly mají uživatelé. Odkaz na mezinárodní zásady nepředstavuje certifikaci ani prohlášení o úplném souladu se zahraničními právními předpisy, které se nepoužijí.",
+        "lastUpdatedLabel": "Poslední aktualizace",
+        "lastUpdated": "23. července 2026",
+        "contentsLabel": "Obsah",
+        "relatedLabel": "Související dokumenty",
+        "relatedTerms": "Podmínky používání",
+        "relatedCookies": "Zásady používání cookies"
+      },
+      "data": {
+        "title": "1. Údaje, které zpracováváme",
+        "sensitiveNote": "Kiso Desk nepožaduje citlivé osobní údaje. Předvolby přístupnosti nebo rozhraní se používají pouze jako funkční nastavení aplikace a jejich účelem není shromažďovat informace o zdraví, zdravotním postižení, etnickém původu, náboženství, politických názorech, sexuální orientaci ani jiné citlivé údaje.",
+        "item1": "Účet: e-mailová adresa, jméno profilu, pokud se používá, alias zvolený uživatelem, role, jazyk, rozložení klávesnice a předvolby přístupnosti.",
+        "item2": "Ověřování: heslo uložené ve formě hashe, pokud je účet vytvořen pomocí hesla, nebo údaje nezbytné k přihlášení přes Google, pokud je použita tato metoda.",
+        "item3": "Výuka: kurzy, lekce, pokrok, rychlost, přesnost, doba procvičování, chyby, použité klávesy a události nezbytné k výpočtu metrik psaní.",
+        "item4": "Sociální funkce: přátelství, žádosti, blokování, přítomnost, poslední připojení a sdílené statistiky podle dostupných předvoleb.",
+        "item5": "Žebříček: alias, rychlost, přesnost, úroveň, jazyk procvičování, umístění a případně datum výsledku.",
+        "item6": "Technické údaje: IP adresa, uživatelský agent, protokoly, identifikátory relace, diagnostická data a technické požadavky generované používanou infrastrukturou nebo poskytovateli.",
+        "item7": "Místní data: motiv, rozložení klávesnice, písmo, velikost textu, zobrazení klávesnice, rozhodnutí o nepovinných technologiích, pokrok hosta a místní historie textů."
+      },
+      "purposes": {
+        "title": "2. Jak údaje používáme",
+        "item1": "Vytváření a správa účtů a relací.",
+        "item2": "Umožnění přihlášení pomocí hesla nebo Googlu podle zvolené metody.",
+        "item3": "Poskytování lekcí, ukládání pokroku a vytváření statistik psaní.",
+        "item4": "Přizpůsobení rozložení klávesnice, rozhraní, písma, velikosti textu a dalších uživatelských předvoleb.",
+        "item5": "Zobrazování celkových žebříčků a žebříčků podle jazyka.",
+        "item6": "Provoz sociálních funkcí, včetně přátelství, přítomnosti, posledního připojení a statistik viditelných podle nastavení účtu.",
+        "item7": "Ochrana účtů, prevence zneužití, zjišťování neoprávněné činnosti a diagnostika chyb.",
+        "item8": "Umožnění stažení údajů a odstranění účtu z profilu.",
+        "item9": "Vyřizování žádostí týkajících se podpory, soukromí a bezpečnosti.",
+        "item10": "Plnění zákonných povinností a obhajoba nároků.",
+        "item11": "Pokud bude v budoucnu aktivován Google AdSense, zobrazování a měření reklamy, prevence podvodů a případná personalizace reklam s informacemi a souhlasem vyžadovanými použitelnými právními předpisy."
+      },
+      "legalBasis": {
+        "title": "3. Základ a zásady zpracování",
+        "paragraph1": "Zpracování probíhá především za účelem poskytování požadované služby, správy účtů, udržování relací, ukládání pokroku, vytváření statistik, provozu žebříčků a sociálních funkcí, umožnění stažení nebo odstranění údajů a ochrany platformy.",
+        "paragraph2": "Kiso Desk zpracovává údaje v souladu s použitelnými právními předpisy. Pokud jsou informace nezbytné k poskytnutí služby nebo splnění povinností vyplývajících ze vztahu s uživatelem, nebude požadován další souhlas, pokud jej nevyžadují použitelné právní předpisy.",
+        "paragraph3": "Kiso Desk se rovněž řídí mezinárodně uznávanými zásadami ochrany soukromí, včetně transparentnosti, určení účelu, minimalizace údajů, přesnosti, omezené doby uchování, bezpečnosti, kontroly uživatele a odpovědnosti. Tento odkaz nepředstavuje certifikaci ani prohlášení o úplném souladu se zahraničními právními předpisy, které se nepoužijí.",
+        "paragraph4": "U účelů, které vyžadují souhlas, bude souhlas vyžádán, pokud je to relevantní, a lze jej odvolat bez zpětných účinků. Pokud budou přidány nové účely, které jsou odlišné od poskytování služby nebo pro ně nejsou nezbytné, bude toto oznámení před zahájením nového zpracování v případě potřeby aktualizováno."
+      },
+      "recipients": {
+        "title": "4. Poskytovatelé a příjemci",
+        "paragraph1": "Kiso Desk používá technologické poskytovatele pro provoz infrastruktury, hostingu, ověřování, doručování zdrojů a zabezpečení. E-mailová integrace je připravena, ale není aktivní, dokud nebude nakonfigurován poskytovatel.",
+        "paragraph2": "Pokud tito poskytovatelé zpracovávají osobní údaje jménem Kiso Desk a podle jeho pokynů, vystupují jako zpracovatelé nebo poskytovatelé služeb a používají informace pouze k poskytování sjednaných funkcí.",
+        "paragraph3": "Google Cloud Platform hostuje a provozuje technické součásti služby. Google rovněž vystupuje jako poskytovatel ověřování, pokud se uživatel rozhodne přihlásit pomocí účtu Google.",
+        "paragraph4": "Aplikace načítá obrázky vlajek ze služby flagcdn.com. Při požadavku na tyto zdroje může poskytovatel získat běžné technické údaje, například IP adresu, uživatelského agenta, datum, čas a odkazující URL.",
+        "paragraph5": "Cloudflare Turnstile může být podmíněně používán k prevenci botů a zneužití. Při aktivaci může Cloudflare získat technické údaje o připojení nezbytné k ověření požadavku. Google AdSense ani reklama nejsou aktivní; před jejich zapnutím budou informace aktualizovány a budou uplatněny potřebné kontrolní mechanismy.",
+        "paragraph6": "Subjekt údajů může prostřednictvím e-mailové adresy pro soukromí vznést námitku proti zpřístupnění nebo předání údajů, které vyžaduje souhlas. Tato námitka neovlivní zpřístupnění nebo předání nezbytné k poskytování služby, zachování vztahu s uživatelem, ochraně práv, prevenci zneužití nebo plnění zákonných povinností."
+      },
+      "transfers": {
+        "title": "5. Předávání a zpracování v jiných jurisdikcích",
+        "paragraph1": "Kiso Desk může používat technologické poskytovatele umístěné v různých jurisdikcích k hostování, provozu, ochraně a údržbě služby.",
+        "paragraph2": "Pokud tito poskytovatelé vystupují jako zpracovatelé, zpracovávají údaje jménem Kiso Desk a v souladu s příslušnými pokyny a účely.",
+        "paragraph3": "Pokud jsou údaje zpřístupněny nebo předány třetí straně, která není zpracovatelem, bude s nimi nakládáno za podmínek povolených použitelnými právními předpisy, včetně případů nezbytných k poskytování služby, plnění zákonných povinností, ochraně práv nebo na základě souhlasu.",
+        "paragraph4": "Používání Google Cloud Platform, Google OAuth, Cloudflare Turnstile, pokud je aktivní, a flagcdn.com může zahrnovat zpracování technických údajů nebo údajů o účtu v jiných jurisdikcích podle konfigurace služby a příslušných zásad jednotlivých poskytovatelů."
+      },
+      "retention": {
+        "title": "6. Uchovávání",
+        "item1": "Cookie access_token má maximální dobu platnosti 2 hodiny a cookie refresh_token maximální dobu platnosti 7 dní.",
+        "item2": "Údaje o účtu a pokroku se uchovávají po dobu, kdy je účet aktivní, nebo dokud jsou nezbytné k poskytování služby, provozu žebříčků a sociálních funkcí, plnění zákonných povinností, vyřizování žádostí, prevenci zneužití, řešení incidentů nebo ochraně práv.",
+        "item3": "Údaje žebříčků a sociálních funkcí se uchovávají po dobu, kdy je účet aktivní nebo dokud jsou nezbytné k provozu těchto funkcí, pokud uživatel nezmění své předvolby, neodstraní účet nebo neuplatní příslušné právo.",
+        "item4": "Místní zálohy vytvořené během nasazení se uchovávají nejvýše 30 dní. Technické protokoly se rotují podle velikosti a uchovávají po dobu nezbytnou k provozu, ochraně a diagnostice služby.",
+        "item5": "Jakmile osobní údaje přestanou být nezbytné, budou podle okolností odstraněny, anonymizovány nebo zablokovány před výmazem, pokud jejich další uchování nevyžaduje příslušná povinnost."
+      },
+      "rights": {
+        "title": "7. Práva a žádosti",
+        "paragraph1": "Můžete požádat o přístup ke svým osobním údajům, jejich opravu, výmaz nebo vznést námitku proti jejich zpracování a případně odvolat souhlas se zpracováním, které jej vyžaduje.",
+        "paragraph2": "V profilu aplikace umožňuje stáhnout strukturovanou kopii údajů spojených s účtem a požádat o jeho odstranění prostřednictvím dostupných mechanismů.",
+        "paragraph3": "Uživatelé mohou prostřednictvím ovládacích prvků aplikace omezit zveřejnění údajů viditelných v žebříčcích nebo sociálních funkcích, zkontrolovat nebo změnit rozhodnutí o nepovinných technologiích a blokovat jiné uživatele.",
+        "paragraph4": "Prostřednictvím e-mailové adresy uvedené v tomto oznámení můžete také zasílat žádosti týkající se soukromí, omezení používání nebo zpřístupnění údajů a uplatnění práv."
+      },
+      "children": {
+        "title": "8. Nezletilí",
+        "paragraph1": "Služba není určena nezletilým osobám.",
+        "paragraph2": "Pro samostatné vytvoření účtu a používání služby musí osoba dosáhnout zákonného věku zletilosti podle právních předpisů platných v místě jejího bydliště.",
+        "paragraph3": "Pokud Kiso Desk zjistí, že účet patří nezletilé osobě, může omezit zpracování, které není nezbytné, a posoudit pozastavení, odstranění, zablokování nebo nápravu účtu v souladu s použitelnými právními předpisy a ochranou práv této osoby."
+      },
+      "security": {
+        "title": "9. Zabezpečení",
+        "paragraph1": "Kiso Desk uplatňuje administrativní, technická a fyzická opatření určená k ochraně osobních údajů před poškozením, ztrátou, změnou, zničením, neoprávněným použitím, přístupem nebo zpracováním.",
+        "paragraph2": "Tato opatření mohou zahrnovat řízení přístupu, ověřování, bezpečné ukládání hesel, chráněnou správu relací, cookies HttpOnly, prevenci zneužití, technické protokoly, interní omezení a další opatření přiměřená riziku a technologickému vývoji.",
+        "paragraph3": "Žádný systém není neomylný. Pokud incident významně ovlivní práva uživatelů, Kiso Desk provede oznámení a přijme opatření vyžadovaná použitelnými právními předpisy."
+      },
+      "changes": {
+        "title": "10. Změny tohoto oznámení o ochraně osobních údajů",
+        "paragraph1": "Toto oznámení může být aktualizováno tak, aby odráželo právní, technické nebo provozní změny.",
+        "paragraph2": "Aktualizace budou zveřejněny na této stránce s příslušným datem poslední aktualizace.",
+        "paragraph3": "Pokud bude změna významná, bude oznámena prostřednictvím viditelného upozornění v aplikaci nebo jiným dostupným elektronickým způsobem.",
+        "paragraph4": "Pokud nový účel vyžaduje souhlas, příslušné zpracování nezačne, dokud nebude souhlas získán, pokud to vyžadují použitelné právní předpisy."
+      },
+      "responsible": {
+        "title": "11. Správce a kontakt",
+        "paragraph3": "E-mail pro otázky soukromí: kisodesk.project@gmail.com."
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "Podmínky používání",
+        "description": "Pravidla používání služby Kiso Desk."
+      },
+      "general": {
+        "eyebrow": "Právní informace",
+        "title": "Podmínky používání",
+        "description": "Pravidla používání služby Kiso Desk.",
+        "introduction": "Tyto podmínky upravují přístup k aplikaci, účtům, výukovým funkcím a dostupným sociálním funkcím.",
+        "lastUpdatedLabel": "Poslední aktualizace",
+        "lastUpdated": "23. července 2026",
+        "contentsLabel": "Obsah",
+        "relatedLabel": "Související dokumenty",
+        "relatedPrivacy": "Zásady ochrany osobních údajů",
+        "relatedCookies": "Zásady používání cookies"
+      },
+      "service": {
+        "title": "1. Popis služby",
+        "paragraph1": "Kiso Desk poskytuje lekce a procvičování psaní, sledování pokroku, statistiky, žebříčky a sociální funkce související s učením a procvičováním psaní na klávesnici.",
+        "paragraph2": "Vytvořením účtu, přihlášením nebo používáním služby souhlasíte s těmito Podmínkami používání.",
+        "paragraph3": "Funkce mohou být během vývoje a provozu služby měněny, aktualizovány, omezeny nebo ukončeny, vždy v souladu s použitelnými právními předpisy a bez omezení práv, kterých se nelze vzdát."
+      },
+      "eligibility": {
+        "title": "2. Věk a způsobilost",
+        "paragraph1": "Pro samostatné vytvoření účtu a používání služby musíte dosáhnout zákonného věku zletilosti podle právních předpisů platných v místě vašeho bydliště.",
+        "paragraph2": "Pokud použitelné právní předpisy vyžadují další podmínky způsobilosti, oprávnění nebo věku, musíte je splnit před použitím služby.",
+        "paragraph3": "Služba není určena nezletilým osobám. Pokud jste podle použitelných právních předpisů nezletilí, nesmíte si sami vytvořit účet ani poskytovat osobní údaje."
+      },
+      "account": {
+        "title": "3. Účet a zabezpečení",
+        "item1": "Musíte uvádět pravdivé informace a udržovat je aktuální.",
+        "item2": "Odpovídáte za ochranu svých přihlašovacích údajů nebo způsobů přístupu a za odhlášení na sdílených zařízeních.",
+        "item3": "Nesmíte přenechat, prodat, převést ani používat účet jiné osoby.",
+        "item4": "Jakýkoli neoprávněný přístup nebo bezpečnostní incident musíte nahlásit prostřednictvím kontaktního kanálu uvedeného v těchto Podmínkách."
+      },
+      "acceptableUse": {
+        "title": "4. Přijatelné používání",
+        "intro": "Používáním služby souhlasíte s dodržováním těchto pravidel:",
+        "item1": "Nenarušovat zabezpečení, dostupnost ani provoz služby.",
+        "item2": "Bez oprávnění nezískávat data, neautomatizovat požadavky, neprovádět scraping, nepřetěžovat infrastrukturu ani neobcházet technická omezení.",
+        "item3": "Neobtěžovat jiné uživatele, nevydávat se za jiné osoby, neklamat ani se nepokoušet získat informace od jiných uživatelů.",
+        "item4": "Nenahrávat, nereprodukovat, nešířit ani nepoužívat obsah bez dostatečných práv.",
+        "item5": "Nepoužívat službu k nezákonné, zneužívající, podvodné nebo škodlivé činnosti ani k činnosti odporující těmto Podmínkám."
+      },
+      "social": {
+        "title": "5. Žebříčky a sociální funkce",
+        "paragraph1": "Služba zahrnuje žebříčky, profily a další sociální funkce.",
+        "paragraph2": "Tyto funkce mohou podle dostupných předvoleb zobrazovat alias, rychlost, přesnost, úroveň, pokrok, stav online, poslední aktivitu nebo statistiky psaní.",
+        "paragraph3": "Při vytvoření účtu jsou některé sociální funkce ve výchozím nastavení aktivní. Jednotlivě je můžete vypnout ve svém profilu. Vaše skutečné jméno a e-mailová adresa se nezveřejňují a přítomnost nebo sdílené statistiky se zobrazují pouze přijatým přátelům podle Zásad ochrany osobních údajů."
+      },
+      "intellectualProperty": {
+        "title": "6. Duševní vlastnictví",
+        "paragraph1": "Software, design, rozhraní, texty, cvičení, obrázky, zvuk, ochranné známky, loga a další prvky služby náleží jejich příslušným vlastníkům.",
+        "paragraph2": "Přístup ke službě nepřevádí práva duševního vlastnictví k aplikaci ani jejímu obsahu.",
+        "paragraph3": "Obsah dostupný prostřednictvím služby lze používat pouze k procvičování psaní a používání funkcí aplikace, pokud není výslovně povoleno jinak nebo se na něj nevztahuje jiná licence."
+      },
+      "availability": {
+        "title": "7. Dostupnost a změny",
+        "paragraph1": "Služba může být přerušena, omezena nebo změněna z důvodu údržby, aktualizací, bezpečnosti, technických poruch, provozních změn nebo příčin mimo přiměřenou kontrolu Kiso Desk.",
+        "paragraph2": "Významné změny budou oznámeny, pokud to bude přiměřeně možné.",
+        "paragraph3": "Kiso Desk nezaručuje konkrétní zlepšení rychlosti, přesnosti, studijních výsledků, pracovního výkonu, zaměstnatelnosti ani jiný konkrétní výsledek používání služby."
+      },
+      "suspension": {
+        "title": "8. Pozastavení a ukončení",
+        "paragraph1": "Kiso Desk může účet omezit, pozastavit nebo zrušit v případě porušení těchto Podmínek, zneužití služby, bezpečnostního rizika, neoprávněného použití, poškozování jiných uživatelů nebo nezákonné či škodlivé činnosti.",
+        "paragraph2": "Pokud je to přiměřené, může uživatel požádat o přezkoumání opatření prostřednictvím kontaktního kanálu uvedeného v těchto Podmínkách.",
+        "paragraph3": "Ukončení, pozastavení nebo omezení účtu nemá vliv na povinnosti nebo odpovědnost vzniklé před přijetím opatření.",
+        "paragraph4": "Výmaz nebo uchování osobních údajů spojených s účtem bude provedeno v souladu se Zásadami ochrany osobních údajů a použitelnými právními předpisy."
+      },
+      "liability": {
+        "title": "9. Odpovědnost",
+        "paragraph1": "Služba je poskytována podle své aktuální dostupnosti a fungování.",
+        "paragraph2": "Nic v těchto Podmínkách neomezuje práva uživatelů, kterých se podle použitelných právních předpisů nelze vzdát, ani nevylučuje odpovědnost, kterou nelze ze zákona omezit.",
+        "paragraph3": "V rozsahu povoleném použitelnými právními předpisy nenese Kiso Desk odpovědnost za nepřímé škody, přerušení, ztrátu dat nebo újmu vzniklou z příčin mimo jeho přiměřenou kontrolu, nesprávného použití účtu, nepravdivých nebo neaktuálních informací, selhání třetích stran mimo službu nebo porušení těchto Podmínek uživatelem.",
+        "paragraph4": "Výše uvedené nevylučuje odpovědnost za porušení právních povinností přičitatelné Kiso Desk, úmyslné jednání, zlý úmysl, hrubou nedbalost, porušení práv, kterých se nelze vzdát, nesplnění bezpečnostních povinností nebo nesprávné zpracování osobních údajů."
+      },
+      "law": {
+        "title": "10. Použitelné právo a kontakt",
+        "paragraph1": "Tyto Podmínky se řídí a vykládají podle práva použitelného na správce služby, aniž jsou dotčena práva uživatelů, kterých se nelze vzdát podle právních předpisů platných v místě jejich bydliště.",
+        "paragraph2": "Nic v těchto Podmínkách neomezuje právo uživatele obrátit se na příslušné orgány ochrany spotřebitele, ochrany osobních údajů nebo jiné příslušné orgány.",
+        "paragraph3": "Dotazy, žádosti, hlášení bezpečnostních incidentů, nároky nebo sdělení související s těmito Podmínkami lze zasílat na adresu kisodesk.project@gmail.com."
+      }
+    },
+    "about": {
+      "metadata": {
+        "title": "O Kiso Desk",
+        "description": "Poznejte Kiso Desk a jeho praktický přístup k výuce psaní na klávesnici."
+      },
+      "general": {
+        "title": "O Kiso Desk",
+        "subtitle": "Platforma pro srozumitelné, pravidelné a měřitelné procvičování psaní na klávesnici",
+        "project_title": "Projekt",
+        "project_text": "Kiso Desk je nezávislý projekt zaměřený na vytvoření srozumitelného a praktického prostředí pro výuku psaní na klávesnici.",
+        "project_status_text": "Je navržen jako prostor, kde může kdokoli bez ohledu na úroveň zkušeností pravidelně procvičovat a zaznamenávat skutečné zlepšení. Důraz je kladen na průběžné učení, praktičnost a pozornost k detailům, aby nástroj odpovídal současným potřebám.",
+        "mission_title": "Naše poslání",
+        "mission_text": "V Kiso Desk věříme, že psaní na klávesnici je v digitálním světě zásadní dovedností. Naším posláním je zpřístupnit rychlé a přesné psaní všem a učinit jeho výuku praktickou a účinnou bez ohledu na úroveň zkušeností.",
+        "vision_title": "Naše vize",
+        "vision_text": "Vytvořit užitečný nástroj pro zlepšování rychlosti, přesnosti a jistoty při psaní s moderním, srozumitelným prostředím zaměřeným na pravidelné procvičování.",
+        "history_title": "Náš příběh",
+        "history_text": "Kiso Desk vznikl jako nezávislý projekt s cílem vytvořit moderní prostředí pro procvičování psaní na klávesnici. Z jednoduchého nápadu se dnes vyvíjí platforma zaměřená na lekce, pokrok, statistiky a neustálé zlepšování."
+      }
+    },
+    "page": {
+      "metadata": {
+        "title": "Naučte se psát na klávesnici",
+        "description": "Zlepšete rychlost a přesnost pomocí interaktivních lekcí psaní na klávesnici."
+      },
+      "general": {
+        "altNight": "Ilustrace nočního pokoje s člověkem a kočkou",
+        "altDay": "Ilustrace denního pokoje s programujícím člověkem a kočkou",
+        "interactiveLessons": "Interaktivní lekce",
+        "interactiveLessonsDescription": "Učte se pomocí strukturovaných kurzů",
+        "freePractice": "Volné procvičování",
+        "freePracticeDescription": "Trénujte vlastním tempem",
+        "dashboardDescription": "Prohlížejte si své statistiky",
+        "rankingDescription": "Soutěžte celosvětově",
+        "title1": "Ovládněte",
+        "title2": "psaní na klávesnici",
+        "subtitle1": "Zlepšete svou rychlost a přesnost ",
+        "subtitle2": "pomocí interaktivních lekcí psaní",
+        "learn": "Učte se",
+        "guidedLessons": "Vedené lekce",
+        "practiceAction": "Procvičujte",
+        "typingExercises": "Cvičení psaní na klávesnici",
+        "track": "Sledujte",
+        "progressAndStats": "Pokrok a statistiky",
+        "compete": "Soutěžte",
+        "globalRanking": "Globální žebříček"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "metadata": {
+        "title": "Přihlášení",
+        "description": "Přihlaste se do Kiso Desk a pokračujte v procvičování psaní na klávesnici."
+      },
+      "general": {
+        "googleError": "Přihlášení pomocí Googlu se nezdařilo.",
+        "tooManyAttempts": "Příliš mnoho pokusů. Počkejte minutu.",
+        "requiredFields": "Vyplňte všechna pole.",
+        "invalidCredentials": "Nesprávný e-mail nebo heslo",
+        "signIn": "Přihlásit se",
+        "continueWithGoogle": "Pokračovat přes Google",
+        "or": "nebo",
+        "email": "E-mail",
+        "password": "Heslo",
+        "sending": "Odesílání...",
+        "noAccount": "Nemáte účet?",
+        "createAccount": "Vytvořit účet",
+        "forgotPassword": "Zapomněli jste heslo?"
+      }
+    },
+    "register": {
+      "metadata": {
+        "title": "Vytvoření účtu",
+        "description": "Vytvořte si účet v Kiso Desk a začněte procvičovat psaní na klávesnici."
+      },
+      "general": {
+        "acceptLegalRequired": "Pro vytvoření účtu musíte přijmout Podmínky použití a Zásady ochrany osobních údajů",
+        "googleError": "Registrace pomocí Googlu se nezdařila.",
+        "tooManyAttempts": "Příliš mnoho pokusů. Počkejte minutu.",
+        "unknownError": "Neznámá chyba",
+        "createAccount": "Vytvořit účet",
+        "registerWithGoogle": "Registrovat se přes Google",
+        "or": "nebo",
+        "name": "Jméno",
+        "email": "E-mail",
+        "password": "Heslo",
+        "acceptTermsPrefix": "Souhlasím s",
+        "acceptTermsLink": "Podmínkami použití",
+        "acceptPrivacyPrefix": "Přečetl(a) jsem si",
+        "acceptPrivacyLink": "Zásady ochrany osobních údajů",
+        "alreadyHaveAccount": "Už máte účet?",
+        "signIn": "Přihlásit se",
+        "socialFeaturesNotice": "Sociální funkce jsou volitelné a jejich soukromí můžete nastavit ve svém profilu."
+      }
+    },
+    "resetPassword": {
+      "general": {
+        "invalidLink": "Odkaz neobsahuje platný token.",
+        "passwordTooShort": "Heslo musí mít alespoň 8 znaků.",
+        "passwordsDoNotMatch": "Hesla se neshodují.",
+        "invalidOrExpired": "Odkaz je neplatný, již byl použit nebo vypršel.",
+        "successTitle": "Heslo bylo aktualizováno",
+        "successMessage": "Nyní se můžete přihlásit pomocí nového hesla.",
+        "backToLogin": "Zpět k přihlášení",
+        "title": "Vytvořte nové heslo",
+        "instructions": "Zvolte nové heslo o délce alespoň 8 znaků.",
+        "newPassword": "Nové heslo",
+        "confirmPassword": "Potvrdit heslo",
+        "submit": "Změnit heslo",
+        "requestNewLink": "Požádat o nový odkaz"
+      }
+    }
+  },
+  "profile": {
+    "general": {
+      "title": "Profil",
+      "guestModeMessage": "Přihlaste se, abyste zobrazili svůj profil a statistiky.",
+      "signIn": "Přihlásit se",
+      "loadError": "Chyba při načítání profilu",
+      "loadErrorText": "Profil se nepodařilo načíst",
+      "nameRequired": "Zadejte své jméno",
+      "name": "Jméno",
+      "email": "E-mail",
+      "emailReadOnly": "E-mail nelze upravit v profilu.",
+      "editProfile": "Upravit profil",
+      "changePassword": "Změnit heslo",
+      "save": "Uložit",
+      "savingText": "Ukládání...",
+      "cancel": "Zrušit",
+      "retry": "Zkusit znovu",
+      "savedSuccessfully": "Profil byl úspěšně aktualizován.",
+      "saveError": "Profil se nepodařilo uložit. Zkuste to znovu.",
+      "conflictError": "Profil byl změněn na jiné kartě. Před dalším uložením znovu načtěte data.",
+      "required": "Toto pole je povinné.",
+      "accountSection": "Účet",
+      "preferencesSection": "Předvolby",
+      "securitySection": "Zabezpečení",
+      "memberSince": "Členem od",
+      "lastLogin": "Poslední přihlášení",
+      "lastUpdate": "Poslední aktualizace",
+      "interfaceLanguage": "Jazyk rozhraní",
+      "keyboardLayout": "Rozložení klávesnice",
+      "accessibility": "Přístupnost",
+      "adminRole": "Správce",
+      "userRole": "Uživatel",
+      "passwordSectionTitle": "Heslo",
+      "passwordSectionDescription": "Kdykoli potřebujete, můžete požádat o odkaz pro obnovení hesla.",
+      "dataControlsTitle": "Vaše data a účet",
+      "dataControlsDescription": "Stáhněte si kopii svých dat nebo nevratně odstraňte účet.",
+      "exportTitle": "Stáhnout moje data",
+      "exportDescription": "Vytvoří soubor JSON s údaji o účtu, pokroku, procvičování, chybách a vztazích. Neobsahuje hesla ani tokeny.",
+      "exportButton": "Stáhnout data",
+      "exporting": "Příprava stahování...",
+      "exportSuccess": "Stahování vašich dat bylo úspěšně zahájeno.",
+      "exportError": "Export se nepodařilo vytvořit. Zkuste to znovu.",
+      "deleteTitle": "Odstranit můj účet",
+      "deleteDescription": "Odstraní účet a související aktivní data. Tuto akci nelze vrátit zpět.",
+      "deleteButton": "Odstranit účet",
+      "deleteModalTitle": "Trvale odstranit účet",
+      "deleteModalDescription": "Z aktivní databáze budou odstraněny váš profil, pokrok, relace, statistiky, chyby, přátelství a přístupové relace. Zálohy se nadále řídí příslušnou dobou uchovávání.",
+      "deleteConfirmEmailInstruction": "Pro potvrzení zadejte svůj e-mail:",
+      "deleteConfirmEmail": "Potvrzovací e-mail",
+      "deleteCurrentPassword": "Aktuální heslo",
+      "deleteConfirmButton": "Trvale odstranit",
+      "deleting": "Odstraňování...",
+      "deleteEmailMismatch": "Potvrzovací e-mail se neshoduje.",
+      "deletePasswordRequired": "Zadejte své aktuální heslo",
+      "deleteInvalidPassword": "Aktuální heslo je nesprávné.",
+      "deleteError": "Účet se nepodařilo odstranit. Zkuste to znovu.",
+      "socialPrivacyTitle": "Soukromí sociálních funkcí",
+      "publicAlias": "Veřejná přezdívka",
+      "publicAliasPlaceholder": "ukazkovy_uzivatel",
+      "publicAliasHelp": "3 až 30 znaků: písmena, číslice, spojovník a podtržítko.",
+      "publicAliasInvalid": "Před aktivací sociálních funkcí nastavte platnou přezdívku.",
+      "showInRanking": "Zobrazovat se v žebříčku",
+      "showInRankingHelp": "Zobrazuje vaši přezdívku a celkové výsledky. Vaše skutečné jméno a e-mail zůstávají skryté",
+      "searchableByAlias": "Povolit vyhledávání podle přezdívky",
+      "searchableByAliasHelp": "Ostatní uživatelé vás budou moci najít pouze pomocí vaší veřejné přezdívky.",
+      "allowFriendRequests": "Přijímat žádosti o přátelství",
+      "allowFriendRequestsHelp": "Umožní uživatelům, kteří vás najdou podle přezdívky, posílat vám žádosti.",
+      "showPresenceToFriends": "Sdílet aktivitu s přáteli",
+      "showPresenceToFriendsHelp": "Zobrazuje stav online a poslední aktivitu pouze přijatým přátelům.",
+      "shareStatsWithFriends": "Sdílet statistiky s přáteli",
+      "shareStatsWithFriendsHelp": "Zobrazuje souhrnné statistiky procvičování pouze přijatým přátelům.",
+      "notConfigured": "Nenastaveno",
+      "enabled": "Zapnuto",
+      "disabled": "Vypnuto",
+      "spanish": "Španělština",
+      "english": "Angličtina",
+      "cookieConsentSaveError": "Vaše rozhodnutí o cookies se nepodařilo uložit. Zkuste to znovu.",
+      "googleReauthFailed": "Opětovné ověření přes Google se nepodařilo dokončit.",
+      "googleReauthRequired": "Pro odstranění účtu se znovu ověřte přes Google.",
+      "privacyCookiesTitle": "Soukromí a cookies",
+      "privacyCookiesDescription": "Spravujte své rozhodnutí o nepodstatných technologiích.",
+      "cookieConsentAccepted": "Přijali jste používání nepodstatných technologií.",
+      "cookieConsentRejected": "Odmítli jste používání nepodstatných technologií.",
+      "cookieConsentUnset": "Dosud jste neuvedli svou volbu ohledně nepodstatných technologií.",
+      "cookieConsentUpdatedAt": "Aktualizováno",
+      "cookieConsentAccept": "Přijmout",
+      "cookieConsentReject": "Odmítnout",
+      "googleReauthButton": "Znovu ověřit přes Google"
+    }
+  },
+  "friends": {
+    "general": {
+      "title": "Přátelé",
+      "subtitle": "Sledujte online stav svých přátel a porovnávejte pouze jejich volné procvičování.",
+      "guestModeMessage": "Přihlaste se, abyste zobrazili své přátele a jejich aktivitu.",
+      "signIn": "Přihlásit se",
+      "refresh": "Aktualizovat",
+      "retry": "Zkusit znovu",
+      "snapshotTitle": "Nedávní přátelé",
+      "snapshotDescription": "Podívejte se, kolik přátel je připojeno, a otevřete celý panel.",
+      "openFriends": "Otevřít přátele",
+      "totalFriends": "Přátelé",
+      "onlineNow": "právě online",
+      "requests": "Žádosti",
+      "searchTitle": "Vyhledat uživatele",
+      "searchLabel": "Veřejná přezdívka",
+      "searchPlaceholder": "Zadejte alespoň 3 znaky přezdívky",
+      "searchButton": "Vyhledat",
+      "searchError": "Vyhledávání se nepodařilo dokončit",
+      "noSearchResults": "Nebyli nalezeni žádní uživatelé.",
+      "statusFriends": "Přátelé",
+      "statusPendingOutgoing": "Žádost odeslána",
+      "statusPendingIncoming": "Poslal vám žádost",
+      "statusNotConnected": "Nejste propojeni",
+      "online": "Online",
+      "offline": "Offline",
+      "lastSeen": "Poslední aktivita",
+      "requestedAt": "Požádáno",
+      "freePractice": "Volné procvičování",
+      "viewStats": "Zobrazit statistiky",
+      "sendRequest": "Přidat",
+      "accept": "Přijmout",
+      "reject": "Odmítnout",
+      "remove": "Odstranit",
+      "incomingRequests": "Přijaté žádosti",
+      "outgoingRequests": "Odeslané žádosti",
+      "noIncomingRequests": "Nemáte žádné přijaté žádosti.",
+      "noOutgoingRequests": "Nemáte žádné odeslané žádosti.",
+      "myFriends": "Moji přátelé",
+      "noFriendsYet": "Zatím jste nepřidali žádné přátele",
+      "block": "Zablokovat",
+      "unblock": "Odblokovat",
+      "blockedUsers": "Blokovaní uživatelé",
+      "blockedUsersDescription": "Nemohou vás najít, posílat vám žádosti ani zobrazovat vaši aktivitu či statistiky.",
+      "noBlockedUsers": "Nemáte žádné blokované uživatele.",
+      "presenceHidden": "Soukromá aktivita",
+      "statsHidden": "Tento uživatel nesdílí své statistiky.",
+      "friendNotFound": "Tohoto přítele se nepodařilo najít.",
+      "backToFriends": "Zpět k přátelům",
+      "totalSessions": "Relace",
+      "averageWpm": "Průměrné WPM",
+      "averageAccuracy": "Průměrná přesnost",
+      "bestWpm": "Nejlepší WPM",
+      "totalPracticeTime": "Celková doba procvičování",
+      "byLanguage": "Rozdělení podle jazyka"
+    }
+  },
+  "ranking": {
+    "general": {
+      "title": "Žebříček",
+      "subtitle": "Porovnejte své výsledky s ostatními uživateli.",
+      "yourStats": "Vaše statistiky",
+      "basedOnLast10": "Na základě posledních 10 procvičování.",
+      "score": "Skóre",
+      "grossWpm": "Hrubé WPM",
+      "accuracy": "Přesnost",
+      "currentRank": "Aktuální umístění",
+      "level": "Úroveň",
+      "topPercent": "Top {percent} %",
+      "filterByLanguage": "Filtrovat podle jazyka",
+      "allLanguages": "Všechny jazyky",
+      "user": "Uživatel",
+      "noData": "Žádná data k zobrazení",
+      "errorFetchingRanking": "Žebříček se nepodařilo načíst. Zkuste to znovu.",
+      "errorFetchingStats": "Vaše statistiky se nepodařilo načíst. Zkuste to znovu.",
+      "retry": "Zkusit znovu",
+      "privateProfile": "Váš profil se v žebříčku nezobrazuje. Toto nastavení můžete změnit v části Soukromí sociálních funkcí ve svém profilu.",
+      "insufficientData": "Pro zobrazení umístění v žebříčku dokončete alespoň 5 procvičování.",
+      "noDataYet": "Pro tento jazyk zatím nejsou žádné výsledky.",
+      "currentUser": "Vy",
+      "speedAxis": "Rychlost (WPM)",
+      "accuracyAxis": "Přesnost (%)",
+      "showing": "Zobrazeno",
+      "of": "z",
+      "previous": "Předchozí",
+      "next": "Další",
+      "signInToParticipate": "Přihlaste se, abyste se mohli zúčastnit žebříčku."
+    },
+    "topPerformers": {
+      "general": {
+        "wpm": "Čisté WPM"
+      }
+    },
+    "userStatsCard": {
+      "general": {
+        "levels": {
+          "bronze": "Bronz",
+          "silver": "Stříbro",
+          "gold": "Zlato"
+        }
+      }
+    }
+  },
+  "public": {
+    "courses": {
+      "metadata": {
+        "title": "Kurzy psaní na klávesnici | Kiso Desk",
+        "description": "Prozkoumejte kurzy a vyzkoušejte si lekce psaní na klávesnici."
+      },
+      "lessons": {
+        "metadata": {
+          "title": "Lekce psaní na klávesnici | Kiso Desk",
+          "description": "Vyzkoušejte si lekce psaní na klávesnici bez vytvoření účtu."
+        },
+        "lesson": {
+          "metadata": {
+            "title": "Procvičování lekce | Kiso Desk",
+            "description": "Procvičte si lekci psaní na klávesnici v Kiso Desk."
+          }
+        }
+      }
+    },
+    "practice": {
+      "metadata": {
+        "title": "Test rychlosti psaní a přesnosti | Kiso Desk",
+        "description": "Procvičujte psaní zdarma a uložte výsledek do tohoto zařízení."
+      }
+    },
+    "progress": {
+      "metadata": {
+        "title": "Místní pokrok | Kiso Desk",
+        "description": "Pokrok uložený místně v tomto prohlížeči."
+      },
+      "general": {
+        "title": "Místní pokrok",
+        "description": "Tento pokrok se ukládá pouze v tomto prohlížeči.",
+        "lessonsCompleted": "Dokončené lekce",
+        "practiceSessions": "Procvičovací relace",
+        "accuracy": "Přesnost",
+        "signInNotice": "Přihlaste se, abyste si pokrok uložili do svého účtu.",
+        "signIn": "Přihlásit se"
+      }
+    },
+    "ranking": {
+      "metadata": {
+        "title": "Žebříček psaní na klávesnici | Kiso Desk",
+        "description": "Prohlédněte si veřejný žebříček rychlosti psaní."
+      }
+    }
+  },
+  "components": {
+    "courses": {
+      "courseCard": {
+        "general": {
+          "lessons": "lekcí",
+          "viewCourse": "Zobrazit kurz",
+          "yourProgress": "Váš pokrok",
+          "loginToSeeProgress": "Přihlaste se, abyste zobrazili svůj pokrok",
+          "lessonsCount": "lekcí"
+        }
+      }
+    },
+    "dashboard": {
+      "errorTrends": {
+        "general": {
+          "title": "Panel pokroku",
+          "noData": "Žádná data k zobrazení",
+          "insufficientData": "Nedostatek dat.",
+          "highestErrorRate": "Nejvyšší chybovost",
+          "correctAttempts": "{correctAttempts}/{totalAttempts} správně"
+        }
+      },
+      "fingerDistribution": {
+        "general": {
+          "title": "Panel pokroku",
+          "noData": "Žádná data k zobrazení",
+          "leftHand": "Levá",
+          "rightHand": "Pravá",
+          "hand": "{hand} ruka",
+          "pinky": "Malíček",
+          "ring": "Prsteník",
+          "middle": "Prostředník",
+          "index": "Ukazovák",
+          "correctPercentage": "{percentage} % správně",
+          "noCorrectPercentage": "Žádná",
+          "errorPercentage": "{percentage} % chyb",
+          "errors": "data"
+        }
+      },
+      "practiceCalendar": {
+        "general": {
+          "title": "Panel pokroku",
+          "noData": "Žádná data k zobrazení",
+          "noPractice": "Bez procvičování",
+          "minutesShort": "min",
+          "hoursShort": "h",
+          "noActivity": "Bez aktivity",
+          "fiveMinutes": "5 min",
+          "tenMinutes": "10 min",
+          "fifteenMinutes": "15+ minut"
+        }
+      },
+      "progressChart": {
+        "general": {
+          "noData": "Žádná data k zobrazení"
+        }
+      },
+      "authBanner": {
+        "general": {
+          "message": "Přihlaste se, abyste zobrazili své statistiky.",
+          "signIn": "Přihlásit se"
+        }
+      },
+      "recommendationsList": {
+        "general": {
+          "title": "Panel pokroku",
+          "signIn": "Přihlaste se",
+          "noRecommendations": "Nejsou k dispozici žádná doporučení."
+        }
+      },
+      "weakKeysPanel": {
+        "general": {
+          "title": "Panel pokroku",
+          "overallAccuracy": "Celková přesnost",
+          "weakestKey": "Nejslabší klávesa",
+          "lowestAccuracy": "Nejnižší přesnost"
+        }
+      }
+    },
+    "friends": {
+      "friendsSnapshot": {
+        "general": {
+          "title": "Přátelé",
+          "description": "Podívejte se, kolik přátel je připojeno, a otevřete celý panel.",
+          "openFriends": "Otevřít přátele",
+          "totalFriends": "Přátelé",
+          "onlineNow": "právě online",
+          "noFriendsYet": "Zatím jste nepřidali žádné přátele"
+        }
+      }
+    },
+    "layout": {
+      "footer": {
+        "general": {
+          "product": "Produkt",
+          "lessons": "Lekce",
+          "ranking": "Žebříček",
+          "progress": "Pokrok",
+          "project": "Projekt",
+          "aboutKisoDesk": "O Kiso Desk",
+          "github": "GitHub",
+          "legal": "Právní informace",
+          "privacyPolicy": "Zásady ochrany osobních údajů",
+          "termsOfUse": "Podmínky použití",
+          "cookiePolicy": "Zásady používání cookies",
+          "contact": "Kontakt",
+          "copyright": "© {year} Kiso Desk."
+        }
+      },
+      "header": {
+        "general": {
+          "defaultUser": "Uživatel",
+          "skipToMainContent": "Přejít na hlavní obsah",
+          "courses": "Kurzy",
+          "userMenu": "Uživatelská nabídka",
+          "profile": "Můj profil",
+          "logout": "Odhlásit se",
+          "menuToggle": "Otevřít nabídku",
+          "login": "Přihlásit se",
+          "register": "Registrovat se"
+        }
+      },
+      "sidebar": {
+        "general": {
+          "dashboard": "Panel",
+          "courses": "Kurzy",
+          "practice": "Procvičování",
+          "ranking": "Žebříček",
+          "friends": "Přátelé",
+          "profile": "Profil",
+          "menuToggle": "Navigační nabídka",
+          "expand": "Rozbalit",
+          "collapse": "Sbalit"
+        }
+      }
+    },
+    "legal": {
+      "cookieBanner": {
+        "general": {
+          "title": "Zásady používání cookies a místního úložiště",
+          "description": "V současné verzi aplikace se nepoužívají analytické cookies, reklamní sítě, remarketing ani jiné nepodstatné sledovací systémy.",
+          "privacyNotice": "Zásady ochrany osobních údajů",
+          "cookiePolicy": "Zásady používání cookies a místního úložiště",
+          "accept": "Přijmout",
+          "reject": "Odmítnout"
+        }
+      }
+    },
+    "lessons": {
+      "handReference": {
+        "general": {
+          "handReference": "Referenční poloha rukou na klávesnici"
+        }
+      },
+      "keyboardDetectionWizard": {
+        "general": {
+          "title": "Detektor klávesnice",
+          "subtitle": "Zjistěte rozložení klávesnice pomocí několika fyzických kláves a používejte je v celé aplikaci.",
+          "modalTitle": "Zjistit rozložení",
+          "currentLayout": "Aktuální rozložení",
+          "start": "Spustit detekci",
+          "progress": "Krok {current} z maximálně {total}",
+          "progressHint": "Může skončit dříve",
+          "progressLabel": "Průběh detekce",
+          "back": "Zpět",
+          "cancel": "Zrušit",
+          "close": "Zavřít",
+          "intro": {
+            "title": "Zjistíme rozložení vaší klávesnice",
+            "help": "Stačí stisknout 1 až 5 kláves na fyzické klávesnici."
+          },
+          "capture": {
+            "focus": "Klikněte sem a stiskněte uvedenou klávesu",
+            "instruction": "Stisknutá klávesa bude použita pouze ke zjištění rozložení.",
+            "captured": "Zjištěná klávesa: {key}",
+            "deadKey": "klávesa s diakritikou"
+          },
+          "questions": {
+            "rightOfL": {
+              "title": "Stiskněte klávesu bezprostředně napravo od L",
+              "help": "Nepoužívejte Shift. Řiďte se fyzickou polohou klávesy, i když je na ní vytištěn jiný symbol."
+            },
+            "leftOfBackspace": {
+              "title": "Stiskněte klávesu bezprostředně nalevo od Backspace",
+              "help": "Nepoužívejte Shift. Použijte klávesu v číselné řadě."
+            },
+            "shiftDigit2": {
+              "title": "Podržte Shift a stiskněte klávesu 2",
+              "help": "Použijte 2 v číselné řadě, nikoli na numerické klávesnici."
+            },
+            "sixthTopRow": {
+              "title": "Stiskněte šestou písmenovou klávesu v horní řadě",
+              "help": "Počítejte od první písmenové klávesy za Tab. Nepoužívejte Shift."
+            },
+            "firstTopRow": {
+              "title": "Stiskněte první písmenovou klávesu za Tab",
+              "help": "Řiďte se její fyzickou polohou. Nepoužívejte Shift."
+            },
+            "quoteKey": {
+              "title": "Stiskněte klávesu s uvozovkami",
+              "help": "Nepoužívejte Shift. Řiďte se fyzickou polohou klávesy."
+            },
+            "shiftDigit3": {
+              "title": "Podržte Shift a stiskněte klávesu 3",
+              "help": "Použijte 3 v číselné řadě, nikoli na numerické klávesnici."
+            }
+          },
+          "errors": {
+            "composition": "Rozložení nelze zjistit, když klávesnice právě skládá text.",
+            "unidentified": "Tuto klávesu se nepodařilo rozpoznat. Zkuste to znovu.",
+            "alt-graph": "Při stisknutí této klávesy nepoužívejte AltGr.",
+            "modified": "Při stisknutí této klávesy nepoužívejte modifikační klávesy.",
+            "wrongKey": "Byla stisknuta jiná klávesa. Stiskněte klávesu na výše uvedené pozici.",
+            "shiftRequired": "Při stisknutí této klávesy podržte Shift.",
+            "shiftNotRequired": "Stiskněte tuto klávesu bez použití Shiftu.",
+            "saveFailed": "Rozložení se nepodařilo uložit. Zkontrolujte připojení a zkuste to znovu."
+          },
+          "result": {
+            "detectedTitle": "Zjištěné rozložení",
+            "confidence": "Spolehlivost detekce: {confidence}",
+            "useDetected": "Použít toto rozložení",
+            "unidentifiedTitle": "Vaše rozložení se nepodařilo rozpoznat",
+            "unidentifiedHelp": "Vyberte ručně rozložení odpovídající vaší klávesnici.",
+            "fallbackTitle": "Rozložení se nepodařilo zjistit s dostatečnou jistotou",
+            "fallbackHelp": "Vyberte jednu z nejbližších shod nebo si prohlédněte všechna dostupná rozložení.",
+            "chooseManually": "Vybrat ručně",
+            "retryDetection": "Zopakovat detekci"
+          },
+          "manual": {
+            "title": "Vyberte své rozložení",
+            "help": "Vyberte rozložení odpovídající klávesám na vaší klávesnici."
+          },
+          "saved": {
+            "title": "Rozložení uloženo",
+            "description": "V celé aplikaci se nyní bude používat rozložení {layout}.",
+            "continueToCourses": "Pokračovat ke kurzům",
+            "returnToPractice": "Zpět k procvičování"
+          },
+          "physicalFamily": {
+            "title": "Tvar vaší klávesnice",
+            "subtitle": "Určete tvar kláves pro správné zobrazení klávesnice.",
+            "enterQuestion": "Jaký tvar má vaše klávesa Enter?",
+            "enterHorizontal": "Vodorovný Enter",
+            "enterIso": "Standardní Enter ISO",
+            "enterBigAss": "Enter ISO BA",
+            "abntQuestion": "Kolik kláves je mezi / a pravým Shiftem?",
+            "eastAsianQuestion": "Kolik kláves je mezi 0 a Backspace?",
+            "eastAsianCountQuestion": "Kolik kláves je mezi mezerníkem a pravým Altem?",
+            "complete": "Tvar klávesnice rozpoznán: {family}"
+          }
+        }
+      },
+      "keyboard": {
+        "general": {
+          "virtualKeyboard": "Virtuální klávesnice"
+        }
+      },
+      "lessonCard": {
+        "general": {
+          "ariaLabel": "Přejít na lekci",
+          "wpm": "WPM",
+          "score": "Skóre",
+          "accuracy": "Přesnost",
+          "time": "Čas",
+          "placeholder": "—",
+          "secondsShort": "s",
+          "minutesShort": "min",
+          "minutesCompact": "m",
+          "approxPrefix": "~",
+          "rankLabel": "Hodnost",
+          "gradeLabel": "Známka",
+          "completed": "Dokončeno",
+          "explanatoryBadge": "Vysvětlující lekce",
+          "explanatoryLesson": "Vysvětlující lekce",
+          "objectiveAccuracy": "Cíl: přesnost {minAccuracy} %",
+          "mastered": "Zvládnuto",
+          "inProgress": "Probíhá",
+          "lessonOrderRecommendationTitle": "Dodržujte doporučené pořadí",
+          "lessonOrderRecommendationDescription": "Doporučujeme postupovat ve výchozím pořadí lekcí, abyste se zlepšovali postupně.",
+          "lessonOrderRecommendationBack": "Zpět",
+          "lessonOrderRecommendationContinue": "Pokračovat",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Nováček",
+            "scout": "Průzkumník",
+            "ranger": "Hraničář",
+            "veteran": "Veterán",
+            "elite": "Elita",
+            "legend": "Legenda"
+          },
+          "gradesDescriptions": {
+            "novice": "Základní úroveň",
+            "scout": "Počáteční pokrok",
+            "ranger": "Dobré zvládnutí",
+            "veteran": "Vysoká úroveň",
+            "elite": "Expert",
+            "legend": "Nejvyšší úroveň"
+          }
+        }
+      },
+      "personalizedLessonCard": {
+        "general": {
+          "title": "Doporučené procvičování",
+          "noData": "Žádná data k zobrazení",
+          "error": "Vaše doporučení se nepodařilo načíst. Zkuste to znovu.",
+          "retry": "Zkusit znovu",
+          "insufficientData": "Procvičujte více, abychom zjistili, které klávesy potřebujete posílit.",
+          "noCourse": "Pro tento jazyk zatím není k dispozici kurz psaní na klávesnici.",
+          "noLessons": "Tento kurz zatím nemá žádné dostupné lekce.",
+          "description": "Na základě zjištěných slabých míst.",
+          "weakKeys": "Klávesy s nejnižší přesností v posledních relacích.",
+          "noMatches": "V tomto kurzu zatím nejsou žádné lekce související s vašimi slabými klávesami.",
+          "worksKeys": "Procvičujte: {keys}"
+        }
+      },
+      "results": {
+        "general": {
+          "saveWarning": "Výsledky se nepodařilo uložit",
+          "wpm": "WPM",
+          "score": "Skóre",
+          "accuracy": "Přesnost",
+          "correctChars": "Správné znaky",
+          "lowResultTitle": "Váš výsledek je trochu nízký",
+          "lowResultMessage": "Zvažte absolvování kurzu psaní na klávesnici, abyste se mohli dále zlepšovat.",
+          "lowResultCourseLink": "Přejít na kurz psaní na klávesnici",
+          "accuracyFocusTitle": "Upřednostněte přesnost",
+          "accuracyFocusMessage": "Postupujete dobře. Než zvýšíte rychlost, zkuste dosáhnout přesnosti alespoň 95 %.",
+          "masteredResult": "Lekce zvládnuta",
+          "masteredMessage": "Splnili jste požadavek na přesnost a můžete pokračovat.",
+          "needsReview": "Vyžaduje zopakování",
+          "reviewMessage": "Cíl: přesnost alespoň {minAccuracy} %. Zpomalte a blok zopakujte.",
+          "rankLabel": "Hodnost",
+          "gradeLabel": "Známka",
+          "retryAriaLabel": "Zopakovat lekci",
+          "retry": "Zkusit znovu",
+          "next": "Další",
+          "newText": "Nový text",
+          "backToCourses": "Zpět ke kurzům",
+          "backToDashboard": "Zpět na panel",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Nováček",
+            "scout": "Průzkumník",
+            "ranger": "Hraničář",
+            "veteran": "Veterán",
+            "elite": "Elita",
+            "legend": "Legenda"
+          },
+          "gradesDescriptions": {
+            "novice": "Základní úroveň",
+            "scout": "Počáteční pokrok",
+            "ranger": "Dobré zvládnutí",
+            "veteran": "Vysoká úroveň",
+            "elite": "Expert",
+            "legend": "Nejvyšší úroveň"
+          }
+        }
+      },
+      "typingArea": {
+        "general": {
+          "wpm": "WPM",
+          "score": "Skóre",
+          "accuracy": "Přesnost",
+          "characters": "Znaky",
+          "backspace": "Backspace",
+          "backspaceEnabled": "Mazání povoleno",
+          "backspaceDisabled": "Mazání zablokováno",
+          "font": "Písmo",
+          "size": "Velikost",
+          "pixels": "px",
+          "fontAndSize": "Písmo a velikost",
+          "textToType": "Text k napsání",
+          "inactivityPaused": "Pozastaveno kvůli neaktivitě",
+          "clickToResume": "Kliknutím pokračujte",
+          "congratulations": "Gratulujeme! Rychlost: {wpm} WPM, přesnost: {accuracy} %",
+          "detectKeyboard": "Zjistit klávesnici",
+          "keyboardConfigTitle": "Nastavení klávesnice",
+          "keyboardPreferenceMissing": "Není uloženo žádné preferované rozložení klávesnice. Můžete je změnit v nastavení klávesnice.",
+          "recommendedKeyboardLayout": "Doporučené rozložení klávesnice: {layout}",
+          "useRecommendedKeyboardLayout": "Změnit rozložení",
+          "detectionHelp": "Automaticky zjistí aktuální rozložení a použije je v celém procvičování.",
+          "identifyKeyboardShape": "Určit tvar",
+          "keyboardShapeHeading": "Tvar vaší klávesnice",
+          "logicalDistributionHeading": "Logické rozložení",
+          "logicalDistributionHint": "znaky klávesnice"
+        }
+      }
+    },
+    "ui": {
+      "themeToggle": {
+        "general": {
+          "switchToLight": "Motiv",
+          "switchToDark": "Motiv"
+        }
+      }
+    },
+    "i18n": {
+      "languageSwitcher": {
+        "general": {
+          "interfaceLanguage": "Jazyk rozhraní"
+        }
+      }
+    }
+  },
+  "general": {
+    "Accessibility": {
+      "button": "Tlačítko",
+      "expandMenu": "Rozbalit nabídku",
+      "collapseMenu": "Sbalit nabídku"
+    },
+    "Common": {
+      "loading": "Načítání...",
+      "retry": "Zkusit znovu",
+      "close": "Zavřít"
+    }
+  },
+  "lessonid": {
+    "general": {
+      "lockedLesson": "Uzamčená lekce",
+      "lockedLessonDescription": "Než budete pokračovat, zvládněte předchozí aktivitu.",
+      "backToLessons": "Zpět k lekcím",
+      "lessonNotFound": "Lekce nenalezena",
+      "typeTheTextBelow": "Napište níže uvedený text",
+      "hideKeyboard": "Skrýt klávesnici",
+      "showKeyboard": "Zobrazit klávesnici",
+      "exitPractice": "Ukončit procvičování",
+      "saveError": "Chyba při ukládání výsledku",
+      "saveErrorMessage": "Vaše výsledky se zobrazují na obrazovce, ale nebyly uloženy do vašeho pokroku. Zkuste lekci zopakovat, až bude připojení dostupné.",
+      "audioGuide": "Poslechnout vysvětlení",
+      "audioUnsupported": "Váš prohlížeč tuto zvukovou stopu nedokáže přehrát.",
+      "experimentalGreetings": {
+        "lessonPosition": "Lekce {current} z {total}",
+        "supportContent": "Doplňkový obsah",
+        "englishColumn": "Angličtina",
+        "spanishColumn": "Španělština",
+        "continue": "Pokračovat",
+        "dialogue": "Dialog",
+        "selectEnglishFirst": "Nejprve vyberte možnost v angličtině",
+        "tryAgain": "Zkuste to znovu",
+        "correct": "Správně",
+        "complete": "Aktivita dokončena"
+      },
+      "manualAudioPlay": "Poslechnout",
+      "manualAudioReplay": "Poslechnout znovu",
+      "lessonAudio": "Zvuk lekce",
+      "interactions": {
+        "dictationPrompt": "Napište, co slyšíte",
+        "unitProgress": "Průběh jednotky",
+        "stepProgress": "Krok {step} ze 4 {current}",
+        "currentStep": "aktuální",
+        "reviewTask": "Úkol {current} ze 3",
+        "completedPairs": "Dokončené dvojice",
+        "availableOptions": "Dostupné možnosti",
+        "options": "Možnosti",
+        "answer": "Odpověď",
+        "check": "Zkontrolovat",
+        "undo": "Zpět",
+        "correct": "Správně",
+        "incorrect": "Ještě ne. Správná odpověď: {answer} {detail}",
+        "spellingFeedback": "Pravopis: slovo má dvě písmena nebo na začátku",
+        "sentenceFeedback": "Velké počáteční písmeno a interpunkce: zkontrolujte každou větu",
+        "dictationFeedback": "Diktát: poslouchejte každé slovo a zachovejte interpunkci",
+        "correctAnswer": "Správná odpověď",
+        "nextTask": "Další úkol"
+      }
+    }
+  },
+  "courses": {
+    "general": {
+      "title": "Kurzy",
+      "subtitle": "Prozkoumejte naše kurzy a zlepšete své psaní na klávesnici",
+      "searchPlaceholder": "Vyhledat kurzy...",
+      "allLevels": "Všechny úrovně",
+      "beginner": "Začátečník",
+      "intermediate": "Středně pokročilý",
+      "advanced": "Pokročilý",
+      "guestModeMessage": "Přihlaste se, abyste si uložili svůj pokrok",
+      "signIn": "Přihlásit se",
+      "retry": "Zkusit znovu",
+      "noCourseYetTitle": "Zatím nejsou k dispozici žádné kurzy",
+      "noCourseYetDescription": "Připravujeme kurzy pro tento jazyk. Vraťte se brzy.",
+      "noCourses": "Nebyly nalezeny žádné kurzy",
+      "all": "Všechny kurzy",
+      "completed": "Dokončené",
+      "notCompleted": "Nedokončené"
+    }
+  },
+  "lessons": {
+    "general": {
+      "title": "Lekce",
+      "subtitle": "Procvičujte s lekcemi přizpůsobenými vaší úrovni",
+      "searchPlaceholder": "Vyhledat lekce...",
+      "allDifficulties": "Všechny obtížnosti",
+      "beginner": "Začátečník",
+      "intermediate": "Středně pokročilý",
+      "advanced": "Pokročilý",
+      "guestModeMessage": "Přihlaste se, abyste si uložili svůj pokrok",
+      "signIn": "Přihlásit se",
+      "retry": "Zkusit znovu",
+      "errorTitle": "Chyba při načítání lekcí",
+      "noLessonsTitle": "Nejsou k dispozici žádné lekce",
+      "noLessonsDescription": "Tento kurz zatím nemá žádné lekce. Vraťte se později nebo kontaktujte správce.",
+      "noCompletedLessonsTitle": "Zatím jste nedokončili žádnou lekci",
+      "noCompletedLessonsDescription": "Dokončete lekci, aby se zobrazila v tomto seznamu.",
+      "noPendingLessonsTitle": "Nemáte žádné rozpracované lekce",
+      "noPendingLessonsDescription": "Všechny lekce tohoto kurzu jsou označeny jako dokončené.",
+      "all": "Všechny lekce",
+      "completed": "Dokončené",
+      "notCompleted": "Nedokončené",
+      "moduleLabel": "Modul {order}",
+      "masteredCount": "Zvládnuto {mastered}/{total}"
+    }
+  },
+  "dashboard": {
+    "general": {
+      "title": "Panel pokroku",
+      "subtitle": "Prohlížejte si svůj pokrok a statistiky psaní na klávesnici",
+      "averageWpm": "Průměrné WPM",
+      "wordsPerMinute": "Slov za minutu",
+      "averageAccuracy": "Průměrná přesnost",
+      "accuracy": "Přesnost",
+      "totalPracticeTime": "Celková doba procvičování",
+      "thisWeek": "Tento týden",
+      "weeklyWpmProgress": "Týdenní vývoj WPM",
+      "monthlyWpmProgress": "Měsíční vývoj WPM",
+      "noData": "Nejsou k dispozici žádná data",
+      "bestWpm": "Nejlepší WPM",
+      "grossWpm": "Hrubé WPM",
+      "record": "Rekord",
+      "streak": "Série",
+      "days": "dní",
+      "consecutivePractice": "Po sobě jdoucí procvičování",
+      "totalKeystrokes": "Celkový počet úhozů",
+      "typed": "Napsáno",
+      "recommendations": "Doporučení pro vás",
+      "recommendation1": "Procvičujte lekce střední úrovně, abyste zlepšili svou rychlost.",
+      "recommendation2": "Snažte se udržet přesnost nad 95 %.",
+      "recommendation3": "Dokončete alespoň jednu lekci denně, abyste udrželi svou sérii.",
+      "retry": "Zkusit znovu",
+      "error": "Chyba",
+      "completedText": "% dokončeno",
+      "completedTitle": "Lekce / Kurzy",
+      "lessons": "lekce",
+      "courses": "kurzy",
+      "completedLessons": "Dokončené lekce",
+      "completedCourses": "Dokončené kurzy",
+      "guestModeMessage": "Přihlaste se, abyste zobrazili svůj pokrok",
+      "signIn": "Přihlásit se",
+      "recommendationsGuest": "Přihlaste se, abyste získali personalizovaná doporučení podle svého pokroku.",
+      "weakKeys": "Slabé klávesy",
+      "errorTrends": "Vývoj chyb",
+      "fingerDistribution": "Rozložení podle prstů",
+      "personalizedPractice": "Personalizované procvičování",
+      "personalizedPracticeDesc": "Získejte personalizované lekce podle svých slabých míst.",
+      "signInToSee": "Přihlaste se, abyste zobrazili své statistiky",
+      "noDataYet": "Dokončete lekce, abyste zobrazili svá slabá místa"
+    }
+  },
+  "practice": {
+    "general": {
+      "title": "Test psaní na klávesnici",
+      "subtitle": "Zlepšujte rychlost a přesnost s personalizovanými texty",
+      "freeTitle": "Test rychlosti psaní",
+      "freeSubtitle": "Vyzkoušejte si psaní na krátkém textu a zjistěte svou rychlost a přesnost.",
+      "adaptiveTitle": "Procvičujte klávesy, ve kterých nejvíce chybujete",
+      "adaptiveSubtitle": "Zaměřte se na znaky, které vám dělají nejvíce potíží, a pište přesněji.",
+      "session": "Procvičovací relace",
+      "newText": "Nový text",
+      "perKeyStats": "Statistiky podle kláves (již brzy)",
+      "loadingText": "Načítání textu...",
+      "errorLoadingText": "Chyba při načítání textu.",
+      "errorTitle": "Text se nepodařilo načíst",
+      "retry": "Zkusit znovu",
+      "saving": "Ukládání výsledků...",
+      "errorSavingResult": "Chyba při ukládání výsledků.",
+      "saveWarning": "Výsledky se nepodařilo uložit",
+      "backToDashboard": "Zpět na panel",
+      "guestSavePrompt": "Přihlaste se, abyste si uložili svůj pokrok a mohli se dále zlepšovat.",
+      "signInToSave": "Přihlásit se",
+      "guestPlaceholder": "—",
+      "guestAdaptiveReason": "Na základě chyb uložených v tomto zařízení",
+      "adaptiveKeys": "Klávesy: {keys}",
+      "adaptiveBigrams": "Bigramy: {bigrams}",
+      "modeRandom": "Volný text",
+      "modeWords": "Doporučené cvičení",
+      "modeText": "Adaptivní text",
+      "adaptivePracticeKeys": "Klávesy při procvičování"
+    }
+  },
+  "notFound": {
+    "general": {
+      "title": "Stránka nenalezena",
+      "description": "Je nám líto, hledaná stránka neexistuje nebo byla přesunuta.",
+      "backHome": "Zpět na úvodní stránku",
+      "dashboard": "Panel",
+      "lessons": "Lekce",
+      "ranking": "Žebříček"
+    }
+  }
+}

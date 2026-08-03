@@ -1,0 +1,1278 @@
+{
+  "marketing": {
+    "cookies": {
+      "metadata": {
+        "title": "Politik for cookies og lokal lagring",
+        "description": "Oplysninger om cookies og lokal lagring i Kiso Desk."
+      },
+      "general": {
+        "title": "Politik for cookies og lokal lagring",
+        "contentsLabel": "Indhold",
+        "relatedLabel": "Relaterede dokumenter",
+        "relatedPrivacy": "Privatlivspolitik",
+        "relatedTerms": "Brugsvilkår"
+      },
+      "definition": {
+        "title": "1. Hvad er cookies og lokal lagring?",
+        "paragraph1": "Denne applikation bruger cookies og browserens lokale lagring til nødvendige funktioner i tjenesten og til at huske visse brugerpræferencer.",
+        "paragraph2": "Cookies er små tekstfiler, som websteder gemmer i din browser. De bruges til at huske oplysninger om dit besøg, såsom dine præferencer eller din godkendelsesstatus.",
+        "paragraph3": "Lokal lagring, også kendt som localStorage, er en browserfunktion, der gør det muligt at gemme data direkte på din enhed. I modsætning til cookies sendes disse data ikke automatisk til serveren ved hver anmodning, men forbliver på din enhed, indtil du, browseren eller enhedens indstillinger sletter dem."
+      },
+      "data": {
+        "title": "2. Personlige og tekniske oplysninger knyttet til disse teknologier",
+        "paragraph1": "For at levere skriveøvelsestjenesten kan applikationen behandle personlige eller tekniske oplysninger, der er knyttet til brugen af cookies, lokal lagring og netværksanmodninger.",
+        "paragraph2": "Målinger knyttet til registrerede konti gemmes af tjenesten som beskrevet i privatlivsmeddelelsen. I gæstetilstand kan dele af fremskridtet og øvelseshistorikken gemmes lokalt i browseren.",
+        "paragraph3": "Lokal lagring kan indeholde brugerfladepræferencer, beslutningen om ikke-nødvendige teknologier og gæstefremskridt. Den indeholder ikke direkte adgangskoder eller godkendelsestokens.",
+        "item1": "Sessionsidentifikatorer: gemmes i cookies access_token og refresh_token, som gør det muligt for applikationen at genkende din konto, godkende anmodninger og holde din session aktiv.",
+        "item2": "IP-adresse og tekniske forbindelsesdata: overføres ved kommunikation med serveren og ved indlæsning af eksterne ressourcer, såsom flagbilleder fra flagcdn.com.",
+        "item3": "Præferencer og lokale data: kan omfatte tema, tastaturlayout, skrifttype, tekststørrelse, tastaturvisning, beslutning om ikke-nødvendige teknologier, gæstefremskridt og lokal historik over anvendte tekster."
+      },
+      "necessaryCookies": {
+        "title": "3. Strengt nødvendige cookies (godkendelse)",
+        "paragraph1": "Applikationen bruger strengt nødvendige cookies til at logge dig ind, bevare din identitet under navigation, forny din session og beskytte godkendte anmodninger.",
+        "note": "Disse cookies bruges ikke til reklame, remarketing eller kommerciel profilering.",
+        "tableHeaderName": "Navn",
+        "tableHeaderPurpose": "Formål",
+        "tableHeaderDuration": "Maksimal varighed",
+        "tableHeaderConfiguration": "Teknisk konfiguration",
+        "accessTokenName": "access_token",
+        "accessTokenPurpose": "Godkende dine anmodninger og holde adgangssessionen aktiv.",
+        "accessTokenDuration": "2 timer",
+        "accessTokenConfiguration": "HttpOnly, SameSite=Lax, Secure i produktion.",
+        "refreshTokenName": "refresh_token",
+        "refreshTokenPurpose": "Forny sessionen sikkert og gøre det muligt at tilbagekalde den.",
+        "refreshTokenDuration": "7 dage",
+        "refreshTokenConfiguration": "HttpOnly, SameSite=Lax, Secure i produktion."
+      },
+      "localStorage": {
+        "title": "4. Lokal lagring (brugerpræferencer)",
+        "paragraph1": "For at tilpasse oplevelsen og bevare visse indstillinger gemmer applikationen oplysninger i browseren.",
+        "paragraph2": "Disse data forbliver på enheden og sendes ikke automatisk til serveren ved hver anmodning, men applikationen kan læse dem for at anvende præferencer eller gendanne lokalt fremskridt.",
+        "tableHeaderKey": "Nøgle",
+        "tableHeaderPurpose": "Formål",
+        "tableHeaderDuration": "Varighed",
+        "themeKey": "theme",
+        "themePurpose": "Huske din præference for lyst eller mørkt tema.",
+        "themeDuration": "Vedvarende, indtil de slettes manuelt eller overskrives.",
+        "keyboardLayoutKey": "typing-keyboard-layout",
+        "keyboardLayoutPurpose": "Huske det tastaturlayout, der er valgt til øvelser.",
+        "keyboardLayoutDuration": "Vedvarende, indtil de slettes eller overskrives.",
+        "typingFontKey": "typing-font",
+        "typingFontPurpose": "Huske den skrifttypefamilie, der bruges i øvelser.",
+        "typingFontDuration": "Vedvarende, indtil de slettes eller overskrives.",
+        "typingFontSizeKey": "typing-font-size",
+        "typingFontSizePurpose": "Huske den tekststørrelse, der er valgt til øvelser.",
+        "typingFontSizeDuration": "Vedvarende, indtil de slettes eller overskrives."
+      },
+      "providers": {
+        "title": "5. Eksterne udbydere, databehandlere og mulige overførsler",
+        "paragraph1": "Applikationen bruger eller kan bruge eksterne udbydere til nødvendige funktioner i tjenesten, såsom infrastruktur, godkendelse, sikkerhed og levering af ressourcer. Integrationer, der er forberedt til fremtidige funktioner, betragtes ikke som aktive, før de er konfigureret og sat i drift.",
+        "paragraph2": "Når en udbyder behandler personoplysninger på vegne af Kiso Desk og efter dets instrukser, fungerer udbyderen som databehandler eller tjenesteudbyder, alt efter hvad der er relevant.",
+        "paragraph3": "Kiso Desk bruger Google Cloud Platform-infrastruktur (GCP) til at hoste og drive tekniske komponenter i tjenesten. Data, der behandles i denne infrastruktur, bruges til at vedligeholde konti, bevare fremskridt og drive platformen.",
+        "paragraph4": "Applikationen giver mulighed for at logge ind med Google. I dette forløb modtager Kiso Desk kun de godkendte oplysninger, der er nødvendige for at godkende kontoen, såsom Google-id, e-mailadresse, bekræftelsesstatus og profilnavn.",
+        "paragraph5": "Applikationen bruger flagcdn.com til at indlæse flagbilleder. Når disse ressourcer anmodes, kan udbyderen modtage sædvanlige tekniske oplysninger, såsom IP-adresse, user agent, dato, klokkeslæt og henvisende URL.",
+        "paragraph6": "Når oplysninger videregives eller overføres til en tredjepart, som ikke er databehandler, sker det i overensstemmelse med gældende lovgivning, herunder når det er nødvendigt for at levere tjenesten, opretholde relationen til brugeren, beskytte rettigheder eller opfylde retlige forpligtelser.",
+        "paragraph7": "Cloudflare Turnstile kan anvendes betinget til at forhindre bots og misbrug, hvilket kan indebære, at Cloudflare behandler tekniske forbindelsesdata. E-mailbaseret kontogendannelse er forberedt, men er ikke aktiv, før en e-mailudbyder er konfigureret. Der anvendes i øjeblikket ikke analysecookies, annoncenetværk, remarketing eller andre ikke-nødvendige sporingssystemer."
+      },
+      "legalBasis": {
+        "title": "6. Retsgrundlag og principper for privatliv",
+        "paragraph1": "Behandling i forbindelse med strengt nødvendige cookies udføres for at logge brugere ind, holde sessioner aktive, godkende anmodninger og beskytte kontoens funktion.",
+        "paragraph2": "Kiso Desk behandler oplysninger i overensstemmelse med gældende lovgivning. Når oplysninger er nødvendige for at levere den ønskede tjeneste eller opfylde forpligtelser, der følger af relationen til brugeren, indhentes der ikke yderligere samtykke, medmindre gældende lovgivning kræver det.",
+        "paragraph3": "Kiso Desk anvender også internationalt anerkendte principper for privatliv som reference, herunder gennemsigtighed, formålsbegrænsning, dataminimering, nøjagtighed, begrænset opbevaring, sikkerhed, brugerkontrol og ansvarlighed. Denne reference udgør ikke en certificering eller en erklæring om fuld overholdelse af udenlandsk lovgivning, som ikke finder anvendelse.",
+        "paragraph4": "Hvis der i fremtiden indføres ikke-nødvendige teknologier såsom analyse, reklame, remarketing eller andre sporingsmekanismer, opdateres denne politik, og relevant samtykke indhentes før aktivering, når det er nødvendigt."
+      },
+      "arco": {
+        "title": "7. Rettigheder vedrørende oplysninger og tilbagetrækning af samtykke",
+        "paragraph1": "Du kan anmode om indsigt i, berigtigelse eller sletning af personoplysninger knyttet til din konto eller gøre indsigelse mod behandlingen, og du kan tilbagetrække samtykke til behandlinger, der kræver det, hvor det er relevant.",
+        "paragraph2": "For at udøve disse rettigheder kan du sende en anmodning til: kisodesk.project@gmail.com.",
+        "paragraph3": "Den dataansvarlige meddeler sin afgørelse inden for den gældende lovbestemte frist og gennemfører anmodningen inden for den tilsvarende frist, når den imødekommes.",
+        "paragraph4": "Disse frister kan forlænges, når gældende lovgivning tillader det, og omstændighederne begrunder det.",
+        "paragraph5": "Tilbagetrækning af samtykke påvirker ikke behandling, der allerede er foretaget, eller behandling, som skal fortsætte på grund af en retlig forpligtelse, et løbende forhold, sikkerhed, beskyttelse af rettigheder eller nødvendig opbevaring.",
+        "item1": "Det alias eller den kontoidentifikator, der bruges i applikationen, hvis relevant.",
+        "item2": "Den e-mailadresse, der er knyttet til din konto.",
+        "item3": "En metode til at modtage meddelelser.",
+        "item4": "Rimelige oplysninger til at bekræfte din identitet eller ejerskab af kontoen, helst via den tilknyttede e-mailadresse. Hvis du handler gennem en repræsentant, skal der også fremlægges dokumentation for vedkommendes fuldmagt.",
+        "item5": "Den rettighed, du ønsker at udøve: indsigt, berigtigelse, sletning, indsigelse eller tilbagetrækning af samtykke.",
+        "item6": "En klar og præcis beskrivelse af de personoplysninger, anmodningen vedrører, såsom e-mailadresse, alias, præferencer eller skrivetekniske målinger knyttet til kontoen.",
+        "item7": "Ved anmodning om berigtigelse: de korrekte oplysninger og om nødvendigt dokumentation, der understøtter den ønskede rettelse.",
+        "item8": "Andre oplysninger, som med rimelighed er nødvendige for at identificere kontoen og behandle anmodningen korrekt."
+      },
+      "management": {
+        "title": "8. Sådan administrerer og sletter du disse data",
+        "paragraph1": "Du kan administrere cookies, lokal lagring og din beslutning om ikke-nødvendige teknologier.",
+        "item1": "Log ud: Når du logger ud, slettes godkendelsescookies access_token og refresh_token fra browseren.",
+        "item2": "Præferencer for privatliv og cookies: Du kan gennemgå og ændre din beslutning om ikke-nødvendige teknologier i din profil. Du kan også slette cookies og lokale data via browserens indstillinger.",
+        "item3": "Advarsel: Blokering af strengt nødvendige cookies kan forhindre dig i at logge ind eller bruge funktioner, der kræver godkendelse."
+      },
+      "changes": {
+        "title": "9. Ændringer af denne politik",
+        "paragraph1": "Applikationen kan opdatere denne politik for at afspejle juridiske, tekniske eller driftsmæssige ændringer. Opdateringer offentliggøres på denne side med den relevante dato for seneste opdatering.",
+        "paragraph2": "Når ændringer er væsentlige, meddeles de via en synlig besked i applikationen, en cookie-meddelelse eller en anden tilgængelig elektronisk metode."
+      },
+      "contact": {
+        "title": "10. Kontakt",
+        "paragraph1": "Hvis du har spørgsmål, ønsker at udøve dine rettigheder eller har brug for oplysninger om databehandling, kan du skrive til kisodesk.project@gmail.com.",
+        "paragraph2": "Oplysninger om den dataansvarliges identitet og kontaktoplysninger, generelle formål, udbydere, opbevaring og andre behandlingsforhold findes i applikationens privatlivsmeddelelse."
+      }
+    },
+    "privacy": {
+      "metadata": {
+        "title": "Privatlivspolitik",
+        "description": "Oplysninger om, hvordan Kiso Desk behandler personoplysninger."
+      },
+      "general": {
+        "eyebrow": "Juridisk",
+        "title": "Privatlivsmeddelelse",
+        "description": "Oplysninger om behandling af personoplysninger i henhold til gældende lovgivning og internationalt anerkendte principper for privatliv.",
+        "introduction": "Denne meddelelse forklarer, hvilke oplysninger Kiso Desk behandler, hvordan de bruges, hvem de kan deles med, og hvilke kontrolmuligheder brugerne har. Henvisningen til internationale principper udgør ikke en certificering eller en erklæring om fuld overholdelse af udenlandsk lovgivning, som ikke finder anvendelse.",
+        "lastUpdatedLabel": "Senest opdateret",
+        "lastUpdated": "23. juli 2026",
+        "contentsLabel": "Indhold",
+        "relatedLabel": "Relaterede dokumenter",
+        "relatedTerms": "Brugsvilkår",
+        "relatedCookies": "Cookiepolitik"
+      },
+      "data": {
+        "title": "1. Oplysninger, vi behandler",
+        "sensitiveNote": "Kiso Desk anmoder ikke om følsomme personoplysninger. Præferencer for tilgængelighed eller brugerflade bruges kun som funktionelle indstillinger i applikationen og har ikke til formål at indsamle oplysninger om helbred, handicap, etnisk oprindelse, religion, politiske holdninger, seksuel orientering eller andre følsomme oplysninger.",
+        "item1": "Konto: e-mailadresse, profilnavn, når relevant, alias valgt af brugeren, rolle, sprog, tastaturlayout og tilgængelighedspræferencer.",
+        "item2": "Godkendelse: en adgangskode gemt som hash, når kontoen oprettes med adgangskode, eller de oplysninger, der er nødvendige for at logge ind med Google, når denne metode anvendes.",
+        "item3": "Læring: kurser, lektioner, fremskridt, hastighed, nøjagtighed, øvelsestid, fejl, anvendte taster og hændelser, der er nødvendige for at beregne skrivemålinger.",
+        "item4": "Sociale funktioner: venskaber, anmodninger, blokeringer, tilstedeværelse, seneste forbindelse og delte statistikker i henhold til de tilgængelige præferencer.",
+        "item5": "Rangliste: alias, hastighed, nøjagtighed, niveau, øvelsessprog, placering og resultatdato, når relevant.",
+        "item6": "Tekniske oplysninger: IP-adresse, user agent, logfiler, sessionsidentifikatorer, diagnosticeringsdata og tekniske anmodninger genereret af den anvendte infrastruktur eller de anvendte udbydere.",
+        "item7": "Lokale data: tema, tastaturlayout, skrifttype, tekststørrelse, tastaturvisning, beslutning om ikke-nødvendige teknologier, gæstefremskridt og lokal teksthistorik."
+      },
+      "purposes": {
+        "title": "2. Sådan bruger vi oplysningerne",
+        "item1": "Oprette og administrere konti og sessioner.",
+        "item2": "Muliggøre login med adgangskode eller Google afhængigt af den valgte metode.",
+        "item3": "Levere lektioner, gemme fremskridt og generere skrivestatistik.",
+        "item4": "Tilpasse tastaturlayout, brugerflade, skrifttype, tekststørrelse og andre brugerpræferencer.",
+        "item5": "Vise generelle ranglister og ranglister efter sprog.",
+        "item6": "Drive sociale funktioner, herunder venskaber, tilstedeværelse, seneste forbindelse og statistik, der er synlig i henhold til kontoens præferencer.",
+        "item7": "Beskytte konti, forhindre misbrug, registrere uautoriseret aktivitet og diagnosticere fejl.",
+        "item8": "Muliggøre download af data og sletning af konto fra profilen.",
+        "item9": "Besvare henvendelser om support, privatliv og sikkerhed.",
+        "item10": "Opfylde retlige forpligtelser og forsvare krav.",
+        "item11": "Hvis Google AdSense aktiveres i fremtiden, vise og måle reklamer, forebygge svig og, hvor relevant, tilpasse annoncer med de oplysninger og det samtykke, som gældende lovgivning kræver."
+      },
+      "legalBasis": {
+        "title": "3. Grundlag og principper for behandlingen",
+        "paragraph1": "Behandlingen udføres primært for at levere den ønskede tjeneste, administrere konti, opretholde sessioner, gemme fremskridt, generere statistik, drive ranglister og sociale funktioner, muliggøre download eller sletning af data og beskytte platformen.",
+        "paragraph2": "Kiso Desk behandler oplysninger i overensstemmelse med gældende lovgivning. Når oplysninger er nødvendige for at levere tjenesten eller opfylde forpligtelser, der følger af relationen til brugeren, indhentes der ikke yderligere samtykke, medmindre gældende lovgivning kræver det.",
+        "paragraph3": "Kiso Desk anvender også internationalt anerkendte principper for privatliv som reference, herunder gennemsigtighed, formålsbegrænsning, dataminimering, nøjagtighed, begrænset opbevaring, sikkerhed, brugerkontrol og ansvarlighed. Denne reference udgør ikke en certificering eller en erklæring om fuld overholdelse af udenlandsk lovgivning, som ikke finder anvendelse.",
+        "paragraph4": "For formål, der kræver samtykke, indhentes samtykke, hvor det er relevant, og det kan trækkes tilbage uden tilbagevirkende kraft. Hvis der tilføjes nye formål, som er forskellige fra eller ikke nødvendige for at levere tjenesten, opdateres denne meddelelse før den nye behandling påbegyndes, når det er påkrævet."
+      },
+      "recipients": {
+        "title": "4. Udbydere og modtagere",
+        "paragraph1": "Kiso Desk bruger teknologileverandører til drift af infrastruktur, hosting, godkendelse, levering af ressourcer og sikkerhed. E-mailintegrationen er forberedt, men er ikke aktiv, før en udbyder er konfigureret.",
+        "paragraph2": "Når disse udbydere behandler personoplysninger på vegne af Kiso Desk og efter dets instrukser, fungerer de som databehandlere eller tjenesteudbydere og bruger kun oplysningerne til at levere de aftalte funktioner.",
+        "paragraph3": "Google Cloud Platform hoster og driver tekniske komponenter i tjenesten. Google fungerer også som godkendelsesudbyder, når brugeren vælger at logge ind med en Google-konto.",
+        "paragraph4": "Applikationen indlæser flagbilleder fra flagcdn.com. Når disse ressourcer anmodes, kan udbyderen modtage sædvanlige tekniske oplysninger, såsom IP-adresse, user agent, dato, klokkeslæt og henvisende URL.",
+        "paragraph5": "Cloudflare Turnstile kan anvendes betinget til at forhindre bots og misbrug. Når det er aktiveret, kan Cloudflare modtage tekniske forbindelsesdata, der er nødvendige for at verificere anmodningen. Google AdSense og reklamer er ikke aktive; før de aktiveres, opdateres oplysningerne, og de nødvendige kontrolmekanismer indføres.",
+        "paragraph6": "Den registrerede kan gøre indsigelse mod videregivelser eller overførsler, der kræver samtykke, via e-mailadressen for privatliv. Denne indsigelse påvirker ikke videregivelser eller overførsler, der er nødvendige for at levere tjenesten, opretholde relationen til brugeren, beskytte rettigheder, forhindre misbrug eller opfylde retlige forpligtelser."
+      },
+      "transfers": {
+        "title": "5. Overførsler og behandling i andre jurisdiktioner",
+        "paragraph1": "Kiso Desk kan bruge teknologileverandører i forskellige jurisdiktioner til at hoste, drive, beskytte og vedligeholde tjenesten.",
+        "paragraph2": "Når disse udbydere fungerer som databehandlere, behandler de oplysninger på vegne af Kiso Desk og i overensstemmelse med de relevante instrukser og formål.",
+        "paragraph3": "Når oplysninger videregives eller overføres til en tredjepart, som ikke er databehandler, sker det under de omstændigheder, der er tilladt efter gældende lovgivning, herunder når det er nødvendigt for at levere tjenesten, opfylde retlige forpligtelser, beskytte rettigheder eller på grundlag af samtykke.",
+        "paragraph4": "Brugen af Google Cloud Platform, Google OAuth, Cloudflare Turnstile, når det er aktivt, og flagcdn.com kan medføre behandling af tekniske oplysninger eller kontooplysninger i andre jurisdiktioner i henhold til tjenestens konfiguration og de enkelte udbyderes gældende politikker."
+      },
+      "retention": {
+        "title": "6. Opbevaring",
+        "item1": "Cookien access_token har en maksimal varighed på 2 timer, og cookien refresh_token har en maksimal varighed på 7 dage.",
+        "item2": "Konto- og fremskridtsdata opbevares, mens kontoen er aktiv, eller så længe det er nødvendigt for at levere tjenesten, drive ranglister og sociale funktioner, opfylde retlige forpligtelser, behandle anmodninger, forhindre misbrug, løse hændelser eller beskytte rettigheder.",
+        "item3": "Data fra ranglister og sociale funktioner opbevares, mens kontoen er aktiv, eller så længe det er nødvendigt for at drive disse funktioner, medmindre brugeren ændrer sine præferencer, sletter kontoen eller udøver en relevant rettighed.",
+        "item4": "Lokale sikkerhedskopier, der oprettes under udrulninger, opbevares i op til 30 dage. Tekniske logfiler roteres efter størrelse og opbevares så længe, det er nødvendigt for at drive, beskytte og diagnosticere tjenesten.",
+        "item5": "Når personoplysninger ikke længere er nødvendige, slettes, anonymiseres eller blokeres de før sletning, alt efter hvad der er relevant, medmindre de skal opbevares på grund af en gældende forpligtelse."
+      },
+      "rights": {
+        "title": "7. Rettigheder og anmodninger",
+        "paragraph1": "Du kan anmode om indsigt i, berigtigelse eller sletning af dine personoplysninger eller gøre indsigelse mod behandlingen, og du kan tilbagetrække samtykke til behandlinger, der kræver det, hvor det er relevant.",
+        "paragraph2": "Fra profilen gør applikationen det muligt at downloade en struktureret kopi af de oplysninger, der er knyttet til kontoen, og anmode om sletning via de tilgængelige mekanismer.",
+        "paragraph3": "Brugere kan begrænse videregivelsen af oplysninger, der er synlige i ranglister eller sociale funktioner, gennemgå eller ændre beslutningen om ikke-nødvendige teknologier og blokere andre brugere via applikationens kontroller.",
+        "paragraph4": "Du kan også indsende anmodninger vedrørende privatliv, begrænsning af brug eller videregivelse af oplysninger og udøvelse af rettigheder via e-mailadressen i denne meddelelse."
+      },
+      "children": {
+        "title": "8. Mindreårige",
+        "paragraph1": "Tjenesten er ikke rettet mod mindreårige.",
+        "paragraph2": "For selvstændigt at oprette en konto og bruge tjenesten skal en person have nået myndighedsalderen efter den lovgivning, der gælder på vedkommendes bopæl.",
+        "paragraph3": "Hvis Kiso Desk opdager, at en konto tilhører en mindreårig, kan det begrænse unødvendig behandling og vurdere suspension, sletning, blokering eller regulering af kontoen i overensstemmelse med gældende lovgivning og beskyttelsen af personens rettigheder."
+      },
+      "security": {
+        "title": "9. Sikkerhed",
+        "paragraph1": "Kiso Desk anvender administrative, tekniske og fysiske foranstaltninger, der har til formål at beskytte personoplysninger mod skade, tab, ændring, ødelæggelse, uautoriseret brug, adgang eller behandling.",
+        "paragraph2": "Disse foranstaltninger kan omfatte adgangskontrol, godkendelse, sikker opbevaring af adgangskoder, beskyttet sessionsstyring, HttpOnly-cookies, forebyggelse af misbrug, tekniske logfiler, interne begrænsninger og andre foranstaltninger, der står i rimeligt forhold til risikoen og den teknologiske udvikling.",
+        "paragraph3": "Intet system er ufejlbarligt. Hvis en hændelse i væsentlig grad påvirker brugernes rettigheder, foretager Kiso Desk de meddelelser og handlinger, som kræves efter gældende lovgivning."
+      },
+      "changes": {
+        "title": "10. Ændringer af denne privatlivsmeddelelse",
+        "paragraph1": "Denne meddelelse kan opdateres for at afspejle juridiske, tekniske eller driftsmæssige ændringer.",
+        "paragraph2": "Opdateringer offentliggøres på denne side med den relevante dato for seneste opdatering.",
+        "paragraph3": "Når en ændring er væsentlig, meddeles den via en synlig besked i applikationen eller en anden tilgængelig elektronisk metode.",
+        "paragraph4": "Hvis et nyt formål kræver samtykke, påbegyndes den relevante behandling ikke, før samtykket er indhentet, når det kræves efter gældende lovgivning."
+      },
+      "responsible": {
+        "title": "11. Dataansvarlig og kontakt",
+        "paragraph3": "E-mail vedrørende privatliv: kisodesk.project@gmail.com."
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "Brugsvilkår",
+        "description": "Regler for brug af Kiso Desk."
+      },
+      "general": {
+        "eyebrow": "Juridisk",
+        "title": "Brugsvilkår",
+        "description": "Regler for brug af Kiso Desk.",
+        "introduction": "Disse vilkår regulerer adgang til applikationen, konti, læringsfunktioner og tilgængelige sociale funktioner.",
+        "lastUpdatedLabel": "Senest opdateret",
+        "lastUpdated": "23. juli 2026",
+        "contentsLabel": "Indhold",
+        "relatedLabel": "Relaterede dokumenter",
+        "relatedPrivacy": "Privatlivspolitik",
+        "relatedCookies": "Cookiepolitik"
+      },
+      "service": {
+        "title": "1. Beskrivelse af tjenesten",
+        "paragraph1": "Kiso Desk tilbyder skrivelektioner og øvelser, sporing af fremskridt, statistik, ranglister og sociale funktioner relateret til læring og øvelse i tastaturskrivning.",
+        "paragraph2": "Ved at oprette en konto, logge ind eller bruge tjenesten accepterer du disse brugsvilkår.",
+        "paragraph3": "Funktioner kan ændres, opdateres, begrænses eller ophøre under udviklingen og driften af tjenesten, altid i overensstemmelse med gældende lovgivning og uden at påvirke ufravigelige rettigheder."
+      },
+      "eligibility": {
+        "title": "2. Alder og berettigelse",
+        "paragraph1": "For selvstændigt at oprette en konto og bruge tjenesten skal du have nået myndighedsalderen efter den lovgivning, der gælder på din bopæl.",
+        "paragraph2": "Hvis gældende lovgivning stiller yderligere krav til retsevne, tilladelse eller alder, skal du opfylde dem, før du bruger tjenesten.",
+        "paragraph3": "Tjenesten er ikke rettet mod mindreårige. Hvis du er mindreårig efter gældende lovgivning, må du ikke selv oprette en konto eller afgive personoplysninger."
+      },
+      "account": {
+        "title": "3. Konto og sikkerhed",
+        "item1": "Du skal afgive korrekte oplysninger og holde dem ajour.",
+        "item2": "Du er ansvarlig for at beskytte dine legitimationsoplysninger eller adgangsmetoder og for at logge ud på delte enheder.",
+        "item3": "Du må ikke overdrage, sælge, overføre eller bruge en anden persons konto.",
+        "item4": "Du skal indberette enhver uautoriseret adgang eller sikkerhedshændelse via kontaktkanalen i disse vilkår."
+      },
+      "acceptableUse": {
+        "title": "4. Acceptabel brug",
+        "intro": "Ved at bruge tjenesten accepterer du at følge disse regler:",
+        "item1": "Du må ikke forstyrre tjenestens sikkerhed, tilgængelighed eller drift.",
+        "item2": "Du må ikke uden tilladelse udtrække data, automatisere anmodninger, foretage scraping, overbelaste infrastrukturen eller omgå tekniske begrænsninger.",
+        "item3": "Du må ikke chikanere, udgive dig for at være andre, vildlede eller forsøge at indhente oplysninger fra andre brugere.",
+        "item4": "Du må ikke uploade, reproducere, distribuere eller bruge indhold uden tilstrækkelige rettigheder.",
+        "item5": "Du må ikke bruge tjenesten til ulovlige, krænkende, svigagtige eller skadelige aktiviteter eller aktiviteter, der strider mod disse vilkår."
+      },
+      "social": {
+        "title": "5. Ranglister og sociale funktioner",
+        "paragraph1": "Tjenesten omfatter ranglister, profiler og andre sociale funktioner.",
+        "paragraph2": "Disse funktioner kan vise alias, hastighed, nøjagtighed, niveau, fremskridt, onlinestatus, seneste aktivitet eller skrivestatistik i henhold til de tilgængelige præferencer.",
+        "paragraph3": "Når en konto oprettes, er visse sociale funktioner aktiveret som standard. Du kan deaktivere dem enkeltvis i din profil. Dit rigtige navn og din e-mailadresse offentliggøres ikke, og tilstedeværelse eller delte statistikker vises kun til accepterede venner som beskrevet i privatlivsmeddelelsen."
+      },
+      "intellectualProperty": {
+        "title": "6. Immaterielle rettigheder",
+        "paragraph1": "Software, design, brugerflade, tekster, øvelser, billeder, lyd, varemærker, logoer og andre elementer i tjenesten tilhører deres respektive ejere.",
+        "paragraph2": "Adgang til tjenesten overfører ikke immaterielle rettigheder til applikationen eller dens indhold.",
+        "paragraph3": "Indhold, der er tilgængeligt gennem tjenesten, må kun bruges til at øve skrivning og anvende applikationens funktioner, medmindre andet udtrykkeligt er tilladt eller er omfattet af en anden licens."
+      },
+      "availability": {
+        "title": "7. Tilgængelighed og ændringer",
+        "paragraph1": "Tjenesten kan blive afbrudt, begrænset eller ændret på grund af vedligeholdelse, opdateringer, sikkerhed, tekniske fejl, driftsændringer eller forhold uden for Kiso Desks rimelige kontrol.",
+        "paragraph2": "Væsentlige ændringer meddeles, når det med rimelighed er muligt.",
+        "paragraph3": "Kiso Desk garanterer ikke en bestemt forbedring i hastighed, nøjagtighed, studiepræstation, arbejdspræstation, beskæftigelsesmuligheder eller noget andet bestemt resultat ved brug af tjenesten."
+      },
+      "suspension": {
+        "title": "8. Suspension og ophør",
+        "paragraph1": "Kiso Desk kan begrænse, suspendere eller lukke en konto ved overtrædelse af disse vilkår, misbrug af tjenesten, sikkerhedsrisiko, uautoriseret brug, skade på andre brugere eller ulovlig eller skadelig aktivitet.",
+        "paragraph2": "Når det er rimeligt, kan brugeren anmode om en gennemgang af foranstaltningen via kontaktkanalen i disse vilkår.",
+        "paragraph3": "Ophør, suspension eller begrænsning af en konto påvirker ikke forpligtelser eller ansvar, der er opstået før foranstaltningen.",
+        "paragraph4": "Sletning eller opbevaring af personoplysninger knyttet til kontoen håndteres i overensstemmelse med privatlivsmeddelelsen og gældende lovgivning."
+      },
+      "liability": {
+        "title": "9. Ansvar",
+        "paragraph1": "Tjenesten leveres i overensstemmelse med dens aktuelle tilgængelighed og funktion.",
+        "paragraph2": "Intet i disse vilkår begrænser ufravigelige rettigheder, som brugere har efter gældende lovgivning, eller udelukker ansvar, der ikke lovligt kan begrænses.",
+        "paragraph3": "I det omfang gældende lovgivning tillader det, er Kiso Desk ikke ansvarlig for indirekte tab, afbrydelser, datatab eller skade som følge af forhold uden for dets rimelige kontrol, misbrug af kontoen, urigtige eller forældede oplysninger, fejl hos tredjeparter uden for tjenesten eller brugerens overtrædelse af disse vilkår.",
+        "paragraph4": "Ovenstående udelukker ikke ansvar for en juridisk overtrædelse, der kan tilskrives Kiso Desk, forsæt, ond tro, grov uagtsomhed, krænkelse af ufravigelige rettigheder, manglende opfyldelse af sikkerhedsforpligtelser eller uretmæssig behandling af personoplysninger."
+      },
+      "law": {
+        "title": "10. Gældende lovgivning og kontakt",
+        "paragraph1": "Disse vilkår er underlagt og fortolkes efter den lovgivning, der gælder for den dataansvarlige for tjenesten, uden at det berører ufravigelige rettigheder, som brugere måtte have efter lovgivningen på deres bopæl.",
+        "paragraph2": "Intet i disse vilkår begrænser brugerens ret til at kontakte kompetente myndigheder for forbrugerbeskyttelse, databeskyttelse eller andre relevante myndigheder.",
+        "paragraph3": "Spørgsmål, anmodninger, sikkerhedsrapporter, krav eller meddelelser vedrørende disse vilkår kan sendes til kisodesk.project@gmail.com."
+      }
+    },
+    "about": {
+      "metadata": {
+        "title": "Om Kiso Desk",
+        "description": "Lær Kiso Desk og platformens praktiske tilgang til blindskrift at kende."
+      },
+      "general": {
+        "title": "Om Kiso Desk",
+        "subtitle": "En platform til tydelig, regelmæssig og målbar træning i blindskrift",
+        "project_title": "Projektet",
+        "project_text": "Kiso Desk er et uafhængigt projekt, der fokuserer på at skabe en overskuelig og praktisk oplevelse til at lære blindskrift.",
+        "project_status_text": "Det er tænkt som et sted, hvor alle uanset erfaringsniveau kan træne regelmæssigt og opleve mærkbare fremskridt. Fokus er på løbende læring, anvendelighed og sans for detaljer, så værktøjet passer til nutidens behov.",
+        "mission_title": "Vores mission",
+        "mission_text": "Hos Kiso Desk mener vi, at blindskrift er en vigtig færdighed i den digitale verden. Vores mission er at gøre det tilgængeligt, praktisk og effektivt for alle at lære at skrive hurtigt og præcist, uanset erfaringsniveau.",
+        "vision_title": "Vores vision",
+        "vision_text": "At skabe et nyttigt værktøj, der forbedrer skrivehastighed, præcision og selvtillid gennem en moderne, overskuelig oplevelse med fokus på regelmæssig træning.",
+        "history_title": "Vores historie",
+        "history_text": "Kiso Desk begyndte som et uafhængigt projekt med det formål at skabe en moderne oplevelse til træning i blindskrift. Det, der startede som en enkel idé, udvikler sig i dag til en platform med fokus på lektioner, fremskridt, statistik og løbende forbedring."
+      }
+    },
+    "page": {
+      "metadata": {
+        "title": "Lær blindskrift",
+        "description": "Forbedr din hastighed og præcision med interaktive lektioner i blindskrift."
+      },
+      "general": {
+        "altNight": "Illustration af et værelse om natten med en person og en kat",
+        "altDay": "Illustration af et værelse om dagen med en person, der programmerer, og en kat",
+        "interactiveLessons": "Interaktive lektioner",
+        "interactiveLessonsDescription": "Lær med strukturerede kurser",
+        "freePractice": "Fri træning",
+        "freePracticeDescription": "Træn i dit eget tempo",
+        "dashboardDescription": "Se din statistik",
+        "rankingDescription": "Konkurrér globalt",
+        "title1": "Mestr",
+        "title2": "blindskrift",
+        "subtitle1": "Forbedr din hastighed og præcision ",
+        "subtitle2": "med interaktive skrivelektioner",
+        "learn": "Lær",
+        "guidedLessons": "Guidede lektioner",
+        "practiceAction": "Træn",
+        "typingExercises": "Skriveøvelser",
+        "track": "Mål",
+        "progressAndStats": "Fremskridt og statistik",
+        "compete": "Konkurrér",
+        "globalRanking": "Global rangliste"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "metadata": {
+        "title": "Log ind",
+        "description": "Log ind på Kiso Desk for at fortsætte din træning i blindskrift."
+      },
+      "general": {
+        "googleError": "Det var ikke muligt at logge ind med Google.",
+        "tooManyAttempts": "For mange forsøg. Vent et minut.",
+        "requiredFields": "Udfyld alle felter.",
+        "invalidCredentials": "Forkert e-mailadresse eller adgangskode",
+        "signIn": "Log ind",
+        "continueWithGoogle": "Fortsæt med Google",
+        "or": "eller",
+        "email": "E-mailadresse",
+        "password": "Adgangskode",
+        "sending": "Sender...",
+        "noAccount": "Har du ikke en konto?",
+        "createAccount": "Opret konto",
+        "forgotPassword": "Har du glemt din adgangskode?"
+      }
+    },
+    "register": {
+      "metadata": {
+        "title": "Opret en konto",
+        "description": "Opret en konto på Kiso Desk, og begynd at træne blindskrift."
+      },
+      "general": {
+        "acceptLegalRequired": "Du skal acceptere Vilkår for brug og Privatlivspolitikken for at oprette en konto",
+        "googleError": "Det var ikke muligt at registrere sig med Google.",
+        "tooManyAttempts": "For mange forsøg. Vent et minut.",
+        "unknownError": "Ukendt fejl",
+        "createAccount": "Opret konto",
+        "registerWithGoogle": "Registrer med Google",
+        "or": "eller",
+        "name": "Navn",
+        "email": "E-mailadresse",
+        "password": "Adgangskode",
+        "acceptTermsPrefix": "Jeg accepterer",
+        "acceptTermsLink": "Vilkår for brug",
+        "acceptPrivacyPrefix": "Jeg har læst",
+        "acceptPrivacyLink": "Privatlivspolitikken",
+        "alreadyHaveAccount": "Har du allerede en konto?",
+        "signIn": "Log ind",
+        "socialFeaturesNotice": "De sociale funktioner er valgfrie, og du kan konfigurere deres privatlivsindstillinger fra din profil."
+      }
+    },
+    "resetPassword": {
+      "general": {
+        "invalidLink": "Linket indeholder ikke et gyldigt token.",
+        "passwordTooShort": "Adgangskoden skal være på mindst 8 tegn.",
+        "passwordsDoNotMatch": "Adgangskoderne stemmer ikke overens.",
+        "invalidOrExpired": "Linket er ugyldigt, er allerede blevet brugt eller er udløbet.",
+        "successTitle": "Adgangskoden er opdateret",
+        "successMessage": "Du kan nu logge ind med din nye adgangskode.",
+        "backToLogin": "Tilbage til login",
+        "title": "Opret en ny adgangskode",
+        "instructions": "Vælg en ny adgangskode på mindst 8 tegn.",
+        "newPassword": "Ny adgangskode",
+        "confirmPassword": "Bekræft adgangskode",
+        "submit": "Skift adgangskode",
+        "requestNewLink": "Anmod om et nyt link"
+      }
+    }
+  },
+  "profile": {
+    "general": {
+      "title": "Profil",
+      "guestModeMessage": "Log ind for at se din profil og statistik.",
+      "signIn": "Log ind",
+      "loadError": "Fejl ved indlæsning af profil",
+      "loadErrorText": "Profilen kunne ikke indlæses",
+      "nameRequired": "Indtast dit navn",
+      "name": "Navn",
+      "email": "E-mailadresse",
+      "emailReadOnly": "E-mailadressen kan ikke redigeres fra profilen.",
+      "editProfile": "Rediger profil",
+      "changePassword": "Skift adgangskode",
+      "save": "Gem",
+      "savingText": "Gemmer...",
+      "cancel": "Annuller",
+      "retry": "Prøv igen",
+      "savedSuccessfully": "Profilen blev opdateret.",
+      "saveError": "Profilen kunne ikke gemmes. Prøv igen.",
+      "conflictError": "Profilen blev ændret i en anden fane. Genindlæs dataene, før du gemmer igen.",
+      "required": "Dette felt er obligatorisk.",
+      "accountSection": "Konto",
+      "preferencesSection": "Indstillinger",
+      "securitySection": "Sikkerhed",
+      "memberSince": "Medlem siden",
+      "lastLogin": "Seneste login",
+      "lastUpdate": "Senest opdateret",
+      "interfaceLanguage": "Grænsefladesprog",
+      "keyboardLayout": "Tastaturlayout",
+      "accessibility": "Tilgængelighed",
+      "adminRole": "Administrator",
+      "userRole": "Bruger",
+      "passwordSectionTitle": "Adgangskode",
+      "passwordSectionDescription": "Du kan anmode om et link til nulstilling af din adgangskode, når du har brug for det.",
+      "dataControlsTitle": "Dine data og din konto",
+      "dataControlsDescription": "Download en kopi af dine data, eller slet din konto permanent.",
+      "exportTitle": "Download mine data",
+      "exportDescription": "Opretter en JSON-fil med dine kontodata, fremskridt, træningssessioner, fejl og relationer. Den indeholder ikke adgangskoder eller tokens.",
+      "exportButton": "Hent data",
+      "exporting": "Forbereder download...",
+      "exportSuccess": "Download af dine data er startet.",
+      "exportError": "Eksporten kunne ikke oprettes. Prøv igen.",
+      "deleteTitle": "Slet min konto",
+      "deleteDescription": "Sletter kontoen og de tilknyttede aktive data. Denne handling kan ikke fortrydes.",
+      "deleteButton": "Slet konto",
+      "deleteModalTitle": "Slet kontoen permanent",
+      "deleteModalDescription": "Din profil, dine fremskridt, sessioner, statistikker, fejl, venskaber og login-sessioner slettes fra den aktive database. Sikkerhedskopier følger den gældende opbevaringscyklus.",
+      "deleteConfirmEmailInstruction": "Skriv din e-mailadresse for at bekræfte:",
+      "deleteConfirmEmail": "E-mailadresse til bekræftelse",
+      "deleteCurrentPassword": "Nuværende adgangskode",
+      "deleteConfirmButton": "Slet permanent",
+      "deleting": "Sletter...",
+      "deleteEmailMismatch": "E-mailadressen til bekræftelse stemmer ikke overens.",
+      "deletePasswordRequired": "Indtast din nuværende adgangskode",
+      "deleteInvalidPassword": "Den nuværende adgangskode er forkert.",
+      "deleteError": "Kontoen kunne ikke slettes. Prøv igen.",
+      "socialPrivacyTitle": "Privatliv for sociale funktioner",
+      "publicAlias": "Offentligt alias",
+      "publicAliasPlaceholder": "eksempel_bruger",
+      "publicAliasHelp": "Mellem 3 og 30 tegn: bogstaver, tal, bindestreg og understregningstegn.",
+      "publicAliasInvalid": "Angiv et gyldigt alias, før du aktiverer sociale funktioner.",
+      "showInRanking": "Vis på ranglisten",
+      "showInRankingHelp": "Viser dit alias og dine samlede resultater. Dit rigtige navn og din e-mailadresse forbliver skjult",
+      "searchableByAlias": "Tillad søgning efter alias",
+      "searchableByAliasHelp": "Andre brugere vil kun kunne finde dig via dit offentlige alias.",
+      "allowFriendRequests": "Tillad venneanmodninger",
+      "allowFriendRequestsHelp": "Gør det muligt for brugere, der finder dig via dit alias, at sende dig anmodninger.",
+      "showPresenceToFriends": "Del onlinestatus med venner",
+      "showPresenceToFriendsHelp": "Viser kun onlinestatus og seneste aktivitet til accepterede venner.",
+      "shareStatsWithFriends": "Del statistik med venner",
+      "shareStatsWithFriendsHelp": "Viser kun samlet træningsstatistik til accepterede venner.",
+      "notConfigured": "Ikke konfigureret",
+      "enabled": "Aktiveret",
+      "disabled": "Deaktiveret",
+      "spanish": "Spansk",
+      "english": "Engelsk",
+      "cookieConsentSaveError": "Dit valg vedrørende cookies kunne ikke gemmes. Prøv igen.",
+      "googleReauthFailed": "Genbekræftelsen med Google kunne ikke gennemføres.",
+      "googleReauthRequired": "Godkend dig igen med Google for at slette din konto.",
+      "privacyCookiesTitle": "Privatliv og cookies",
+      "privacyCookiesDescription": "Administrer dit valg vedrørende ikke-nødvendige teknologier.",
+      "cookieConsentAccepted": "Du har accepteret brugen af ikke-nødvendige teknologier.",
+      "cookieConsentRejected": "Du har afvist brugen af ikke-nødvendige teknologier.",
+      "cookieConsentUnset": "Du har endnu ikke angivet dit valg vedrørende ikke-nødvendige teknologier.",
+      "cookieConsentUpdatedAt": "Opdateret den",
+      "cookieConsentAccept": "Accepter",
+      "cookieConsentReject": "Afvis",
+      "googleReauthButton": "Godkend igen med Google"
+    }
+  },
+  "friends": {
+    "general": {
+      "title": "Venner",
+      "subtitle": "Følg dine venners onlinestatus, og sammenlign kun deres frie træning.",
+      "guestModeMessage": "Log ind for at se dine venner og deres aktivitet.",
+      "signIn": "Log ind",
+      "refresh": "Opdater",
+      "retry": "Prøv igen",
+      "snapshotTitle": "Seneste venner",
+      "snapshotDescription": "Se, hvor mange der er online, og åbn hele panelet.",
+      "openFriends": "Åbn venner",
+      "totalFriends": "Venner",
+      "onlineNow": "online nu",
+      "requests": "Anmodninger",
+      "searchTitle": "Søg efter brugere",
+      "searchLabel": "Offentligt alias",
+      "searchPlaceholder": "Indtast mindst 3 tegn fra aliaset",
+      "searchButton": "Søg",
+      "searchError": "Søgningen kunne ikke gennemføres",
+      "noSearchResults": "Der blev ikke fundet nogen brugere.",
+      "statusFriends": "Venner",
+      "statusPendingOutgoing": "Anmodning sendt",
+      "statusPendingIncoming": "Har sendt dig en anmodning",
+      "statusNotConnected": "Ikke forbundet",
+      "online": "Online",
+      "offline": "Offline",
+      "lastSeen": "Seneste aktivitet",
+      "requestedAt": "Anmodet den",
+      "freePractice": "Fri træning",
+      "viewStats": "Se statistik",
+      "sendRequest": "Tilføj",
+      "accept": "Accepter",
+      "reject": "Afvis",
+      "remove": "Fjern",
+      "incomingRequests": "Modtagne anmodninger",
+      "outgoingRequests": "Sendte anmodninger",
+      "noIncomingRequests": "Du har ingen modtagne anmodninger.",
+      "noOutgoingRequests": "Du har ingen sendte anmodninger.",
+      "myFriends": "Mine venner",
+      "noFriendsYet": "Du har endnu ikke tilføjet nogen venner",
+      "block": "Bloker",
+      "unblock": "Fjern blokering",
+      "blockedUsers": "Blokerede brugere",
+      "blockedUsersDescription": "De kan ikke finde dig, sende dig anmodninger eller få adgang til din onlinestatus eller statistik.",
+      "noBlockedUsers": "Du har ingen blokerede brugere.",
+      "presenceHidden": "Privat onlinestatus",
+      "statsHidden": "Denne bruger deler ikke sin statistik.",
+      "friendNotFound": "Vi kunne ikke finde denne ven.",
+      "backToFriends": "Tilbage til venner",
+      "totalSessions": "Sessioner",
+      "averageWpm": "Gennemsnitlig WPM",
+      "averageAccuracy": "Gennemsnitlig præcision",
+      "bestWpm": "Bedste WPM",
+      "totalPracticeTime": "Samlet træningstid",
+      "byLanguage": "Fordeling efter sprog"
+    }
+  },
+  "ranking": {
+    "general": {
+      "title": "Rangliste",
+      "subtitle": "Sammenlign dine resultater med andre brugeres.",
+      "yourStats": "Din statistik",
+      "basedOnLast10": "Baseret på dine seneste 10 træningssessioner.",
+      "score": "Point",
+      "grossWpm": "Brutto-WPM",
+      "accuracy": "Præcision",
+      "currentRank": "Nuværende placering",
+      "level": "Niveau",
+      "topPercent": "Top {percent}%",
+      "filterByLanguage": "Filtrer efter sprog",
+      "allLanguages": "Alle sprog",
+      "user": "Bruger",
+      "noData": "Ingen data at vise",
+      "errorFetchingRanking": "Ranglisten kunne ikke indlæses. Prøv igen.",
+      "errorFetchingStats": "Din statistik kunne ikke indlæses. Prøv igen.",
+      "retry": "Prøv igen",
+      "privateProfile": "Din profil vises ikke på ranglisten. Du kan ændre dette under Privatliv for sociale funktioner i din profil.",
+      "insufficientData": "Gennemfør mindst 5 træningssessioner for at se din placering på ranglisten.",
+      "noDataYet": "Der er endnu ingen resultater for dette sprog.",
+      "currentUser": "Dig",
+      "speedAxis": "Hastighed (WPM)",
+      "accuracyAxis": "Præcision (%)",
+      "showing": "Viser",
+      "of": "af",
+      "previous": "Forrige",
+      "next": "Næste",
+      "signInToParticipate": "Log ind for at deltage i ranglisten."
+    },
+    "topPerformers": {
+      "general": {
+        "wpm": "Netto-WPM"
+      }
+    },
+    "userStatsCard": {
+      "general": {
+        "levels": {
+          "bronze": "Bronze",
+          "silver": "Sølv",
+          "gold": "Guld"
+        }
+      }
+    }
+  },
+  "public": {
+    "courses": {
+      "metadata": {
+        "title": "Kurser i blindskrift | Kiso Desk",
+        "description": "Udforsk kurser, og prøv lektioner i blindskrift."
+      },
+      "lessons": {
+        "metadata": {
+          "title": "Lektioner i blindskrift | Kiso Desk",
+          "description": "Prøv lektioner i blindskrift uden at oprette en konto."
+        },
+        "lesson": {
+          "metadata": {
+            "title": "Lektionstræning | Kiso Desk",
+            "description": "Træn med en lektion i blindskrift på Kiso Desk."
+          }
+        }
+      }
+    },
+    "practice": {
+      "metadata": {
+        "title": "Test af skrivehastighed og nøjagtighed | Kiso Desk",
+        "description": "Træn blindskrift gratis, og gem resultatet på denne enhed."
+      }
+    },
+    "progress": {
+      "metadata": {
+        "title": "Lokale fremskridt | Kiso Desk",
+        "description": "Fremskridt gemt lokalt i denne browser."
+      },
+      "general": {
+        "title": "Lokale fremskridt",
+        "description": "Disse fremskridt gemmes kun i denne browser.",
+        "lessonsCompleted": "Gennemførte lektioner",
+        "practiceSessions": "Træningssessioner",
+        "accuracy": "Præcision",
+        "signInNotice": "Log ind for at gemme dine fremskridt på din konto.",
+        "signIn": "Log ind"
+      }
+    },
+    "ranking": {
+      "metadata": {
+        "title": "Rangliste for blindskrift | Kiso Desk",
+        "description": "Se den offentlige rangliste for skrivehastighed."
+      }
+    }
+  },
+  "components": {
+    "courses": {
+      "courseCard": {
+        "general": {
+          "lessons": "lektioner",
+          "viewCourse": "Se kursus",
+          "yourProgress": "Dine fremskridt",
+          "loginToSeeProgress": "Log ind for at se dine fremskridt",
+          "lessonsCount": "lektioner"
+        }
+      }
+    },
+    "dashboard": {
+      "errorTrends": {
+        "general": {
+          "title": "Fremskridtspanel",
+          "noData": "Ingen data at vise",
+          "insufficientData": "Ikke nok data.",
+          "highestErrorRate": "Højeste fejlprocent",
+          "correctAttempts": "{correctAttempts}/{totalAttempts} korrekte"
+        }
+      },
+      "fingerDistribution": {
+        "general": {
+          "title": "Fremskridtspanel",
+          "noData": "Ingen data at vise",
+          "leftHand": "Venstre",
+          "rightHand": "Højre",
+          "hand": "Hånd: {hand}",
+          "pinky": "Lillefinger",
+          "ring": "Ringfinger",
+          "middle": "Langfinger",
+          "index": "Pegefinger",
+          "correctPercentage": "{percentage}% korrekte",
+          "noCorrectPercentage": "Ingen",
+          "errorPercentage": "{percentage}% fejl",
+          "errors": "data"
+        }
+      },
+      "practiceCalendar": {
+        "general": {
+          "title": "Fremskridtspanel",
+          "noData": "Ingen data at vise",
+          "noPractice": "Ingen træning",
+          "minutesShort": "min.",
+          "hoursShort": "t.",
+          "noActivity": "Ingen aktivitet",
+          "fiveMinutes": "5 min.",
+          "tenMinutes": "10 min.",
+          "fifteenMinutes": "15+ minutter"
+        }
+      },
+      "progressChart": {
+        "general": {
+          "noData": "Ingen data at vise"
+        }
+      },
+      "authBanner": {
+        "general": {
+          "message": "Log ind for at se din statistik.",
+          "signIn": "Log ind"
+        }
+      },
+      "recommendationsList": {
+        "general": {
+          "title": "Fremskridtspanel",
+          "signIn": "Log ind",
+          "noRecommendations": "Ingen anbefalinger tilgængelige."
+        }
+      },
+      "weakKeysPanel": {
+        "general": {
+          "title": "Fremskridtspanel",
+          "overallAccuracy": "Samlet præcision",
+          "weakestKey": "Svageste tast",
+          "lowestAccuracy": "Laveste præcision"
+        }
+      }
+    },
+    "friends": {
+      "friendsSnapshot": {
+        "general": {
+          "title": "Venner",
+          "description": "Se, hvor mange der er online, og åbn hele panelet.",
+          "openFriends": "Åbn venner",
+          "totalFriends": "Venner",
+          "onlineNow": "online nu",
+          "noFriendsYet": "Du har endnu ikke tilføjet nogen venner"
+        }
+      }
+    },
+    "layout": {
+      "footer": {
+        "general": {
+          "product": "Produkt",
+          "lessons": "Lektioner",
+          "ranking": "Rangliste",
+          "progress": "Fremskridt",
+          "project": "Projekt",
+          "aboutKisoDesk": "Om Kiso Desk",
+          "github": "GitHub",
+          "legal": "Juridisk",
+          "privacyPolicy": "Privatlivspolitikken",
+          "termsOfUse": "Vilkår for brug",
+          "cookiePolicy": "Cookiepolitik",
+          "contact": "Kontakt",
+          "copyright": "© {year} Kiso Desk."
+        }
+      },
+      "header": {
+        "general": {
+          "defaultUser": "Bruger",
+          "skipToMainContent": "Gå til hovedindhold",
+          "courses": "Kurser",
+          "userMenu": "Brugermenu",
+          "profile": "Min profil",
+          "logout": "Log ud",
+          "menuToggle": "Åbn menu",
+          "login": "Log ind",
+          "register": "Registrer"
+        }
+      },
+      "sidebar": {
+        "general": {
+          "dashboard": "Kontrolpanel",
+          "courses": "Kurser",
+          "practice": "Træning",
+          "ranking": "Rangliste",
+          "friends": "Venner",
+          "profile": "Profil",
+          "menuToggle": "Navigationsmenu",
+          "expand": "Udvid",
+          "collapse": "Skjul"
+        }
+      }
+    },
+    "legal": {
+      "cookieBanner": {
+        "general": {
+          "title": "Politik for cookies og lokal lagring",
+          "description": "I applikationens nuværende tilstand anvendes der ingen analysecookies, annoncenetværk, remarketing eller andre ikke-nødvendige sporingssystemer.",
+          "privacyNotice": "Privatlivspolitikken",
+          "cookiePolicy": "Politik for cookies og lokal lagring",
+          "accept": "Accepter",
+          "reject": "Afvis"
+        }
+      }
+    },
+    "lessons": {
+      "handReference": {
+        "general": {
+          "handReference": "Reference til håndplacering på tastaturet"
+        }
+      },
+      "keyboardDetectionWizard": {
+        "general": {
+          "title": "Tastaturregistrering",
+          "subtitle": "Registrer dit tastaturlayout med nogle få fysiske taster, og brug det i hele applikationen.",
+          "modalTitle": "Registrer layout",
+          "currentLayout": "Nuværende layout",
+          "start": "Start registrering",
+          "progress": "Trin {current} af op til {total}",
+          "progressHint": "Kan afsluttes tidligere",
+          "progressLabel": "Registreringens fremskridt",
+          "back": "Tilbage",
+          "cancel": "Annuller",
+          "close": "Luk",
+          "intro": {
+            "title": "Lad os registrere dit tastatur",
+            "help": "Du skal blot trykke på mellem 1 og 5 taster på dit fysiske tastatur."
+          },
+          "capture": {
+            "focus": "Klik her, og tryk på den angivne tast",
+            "instruction": "Den tast, du trykker på, bruges kun til at registrere layoutet.",
+            "captured": "Registreret tast: {key}",
+            "deadKey": "accenttast"
+          },
+          "questions": {
+            "rightOfL": {
+              "title": "Tryk på tasten lige til højre for L",
+              "help": "Brug ikke Shift. Gå efter tastens fysiske placering, selv om der står et andet symbol på den."
+            },
+            "leftOfBackspace": {
+              "title": "Tryk på tasten lige til venstre for Backspace",
+              "help": "Brug ikke Shift. Brug tasten på talrækken."
+            },
+            "shiftDigit2": {
+              "title": "Hold Shift nede, og tryk på tasten 2",
+              "help": "Brug 2-tasten på talrækken, ikke det numeriske tastatur."
+            },
+            "sixthTopRow": {
+              "title": "Tryk på den sjette bogstavtast på den øverste række",
+              "help": "Tæl fra den første bogstavtast efter Tab. Brug ikke Shift."
+            },
+            "firstTopRow": {
+              "title": "Tryk på den første bogstavtast efter Tab",
+              "help": "Gå efter tastens fysiske placering. Brug ikke Shift."
+            },
+            "quoteKey": {
+              "title": "Tryk på anførselstegnstasten",
+              "help": "Brug ikke Shift. Gå efter tastens fysiske placering."
+            },
+            "shiftDigit3": {
+              "title": "Hold Shift nede, og tryk på tasten 3",
+              "help": "Brug 3-tasten på talrækken, ikke det numeriske tastatur."
+            }
+          },
+          "errors": {
+            "composition": "Vi kan ikke identificere et layout, mens tastaturet er ved at sammensætte tekst.",
+            "unidentified": "Tasten kunne ikke identificeres. Prøv igen.",
+            "alt-graph": "Brug ikke AltGr, når du trykker på denne tast.",
+            "modified": "Brug ikke ændringstaster, når du trykker på denne tast.",
+            "wrongKey": "Det var en anden tast. Tryk på tasten på den placering, der er angivet ovenfor.",
+            "shiftRequired": "Hold Shift nede, mens du trykker på tasten.",
+            "shiftNotRequired": "Tryk på tasten uden at bruge Shift.",
+            "saveFailed": "Layoutet kunne ikke gemmes. Kontrollér din forbindelse, og prøv igen."
+          },
+          "result": {
+            "detectedTitle": "Layout registreret",
+            "confidence": "Registreringens sikkerhed: {confidence}",
+            "useDetected": "Brug dette layout",
+            "unidentifiedTitle": "Vi kunne ikke identificere dit layout",
+            "unidentifiedHelp": "Vælg manuelt det layout, der svarer til dit tastatur.",
+            "fallbackTitle": "Layoutet kunne ikke registreres med tilstrækkelig sikkerhed",
+            "fallbackHelp": "Vælg et af de nærmeste resultater, eller se alle tilgængelige layouts.",
+            "chooseManually": "Vælg manuelt",
+            "retryDetection": "Prøv registreringen igen"
+          },
+          "manual": {
+            "title": "Vælg dit layout",
+            "help": "Vælg det layout, der svarer til tasterne på dit tastatur."
+          },
+          "saved": {
+            "title": "Layout gemt",
+            "description": "{layout} bruges nu i hele applikationen.",
+            "continueToCourses": "Fortsæt til kurser",
+            "returnToPractice": "Tilbage til træning"
+          },
+          "physicalFamily": {
+            "title": "Dit tastaturs form",
+            "subtitle": "Identificer tasterne form for at vise tastaturet korrekt.",
+            "enterQuestion": "Hvilken form har din Enter-tast?",
+            "enterHorizontal": "Vandret Enter",
+            "enterIso": "Standard ISO-Enter",
+            "enterBigAss": "ISO BA-Enter",
+            "abntQuestion": "Hvor mange taster er der mellem / og højre Shift?",
+            "eastAsianQuestion": "Hvor mange taster er der mellem 0 og Backspace?",
+            "eastAsianCountQuestion": "Hvor mange taster er der mellem mellemrumstasten og højre Alt?",
+            "complete": "Tastaturets form er identificeret: {family}"
+          }
+        }
+      },
+      "keyboard": {
+        "general": {
+          "virtualKeyboard": "Virtuelt tastatur"
+        }
+      },
+      "lessonCard": {
+        "general": {
+          "ariaLabel": "Gå til lektionen",
+          "wpm": "WPM",
+          "score": "Point",
+          "accuracy": "Præcision",
+          "time": "Tid",
+          "placeholder": "—",
+          "secondsShort": "s",
+          "minutesShort": "min.",
+          "minutesCompact": "m",
+          "approxPrefix": "~",
+          "rankLabel": "Rang",
+          "gradeLabel": "Karakter",
+          "completed": "Gennemført",
+          "explanatoryBadge": "Forklarende lektion",
+          "explanatoryLesson": "Forklarende lektion",
+          "objectiveAccuracy": "Mål: {minAccuracy}% præcision",
+          "mastered": "Behersket",
+          "inProgress": "I gang",
+          "lessonOrderRecommendationTitle": "Følg den anbefalede rækkefølge",
+          "lessonOrderRecommendationDescription": "Vi anbefaler, at du følger lektionernes standardrækkefølge for at gøre gradvise fremskridt.",
+          "lessonOrderRecommendationBack": "Gå tilbage",
+          "lessonOrderRecommendationContinue": "Fortsæt",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Nybegynder",
+            "scout": "Spejder",
+            "ranger": "Ranger",
+            "veteran": "Veteran",
+            "elite": "Elite",
+            "legend": "Legende"
+          },
+          "gradesDescriptions": {
+            "novice": "Grundniveau",
+            "scout": "Indledende fremskridt",
+            "ranger": "God beherskelse",
+            "veteran": "Højt niveau",
+            "elite": "Ekspert",
+            "legend": "Højeste niveau"
+          }
+        }
+      },
+      "personalizedLessonCard": {
+        "general": {
+          "title": "Anbefalet træning",
+          "noData": "Ingen data at vise",
+          "error": "Dine anbefalinger kunne ikke indlæses. Prøv igen.",
+          "retry": "Prøv igen",
+          "insufficientData": "Træn mere for at identificere de taster, du skal øve.",
+          "noCourse": "Der er endnu ikke et kursus i blindskrift tilgængeligt på dette sprog.",
+          "noLessons": "Dette kursus har endnu ingen tilgængelige lektioner.",
+          "description": "Baseret på dine identificerede svage punkter.",
+          "weakKeys": "Taster med lavest præcision i dine seneste sessioner.",
+          "noMatches": "Der er endnu ingen lektioner på dette kursus, som er knyttet til dine svage taster.",
+          "worksKeys": "Øv: {keys}"
+        }
+      },
+      "results": {
+        "general": {
+          "saveWarning": "Resultaterne kunne ikke gemmes",
+          "wpm": "WPM",
+          "score": "Point",
+          "accuracy": "Præcision",
+          "correctChars": "Korrekte tegn",
+          "lowResultTitle": "Dit resultat er lidt lavt",
+          "lowResultMessage": "Overvej at tage kurset i blindskrift for at fortsætte med at forbedre dig.",
+          "lowResultCourseLink": "Gå til kurset i blindskrift",
+          "accuracyFocusTitle": "Prioritér præcision",
+          "accuracyFocusMessage": "Du gør gode fremskridt. Før du øger hastigheden, bør du forsøge at nå mindst 95% præcision.",
+          "masteredResult": "Lektionen er behersket",
+          "masteredMessage": "Du har opfyldt præcisionskravet og kan fortsætte.",
+          "needsReview": "Kræver repetition",
+          "reviewMessage": "Mål: mindst {minAccuracy}% præcision. Sæt tempoet ned, og gentag blokken.",
+          "rankLabel": "Rang",
+          "gradeLabel": "Karakter",
+          "retryAriaLabel": "Prøv lektionen igen",
+          "retry": "Prøv igen",
+          "next": "Næste",
+          "newText": "Ny tekst",
+          "backToCourses": "Tilbage til kurser",
+          "backToDashboard": "Tilbage til kontrolpanelet",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Nybegynder",
+            "scout": "Spejder",
+            "ranger": "Ranger",
+            "veteran": "Veteran",
+            "elite": "Elite",
+            "legend": "Legende"
+          },
+          "gradesDescriptions": {
+            "novice": "Grundniveau",
+            "scout": "Indledende fremskridt",
+            "ranger": "God beherskelse",
+            "veteran": "Højt niveau",
+            "elite": "Ekspert",
+            "legend": "Højeste niveau"
+          }
+        }
+      },
+      "typingArea": {
+        "general": {
+          "wpm": "WPM",
+          "score": "Point",
+          "accuracy": "Præcision",
+          "characters": "Tegn",
+          "backspace": "Backspace",
+          "backspaceEnabled": "Backspace aktiveret",
+          "backspaceDisabled": "Backspace deaktiveret",
+          "font": "Skrifttype",
+          "size": "Størrelse",
+          "pixels": "px",
+          "fontAndSize": "Skrifttype og størrelse",
+          "textToType": "Tekst, der skal skrives",
+          "inactivityPaused": "Sat på pause på grund af inaktivitet",
+          "clickToResume": "Klik for at fortsætte",
+          "congratulations": "Tillykke! Hastighed: {wpm} WPM, præcision: {accuracy}%",
+          "detectKeyboard": "Registrer tastatur",
+          "keyboardConfigTitle": "Tastaturindstillinger",
+          "keyboardPreferenceMissing": "Der er ikke gemt et foretrukket tastaturlayout. Du kan ændre det i tastaturindstillingerne.",
+          "recommendedKeyboardLayout": "Anbefalet tastaturlayout: {layout}",
+          "useRecommendedKeyboardLayout": "Skift layout",
+          "detectionHelp": "Identificer automatisk dit nuværende layout, og brug det under hele træningen.",
+          "identifyKeyboardShape": "Identificer form",
+          "keyboardShapeHeading": "Dit tastaturs form",
+          "logicalDistributionHeading": "Logisk layout",
+          "logicalDistributionHint": "tastaturtegn"
+        }
+      }
+    },
+    "ui": {
+      "themeToggle": {
+        "general": {
+          "switchToLight": "Tema",
+          "switchToDark": "Tema"
+        }
+      }
+    },
+    "i18n": {
+      "languageSwitcher": {
+        "general": {
+          "interfaceLanguage": "Grænsefladesprog"
+        }
+      }
+    }
+  },
+  "general": {
+    "Accessibility": {
+      "button": "Knap",
+      "expandMenu": "Udvid menu",
+      "collapseMenu": "Skjul menu"
+    },
+    "Common": {
+      "loading": "Indlæser...",
+      "retry": "Prøv igen",
+      "close": "Luk"
+    }
+  },
+  "lessonid": {
+    "general": {
+      "lockedLesson": "Låst lektion",
+      "lockedLessonDescription": "Behersk den foregående aktivitet, før du fortsætter.",
+      "backToLessons": "Tilbage til lektioner",
+      "lessonNotFound": "Lektionen blev ikke fundet",
+      "typeTheTextBelow": "Skriv teksten nedenfor",
+      "hideKeyboard": "Skjul tastatur",
+      "showKeyboard": "Vis tastatur",
+      "exitPractice": "Afslut træning",
+      "saveError": "Fejl ved lagring af resultatet",
+      "saveErrorMessage": "Dine resultater vises på skærmen, men blev ikke gemt i dine fremskridt. Prøv at gentage lektionen, når forbindelsen er tilgængelig.",
+      "audioGuide": "Lyt til forklaringen",
+      "audioUnsupported": "Din browser kan ikke afspille dette lydspor.",
+      "experimentalGreetings": {
+        "lessonPosition": "Lektion {current} af {total}",
+        "supportContent": "Supplerende indhold",
+        "englishColumn": "Engelsk",
+        "spanishColumn": "Spansk",
+        "continue": "Fortsæt",
+        "dialogue": "Dialog",
+        "selectEnglishFirst": "Vælg først en mulighed på engelsk",
+        "tryAgain": "Prøv igen",
+        "correct": "Korrekt",
+        "complete": "Aktivitet fuldført"
+      },
+      "manualAudioPlay": "Lyt",
+      "manualAudioReplay": "Lyt igen",
+      "lessonAudio": "Lektionslyd",
+      "interactions": {
+        "dictationPrompt": "Skriv det, du hører",
+        "unitProgress": "Enhedens fremskridt",
+        "stepProgress": "Trin {step} af 4 {current}",
+        "currentStep": "aktuel",
+        "reviewTask": "Opgave {current} af 3",
+        "completedPairs": "Fuldførte par",
+        "availableOptions": "Tilgængelige muligheder",
+        "options": "Muligheder",
+        "answer": "Svar",
+        "check": "Kontrollér",
+        "undo": "Fortryd",
+        "correct": "Korrekt",
+        "incorrect": "Ikke endnu. Korrekt svar: {answer} {detail}",
+        "spellingFeedback": "Stavning: ordet har to bogstaver eller i begyndelsen",
+        "sentenceFeedback": "Stort begyndelsesbogstav og tegnsætning: gennemgå hver sætning",
+        "dictationFeedback": "Diktat: lyt til hvert ord, og bevar tegnsætningen",
+        "correctAnswer": "Korrekt svar",
+        "nextTask": "Næste opgave"
+      }
+    }
+  },
+  "courses": {
+    "general": {
+      "title": "Kurser",
+      "subtitle": "Udforsk vores kurser, og forbedr din blindskrift",
+      "searchPlaceholder": "Søg efter kurser...",
+      "allLevels": "Alle niveauer",
+      "beginner": "Begynder",
+      "intermediate": "Mellemniveau",
+      "advanced": "Avanceret",
+      "guestModeMessage": "Log ind for at gemme dine fremskridt",
+      "signIn": "Log ind",
+      "retry": "Prøv igen",
+      "noCourseYetTitle": "Der er endnu ingen tilgængelige kurser",
+      "noCourseYetDescription": "Vi er ved at forberede kurser på dette sprog. Kom tilbage snart.",
+      "noCourses": "Der blev ikke fundet nogen kurser",
+      "all": "Alle kurser",
+      "completed": "Gennemførte",
+      "notCompleted": "Ikke gennemførte"
+    }
+  },
+  "lessons": {
+    "general": {
+      "title": "Lektioner",
+      "subtitle": "Træn med lektioner, der er tilpasset dit niveau",
+      "searchPlaceholder": "Søg efter lektioner...",
+      "allDifficulties": "Alle sværhedsgrader",
+      "beginner": "Begynder",
+      "intermediate": "Mellemniveau",
+      "advanced": "Avanceret",
+      "guestModeMessage": "Log ind for at gemme dine fremskridt",
+      "signIn": "Log ind",
+      "retry": "Prøv igen",
+      "errorTitle": "Fejl ved indlæsning af lektioner",
+      "noLessonsTitle": "Der er ingen tilgængelige lektioner",
+      "noLessonsDescription": "Dette kursus har endnu ingen lektioner. Kom tilbage senere, eller kontakt administratoren.",
+      "noCompletedLessonsTitle": "Du har endnu ikke gennemført nogen lektioner",
+      "noCompletedLessonsDescription": "Gennemfør en lektion for at se den på denne liste.",
+      "noPendingLessonsTitle": "Du har ingen afventende lektioner",
+      "noPendingLessonsDescription": "Alle lektioner på dette kursus vises som gennemførte.",
+      "all": "Alle lektioner",
+      "completed": "Gennemførte",
+      "notCompleted": "Ikke gennemførte",
+      "moduleLabel": "Modul {order}",
+      "masteredCount": "{mastered}/{total} behersket"
+    }
+  },
+  "dashboard": {
+    "general": {
+      "title": "Fremskridtspanel",
+      "subtitle": "Se dine fremskridt og din statistik for blindskrift",
+      "averageWpm": "Gennemsnitlig WPM",
+      "wordsPerMinute": "Ord pr. minut",
+      "averageAccuracy": "Gennemsnitlig præcision",
+      "accuracy": "Præcision",
+      "totalPracticeTime": "Samlet træningstid",
+      "thisWeek": "Denne uge",
+      "weeklyWpmProgress": "Ugentlig WPM-udvikling",
+      "monthlyWpmProgress": "Månedlig WPM-udvikling",
+      "noData": "Ingen data tilgængelige",
+      "bestWpm": "Bedste WPM",
+      "grossWpm": "Brutto-WPM",
+      "record": "Rekord",
+      "streak": "Serie",
+      "days": "dage",
+      "consecutivePractice": "Sammenhængende træning",
+      "totalKeystrokes": "Samlet antal tastetryk",
+      "typed": "Skrevet",
+      "recommendations": "Anbefalinger til dig",
+      "recommendation1": "Træn med lektioner på mellemniveau for at forbedre din hastighed.",
+      "recommendation2": "Forsøg at holde en præcision på over 95%.",
+      "recommendation3": "Gennemfør mindst én lektion om dagen for at bevare din serie.",
+      "retry": "Prøv igen",
+      "error": "Fejl",
+      "completedText": "% gennemført",
+      "completedTitle": "Lektioner / kurser",
+      "lessons": "lektioner",
+      "courses": "kurser",
+      "completedLessons": "Gennemførte lektioner",
+      "completedCourses": "Gennemførte kurser",
+      "guestModeMessage": "Log ind for at se dine fremskridt",
+      "signIn": "Log ind",
+      "recommendationsGuest": "Log ind for at få personlige anbefalinger baseret på dine fremskridt.",
+      "weakKeys": "Svage taster",
+      "errorTrends": "Fejludvikling",
+      "fingerDistribution": "Fingerfordeling",
+      "personalizedPractice": "Personlig træning",
+      "personalizedPracticeDesc": "Få personlige lektioner baseret på dine svage punkter.",
+      "signInToSee": "Log ind for at se din statistik",
+      "noDataYet": "Gennemfør lektioner for at se dine svage punkter"
+    }
+  },
+  "practice": {
+    "general": {
+      "title": "Skrivetest",
+      "subtitle": "Forbedr din hastighed og nøjagtighed med tilpassede tekster",
+      "freeTitle": "Test af skrivehastighed",
+      "freeSubtitle": "Prøv at skrive en kort tekst, og se din hastighed og nøjagtighed.",
+      "adaptiveTitle": "Øv de taster, du oftest laver fejl på",
+      "adaptiveSubtitle": "Fokuser på de tegn, der giver flest fejl, og skriv mere præcist.",
+      "session": "Træningssession",
+      "newText": "Ny tekst",
+      "perKeyStats": "Statistik pr. tast (kommer snart)",
+      "loadingText": "Indlæser tekst...",
+      "errorLoadingText": "Fejl ved indlæsning af teksten.",
+      "errorTitle": "Teksten kunne ikke indlæses",
+      "retry": "Prøv igen",
+      "saving": "Gemmer resultater...",
+      "errorSavingResult": "Fejl ved lagring af resultaterne.",
+      "saveWarning": "Resultaterne kunne ikke gemmes",
+      "backToDashboard": "Tilbage til kontrolpanelet",
+      "guestSavePrompt": "Log ind for at gemme dine fremskridt og fortsætte med at forbedre dig.",
+      "signInToSave": "Log ind",
+      "guestPlaceholder": "—",
+      "guestAdaptiveReason": "Baseret på fejl gemt på denne enhed",
+      "adaptiveKeys": "Taster: {keys}",
+      "adaptiveBigrams": "Bigrammer: {bigrams}",
+      "modeRandom": "Fri tekst",
+      "modeWords": "Anbefalet øvelse",
+      "modeText": "Adaptiv tekst",
+      "adaptivePracticeKeys": "Taster i øvelse"
+    }
+  },
+  "notFound": {
+    "general": {
+      "title": "Siden blev ikke fundet",
+      "description": "Beklager, den side, du leder efter, findes ikke eller er blevet flyttet.",
+      "backHome": "Tilbage til forsiden",
+      "dashboard": "Kontrolpanel",
+      "lessons": "Lektioner",
+      "ranking": "Rangliste"
+    }
+  }
+}

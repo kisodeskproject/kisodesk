@@ -1,0 +1,53 @@
+import { Type } from 'class-transformer';
+import {
+  ArrayMaxSize,
+  IsArray,
+  IsIn,
+  IsNumber,
+  IsOptional,
+  IsString,
+  Max,
+  MaxLength,
+  Min,
+  ValidateNested,
+} from 'class-validator';
+
+const EVENT_TYPES = ['vital', 'navigation', 'error', 'request', 'session'] as const;
+const VITAL_NAMES = ['lcp', 'inp', 'cls'] as const;
+const ERROR_CATEGORIES = ['runtime', 'promise', 'resource'] as const;
+const STATUS_CLASSES = ['2xx', '3xx', '4xx', '5xx', 'network'] as const;
+
+export class FrontendTelemetryEventDto {
+  @IsIn(EVENT_TYPES)
+  type!: (typeof EVENT_TYPES)[number];
+
+  @IsString()
+  @MaxLength(160)
+  route!: string;
+
+  @IsOptional()
+  @IsIn(VITAL_NAMES)
+  metricName?: (typeof VITAL_NAMES)[number];
+
+  @IsOptional()
+  @IsIn(ERROR_CATEGORIES)
+  errorCategory?: (typeof ERROR_CATEGORIES)[number];
+
+  @IsOptional()
+  @IsIn(STATUS_CLASSES)
+  statusClass?: (typeof STATUS_CLASSES)[number];
+
+  @IsOptional()
+  @IsNumber({ allowNaN: false, allowInfinity: false })
+  @Min(0)
+  @Max(120)
+  value?: number;
+}
+
+export class FrontendTelemetryBatchDto {
+  @IsArray()
+  @ArrayMaxSize(20)
+  @ValidateNested({ each: true })
+  @Type(() => FrontendTelemetryEventDto)
+  events!: FrontendTelemetryEventDto[];
+}

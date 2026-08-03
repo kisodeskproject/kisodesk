@@ -1,0 +1,5 @@
+route:
+  receiver: default
+receivers:
+  - name: default
+    # Configure a notification integration with environment-provided credentials.

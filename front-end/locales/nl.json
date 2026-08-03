@@ -1,0 +1,1278 @@
+{
+  "auth": {
+    "login": {
+      "metadata": {
+        "title": "Inloggen",
+        "description": "Log in bij Kiso Desk om verder te gaan met je type-oefeningen."
+      },
+      "general": {
+        "googleError": "Inloggen met Google is mislukt.",
+        "tooManyAttempts": "Te veel pogingen. Wacht een minuut.",
+        "requiredFields": "Vul alle velden in.",
+        "invalidCredentials": "Ongeldig e-mailadres of wachtwoord.",
+        "signIn": "Inloggen",
+        "continueWithGoogle": "Doorgaan met Google",
+        "or": "of",
+        "email": "E-mailadres",
+        "password": "Wachtwoord",
+        "sending": "Bezig met verzenden...",
+        "noAccount": "Heb je nog geen account?",
+        "createAccount": "Account aanmaken",
+        "forgotPassword": "Wachtwoord vergeten?"
+      }
+    },
+    "register": {
+      "metadata": {
+        "title": "Een account aanmaken",
+        "description": "Maak een account aan bij Kiso Desk en begin met typen oefenen."
+      },
+      "general": {
+        "acceptLegalRequired": "Je moet de Gebruiksvoorwaarden en de Privacyverklaring accepteren om een account aan te maken.",
+        "googleError": "Registreren met Google is mislukt.",
+        "tooManyAttempts": "Te veel pogingen. Wacht een minuut.",
+        "unknownError": "Onbekende fout",
+        "createAccount": "Account aanmaken",
+        "registerWithGoogle": "Registreren met Google",
+        "or": "of",
+        "name": "Naam",
+        "email": "E-mailadres",
+        "password": "Wachtwoord",
+        "acceptTermsPrefix": "Ik ga akkoord met de",
+        "acceptTermsLink": "Gebruiksvoorwaarden",
+        "acceptPrivacyPrefix": "Ik heb de",
+        "acceptPrivacyLink": "Privacyverklaring",
+        "alreadyHaveAccount": "Heb je al een account?",
+        "signIn": "Inloggen",
+        "socialFeaturesNotice": "Sociale functies zijn optioneel en je kunt de privacy ervan instellen via je profiel."
+      }
+    },
+    "resetPassword": {
+      "general": {
+        "invalidLink": "De link bevat geen geldige token.",
+        "passwordTooShort": "Het wachtwoord moet minimaal 8 tekens bevatten.",
+        "passwordsDoNotMatch": "De wachtwoorden komen niet overeen.",
+        "invalidOrExpired": "De link is ongeldig, al gebruikt of verlopen.",
+        "successTitle": "Wachtwoord bijgewerkt",
+        "successMessage": "Je kunt nu inloggen met je nieuwe wachtwoord.",
+        "backToLogin": "Terug naar inloggen",
+        "title": "Maak een nieuw wachtwoord aan",
+        "instructions": "Kies een nieuw wachtwoord van minimaal 8 tekens.",
+        "newPassword": "Nieuw wachtwoord",
+        "confirmPassword": "Wachtwoord bevestigen",
+        "submit": "Wachtwoord wijzigen",
+        "requestNewLink": "Nieuwe link aanvragen"
+      }
+    }
+  },
+  "profile": {
+    "general": {
+      "title": "Profiel",
+      "guestModeMessage": "Log in om je profiel en statistieken te bekijken.",
+      "signIn": "Inloggen",
+      "loadError": "Fout bij het laden van het profiel",
+      "loadErrorText": "Het profiel kon niet worden geladen",
+      "nameRequired": "Naam is verplicht",
+      "name": "Naam",
+      "email": "E-mailadres",
+      "emailReadOnly": "Het e-mailadres kan niet vanuit het profiel worden gewijzigd.",
+      "editProfile": "Profiel bewerken",
+      "changePassword": "Wachtwoord wijzigen",
+      "save": "Opslaan",
+      "savingText": "Bezig met opslaan...",
+      "cancel": "Annuleren",
+      "retry": "Opnieuw proberen",
+      "savedSuccessfully": "Profiel succesvol bijgewerkt.",
+      "saveError": "Het profiel kon niet worden opgeslagen. Probeer het opnieuw.",
+      "conflictError": "Het profiel is in een ander tabblad gewijzigd. Laad de gegevens opnieuw voordat je nogmaals opslaat.",
+      "required": "Dit veld is verplicht.",
+      "accountSection": "Account",
+      "preferencesSection": "Voorkeuren",
+      "securitySection": "Beveiliging",
+      "memberSince": "Lid sinds",
+      "lastLogin": "Laatste aanmelding",
+      "lastUpdate": "Laatst bijgewerkt",
+      "interfaceLanguage": "Interfacetaal",
+      "keyboardLayout": "Toetsenbordindeling",
+      "accessibility": "Toegankelijkheid",
+      "adminRole": "Beheerder",
+      "userRole": "Gebruiker",
+      "passwordSectionTitle": "Wachtwoord",
+      "passwordSectionDescription": "Je kunt wanneer nodig een link aanvragen om je wachtwoord opnieuw in te stellen.",
+      "dataControlsTitle": "Je gegevens en account",
+      "dataControlsDescription": "Download een kopie van je gegevens of verwijder je account definitief.",
+      "exportTitle": "Mijn gegevens downloaden",
+      "exportDescription": "Maakt een JSON-bestand met je accountgegevens, voortgang, oefeningen, fouten en relaties. Wachtwoorden en tokens worden niet opgenomen.",
+      "exportButton": "Gegevens downloaden",
+      "exporting": "Download voorbereiden...",
+      "exportSuccess": "Het downloaden van je gegevens is gestart.",
+      "exportError": "De export kon niet worden gemaakt. Probeer het opnieuw.",
+      "deleteTitle": "Mijn account verwijderen",
+      "deleteDescription": "Verwijdert het account en de bijbehorende actieve gegevens. Deze actie kan niet ongedaan worden gemaakt.",
+      "deleteButton": "Account verwijderen",
+      "deleteModalTitle": "Account permanent verwijderen",
+      "deleteModalDescription": "Je profiel, voortgang, sessies, statistieken, fouten, vriendschappen en toegangssessies worden uit de actieve database verwijderd. Back-ups blijven onderworpen aan de toepasselijke bewaartermijn.",
+      "deleteConfirmEmailInstruction": "Typ ter bevestiging je e-mailadres:",
+      "deleteConfirmEmail": "E-mailadres ter bevestiging",
+      "deleteCurrentPassword": "Huidig wachtwoord",
+      "deleteConfirmButton": "Permanent verwijderen",
+      "deleting": "Bezig met verwijderen...",
+      "deleteEmailMismatch": "Het bevestigingsadres komt niet overeen.",
+      "deletePasswordRequired": "Voer je huidige wachtwoord in.",
+      "deleteInvalidPassword": "Het huidige wachtwoord is onjuist.",
+      "deleteError": "Het account kon niet worden verwijderd. Probeer het opnieuw.",
+      "socialPrivacyTitle": "Privacy van sociale functies",
+      "publicAlias": "Openbare alias",
+      "publicAliasPlaceholder": "voorbeeld_gebruiker",
+      "publicAliasHelp": "Tussen 3 en 30 tekens: letters, cijfers, koppeltekens en underscores.",
+      "publicAliasInvalid": "Stel een geldige alias in voordat je sociale functies inschakelt.",
+      "showInRanking": "In de ranglijst verschijnen",
+      "showInRankingHelp": "Publiceert je alias en samengevoegde statistieken. Land, echte naam en e-mailadres worden niet weergegeven.",
+      "searchableByAlias": "Zoeken op alias toestaan",
+      "searchableByAliasHelp": "Andere gebruikers kunnen je alleen vinden via je openbare alias.",
+      "allowFriendRequests": "Vriendschapsverzoeken toestaan",
+      "allowFriendRequestsHelp": "Hiermee kunnen gebruikers die je via je alias vinden een vriendschapsverzoek sturen.",
+      "showPresenceToFriends": "Online aanwezigheid delen met vrienden",
+      "showPresenceToFriendsHelp": "Toont je online status en laatste activiteit alleen aan geaccepteerde vrienden.",
+      "shareStatsWithFriends": "Statistieken delen met vrienden",
+      "shareStatsWithFriendsHelp": "Toont samengevoegde oefenstatistieken alleen aan geaccepteerde vrienden.",
+      "notConfigured": "Niet ingesteld",
+      "enabled": "Ingeschakeld",
+      "disabled": "Uitgeschakeld",
+      "spanish": "Spaans",
+      "english": "Engels",
+      "cookieConsentSaveError": "Je keuze over cookies kon niet worden opgeslagen. Probeer het opnieuw.",
+      "googleReauthFailed": "Opnieuw verifiëren met Google is mislukt.",
+      "googleReauthRequired": "Verifieer je opnieuw met Google om je account te verwijderen.",
+      "privacyCookiesTitle": "Privacy en cookies",
+      "privacyCookiesDescription": "Beheer je keuze over niet-essentiële technologieën.",
+      "cookieConsentAccepted": "Je hebt het gebruik van niet-essentiële technologieën geaccepteerd.",
+      "cookieConsentRejected": "Je hebt het gebruik van niet-essentiële technologieën geweigerd.",
+      "cookieConsentUnset": "Je hebt nog geen voorkeur voor niet-essentiële technologieën aangegeven.",
+      "cookieConsentUpdatedAt": "Bijgewerkt op",
+      "cookieConsentAccept": "Accepteren",
+      "cookieConsentReject": "Weigeren",
+      "googleReauthButton": "Opnieuw verifiëren met Google"
+    }
+  },
+  "friends": {
+    "general": {
+      "title": "Vrienden",
+      "subtitle": "Bekijk wanneer je vrienden online zijn en vergelijk alleen hun vrije oefeningen.",
+      "guestModeMessage": "Log in om je vrienden en hun activiteit te bekijken.",
+      "signIn": "Inloggen",
+      "refresh": "Vernieuwen",
+      "retry": "Opnieuw proberen",
+      "snapshotTitle": "Recente vrienden",
+      "snapshotDescription": "Bekijk hoeveel vrienden online zijn en open het volledige overzicht.",
+      "openFriends": "Vrienden openen",
+      "totalFriends": "Vrienden",
+      "onlineNow": "nu online",
+      "requests": "Verzoeken",
+      "searchTitle": "Gebruikers zoeken",
+      "searchLabel": "Openbare alias",
+      "searchPlaceholder": "Typ minimaal 3 tekens van de alias",
+      "searchButton": "Zoeken",
+      "searchError": "De zoekopdracht kon niet worden voltooid",
+      "noSearchResults": "Geen gebruikers gevonden.",
+      "statusFriends": "Vrienden",
+      "statusPendingOutgoing": "Verzoek verzonden",
+      "statusPendingIncoming": "Heeft je een verzoek gestuurd",
+      "statusNotConnected": "Niet verbonden",
+      "online": "Online",
+      "offline": "Offline",
+      "lastSeen": "Laatste activiteit",
+      "requestedAt": "Aangevraagd op",
+      "freePractice": "Vrij oefenen",
+      "viewStats": "Statistieken bekijken",
+      "sendRequest": "Toevoegen",
+      "accept": "Accepteren",
+      "reject": "Weigeren",
+      "remove": "Verwijderen",
+      "incomingRequests": "Ontvangen verzoeken",
+      "outgoingRequests": "Verzonden verzoeken",
+      "noIncomingRequests": "Je hebt geen ontvangen verzoeken.",
+      "noOutgoingRequests": "Je hebt geen verzonden verzoeken.",
+      "myFriends": "Mijn vrienden",
+      "noFriendsYet": "Je hebt nog geen vrienden toegevoegd.",
+      "block": "Blokkeren",
+      "unblock": "Deblokkeren",
+      "blockedUsers": "Geblokkeerde gebruikers",
+      "blockedUsersDescription": "Ze kunnen je niet vinden, geen verzoeken sturen en je aanwezigheid of statistieken niet bekijken.",
+      "noBlockedUsers": "Je hebt geen geblokkeerde gebruikers.",
+      "presenceHidden": "Aanwezigheid verborgen",
+      "statsHidden": "Deze gebruiker deelt zijn of haar statistieken niet.",
+      "friendNotFound": "Deze vriend is niet gevonden.",
+      "backToFriends": "Terug naar vrienden",
+      "totalSessions": "Sessies",
+      "averageWpm": "Gemiddelde WPM",
+      "averageAccuracy": "Gemiddelde nauwkeurigheid",
+      "bestWpm": "Beste WPM",
+      "totalPracticeTime": "Totale oefentijd",
+      "byLanguage": "Uitsplitsing per taal"
+    }
+  },
+  "ranking": {
+    "general": {
+      "title": "Ranglijst",
+      "subtitle": "Vergelijk je resultaten met die van andere gebruikers.",
+      "yourStats": "Je statistieken",
+      "basedOnLast10": "Gebaseerd op je laatste 10 oefeningen.",
+      "score": "Score",
+      "grossWpm": "Bruto WPM",
+      "accuracy": "Nauwkeurigheid",
+      "currentRank": "Huidige positie",
+      "level": "Niveau",
+      "topPercent": "Top {percent}%",
+      "filterByLanguage": "Filteren op taal",
+      "allLanguages": "Alle talen",
+      "user": "Gebruiker",
+      "noData": "Geen gegevens om weer te geven",
+      "errorFetchingRanking": "De ranglijst kon niet worden geladen. Probeer het opnieuw.",
+      "errorFetchingStats": "Je statistieken konden niet worden geladen. Probeer het opnieuw.",
+      "retry": "Opnieuw proberen",
+      "privateProfile": "Je profiel verschijnt niet in de ranglijst. Je kunt dit wijzigen onder Privacy van sociale functies in je profiel.",
+      "insufficientData": "Voltooi minimaal 5 oefeningen om je positie in de ranglijst te bekijken.",
+      "noDataYet": "Er zijn nog geen resultaten voor deze taal.",
+      "currentUser": "Jij",
+      "speedAxis": "Snelheid (WPM)",
+      "accuracyAxis": "Nauwkeurigheid (%)",
+      "showing": "Weergegeven",
+      "of": "van",
+      "previous": "Vorige",
+      "next": "Volgende",
+      "signInToParticipate": "Log in om deel te nemen aan de ranglijst."
+    },
+    "topPerformers": {
+      "general": {
+        "wpm": "Netto WPM"
+      }
+    },
+    "userStatsCard": {
+      "general": {
+        "levels": {
+          "bronze": "Brons",
+          "silver": "Zilver",
+          "gold": "Goud"
+        }
+      }
+    }
+  },
+  "marketing": {
+    "about": {
+      "metadata": {
+        "title": "Over Kiso Desk",
+        "description": "Maak kennis met Kiso Desk en de praktische aanpak om blind te leren typen."
+      },
+      "general": {
+        "title": "Over Kiso Desk",
+        "subtitle": "Een platform om duidelijk, consequent en meetbaar te leren typen",
+        "project_title": "Het project",
+        "project_text": "Kiso Desk is een onafhankelijk project dat is gericht op een duidelijke en praktische ervaring om te leren typen.",
+        "project_status_text": "Het is bedoeld als een plek waar iedereen, ongeacht ervaringsniveau, regelmatig kan oefenen en echte vooruitgang kan merken. De nadruk ligt op voortdurend leren, praktische bruikbaarheid en aandacht voor detail, met een hulpmiddel dat aansluit bij de huidige context.",
+        "mission_title": "Onze missie",
+        "mission_text": "Bij Kiso Desk geloven we dat typen een essentiële vaardigheid is in de digitale wereld. Onze missie is om snel en nauwkeurig leren typen toegankelijk, praktisch en effectief te maken voor iedereen, ongeacht ervaringsniveau.",
+        "vision_title": "Onze visie",
+        "vision_text": "Een nuttig hulpmiddel bouwen om snelheid, nauwkeurigheid en vertrouwen tijdens het typen te verbeteren, met een moderne, duidelijke ervaring die is gericht op regelmatig oefenen.",
+        "history_title": "Ons verhaal",
+        "history_text": "Kiso Desk is ontstaan als een onafhankelijk project om een moderne type-oefenomgeving te creëren. Wat begon als een eenvoudig idee, ontwikkelt zich nu tot een platform dat is gericht op lessen, voortgang, statistieken en voortdurende verbetering."
+      }
+    },
+    "cookies": {
+      "metadata": {
+        "title": "Cookie- en lokaal-opslagbeleid",
+        "description": "Informatie over cookies en lokale opslag in Kiso Desk."
+      },
+      "general": {
+        "title": "Cookie- en lokaal-opslagbeleid",
+        "contentsLabel": "Inhoud",
+        "relatedLabel": "Gerelateerde documenten",
+        "relatedPrivacy": "Privacybeleid",
+        "relatedTerms": "Gebruiksvoorwaarden"
+      },
+      "definition": {
+        "title": "1. Wat zijn cookies en lokale opslag?",
+        "paragraph1": "Deze toepassing gebruikt cookies en lokale browseropslag voor noodzakelijke functies van de dienst en om bepaalde gebruiksvoorkeuren te onthouden.",
+        "paragraph2": "Cookies zijn kleine tekstbestanden die websites in uw browser opslaan. Ze worden gebruikt om informatie over uw bezoek te onthouden, zoals uw voorkeuren of authenticatiestatus.",
+        "paragraph3": "Lokale opslag, ook bekend als localStorage, is een browserfunctie waarmee gegevens rechtstreeks op uw apparaat kunnen worden opgeslagen. Anders dan cookies worden deze gegevens niet automatisch bij elk verzoek naar de server verzonden, maar blijven ze op uw apparaat staan totdat u, de browser of de apparaatinstellingen ze verwijdert."
+      },
+      "data": {
+        "title": "2. Persoonsgegevens en technische gegevens die aan deze technologieën zijn gekoppeld",
+        "paragraph1": "Voor het aanbieden van de typedienst kan de toepassing de volgende persoonsgegevens of technische gegevens verwerken die verband houden met het gebruik van cookies, lokale opslag en bijbehorende technische verzoeken:",
+        "paragraph2": "Gebruiks- en voortgangsstatistieken, zoals snelheid, nauwkeurigheid of voltooide oefeningen, worden niet rechtstreeks in cookies of lokale opslag opgeslagen. De verwerking daarvan wordt beschreven in de uitgebreide Privacyverklaring.",
+        "paragraph3": "De lokale opslag die door de toepassing wordt gebruikt, bevat interface- en configuratievoorkeuren. Deze bevat niet rechtstreeks een naam, e-mailadres of account-ID.",
+        "item1": "Sessie-ID’s: opgeslagen in de cookies access_token en refresh_token, waarmee uw account kan worden herkend, verzoeken kunnen worden geverifieerd en uw sessie actief kan blijven.",
+        "item2": "IP-adres en technische verbindingsgegevens: verzonden bij interactie met de server van de toepassing en bij het laden van bepaalde externe bronnen, zoals vlagafbeeldingen van flagcdn.com.",
+        "item3": "Lokale voorkeuren: in de browser opgeslagen via de sleutels theme, typing-keyboard-layout, typing-font en typing-font-size."
+      },
+      "necessaryCookies": {
+        "title": "3. Strikt noodzakelijke cookies (authenticatie)",
+        "paragraph1": "De huidige beoordeling identificeert cookies die strikt noodzakelijk zijn voor de juiste werking van de dienst. Deze cookies zijn onmisbaar om in te loggen, uw identiteit tijdens het navigeren te behouden en de beveiliging van verzoeken te waarborgen.",
+        "note": "Deze cookies worden niet gebruikt voor advertenties, remarketing of commerciële profilering.",
+        "tableHeaderName": "Naam",
+        "tableHeaderPurpose": "Doel",
+        "tableHeaderDuration": "Maximale duur",
+        "tableHeaderConfiguration": "Technische configuratie",
+        "accessTokenName": "access_token",
+        "accessTokenPurpose": "Uw verzoeken verifiëren en uw sessie actief houden.",
+        "accessTokenDuration": "7 dagen",
+        "accessTokenConfiguration": "HttpOnly, SameSite=Lax, Secure in productie.",
+        "refreshTokenName": "refresh_token",
+        "refreshTokenPurpose": "Uw sessie veilig vernieuwen en intrekking bij uitloggen mogelijk maken.",
+        "refreshTokenDuration": "7 dagen",
+        "refreshTokenConfiguration": "HttpOnly, SameSite=Lax, Secure in productie."
+      },
+      "localStorage": {
+        "title": "4. Lokale opslag (gebruikersvoorkeuren)",
+        "paragraph1": "Om u een gepersonaliseerde ervaring te bieden en uw visuele instellingen te bewaren, slaat de toepassing bepaalde voorkeuren op in de lokale opslag van uw browser.",
+        "paragraph2": "Deze gegevens blijven op uw apparaat staan en worden niet automatisch bij elk verzoek naar de server verzonden, hoewel de toepassing ze in de browser kan lezen om uw voorkeuren toe te passen.",
+        "tableHeaderKey": "Sleutel",
+        "tableHeaderPurpose": "Doel",
+        "tableHeaderDuration": "Duur",
+        "themeKey": "theme",
+        "themePurpose": "Uw voorkeur voor het lichte of donkere thema onthouden.",
+        "themeDuration": "Blijvend totdat deze handmatig wordt verwijderd of overschreven.",
+        "keyboardLayoutKey": "typing-keyboard-layout",
+        "keyboardLayoutPurpose": "De voor de oefeningen geselecteerde toetsenbordindeling onthouden.",
+        "keyboardLayoutDuration": "Blijvend totdat deze wordt verwijderd of overschreven.",
+        "typingFontKey": "typing-font",
+        "typingFontPurpose": "De lettertypefamilie onthouden die in de oefeningen wordt gebruikt.",
+        "typingFontDuration": "Blijvend totdat deze wordt verwijderd of overschreven.",
+        "typingFontSizeKey": "typing-font-size",
+        "typingFontSizePurpose": "De voor de oefeningen ingestelde tekstgrootte onthouden.",
+        "typingFontSizeDuration": "Blijvend totdat deze wordt verwijderd of overschreven."
+      },
+      "providers": {
+        "title": "5. Externe dienstverleners, verwerkers en mogelijke doorgiften",
+        "paragraph1": "De toepassing kan externe dienstverleners gebruiken om noodzakelijke functies van de dienst te leveren, zoals authenticatie, infrastructuur, opslag, beveiliging en het laden van bronnen.",
+        "paragraph2": "Wanneer een dienstverlener persoonsgegevens namens de toepassing en volgens haar instructies verwerkt, wordt deze, naargelang het geval, beschouwd als dienstverlener of verwerker en niet noodzakelijk als ontvanger van een doorgifte van persoonsgegevens.",
+        "paragraph3": "De toepassing gebruikt met name infrastructuur van Google Cloud Platform (GCP) om technische onderdelen van de dienst te hosten en uit te voeren. De gegevens die in deze infrastructuur worden opgeslagen of verwerkt, worden gebruikt om de typedienst aan te bieden, het account te onderhouden, de voortgang te bewaren en het platform te beheren.",
+        "paragraph4": "De toepassing kan ook inloggen via Google mogelijk maken. In dat geval hangt de gegevensverwerking af van de gebruikte authenticatiestroom en van de gegevens die de gebruiker heeft toegestaan, zoals e-mailadres, profielnaam of andere relevante accountgegevens.",
+        "paragraph5": "Voor het laden van bepaalde visuele bronnen, zoals afbeeldingen van nationale vlaggen, kan de toepassing flagcdn.com gebruiken. Bij het laden van deze bronnen kan die dienstverlener technische gegevens van het verzoek ontvangen, zoals IP-adres, browsertype, datum en tijd van toegang en verwijzende URL.",
+        "paragraph6": "Wanneer persoonsgegevens nationaal of internationaal worden doorgegeven aan een derde die geen verwerker is, gebeurt dit overeenkomstig de toepasselijke gevallen van artikel 36 van de LFPDPPP, met name wanneer de doorgifte noodzakelijk is voor het onderhouden of uitvoeren van de rechtsverhouding tussen de gebruiker en de verwerkingsverantwoordelijke.",
+        "paragraph7": "In de huidige staat van de toepassing worden geen analytische cookies, advertentienetwerken, remarketing of andere niet-essentiële volgsystemen uitgevoerd."
+      },
+      "legalBasis": {
+        "title": "6. Rechtsgrond voor de verwerking",
+        "paragraph1": "De verwerking van persoonsgegevens via strikt noodzakelijke cookies vindt plaats om inloggen mogelijk te maken, de sessie actief te houden, verzoeken te verifiëren en de werking van het account te beschermen.",
+        "paragraph2": "Wanneer deze gegevens noodzakelijk zijn om de gevraagde dienst te leveren, hoeft de verwerkingsverantwoordelijke geen aanvullende toestemming te verkrijgen, overeenkomstig artikel 9 van de LFPDPPP, omdat het gaat om gegevens die nodig zijn om verplichtingen uit de rechtsverhouding tussen de gebruiker en de verwerkingsverantwoordelijke na te komen.",
+        "paragraph3": "De lokale opslag die door de toepassing wordt gebruikt, maakt het mogelijk interface- en configuratievoorkeuren te onthouden, zoals het visuele thema, de toetsenbordindeling, het lettertype en de tekstgrootte. Deze voorkeuren blijven op het apparaat van de gebruiker staan en worden niet gebruikt voor advertenties, remarketing of commerciële profilering.",
+        "paragraph4": "Als in de toekomst niet-essentiële technologieën worden ingevoerd, zoals analyse, advertenties, remarketing of andere volgmechanismen die niet nodig zijn om de dienst te leveren, wordt dit Beleid bijgewerkt en wordt vóór activering de vereiste toestemming gevraagd wanneer de toepasselijke regelgeving dat vereist."
+      },
+      "arco": {
+        "title": "7. ARCO-rechten en intrekking",
+        "paragraph1": "U kunt uw rechten op Toegang, Rectificatie, Annulering en Bezwaar (ARCO) uitoefenen met betrekking tot de persoonsgegevens die aan uw account zijn gekoppeld, en uw toestemming intrekken voor verwerkingen waarvoor die toestemming vereist is, wanneer dit van toepassing is.",
+        "paragraph2": "Om deze rechten uit te oefenen, kunt u een verzoek sturen naar het volgende e-mailadres: kisodesk.project@gmail.com.",
+        "paragraph3": "De verwerkingsverantwoordelijke deelt de genomen beslissing mee binnen de wettelijke termijn van 20 werkdagen vanaf ontvangst van het verzoek. Als het verzoek gegrond is, wordt het binnen 15 werkdagen na de mededeling van het antwoord uitgevoerd.",
+        "paragraph4": "Deze termijnen kunnen eenmaal met eenzelfde periode worden verlengd wanneer omstandigheden dat rechtvaardigen.",
+        "paragraph5": "De intrekking van toestemming heeft geen gevolgen voor eerder uitgevoerde verwerkingen of voor verwerkingen die moeten worden voortgezet wegens een wettelijke verplichting, een bestaande rechtsverhouding, beveiliging, verdediging van rechten of noodzakelijke bewaring overeenkomstig de toepasselijke regelgeving.",
+        "item1": "De alias of account-ID die in de toepassing wordt gebruikt, als u die heeft.",
+        "item2": "Het e-mailadres dat aan uw account is gekoppeld.",
+        "item3": "Een middel om meldingen te ontvangen.",
+        "item4": "Redelijke elementen om uw identiteit of eigendom van het account te verifiëren, bij voorkeur via het gekoppelde e-mailadres. Als een vertegenwoordiger optreedt, documenten waaruit de vertegenwoordigingsbevoegdheid blijkt.",
+        "item5": "Het recht dat u wilt uitoefenen: toegang, rectificatie, annulering, bezwaar of intrekking van toestemming.",
+        "item6": "Een duidelijke en nauwkeurige beschrijving van de persoonsgegevens waarop u het betreffende recht wilt uitoefenen, zoals e-mailadres, alias, voorkeuren of typestatistieken die aan het account zijn gekoppeld.",
+        "item7": "Bij een verzoek om rectificatie: de juiste informatie en, indien nodig, elementen die de gevraagde correctie onderbouwen.",
+        "item8": "Alle andere gegevens die redelijkerwijs nodig zijn om uw account te identificeren en uw verzoek correct af te handelen."
+      },
+      "management": {
+        "title": "8. Deze gegevens in uw browser beheren en verwijderen",
+        "paragraph1": "U kunt cookies en lokale opslag op uw apparaat beheren.",
+        "item1": "Uitloggen: wanneer u zich afmeldt bij de toepassing, worden de authenticatiecookies access_token en refresh_token automatisch uit uw browser verwijderd.",
+        "item2": "Browserinstellingen: u kunt cookies en lokaal opgeslagen gegevens op elk moment bekijken, blokkeren of verwijderen via de instellingen van uw browser, doorgaans onder privacy, beveiliging, geschiedenis of sitegegevens.",
+        "item3": "Waarschuwing: het blokkeren van strikt noodzakelijke cookies kan voorkomen dat u correct kunt inloggen of toegang krijgt tot functies waarvoor authenticatie vereist is."
+      },
+      "changes": {
+        "title": "9. Wijzigingen in dit Beleid",
+        "paragraph1": "De toepassing kan dit Beleid bijwerken om juridische, technische of operationele wijzigingen weer te geven. Wijzigingen worden op deze pagina gepubliceerd met de bijbehorende datum van de laatste update.",
+        "paragraph2": "Wanneer de wijzigingen relevant zijn, worden ze meegedeeld via een zichtbare melding in de toepassing, een cookiemelding of een ander beschikbaar elektronisch middel."
+      },
+      "contact": {
+        "title": "10. Contact",
+        "paragraph1": "Als u vragen heeft of uw gegevensbeschermingsrechten wilt uitoefenen, kunt u contact met ons opnemen via het volgende e-mailadres: kisodesk.project@gmail.com.",
+        "paragraph2": "Raadpleeg voor volledige informatie over de identiteit en het adres van de verwerkingsverantwoordelijke, de algemene verwerkingsdoeleinden, doorgiften, bewaring en overige privacyaspecten de uitgebreide Privacyverklaring van de toepassing."
+      }
+    },
+    "privacy": {
+      "metadata": {
+        "title": "Privacybeleid",
+        "description": "Informatie over hoe Kiso Desk persoonsgegevens verwerkt."
+      },
+      "general": {
+        "eyebrow": "Juridisch",
+        "title": "Privacyverklaring",
+        "description": "Informatie over de verwerking van persoonsgegevens in Kiso Desk.",
+        "introduction": "Deze verklaring legt uit welke informatie de toepassing verwerkt, waarvoor deze wordt gebruikt, met wie deze kan worden gedeeld en welke keuzemogelijkheden gebruikers hebben.",
+        "lastUpdatedLabel": "Laatst bijgewerkt",
+        "lastUpdated": "15 juli 2026",
+        "contentsLabel": "Inhoud",
+        "relatedLabel": "Gerelateerde documenten",
+        "relatedTerms": "Gebruiksvoorwaarden",
+        "relatedCookies": "Cookiebeleid"
+      },
+      "data": {
+        "title": "1. Gegevens die wij verwerken",
+        "sensitiveNote": "Kiso Desk vraagt niet om gevoelige persoonsgegevens. Toegankelijkheids- of interfacevoorkeuren worden uitsluitend gebruikt als functionele instellingen van de toepassing en zijn niet bedoeld om informatie te verzamelen over gezondheid, handicap, etnische afkomst, godsdienst, politieke opvattingen, seksuele geaardheid of andere gevoelige gegevens.",
+        "item1": "Account: e-mailadres, alias die door de gebruiker is gekozen, rol, taal, toetsenbordindeling en toegankelijkheidsvoorkeuren.",
+        "item2": "Authenticatie: een als hash opgeslagen wachtwoord wanneer het account met een wachtwoord wordt aangemaakt; of gegevens die nodig zijn om via Google in te loggen wanneer de gebruiker die authenticatiemethode gebruikt.",
+        "item3": "Leren: cursussen en lessen, voortgang, snelheid, nauwkeurigheid, oefentijd, fouten, gebruikte toetsen en gebeurtenissen die nodig zijn om typestatistieken te berekenen.",
+        "item4": "Sociale functies: vriendschappen, verzoeken, aanwezigheid, laatste verbinding en gedeelde statistieken volgens de beschikbare functies.",
+        "item5": "Ranglijst: alias, land, snelheid, nauwkeurigheid, niveau, oefentaal en positie in de algemene ranglijst of ranglijsten per taal.",
+        "item6": "Technische gegevens: IP-adres, useragent, logboeken, sessie-ID’s en diagnostische gegevens die door de infrastructuur worden gegenereerd.",
+        "item7": "Lokale voorkeuren: thema, toetsenbordindeling, lettertype en tekstgrootte die in de browser zijn opgeslagen."
+      },
+      "purposes": {
+        "title": "2. Waarvoor wij de gegevens gebruiken",
+        "item1": "Accounts en sessies aanmaken en beheren.",
+        "item2": "Inloggen met een wachtwoord of Google mogelijk maken, afhankelijk van de methode die de gebruiker kiest.",
+        "item3": "Lessen aanbieden, voortgang opslaan en typestatistieken genereren.",
+        "item4": "De toetsenbordindeling, interface, het lettertype, de tekstgrootte en andere gebruiksvoorkeuren personaliseren.",
+        "item5": "Algemene ranglijsten en ranglijsten per taal weergeven.",
+        "item6": "Sociale functies beheren, waaronder vriendschappen, aanwezigheid, laatste verbinding en zichtbare statistieken volgens de beschikbare functies.",
+        "item7": "Accounts beschermen, misbruik voorkomen, ongeautoriseerde activiteit detecteren en fouten diagnosticeren.",
+        "item8": "Het downloaden van gegevens en verwijderen van het account vanuit het profiel mogelijk maken.",
+        "item9": "Verzoeken over ondersteuning, privacy en beveiliging beantwoorden.",
+        "item10": "Wettelijke verplichtingen nakomen en vorderingen verdedigen.",
+        "item11": "Als Google AdSense wordt geactiveerd: advertenties weergeven en meten, fraude voorkomen en, wanneer de gebruiker dit toestaat en de toepasselijke regelgeving dit mogelijk maakt, advertenties personaliseren."
+      },
+      "legalBasis": {
+        "title": "3. Grondslag voor de verwerking",
+        "paragraph1": "De verwerking van persoonsgegevens vindt hoofdzakelijk plaats om de door de gebruiker gevraagde dienst te leveren, het account te beheren, de sessie in stand te houden, voortgang op te slaan, statistieken te genereren, ranglijsten en sociale functies te beheren, het downloaden of verwijderen van gegevens vanuit het profiel mogelijk te maken en de beveiliging van het platform te beschermen.",
+        "paragraph2": "Wanneer gegevens noodzakelijk zijn om verplichtingen uit de rechtsverhouding tussen de gebruiker en Kiso Desk na te komen, hoeft overeenkomstig de toepasselijke regelgeving geen aanvullende toestemming te worden verkregen.",
+        "paragraph3": "Voor doeleinden waarvoor toestemming vereist is, wordt deze gevraagd wanneer dat van toepassing is. De gebruiker kan zijn of haar toestemming in de toepasselijke gevallen intrekken, zonder terugwerkende kracht.",
+        "paragraph4": "Als in de toekomst andere doeleinden worden toegevoegd of doeleinden die niet noodzakelijk zijn om de dienst te leveren, wordt deze Privacyverklaring bijgewerkt en wordt, waar van toepassing, de vereiste toestemming gevraagd voordat de nieuwe verwerking begint."
+      },
+      "recipients": {
+        "title": "4. Dienstverleners en ontvangers",
+        "paragraph1": "Kiso Desk kan technologische dienstverleners gebruiken om de toepassing te beheren, waaronder infrastructuur, hosting, database, authenticatie, opslag, beveiliging, e-mail, monitoring en technische diagnose.",
+        "paragraph2": "Wanneer deze dienstverleners persoonsgegevens namens Kiso Desk en volgens haar instructies verwerken, treden zij op als verwerkers en gebruiken zij de gegevens uitsluitend om de overeengekomen diensten te leveren.",
+        "paragraph3": "De toepassing maakt inloggen via Google mogelijk. Wanneer de gebruiker deze methode gebruikt, kan Google gegevens verwerken overeenkomstig zijn eigen voorwaarden en beleid die op de authenticatiedienst van toepassing zijn.",
+        "paragraph4": "De toepassing kan externe bronnen laden, zoals vlagafbeeldingen van flagcdn.com. Wanneer dergelijke bronnen vanuit de browser worden opgevraagd, kan die dienstverlener gebruikelijke technische verbindingsgegevens ontvangen, zoals IP-adres, useragent, datum, tijd en verwijzende URL.",
+        "paragraph5": "Kiso Desk is van plan Google AdSense te gebruiken om advertenties weer te geven. Als dit wordt geactiveerd, kunnen Google en andere dienstverleners, advertentienetwerken of vraagpartners die bij de levering van advertenties betrokken zijn technische gegevens verwerken en cookies, webbakens, IP-adressen of andere identificatoren in de browser gebruiken of uitlezen als gevolg van de advertenties. Deze aanbieders kunnen advertentiecookies gebruiken om advertenties te tonen op basis van eerdere bezoeken aan deze of andere sites, wanneer dit van toepassing is en er een vereiste rechtsgrond of toestemming bestaat. Gebruikers kunnen de personalisatie van Google-advertenties beheren via https://myadcenter.google.com/ en opties bekijken om zich voor bepaalde aanbieders af te melden via https://www.aboutads.info/choices/. De toepasselijke configuratie, de daadwerkelijk gebruikte aanbieders en de doeleinden worden bekendgemaakt voordat advertenties worden geactiveerd.",
+        "paragraph6": "De betrokkene kan doorgiften van persoonsgegevens waarvoor toestemming vereist is weigeren door te schrijven naar het privacy-e-mailadres dat in deze Verklaring wordt vermeld. Deze weigering heeft geen gevolgen voor doorgiften die noodzakelijk zijn om de dienst te leveren, de rechtsverhouding met de gebruiker te onderhouden of uit te voeren, wettelijke verplichtingen na te komen, rechten te beschermen of te voldoen aan verzoeken van een bevoegde autoriteit."
+      },
+      "transfers": {
+        "title": "5. Nationale en internationale doorgiften",
+        "paragraph1": "Kiso Desk kan technologische dienstverleners gebruiken die in Mexico of andere landen zijn gevestigd om de dienst te hosten, beheren, beschermen en onderhouden.",
+        "paragraph2": "Wanneer deze dienstverleners als verwerkers optreden, verwerken zij de persoonsgegevens namens Kiso Desk en volgens haar instructies.",
+        "paragraph3": "Wanneer persoonsgegevens nationaal of internationaal worden doorgegeven aan een derde die geen verwerker is, gebeurt dit overeenkomstig de gevallen die de toepasselijke regelgeving toestaat, waaronder wanneer dit noodzakelijk is voor het onderhouden of uitvoeren van de rechtsverhouding tussen de gebruiker en Kiso Desk, of wanneer de betrokkene toestemming heeft gegeven.",
+        "paragraph4": "Het gebruik van Google als authenticatiemethode, de toekomstige levering van advertenties via Google AdSense en het laden van bronnen vanaf flagcdn.com kunnen de mededeling van technische of accountgegevens aan buiten Mexico gevestigde dienstverleners inhouden, overeenkomstig de technische configuratie van de dienst, toestemmingskeuzes en het toepasselijke beleid van die dienstverleners."
+      },
+      "retention": {
+        "title": "6. Bewaring",
+        "item1": "De ingestelde maximale duur van authenticatiecookies is zeven dagen.",
+        "item2": "Account- en voortgangsgegevens worden bewaard zolang het account actief blijft of zolang dit nodig is om de dienst te leveren, ranglijsten te onderhouden, sociale functies te beheren, wettelijke verplichtingen na te komen, verzoeken te behandelen, misbruik te voorkomen, incidenten op te lossen of rechten te verdedigen.",
+        "item3": "Gegevens die verband houden met ranglijsten en sociale functies worden bewaard zolang het account actief is of zolang dit nodig is om die functies te beheren, tenzij de gebruiker het account verwijdert of een toepasselijk recht uitoefent.",
+        "item4": "Technische logboeken, activiteitsgegevens, aanwezigheidsgegevens, back-ups en diagnostische gegevens worden bewaard zolang dit nodig is om de dienst te beheren, beschermen en onderhouden, tenzij informatie vanwege een wettelijke verplichting, beveiliging of de verdediging van rechten langer moet worden bewaard.",
+        "item5": "Wanneer persoonsgegevens niet langer nodig zijn voor de doeleinden waarvoor ze zijn verwerkt, worden ze, naargelang het geval, verwijderd, geanonimiseerd of vóór verwijdering geblokkeerd."
+      },
+      "rights": {
+        "title": "7. Rechten en verzoeken",
+        "paragraph1": "U kunt uw rechten op Toegang, Rectificatie, Annulering en Bezwaar uitoefenen met betrekking tot uw persoonsgegevens en uw toestemming intrekken voor verwerkingen waarvoor deze vereist is, wanneer dit van toepassing is.",
+        "paragraph2": "Vanuit het profiel maakt de toepassing het mogelijk een gestructureerde kopie van de aan uw account gekoppelde gegevens te downloaden en via de beschikbare mechanismen verwijdering van het account aan te vragen.",
+        "paragraph3": "De gebruiker kan via de beschikbare opties in de toepassing de bekendmaking beperken van bepaalde gegevens die zichtbaar zijn in ranglijsten of sociale functies, wanneer die opties bestaan. De gebruiker kan ook vragen om beperking van het gebruik of de bekendmaking van persoonsgegevens door te schrijven naar het privacy-e-mailadres dat in deze Verklaring wordt vermeld.",
+        "paragraph4": "De procedure om ARCO-rechten uit te oefenen, toestemming in te trekken of privacygerelateerde verzoeken in te dienen, wordt beschreven in de Gebruiksvoorwaarden van Kiso Desk."
+      },
+      "children": {
+        "title": "8. Minderjarigen",
+        "paragraph1": "De dienst is niet gericht op minderjarigen.",
+        "paragraph2": "In Mexico mogen personen jonger dan 18 jaar niet zelfstandig een account aanmaken of persoonsgegevens verstrekken.",
+        "paragraph3": "Als Kiso Desk vaststelt dat een account aan een minderjarige toebehoort, kan het de niet-noodzakelijke verwerking opschorten en verwijdering, blokkering of regularisatie van het account beoordelen overeenkomstig de toepasselijke regelgeving en het belang van het kind."
+      },
+      "security": {
+        "title": "9. Beveiliging",
+        "paragraph1": "Kiso Desk past administratieve, technische en fysieke beveiligingsmaatregelen toe om persoonsgegevens te beschermen tegen beschadiging, verlies, wijziging, vernietiging, ongeautoriseerd gebruik, toegang of verwerking.",
+        "paragraph2": "Deze maatregelen kunnen toegangscontroles, authenticatie, veilige opslag van wachtwoorden als hash, inloggen via externe aanbieders, HttpOnly-cookies voor authenticatie, monitoring, technische logboeken, interne beperkingen en andere redelijke maatregelen omvatten, afhankelijk van het risico, de aard van de gegevens en de technologische ontwikkeling.",
+        "paragraph3": "Geen enkel systeem is onfeilbaar. Bij beveiligingsinbreuken die de rechten van gebruikers aanzienlijk aantasten, verstrekt Kiso Desk de vereiste informatie overeenkomstig de toepasselijke regelgeving."
+      },
+      "changes": {
+        "title": "10. Wijzigingen in deze Privacyverklaring",
+        "paragraph1": "Deze Privacyverklaring kan worden bijgewerkt om juridische, technische of operationele wijzigingen weer te geven.",
+        "paragraph2": "Wijzigingen worden op deze pagina gepubliceerd met de bijbehorende datum van de laatste update.",
+        "paragraph3": "Wanneer de wijziging wezenlijk is, wordt deze meegedeeld via een zichtbare melding in de toepassing of een ander beschikbaar elektronisch middel.",
+        "paragraph4": "Als voor een nieuw doel toestemming vereist is, begint de betreffende verwerking pas nadat die toestemming is verkregen wanneer de toepasselijke regelgeving dat vereist."
+      },
+      "responsible": {
+        "title": "11. Verwerkingsverantwoordelijke en contact",
+        "paragraph3": "Privacy-e-mailadres: kisodesk.project@gmail.com."
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "Gebruiksvoorwaarden",
+        "description": "Regels voor het gebruik van Kiso Desk."
+      },
+      "general": {
+        "eyebrow": "Juridisch",
+        "title": "Gebruiksvoorwaarden",
+        "description": "Regels voor het gebruik van Kiso Desk.",
+        "introduction": "Deze voorwaarden regelen de toegang tot de toepassing, accounts, leerfuncties en beschikbare sociale functies.",
+        "lastUpdatedLabel": "Laatst bijgewerkt",
+        "lastUpdated": "13 juni 2026",
+        "contentsLabel": "Inhoud",
+        "relatedLabel": "Gerelateerde documenten",
+        "relatedPrivacy": "Privacybeleid",
+        "relatedCookies": "Cookiebeleid"
+      },
+      "service": {
+        "title": "1. Beschrijving van de dienst",
+        "paragraph1": "Kiso Desk biedt typelessen en type-oefeningen, voortgangsregistratie, statistieken, ranglijsten en sociale functies die verband houden met het leren en oefenen van typen op een toetsenbord.",
+        "paragraph2": "Door een account aan te maken, in te loggen of de dienst te gebruiken, accepteer je deze Gebruiksvoorwaarden.",
+        "paragraph3": "De functies van de dienst kunnen tijdens de ontwikkeling en het beheer van de toepassing worden gewijzigd, bijgewerkt, beperkt of beëindigd, steeds overeenkomstig de toepasselijke wetgeving en zonder afbreuk te doen aan onvervreemdbare rechten van gebruikers."
+      },
+      "eligibility": {
+        "title": "2. Leeftijd en geschiktheid",
+        "paragraph1": "Om zelfstandig een account aan te maken en de dienst te gebruiken, moet je minimaal 18 jaar oud zijn als je in Mexico woont.",
+        "paragraph2": "Als je in een ander land woont, moet je meerderjarig zijn of de vereiste handelingsbekwaamheid hebben volgens de toepasselijke wetgeving van je woonplaats. Als die wetgeving een hogere leeftijd of aanvullende vereisten stelt, moet je daaraan voldoen voordat je de dienst gebruikt.",
+        "paragraph3": "De dienst is niet gericht op minderjarigen. Als je volgens de toepasselijke wetgeving minderjarig bent, mag je niet zelfstandig een account aanmaken of persoonsgegevens verstrekken."
+      },
+      "account": {
+        "title": "3. Account en beveiliging",
+        "item1": "Je moet juiste informatie verstrekken en deze actueel houden.",
+        "item2": "Je bent verantwoordelijk voor de bescherming van je inloggegevens of toegangsmethoden en voor het uitloggen op gedeelde apparaten.",
+        "item3": "Je mag accounts van anderen niet afstaan, verkopen, overdragen of gebruiken.",
+        "item4": "Je moet ongeautoriseerde toegang of een beveiligingsincident melden via het contactkanaal dat in deze Voorwaarden wordt vermeld."
+      },
+      "acceptableUse": {
+        "title": "4. Aanvaardbaar gebruik",
+        "intro": "Door de dienst te gebruiken, ga je akkoord met de volgende regels:",
+        "item1": "De beveiliging, beschikbaarheid of werking van de dienst niet verstoren.",
+        "item2": "Zonder toestemming geen gegevens extraheren, verzoeken automatiseren, scrapen, de infrastructuur overbelasten of technische limieten omzeilen.",
+        "item3": "Andere gebruikers niet lastigvallen, imiteren of misleiden en niet proberen informatie van hen te verkrijgen.",
+        "item4": "Geen inhoud uploaden, reproduceren, verspreiden of gebruiken zonder daarvoor voldoende rechten te hebben.",
+        "item5": "De dienst niet gebruiken voor illegale, misbruikmakende, frauduleuze, schadelijke of met deze Voorwaarden strijdige activiteiten."
+      },
+      "social": {
+        "title": "5. Ranglijsten en sociale functies",
+        "paragraph1": "De dienst kan ranglijsten, profielen of andere sociale functies bevatten.",
+        "paragraph2": "Afhankelijk van de beschikbare configuratie en implementatie kunnen deze functies gegevens tonen zoals alias, land, snelheid, nauwkeurigheid, niveau, voortgang, verbindingsstatus, laatste activiteit of statistieken over type-oefeningen.",
+        "paragraph3": "Door ranglijsten, profielen of sociale functies te gebruiken, accepteer je dat bepaalde gegevens over je profiel en prestaties zichtbaar kunnen zijn voor andere gebruikers binnen de toepassing, overeenkomstig de beschikbare functies en de toepasselijke Privacyverklaring."
+      },
+      "intellectualProperty": {
+        "title": "6. Intellectuele eigendom",
+        "paragraph1": "De software, het ontwerp, de interface, teksten, oefeningen, afbeeldingen, audio, merken, logo’s en overige onderdelen van de dienst behoren toe aan hun respectieve rechthebbenden.",
+        "paragraph2": "Toegang tot de dienst draagt geen intellectuele-eigendomsrechten op de toepassing of de inhoud daarvan over.",
+        "paragraph3": "De binnen de dienst beschikbare inhoud mag alleen worden gebruikt om typen te oefenen en de functies van de toepassing te gebruiken, tenzij uitdrukkelijk toestemming is gegeven of een andere licentie geldt."
+      },
+      "availability": {
+        "title": "7. Beschikbaarheid en wijzigingen",
+        "paragraph1": "De dienst kan worden onderbroken, beperkt of gewijzigd wegens onderhoud, updates, beveiliging, technische storingen, operationele wijzigingen of oorzaken buiten de redelijke controle van Kiso Desk.",
+        "paragraph2": "Er wordt geprobeerd wezenlijke wijzigingen mee te delen wanneer dit redelijk is.",
+        "paragraph3": "Kiso Desk garandeert geen specifieke verbetering in snelheid, nauwkeurigheid, studieprestaties, werkprestaties, inzetbaarheid of enig ander concreet resultaat dat voortvloeit uit het gebruik van de dienst."
+      },
+      "suspension": {
+        "title": "8. Opschorting en beëindiging",
+        "paragraph1": "Kiso Desk kan een account beperken, opschorten of beëindigen bij schending van deze Voorwaarden, misbruik van de dienst, een beveiligingsrisico, ongeautoriseerd gebruik, benadeling van andere gebruikers of illegale of schadelijke activiteit.",
+        "paragraph2": "Wanneer dit redelijk is, kan de gebruiker via het in deze Voorwaarden vermelde contactkanaal om herziening van de maatregel verzoeken.",
+        "paragraph3": "Beëindiging, opschorting of beperking van een account heeft geen gevolgen voor verplichtingen of aansprakelijkheden die vóór die maatregel zijn ontstaan.",
+        "paragraph4": "Verwijdering of bewaring van persoonsgegevens die aan het account zijn gekoppeld, vindt plaats overeenkomstig de toepasselijke Privacyverklaring en regelgeving."
+      },
+      "liability": {
+        "title": "9. Aansprakelijkheid",
+        "paragraph1": "De dienst wordt aangeboden volgens de huidige beschikbaarheid en werking.",
+        "paragraph2": "Niets in deze Voorwaarden beperkt onvervreemdbare rechten die gebruikers op grond van de toepasselijke wetgeving hebben, noch sluit het aansprakelijkheid uit die wettelijk niet kan worden beperkt.",
+        "paragraph3": "Voor zover toegestaan door de toepasselijke wetgeving is Kiso Desk niet aansprakelijk voor indirecte schade, onderbrekingen, gegevensverlies of nadelige gevolgen die voortvloeien uit oorzaken buiten zijn redelijke controle, oneigenlijk gebruik van het account, onjuiste of verouderde informatie die door de gebruiker is verstrekt, storingen van derden buiten de dienst of schendingen van deze Voorwaarden door de gebruiker.",
+        "paragraph4": "Het voorgaande sluit geen aansprakelijkheid uit wanneer sprake is van een aan Kiso Desk toe te rekenen wettelijke overtreding, opzet, kwade trouw, grove nalatigheid, schending van onvervreemdbare rechten, niet-nakoming van beveiligingsverplichtingen of onrechtmatige verwerking van persoonsgegevens overeenkomstig de toepasselijke regelgeving."
+      },
+      "law": {
+        "title": "10. Toepasselijk recht en contact",
+        "paragraph1": "Deze Voorwaarden worden beheerst door en uitgelegd overeenkomstig de wetten van Mexico, onverminderd de onvervreemdbare rechten die gebruikers kunnen hebben op grond van de toepasselijke wetgeving in hun woonplaats.",
+        "paragraph2": "Niets in deze Voorwaarden beperkt het recht van de gebruiker om zich, wanneer van toepassing, tot bevoegde autoriteiten te wenden, waaronder autoriteiten voor consumentenbescherming of bescherming van persoonsgegevens.",
+        "paragraph3": "Vragen, verzoeken, beveiligingsmeldingen, klachten of mededelingen met betrekking tot deze Voorwaarden kunnen worden verzonden naar het volgende e-mailadres: kisodesk.project@gmail.com."
+      }
+    },
+    "page": {
+      "metadata": {
+        "title": "Leer typen",
+        "description": "Verbeter je snelheid en nauwkeurigheid met interactieve typelessen."
+      },
+      "general": {
+        "altNight": "Illustratie van een kamer bij nacht met een persoon en een kat",
+        "altDay": "Illustratie van een kamer overdag met een programmerende persoon en een kat",
+        "interactiveLessons": "Interactieve lessen",
+        "interactiveLessonsDescription": "Leer met gestructureerde cursussen",
+        "freePractice": "Vrij oefenen",
+        "freePracticeDescription": "Train in je eigen tempo",
+        "dashboardDescription": "Bekijk je statistieken",
+        "rankingDescription": "Neem het wereldwijd tegen anderen op",
+        "title1": "Beheers het",
+        "title2": "typen",
+        "subtitle1": "Verbeter je snelheid en nauwkeurigheid ",
+        "subtitle2": "met interactieve typelessen",
+        "learn": "Leer",
+        "guidedLessons": "Begeleide lessen",
+        "practiceAction": "Oefen",
+        "typingExercises": "Type-oefeningen",
+        "track": "Meet",
+        "progressAndStats": "Voortgang en statistieken",
+        "compete": "Daag uit",
+        "globalRanking": "Wereldwijde ranglijst"
+      }
+    }
+  },
+  "public": {
+    "courses": {
+      "metadata": {
+        "title": "Typecursussen | Kiso Desk",
+        "description": "Ontdek cursussen en probeer typelessen."
+      },
+      "lessons": {
+        "metadata": {
+          "title": "Typelessen | Kiso Desk",
+          "description": "Probeer typelessen zonder een account aan te maken."
+        },
+        "lesson": {
+          "metadata": {
+            "title": "Lessoefening | Kiso Desk",
+            "description": "Oefen een typeles in Kiso Desk."
+          }
+        }
+      }
+    },
+    "practice": {
+      "metadata": {
+        "title": "Typesnelheid en nauwkeurigheid testen | Kiso Desk",
+        "description": "Oefen gratis met typen en sla het resultaat op dit apparaat op."
+      }
+    },
+    "progress": {
+      "metadata": {
+        "title": "Lokale voortgang | Kiso Desk",
+        "description": "Voortgang die lokaal in deze browser is opgeslagen."
+      },
+      "general": {
+        "title": "Lokale voortgang",
+        "description": "Deze voortgang wordt alleen in deze browser opgeslagen.",
+        "lessonsCompleted": "Voltooide lessen",
+        "practiceSessions": "Oefensessies",
+        "accuracy": "Nauwkeurigheid",
+        "signInNotice": "Log in om je voortgang in je account op te slaan.",
+        "signIn": "Inloggen"
+      }
+    },
+    "ranking": {
+      "metadata": {
+        "title": "Typeranglijst | Kiso Desk",
+        "description": "Bekijk de openbare ranglijst voor typesnelheid."
+      }
+    }
+  },
+  "components": {
+    "courses": {
+      "courseCard": {
+        "general": {
+          "lessons": "lessen",
+          "viewCourse": "Cursus bekijken",
+          "yourProgress": "Je voortgang",
+          "loginToSeeProgress": "Log in om je voortgang te bekijken",
+          "lessonsCount": "lessen"
+        }
+      }
+    },
+    "dashboard": {
+      "errorTrends": {
+        "general": {
+          "title": "Voortgangsoverzicht",
+          "noData": "Geen gegevens om weer te geven",
+          "insufficientData": "Onvoldoende gegevens.",
+          "highestErrorRate": "Hoogste foutpercentage",
+          "correctAttempts": "{correctAttempts}/{totalAttempts} correct"
+        }
+      },
+      "fingerDistribution": {
+        "general": {
+          "title": "Voortgangsoverzicht",
+          "noData": "Geen gegevens om weer te geven",
+          "leftHand": "Links",
+          "rightHand": "Rechts",
+          "hand": "Hand: {hand}",
+          "pinky": "Pink",
+          "ring": "Ringvinger",
+          "middle": "Middelvinger",
+          "index": "Wijsvinger",
+          "correctPercentage": "{percentage}% correct",
+          "noCorrectPercentage": "Geen",
+          "errorPercentage": "{percentage}% fouten",
+          "errors": "gegevens"
+        }
+      },
+      "practiceCalendar": {
+        "general": {
+          "title": "Voortgangsoverzicht",
+          "noData": "Geen gegevens om weer te geven",
+          "noPractice": "Niet geoefend",
+          "minutesShort": "min",
+          "hoursShort": "u",
+          "noActivity": "Geen activiteit",
+          "fiveMinutes": "5 min",
+          "tenMinutes": "10 min",
+          "fifteenMinutes": "15+ minuten"
+        }
+      },
+      "progressChart": {
+        "general": {
+          "noData": "Geen gegevens om weer te geven"
+        }
+      },
+      "authBanner": {
+        "general": {
+          "message": "Log in om je statistieken te bekijken.",
+          "signIn": "Inloggen"
+        }
+      },
+      "recommendationsList": {
+        "general": {
+          "title": "Voortgangsoverzicht",
+          "signIn": "Inloggen",
+          "noRecommendations": "Geen aanbevelingen beschikbaar."
+        }
+      },
+      "weakKeysPanel": {
+        "general": {
+          "title": "Voortgangsoverzicht",
+          "overallAccuracy": "Algemene nauwkeurigheid",
+          "weakestKey": "Zwakste toets",
+          "lowestAccuracy": "Laagste nauwkeurigheid"
+        }
+      }
+    },
+    "friends": {
+      "friendsSnapshot": {
+        "general": {
+          "title": "Vrienden",
+          "description": "Bekijk hoeveel vrienden online zijn en open het volledige overzicht.",
+          "openFriends": "Vrienden openen",
+          "totalFriends": "Vrienden",
+          "onlineNow": "nu online",
+          "noFriendsYet": "Je hebt nog geen vrienden toegevoegd."
+        }
+      }
+    },
+    "layout": {
+      "footer": {
+        "general": {
+          "product": "Product",
+          "lessons": "Lessen",
+          "ranking": "Ranglijst",
+          "progress": "Voortgang",
+          "project": "Project",
+          "aboutKisoDesk": "Over Kiso Desk",
+          "github": "GitHub",
+          "legal": "Juridisch",
+          "privacyPolicy": "Privacybeleid",
+          "termsOfUse": "Gebruiksvoorwaarden",
+          "cookiePolicy": "Cookiebeleid",
+          "contact": "Contact",
+          "copyright": "© {year} Kiso Desk."
+        }
+      },
+      "header": {
+        "general": {
+          "defaultUser": "Gebruiker",
+          "skipToMainContent": "Naar hoofdinhoud",
+          "courses": "Cursussen",
+          "userMenu": "Gebruikersmenu",
+          "profile": "Mijn profiel",
+          "logout": "Uitloggen",
+          "menuToggle": "Menu openen",
+          "login": "Inloggen",
+          "register": "Registreren"
+        }
+      },
+      "sidebar": {
+        "general": {
+          "dashboard": "Dashboard",
+          "courses": "Cursussen",
+          "practice": "Oefenen",
+          "ranking": "Ranglijst",
+          "friends": "Vrienden",
+          "profile": "Profiel",
+          "menuToggle": "Navigatiemenu",
+          "expand": "Uitvouwen",
+          "collapse": "Invouwen"
+        }
+      }
+    },
+    "legal": {
+      "cookieBanner": {
+        "general": {
+          "title": "Cookie- en lokaal-opslagbeleid",
+          "description": "In de huidige staat van de toepassing worden geen analytische cookies, advertentienetwerken, remarketing of andere niet-essentiële volgsystemen uitgevoerd.",
+          "privacyNotice": "Privacybeleid",
+          "cookiePolicy": "Cookie- en lokaal-opslagbeleid",
+          "accept": "Accepteren",
+          "reject": "Weigeren"
+        }
+      }
+    },
+    "lessons": {
+      "handReference": {
+        "general": {
+          "handReference": "Referentie voor de handpositie op het toetsenbord"
+        }
+      },
+      "keyboardDetectionWizard": {
+        "general": {
+          "title": "Toetsenborddetector",
+          "subtitle": "Detecteer je toetsenbordindeling met enkele fysieke toetsen en gebruik deze in de hele toepassing.",
+          "modalTitle": "Indeling detecteren",
+          "currentLayout": "Huidige indeling",
+          "start": "Detectie starten",
+          "progress": "Stap {current} van maximaal {total}",
+          "progressHint": "Kan eerder klaar zijn",
+          "progressLabel": "Detectievoortgang",
+          "back": "Terug",
+          "cancel": "Annuleren",
+          "close": "Sluiten",
+          "intro": {
+            "title": "We gaan je toetsenbord detecteren",
+            "help": "Je hoeft slechts 1 tot 5 toetsen op je fysieke toetsenbord in te drukken."
+          },
+          "capture": {
+            "focus": "Klik hier en druk op de aangegeven toets",
+            "instruction": "De toets die je indrukt, wordt alleen gebruikt om de indeling te detecteren.",
+            "captured": "Gedetecteerde toets: {key}",
+            "deadKey": "dode toets"
+          },
+          "errors": {
+            "composition": "We kunnen geen indeling identificeren terwijl het toetsenbord tekst samenstelt.",
+            "unidentified": "Deze toets kon niet worden geïdentificeerd. Probeer het opnieuw.",
+            "alt-graph": "Gebruik AltGr niet wanneer je deze toets indrukt.",
+            "modified": "Gebruik geen modificatietoetsen wanneer je deze toets indrukt.",
+            "wrongKey": "Dat was een andere toets. Druk op de toets op de hierboven aangegeven positie.",
+            "shiftRequired": "Houd Shift ingedrukt terwijl je deze toets indrukt.",
+            "shiftNotRequired": "Druk deze toets in zonder Shift te gebruiken.",
+            "saveFailed": "De indeling kon niet worden opgeslagen. Controleer je verbinding en probeer het opnieuw."
+          },
+          "result": {
+            "detectedTitle": "Indeling gedetecteerd",
+            "confidence": "Betrouwbaarheid van de detectie: {confidence}",
+            "useDetected": "Deze indeling gebruiken",
+            "unidentifiedTitle": "We konden je indeling niet identificeren",
+            "unidentifiedHelp": "Selecteer handmatig de indeling die overeenkomt met je toetsenbord.",
+            "fallbackTitle": "Detectie was niet betrouwbaar genoeg",
+            "fallbackHelp": "Kies een van de beste overeenkomsten of bekijk alle beschikbare indelingen.",
+            "chooseManually": "Handmatig kiezen",
+            "retryDetection": "Detectie opnieuw proberen"
+          },
+          "manual": {
+            "title": "Kies je indeling",
+            "help": "Selecteer de indeling die overeenkomt met de toetsen op je toetsenbord."
+          },
+          "saved": {
+            "title": "Indeling opgeslagen",
+            "description": "{layout} wordt nu in de hele toepassing gebruikt.",
+            "continueToCourses": "Doorgaan naar cursussen",
+            "returnToPractice": "Terug naar oefenen"
+          },
+          "questions": {
+            "rightOfL": {
+              "title": "Druk op de toets direct rechts van L",
+              "help": "Gebruik Shift niet. Ga uit van de fysieke positie, ook als er een ander symbool op de toets staat."
+            },
+            "leftOfBackspace": {
+              "title": "Druk op de toets direct links van Backspace",
+              "help": "Gebruik Shift niet. Gebruik de toets op de cijferrij."
+            },
+            "shiftDigit2": {
+              "title": "Houd Shift ingedrukt en druk op de toets 2",
+              "help": "Gebruik de 2 op de cijferrij, niet die op het numerieke toetsenblok."
+            },
+            "sixthTopRow": {
+              "title": "Druk op de zesde lettertoets van de bovenste rij",
+              "help": "Tel vanaf de eerste lettertoets na Tab. Gebruik Shift niet."
+            },
+            "firstTopRow": {
+              "title": "Druk op de eerste lettertoets na Tab",
+              "help": "Ga uit van de fysieke positie. Gebruik Shift niet."
+            },
+            "quoteKey": {
+              "title": "Druk op de aanhalingstekentoets",
+              "help": "Gebruik Shift niet. Ga uit van de fysieke positie van de toets."
+            },
+            "shiftDigit3": {
+              "title": "Houd Shift ingedrukt en druk op de toets 3",
+              "help": "Gebruik de 3 op de cijferrij, niet die op het numerieke toetsenblok."
+            }
+          },
+          "physicalFamily": {
+            "title": "Vorm van je toetsenbord",
+            "subtitle": "Bepaal de vorm van je toetsen om het toetsenbord correct weer te geven.",
+            "enterQuestion": "Welke vorm heeft je Enter-toets?",
+            "enterHorizontal": "Horizontale Enter",
+            "enterIso": "Standaard ISO-Enter",
+            "enterBigAss": "ISO BA-Enter",
+            "abntQuestion": "Hoeveel toetsen zitten er tussen / en de rechter Shift?",
+            "eastAsianQuestion": "Hoeveel toetsen zitten er tussen 0 en Backspace?",
+            "eastAsianCountQuestion": "Hoeveel toetsen zitten er tussen Spatie en de rechter Alt?",
+            "complete": "Toetsenbordvorm geïdentificeerd: {family}"
+          }
+        }
+      },
+      "keyboard": {
+        "general": {
+          "virtualKeyboard": "Virtueel toetsenbord"
+        }
+      },
+      "lessonCard": {
+        "general": {
+          "ariaLabel": "Naar de les",
+          "wpm": "WPM",
+          "score": "Score",
+          "accuracy": "Nauwkeurigheid",
+          "time": "Tijd",
+          "placeholder": "—",
+          "secondsShort": "s",
+          "minutesShort": "min",
+          "minutesCompact": "m",
+          "approxPrefix": "~",
+          "rankLabel": "Rang",
+          "gradeLabel": "Beoordeling",
+          "completed": "Voltooid",
+          "explanatoryBadge": "Uitlegles",
+          "explanatoryLesson": "Uitlegles",
+          "objectiveAccuracy": "Doel: {minAccuracy}% nauwkeurigheid",
+          "mastered": "Beheerst",
+          "inProgress": "Bezig",
+          "lessonOrderRecommendationTitle": "Volg de aanbevolen volgorde",
+          "lessonOrderRecommendationDescription": "We raden aan de standaardvolgorde van de lessen te volgen, zodat je geleidelijk vooruitgaat.",
+          "lessonOrderRecommendationBack": "Terug",
+          "lessonOrderRecommendationContinue": "Doorgaan",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Beginner",
+            "scout": "Verkenner",
+            "ranger": "Ranger",
+            "veteran": "Veteraan",
+            "elite": "Elite",
+            "legend": "Legende"
+          },
+          "gradesDescriptions": {
+            "novice": "Basisniveau",
+            "scout": "Eerste voortgang",
+            "ranger": "Goede beheersing",
+            "veteran": "Hoog niveau",
+            "elite": "Expert",
+            "legend": "Hoogste niveau"
+          }
+        }
+      },
+      "personalizedLessonCard": {
+        "general": {
+          "title": "Aanbevolen oefening",
+          "noData": "Geen gegevens om weer te geven",
+          "error": "Je aanbevelingen konden niet worden geladen. Probeer het opnieuw.",
+          "retry": "Opnieuw proberen",
+          "insufficientData": "Oefen meer om te bepalen welke toetsen je extra moet trainen.",
+          "noCourse": "Voor deze taal is nog geen typecursus beschikbaar.",
+          "noLessons": "Deze cursus bevat nog geen beschikbare lessen.",
+          "description": "Gebaseerd op je vastgestelde zwakke punten.",
+          "weakKeys": "Toetsen met de laagste nauwkeurigheid in je laatste sessies.",
+          "noMatches": "Er zijn nog geen lessen in deze cursus die betrekking hebben op je zwakke toetsen.",
+          "worksKeys": "Oefen: {keys}"
+        }
+      },
+      "results": {
+        "general": {
+          "saveWarning": "De resultaten konden niet worden opgeslagen",
+          "wpm": "WPM",
+          "score": "Score",
+          "accuracy": "Nauwkeurigheid",
+          "correctChars": "Juiste tekens",
+          "lowResultTitle": "Je resultaat is wat laag",
+          "lowResultMessage": "Overweeg de typecursus te volgen om verder te verbeteren.",
+          "lowResultCourseLink": "Naar de typecursus",
+          "accuracyFocusTitle": "Geef prioriteit aan nauwkeurigheid",
+          "accuracyFocusMessage": "Je gaat goed vooruit. Probeer eerst minimaal 95% nauwkeurigheid te bereiken voordat je je snelheid verhoogt.",
+          "masteredResult": "Les beheerst",
+          "masteredMessage": "Je hebt aan het nauwkeurigheidscriterium voldaan en kunt doorgaan.",
+          "needsReview": "Herhaling nodig",
+          "reviewMessage": "Doel: minimaal {minAccuracy}% nauwkeurigheid. Verlaag je tempo en herhaal het blok.",
+          "rankLabel": "Rang",
+          "gradeLabel": "Beoordeling",
+          "retryAriaLabel": "Les opnieuw proberen",
+          "retry": "Opnieuw proberen",
+          "next": "Volgende",
+          "newText": "Nieuwe tekst",
+          "backToCourses": "Terug naar cursussen",
+          "backToDashboard": "Terug naar dashboard",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Beginner",
+            "scout": "Verkenner",
+            "ranger": "Ranger",
+            "veteran": "Veteraan",
+            "elite": "Elite",
+            "legend": "Legende"
+          },
+          "gradesDescriptions": {
+            "novice": "Basisniveau",
+            "scout": "Eerste voortgang",
+            "ranger": "Goede beheersing",
+            "veteran": "Hoog niveau",
+            "elite": "Expert",
+            "legend": "Hoogste niveau"
+          }
+        }
+      },
+      "typingArea": {
+        "general": {
+          "wpm": "WPM",
+          "score": "Score",
+          "accuracy": "Nauwkeurigheid",
+          "characters": "Tekens",
+          "backspace": "Backspace",
+          "backspaceEnabled": "Backspace ingeschakeld",
+          "backspaceDisabled": "Backspace geblokkeerd",
+          "font": "Lettertype",
+          "size": "Grootte",
+          "pixels": "px",
+          "fontAndSize": "Lettertype en grootte",
+          "textToType": "Te typen tekst",
+          "inactivityPaused": "Gepauzeerd wegens inactiviteit",
+          "clickToResume": "Klik om door te gaan",
+          "congratulations": "Gefeliciteerd! Snelheid: {wpm} WPM, nauwkeurigheid: {accuracy}%",
+          "detectKeyboard": "Toetsenbord detecteren",
+          "keyboardConfigTitle": "Toetsenbordinstellingen",
+          "keyboardPreferenceMissing": "Er is geen toetsenbordvoorkeur opgeslagen. Je kunt deze wijzigen via de toetsenbordinstellingen.",
+          "recommendedKeyboardLayout": "Aanbevolen toetsenbordindeling: {layout}",
+          "useRecommendedKeyboardLayout": "Indeling wijzigen",
+          "detectionHelp": "Detecteert automatisch je huidige indeling en gebruikt deze tijdens alle oefeningen.",
+          "identifyKeyboardShape": "Vorm bepalen",
+          "keyboardShapeHeading": "Vorm van je toetsenbord",
+          "logicalDistributionHeading": "Logische indeling",
+          "logicalDistributionHint": "toetsenbordtekens"
+        }
+      }
+    },
+    "ui": {
+      "themeToggle": {
+        "general": {
+          "switchToLight": "Thema",
+          "switchToDark": "Thema"
+        }
+      }
+    },
+    "i18n": {
+      "languageSwitcher": {
+        "general": {
+          "interfaceLanguage": "Interfacetaal"
+        }
+      }
+    }
+  },
+  "general": {
+    "Accessibility": {
+      "button": "Knop",
+      "expandMenu": "Menu uitvouwen",
+      "collapseMenu": "Menu invouwen"
+    },
+    "Common": {
+      "loading": "Laden...",
+      "retry": "Opnieuw proberen",
+      "close": "Sluiten"
+    }
+  },
+  "lessonid": {
+    "general": {
+      "lockedLesson": "Vergrendelde les",
+      "lockedLessonDescription": "Beheers de vorige activiteit voordat je doorgaat.",
+      "backToLessons": "Terug naar lessen",
+      "lessonNotFound": "Les niet gevonden",
+      "typeTheTextBelow": "Typ de onderstaande tekst",
+      "hideKeyboard": "Toetsenbord verbergen",
+      "showKeyboard": "Toetsenbord weergeven",
+      "exitPractice": "Oefening afsluiten",
+      "saveError": "Fout bij het opslaan van het resultaat",
+      "saveErrorMessage": "Je resultaten worden op het scherm weergegeven, maar zijn niet in je voortgang opgeslagen. Probeer de les opnieuw wanneer de verbinding beschikbaar is.",
+      "audioGuide": "Luister naar de uitleg",
+      "audioUnsupported": "Je browser kan dit audiospoor niet afspelen.",
+      "experimentalGreetings": {
+        "lessonPosition": "Les {current} van {total}",
+        "supportContent": "Ondersteunende inhoud",
+        "englishColumn": "Engels",
+        "spanishColumn": "Spaans",
+        "continue": "Doorgaan",
+        "dialogue": "Dialoog",
+        "selectEnglishFirst": "Selecteer eerst een optie in het Engels",
+        "tryAgain": "Probeer opnieuw",
+        "correct": "Correct",
+        "complete": "Activiteit voltooid"
+      },
+      "manualAudioPlay": "Luisteren",
+      "manualAudioReplay": "Opnieuw luisteren",
+      "lessonAudio": "Lesaudio",
+      "interactions": {
+        "dictationPrompt": "Typ wat je hoort",
+        "unitProgress": "Voortgang van de eenheid",
+        "stepProgress": "Stap {step} van 4 {current}",
+        "currentStep": "huidig",
+        "reviewTask": "Taak {current} van 3",
+        "completedPairs": "Voltooide paren",
+        "availableOptions": "Beschikbare opties",
+        "options": "Opties",
+        "answer": "Antwoord",
+        "check": "Controleren",
+        "undo": "Ongedaan maken",
+        "correct": "Correct",
+        "incorrect": "Nog niet. Juiste antwoord: {answer} {detail}",
+        "spellingFeedback": "Spelling: het woord heeft twee letters of aan het begin",
+        "sentenceFeedback": "Beginhoofdletter en interpunctie: controleer elke zin",
+        "dictationFeedback": "Dictee: luister naar elk woord en behoud de interpunctie",
+        "correctAnswer": "Juiste antwoord",
+        "nextTask": "Volgende taak"
+      }
+    }
+  },
+  "courses": {
+    "general": {
+      "title": "Cursussen",
+      "subtitle": "Ontdek onze cursussen en verbeter je typevaardigheid",
+      "searchPlaceholder": "Cursussen zoeken...",
+      "allLevels": "Alle niveaus",
+      "beginner": "Beginner",
+      "intermediate": "Gemiddeld",
+      "advanced": "Gevorderd",
+      "guestModeMessage": "Log in om je voortgang op te slaan",
+      "signIn": "Inloggen",
+      "retry": "Opnieuw proberen",
+      "noCourseYetTitle": "Er zijn nog geen cursussen beschikbaar",
+      "noCourseYetDescription": "We bereiden cursussen voor deze taal voor. Kom binnenkort terug.",
+      "noCourses": "Geen cursussen gevonden",
+      "all": "Alle cursussen",
+      "completed": "Voltooid",
+      "notCompleted": "Niet voltooid"
+    }
+  },
+  "lessons": {
+    "general": {
+      "title": "Lessen",
+      "subtitle": "Oefen met lessen die zijn afgestemd op je niveau",
+      "searchPlaceholder": "Lessen zoeken...",
+      "allDifficulties": "Alle moeilijkheidsgraden",
+      "beginner": "Beginner",
+      "intermediate": "Gemiddeld",
+      "advanced": "Gevorderd",
+      "guestModeMessage": "Log in om je voortgang op te slaan",
+      "signIn": "Inloggen",
+      "retry": "Opnieuw proberen",
+      "errorTitle": "Fout bij het laden van de lessen",
+      "noLessonsTitle": "Geen lessen beschikbaar",
+      "noLessonsDescription": "Deze cursus bevat nog geen lessen. Kom later terug of neem contact op met de beheerder.",
+      "noCompletedLessonsTitle": "Je hebt nog geen lessen voltooid",
+      "noCompletedLessonsDescription": "Voltooi een les om deze in deze lijst te zien.",
+      "noPendingLessonsTitle": "Je hebt geen openstaande lessen",
+      "noPendingLessonsDescription": "Alle lessen van deze cursus zijn als voltooid gemarkeerd.",
+      "all": "Alle lessen",
+      "completed": "Voltooid",
+      "notCompleted": "Niet voltooid",
+      "moduleLabel": "Module {order}",
+      "masteredCount": "{mastered}/{total} beheerst"
+    }
+  },
+  "dashboard": {
+    "general": {
+      "title": "Voortgangsoverzicht",
+      "subtitle": "Bekijk je voortgang en typestatistieken",
+      "averageWpm": "Gemiddelde WPM",
+      "wordsPerMinute": "Woorden per minuut",
+      "averageAccuracy": "Gemiddelde nauwkeurigheid",
+      "accuracy": "Nauwkeurigheid",
+      "totalPracticeTime": "Totale oefentijd",
+      "thisWeek": "Deze week",
+      "weeklyWpmProgress": "Wekelijkse WPM-voortgang",
+      "monthlyWpmProgress": "Maandelijkse WPM-voortgang",
+      "noData": "Geen gegevens beschikbaar",
+      "bestWpm": "Beste WPM",
+      "grossWpm": "Bruto WPM",
+      "record": "Record",
+      "streak": "Reeks",
+      "days": "dagen",
+      "consecutivePractice": "Opeenvolgend geoefend",
+      "totalKeystrokes": "Totaal aantal toetsaanslagen",
+      "typed": "Getypt",
+      "recommendations": "Aanbevelingen voor jou",
+      "recommendation1": "Oefen lessen op gemiddeld niveau om je snelheid te verbeteren.",
+      "recommendation2": "Probeer een nauwkeurigheid van meer dan 95% te behouden.",
+      "recommendation3": "Voltooi dagelijks minimaal één les om je reeks te behouden.",
+      "retry": "Opnieuw proberen",
+      "error": "Fout",
+      "completedText": "% voltooid",
+      "completedTitle": "Lessen / cursussen",
+      "lessons": "lessen",
+      "courses": "cursussen",
+      "completedLessons": "Voltooide lessen",
+      "completedCourses": "Voltooide cursussen",
+      "guestModeMessage": "Log in om je voortgang te bekijken",
+      "signIn": "Inloggen",
+      "recommendationsGuest": "Log in om gepersonaliseerde aanbevelingen te ontvangen op basis van je voortgang.",
+      "weakKeys": "Zwakke toetsen",
+      "errorTrends": "Foutentrend",
+      "fingerDistribution": "Verdeling per vinger",
+      "personalizedPractice": "Gepersonaliseerde oefening",
+      "personalizedPracticeDesc": "Ontvang gepersonaliseerde lessen op basis van je zwakke punten.",
+      "signInToSee": "Log in om je statistieken te bekijken",
+      "noDataYet": "Voltooi lessen om je zwakke punten te bekijken"
+    }
+  },
+  "practice": {
+    "general": {
+      "title": "Typetest",
+      "subtitle": "Verbeter je snelheid en nauwkeurigheid met gepersonaliseerde teksten",
+      "freeTitle": "Typesnelheidstest",
+      "freeSubtitle": "Probeer een korte tekst en ontdek je typesnelheid en nauwkeurigheid.",
+      "adaptiveTitle": "Oefen de toetsen waarop je het vaakst fouten maakt",
+      "adaptiveSubtitle": "Richt je op de tekens die de meeste fouten veroorzaken en typ nauwkeuriger.",
+      "session": "Oefensessie",
+      "newText": "Nieuwe tekst",
+      "perKeyStats": "Statistieken per toets (binnenkort)",
+      "loadingText": "Tekst laden...",
+      "errorLoadingText": "Fout bij het laden van de tekst.",
+      "errorTitle": "De tekst kon niet worden geladen",
+      "retry": "Opnieuw proberen",
+      "saving": "Resultaten opslaan...",
+      "errorSavingResult": "Fout bij het opslaan van de resultaten.",
+      "saveWarning": "De resultaten konden niet worden opgeslagen",
+      "backToDashboard": "Terug naar dashboard",
+      "guestSavePrompt": "Log in om je voortgang op te slaan en verder te verbeteren.",
+      "signInToSave": "Inloggen",
+      "guestPlaceholder": "—",
+      "guestAdaptiveReason": "Gebaseerd op fouten die op dit apparaat zijn opgeslagen",
+      "adaptiveKeys": "Toetsen: {keys}",
+      "adaptiveBigrams": "Bigrammen: {bigrams}",
+      "modeRandom": "Vrije tekst",
+      "modeWords": "Aanbevolen oefening",
+      "modeText": "Adaptieve tekst",
+      "adaptivePracticeKeys": "Toetsen in oefening"
+    }
+  },
+  "notFound": {
+    "general": {
+      "title": "Pagina niet gevonden",
+      "description": "De pagina die je zoekt bestaat niet of is verplaatst.",
+      "backHome": "Terug naar startpagina",
+      "dashboard": "Dashboard",
+      "lessons": "Lessen",
+      "ranking": "Ranglijst"
+    }
+  }
+}

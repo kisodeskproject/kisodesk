@@ -1,0 +1,23 @@
+# Dependencias
+node_modules
+
+# Builds y artefactos
+dist
+coverage
+.cache
+
+# Archivos generados
+*.gen.*
+*.min.*
+*.bundle.*
+
+# Temporales
+tmp
+temp
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Variables de entorno
+.env*

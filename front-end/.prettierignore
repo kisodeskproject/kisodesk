@@ -1,0 +1,28 @@
+# Dependencias
+node_modules
+
+# Builds y artefactos
+dist
+build
+.next
+out
+coverage
+.turbo
+.cache
+.nyc_output
+
+# Archivos generados
+*.gen.*
+*.min.*
+*.bundle.*
+
+# Configuración temporal
+tmp
+temp
+
+# Configuración del sistema
+.DS_Store
+Thumbs.db
+
+# Variables de entorno
+.env*

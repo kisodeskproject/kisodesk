@@ -1,0 +1,1278 @@
+{
+  "marketing": {
+    "cookies": {
+      "metadata": {
+        "title": "Pravila o kolačićima i lokalnoj pohrani",
+        "description": "Informacije o kolačićima i lokalnoj pohrani u Kiso Desku."
+      },
+      "general": {
+        "title": "Pravila o kolačićima i lokalnoj pohrani",
+        "contentsLabel": "Sadržaj",
+        "relatedLabel": "Povezani dokumenti",
+        "relatedPrivacy": "Pravila privatnosti",
+        "relatedTerms": "Uvjeti korištenja"
+      },
+      "definition": {
+        "title": "1. Što su kolačići i lokalna pohrana?",
+        "paragraph1": "Ova aplikacija koristi kolačiće i lokalnu pohranu preglednika za nužne funkcije usluge i pamćenje određenih korisničkih postavki.",
+        "paragraph2": "Kolačići su male tekstualne datoteke koje web-stranice pohranjuju u vaš preglednik. Koriste se za pamćenje informacija o vašem posjetu, poput vaših postavki ili statusa autentifikacije.",
+        "paragraph3": "Lokalna pohrana, poznata i kao localStorage, funkcija je preglednika koja omogućuje spremanje podataka izravno na vaš uređaj. Za razliku od kolačića, ti se podaci ne šalju automatski poslužitelju pri svakom zahtjevu, nego ostaju na uređaju dok ih ne izbrišete vi, preglednik ili postavke uređaja."
+      },
+      "data": {
+        "title": "2. Osobni i tehnički podaci povezani s tim tehnologijama",
+        "paragraph1": "Radi pružanja usluge vježbanja tipkanja aplikacija može obrađivati osobne ili tehničke podatke povezane s upotrebom kolačića, lokalne pohrane i mrežnih zahtjeva.",
+        "paragraph2": "Mjerni podaci povezani s registriranim računima pohranjuju se u sklopu usluge kako je opisano u Obavijesti o privatnosti. U načinu rada za goste dio napretka i povijesti vježbanja može se spremati lokalno u pregledniku.",
+        "paragraph3": "Lokalna pohrana može sadržavati postavke sučelja, odluku o neobveznim tehnologijama i napredak gosta. Ne sadrži izravno lozinke ni tokene za autentifikaciju.",
+        "item1": "Identifikatori sesije: pohranjeni su u kolačićima access_token i refresh_token te omogućuju aplikaciji prepoznavanje vašeg računa, autentifikaciju zahtjeva i održavanje aktivne sesije.",
+        "item2": "IP adresa i tehnički podaci o vezi: prenose se pri komunikaciji s poslužiteljem i učitavanju vanjskih resursa, poput slika zastava s flagcdn.com.",
+        "item3": "Postavke i lokalni podaci: mogu uključivati temu, raspored tipkovnice, font, veličinu teksta, prikaz tipkovnice, odluku o neobveznim tehnologijama, napredak gosta i lokalnu povijest korištenih tekstova."
+      },
+      "necessaryCookies": {
+        "title": "3. Strogo nužni kolačići (autentifikacija)",
+        "paragraph1": "Aplikacija koristi strogo nužne kolačiće za prijavu, održavanje vašeg identiteta tijekom pregledavanja, obnavljanje sesije i zaštitu autentificiranih zahtjeva.",
+        "note": "Ti se kolačići ne koriste za oglašavanje, remarketing ni komercijalno profiliranje.",
+        "tableHeaderName": "Naziv",
+        "tableHeaderPurpose": "Svrha",
+        "tableHeaderDuration": "Najdulje trajanje",
+        "tableHeaderConfiguration": "Tehnička konfiguracija",
+        "accessTokenName": "access_token",
+        "accessTokenPurpose": "Autentificirati vaše zahtjeve i održavati pristupnu sesiju aktivnom.",
+        "accessTokenDuration": "2 sata",
+        "accessTokenConfiguration": "HttpOnly, SameSite=Lax, Secure u produkciji.",
+        "refreshTokenName": "refresh_token",
+        "refreshTokenPurpose": "Sigurno obnoviti sesiju i omogućiti njezino opozivanje.",
+        "refreshTokenDuration": "7 dana",
+        "refreshTokenConfiguration": "HttpOnly, SameSite=Lax, Secure u produkciji."
+      },
+      "localStorage": {
+        "title": "4. Lokalna pohrana (korisničke postavke)",
+        "paragraph1": "Radi prilagodbe iskustva i zadržavanja određenih postavki aplikacija sprema podatke u pregledniku.",
+        "paragraph2": "Ti podaci ostaju na uređaju i ne šalju se automatski poslužitelju pri svakom zahtjevu, iako ih aplikacija može čitati radi primjene postavki ili vraćanja lokalnog napretka.",
+        "tableHeaderKey": "Ključ",
+        "tableHeaderPurpose": "Svrha",
+        "tableHeaderDuration": "Trajanje",
+        "themeKey": "theme",
+        "themePurpose": "Zapamtiti vaš odabir svijetle ili tamne teme.",
+        "themeDuration": "Trajno, dok se ručno ne izbriše ili prepiše.",
+        "keyboardLayoutKey": "typing-keyboard-layout",
+        "keyboardLayoutPurpose": "Zapamtiti raspored tipkovnice odabran za vježbe.",
+        "keyboardLayoutDuration": "Trajno, dok se ne izbriše ili prepiše.",
+        "typingFontKey": "typing-font",
+        "typingFontPurpose": "Zapamtiti porodicu fonta koja se koristi u vježbama.",
+        "typingFontDuration": "Trajno, dok se ne izbriše ili prepiše.",
+        "typingFontSizeKey": "typing-font-size",
+        "typingFontSizePurpose": "Zapamtiti veličinu teksta postavljenu za vježbe.",
+        "typingFontSizeDuration": "Trajno, dok se ne izbriše ili prepiše."
+      },
+      "providers": {
+        "title": "5. Vanjski pružatelji, izvršitelji obrade i mogući prijenosi",
+        "paragraph1": "Aplikacija koristi ili može koristiti vanjske pružatelje za nužne funkcije usluge, poput infrastrukture, autentifikacije, sigurnosti i isporuke resursa. Integracije pripremljene za buduće funkcije ne smatraju se aktivnima dok ne budu konfigurirane i puštene u rad.",
+        "paragraph2": "Kada pružatelj obrađuje osobne podatke u ime Kiso Deska i prema njegovim uputama, djeluje kao izvršitelj obrade ili pružatelj usluge, ovisno o slučaju.",
+        "paragraph3": "Kiso Desk koristi infrastrukturu Google Cloud Platforma (GCP) za hosting i rad tehničkih komponenti usluge. Podaci obrađeni u toj infrastrukturi koriste se za održavanje računa, čuvanje napretka i rad platforme.",
+        "paragraph4": "Aplikacija omogućuje prijavu putem Googlea. U tom postupku Kiso Desk prima samo odobrene podatke potrebne za autentifikaciju računa, poput Google identifikatora, adrese e-pošte, statusa njezine potvrde i naziva profila.",
+        "paragraph5": "Aplikacija koristi flagcdn.com za učitavanje slika zastava. Pri zahtjevu za tim resursima pružatelj može primiti uobičajene tehničke podatke, poput IP adrese, korisničkog agenta, datuma, vremena i referentnog URL-a.",
+        "paragraph6": "Kada se podaci otkrivaju ili prenose trećoj strani koja nije izvršitelj obrade, to se provodi u skladu s primjenjivim pravom, uključujući slučajeve kada je to potrebno za pružanje usluge, održavanje odnosa s korisnikom, zaštitu prava ili ispunjavanje zakonskih obveza.",
+        "paragraph7": "Cloudflare Turnstile može se uvjetno koristiti za sprječavanje botova i zloupotrebe, što može uključivati obradu tehničkih podataka o vezi od strane Cloudflarea. Oporavak računa putem e-pošte pripremljen je, ali nije aktivan dok se ne konfigurira pružatelj e-pošte. Trenutačno se ne koriste analitički kolačići, oglasne mreže, remarketing ni drugi neobvezni sustavi praćenja."
+      },
+      "legalBasis": {
+        "title": "6. Pravna osnova i načela privatnosti",
+        "paragraph1": "Obrada povezana sa strogo nužnim kolačićima provodi se radi prijave korisnika, održavanja aktivnih sesija, autentifikacije zahtjeva i zaštite rada računa.",
+        "paragraph2": "Kiso Desk obrađuje podatke u skladu s primjenjivim pravom. Kada su informacije potrebne za pružanje tražene usluge ili ispunjavanje obveza koje proizlaze iz odnosa s korisnikom, dodatna privola neće se tražiti osim ako je primjenjivo pravo zahtijeva.",
+        "paragraph3": "Kiso Desk također se oslanja na međunarodno priznata načela privatnosti, uključujući transparentnost, određivanje svrhe, smanjenje količine podataka, točnost, ograničeno čuvanje, sigurnost, kontrolu korisnika i odgovornost. To pozivanje ne predstavlja certifikaciju ni izjavu o potpunoj usklađenosti sa stranim zakonima koji se ne primjenjuju.",
+        "paragraph4": "Ako se u budućnosti uvedu neobvezne tehnologije poput analitike, oglašavanja, remarketinga ili drugih mehanizama praćenja, ova će se Pravila ažurirati i odgovarajuća privola zatražiti prije aktivacije kada je to potrebno."
+      },
+      "arco": {
+        "title": "7. Prava u vezi s podacima i povlačenje privole",
+        "paragraph1": "Možete zatražiti pristup osobnim podacima povezanim s vašim računom, njihov ispravak ili brisanje ili uložiti prigovor na obradu, a prema potrebi možete povući privolu za obrade koje je zahtijevaju.",
+        "paragraph2": "Za ostvarivanje tih prava možete poslati zahtjev na: kisodesk.project@gmail.com.",
+        "paragraph3": "Voditelj obrade priopćit će odluku u primjenjivom zakonskom roku i, ako se zahtjev prihvati, provesti ga u odgovarajućem roku.",
+        "paragraph4": "Ti se rokovi mogu produljiti kada to dopušta primjenjivo pravo i kada okolnosti to opravdavaju.",
+        "paragraph5": "Povlačenje privole ne utječe na prethodno provedene obrade ni na obrade koje se moraju nastaviti zbog zakonske obveze, postojećeg odnosa, sigurnosti, zaštite prava ili nužnog čuvanja.",
+        "item1": "Alias ili identifikator računa koji se koristi u aplikaciji, ako postoji.",
+        "item2": "Adresa e-pošte povezana s vašim računom.",
+        "item3": "Način primanja obavijesti.",
+        "item4": "Razumne informacije za potvrdu vašeg identiteta ili vlasništva nad računom, po mogućnosti putem povezane adrese e-pošte. Ako djelujete preko zastupnika, dokumentacija kojom se potvrđuje njegovo ovlaštenje.",
+        "item5": "Pravo koje želite ostvariti: pristup, ispravak, brisanje, prigovor ili povlačenje privole.",
+        "item6": "Jasan i precizan opis osobnih podataka na koje se vaš zahtjev odnosi, poput adrese e-pošte, aliasa, postavki ili mjernih podataka tipkanja povezanih s računom.",
+        "item7": "Za zahtjev za ispravak, točni podaci i, kada je potrebno, dokumentacija koja podupire traženu izmjenu.",
+        "item8": "Sve druge informacije razumno potrebne za identifikaciju računa i pravilnu obradu zahtjeva."
+      },
+      "management": {
+        "title": "8. Kako upravljati tim podacima i izbrisati ih",
+        "paragraph1": "Možete upravljati kolačićima, lokalnom pohranom i svojom odlukom o neobveznim tehnologijama.",
+        "item1": "Odjava: kada se odjavite, autentifikacijski kolačići access_token i refresh_token brišu se iz preglednika.",
+        "item2": "Postavke privatnosti i kolačića: u profilu možete pregledati i promijeniti svoju odluku o neobveznim tehnologijama. Kolačiće i lokalne podatke možete izbrisati i u postavkama preglednika.",
+        "item3": "Upozorenje: blokiranje strogo nužnih kolačića može vas spriječiti u prijavi ili korištenju funkcija koje zahtijevaju autentifikaciju."
+      },
+      "changes": {
+        "title": "9. Izmjene ovih Pravila",
+        "paragraph1": "Aplikacija može ažurirati ova Pravila kako bi odražavala pravne, tehničke ili operativne promjene. Ažuriranja će biti objavljena na ovoj stranici s odgovarajućim datumom posljednjeg ažuriranja.",
+        "paragraph2": "Kada su izmjene značajne, bit će priopćene vidljivom obavijesti u aplikaciji, obavijesti o kolačićima ili drugim dostupnim elektroničkim putem."
+      },
+      "contact": {
+        "title": "10. Kontakt",
+        "paragraph1": "Ako imate pitanja, želite ostvariti svoja prava ili trebate informacije o obradi podataka, pišite na kisodesk.project@gmail.com.",
+        "paragraph2": "Informacije o identitetu i kontaktnim podacima voditelja obrade, općim svrhama, pružateljima, rokovima čuvanja i drugim pojedinostima obrade nalaze se u Obavijesti o privatnosti aplikacije."
+      }
+    },
+    "privacy": {
+      "metadata": {
+        "title": "Pravila privatnosti",
+        "description": "Informacije o tome kako Kiso Desk obrađuje osobne podatke."
+      },
+      "general": {
+        "eyebrow": "Pravne informacije",
+        "title": "Obavijest o privatnosti",
+        "description": "Informacije o obradi osobnih podataka u skladu s primjenjivim pravom i međunarodno priznatim načelima privatnosti.",
+        "introduction": "Ova Obavijest objašnjava koje podatke Kiso Desk obrađuje, kako ih koristi, s kim ih može dijeliti i koje mogućnosti kontrole imaju korisnici. Pozivanje na međunarodna načela ne predstavlja certifikaciju ni izjavu o potpunoj usklađenosti sa stranim zakonima koji se ne primjenjuju.",
+        "lastUpdatedLabel": "Posljednje ažuriranje",
+        "lastUpdated": "23. srpnja 2026.",
+        "contentsLabel": "Sadržaj",
+        "relatedLabel": "Povezani dokumenti",
+        "relatedTerms": "Uvjeti korištenja",
+        "relatedCookies": "Pravila o kolačićima"
+      },
+      "data": {
+        "title": "1. Podaci koje obrađujemo",
+        "sensitiveNote": "Kiso Desk ne traži osjetljive osobne podatke. Postavke pristupačnosti ili sučelja koriste se samo kao funkcionalne postavke aplikacije i nisu namijenjene prikupljanju podataka o zdravlju, invaliditetu, etničkom podrijetlu, vjeri, političkim stavovima, seksualnoj orijentaciji ili drugim osjetljivim podacima.",
+        "item1": "Račun: adresa e-pošte, naziv profila kada je primjenjivo, alias koji je odabrao korisnik, uloga, jezik, raspored tipkovnice i postavke pristupačnosti.",
+        "item2": "Autentifikacija: lozinka pohranjena kao hash kada je račun izrađen pomoću lozinke ili podaci potrebni za prijavu putem Googlea kada se koristi ta metoda.",
+        "item3": "Učenje: tečajevi, lekcije, napredak, brzina, točnost, vrijeme vježbanja, pogreške, korištene tipke i događaji potrebni za izračun mjernih podataka tipkanja.",
+        "item4": "Društvene funkcije: prijateljstva, zahtjevi, blokiranja, prisutnost, posljednje povezivanje i dijeljene statistike prema dostupnim postavkama.",
+        "item5": "Ljestvica: alias, brzina, točnost, razina, jezik vježbanja, pozicija i datum rezultata kada je primjenjivo.",
+        "item6": "Tehnički podaci: IP adresa, korisnički agent, zapisnici, identifikatori sesije, dijagnostički podaci i tehnički zahtjevi koje generiraju korištena infrastruktura ili pružatelji.",
+        "item7": "Lokalni podaci: tema, raspored tipkovnice, font, veličina teksta, prikaz tipkovnice, odluka o neobveznim tehnologijama, napredak gosta i lokalna povijest tekstova."
+      },
+      "purposes": {
+        "title": "2. Kako koristimo podatke",
+        "item1": "Izrada i upravljanje računima i sesijama.",
+        "item2": "Omogućavanje prijave pomoću lozinke ili Googlea, ovisno o odabranoj metodi.",
+        "item3": "Pružanje lekcija, spremanje napretka i izrada statistika tipkanja.",
+        "item4": "Prilagodba rasporeda tipkovnice, sučelja, fonta, veličine teksta i drugih korisničkih postavki.",
+        "item5": "Prikaz općih ljestvica i ljestvica prema jeziku.",
+        "item6": "Upravljanje društvenim funkcijama, uključujući prijateljstva, prisutnost, posljednje povezivanje i statistike vidljive prema postavkama računa.",
+        "item7": "Zaštita računa, sprječavanje zloupotrebe, otkrivanje neovlaštenih aktivnosti i dijagnosticiranje pogrešaka.",
+        "item8": "Omogućavanje preuzimanja podataka i brisanja računa iz profila.",
+        "item9": "Odgovaranje na zahtjeve povezane s podrškom, privatnošću i sigurnošću.",
+        "item10": "Ispunjavanje zakonskih obveza i obrana od zahtjeva.",
+        "item11": "Ako se Google AdSense aktivira u budućnosti, prikazivanje i mjerenje oglasa, sprječavanje prijevara i, kada je primjenjivo, personalizacija oglasa uz informacije i privolu koje zahtijeva primjenjivo pravo."
+      },
+      "legalBasis": {
+        "title": "3. Osnova i načela obrade",
+        "paragraph1": "Obrada se provodi prvenstveno radi pružanja tražene usluge, upravljanja računima, održavanja sesija, spremanja napretka, izrade statistika, rada ljestvica i društvenih funkcija, omogućavanja preuzimanja ili brisanja podataka te zaštite platforme.",
+        "paragraph2": "Kiso Desk obrađuje podatke u skladu s primjenjivim pravom. Kada su informacije potrebne za pružanje usluge ili ispunjavanje obveza koje proizlaze iz odnosa s korisnikom, dodatna privola neće se tražiti osim ako je primjenjivo pravo zahtijeva.",
+        "paragraph3": "Kiso Desk također se oslanja na međunarodno priznata načela privatnosti, uključujući transparentnost, određivanje svrhe, smanjenje količine podataka, točnost, ograničeno čuvanje, sigurnost, kontrolu korisnika i odgovornost. To pozivanje ne predstavlja certifikaciju ni izjavu o potpunoj usklađenosti sa stranim zakonima koji se ne primjenjuju.",
+        "paragraph4": "Za svrhe koje zahtijevaju privolu ona će se zatražiti kada je to potrebno i može se povući bez retroaktivnog učinka. Ako se dodaju nove svrhe koje se razlikuju od pružanja usluge ili za njega nisu nužne, ova će se Obavijest prije početka nove obrade ažurirati kada je to potrebno."
+      },
+      "recipients": {
+        "title": "4. Pružatelji i primatelji",
+        "paragraph1": "Kiso Desk koristi tehnološke pružatelje za rad infrastrukture, hostinga, autentifikacije, isporuke resursa i sigurnosti. Integracija e-pošte pripremljena je, ali nije aktivna dok se ne konfigurira pružatelj.",
+        "paragraph2": "Kada ti pružatelji obrađuju osobne podatke u ime Kiso Deska i prema njegovim uputama, djeluju kao izvršitelji obrade ili pružatelji usluga i koriste podatke samo za pružanje ugovorenih funkcija.",
+        "paragraph3": "Google Cloud Platform pruža hosting i rad tehničkih komponenti usluge. Google također djeluje kao pružatelj autentifikacije kada se korisnik odluči prijaviti Google računom.",
+        "paragraph4": "Aplikacija učitava slike zastava s flagcdn.com. Pri zahtjevu za tim resursima pružatelj može primiti uobičajene tehničke podatke, poput IP adrese, korisničkog agenta, datuma, vremena i referentnog URL-a.",
+        "paragraph5": "Cloudflare Turnstile može se uvjetno koristiti za sprječavanje botova i zloupotrebe. Kada je aktivan, Cloudflare može primiti tehničke podatke o vezi potrebne za provjeru zahtjeva. Google AdSense i oglašavanje nisu aktivni; prije njihova uključivanja informacije će se ažurirati i primijenit će se potrebne kontrole.",
+        "paragraph6": "Ispitanik se može usprotiviti otkrivanjima ili prijenosima koji zahtijevaju privolu putem adrese e-pošte za privatnost. Taj prigovor ne utječe na otkrivanja ili prijenose potrebne za pružanje usluge, održavanje odnosa s korisnikom, zaštitu prava, sprječavanje zloupotrebe ili ispunjavanje zakonskih obveza."
+      },
+      "transfers": {
+        "title": "5. Prijenosi i obrada u drugim jurisdikcijama",
+        "paragraph1": "Kiso Desk može koristiti tehnološke pružatelje smještene u različitim jurisdikcijama za hosting, rad, zaštitu i održavanje usluge.",
+        "paragraph2": "Kada ti pružatelji djeluju kao izvršitelji obrade, obrađuju podatke u ime Kiso Deska i u skladu s odgovarajućim uputama i svrhama.",
+        "paragraph3": "Kada se podaci otkrivaju ili prenose trećoj strani koja nije izvršitelj obrade, to se provodi u okolnostima dopuštenima primjenjivim pravom, uključujući kada je to potrebno za pružanje usluge, ispunjavanje zakonskih obveza, zaštitu prava ili kada postoji privola.",
+        "paragraph4": "Korištenje Google Cloud Platforma, Google OAutha, Cloudflare Turnstilea kada je aktivan i flagcdn.com može uključivati obradu tehničkih podataka ili podataka računa u drugim jurisdikcijama, prema konfiguraciji usluge i primjenjivim pravilima svakog pružatelja."
+      },
+      "retention": {
+        "title": "6. Čuvanje",
+        "item1": "Kolačić access_token ima najdulje trajanje od 2 sata, a kolačić refresh_token najdulje trajanje od 7 dana.",
+        "item2": "Podaci o računu i napretku čuvaju se dok je račun aktivan ili dok su potrebni za pružanje usluge, rad ljestvica i društvenih funkcija, ispunjavanje zakonskih obveza, obradu zahtjeva, sprječavanje zloupotrebe, rješavanje incidenata ili zaštitu prava.",
+        "item3": "Podaci ljestvica i društvenih funkcija čuvaju se dok je račun aktivan ili dok su potrebni za rad tih funkcija, osim ako korisnik promijeni postavke, izbriše račun ili ostvari primjenjivo pravo.",
+        "item4": "Lokalne sigurnosne kopije izrađene tijekom implementacije čuvaju se najdulje 30 dana. Tehnički zapisnici rotiraju se prema veličini i čuvaju koliko je potrebno za rad, zaštitu i dijagnostiku usluge.",
+        "item5": "Kada osobni podaci više nisu potrebni, bit će izbrisani, anonimizirani ili blokirani prije brisanja, ovisno o slučaju, osim ako ih treba čuvati zbog primjenjive obveze."
+      },
+      "rights": {
+        "title": "7. Prava i zahtjevi",
+        "paragraph1": "Možete zatražiti pristup svojim osobnim podacima, njihov ispravak ili brisanje ili uložiti prigovor na obradu, a prema potrebi možete povući privolu za obrade koje je zahtijevaju.",
+        "paragraph2": "U profilu aplikacija omogućuje preuzimanje strukturirane kopije podataka povezanih s računom i zahtjev za njihovo brisanje putem dostupnih mehanizama.",
+        "paragraph3": "Korisnici mogu ograničiti otkrivanje podataka vidljivih na ljestvicama ili u društvenim funkcijama, pregledati ili promijeniti odluku o neobveznim tehnologijama i blokirati druge korisnike pomoću kontrola aplikacije.",
+        "paragraph4": "Putem adrese e-pošte navedene u ovoj Obavijesti možete poslati i zahtjeve povezane s privatnošću, ograničenjem korištenja ili otkrivanja podataka i ostvarivanjem prava."
+      },
+      "children": {
+        "title": "8. Maloljetnici",
+        "paragraph1": "Usluga nije namijenjena maloljetnicima.",
+        "paragraph2": "Za samostalnu izradu računa i korištenje usluge osoba mora dosegnuti zakonsku punoljetnost prema pravu koje se primjenjuje u mjestu njezina prebivališta.",
+        "paragraph3": "Ako Kiso Desk otkrije da račun pripada maloljetnoj osobi, može ograničiti obradu koja nije nužna i procijeniti obustavu, brisanje, blokiranje ili usklađivanje računa u skladu s primjenjivim pravom i zaštitom prava te osobe."
+      },
+      "security": {
+        "title": "9. Sigurnost",
+        "paragraph1": "Kiso Desk primjenjuje administrativne, tehničke i fizičke mjere namijenjene zaštiti osobnih podataka od oštećenja, gubitka, izmjene, uništenja, neovlaštene uporabe, pristupa ili obrade.",
+        "paragraph2": "Te mjere mogu uključivati kontrole pristupa, autentifikaciju, sigurnu pohranu lozinki, zaštićeno upravljanje sesijama, HttpOnly kolačiće, sprječavanje zloupotrebe, tehničke zapisnike, interna ograničenja i druge mjere razmjerne riziku i tehnološkom razvoju.",
+        "paragraph3": "Nijedan sustav nije nepogrešiv. Ako incident značajno utječe na prava korisnika, Kiso Desk provest će obavijesti i poduzeti radnje koje zahtijeva primjenjivo pravo."
+      },
+      "changes": {
+        "title": "10. Izmjene ove Obavijesti o privatnosti",
+        "paragraph1": "Ova se Obavijest može ažurirati radi odražavanja pravnih, tehničkih ili operativnih promjena.",
+        "paragraph2": "Ažuriranja će biti objavljena na ovoj stranici s odgovarajućim datumom posljednjeg ažuriranja.",
+        "paragraph3": "Kada je izmjena značajna, bit će priopćena vidljivom obavijesti u aplikaciji ili drugim dostupnim elektroničkim putem.",
+        "paragraph4": "Ako nova svrha zahtijeva privolu, odgovarajuća obrada neće započeti dok se privola ne dobije kada to zahtijeva primjenjivo pravo."
+      },
+      "responsible": {
+        "title": "11. Voditelj obrade i kontakt",
+        "paragraph3": "Adresa e-pošte za pitanja privatnosti: kisodesk.project@gmail.com."
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "Uvjeti korištenja",
+        "description": "Pravila za korištenje Kiso Deska."
+      },
+      "general": {
+        "eyebrow": "Pravne informacije",
+        "title": "Uvjeti korištenja",
+        "description": "Pravila za korištenje Kiso Deska.",
+        "introduction": "Ovi uvjeti uređuju pristup aplikaciji, računima, funkcijama učenja i dostupnim društvenim funkcijama.",
+        "lastUpdatedLabel": "Posljednje ažuriranje",
+        "lastUpdated": "23. srpnja 2026.",
+        "contentsLabel": "Sadržaj",
+        "relatedLabel": "Povezani dokumenti",
+        "relatedPrivacy": "Pravila privatnosti",
+        "relatedCookies": "Pravila o kolačićima"
+      },
+      "service": {
+        "title": "1. Opis usluge",
+        "paragraph1": "Kiso Desk pruža lekcije i vježbe tipkanja, praćenje napretka, statistike, ljestvice i društvene funkcije povezane s učenjem i vježbanjem tipkanja na tipkovnici.",
+        "paragraph2": "Izradom računa, prijavom ili korištenjem usluge prihvaćate ove Uvjete korištenja.",
+        "paragraph3": "Funkcije se mogu mijenjati, ažurirati, ograničiti ili ukinuti tijekom razvoja i rada usluge, uvijek u skladu s primjenjivim pravom i bez utjecaja na prava kojih se nije moguće odreći."
+      },
+      "eligibility": {
+        "title": "2. Dob i uvjeti korištenja",
+        "paragraph1": "Za samostalnu izradu računa i korištenje usluge morate dosegnuti zakonsku punoljetnost prema pravu koje se primjenjuje u mjestu vašeg prebivališta.",
+        "paragraph2": "Ako primjenjivo pravo zahtijeva dodatne uvjete sposobnosti, odobrenja ili dobi, morate ih ispuniti prije korištenja usluge.",
+        "paragraph3": "Usluga nije namijenjena maloljetnicima. Ako ste prema primjenjivom pravu maloljetni, ne smijete samostalno izraditi račun ni pružiti osobne podatke."
+      },
+      "account": {
+        "title": "3. Račun i sigurnost",
+        "item1": "Morate pružiti točne podatke i održavati ih ažurnima.",
+        "item2": "Odgovorni ste za zaštitu svojih vjerodajnica ili načina pristupa i za odjavu na dijeljenim uređajima.",
+        "item3": "Ne smijete ustupati, prodavati, prenositi ni koristiti račun druge osobe.",
+        "item4": "Svaki neovlašteni pristup ili sigurnosni incident morate prijaviti putem kontaktnog kanala navedenog u ovim Uvjetima."
+      },
+      "acceptableUse": {
+        "title": "4. Prihvatljivo korištenje",
+        "intro": "Korištenjem usluge pristajete poštovati sljedeća pravila:",
+        "item1": "Ne ometati sigurnost, dostupnost ni rad usluge.",
+        "item2": "Bez odobrenja ne izvlačiti podatke, automatizirati zahtjeve, provoditi scraping, preopterećivati infrastrukturu ni zaobilaziti tehnička ograničenja.",
+        "item3": "Ne uznemiravati druge korisnike, ne predstavljati se kao druga osoba, ne obmanjivati niti pokušavati pribaviti podatke od drugih korisnika.",
+        "item4": "Ne učitavati, umnožavati, distribuirati ni koristiti sadržaj bez dovoljnih prava.",
+        "item5": "Ne koristiti uslugu za nezakonite, zlostavljačke, prijevarne ili štetne aktivnosti niti za aktivnosti protivne ovim Uvjetima."
+      },
+      "social": {
+        "title": "5. Ljestvice i društvene funkcije",
+        "paragraph1": "Usluga uključuje ljestvice, profile i druge društvene funkcije.",
+        "paragraph2": "Te funkcije mogu prikazivati alias, brzinu, točnost, razinu, napredak, mrežni status, posljednju aktivnost ili statistike tipkanja prema dostupnim postavkama.",
+        "paragraph3": "Pri izradi računa određene društvene funkcije uključene su prema zadanim postavkama. Možete ih pojedinačno isključiti u profilu. Vaše pravo ime i adresa e-pošte ne objavljuju se, a prisutnost ili dijeljene statistike prikazuju se samo prihvaćenim prijateljima, kako je opisano u Obavijesti o privatnosti."
+      },
+      "intellectualProperty": {
+        "title": "6. Intelektualno vlasništvo",
+        "paragraph1": "Softver, dizajn, sučelje, tekstovi, vježbe, slike, zvuk, zaštitni znakovi, logotipi i drugi elementi usluge pripadaju njihovim odgovarajućim vlasnicima.",
+        "paragraph2": "Pristup usluzi ne prenosi prava intelektualnog vlasništva nad aplikacijom ili njezinim sadržajem.",
+        "paragraph3": "Sadržaj dostupan putem usluge smije se koristiti samo za vježbanje tipkanja i korištenje funkcija aplikacije, osim ako je izričito dopušteno drukčije ili se primjenjuje druga licenca."
+      },
+      "availability": {
+        "title": "7. Dostupnost i izmjene",
+        "paragraph1": "Usluga se može prekinuti, ograničiti ili izmijeniti zbog održavanja, ažuriranja, sigurnosti, tehničkih kvarova, operativnih promjena ili razloga izvan razumne kontrole Kiso Deska.",
+        "paragraph2": "Značajne izmjene bit će priopćene kada je to razumno moguće.",
+        "paragraph3": "Kiso Desk ne jamči određeno poboljšanje brzine, točnosti, akademskog uspjeha, radnog učinka, zapošljivosti ni bilo kojeg drugog posebnog rezultata korištenja usluge."
+      },
+      "suspension": {
+        "title": "8. Obustava i prestanak",
+        "paragraph1": "Kiso Desk može ograničiti, obustaviti ili ukinuti račun u slučaju kršenja ovih Uvjeta, zloupotrebe usluge, sigurnosnog rizika, neovlaštene uporabe, štete drugim korisnicima ili nezakonite ili štetne aktivnosti.",
+        "paragraph2": "Kada je to razumno, korisnik može zatražiti preispitivanje mjere putem kontaktnog kanala navedenog u ovim Uvjetima.",
+        "paragraph3": "Prestanak, obustava ili ograničenje računa ne utječe na obveze ili odgovornosti nastale prije mjere.",
+        "paragraph4": "Brisanje ili čuvanje osobnih podataka povezanih s računom provodit će se u skladu s Obavijesti o privatnosti i primjenjivim pravom."
+      },
+      "liability": {
+        "title": "9. Odgovornost",
+        "paragraph1": "Usluga se pruža prema svojoj trenutačnoj dostupnosti i načinu rada.",
+        "paragraph2": "Ništa u ovim Uvjetima ne ograničava prava korisnika kojih se prema primjenjivom pravu nije moguće odreći niti isključuje odgovornost koju nije moguće zakonski ograničiti.",
+        "paragraph3": "U mjeri dopuštenoj primjenjivim pravom Kiso Desk nije odgovoran za neizravnu štetu, prekide, gubitak podataka ili štetu koja proizlazi iz uzroka izvan njegove razumne kontrole, zloupotrebe računa, netočnih ili zastarjelih podataka, propusta trećih strana izvan usluge ili korisnikova kršenja ovih Uvjeta.",
+        "paragraph4": "Prethodno ne isključuje odgovornost za kršenje prava koje se može pripisati Kiso Desku, namjerno postupanje, zlu vjeru, krajnju nepažnju, povredu prava kojih se nije moguće odreći, neispunjavanje sigurnosnih obveza ili nepravilnu obradu osobnih podataka."
+      },
+      "law": {
+        "title": "10. Primjenjivo pravo i kontakt",
+        "paragraph1": "Ovi se Uvjeti uređuju i tumače prema pravu koje se primjenjuje na voditelja usluge, ne dovodeći u pitanje prava korisnika kojih se nije moguće odreći prema pravu koje se primjenjuje u mjestu njihova prebivališta.",
+        "paragraph2": "Ništa u ovim Uvjetima ne ograničava pravo korisnika da se obrati nadležnim tijelima za zaštitu potrošača, zaštitu podataka ili drugim nadležnim tijelima.",
+        "paragraph3": "Pitanja, zahtjevi, sigurnosne prijave, potraživanja ili poruke povezane s ovim Uvjetima mogu se poslati na kisodesk.project@gmail.com."
+      }
+    },
+    "about": {
+      "metadata": {
+        "title": "O Kiso Desku",
+        "description": "Saznajte više o Kiso Desku i njegovu praktičnom pristupu učenju slijepog tipkanja."
+      },
+      "general": {
+        "title": "O Kiso Desku",
+        "subtitle": "Platforma za jasno, dosljedno i mjerljivo vježbanje tipkanja",
+        "project_title": "Projekt",
+        "project_text": "Kiso Desk neovisan je projekt usmjeren na stvaranje jasnog i praktičnog iskustva za učenje slijepog tipkanja.",
+        "project_status_text": "Osmišljen je kao prostor u kojem svatko, bez obzira na razinu iskustva, može redovito vježbati i primijetiti stvaran napredak. Naglasak je na kontinuiranom učenju, praktičnosti i pažnji prema detaljima, uz koristan alat prilagođen današnjim potrebama.",
+        "mission_title": "Naša misija",
+        "mission_text": "U Kiso Desku vjerujemo da je slijepo tipkanje ključna vještina u digitalnom svijetu. Naša je misija učiniti učenje brzog i preciznog tipkanja dostupnim, praktičnim i učinkovitim za sve, bez obzira na razinu iskustva.",
+        "vision_title": "Naša vizija",
+        "vision_text": "Izgraditi koristan alat za poboljšanje brzine, preciznosti i samopouzdanja pri tipkanju kroz moderno i jasno iskustvo usmjereno na redovitu vježbu.",
+        "history_title": "Naša priča",
+        "history_text": "Kiso Desk započeo je kao neovisan projekt za stvaranje modernog iskustva vježbanja tipkanja. Ono što je počelo kao jednostavna ideja danas se razvija u platformu usmjerenu na lekcije, napredak, statistiku i kontinuirano poboljšanje."
+      }
+    },
+    "page": {
+      "metadata": {
+        "title": "Naučite slijepo tipkati",
+        "description": "Poboljšajte brzinu i preciznost interaktivnim lekcijama tipkanja."
+      },
+      "general": {
+        "altNight": "Ilustracija noćne sobe s osobom i mačkom",
+        "altDay": "Ilustracija dnevne sobe s osobom koja programira i mačkom",
+        "interactiveLessons": "Interaktivne lekcije",
+        "interactiveLessonsDescription": "Učite uz strukturirane tečajeve",
+        "freePractice": "Slobodna vježba",
+        "freePracticeDescription": "Vježbajte vlastitim tempom",
+        "dashboardDescription": "Pregledajte svoju statistiku",
+        "rankingDescription": "Natječite se globalno",
+        "title1": "Svladajte",
+        "title2": "slijepo tipkanje",
+        "subtitle1": "Poboljšajte brzinu i preciznost ",
+        "subtitle2": "uz interaktivne lekcije tipkanja",
+        "learn": "Učite",
+        "guidedLessons": "Vođene lekcije",
+        "practiceAction": "Vježbajte",
+        "typingExercises": "Vježbe tipkanja",
+        "track": "Pratite",
+        "progressAndStats": "Napredak i statistika",
+        "compete": "Natječite se",
+        "globalRanking": "Globalna rang-lista"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "metadata": {
+        "title": "Prijava",
+        "description": "Prijavite se u Kiso Desk kako biste nastavili vježbati tipkanje."
+      },
+      "general": {
+        "googleError": "Prijava putem Googlea nije uspjela.",
+        "tooManyAttempts": "Previše pokušaja. Pričekajte jednu minutu.",
+        "requiredFields": "Ispunite sva polja.",
+        "invalidCredentials": "Neispravna adresa e-pošte ili lozinka",
+        "signIn": "Prijava",
+        "continueWithGoogle": "Nastavi s Googleom",
+        "or": "ili",
+        "email": "Adresa e-pošte",
+        "password": "Lozinka",
+        "sending": "Slanje...",
+        "noAccount": "Nemate račun?",
+        "createAccount": "Izradi račun",
+        "forgotPassword": "Zaboravili ste lozinku?"
+      }
+    },
+    "register": {
+      "metadata": {
+        "title": "Izradite račun",
+        "description": "Izradite račun za Kiso Desk i počnite vježbati slijepo tipkanje."
+      },
+      "general": {
+        "acceptLegalRequired": "Za izradu računa morate prihvatiti Uvjete korištenja i Pravila privatnosti",
+        "googleError": "Registracija putem Googlea nije uspjela.",
+        "tooManyAttempts": "Previše pokušaja. Pričekajte jednu minutu.",
+        "unknownError": "Nepoznata pogreška",
+        "createAccount": "Izradi račun",
+        "registerWithGoogle": "Registriraj se putem Googlea",
+        "or": "ili",
+        "name": "Ime",
+        "email": "Adresa e-pošte",
+        "password": "Lozinka",
+        "acceptTermsPrefix": "Prihvaćam",
+        "acceptTermsLink": "Uvjete korištenja",
+        "acceptPrivacyPrefix": "Pročitao/la sam",
+        "acceptPrivacyLink": "Pravila privatnosti",
+        "alreadyHaveAccount": "Već imate račun?",
+        "signIn": "Prijava",
+        "socialFeaturesNotice": "Društvene značajke nisu obvezne, a njihove postavke privatnosti možete podesiti u profilu."
+      }
+    },
+    "resetPassword": {
+      "general": {
+        "invalidLink": "Poveznica ne sadrži valjani token.",
+        "passwordTooShort": "Lozinka mora imati najmanje 8 znakova.",
+        "passwordsDoNotMatch": "Lozinke se ne podudaraju.",
+        "invalidOrExpired": "Poveznica nije valjana, već je iskorištena ili je istekla.",
+        "successTitle": "Lozinka je ažurirana",
+        "successMessage": "Sada se možete prijaviti novom lozinkom.",
+        "backToLogin": "Natrag na prijavu",
+        "title": "Izradite novu lozinku",
+        "instructions": "Odaberite novu lozinku s najmanje 8 znakova.",
+        "newPassword": "Nova lozinka",
+        "confirmPassword": "Potvrdite lozinku",
+        "submit": "Promijeni lozinku",
+        "requestNewLink": "Zatraži novu poveznicu"
+      }
+    }
+  },
+  "profile": {
+    "general": {
+      "title": "Profil",
+      "guestModeMessage": "Prijavite se kako biste vidjeli svoj profil i statistiku.",
+      "signIn": "Prijava",
+      "loadError": "Pogreška pri učitavanju profila",
+      "loadErrorText": "Profil se nije mogao učitati",
+      "nameRequired": "Unesite svoje ime",
+      "name": "Ime",
+      "email": "Adresa e-pošte",
+      "emailReadOnly": "Adresu e-pošte nije moguće urediti iz profila.",
+      "editProfile": "Uredi profil",
+      "changePassword": "Promijeni lozinku",
+      "save": "Spremi",
+      "savingText": "Spremanje...",
+      "cancel": "Odustani",
+      "retry": "Pokušaj ponovno",
+      "savedSuccessfully": "Profil je uspješno ažuriran.",
+      "saveError": "Profil se nije mogao spremiti. Pokušajte ponovno.",
+      "conflictError": "Profil je promijenjen u drugoj kartici. Ponovno učitajte podatke prije ponovnog spremanja.",
+      "required": "Ovo je polje obvezno.",
+      "accountSection": "Račun",
+      "preferencesSection": "Postavke",
+      "securitySection": "Sigurnost",
+      "memberSince": "Član od",
+      "lastLogin": "Posljednja prijava",
+      "lastUpdate": "Posljednje ažuriranje",
+      "interfaceLanguage": "Jezik sučelja",
+      "keyboardLayout": "Raspored tipkovnice",
+      "accessibility": "Pristupačnost",
+      "adminRole": "Administrator",
+      "userRole": "Korisnik",
+      "passwordSectionTitle": "Lozinka",
+      "passwordSectionDescription": "Poveznicu za ponovno postavljanje lozinke možete zatražiti kad god vam zatreba.",
+      "dataControlsTitle": "Vaši podaci i račun",
+      "dataControlsDescription": "Preuzmite kopiju svojih podataka ili trajno izbrišite račun.",
+      "exportTitle": "Preuzmi moje podatke",
+      "exportDescription": "Stvara JSON datoteku s podacima o računu, napretku, vježbama, pogreškama i odnosima. Ne uključuje lozinke ni tokene.",
+      "exportButton": "Preuzmi podatke",
+      "exporting": "Priprema preuzimanja...",
+      "exportSuccess": "Preuzimanje vaših podataka uspješno je započelo.",
+      "exportError": "Izvoz se nije mogao izraditi. Pokušajte ponovno.",
+      "deleteTitle": "Izbriši moj račun",
+      "deleteDescription": "Briše račun i povezane aktivne podatke. Ovu radnju nije moguće poništiti.",
+      "deleteButton": "Izbriši račun",
+      "deleteModalTitle": "Trajno izbriši račun",
+      "deleteModalDescription": "Vaš profil, napredak, sesije, statistika, pogreške, prijateljstva i sesije pristupa bit će uklonjeni iz aktivne baze podataka. Sigurnosne kopije ostaju podložne primjenjivom razdoblju čuvanja.",
+      "deleteConfirmEmailInstruction": "Za potvrdu unesite svoju adresu e-pošte:",
+      "deleteConfirmEmail": "Adresa e-pošte za potvrdu",
+      "deleteCurrentPassword": "Trenutačna lozinka",
+      "deleteConfirmButton": "Trajno izbriši",
+      "deleting": "Brisanje...",
+      "deleteEmailMismatch": "Adresa e-pošte za potvrdu ne podudara se.",
+      "deletePasswordRequired": "Unesite trenutačnu lozinku",
+      "deleteInvalidPassword": "Trenutačna lozinka nije ispravna.",
+      "deleteError": "Račun se nije mogao izbrisati. Pokušajte ponovno.",
+      "socialPrivacyTitle": "Privatnost društvenih značajki",
+      "publicAlias": "Javni nadimak",
+      "publicAliasPlaceholder": "primjer_korisnika",
+      "publicAliasHelp": "Između 3 i 30 znakova: slova, brojevi, crtice i podvlake.",
+      "publicAliasInvalid": "Postavite valjan nadimak prije uključivanja društvenih značajki.",
+      "showInRanking": "Prikaži na rang-listi",
+      "showInRankingHelp": "Prikazuje vaš nadimak i ukupne rezultate. Vaše pravo ime i adresa e-pošte ostaju skriveni",
+      "searchableByAlias": "Dopusti pretraživanje prema nadimku",
+      "searchableByAliasHelp": "Drugi korisnici moći će vas pronaći samo putem vašeg javnog nadimka.",
+      "allowFriendRequests": "Primaj zahtjeve za prijateljstvo",
+      "allowFriendRequestsHelp": "Omogućuje korisnicima koji vas pronađu prema nadimku da vam pošalju zahtjev.",
+      "showPresenceToFriends": "Dijeli prisutnost s prijateljima",
+      "showPresenceToFriendsHelp": "Prikazuje vaš mrežni status i posljednju aktivnost samo prihvaćenim prijateljima.",
+      "shareStatsWithFriends": "Dijeli statistiku s prijateljima",
+      "shareStatsWithFriendsHelp": "Prikazuje objedinjenu statistiku vježbanja samo prihvaćenim prijateljima.",
+      "notConfigured": "Nije postavljeno",
+      "enabled": "Omogućeno",
+      "disabled": "Onemogućeno",
+      "spanish": "Španjolski",
+      "english": "Engleski",
+      "cookieConsentSaveError": "Odluka o kolačićima nije se mogla spremiti. Pokušajte ponovno.",
+      "googleReauthFailed": "Ponovna autentifikacija putem Googlea nije uspjela.",
+      "googleReauthRequired": "Za brisanje računa ponovno se autentificirajte putem Googlea.",
+      "privacyCookiesTitle": "Privatnost i kolačići",
+      "privacyCookiesDescription": "Upravljajte svojom odlukom o neobveznim tehnologijama.",
+      "cookieConsentAccepted": "Prihvatili ste upotrebu neobveznih tehnologija.",
+      "cookieConsentRejected": "Odbili ste upotrebu neobveznih tehnologija.",
+      "cookieConsentUnset": "Još niste naveli svoje postavke za neobvezne tehnologije.",
+      "cookieConsentUpdatedAt": "Ažurirano",
+      "cookieConsentAccept": "Prihvati",
+      "cookieConsentReject": "Odbij",
+      "googleReauthButton": "Ponovno se autentificiraj putem Googlea"
+    }
+  },
+  "friends": {
+    "general": {
+      "title": "Prijatelji",
+      "subtitle": "Pratite mrežni status prijatelja i uspoređujte samo njihovu slobodnu vježbu.",
+      "guestModeMessage": "Prijavite se kako biste vidjeli prijatelje i njihovu aktivnost.",
+      "signIn": "Prijava",
+      "refresh": "Osvježi",
+      "retry": "Pokušaj ponovno",
+      "snapshotTitle": "Nedavni prijatelji",
+      "snapshotDescription": "Pogledajte koliko ih je na mreži i otvorite cijelu ploču.",
+      "openFriends": "Otvori prijatelje",
+      "totalFriends": "Prijatelji",
+      "onlineNow": "sada na mreži",
+      "requests": "Zahtjevi",
+      "searchTitle": "Pretraži korisnike",
+      "searchLabel": "Javni nadimak",
+      "searchPlaceholder": "Unesite najmanje 3 znaka nadimka",
+      "searchButton": "Pretraži",
+      "searchError": "Pretraživanje se nije moglo dovršiti",
+      "noSearchResults": "Nema pronađenih korisnika.",
+      "statusFriends": "Prijatelji",
+      "statusPendingOutgoing": "Zahtjev je poslan",
+      "statusPendingIncoming": "Poslao/la vam je zahtjev",
+      "statusNotConnected": "Niste povezani",
+      "online": "Na mreži",
+      "offline": "Izvan mreže",
+      "lastSeen": "Posljednja aktivnost",
+      "requestedAt": "Zatraženo",
+      "freePractice": "Slobodna vježba",
+      "viewStats": "Prikaži statistiku",
+      "sendRequest": "Dodaj",
+      "accept": "Prihvati",
+      "reject": "Odbij",
+      "remove": "Ukloni",
+      "incomingRequests": "Primljeni zahtjevi",
+      "outgoingRequests": "Poslani zahtjevi",
+      "noIncomingRequests": "Nemate primljenih zahtjeva.",
+      "noOutgoingRequests": "Nemate poslanih zahtjeva.",
+      "myFriends": "Moji prijatelji",
+      "noFriendsYet": "Još niste dodali nijednog prijatelja",
+      "block": "Blokiraj",
+      "unblock": "Deblokiraj",
+      "blockedUsers": "Blokirani korisnici",
+      "blockedUsersDescription": "Ne mogu vas pronaći, slati vam zahtjeve ni pristupiti vašoj prisutnosti ili statistici.",
+      "noBlockedUsers": "Nemate blokiranih korisnika.",
+      "presenceHidden": "Privatna prisutnost",
+      "statsHidden": "Ovaj korisnik ne dijeli svoju statistiku.",
+      "friendNotFound": "Nismo pronašli tog prijatelja.",
+      "backToFriends": "Natrag na prijatelje",
+      "totalSessions": "Sesije",
+      "averageWpm": "Prosječni WPM",
+      "averageAccuracy": "Prosječna preciznost",
+      "bestWpm": "Najbolji WPM",
+      "totalPracticeTime": "Ukupno vrijeme vježbanja",
+      "byLanguage": "Raspodjela prema jeziku"
+    }
+  },
+  "ranking": {
+    "general": {
+      "title": "Rang-lista",
+      "subtitle": "Usporedite svoje rezultate s rezultatima drugih korisnika.",
+      "yourStats": "Vaša statistika",
+      "basedOnLast10": "Na temelju vaših posljednjih 10 vježbi.",
+      "score": "Bodovi",
+      "grossWpm": "Bruto WPM",
+      "accuracy": "Preciznost",
+      "currentRank": "Trenutačni položaj",
+      "level": "Razina",
+      "topPercent": "Top {percent} %",
+      "filterByLanguage": "Filtriraj prema jeziku",
+      "allLanguages": "Svi jezici",
+      "user": "Korisnik",
+      "noData": "Nema podataka za prikaz",
+      "errorFetchingRanking": "Rang-lista se nije mogla učitati. Pokušajte ponovno.",
+      "errorFetchingStats": "Vaša statistika nije se mogla učitati. Pokušajte ponovno.",
+      "retry": "Pokušaj ponovno",
+      "privateProfile": "Vaš se profil ne prikazuje na rang-listi. To možete promijeniti u odjeljku Privatnost društvenih značajki u svom profilu.",
+      "insufficientData": "Dovršite najmanje 5 vježbi kako biste vidjeli svoj položaj na rang-listi.",
+      "noDataYet": "Još nema rezultata za ovaj jezik.",
+      "currentUser": "Vi",
+      "speedAxis": "Brzina (WPM)",
+      "accuracyAxis": "Preciznost (%)",
+      "showing": "Prikazuje se",
+      "of": "od",
+      "previous": "Prethodno",
+      "next": "Sljedeće",
+      "signInToParticipate": "Prijavite se kako biste sudjelovali na ljestvici."
+    },
+    "topPerformers": {
+      "general": {
+        "wpm": "Neto WPM"
+      }
+    },
+    "userStatsCard": {
+      "general": {
+        "levels": {
+          "bronze": "Bronca",
+          "silver": "Srebro",
+          "gold": "Zlato"
+        }
+      }
+    }
+  },
+  "public": {
+    "courses": {
+      "metadata": {
+        "title": "Tečajevi tipkanja | Kiso Desk",
+        "description": "Istražite tečajeve i isprobajte lekcije tipkanja."
+      },
+      "lessons": {
+        "metadata": {
+          "title": "Lekcije tipkanja | Kiso Desk",
+          "description": "Isprobajte lekcije tipkanja bez stvaranja računa."
+        },
+        "lesson": {
+          "metadata": {
+            "title": "Vježbanje lekcije | Kiso Desk",
+            "description": "Vježbajte lekciju tipkanja u Kiso Desku."
+          }
+        }
+      }
+    },
+    "practice": {
+      "metadata": {
+        "title": "Test brzine i točnosti tipkanja | Kiso Desk",
+        "description": "Besplatno vježbajte tipkanje i spremite rezultat na ovaj uređaj."
+      }
+    },
+    "progress": {
+      "metadata": {
+        "title": "Lokalni napredak | Kiso Desk",
+        "description": "Napredak spremljen lokalno u ovom pregledniku."
+      },
+      "general": {
+        "title": "Lokalni napredak",
+        "description": "Ovaj se napredak sprema samo u ovom pregledniku.",
+        "lessonsCompleted": "Dovršene lekcije",
+        "practiceSessions": "Sesije vježbanja",
+        "accuracy": "Preciznost",
+        "signInNotice": "Prijavite se kako biste spremili napredak na svoj račun.",
+        "signIn": "Prijava"
+      }
+    },
+    "ranking": {
+      "metadata": {
+        "title": "Rang-lista tipkanja | Kiso Desk",
+        "description": "Pogledajte javnu rang-listu brzine tipkanja."
+      }
+    }
+  },
+  "components": {
+    "courses": {
+      "courseCard": {
+        "general": {
+          "lessons": "lekcije",
+          "viewCourse": "Prikaži tečaj",
+          "yourProgress": "Vaš napredak",
+          "loginToSeeProgress": "Prijavite se kako biste vidjeli svoj napredak",
+          "lessonsCount": "lekcije"
+        }
+      }
+    },
+    "dashboard": {
+      "errorTrends": {
+        "general": {
+          "title": "Nadzorna ploča napretka",
+          "noData": "Nema podataka za prikaz",
+          "insufficientData": "Nema dovoljno podataka.",
+          "highestErrorRate": "Najviša stopa pogrešaka",
+          "correctAttempts": "{correctAttempts}/{totalAttempts} točno"
+        }
+      },
+      "fingerDistribution": {
+        "general": {
+          "title": "Nadzorna ploča napretka",
+          "noData": "Nema podataka za prikaz",
+          "leftHand": "Lijeva",
+          "rightHand": "Desna",
+          "hand": "{hand} ruka",
+          "pinky": "Mali prst",
+          "ring": "Prstenjak",
+          "middle": "Srednji prst",
+          "index": "Kažiprst",
+          "correctPercentage": "{percentage} % točno",
+          "noCorrectPercentage": "Nema",
+          "errorPercentage": "{percentage} % pogrešaka",
+          "errors": "podataka"
+        }
+      },
+      "practiceCalendar": {
+        "general": {
+          "title": "Nadzorna ploča napretka",
+          "noData": "Nema podataka za prikaz",
+          "noPractice": "Nema vježbanja",
+          "minutesShort": "min",
+          "hoursShort": "h",
+          "noActivity": "Nema aktivnosti",
+          "fiveMinutes": "5 min",
+          "tenMinutes": "10 min",
+          "fifteenMinutes": "15+ minuta"
+        }
+      },
+      "progressChart": {
+        "general": {
+          "noData": "Nema podataka za prikaz"
+        }
+      },
+      "authBanner": {
+        "general": {
+          "message": "Prijavite se kako biste vidjeli svoju statistiku.",
+          "signIn": "Prijava"
+        }
+      },
+      "recommendationsList": {
+        "general": {
+          "title": "Nadzorna ploča napretka",
+          "signIn": "Prijava",
+          "noRecommendations": "Nema dostupnih preporuka."
+        }
+      },
+      "weakKeysPanel": {
+        "general": {
+          "title": "Nadzorna ploča napretka",
+          "overallAccuracy": "Ukupna preciznost",
+          "weakestKey": "Najslabija tipka",
+          "lowestAccuracy": "Najniža preciznost"
+        }
+      }
+    },
+    "friends": {
+      "friendsSnapshot": {
+        "general": {
+          "title": "Prijatelji",
+          "description": "Pogledajte koliko ih je na mreži i otvorite cijelu ploču.",
+          "openFriends": "Otvori prijatelje",
+          "totalFriends": "Prijatelji",
+          "onlineNow": "sada na mreži",
+          "noFriendsYet": "Još niste dodali nijednog prijatelja"
+        }
+      }
+    },
+    "layout": {
+      "footer": {
+        "general": {
+          "product": "Proizvod",
+          "lessons": "Lekcije",
+          "ranking": "Rang-lista",
+          "progress": "Napredak",
+          "project": "Projekt",
+          "aboutKisoDesk": "O Kiso Desku",
+          "github": "GitHub",
+          "legal": "Pravno",
+          "privacyPolicy": "Pravila privatnosti",
+          "termsOfUse": "Uvjeti korištenja",
+          "cookiePolicy": "Pravila o kolačićima",
+          "contact": "Kontakt",
+          "copyright": "© {year} Kiso Desk."
+        }
+      },
+      "header": {
+        "general": {
+          "defaultUser": "Korisnik",
+          "skipToMainContent": "Prijeđi na glavni sadržaj",
+          "courses": "Tečajevi",
+          "userMenu": "Korisnički izbornik",
+          "profile": "Moj profil",
+          "logout": "Odjava",
+          "menuToggle": "Otvori izbornik",
+          "login": "Prijava",
+          "register": "Registracija"
+        }
+      },
+      "sidebar": {
+        "general": {
+          "dashboard": "Nadzorna ploča",
+          "courses": "Tečajevi",
+          "practice": "Vježba",
+          "ranking": "Rang-lista",
+          "friends": "Prijatelji",
+          "profile": "Profil",
+          "menuToggle": "Navigacijski izbornik",
+          "expand": "Proširi",
+          "collapse": "Sažmi"
+        }
+      }
+    },
+    "legal": {
+      "cookieBanner": {
+        "general": {
+          "title": "Pravila o kolačićima i lokalnoj pohrani",
+          "description": "U trenutačnom stanju aplikacije ne koriste se analitički kolačići, oglasne mreže, remarketing ni drugi neobvezni sustavi praćenja.",
+          "privacyNotice": "Pravila privatnosti",
+          "cookiePolicy": "Pravila o kolačićima i lokalnoj pohrani",
+          "accept": "Prihvati",
+          "reject": "Odbij"
+        }
+      }
+    },
+    "lessons": {
+      "handReference": {
+        "general": {
+          "handReference": "Referenca položaja ruku na tipkovnici"
+        }
+      },
+      "keyboardDetectionWizard": {
+        "general": {
+          "title": "Detektor tipkovnice",
+          "subtitle": "Otkrijte raspored tipkovnice pomoću nekoliko fizičkih tipki i koristite ga u cijeloj aplikaciji.",
+          "modalTitle": "Otkrij raspored",
+          "currentLayout": "Trenutačni raspored",
+          "start": "Pokreni otkrivanje",
+          "progress": "Korak {current} od najviše {total}",
+          "progressHint": "Može završiti ranije",
+          "progressLabel": "Napredak otkrivanja",
+          "back": "Natrag",
+          "cancel": "Odustani",
+          "close": "Zatvori",
+          "intro": {
+            "title": "Otkrijmo vašu tipkovnicu",
+            "help": "Trebate pritisnuti samo između 1 i 5 tipki na fizičkoj tipkovnici."
+          },
+          "capture": {
+            "focus": "Kliknite ovdje i pritisnite naznačenu tipku",
+            "instruction": "Tipka koju pritisnete koristit će se samo za otkrivanje rasporeda.",
+            "captured": "Otkrivena tipka: {key}",
+            "deadKey": "mrtva tipka"
+          },
+          "questions": {
+            "rightOfL": {
+              "title": "Pritisnite tipku neposredno desno od L",
+              "help": "Ne koristite Shift. Vodite se fizičkim položajem tipke, čak i ako je na njoj otisnut drugi simbol."
+            },
+            "leftOfBackspace": {
+              "title": "Pritisnite tipku neposredno lijevo od Backspacea",
+              "help": "Ne koristite Shift. Upotrijebite tipku u retku s brojevima."
+            },
+            "shiftDigit2": {
+              "title": "Držite Shift i pritisnite tipku 2",
+              "help": "Upotrijebite 2 u retku s brojevima, a ne na numeričkoj tipkovnici."
+            },
+            "sixthTopRow": {
+              "title": "Pritisnite šestu slovnu tipku u gornjem retku",
+              "help": "Brojite od prve slovne tipke nakon Taba. Ne koristite Shift."
+            },
+            "firstTopRow": {
+              "title": "Pritisnite prvu slovnu tipku nakon Taba",
+              "help": "Vodite se njezinim fizičkim položajem. Ne koristite Shift."
+            },
+            "quoteKey": {
+              "title": "Pritisnite tipku s navodnikom",
+              "help": "Ne koristite Shift. Vodite se fizičkim položajem tipke."
+            },
+            "shiftDigit3": {
+              "title": "Držite Shift i pritisnite tipku 3",
+              "help": "Upotrijebite 3 u retku s brojevima, a ne na numeričkoj tipkovnici."
+            }
+          },
+          "errors": {
+            "composition": "Raspored nije moguće prepoznati dok tipkovnica sastavlja tekst.",
+            "unidentified": "Tu tipku nije moguće prepoznati. Pokušajte ponovno.",
+            "alt-graph": "Ne koristite AltGr pri pritiskanju ove tipke.",
+            "modified": "Ne koristite modifikacijske tipke pri pritiskanju ove tipke.",
+            "wrongKey": "To je bila druga tipka. Pritisnite tipku na gore naznačenom položaju.",
+            "shiftRequired": "Držite Shift dok pritišćete tu tipku.",
+            "shiftNotRequired": "Pritisnite tu tipku bez upotrebe Shifta.",
+            "saveFailed": "Raspored se nije mogao spremiti. Provjerite vezu i pokušajte ponovno."
+          },
+          "result": {
+            "detectedTitle": "Raspored je otkriven",
+            "confidence": "Pouzdanost otkrivanja: {confidence}",
+            "useDetected": "Koristi ovaj raspored",
+            "unidentifiedTitle": "Nismo uspjeli prepoznati vaš raspored",
+            "unidentifiedHelp": "Ručno odaberite raspored koji odgovara vašoj tipkovnici.",
+            "fallbackTitle": "Raspored nije bilo moguće otkriti s dovoljnom pouzdanošću",
+            "fallbackHelp": "Odaberite jedno od najsličnijih podudaranja ili pregledajte sve dostupne rasporede.",
+            "chooseManually": "Odaberi ručno",
+            "retryDetection": "Ponovi otkrivanje"
+          },
+          "manual": {
+            "title": "Odaberite raspored",
+            "help": "Odaberite raspored koji odgovara tipkama na vašoj tipkovnici."
+          },
+          "saved": {
+            "title": "Raspored je spremljen",
+            "description": "{layout} će se sada koristiti u cijeloj aplikaciji.",
+            "continueToCourses": "Nastavi na tečajeve",
+            "returnToPractice": "Vrati se na vježbu"
+          },
+          "physicalFamily": {
+            "title": "Oblik vaše tipkovnice",
+            "subtitle": "Prepoznajte oblik tipki za ispravan prikaz tipkovnice.",
+            "enterQuestion": "Kakvog je oblika tipka Enter?",
+            "enterHorizontal": "Vodoravni Enter",
+            "enterIso": "Standardni ISO Enter",
+            "enterBigAss": "ISO BA Enter",
+            "abntQuestion": "Koliko je tipki između / i desnog Shifta?",
+            "eastAsianQuestion": "Koliko je tipki između 0 i Backspacea?",
+            "eastAsianCountQuestion": "Koliko je tipki između razmaknice i desnog Alta?",
+            "complete": "Oblik tipkovnice prepoznat: {family}"
+          }
+        }
+      },
+      "keyboard": {
+        "general": {
+          "virtualKeyboard": "Virtualna tipkovnica"
+        }
+      },
+      "lessonCard": {
+        "general": {
+          "ariaLabel": "Idi na lekciju",
+          "wpm": "WPM",
+          "score": "Bodovi",
+          "accuracy": "Preciznost",
+          "time": "Vrijeme",
+          "placeholder": "—",
+          "secondsShort": "s",
+          "minutesShort": "min",
+          "minutesCompact": "m",
+          "approxPrefix": "~",
+          "rankLabel": "Rang",
+          "gradeLabel": "Ocjena",
+          "completed": "Dovršeno",
+          "explanatoryBadge": "Objašnjavajuća lekcija",
+          "explanatoryLesson": "Objašnjavajuća lekcija",
+          "objectiveAccuracy": "Cilj: {minAccuracy} % preciznosti",
+          "mastered": "Svladano",
+          "inProgress": "U tijeku",
+          "lessonOrderRecommendationTitle": "Slijedite preporučeni redoslijed",
+          "lessonOrderRecommendationDescription": "Preporučujemo da slijedite zadani redoslijed lekcija kako biste postupno napredovali.",
+          "lessonOrderRecommendationBack": "Natrag",
+          "lessonOrderRecommendationContinue": "Nastavi",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Početnik",
+            "scout": "Izviđač",
+            "ranger": "Rendžer",
+            "veteran": "Veteran",
+            "elite": "Elita",
+            "legend": "Legenda"
+          },
+          "gradesDescriptions": {
+            "novice": "Osnovna razina",
+            "scout": "Početni napredak",
+            "ranger": "Dobra ovladanost",
+            "veteran": "Visoka razina",
+            "elite": "Stručnjak",
+            "legend": "Najviša razina"
+          }
+        }
+      },
+      "personalizedLessonCard": {
+        "general": {
+          "title": "Preporučena vježba",
+          "noData": "Nema podataka za prikaz",
+          "error": "Vaše preporuke nisu se mogle učitati. Pokušajte ponovno.",
+          "retry": "Pokušaj ponovno",
+          "insufficientData": "Vježbajte više kako biste prepoznali tipke koje trebate ojačati.",
+          "noCourse": "Još nema dostupnog tečaja tipkanja za ovaj jezik.",
+          "noLessons": "Ovaj tečaj još nema dostupnih lekcija.",
+          "description": "Na temelju otkrivenih slabih točaka.",
+          "weakKeys": "Tipke s nižom preciznošću u vašim nedavnim sesijama.",
+          "noMatches": "U ovom tečaju još nema lekcija povezanih s vašim slabim tipkama.",
+          "worksKeys": "Vježbajte: {keys}"
+        }
+      },
+      "results": {
+        "general": {
+          "saveWarning": "Rezultati se nisu mogli spremiti",
+          "wpm": "WPM",
+          "score": "Bodovi",
+          "accuracy": "Preciznost",
+          "correctChars": "Točni znakovi",
+          "lowResultTitle": "Vaš je rezultat malo nizak",
+          "lowResultMessage": "Razmislite o pohađanju tečaja tipkanja kako biste nastavili napredovati.",
+          "lowResultCourseLink": "Idi na tečaj tipkanja",
+          "accuracyFocusTitle": "Dajte prednost preciznosti",
+          "accuracyFocusMessage": "Dobro napredujete. Prije povećanja brzine pokušajte dosegnuti barem 95 % preciznosti.",
+          "masteredResult": "Lekcija je svladana",
+          "masteredMessage": "Ispunili ste zahtjev preciznosti i možete nastaviti.",
+          "needsReview": "Potrebno je ponavljanje",
+          "reviewMessage": "Cilj: najmanje {minAccuracy} % preciznosti. Usporite i ponovite blok.",
+          "rankLabel": "Rang",
+          "gradeLabel": "Ocjena",
+          "retryAriaLabel": "Ponovi lekciju",
+          "retry": "Pokušaj ponovno",
+          "next": "Sljedeće",
+          "newText": "Novi tekst",
+          "backToCourses": "Natrag na tečajeve",
+          "backToDashboard": "Natrag na nadzornu ploču",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Početnik",
+            "scout": "Izviđač",
+            "ranger": "Rendžer",
+            "veteran": "Veteran",
+            "elite": "Elita",
+            "legend": "Legenda"
+          },
+          "gradesDescriptions": {
+            "novice": "Osnovna razina",
+            "scout": "Početni napredak",
+            "ranger": "Dobra ovladanost",
+            "veteran": "Visoka razina",
+            "elite": "Stručnjak",
+            "legend": "Najviša razina"
+          }
+        }
+      },
+      "typingArea": {
+        "general": {
+          "wpm": "WPM",
+          "score": "Bodovi",
+          "accuracy": "Preciznost",
+          "characters": "Znakovi",
+          "backspace": "Backspace",
+          "backspaceEnabled": "Backspace je omogućen",
+          "backspaceDisabled": "Backspace je onemogućen",
+          "font": "Font",
+          "size": "Veličina",
+          "pixels": "px",
+          "fontAndSize": "Font i veličina",
+          "textToType": "Tekst za upisivanje",
+          "inactivityPaused": "Pauzirano zbog neaktivnosti",
+          "clickToResume": "Kliknite za nastavak",
+          "congratulations": "Čestitamo! Brzina: {wpm} WPM, preciznost: {accuracy} %",
+          "detectKeyboard": "Otkrij tipkovnicu",
+          "keyboardConfigTitle": "Postavke tipkovnice",
+          "keyboardPreferenceMissing": "Nije spremljena nijedna postavka tipkovnice. Možete je promijeniti u postavkama tipkovnice.",
+          "recommendedKeyboardLayout": "Preporučeni raspored tipkovnice: {layout}",
+          "useRecommendedKeyboardLayout": "Promijeni raspored",
+          "detectionHelp": "Automatski prepoznajte trenutačni raspored i koristite ga tijekom cijele vježbe.",
+          "identifyKeyboardShape": "Prepoznaj oblik",
+          "keyboardShapeHeading": "Oblik vaše tipkovnice",
+          "logicalDistributionHeading": "Logički raspored",
+          "logicalDistributionHint": "znakovi tipkovnice"
+        }
+      }
+    },
+    "ui": {
+      "themeToggle": {
+        "general": {
+          "switchToLight": "Tema",
+          "switchToDark": "Tema"
+        }
+      }
+    },
+    "i18n": {
+      "languageSwitcher": {
+        "general": {
+          "interfaceLanguage": "Jezik sučelja"
+        }
+      }
+    }
+  },
+  "general": {
+    "Accessibility": {
+      "button": "Gumb",
+      "expandMenu": "Proširi izbornik",
+      "collapseMenu": "Sažmi izbornik"
+    },
+    "Common": {
+      "loading": "Učitavanje...",
+      "retry": "Pokušaj ponovno",
+      "close": "Zatvori"
+    }
+  },
+  "lessonid": {
+    "general": {
+      "lockedLesson": "Zaključana lekcija",
+      "lockedLessonDescription": "Svladajte prethodnu aktivnost prije nastavka.",
+      "backToLessons": "Natrag na lekcije",
+      "lessonNotFound": "Lekcija nije pronađena",
+      "typeTheTextBelow": "Upišite tekst u nastavku",
+      "hideKeyboard": "Sakrij tipkovnicu",
+      "showKeyboard": "Prikaži tipkovnicu",
+      "exitPractice": "Izađi iz vježbe",
+      "saveError": "Pogreška pri spremanju rezultata",
+      "saveErrorMessage": "Vaši se rezultati prikazuju na zaslonu, ali nisu spremljeni u vaš napredak. Pokušajte ponoviti lekciju kada veza bude dostupna.",
+      "audioGuide": "Poslušajte objašnjenje",
+      "audioUnsupported": "Vaš preglednik ne može reproducirati ovaj zvučni zapis.",
+      "experimentalGreetings": {
+        "lessonPosition": "Lekcija {current} od {total}",
+        "supportContent": "Popratni sadržaj",
+        "englishColumn": "Engleski",
+        "spanishColumn": "Španjolski",
+        "continue": "Nastavi",
+        "dialogue": "Dijalog",
+        "selectEnglishFirst": "Najprije odaberite opciju na engleskom",
+        "tryAgain": "Pokušajte ponovno",
+        "correct": "Točno",
+        "complete": "Aktivnost završena"
+      },
+      "manualAudioPlay": "Poslušaj",
+      "manualAudioReplay": "Poslušaj ponovno",
+      "lessonAudio": "Zvuk lekcije",
+      "interactions": {
+        "dictationPrompt": "Napišite što čujete",
+        "unitProgress": "Napredak jedinice",
+        "stepProgress": "Korak {step} od 4 {current}",
+        "currentStep": "trenutačni",
+        "reviewTask": "Zadatak {current} od 3",
+        "completedPairs": "Dovršeni parovi",
+        "availableOptions": "Dostupne opcije",
+        "options": "Opcije",
+        "answer": "Odgovor",
+        "check": "Provjeri",
+        "undo": "Poništi",
+        "correct": "Točno",
+        "incorrect": "Još nije. Točan odgovor: {answer} {detail}",
+        "spellingFeedback": "Pravopis: riječ ima dva slova ili na početku",
+        "sentenceFeedback": "Početno veliko slovo i interpunkcija: pregledajte svaku rečenicu",
+        "dictationFeedback": "Diktat: poslušajte svaku riječ i zadržite interpunkciju",
+        "correctAnswer": "Točan odgovor",
+        "nextTask": "Sljedeći zadatak"
+      }
+    }
+  },
+  "courses": {
+    "general": {
+      "title": "Tečajevi",
+      "subtitle": "Istražite naše tečajeve i poboljšajte slijepo tipkanje",
+      "searchPlaceholder": "Pretraži tečajeve...",
+      "allLevels": "Sve razine",
+      "beginner": "Početna",
+      "intermediate": "Srednja",
+      "advanced": "Napredna",
+      "guestModeMessage": "Prijavite se kako biste spremili napredak",
+      "signIn": "Prijava",
+      "retry": "Pokušaj ponovno",
+      "noCourseYetTitle": "Još nema dostupnih tečajeva",
+      "noCourseYetDescription": "Pripremamo tečajeve za ovaj jezik. Provjerite ponovno uskoro.",
+      "noCourses": "Nema pronađenih tečajeva",
+      "all": "Svi tečajevi",
+      "completed": "Dovršeni",
+      "notCompleted": "Nedovršeni"
+    }
+  },
+  "lessons": {
+    "general": {
+      "title": "Lekcije",
+      "subtitle": "Vježbajte uz lekcije prilagođene vašoj razini",
+      "searchPlaceholder": "Pretraži lekcije...",
+      "allDifficulties": "Sve težine",
+      "beginner": "Početna",
+      "intermediate": "Srednja",
+      "advanced": "Napredna",
+      "guestModeMessage": "Prijavite se kako biste spremili napredak",
+      "signIn": "Prijava",
+      "retry": "Pokušaj ponovno",
+      "errorTitle": "Pogreška pri učitavanju lekcija",
+      "noLessonsTitle": "Nema dostupnih lekcija",
+      "noLessonsDescription": "Ovaj tečaj još nema lekcija. Provjerite ponovno kasnije ili se obratite administratoru.",
+      "noCompletedLessonsTitle": "Još niste dovršili nijednu lekciju",
+      "noCompletedLessonsDescription": "Dovršite lekciju kako biste je vidjeli na ovom popisu.",
+      "noPendingLessonsTitle": "Nemate lekcija na čekanju",
+      "noPendingLessonsDescription": "Sve lekcije u ovom tečaju označene su kao dovršene.",
+      "all": "Sve lekcije",
+      "completed": "Dovršene",
+      "notCompleted": "Nedovršene",
+      "moduleLabel": "Modul {order}",
+      "masteredCount": "{mastered}/{total} svladano"
+    }
+  },
+  "dashboard": {
+    "general": {
+      "title": "Nadzorna ploča napretka",
+      "subtitle": "Pregledajte svoj napredak i statistiku tipkanja",
+      "averageWpm": "Prosječni WPM",
+      "wordsPerMinute": "Riječi u minuti",
+      "averageAccuracy": "Prosječna preciznost",
+      "accuracy": "Preciznost",
+      "totalPracticeTime": "Ukupno vrijeme vježbanja",
+      "thisWeek": "Ovaj tjedan",
+      "weeklyWpmProgress": "Tjedni napredak WPM-a",
+      "monthlyWpmProgress": "Mjesečni napredak WPM-a",
+      "noData": "Nema dostupnih podataka",
+      "bestWpm": "Najbolji WPM",
+      "grossWpm": "Bruto WPM",
+      "record": "Rekord",
+      "streak": "Niz",
+      "days": "dana",
+      "consecutivePractice": "Uzastopno vježbanje",
+      "totalKeystrokes": "Ukupan broj pritisaka tipki",
+      "typed": "Upisano",
+      "recommendations": "Preporuke za vas",
+      "recommendation1": "Vježbajte lekcije srednje razine kako biste poboljšali brzinu.",
+      "recommendation2": "Pokušajte održavati preciznost iznad 95 %.",
+      "recommendation3": "Dovršite barem jednu lekciju dnevno kako biste održali niz.",
+      "retry": "Pokušaj ponovno",
+      "error": "Pogreška",
+      "completedText": "% dovršeno",
+      "completedTitle": "Lekcije / Tečajevi",
+      "lessons": "lekcije",
+      "courses": "tečajevi",
+      "completedLessons": "Dovršene lekcije",
+      "completedCourses": "Dovršeni tečajevi",
+      "guestModeMessage": "Prijavite se kako biste vidjeli svoj napredak",
+      "signIn": "Prijava",
+      "recommendationsGuest": "Prijavite se kako biste primali personalizirane preporuke na temelju svog napretka.",
+      "weakKeys": "Slabe tipke",
+      "errorTrends": "Trendovi pogrešaka",
+      "fingerDistribution": "Raspodjela po prstima",
+      "personalizedPractice": "Personalizirana vježba",
+      "personalizedPracticeDesc": "Dobijte personalizirane lekcije na temelju svojih slabih točaka.",
+      "signInToSee": "Prijavite se kako biste vidjeli svoju statistiku",
+      "noDataYet": "Dovršite lekcije kako biste vidjeli svoje slabe točke"
+    }
+  },
+  "practice": {
+    "general": {
+      "title": "Test tipkanja",
+      "subtitle": "Poboljšajte brzinu i preciznost prilagođenim tekstovima",
+      "freeTitle": "Test brzine tipkanja",
+      "freeSubtitle": "Isprobajte tipkanje kratkog teksta i otkrijte svoju brzinu i točnost.",
+      "adaptiveTitle": "Vježbajte tipke na kojima najviše griješite",
+      "adaptiveSubtitle": "Usredotočite se na znakove koji vam stvaraju najviše pogrešaka i tipkajte točnije.",
+      "session": "Sesija vježbanja",
+      "newText": "Novi tekst",
+      "perKeyStats": "Statistika po tipki (uskoro)",
+      "loadingText": "Učitavanje teksta...",
+      "errorLoadingText": "Pogreška pri učitavanju teksta.",
+      "errorTitle": "Tekst se nije mogao učitati",
+      "retry": "Pokušaj ponovno",
+      "saving": "Spremanje rezultata...",
+      "errorSavingResult": "Pogreška pri spremanju rezultata.",
+      "saveWarning": "Rezultati se nisu mogli spremiti",
+      "backToDashboard": "Natrag na nadzornu ploču",
+      "guestSavePrompt": "Prijavite se kako biste spremili napredak i nastavili se poboljšavati.",
+      "signInToSave": "Prijava",
+      "guestPlaceholder": "—",
+      "guestAdaptiveReason": "Na temelju pogrešaka spremljenih na ovom uređaju",
+      "adaptiveKeys": "Tipke: {keys}",
+      "adaptiveBigrams": "Bigrami: {bigrams}",
+      "modeRandom": "Slobodni tekst",
+      "modeWords": "Preporučena vježba",
+      "modeText": "Prilagodljivi tekst",
+      "adaptivePracticeKeys": "Tipke za vježbu"
+    }
+  },
+  "notFound": {
+    "general": {
+      "title": "Stranica nije pronađena",
+      "description": "Žao nam je, stranica koju tražite ne postoji ili je premještena.",
+      "backHome": "Natrag na početnu stranicu",
+      "dashboard": "Nadzorna ploča",
+      "lessons": "Lekcije",
+      "ranking": "Rang-lista"
+    }
+  }
+}

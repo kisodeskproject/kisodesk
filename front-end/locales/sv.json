@@ -1,0 +1,1278 @@
+{
+  "marketing": {
+    "cookies": {
+      "metadata": {
+        "title": "Policy för cookies och lokal lagring",
+        "description": "Information om cookies och lokal lagring i Kiso Desk."
+      },
+      "general": {
+        "title": "Policy för cookies och lokal lagring",
+        "contentsLabel": "Innehåll",
+        "relatedLabel": "Relaterade dokument",
+        "relatedPrivacy": "Integritetspolicy",
+        "relatedTerms": "Användarvillkor"
+      },
+      "definition": {
+        "title": "1. Vad är cookies och lokal lagring?",
+        "paragraph1": "Den här applikationen använder cookies och webbläsarens lokala lagring för nödvändiga tjänstefunktioner och för att komma ihåg vissa användarinställningar.",
+        "paragraph2": "Cookies är små textfiler som webbplatser lagrar i webbläsaren. De används för att komma ihåg information om besöket, till exempel inställningar eller autentiseringsstatus.",
+        "paragraph3": "Lokal lagring, även kallad localStorage, är en webbläsarfunktion som gör det möjligt att lagra data direkt på enheten. Till skillnad från cookies skickas dessa data inte automatiskt till servern vid varje begäran och ligger kvar på enheten tills de raderas av användaren, webbläsaren eller enhetens inställningar."
+      },
+      "data": {
+        "title": "2. Personuppgifter och tekniska data som är kopplade till dessa tekniker",
+        "paragraph1": "För att tillhandahålla tjänsten för skrivträning kan applikationen behandla personuppgifter eller tekniska data som är kopplade till användningen av cookies, lokal lagring och nätverksbegäranden.",
+        "paragraph2": "Mätvärden som är kopplade till registrerade konton lagras av tjänsten enligt beskrivningen i Integritetspolicyn. I gästläge kan delar av framstegen och övningshistoriken lagras lokalt i webbläsaren.",
+        "paragraph3": "Lokal lagring kan innehålla gränssnittsinställningar, valet avseende icke nödvändiga tekniker och gästframsteg. Den innehåller inte lösenord eller autentiseringstoken direkt.",
+        "item1": "Sessionsidentifierare: lagras i cookies access_token och refresh_token, som gör det möjligt att känna igen kontot, autentisera begäranden och hålla sessionen aktiv.",
+        "item2": "IP-adress och tekniska anslutningsdata: överförs vid kommunikation med servern och vid inläsning av externa resurser, till exempel flaggbilder från flagcdn.com.",
+        "item3": "Inställningar och lokala data: kan omfatta tema, tangentbordslayout, typsnitt, textstorlek, tangentbordets synlighet, valet avseende icke nödvändiga tekniker, gästframsteg och lokal historik över använda texter."
+      },
+      "necessaryCookies": {
+        "title": "3. Strikt nödvändiga cookies (autentisering)",
+        "paragraph1": "Applikationen använder strikt nödvändiga cookies för att möjliggöra inloggning, behålla användarens identitet under navigering, förnya sessionen och skydda autentiserade begäranden.",
+        "note": "Dessa cookies används inte för reklam, remarketing eller kommersiell profilering.",
+        "tableHeaderName": "Namn",
+        "tableHeaderPurpose": "Syfte",
+        "tableHeaderDuration": "Maximal varaktighet",
+        "tableHeaderConfiguration": "Teknisk konfiguration",
+        "accessTokenName": "access_token",
+        "accessTokenPurpose": "Autentisera begäranden och hålla åtkomstsessionen aktiv.",
+        "accessTokenDuration": "2 timmar",
+        "accessTokenConfiguration": "HttpOnly, SameSite=Lax och Secure i produktionsmiljö.",
+        "refreshTokenName": "refresh_token",
+        "refreshTokenPurpose": "Förnya sessionen säkert och göra det möjligt att återkalla den.",
+        "refreshTokenDuration": "7 dagar",
+        "refreshTokenConfiguration": "HttpOnly, SameSite=Lax och Secure i produktionsmiljö."
+      },
+      "localStorage": {
+        "title": "4. Lokal lagring (användarinställningar)",
+        "paragraph1": "För att anpassa upplevelsen och behålla vissa inställningar lagrar applikationen information i webbläsaren.",
+        "paragraph2": "Dessa data ligger kvar på enheten och skickas inte automatiskt till servern vid varje begäran, även om applikationen kan läsa dem för att tillämpa inställningar eller återställa lokala framsteg.",
+        "tableHeaderKey": "Nyckel",
+        "tableHeaderPurpose": "Syfte",
+        "tableHeaderDuration": "Varaktighet",
+        "themeKey": "theme",
+        "themePurpose": "Komma ihåg valet mellan ljust och mörkt läge.",
+        "themeDuration": "Beständig tills den raderas manuellt eller skrivs över.",
+        "keyboardLayoutKey": "typing-keyboard-layout",
+        "keyboardLayoutPurpose": "Komma ihåg den tangentbordslayout som valts för övningarna.",
+        "keyboardLayoutDuration": "Beständig tills den raderas eller skrivs över.",
+        "typingFontKey": "typing-font",
+        "typingFontPurpose": "Komma ihåg det typsnitt som används i övningarna.",
+        "typingFontDuration": "Beständig tills den raderas eller skrivs över.",
+        "typingFontSizeKey": "typing-font-size",
+        "typingFontSizePurpose": "Komma ihåg den textstorlek som har valts för övningarna.",
+        "typingFontSizeDuration": "Beständig tills den raderas eller skrivs över."
+      },
+      "providers": {
+        "title": "5. Externa leverantörer, personuppgiftsbiträden och möjliga överföringar",
+        "paragraph1": "Applikationen använder eller kan använda externa leverantörer för nödvändiga tjänstefunktioner, såsom infrastruktur, autentisering, säkerhet och leverans av resurser. Integrationer som har förberetts för framtida funktioner betraktas inte som aktiva förrän de har konfigurerats och tagits i bruk.",
+        "paragraph2": "När en leverantör behandlar personuppgifter för Kiso Desks räkning och enligt dess instruktioner agerar leverantören som personuppgiftsbiträde eller tjänsteleverantör, beroende på vad som är tillämpligt.",
+        "paragraph3": "Kiso Desk använder infrastruktur från Google Cloud Platform (GCP) för att lagra och driva tekniska delar av tjänsten. Data som behandlas i denna infrastruktur används för att upprätthålla konton, bevara framsteg och driva plattformen.",
+        "paragraph4": "Applikationen gör det möjligt att logga in med Google. I detta flöde tar Kiso Desk endast emot de auktoriserade data som behövs för att autentisera kontot, såsom Google-identifierare, e-postadress, verifieringsstatus och profilnamn.",
+        "paragraph5": "Applikationen använder flagcdn.com för att läsa in flaggbilder. När dessa resurser begärs kan leverantören ta emot sedvanliga tekniska data, såsom IP-adress, användaragent, datum, tid och hänvisande URL.",
+        "paragraph6": "När data lämnas ut eller överförs till en tredje part som inte är personuppgiftsbiträde sker behandlingen i enlighet med tillämplig lag, inklusive när det är nödvändigt för att tillhandahålla tjänsten, upprätthålla relationen med användaren, skydda rättigheter eller fullgöra rättsliga skyldigheter.",
+        "paragraph7": "Cloudflare Turnstile kan användas villkorligt för att förebygga bottar och missbruk, vilket kan innebära att Cloudflare behandlar tekniska anslutningsdata. Återställning via e-post är förberedd men inte aktiv förrän en e-postleverantör har konfigurerats. För närvarande används inga analyscookies, annonsnätverk, remarketinglösningar eller andra icke nödvändiga spårningssystem."
+      },
+      "legalBasis": {
+        "title": "6. Rättslig grund och integritetsprinciper",
+        "paragraph1": "Behandlingen som är kopplad till strikt nödvändiga cookies sker för att autentisera användare, hålla sessioner aktiva, validera begäranden och skydda kontonas funktion.",
+        "paragraph2": "Kiso Desk behandlar data i enlighet med tillämplig lag. När information är nödvändig för att tillhandahålla den begärda tjänsten eller fullgöra skyldigheter som följer av relationen med användaren begärs inget ytterligare samtycke, om inte tillämplig lag kräver det.",
+        "paragraph3": "Kiso Desk använder också internationellt erkända integritetsprinciper som referens, däribland transparens, angivna ändamål, uppgiftsminimering, riktighet, begränsad lagring, säkerhet, användarkontroll och ansvarsskyldighet. Denna hänvisning innebär inte certifiering eller ett påstående om fullständig efterlevnad av utländsk lagstiftning som inte är tillämplig.",
+        "paragraph4": "Om icke nödvändiga tekniker, såsom analys, reklam, remarketing eller andra spårningsmekanismer, införs i framtiden kommer denna Policy att uppdateras och motsvarande samtycke att begäras före aktivering när det är nödvändigt."
+      },
+      "arco": {
+        "title": "7. Rättigheter avseende data och återkallande av samtycke",
+        "paragraph1": "Du kan begära tillgång till, rättelse eller radering av personuppgifter som är kopplade till ditt konto, invända mot behandlingen och återkalla samtycke för behandlingsaktiviteter som kräver det, när det är tillämpligt.",
+        "paragraph2": "För att utöva dessa rättigheter kan du skicka en begäran till: kisodesk.project@gmail.com.",
+        "paragraph3": "Den personuppgiftsansvarige meddelar sitt beslut inom den tidsfrist som följer av tillämplig lag och genomför, när begäran godkänns, motsvarande åtgärder inom tillämplig tidsfrist.",
+        "paragraph4": "Dessa tidsfrister kan förlängas när tillämplig lag tillåter det och omständigheterna motiverar det.",
+        "paragraph5": "Återkallande av samtycke påverkar inte behandling som redan har utförts eller behandling som måste fortsätta på grund av en rättslig skyldighet, en pågående relation, säkerhet, försvar av rättigheter eller nödvändig lagring.",
+        "item1": "Det alias eller den kontoidentifierare som används i applikationen, om tillämpligt.",
+        "item2": "Den e-postadress som är kopplad till kontot.",
+        "item3": "Ett sätt att ta emot meddelanden.",
+        "item4": "Rimlig information för att verifiera din identitet eller att du innehar kontot, helst genom den kopplade e-postadressen. Om du agerar genom ett ombud ska dokumentation som styrker ombudets behörighet lämnas.",
+        "item5": "Den rättighet du vill utöva: tillgång, rättelse, radering, invändning eller återkallande av samtycke.",
+        "item6": "En tydlig och exakt beskrivning av de personuppgifter som begäran gäller, såsom e-postadress, alias, inställningar eller skrivmätvärden som är kopplade till kontot.",
+        "item7": "Vid en begäran om rättelse: de korrekta uppgifterna och, när det behövs, underlag som stöder den begärda rättelsen.",
+        "item8": "Annan information som rimligen behövs för att identifiera kontot och hantera begäran korrekt."
+      },
+      "management": {
+        "title": "8. Så hanterar och raderar du dessa data",
+        "paragraph1": "Du kan hantera cookies, lokal lagring och ditt val avseende icke nödvändiga tekniker.",
+        "item1": "Logga ut: när du avslutar sessionen raderas autentiseringscookies access_token och refresh_token från webbläsaren.",
+        "item2": "Integritets- och cookieinställningar: du kan granska och ändra ditt val avseende icke nödvändiga tekniker i profilen. Du kan också radera cookies och lokala data via webbläsarens inställningar.",
+        "item3": "Varning: blockering av strikt nödvändiga cookies kan förhindra inloggning eller användning av funktioner som kräver autentisering."
+      },
+      "changes": {
+        "title": "9. Ändringar av denna Policy",
+        "paragraph1": "Applikationen kan uppdatera denna Policy för att återspegla rättsliga, tekniska eller operativa förändringar. Uppdateringar publiceras på denna sida tillsammans med motsvarande datum för senaste uppdatering.",
+        "paragraph2": "När ändringarna är betydande kommuniceras de genom ett synligt meddelande i applikationen, ett cookiemeddelande eller någon annan tillgänglig elektronisk kanal."
+      },
+      "contact": {
+        "title": "10. Kontakt",
+        "paragraph1": "Om du har frågor, vill utöva dina rättigheter eller behöver information om behandlingen av data kan du skriva till kisodesk.project@gmail.com.",
+        "paragraph2": "För information om den personuppgiftsansvariges identitet och kontaktuppgifter, allmänna ändamål, leverantörer, lagringstider och andra behandlingsdetaljer, se applikationens Integritetspolicy."
+      }
+    },
+    "privacy": {
+      "metadata": {
+        "title": "Integritetspolicy",
+        "description": "Information om hur Kiso Desk behandlar personuppgifter."
+      },
+      "general": {
+        "eyebrow": "Juridisk information",
+        "title": "Integritetsmeddelande",
+        "description": "Information om behandling av personuppgifter enligt tillämplig lag och internationellt erkända integritetsprinciper.",
+        "introduction": "Detta meddelande förklarar vilka uppgifter Kiso Desk behandlar, hur de används, med vem de kan delas och vilka kontrollmöjligheter användarna har. Hänvisningen till internationella principer innebär inte certifiering eller ett påstående om fullständig efterlevnad av utländsk lagstiftning som inte är tillämplig.",
+        "lastUpdatedLabel": "Senast uppdaterad",
+        "lastUpdated": "23 juli 2026",
+        "contentsLabel": "Innehåll",
+        "relatedLabel": "Relaterade dokument",
+        "relatedTerms": "Användarvillkor",
+        "relatedCookies": "Cookiepolicy"
+      },
+      "data": {
+        "title": "1. Data som vi behandlar",
+        "sensitiveNote": "Kiso Desk begär inte känsliga personuppgifter. Tillgänglighets- eller gränssnittsinställningar används endast som funktionella inställningar i applikationen och är inte avsedda att samla in information om hälsa, funktionsnedsättning, etniskt ursprung, religion, politiska åsikter, sexuell läggning eller andra känsliga uppgifter.",
+        "item1": "Konto: e-postadress, profilnamn när det är tillämpligt, alias som användaren väljer, roll, språk, tangentbordslayout och tillgänglighetsinställningar.",
+        "item2": "Autentisering: lösenord som lagras som hash när kontot skapas med lösenord, eller de uppgifter som krävs för att logga in med Google när den metoden används.",
+        "item3": "Lärande: kurser, lektioner, framsteg, hastighet, precision, övningstid, fel, använda tangenter och händelser som behövs för att beräkna skrivmätvärden.",
+        "item4": "Sociala funktioner: vänskapsrelationer, förfrågningar, blockeringar, närvaro, senaste anslutning och delad statistik enligt tillgängliga inställningar.",
+        "item5": "Rankning: alias, hastighet, precision, nivå, övningsspråk, placering och resultatdatum när det är tillämpligt.",
+        "item6": "Tekniska data: IP-adress, användaragent, loggar, sessionsidentifierare, diagnostikdata och tekniska begäranden som genereras av infrastrukturen eller de leverantörer som används.",
+        "item7": "Lokala data: tema, tangentbordslayout, typsnitt, textstorlek, tangentbordets synlighet, valet avseende icke nödvändiga tekniker, gästframsteg och lokal texthistorik."
+      },
+      "purposes": {
+        "title": "2. Så använder vi data",
+        "item1": "Skapa och hantera konton och sessioner.",
+        "item2": "Möjliggöra inloggning med lösenord eller Google, beroende på vald metod.",
+        "item3": "Tillhandahålla lektioner, spara framsteg och generera skrivstatistik.",
+        "item4": "Anpassa tangentbordslayout, gränssnitt, typsnitt, textstorlek och andra användarinställningar.",
+        "item5": "Visa allmänna rankningar och rankningar per språk.",
+        "item6": "Driva sociala funktioner, inklusive vänskapsrelationer, närvaro, senaste anslutning och statistik som är synlig enligt kontots inställningar.",
+        "item7": "Skydda konton, förebygga missbruk, upptäcka obehörig aktivitet och diagnostisera fel.",
+        "item8": "Möjliggöra nedladdning av data och radering av kontot via profilen.",
+        "item9": "Besvara förfrågningar om support, integritet och säkerhet.",
+        "item10": "Fullgöra rättsliga skyldigheter och utöva eller försvara rättigheter.",
+        "item11": "Om Google AdSense aktiveras i framtiden: visa och mäta reklam, förebygga bedrägerier och, när det är tillämpligt, anpassa annonser med den information och det samtycke som krävs enligt tillämplig lag."
+      },
+      "legalBasis": {
+        "title": "3. Grund och principer för behandlingen",
+        "paragraph1": "Behandlingen sker huvudsakligen för att tillhandahålla den begärda tjänsten, hantera konton, upprätthålla sessioner, spara framsteg, generera statistik, driva rankningar och sociala funktioner, möjliggöra nedladdning eller radering av data och skydda plattformen.",
+        "paragraph2": "Kiso Desk behandlar data i enlighet med tillämplig lag. När informationen är nödvändig för att tillhandahålla tjänsten eller fullgöra skyldigheter som följer av relationen med användaren begärs inget ytterligare samtycke, om inte tillämplig lag kräver det.",
+        "paragraph3": "Kiso Desk använder också internationellt erkända integritetsprinciper som referens, däribland transparens, angivna ändamål, uppgiftsminimering, riktighet, begränsad lagring, säkerhet, användarkontroll och ansvarsskyldighet. Denna hänvisning innebär inte certifiering eller ett påstående om fullständig efterlevnad av utländsk lagstiftning som inte är tillämplig.",
+        "paragraph4": "För ändamål som kräver samtycke begärs samtycke när det behövs och kan återkallas utan retroaktiv verkan. Om nya ändamål läggs till som skiljer sig från de nuvarande eller inte är nödvändiga för att tillhandahålla tjänsten, uppdateras detta meddelande innan den nya behandlingen börjar när det krävs."
+      },
+      "recipients": {
+        "title": "4. Leverantörer och mottagare",
+        "paragraph1": "Kiso Desk använder teknikleverantörer för att driva infrastruktur, hosting, autentisering, leverans av resurser och säkerhet. E-postintegrationen är förberedd men inte aktiv förrän en leverantör har konfigurerats.",
+        "paragraph2": "När dessa leverantörer behandlar personuppgifter för Kiso Desks räkning och enligt dess instruktioner agerar de som personuppgiftsbiträden eller tjänsteleverantörer och använder informationen endast för att utföra de avtalade funktionerna.",
+        "paragraph3": "Google Cloud Platform lagrar och driver tekniska delar av tjänsten. Google agerar också som autentiseringsleverantör när användaren väljer att logga in med ett Google-konto.",
+        "paragraph4": "Applikationen läser in flaggbilder från flagcdn.com. När dessa resurser begärs kan leverantören ta emot sedvanliga tekniska data, såsom IP-adress, användaragent, datum, tid och hänvisande URL.",
+        "paragraph5": "Cloudflare Turnstile kan användas villkorligt för att förebygga bottar och missbruk. När det är aktiverat kan Cloudflare ta emot tekniska anslutningsdata som behövs för att verifiera begäran. Google AdSense och reklam är inte aktiva; innan de aktiveras uppdateras informationen och nödvändiga kontrollåtgärder införs.",
+        "paragraph6": "Den registrerade kan invända mot utlämnanden eller överföringar som kräver samtycke genom att använda e-postadressen för integritetsärenden. En sådan invändning påverkar inte utlämnanden eller överföringar som är nödvändiga för att tillhandahålla tjänsten, upprätthålla relationen med användaren, skydda rättigheter, förebygga missbruk eller fullgöra rättsliga skyldigheter."
+      },
+      "transfers": {
+        "title": "5. Överföringar och behandling i andra jurisdiktioner",
+        "paragraph1": "Kiso Desk kan använda teknikleverantörer som finns i olika jurisdiktioner för att lagra, driva, skydda och underhålla tjänsten.",
+        "paragraph2": "När dessa leverantörer agerar som personuppgiftsbiträden behandlar de data för Kiso Desks räkning och enligt tillämpliga instruktioner och ändamål.",
+        "paragraph3": "När data lämnas ut eller överförs till en tredje part som inte agerar som personuppgiftsbiträde sker detta i de situationer som tillåts enligt tillämplig lag, inklusive när det är nödvändigt för att tillhandahålla tjänsten, fullgöra rättsliga skyldigheter, skydda rättigheter eller när samtycke finns.",
+        "paragraph4": "Användningen av Google Cloud Platform, Google OAuth, Cloudflare Turnstile när det är aktivt och flagcdn.com kan innebära behandling av tekniska data eller kontodata i andra jurisdiktioner, beroende på tjänstens konfiguration och varje leverantörs tillämpliga policyer."
+      },
+      "retention": {
+        "title": "6. Lagring",
+        "item1": "Cookien access_token har en maximal varaktighet på 2 timmar och cookien refresh_token har en maximal varaktighet på 7 dagar.",
+        "item2": "Konto- och framstegsdata lagras så länge kontot är aktivt eller så länge det behövs för att tillhandahålla tjänsten, driva rankningar och sociala funktioner, fullgöra rättsliga skyldigheter, hantera begäranden, förebygga missbruk, lösa incidenter eller utöva och försvara rättigheter.",
+        "item3": "Data om rankningar och sociala funktioner lagras så länge kontot är aktivt eller så länge de behövs för att driva dessa funktioner, om inte användaren ändrar sina inställningar, raderar kontot eller utövar en tillämplig rättighet.",
+        "item4": "Lokala säkerhetskopior som skapas vid distributioner lagras i upp till 30 dagar. Tekniska loggar roteras efter storlek och sparas så länge det behövs för att driva, skydda och diagnostisera tjänsten.",
+        "item5": "När personuppgifter inte längre behövs raderas, anonymiseras eller blockeras de före radering, beroende på vad som är tillämpligt, om de inte måste bevaras på grund av en tillämplig skyldighet."
+      },
+      "rights": {
+        "title": "7. Rättigheter och begäranden",
+        "paragraph1": "Du kan begära tillgång till, rättelse eller radering av dina personuppgifter, invända mot behandlingen och återkalla samtycke för aktiviteter som kräver det, när det är tillämpligt.",
+        "paragraph2": "Via profilen gör applikationen det möjligt att ladda ned en strukturerad kopia av de data som är kopplade till kontot och begära radering genom de tillgängliga mekanismerna.",
+        "paragraph3": "Användare kan begränsa utlämnandet av data som är synliga i rankningar eller sociala funktioner, granska eller ändra valet avseende icke nödvändiga tekniker och blockera andra användare via applikationens kontroller.",
+        "paragraph4": "Du kan också lämna in begäranden om integritet, begränsning av användning eller utlämnande av data samt utövande av rättigheter via den e-postadress som anges i detta meddelande."
+      },
+      "children": {
+        "title": "8. Minderåriga",
+        "paragraph1": "Tjänsten riktar sig inte till minderåriga.",
+        "paragraph2": "För att skapa ett konto och använda tjänsten självständigt måste personen ha uppnått myndighetsåldern enligt den lag som gäller på personens hemvist.",
+        "paragraph3": "Om Kiso Desk upptäcker att ett konto tillhör en minderårig kan onödig behandling begränsas och kontot kan komma att stängas av, raderas, blockeras eller anpassas i enlighet med tillämplig lag och skyddet av personens rättigheter."
+      },
+      "security": {
+        "title": "9. Säkerhet",
+        "paragraph1": "Kiso Desk tillämpar administrativa, tekniska och fysiska åtgärder som är avsedda att skydda personuppgifter mot skada, förlust, ändring, förstöring, obehörig användning, åtkomst eller behandling.",
+        "paragraph2": "Dessa åtgärder kan omfatta åtkomstkontroller, autentisering, säker lagring av lösenord, skyddad sessionshantering, HttpOnly-cookies, förebyggande av missbruk, tekniska loggar, interna begränsningar och andra åtgärder som står i proportion till risken och den tekniska utvecklingen.",
+        "paragraph3": "Inget system är ofelbart. Om en incident påverkar användarnas rättigheter i betydande grad kommer Kiso Desk att lämna de meddelanden och vidta de åtgärder som krävs enligt tillämplig lag."
+      },
+      "changes": {
+        "title": "10. Ändringar av detta integritetsmeddelande",
+        "paragraph1": "Detta meddelande kan uppdateras för att återspegla rättsliga, tekniska eller operativa förändringar.",
+        "paragraph2": "Uppdateringar publiceras på denna sida tillsammans med motsvarande datum för senaste uppdatering.",
+        "paragraph3": "När en ändring är betydande kommuniceras den genom ett synligt meddelande i applikationen eller någon annan tillgänglig elektronisk kanal.",
+        "paragraph4": "Om ett nytt ändamål kräver samtycke börjar den motsvarande behandlingen inte förrän samtycke har erhållits, när tillämplig lag kräver det."
+      },
+      "responsible": {
+        "title": "11. Personuppgiftsansvarig och kontakt",
+        "paragraph3": "E-post för integritetsärenden: kisodesk.project@gmail.com."
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "Användarvillkor",
+        "description": "Regler för användning av Kiso Desk."
+      },
+      "general": {
+        "eyebrow": "Juridisk information",
+        "title": "Användarvillkor",
+        "description": "Regler för användning av Kiso Desk.",
+        "introduction": "Dessa villkor reglerar åtkomst till applikationen, konton, lärandefunktioner och tillgängliga sociala funktioner.",
+        "lastUpdatedLabel": "Senast uppdaterad",
+        "lastUpdated": "23 juli 2026",
+        "contentsLabel": "Innehåll",
+        "relatedLabel": "Relaterade dokument",
+        "relatedPrivacy": "Integritetspolicy",
+        "relatedCookies": "Cookiepolicy"
+      },
+      "service": {
+        "title": "1. Beskrivning av tjänsten",
+        "paragraph1": "Kiso Desk erbjuder lektioner och övningar i skrivträning, uppföljning av framsteg, statistik, rankningar och sociala funktioner som är kopplade till inlärning och träning av tangentbordsskrivning.",
+        "paragraph2": "Genom att skapa ett konto, logga in eller använda tjänsten godkänner du dessa Användarvillkor.",
+        "paragraph3": "Funktioner kan ändras, uppdateras, begränsas eller avvecklas under utvecklingen och driften av tjänsten, alltid i enlighet med tillämplig lag och utan att påverka rättigheter som inte kan avtalas bort."
+      },
+      "eligibility": {
+        "title": "2. Ålder och behörighet",
+        "paragraph1": "För att skapa ett konto och använda tjänsten självständigt måste du ha uppnått myndighetsåldern enligt den lag som gäller på din hemvist.",
+        "paragraph2": "Om tillämplig lag kräver ytterligare rättslig handlingsförmåga, tillstånd eller ålderskrav måste du uppfylla dessa innan du använder tjänsten.",
+        "paragraph3": "Tjänsten riktar sig inte till minderåriga. Om du är minderårig enligt tillämplig lag får du inte skapa ett konto eller lämna personuppgifter på egen hand."
+      },
+      "account": {
+        "title": "3. Konto och säkerhet",
+        "item1": "Du måste lämna korrekta uppgifter och hålla dem uppdaterade.",
+        "item2": "Du ansvarar för att skydda dina inloggningsuppgifter eller åtkomstmetoder och för att logga ut från delade enheter.",
+        "item3": "Du får inte överlåta, sälja, överföra eller använda någon annans konto.",
+        "item4": "Du måste rapportera obehörig åtkomst eller säkerhetsincidenter via den kontaktkanal som anges i dessa Villkor."
+      },
+      "acceptableUse": {
+        "title": "4. Tillåten användning",
+        "intro": "Genom att använda tjänsten samtycker du till att följa dessa regler:",
+        "item1": "Stör inte tjänstens säkerhet, tillgänglighet eller funktion.",
+        "item2": "Extrahera inte data, automatisera inte begäranden, samla inte in data automatiskt, överbelasta inte infrastrukturen och kringgå inte tekniska begränsningar utan tillstånd.",
+        "item3": "Trakassera inte, utge dig inte för att vara någon annan, vilseled inte och försök inte få information från andra användare.",
+        "item4": "Ladda inte upp, reproducera inte, distribuera inte och använd inte innehåll utan tillräckliga rättigheter.",
+        "item5": "Använd inte tjänsten för olagliga, missbrukande, bedrägliga, skadliga eller på annat sätt villkorsstridiga aktiviteter."
+      },
+      "social": {
+        "title": "5. Rankningar och sociala funktioner",
+        "paragraph1": "Tjänsten innehåller rankningar, profiler och andra sociala funktioner.",
+        "paragraph2": "Dessa funktioner kan visa alias, hastighet, precision, nivå, framsteg, onlinestatus, senaste aktivitet eller skrivstatistik enligt tillgängliga inställningar.",
+        "paragraph3": "När ett konto skapas är vissa sociala funktioner aktiverade som standard. Du kan inaktivera dem var för sig i profilen. Ditt riktiga namn och din e-postadress publiceras inte, och närvaro eller delad statistik visas endast för accepterade vänner enligt beskrivningen i Integritetspolicyn."
+      },
+      "intellectualProperty": {
+        "title": "6. Immateriella rättigheter",
+        "paragraph1": "Programvaran, designen, gränssnittet, texterna, övningarna, bilderna, ljudmaterialet, varumärkena, logotyperna och andra delar av tjänsten tillhör respektive rättighetsinnehavare.",
+        "paragraph2": "Åtkomst till tjänsten innebär inte att några immateriella rättigheter till applikationen eller dess innehåll överförs.",
+        "paragraph3": "Innehåll som är tillgängligt via tjänsten får endast användas för skrivträning och användning av applikationens funktioner, om det inte finns ett uttryckligt tillstånd eller en annan licens gäller."
+      },
+      "availability": {
+        "title": "7. Tillgänglighet och ändringar",
+        "paragraph1": "Tjänsten kan avbrytas, begränsas eller ändras på grund av underhåll, uppdateringar, säkerhetsåtgärder, tekniska fel, operativa förändringar eller orsaker utanför Kiso Desks rimliga kontroll.",
+        "paragraph2": "Betydande ändringar kommuniceras när det rimligen är möjligt.",
+        "paragraph3": "Kiso Desk garanterar inte någon särskild förbättring av hastighet, precision, akademiska resultat, arbetsprestation, anställningsbarhet eller något annat särskilt resultat till följd av användningen av tjänsten."
+      },
+      "suspension": {
+        "title": "8. Avstängning och avslutande",
+        "paragraph1": "Kiso Desk kan begränsa, stänga av eller avsluta ett konto vid överträdelse av dessa Villkor, missbruk av tjänsten, säkerhetsrisk, obehörig användning, skada för andra användare eller olaglig eller skadlig aktivitet.",
+        "paragraph2": "När det är rimligt kan användaren begära omprövning av åtgärden via den kontaktkanal som anges i dessa Villkor.",
+        "paragraph3": "Avslutande, avstängning eller begränsning av ett konto påverkar inte skyldigheter eller ansvar som uppkommit före åtgärden.",
+        "paragraph4": "Radering eller lagring av personuppgifter som är kopplade till kontot hanteras enligt Integritetspolicyn och tillämplig lag."
+      },
+      "liability": {
+        "title": "9. Ansvar",
+        "paragraph1": "Tjänsten tillhandahålls enligt dess aktuella tillgänglighet och funktion.",
+        "paragraph2": "Ingenting i dessa Villkor begränsar rättigheter som användare inte kan avstå från enligt tillämplig lag eller utesluter ansvar som inte lagligen kan begränsas.",
+        "paragraph3": "I den utsträckning som tillämplig lag medger ansvarar Kiso Desk inte för indirekta skador, avbrott, dataförlust eller skada som följer av orsaker utanför dess rimliga kontroll, felaktig användning av kontot, falsk eller inaktuell information, fel hos tredje parter utanför tjänsten eller användarens överträdelse av dessa Villkor.",
+        "paragraph4": "Det föregående utesluter inte ansvar för lagöverträdelser som kan tillskrivas Kiso Desk, uppsåt, ond tro, grov oaktsamhet, kränkning av rättigheter som inte kan avtalas bort, underlåtenhet att uppfylla säkerhetsskyldigheter eller felaktig behandling av personuppgifter."
+      },
+      "law": {
+        "title": "10. Tillämplig lag och kontakt",
+        "paragraph1": "Dessa Villkor ska regleras och tolkas enligt den lag som är tillämplig på den ansvarige för tjänsten, utan att det påverkar de rättigheter som användare inte kan avstå från enligt den lag som gäller på deras hemvist.",
+        "paragraph2": "Ingenting i dessa Villkor begränsar användarens rätt att kontakta behöriga myndigheter för konsumentskydd, dataskydd eller andra tillämpliga myndigheter.",
+        "paragraph3": "Frågor, begäranden, säkerhetsrapporter, klagomål eller meddelanden som rör dessa Villkor kan skickas till kisodesk.project@gmail.com."
+      }
+    },
+    "about": {
+      "metadata": {
+        "title": "Om Kiso Desk",
+        "description": "Läs mer om Kiso Desk och dess praktiska metod för att lära sig skriva på tangentbord."
+      },
+      "general": {
+        "title": "Om Kiso Desk",
+        "subtitle": "En plattform för tydlig, regelbunden och mätbar skrivträning",
+        "project_title": "Projektet",
+        "project_text": "Kiso Desk är ett oberoende projekt med fokus på att skapa en tydlig och praktisk upplevelse för att lära sig skriva på tangentbord.",
+        "project_status_text": "Det är utformat som en plats där vem som helst, oavsett erfarenhetsnivå, kan träna regelbundet och se verkliga förbättringar. Fokus ligger på kontinuerligt lärande, praktisk användning och omsorg om detaljer, med ett verktyg som är användbart i dagens sammanhang.",
+        "mission_title": "Vårt uppdrag",
+        "mission_text": "På Kiso Desk anser vi att god tangentbordsskrivning är en grundläggande färdighet i den digitala världen. Vårt uppdrag är att göra det tillgängligt, praktiskt och effektivt för alla att lära sig skriva snabbt och exakt, oavsett erfarenhetsnivå.",
+        "vision_title": "Vår vision",
+        "vision_text": "Att bygga ett användbart verktyg för att förbättra hastighet, precision och självförtroende vid skrivning, med en modern och tydlig upplevelse som fokuserar på regelbunden träning.",
+        "history_title": "Vår historia",
+        "history_text": "Kiso Desk startade som ett oberoende projekt för att skapa en modern upplevelse för skrivträning. Det som började som en enkel idé utvecklas i dag till en plattform med fokus på lektioner, framsteg, statistik och kontinuerlig förbättring."
+      }
+    },
+    "page": {
+      "metadata": {
+        "title": "Lär dig skriva på tangentbord",
+        "description": "Förbättra din hastighet och precision med interaktiva skrivlektioner."
+      },
+      "general": {
+        "altNight": "Illustration av ett rum på natten med en person och en katt",
+        "altDay": "Illustration av ett rum på dagen med en person som programmerar och en katt",
+        "interactiveLessons": "Interaktiva lektioner",
+        "interactiveLessonsDescription": "Lär dig med strukturerade kurser",
+        "freePractice": "Fri övning",
+        "freePracticeDescription": "Träna i din egen takt",
+        "dashboardDescription": "Se din statistik",
+        "rankingDescription": "Tävla globalt",
+        "title1": "Bemästra",
+        "title2": "tangentbordsskrivning",
+        "subtitle1": "Förbättra din hastighet och precision ",
+        "subtitle2": "med interaktiva skrivlektioner",
+        "learn": "Lär dig",
+        "guidedLessons": "Guidade lektioner",
+        "practiceAction": "Öva",
+        "typingExercises": "Skrivövningar",
+        "track": "Mät",
+        "progressAndStats": "Framsteg och statistik",
+        "compete": "Tävla",
+        "globalRanking": "Global rankning"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "metadata": {
+        "title": "Logga in",
+        "description": "Logga in på Kiso Desk för att fortsätta med din skrivträning."
+      },
+      "general": {
+        "googleError": "Det gick inte att logga in med Google.",
+        "tooManyAttempts": "För många försök. Vänta en minut.",
+        "requiredFields": "Fyll i alla fält.",
+        "invalidCredentials": "Felaktig e-postadress eller felaktigt lösenord",
+        "signIn": "Logga in",
+        "continueWithGoogle": "Fortsätt med Google",
+        "or": "eller",
+        "email": "E-postadress",
+        "password": "Lösenord",
+        "sending": "Skickar...",
+        "noAccount": "Har du inget konto?",
+        "createAccount": "Skapa konto",
+        "forgotPassword": "Har du glömt lösenordet?"
+      }
+    },
+    "register": {
+      "metadata": {
+        "title": "Skapa ett konto",
+        "description": "Skapa ett konto på Kiso Desk och börja träna skrivning."
+      },
+      "general": {
+        "acceptLegalRequired": "Du måste godkänna Användarvillkoren och Integritetspolicyn för att skapa ett konto",
+        "googleError": "Det gick inte att registrera sig med Google.",
+        "tooManyAttempts": "För många försök. Vänta en minut.",
+        "unknownError": "Okänt fel",
+        "createAccount": "Skapa konto",
+        "registerWithGoogle": "Registrera dig med Google",
+        "or": "eller",
+        "name": "Namn",
+        "email": "E-postadress",
+        "password": "Lösenord",
+        "acceptTermsPrefix": "Jag godkänner",
+        "acceptTermsLink": "Användarvillkor",
+        "acceptPrivacyPrefix": "Jag har läst",
+        "acceptPrivacyLink": "Integritetspolicy",
+        "alreadyHaveAccount": "Har du redan ett konto?",
+        "signIn": "Logga in",
+        "socialFeaturesNotice": "De sociala funktionerna är valfria och du kan konfigurera deras sekretess i din profil."
+      }
+    },
+    "resetPassword": {
+      "general": {
+        "invalidLink": "Länken innehåller ingen giltig token.",
+        "passwordTooShort": "Lösenordet måste innehålla minst 8 tecken.",
+        "passwordsDoNotMatch": "Lösenorden matchar inte.",
+        "invalidOrExpired": "Länken är ogiltig, har redan använts eller har upphört att gälla.",
+        "successTitle": "Lösenordet har uppdaterats",
+        "successMessage": "Du kan nu logga in med ditt nya lösenord.",
+        "backToLogin": "Tillbaka till inloggningen",
+        "title": "Skapa ett nytt lösenord",
+        "instructions": "Välj ett nytt lösenord med minst 8 tecken.",
+        "newPassword": "Nytt lösenord",
+        "confirmPassword": "Bekräfta lösenord",
+        "submit": "Ändra lösenord",
+        "requestNewLink": "Begär en ny länk"
+      }
+    }
+  },
+  "profile": {
+    "general": {
+      "title": "Profil",
+      "guestModeMessage": "Logga in för att se din profil och statistik.",
+      "signIn": "Logga in",
+      "loadError": "Fel när profilen lästes in",
+      "loadErrorText": "Det gick inte att läsa in profilen",
+      "nameRequired": "Ange ditt namn",
+      "name": "Namn",
+      "email": "E-postadress",
+      "emailReadOnly": "E-postadressen kan inte redigeras från profilen.",
+      "editProfile": "Redigera profil",
+      "changePassword": "Ändra lösenord",
+      "save": "Spara",
+      "savingText": "Sparar...",
+      "cancel": "Avbryt",
+      "retry": "Försök igen",
+      "savedSuccessfully": "Profilen har uppdaterats.",
+      "saveError": "Det gick inte att spara profilen. Försök igen.",
+      "conflictError": "Profilen ändrades på en annan flik. Läs in uppgifterna igen innan du sparar på nytt.",
+      "required": "Det här fältet är obligatoriskt.",
+      "accountSection": "Konto",
+      "preferencesSection": "Inställningar",
+      "securitySection": "Säkerhet",
+      "memberSince": "Medlem sedan",
+      "lastLogin": "Senaste inloggning",
+      "lastUpdate": "Senast uppdaterad",
+      "interfaceLanguage": "Gränssnittsspråk",
+      "keyboardLayout": "Tangentbordslayout",
+      "accessibility": "Tillgänglighet",
+      "adminRole": "Administratör",
+      "userRole": "Användare",
+      "passwordSectionTitle": "Lösenord",
+      "passwordSectionDescription": "Du kan begära en länk för att återställa lösenordet när du behöver det.",
+      "dataControlsTitle": "Dina uppgifter och ditt konto",
+      "dataControlsDescription": "Ladda ned en kopia av dina uppgifter eller radera ditt konto permanent.",
+      "exportTitle": "Ladda ned mina uppgifter",
+      "exportDescription": "Skapa en JSON-fil med dina kontouppgifter, framsteg, övningar, fel och relationer. Den innehåller inte lösenord eller token.",
+      "exportButton": "Ladda ned uppgifter",
+      "exporting": "Förbereder nedladdning...",
+      "exportSuccess": "Nedladdningen av dina uppgifter har startat.",
+      "exportError": "Det gick inte att skapa exporten. Försök igen.",
+      "deleteTitle": "Radera mitt konto",
+      "deleteDescription": "Radera kontot och tillhörande aktiva uppgifter. Åtgärden kan inte ångras.",
+      "deleteButton": "Radera konto",
+      "deleteModalTitle": "Radera kontot permanent",
+      "deleteModalDescription": "Din profil, dina framsteg, sessioner, statistik, fel, vänskapsrelationer och inloggningssessioner raderas från den aktiva databasen. Säkerhetskopior följer sin tillämpliga lagringscykel.",
+      "deleteConfirmEmailInstruction": "Skriv din e-postadress för att bekräfta:",
+      "deleteConfirmEmail": "E-postadress för bekräftelse",
+      "deleteCurrentPassword": "Nuvarande lösenord",
+      "deleteConfirmButton": "Radera permanent",
+      "deleting": "Raderar...",
+      "deleteEmailMismatch": "E-postadressen för bekräftelse matchar inte.",
+      "deletePasswordRequired": "Ange ditt nuvarande lösenord",
+      "deleteInvalidPassword": "Det nuvarande lösenordet är felaktigt.",
+      "deleteError": "Det gick inte att radera kontot. Försök igen.",
+      "socialPrivacyTitle": "Sekretess för sociala funktioner",
+      "publicAlias": "Offentligt alias",
+      "publicAliasPlaceholder": "exempel_användare",
+      "publicAliasHelp": "Mellan 3 och 30 tecken: bokstäver, siffror, bindestreck och understreck.",
+      "publicAliasInvalid": "Ange ett giltigt alias innan du aktiverar sociala funktioner.",
+      "showInRanking": "Visa mig i rankningen",
+      "showInRankingHelp": "Visar ditt alias och dina övergripande resultat. Ditt riktiga namn och din e-postadress förblir dolda",
+      "searchableByAlias": "Tillåt sökning via alias",
+      "searchableByAliasHelp": "Andra användare kan endast hitta dig via ditt offentliga alias.",
+      "allowFriendRequests": "Tillåt vänförfrågningar",
+      "allowFriendRequestsHelp": "Tillåter användare som hittar dig via ditt alias att skicka förfrågningar.",
+      "showPresenceToFriends": "Dela närvaro med vänner",
+      "showPresenceToFriendsHelp": "Visar onlinestatus och senaste aktivitet endast för accepterade vänner.",
+      "shareStatsWithFriends": "Dela statistik med vänner",
+      "shareStatsWithFriendsHelp": "Visar sammanställd övningsstatistik endast för accepterade vänner.",
+      "notConfigured": "Inte konfigurerat",
+      "enabled": "Aktiverat",
+      "disabled": "Inaktiverat",
+      "spanish": "Spanska",
+      "english": "Engelska",
+      "cookieConsentSaveError": "Det gick inte att spara ditt val om cookies. Försök igen.",
+      "googleReauthFailed": "Det gick inte att slutföra återautentiseringen med Google.",
+      "googleReauthRequired": "Autentisera dig på nytt med Google för att radera ditt konto.",
+      "privacyCookiesTitle": "Sekretess och cookies",
+      "privacyCookiesDescription": "Hantera ditt val avseende icke nödvändiga tekniker.",
+      "cookieConsentAccepted": "Du har godkänt användningen av icke nödvändiga tekniker.",
+      "cookieConsentRejected": "Du har avvisat användningen av icke nödvändiga tekniker.",
+      "cookieConsentUnset": "Du har ännu inte angett ditt val avseende icke nödvändiga tekniker.",
+      "cookieConsentUpdatedAt": "Uppdaterat",
+      "cookieConsentAccept": "Godkänn",
+      "cookieConsentReject": "Avvisa",
+      "googleReauthButton": "Autentisera med Google igen"
+    }
+  },
+  "friends": {
+    "general": {
+      "title": "Vänner",
+      "subtitle": "Följ dina vänners onlinestatus och jämför endast deras fria övningar.",
+      "guestModeMessage": "Logga in för att se dina vänner och deras aktivitet.",
+      "signIn": "Logga in",
+      "refresh": "Uppdatera",
+      "retry": "Försök igen",
+      "snapshotTitle": "Senaste vänner",
+      "snapshotDescription": "Se hur många som är online och öppna hela panelen.",
+      "openFriends": "Öppna vänner",
+      "totalFriends": "Vänner",
+      "onlineNow": "online nu",
+      "requests": "Förfrågningar",
+      "searchTitle": "Sök användare",
+      "searchLabel": "Offentligt alias",
+      "searchPlaceholder": "Skriv minst 3 tecken i aliaset",
+      "searchButton": "Sök",
+      "searchError": "Det gick inte att slutföra sökningen",
+      "noSearchResults": "Inga användare hittades.",
+      "statusFriends": "Vänner",
+      "statusPendingOutgoing": "Förfrågan skickad",
+      "statusPendingIncoming": "Skickade en förfrågan till dig",
+      "statusNotConnected": "Inte ansluten",
+      "online": "Online",
+      "offline": "Offline",
+      "lastSeen": "Senaste aktivitet",
+      "requestedAt": "Begärd",
+      "freePractice": "Fri övning",
+      "viewStats": "Visa statistik",
+      "sendRequest": "Lägg till",
+      "accept": "Godkänn",
+      "reject": "Avvisa",
+      "remove": "Ta bort",
+      "incomingRequests": "Mottagna förfrågningar",
+      "outgoingRequests": "Skickade förfrågningar",
+      "noIncomingRequests": "Du har inga mottagna förfrågningar.",
+      "noOutgoingRequests": "Du har inga skickade förfrågningar.",
+      "myFriends": "Mina vänner",
+      "noFriendsYet": "Du har inte lagt till några vänner ännu",
+      "block": "Blockera",
+      "unblock": "Avblockera",
+      "blockedUsers": "Blockerade användare",
+      "blockedUsersDescription": "De kan inte hitta dig, skicka förfrågningar eller se din närvaro eller statistik.",
+      "noBlockedUsers": "Du har inga blockerade användare.",
+      "presenceHidden": "Privat närvaro",
+      "statsHidden": "Den här användaren delar inte sin statistik.",
+      "friendNotFound": "Vi kunde inte hitta den vännen.",
+      "backToFriends": "Tillbaka till vänner",
+      "totalSessions": "Sessioner",
+      "averageWpm": "Genomsnittlig WPM",
+      "averageAccuracy": "Genomsnittlig precision",
+      "bestWpm": "Bästa WPM",
+      "totalPracticeTime": "Total övningstid",
+      "byLanguage": "Fördelning per språk"
+    }
+  },
+  "ranking": {
+    "general": {
+      "title": "Rankning",
+      "subtitle": "Jämför dina resultat med andra användares.",
+      "yourStats": "Din statistik",
+      "basedOnLast10": "Baserad på dina senaste 10 övningar.",
+      "score": "Poäng",
+      "grossWpm": "Brutto-WPM",
+      "accuracy": "Precision",
+      "currentRank": "Nuvarande placering",
+      "level": "Nivå",
+      "topPercent": "Topp {percent} %",
+      "filterByLanguage": "Filtrera efter språk",
+      "allLanguages": "Alla språk",
+      "user": "Användare",
+      "noData": "Inga data att visa",
+      "errorFetchingRanking": "Det gick inte att läsa in rankningen. Försök igen.",
+      "errorFetchingStats": "Det gick inte att läsa in din statistik. Försök igen.",
+      "retry": "Försök igen",
+      "privateProfile": "Din profil visas inte i rankningen. Du kan ändra detta under Sekretess för sociala funktioner i din profil.",
+      "insufficientData": "Slutför minst 5 övningar för att se din placering i rankningen.",
+      "noDataYet": "Det finns ännu inga resultat för det här språket.",
+      "currentUser": "Du",
+      "speedAxis": "Hastighet (WPM)",
+      "accuracyAxis": "Precision (%)",
+      "showing": "Visar",
+      "of": "av",
+      "previous": "Föregående",
+      "next": "Nästa",
+      "signInToParticipate": "Logga in för att delta i rankningen."
+    },
+    "topPerformers": {
+      "general": {
+        "wpm": "Netto-WPM"
+      }
+    },
+    "userStatsCard": {
+      "general": {
+        "levels": {
+          "bronze": "Brons",
+          "silver": "Silver",
+          "gold": "Guld"
+        }
+      }
+    }
+  },
+  "public": {
+    "courses": {
+      "metadata": {
+        "title": "Skrivkurser | Kiso Desk",
+        "description": "Utforska kurser och prova skrivlektioner."
+      },
+      "lessons": {
+        "metadata": {
+          "title": "Skrivlektioner | Kiso Desk",
+          "description": "Prova skrivlektioner utan att skapa ett konto."
+        },
+        "lesson": {
+          "metadata": {
+            "title": "Lektionsövning | Kiso Desk",
+            "description": "Öva på en skrivlektion i Kiso Desk."
+          }
+        }
+      }
+    },
+    "practice": {
+      "metadata": {
+        "title": "Test av skrivhastighet och noggrannhet | Kiso Desk",
+        "description": "Träna skrivning gratis och spara resultatet på den här enheten."
+      }
+    },
+    "progress": {
+      "metadata": {
+        "title": "Lokala framsteg | Kiso Desk",
+        "description": "Framsteg som sparats lokalt i den här webbläsaren."
+      },
+      "general": {
+        "title": "Lokala framsteg",
+        "description": "Dessa framsteg sparas endast i den här webbläsaren.",
+        "lessonsCompleted": "Slutförda lektioner",
+        "practiceSessions": "Övningssessioner",
+        "accuracy": "Precision",
+        "signInNotice": "Logga in för att spara dina framsteg på ditt konto.",
+        "signIn": "Logga in"
+      }
+    },
+    "ranking": {
+      "metadata": {
+        "title": "Rankning för skrivning | Kiso Desk",
+        "description": "Se den offentliga rankningen för skrivhastighet."
+      }
+    }
+  },
+  "components": {
+    "courses": {
+      "courseCard": {
+        "general": {
+          "lessons": "lektioner",
+          "viewCourse": "Visa kurs",
+          "yourProgress": "Dina framsteg",
+          "loginToSeeProgress": "Logga in för att se dina framsteg",
+          "lessonsCount": "lektioner"
+        }
+      }
+    },
+    "dashboard": {
+      "errorTrends": {
+        "general": {
+          "title": "Framstegspanel",
+          "noData": "Inga data att visa",
+          "insufficientData": "Otillräckliga data.",
+          "highestErrorRate": "Högsta felfrekvens",
+          "correctAttempts": "{correctAttempts}/{totalAttempts} rätt"
+        }
+      },
+      "fingerDistribution": {
+        "general": {
+          "title": "Framstegspanel",
+          "noData": "Inga data att visa",
+          "leftHand": "Vänster",
+          "rightHand": "Höger",
+          "hand": "{hand} hand",
+          "pinky": "Lillfinger",
+          "ring": "Ringfinger",
+          "middle": "Långfinger",
+          "index": "Pekfinger",
+          "correctPercentage": "{percentage} % rätt",
+          "noCorrectPercentage": "Inga",
+          "errorPercentage": "{percentage} % fel",
+          "errors": "data"
+        }
+      },
+      "practiceCalendar": {
+        "general": {
+          "title": "Framstegspanel",
+          "noData": "Inga data att visa",
+          "noPractice": "Ingen övning",
+          "minutesShort": "min",
+          "hoursShort": "h",
+          "noActivity": "Ingen aktivitet",
+          "fiveMinutes": "5 min",
+          "tenMinutes": "10 min",
+          "fifteenMinutes": "15+ minuter"
+        }
+      },
+      "progressChart": {
+        "general": {
+          "noData": "Inga data att visa"
+        }
+      },
+      "authBanner": {
+        "general": {
+          "message": "Logga in för att se din statistik.",
+          "signIn": "Logga in"
+        }
+      },
+      "recommendationsList": {
+        "general": {
+          "title": "Framstegspanel",
+          "signIn": "Logga in",
+          "noRecommendations": "Inga rekommendationer tillgängliga."
+        }
+      },
+      "weakKeysPanel": {
+        "general": {
+          "title": "Framstegspanel",
+          "overallAccuracy": "Övergripande precision",
+          "weakestKey": "Svagaste tangenten",
+          "lowestAccuracy": "Lägsta precision"
+        }
+      }
+    },
+    "friends": {
+      "friendsSnapshot": {
+        "general": {
+          "title": "Vänner",
+          "description": "Se hur många som är online och öppna hela panelen.",
+          "openFriends": "Öppna vänner",
+          "totalFriends": "Vänner",
+          "onlineNow": "online nu",
+          "noFriendsYet": "Du har inte lagt till några vänner ännu"
+        }
+      }
+    },
+    "layout": {
+      "footer": {
+        "general": {
+          "product": "Produkt",
+          "lessons": "Lektioner",
+          "ranking": "Rankning",
+          "progress": "Framsteg",
+          "project": "Projekt",
+          "aboutKisoDesk": "Om Kiso Desk",
+          "github": "GitHub",
+          "legal": "Juridik",
+          "privacyPolicy": "Integritetspolicy",
+          "termsOfUse": "Användarvillkor",
+          "cookiePolicy": "Cookiepolicy",
+          "contact": "Kontakt",
+          "copyright": "© {year} Kiso Desk."
+        }
+      },
+      "header": {
+        "general": {
+          "defaultUser": "Användare",
+          "skipToMainContent": "Hoppa till huvudinnehållet",
+          "courses": "Kurser",
+          "userMenu": "Användarmeny",
+          "profile": "Min profil",
+          "logout": "Logga ut",
+          "menuToggle": "Öppna meny",
+          "login": "Logga in",
+          "register": "Registrera dig"
+        }
+      },
+      "sidebar": {
+        "general": {
+          "dashboard": "Översikt",
+          "courses": "Kurser",
+          "practice": "Övning",
+          "ranking": "Rankning",
+          "friends": "Vänner",
+          "profile": "Profil",
+          "menuToggle": "Navigeringsmeny",
+          "expand": "Expandera",
+          "collapse": "Fäll ihop"
+        }
+      }
+    },
+    "legal": {
+      "cookieBanner": {
+        "general": {
+          "title": "Policy för cookies och lokal lagring",
+          "description": "I applikationens nuvarande skick används inga analyscookies, annonsnätverk, remarketinglösningar eller andra icke nödvändiga spårningssystem.",
+          "privacyNotice": "Integritetspolicy",
+          "cookiePolicy": "Policy för cookies och lokal lagring",
+          "accept": "Godkänn",
+          "reject": "Avvisa"
+        }
+      }
+    },
+    "lessons": {
+      "handReference": {
+        "general": {
+          "handReference": "Referens för handposition på tangentbordet"
+        }
+      },
+      "keyboardDetectionWizard": {
+        "general": {
+          "title": "Tangentbordsidentifierare",
+          "subtitle": "Identifiera din tangentbordslayout med några få fysiska tangenter och använd den i hela applikationen.",
+          "modalTitle": "Identifiera layout",
+          "currentLayout": "Nuvarande layout",
+          "start": "Starta identifiering",
+          "progress": "Steg {current} av högst {total}",
+          "progressHint": "Kan bli klar tidigare",
+          "progressLabel": "Identifieringsförlopp",
+          "back": "Tillbaka",
+          "cancel": "Avbryt",
+          "close": "Stäng",
+          "intro": {
+            "title": "Vi identifierar ditt tangentbord",
+            "help": "Du behöver bara trycka på mellan 1 och 5 tangenter på ditt fysiska tangentbord."
+          },
+          "capture": {
+            "focus": "Klicka här och tryck på den angivna tangenten",
+            "instruction": "Tangenten du trycker på används endast för att identifiera layouten.",
+            "captured": "Identifierad tangent: {key}",
+            "deadKey": "accenttangent"
+          },
+          "questions": {
+            "rightOfL": {
+              "title": "Tryck på tangenten direkt till höger om L",
+              "help": "Använd inte Shift. Utgå från tangentens fysiska position, även om en annan symbol är tryckt på den."
+            },
+            "leftOfBackspace": {
+              "title": "Tryck på tangenten direkt till vänster om Backsteg",
+              "help": "Använd inte Shift. Använd tangenten på sifferraden."
+            },
+            "shiftDigit2": {
+              "title": "Håll ned Shift och tryck på tangenten 2",
+              "help": "Använd 2 på sifferraden, inte det numeriska tangentbordet."
+            },
+            "sixthTopRow": {
+              "title": "Tryck på den sjätte bokstavstangenten på den övre raden",
+              "help": "Räkna från den första bokstavstangenten efter Tab. Använd inte Shift."
+            },
+            "firstTopRow": {
+              "title": "Tryck på den första bokstavstangenten efter Tab",
+              "help": "Utgå från tangentens fysiska position. Använd inte Shift."
+            },
+            "quoteKey": {
+              "title": "Tryck på citatteckentangenten",
+              "help": "Använd inte Shift. Utgå från tangentens fysiska position."
+            },
+            "shiftDigit3": {
+              "title": "Håll ned Shift och tryck på tangenten 3",
+              "help": "Använd 3 på sifferraden, inte det numeriska tangentbordet."
+            }
+          },
+          "errors": {
+            "composition": "Vi kan inte identifiera en layout medan tangentbordet håller på att sammanställa text.",
+            "unidentified": "Det gick inte att identifiera tangenten. Försök igen.",
+            "alt-graph": "Använd inte AltGr när du trycker på den här tangenten.",
+            "modified": "Använd inga modifieringstangenter när du trycker på den här tangenten.",
+            "wrongKey": "Det var en annan tangent. Tryck på tangenten på den position som anges ovan.",
+            "shiftRequired": "Håll ned Shift medan du trycker på tangenten.",
+            "shiftNotRequired": "Tryck på tangenten utan att använda Shift.",
+            "saveFailed": "Det gick inte att spara layouten. Kontrollera anslutningen och försök igen."
+          },
+          "result": {
+            "detectedTitle": "Layout identifierad",
+            "confidence": "Identifieringens tillförlitlighet: {confidence}",
+            "useDetected": "Använd den här layouten",
+            "unidentifiedTitle": "Vi kunde inte identifiera din layout",
+            "unidentifiedHelp": "Välj manuellt den layout som motsvarar ditt tangentbord.",
+            "fallbackTitle": "Layouten kunde inte identifieras med tillräcklig säkerhet",
+            "fallbackHelp": "Välj en av de närmaste matchningarna eller visa alla tillgängliga layouter.",
+            "chooseManually": "Välj manuellt",
+            "retryDetection": "Försök identifiera igen"
+          },
+          "manual": {
+            "title": "Välj din layout",
+            "help": "Välj den layout som motsvarar tangenterna på ditt tangentbord."
+          },
+          "saved": {
+            "title": "Layouten har sparats",
+            "description": "Nu används {layout} i hela applikationen.",
+            "continueToCourses": "Fortsätt till kurserna",
+            "returnToPractice": "Tillbaka till övningen"
+          },
+          "physicalFamily": {
+            "title": "Tangentbordets form",
+            "subtitle": "Identifiera tangenternas form för att visa tangentbordet korrekt.",
+            "enterQuestion": "Vilken form har Enter-tangenten?",
+            "enterHorizontal": "Horisontell Enter",
+            "enterIso": "Standard ISO-Enter",
+            "enterBigAss": "ISO BA-Enter",
+            "abntQuestion": "Hur många tangenter finns mellan / och höger Shift?",
+            "eastAsianQuestion": "Hur många tangenter finns mellan 0 och Backspace?",
+            "eastAsianCountQuestion": "Hur många tangenter finns mellan mellanslag och höger Alt?",
+            "complete": "Tangentbordets form har identifierats: {family}"
+          }
+        }
+      },
+      "keyboard": {
+        "general": {
+          "virtualKeyboard": "Virtuellt tangentbord"
+        }
+      },
+      "lessonCard": {
+        "general": {
+          "ariaLabel": "Gå till lektionen",
+          "wpm": "WPM",
+          "score": "Poäng",
+          "accuracy": "Precision",
+          "time": "Tid",
+          "placeholder": "—",
+          "secondsShort": "s",
+          "minutesShort": "min",
+          "minutesCompact": "m",
+          "approxPrefix": "~",
+          "rankLabel": "Rang",
+          "gradeLabel": "Betyg",
+          "completed": "Slutförd",
+          "explanatoryBadge": "Förklarande lektion",
+          "explanatoryLesson": "Förklarande lektion",
+          "objectiveAccuracy": "Mål: {minAccuracy} % precision",
+          "mastered": "Bemästrad",
+          "inProgress": "Pågår",
+          "lessonOrderRecommendationTitle": "Följ den rekommenderade ordningen",
+          "lessonOrderRecommendationDescription": "Vi rekommenderar att du följer lektionernas förvalda ordning för att göra gradvisa framsteg.",
+          "lessonOrderRecommendationBack": "Gå tillbaka",
+          "lessonOrderRecommendationContinue": "Fortsätt",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Nybörjare",
+            "scout": "Utforskare",
+            "ranger": "Ranger",
+            "veteran": "Veteran",
+            "elite": "Elit",
+            "legend": "Legend"
+          },
+          "gradesDescriptions": {
+            "novice": "Grundnivå",
+            "scout": "Inledande framsteg",
+            "ranger": "God behärskning",
+            "veteran": "Hög nivå",
+            "elite": "Expert",
+            "legend": "Högsta nivå"
+          }
+        }
+      },
+      "personalizedLessonCard": {
+        "general": {
+          "title": "Rekommenderad övning",
+          "noData": "Inga data att visa",
+          "error": "Det gick inte att läsa in dina rekommendationer. Försök igen.",
+          "retry": "Försök igen",
+          "insufficientData": "Öva mer för att identifiera de tangenter du behöver förbättra.",
+          "noCourse": "Det finns ännu ingen skrivkurs tillgänglig för det här språket.",
+          "noLessons": "Den här kursen har ännu inga tillgängliga lektioner.",
+          "description": "Baserad på dina identifierade svaga områden.",
+          "weakKeys": "Tangenter med lägst precision under dina senaste sessioner.",
+          "noMatches": "Det finns ännu inga lektioner i den här kursen som är kopplade till dina svaga tangenter.",
+          "worksKeys": "Öva: {keys}"
+        }
+      },
+      "results": {
+        "general": {
+          "saveWarning": "Det gick inte att spara resultaten",
+          "wpm": "WPM",
+          "score": "Poäng",
+          "accuracy": "Precision",
+          "correctChars": "Korrekta tecken",
+          "lowResultTitle": "Ditt resultat är något lågt",
+          "lowResultMessage": "Överväg att gå skrivkursen för att fortsätta förbättras.",
+          "lowResultCourseLink": "Gå till skrivkursen",
+          "accuracyFocusTitle": "Prioritera precision",
+          "accuracyFocusMessage": "Du gör goda framsteg. Försök att nå minst 95 % precision innan du ökar hastigheten.",
+          "masteredResult": "Lektionen är bemästrad",
+          "masteredMessage": "Du uppfyllde precisionskravet och kan fortsätta.",
+          "needsReview": "Behöver repeteras",
+          "reviewMessage": "Mål: minst {minAccuracy} % precision. Sänk tempot och upprepa blocket.",
+          "rankLabel": "Rang",
+          "gradeLabel": "Betyg",
+          "retryAriaLabel": "Försök lektionen igen",
+          "retry": "Försök igen",
+          "next": "Nästa",
+          "newText": "Ny text",
+          "backToCourses": "Tillbaka till kurserna",
+          "backToDashboard": "Tillbaka till översikten",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Nybörjare",
+            "scout": "Utforskare",
+            "ranger": "Ranger",
+            "veteran": "Veteran",
+            "elite": "Elit",
+            "legend": "Legend"
+          },
+          "gradesDescriptions": {
+            "novice": "Grundnivå",
+            "scout": "Inledande framsteg",
+            "ranger": "God behärskning",
+            "veteran": "Hög nivå",
+            "elite": "Expert",
+            "legend": "Högsta nivå"
+          }
+        }
+      },
+      "typingArea": {
+        "general": {
+          "wpm": "WPM",
+          "score": "Poäng",
+          "accuracy": "Precision",
+          "characters": "Tecken",
+          "backspace": "Backsteg",
+          "backspaceEnabled": "Backsteg aktiverat",
+          "backspaceDisabled": "Backsteg blockerat",
+          "font": "Typsnitt",
+          "size": "Storlek",
+          "pixels": "px",
+          "fontAndSize": "Typsnitt och storlek",
+          "textToType": "Text att skriva",
+          "inactivityPaused": "Pausad på grund av inaktivitet",
+          "clickToResume": "Klicka för att fortsätta",
+          "congratulations": "Grattis! Hastighet: {wpm} WPM, precision: {accuracy} %",
+          "detectKeyboard": "Identifiera tangentbord",
+          "keyboardConfigTitle": "Tangentbordsinställningar",
+          "keyboardPreferenceMissing": "Ingen tangentbordsinställning har sparats. Du kan ändra den i tangentbordsinställningarna.",
+          "recommendedKeyboardLayout": "Rekommenderad tangentbordslayout: {layout}",
+          "useRecommendedKeyboardLayout": "Byt layout",
+          "detectionHelp": "Identifiera automatiskt din nuvarande layout och använd den under hela övningen.",
+          "identifyKeyboardShape": "Identifiera form",
+          "keyboardShapeHeading": "Tangentbordets form",
+          "logicalDistributionHeading": "Logisk layout",
+          "logicalDistributionHint": "tangentbordstecken"
+        }
+      }
+    },
+    "ui": {
+      "themeToggle": {
+        "general": {
+          "switchToLight": "Tema",
+          "switchToDark": "Tema"
+        }
+      }
+    },
+    "i18n": {
+      "languageSwitcher": {
+        "general": {
+          "interfaceLanguage": "Gränssnittsspråk"
+        }
+      }
+    }
+  },
+  "general": {
+    "Accessibility": {
+      "button": "Knapp",
+      "expandMenu": "Expandera meny",
+      "collapseMenu": "Fäll ihop meny"
+    },
+    "Common": {
+      "loading": "Läser in...",
+      "retry": "Försök igen",
+      "close": "Stäng"
+    }
+  },
+  "lessonid": {
+    "general": {
+      "lockedLesson": "Låst lektion",
+      "lockedLessonDescription": "Bemästra den föregående aktiviteten innan du fortsätter.",
+      "backToLessons": "Tillbaka till lektionerna",
+      "lessonNotFound": "Lektionen hittades inte",
+      "typeTheTextBelow": "Skriv texten nedan",
+      "hideKeyboard": "Dölj tangentbord",
+      "showKeyboard": "Visa tangentbord",
+      "exitPractice": "Avsluta övningen",
+      "saveError": "Fel när resultatet sparades",
+      "saveErrorMessage": "Dina resultat visas på skärmen men sparades inte i dina framsteg. Försök att göra lektionen igen när anslutningen är tillgänglig.",
+      "audioGuide": "Lyssna på förklaringen",
+      "audioUnsupported": "Din webbläsare kan inte spela upp det här ljudspåret.",
+      "experimentalGreetings": {
+        "lessonPosition": "Lektion {current} av {total}",
+        "supportContent": "Stödmaterial",
+        "englishColumn": "Engelska",
+        "spanishColumn": "Spanska",
+        "continue": "Fortsätt",
+        "dialogue": "Dialog",
+        "selectEnglishFirst": "Välj först ett alternativ på engelska",
+        "tryAgain": "Försök igen",
+        "correct": "Rätt",
+        "complete": "Aktiviteten är slutförd"
+      },
+      "manualAudioPlay": "Lyssna",
+      "manualAudioReplay": "Lyssna igen",
+      "lessonAudio": "Lektionsljud",
+      "interactions": {
+        "dictationPrompt": "Skriv det du hör",
+        "unitProgress": "Enhetens framsteg",
+        "stepProgress": "Steg {step} av 4 {current}",
+        "currentStep": "aktuell",
+        "reviewTask": "Uppgift {current} av 3",
+        "completedPairs": "Slutförda par",
+        "availableOptions": "Tillgängliga alternativ",
+        "options": "Alternativ",
+        "answer": "Svar",
+        "check": "Kontrollera",
+        "undo": "Ångra",
+        "correct": "Rätt",
+        "incorrect": "Inte än. Rätt svar: {answer} {detail}",
+        "spellingFeedback": "Stavning: ordet har två bokstäver eller i början",
+        "sentenceFeedback": "Inledande versal och skiljetecken: kontrollera varje mening",
+        "dictationFeedback": "Diktamen: lyssna på varje ord och behåll skiljetecknen",
+        "correctAnswer": "Rätt svar",
+        "nextTask": "Nästa uppgift"
+      }
+    }
+  },
+  "courses": {
+    "general": {
+      "title": "Kurser",
+      "subtitle": "Utforska våra kurser och förbättra din skrivförmåga",
+      "searchPlaceholder": "Sök kurser...",
+      "allLevels": "Alla nivåer",
+      "beginner": "Nybörjare",
+      "intermediate": "Medelsvår",
+      "advanced": "Avancerad",
+      "guestModeMessage": "Logga in för att spara dina framsteg",
+      "signIn": "Logga in",
+      "retry": "Försök igen",
+      "noCourseYetTitle": "Det finns ännu inga tillgängliga kurser",
+      "noCourseYetDescription": "Vi förbereder kurser för det här språket. Kom tillbaka snart.",
+      "noCourses": "Inga kurser hittades",
+      "all": "Alla kurser",
+      "completed": "Slutförda",
+      "notCompleted": "Inte slutförda"
+    }
+  },
+  "lessons": {
+    "general": {
+      "title": "Lektioner",
+      "subtitle": "Öva med lektioner som är anpassade till din nivå",
+      "searchPlaceholder": "Sök lektioner...",
+      "allDifficulties": "Alla svårighetsgrader",
+      "beginner": "Nybörjare",
+      "intermediate": "Medelsvår",
+      "advanced": "Avancerad",
+      "guestModeMessage": "Logga in för att spara dina framsteg",
+      "signIn": "Logga in",
+      "retry": "Försök igen",
+      "errorTitle": "Fel när lektionerna lästes in",
+      "noLessonsTitle": "Det finns inga tillgängliga lektioner",
+      "noLessonsDescription": "Den här kursen har ännu inga lektioner. Kom tillbaka senare eller kontakta administratören.",
+      "noCompletedLessonsTitle": "Du har ännu inte slutfört någon lektion",
+      "noCompletedLessonsDescription": "Slutför en lektion för att se den i den här listan.",
+      "noPendingLessonsTitle": "Du har inga väntande lektioner",
+      "noPendingLessonsDescription": "Alla lektioner i den här kursen visas som slutförda.",
+      "all": "Alla lektioner",
+      "completed": "Slutförda",
+      "notCompleted": "Inte slutförda",
+      "moduleLabel": "Modul {order}",
+      "masteredCount": "{mastered}/{total} bemästrade"
+    }
+  },
+  "dashboard": {
+    "general": {
+      "title": "Framstegspanel",
+      "subtitle": "Se dina framsteg och din skrivstatistik",
+      "averageWpm": "Genomsnittlig WPM",
+      "wordsPerMinute": "Ord per minut",
+      "averageAccuracy": "Genomsnittlig precision",
+      "accuracy": "Precision",
+      "totalPracticeTime": "Total övningstid",
+      "thisWeek": "Den här veckan",
+      "weeklyWpmProgress": "Veckovis WPM-utveckling",
+      "monthlyWpmProgress": "Månadsvis WPM-utveckling",
+      "noData": "Inga data tillgängliga",
+      "bestWpm": "Bästa WPM",
+      "grossWpm": "Brutto-WPM",
+      "record": "Rekord",
+      "streak": "Svit",
+      "days": "dagar",
+      "consecutivePractice": "Sammanhängande övning",
+      "totalKeystrokes": "Totalt antal tangenttryckningar",
+      "typed": "Skrivna",
+      "recommendations": "Rekommendationer för dig",
+      "recommendation1": "Öva på lektioner på medelnivå för att förbättra din hastighet.",
+      "recommendation2": "Försök att hålla en precision över 95 %.",
+      "recommendation3": "Slutför minst en lektion per dag för att behålla din svit.",
+      "retry": "Försök igen",
+      "error": "Fel",
+      "completedText": "% slutfört",
+      "completedTitle": "Lektioner/Kurser",
+      "lessons": "lektioner",
+      "courses": "kurser",
+      "completedLessons": "Slutförda lektioner",
+      "completedCourses": "Slutförda kurser",
+      "guestModeMessage": "Logga in för att se dina framsteg",
+      "signIn": "Logga in",
+      "recommendationsGuest": "Logga in för att få personliga rekommendationer baserade på dina framsteg.",
+      "weakKeys": "Svaga tangenter",
+      "errorTrends": "Feltrend",
+      "fingerDistribution": "Fördelning per finger",
+      "personalizedPractice": "Personlig övning",
+      "personalizedPracticeDesc": "Få personliga lektioner baserade på dina svaga områden.",
+      "signInToSee": "Logga in för att se din statistik",
+      "noDataYet": "Slutför lektioner för att se dina svaga områden"
+    }
+  },
+  "practice": {
+    "general": {
+      "title": "Skrivtest",
+      "subtitle": "Förbättra din hastighet och precision med personliga texter",
+      "freeTitle": "Skrivhastighetstest",
+      "freeSubtitle": "Prova en kort text och upptäck din skrivhastighet och noggrannhet.",
+      "adaptiveTitle": "Öva på tangenterna där du gör flest fel",
+      "adaptiveSubtitle": "Fokusera på tecknen som orsakar flest fel och skriv mer noggrant.",
+      "session": "Övningssession",
+      "newText": "Ny text",
+      "perKeyStats": "Statistik per tangent (kommer snart)",
+      "loadingText": "Läser in text...",
+      "errorLoadingText": "Fel när texten lästes in.",
+      "errorTitle": "Det gick inte att läsa in texten",
+      "retry": "Försök igen",
+      "saving": "Sparar resultat...",
+      "errorSavingResult": "Fel när resultaten sparades.",
+      "saveWarning": "Det gick inte att spara resultaten",
+      "backToDashboard": "Tillbaka till översikten",
+      "guestSavePrompt": "Logga in för att spara dina framsteg och fortsätta utvecklas.",
+      "signInToSave": "Logga in",
+      "guestPlaceholder": "—",
+      "guestAdaptiveReason": "Baserat på fel som sparats på den här enheten",
+      "adaptiveKeys": "Tangenter: {keys}",
+      "adaptiveBigrams": "Bigram: {bigrams}",
+      "modeRandom": "Fri text",
+      "modeWords": "Rekommenderad övning",
+      "modeText": "Adaptiv text",
+      "adaptivePracticeKeys": "Tangenter i övningen"
+    }
+  },
+  "notFound": {
+    "general": {
+      "title": "Sidan hittades inte",
+      "description": "Sidan du söker finns inte eller har flyttats.",
+      "backHome": "Tillbaka till startsidan",
+      "dashboard": "Översikt",
+      "lessons": "Lektioner",
+      "ranking": "Rankning"
+    }
+  }
+}

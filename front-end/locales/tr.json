@@ -1,0 +1,1278 @@
+{
+  "marketing": {
+    "cookies": {
+      "metadata": {
+        "title": "Çerezler ve Yerel Depolama Politikası",
+        "description": "Kiso Desk'teki çerezler ve yerel depolama hakkında bilgi."
+      },
+      "general": {
+        "title": "Çerezler ve Yerel Depolama Politikası",
+        "contentsLabel": "İçindekiler",
+        "relatedLabel": "İlgili belgeler",
+        "relatedPrivacy": "Gizlilik Politikası",
+        "relatedTerms": "Kullanım Koşulları"
+      },
+      "definition": {
+        "title": "1. Çerezler ve yerel depolama nedir?",
+        "paragraph1": "Bu uygulama, hizmetin gerekli işlevleri ve belirli kullanım tercihlerini hatırlamak için çerezleri ve tarayıcının yerel depolama alanını kullanır.",
+        "paragraph2": "Çerezler, internet sitelerinin tarayıcınızda sakladığı küçük metin dosyalarıdır. Tercihleriniz veya kimlik doğrulama durumunuz gibi ziyaretinizle ilgili bilgileri hatırlamak için kullanılır.",
+        "paragraph3": "localStorage olarak da bilinen yerel depolama, verilerin doğrudan cihazınızda saklanmasını sağlayan bir tarayıcı özelliğidir. Çerezlerin aksine bu veriler her istekte otomatik olarak sunucuya gönderilmez ve siz, tarayıcınız veya cihaz ayarlarınız silene kadar cihazınızda kalır."
+      },
+      "data": {
+        "title": "2. Bu teknolojilerle bağlantılı kişisel ve teknik veriler",
+        "paragraph1": "Yazma hizmetini sunmak için uygulama, çerezlerin, yerel depolamanın ve ağ isteklerinin kullanımıyla bağlantılı kişisel veya teknik verileri işleyebilir.",
+        "paragraph2": "Kayıtlı hesaplarla ilişkili ölçümler, Gizlilik Politikası'nda açıklandığı şekilde hizmet tarafından saklanır. Misafir modunda bazı ilerleme ve alıştırma geçmişi tarayıcıda yerel olarak saklanabilir.",
+        "paragraph3": "Yerel depolama, arayüz tercihlerini, zorunlu olmayan teknolojilere ilişkin seçimi ve misafir ilerlemesini içerebilir. Parolaları veya kimlik doğrulama belirteçlerini doğrudan içermez.",
+        "item1": "Oturum tanımlayıcıları: hesabınızı tanımaya, istekleri doğrulamaya ve oturumunuzu etkin tutmaya yarayan access_token ve refresh_token çerezlerinde saklanır.",
+        "item2": "IP adresi ve teknik bağlantı verileri: sunucuyla etkileşim kurarken ve flagcdn.com üzerindeki bayrak görselleri gibi harici kaynaklar yüklenirken iletilir.",
+        "item3": "Tercihler ve yerel veriler: tema, klavye düzeni, yazı tipi, metin boyutu, klavye görünürlüğü, zorunlu olmayan teknolojilere ilişkin seçim, misafir ilerlemesi ve kullanılan metinlerin yerel geçmişini içerebilir."
+      },
+      "necessaryCookies": {
+        "title": "3. Kesinlikle gerekli çerezler (kimlik doğrulama)",
+        "paragraph1": "Uygulama; oturum açmanızı sağlamak, gezinme sırasında kimliğinizi korumak, oturumu yenilemek ve kimliği doğrulanmış istekleri korumak için kesinlikle gerekli çerezleri kullanır.",
+        "note": "Bu çerezler reklam, yeniden pazarlama veya ticari profilleme amacıyla kullanılmaz.",
+        "tableHeaderName": "Ad",
+        "tableHeaderPurpose": "Amaç",
+        "tableHeaderDuration": "Azami süre",
+        "tableHeaderConfiguration": "Teknik yapılandırma",
+        "accessTokenName": "access_token",
+        "accessTokenPurpose": "İsteklerinizi doğrulamak ve erişim oturumunu etkin tutmak.",
+        "accessTokenDuration": "2 saat",
+        "accessTokenConfiguration": "Üretim ortamında HttpOnly, SameSite=Lax ve Secure.",
+        "refreshTokenName": "refresh_token",
+        "refreshTokenPurpose": "Oturumu güvenli şekilde yenilemek ve iptal edilebilmesini sağlamak.",
+        "refreshTokenDuration": "7 gün",
+        "refreshTokenConfiguration": "Üretim ortamında HttpOnly, SameSite=Lax ve Secure."
+      },
+      "localStorage": {
+        "title": "4. Yerel depolama (kullanıcı tercihleri)",
+        "paragraph1": "Deneyimi kişiselleştirmek ve belirli ayarları korumak için uygulama tarayıcıda bilgi saklar.",
+        "paragraph2": "Bu veriler cihazda kalır ve her istekte otomatik olarak sunucuya gönderilmez; ancak uygulama tercihleri uygulamak veya yerel ilerlemeyi geri yüklemek için bunları okuyabilir.",
+        "tableHeaderKey": "Anahtar",
+        "tableHeaderPurpose": "Amaç",
+        "tableHeaderDuration": "Süre",
+        "themeKey": "theme",
+        "themePurpose": "Açık ve koyu mod arasındaki tercihinizi hatırlamak.",
+        "themeDuration": "Elle silinene veya üzerine yazılana kadar kalıcıdır.",
+        "keyboardLayoutKey": "typing-keyboard-layout",
+        "keyboardLayoutPurpose": "Alıştırmalar için seçilen klavye düzenini hatırlamak.",
+        "keyboardLayoutDuration": "Silinene veya üzerine yazılana kadar kalıcıdır.",
+        "typingFontKey": "typing-font",
+        "typingFontPurpose": "Alıştırmalarda kullanılan yazı tipi ailesini hatırlamak.",
+        "typingFontDuration": "Silinene veya üzerine yazılana kadar kalıcıdır.",
+        "typingFontSizeKey": "typing-font-size",
+        "typingFontSizePurpose": "Alıştırmalar için ayarlanan metin boyutunu hatırlamak.",
+        "typingFontSizeDuration": "Silinene veya üzerine yazılana kadar kalıcıdır."
+      },
+      "providers": {
+        "title": "5. Harici sağlayıcılar, veri işleyenler ve olası aktarımlar",
+        "paragraph1": "Uygulama; altyapı, kimlik doğrulama, güvenlik ve kaynak sunumu gibi hizmetin gerekli işlevleri için harici sağlayıcıları kullanır veya kullanabilir. Gelecekteki işlevler için hazırlanmış entegrasyonlar, yapılandırılıp kullanıma alınana kadar etkin sayılmaz.",
+        "paragraph2": "Bir sağlayıcı Kiso Desk adına ve talimatları doğrultusunda kişisel veri işlediğinde, uygulanabildiği ölçüde veri işleyen veya hizmet sağlayıcı olarak hareket eder.",
+        "paragraph3": "Kiso Desk, hizmetin teknik bileşenlerini barındırmak ve işletmek için Google Cloud Platform (GCP) altyapısını kullanır. Bu altyapıda işlenen veriler hesapları sürdürmek, ilerlemeyi korumak ve platformu işletmek için kullanılır.",
+        "paragraph4": "Uygulama Google ile oturum açmaya izin verir. Bu süreçte Kiso Desk yalnızca hesabı doğrulamak için gerekli olan ve kullanıcı tarafından yetkilendirilen Google tanımlayıcısı, e-posta adresi, doğrulama durumu ve profil adı gibi verileri alır.",
+        "paragraph5": "Uygulama bayrak görsellerini yüklemek için flagcdn.com hizmetini kullanır. Bu kaynaklar istendiğinde sağlayıcı IP adresi, kullanıcı aracısı, tarih, saat ve yönlendiren URL gibi olağan teknik verileri alabilir.",
+        "paragraph6": "Veriler, veri işleyen sıfatıyla hareket etmeyen bir üçüncü tarafa açıklandığında veya aktarıldığında; hizmeti sunmak, kullanıcıyla ilişkiyi sürdürmek, hakları korumak veya hukuki yükümlülükleri yerine getirmek için gerekli hâller de dâhil olmak üzere uygulanabilir mevzuata uygun hareket edilir.",
+        "paragraph7": "Cloudflare Turnstile, botları ve kötüye kullanımı önlemek amacıyla koşullu olarak kullanılabilir; bu durumda Cloudflare teknik bağlantı verilerini işleyebilir. E-posta yoluyla hesap kurtarma özelliği hazırlanmıştır ancak bir e-posta sağlayıcısı yapılandırılana kadar etkin değildir. Analiz çerezleri, reklam ağları, yeniden pazarlama veya diğer zorunlu olmayan izleme sistemleri şu anda kullanılmamaktadır."
+      },
+      "legalBasis": {
+        "title": "6. Hukuki dayanak ve gizlilik ilkeleri",
+        "paragraph1": "Kesinlikle gerekli çerezlerle bağlantılı veri işleme; kullanıcıların kimliğini doğrulamak, oturumları etkin tutmak, istekleri doğrulamak ve hesapların işleyişini korumak amacıyla gerçekleştirilir.",
+        "paragraph2": "Kiso Desk verileri uygulanabilir mevzuata uygun olarak işler. Bilgilerin talep edilen hizmeti sunmak veya kullanıcıyla ilişkiden doğan yükümlülükleri yerine getirmek için gerekli olduğu durumlarda, uygulanabilir mevzuat gerektirmedikçe ayrıca onay istenmez.",
+        "paragraph3": "Kiso Desk ayrıca şeffaflık, amacın belirlenmesi, veri minimizasyonu, doğruluk, sınırlı saklama, güvenlik, kullanıcı kontrolü ve hesap verebilirlik dâhil olmak üzere uluslararası düzeyde kabul gören gizlilik ilkelerini referans alır. Bu referans, uygulanmayan yabancı mevzuata tam uyum beyanı veya sertifikasyon anlamına gelmez.",
+        "paragraph4": "Gelecekte analiz, reklam, yeniden pazarlama veya diğer izleme mekanizmaları gibi zorunlu olmayan teknolojiler kullanılmaya başlanırsa bu Politika güncellenecek ve gerekli olduğu durumlarda etkinleştirmeden önce ilgili onay alınacaktır."
+      },
+      "arco": {
+        "title": "7. Verilere ilişkin haklar ve onayın geri çekilmesi",
+        "paragraph1": "Hesabınızla ilişkili kişisel verilere erişim, bunların düzeltilmesi veya silinmesi için talepte bulunabilir, veri işlemeye itiraz edebilir ve uygulanabildiği durumlarda onaya dayanan işlemler için verdiğiniz onayı geri çekebilirsiniz.",
+        "paragraph2": "Bu hakları kullanmak için şu adrese talep gönderebilirsiniz: kisodesk.project@gmail.com.",
+        "paragraph3": "Veri sorumlusu kararını uygulanabilir mevzuatta öngörülen süre içinde bildirir ve talep kabul edildiğinde gerekli işlemleri ilgili süre içinde yerine getirir.",
+        "paragraph4": "Bu süreler, uygulanabilir mevzuatın izin vermesi ve koşulların haklı kılması hâlinde uzatılabilir.",
+        "paragraph5": "Onayın geri çekilmesi, daha önce gerçekleştirilmiş işlemleri veya hukuki yükümlülük, devam eden ilişki, güvenlik, hakların savunulması ya da gerekli saklama nedeniyle sürdürülmesi gereken işlemleri etkilemez.",
+        "item1": "Varsa uygulamada kullanılan takma ad veya hesap tanımlayıcısı.",
+        "item2": "Hesabınızla ilişkili e-posta adresi.",
+        "item3": "Bildirim almak için kullanılabilecek bir yöntem.",
+        "item4": "Kimliğinizi veya hesap sahipliğini doğrulamaya yetecek makul bilgiler; tercihen hesapla ilişkili e-posta adresi üzerinden. Bir temsilci aracılığıyla hareket ediliyorsa temsil yetkisini gösteren belge.",
+        "item5": "Kullanmak istediğiniz hak: erişim, düzeltme, silme, itiraz veya onayın geri çekilmesi.",
+        "item6": "E-posta adresi, takma ad, tercihler veya hesapla ilişkili yazma ölçümleri gibi talebinizin kapsamındaki kişisel verilerin açık ve kesin açıklaması.",
+        "item7": "Düzeltme taleplerinde doğru bilgiler ve gerektiğinde talep edilen düzeltmeyi destekleyen kanıtlar.",
+        "item8": "Hesabınızı tanımlamak ve talebinizi doğru şekilde ele almak için makul olarak gerekli diğer bilgiler."
+      },
+      "management": {
+        "title": "8. Bu veriler nasıl yönetilir ve silinir?",
+        "paragraph1": "Çerezleri, yerel depolamayı ve zorunlu olmayan teknolojilere ilişkin seçiminizi yönetebilirsiniz.",
+        "item1": "Oturumu kapatma: oturumunuzu kapattığınızda access_token ve refresh_token kimlik doğrulama çerezleri tarayıcıdan silinir.",
+        "item2": "Gizlilik ve çerez tercihleri: profilinizden zorunlu olmayan teknolojilere ilişkin seçiminizi inceleyebilir ve değiştirebilirsiniz. Ayrıca çerezleri ve yerel verileri tarayıcı ayarlarından silebilirsiniz.",
+        "item3": "Uyarı: kesinlikle gerekli çerezlerin engellenmesi, oturum açmanızı veya kimlik doğrulaması gerektiren işlevleri kullanmanızı engelleyebilir."
+      },
+      "changes": {
+        "title": "9. Bu Politikadaki değişiklikler",
+        "paragraph1": "Uygulama, hukuki, teknik veya operasyonel değişiklikleri yansıtmak için bu Politikayı güncelleyebilir. Güncellemeler, ilgili son güncelleme tarihiyle birlikte bu sayfada yayımlanır.",
+        "paragraph2": "Değişiklikler önemli olduğunda uygulamada görünür bir bildirim, çerez bildirimi veya başka bir kullanılabilir elektronik yöntem aracılığıyla duyurulur."
+      },
+      "contact": {
+        "title": "10. İletişim",
+        "paragraph1": "Sorularınız varsa, haklarınızı kullanmak istiyorsanız veya veri işleme hakkında bilgiye ihtiyaç duyuyorsanız kisodesk.project@gmail.com adresine yazabilirsiniz.",
+        "paragraph2": "Veri sorumlusunun kimliği ve iletişim bilgileri, genel amaçlar, sağlayıcılar, saklama süreleri ve diğer işleme ayrıntıları için uygulamanın Gizlilik Politikası'na bakın."
+      }
+    },
+    "privacy": {
+      "metadata": {
+        "title": "Gizlilik Politikası",
+        "description": "Kiso Desk'in kişisel verileri nasıl işlediği hakkında bilgi."
+      },
+      "general": {
+        "eyebrow": "Hukuki",
+        "title": "Gizlilik Bildirimi",
+        "description": "Kişisel verilerin uygulanabilir mevzuat ve uluslararası düzeyde kabul gören gizlilik ilkeleri doğrultusunda işlenmesine ilişkin bilgiler.",
+        "introduction": "Bu Bildirim, Kiso Desk'in hangi bilgileri işlediğini, bunları nasıl kullandığını, kimlerle paylaşabileceğini ve kullanıcıların hangi kontrol seçeneklerine sahip olduğunu açıklar. Uluslararası ilkelere yapılan atıf, uygulanmayan yabancı mevzuata tam uyum beyanı veya sertifikasyon anlamına gelmez.",
+        "lastUpdatedLabel": "Son güncelleme",
+        "lastUpdated": "23 Temmuz 2026",
+        "contentsLabel": "İçindekiler",
+        "relatedLabel": "İlgili belgeler",
+        "relatedTerms": "Kullanım Koşulları",
+        "relatedCookies": "Çerez Politikası"
+      },
+      "data": {
+        "title": "1. İşlediğimiz veriler",
+        "sensitiveNote": "Kiso Desk hassas kişisel veri talep etmez. Erişilebilirlik veya arayüz tercihleri yalnızca uygulamanın işlevsel ayarları olarak kullanılır ve sağlık, engellilik, etnik köken, din, siyasi görüş, cinsel yönelim veya diğer hassas verileri toplama amacı taşımaz.",
+        "item1": "Hesap: e-posta adresi, uygulanabildiği durumlarda profil adı, kullanıcı tarafından seçilen takma ad, rol, dil, klavye düzeni ve erişilebilirlik tercihleri.",
+        "item2": "Kimlik doğrulama: hesap parolayla oluşturulduğunda karma değer olarak saklanan parola veya bu yöntem kullanıldığında Google ile oturum açmak için gerekli veriler.",
+        "item3": "Öğrenme: kurslar, dersler, ilerleme, hız, doğruluk, alıştırma süresi, hatalar, kullanılan tuşlar ve yazma ölçümlerinin hesaplanması için gerekli olaylar.",
+        "item4": "Sosyal işlevler: arkadaşlıklar, istekler, engellemeler, çevrimiçi durum, son bağlantı ve mevcut tercihlere göre paylaşılan istatistikler.",
+        "item5": "Sıralama: takma ad, hız, doğruluk, seviye, alıştırma dili, konum ve uygulanabildiği durumlarda sonuç tarihi.",
+        "item6": "Teknik veriler: IP adresi, kullanıcı aracısı, günlükler, oturum tanımlayıcıları, tanılama verileri ve kullanılan altyapı veya sağlayıcılar tarafından oluşturulan teknik istekler.",
+        "item7": "Yerel veriler: tema, klavye düzeni, yazı tipi, metin boyutu, klavye görünürlüğü, zorunlu olmayan teknolojilere ilişkin seçim, misafir ilerlemesi ve yerel metin geçmişi."
+      },
+      "purposes": {
+        "title": "2. Verileri nasıl kullanıyoruz?",
+        "item1": "Hesapları ve oturumları oluşturmak ve yönetmek.",
+        "item2": "Seçilen yönteme bağlı olarak parola veya Google ile oturum açmayı sağlamak.",
+        "item3": "Dersleri sunmak, ilerlemeyi kaydetmek ve yazma istatistikleri oluşturmak.",
+        "item4": "Klavye düzenini, arayüzü, yazı tipini, metin boyutunu ve diğer kullanım tercihlerini kişiselleştirmek.",
+        "item5": "Genel sıralamaları ve dile göre sıralamaları göstermek.",
+        "item6": "Arkadaşlıklar, çevrimiçi durum, son bağlantı ve hesap tercihlerine göre görünen istatistikler dâhil sosyal işlevleri işletmek.",
+        "item7": "Hesapları korumak, kötüye kullanımı önlemek, yetkisiz faaliyetleri tespit etmek ve hataları teşhis etmek.",
+        "item8": "Profilden verilerin indirilmesine ve hesabın silinmesine izin vermek.",
+        "item9": "Destek, gizlilik ve güvenlik taleplerine yanıt vermek.",
+        "item10": "Hukuki yükümlülükleri yerine getirmek ve hakları kullanmak veya savunmak.",
+        "item11": "Google AdSense gelecekte etkinleştirilirse reklam göstermek ve ölçmek, dolandırıcılığı önlemek ve uygulanabildiği durumlarda uygulanabilir mevzuatın gerektirdiği bilgi ve onayla reklamları kişiselleştirmek."
+      },
+      "legalBasis": {
+        "title": "3. Veri işlemenin dayanağı ve ilkeleri",
+        "paragraph1": "Veri işleme esas olarak talep edilen hizmeti sunmak, hesapları yönetmek, oturumları sürdürmek, ilerlemeyi kaydetmek, istatistikler oluşturmak, sıralamaları ve sosyal işlevleri işletmek, verilerin indirilmesini veya silinmesini sağlamak ve platformu korumak amacıyla gerçekleştirilir.",
+        "paragraph2": "Kiso Desk verileri uygulanabilir mevzuata uygun olarak işler. Bilgilerin hizmeti sunmak veya kullanıcıyla ilişkiden doğan yükümlülükleri yerine getirmek için gerekli olduğu durumlarda, uygulanabilir mevzuat gerektirmedikçe ayrıca onay istenmez.",
+        "paragraph3": "Kiso Desk ayrıca şeffaflık, amacın belirlenmesi, veri minimizasyonu, doğruluk, sınırlı saklama, güvenlik, kullanıcı kontrolü ve hesap verebilirlik dâhil olmak üzere uluslararası düzeyde kabul gören gizlilik ilkelerini referans alır. Bu referans, uygulanmayan yabancı mevzuata tam uyum beyanı veya sertifikasyon anlamına gelmez.",
+        "paragraph4": "Onay gerektiren amaçlar için gerektiğinde onay istenir ve geriye etkili olmaksızın geri çekilebilir. Mevcut amaçlardan farklı veya hizmetin sunulması için gerekli olmayan yeni amaçlar eklenirse, gerektiği durumlarda yeni veri işleme başlamadan önce bu Bildirim güncellenir."
+      },
+      "recipients": {
+        "title": "4. Sağlayıcılar ve alıcılar",
+        "paragraph1": "Kiso Desk altyapı, barındırma, kimlik doğrulama, kaynak sunumu ve güvenliği işletmek için teknoloji sağlayıcıları kullanır. E-posta entegrasyonu hazırlanmıştır ancak bir sağlayıcı yapılandırılana kadar etkin değildir.",
+        "paragraph2": "Bu sağlayıcılar Kiso Desk adına ve talimatları doğrultusunda kişisel veri işlediğinde, veri işleyen veya hizmet sağlayıcı olarak hareket eder ve bilgileri yalnızca sözleşme kapsamındaki işlevleri yerine getirmek için kullanır.",
+        "paragraph3": "Google Cloud Platform hizmetin teknik bileşenlerini barındırır ve işletir. Kullanıcı Google hesabıyla oturum açmayı seçtiğinde Google ayrıca kimlik doğrulama sağlayıcısı olarak hareket eder.",
+        "paragraph4": "Uygulama flagcdn.com üzerinden bayrak görselleri yükler. Bu kaynaklar istendiğinde sağlayıcı IP adresi, kullanıcı aracısı, tarih, saat ve yönlendiren URL gibi olağan teknik verileri alabilir.",
+        "paragraph5": "Cloudflare Turnstile botları ve kötüye kullanımı önlemek amacıyla koşullu olarak kullanılabilir. Etkinleştirildiğinde Cloudflare, isteği doğrulamak için gerekli teknik bağlantı verilerini alabilir. Google AdSense ve reklam etkin değildir; etkinleştirilmeden önce bilgiler güncellenecek ve gerekli kontroller uygulanacaktır.",
+        "paragraph6": "İlgili kişi, gizlilik e-posta adresini kullanarak onay gerektiren açıklamalara veya aktarımlara itiraz edebilir. Bu itiraz; hizmeti sunmak, kullanıcıyla ilişkiyi sürdürmek, hakları korumak, kötüye kullanımı önlemek veya hukuki yükümlülükleri yerine getirmek için gerekli açıklamaları veya aktarımları etkilemez."
+      },
+      "transfers": {
+        "title": "5. Diğer yargı alanlarına aktarım ve bu alanlarda işleme",
+        "paragraph1": "Kiso Desk, hizmeti barındırmak, işletmek, korumak ve sürdürmek için farklı yargı alanlarında bulunan teknoloji sağlayıcılarını kullanabilir.",
+        "paragraph2": "Bu sağlayıcılar veri işleyen olarak hareket ettiğinde, verileri Kiso Desk adına ve ilgili talimatlar ile amaçlara uygun şekilde işler.",
+        "paragraph3": "Veriler, veri işleyen olarak hareket etmeyen bir üçüncü tarafa açıklandığında veya aktarıldığında; hizmeti sunmak, hukuki yükümlülükleri yerine getirmek, hakları korumak için gerekli hâller veya onayın bulunduğu durumlar dâhil olmak üzere uygulanabilir mevzuatın izin verdiği koşullarda hareket edilir.",
+        "paragraph4": "Google Cloud Platform, Google OAuth, etkin olduğunda Cloudflare Turnstile ve flagcdn.com kullanımı, hizmet yapılandırmasına ve her sağlayıcının geçerli politikalarına bağlı olarak teknik verilerin veya hesap verilerinin başka yargı alanlarında işlenmesini içerebilir."
+      },
+      "retention": {
+        "title": "6. Saklama",
+        "item1": "access_token çerezinin azami süresi 2 saat, refresh_token çerezinin azami süresi ise 7 gündür.",
+        "item2": "Hesap ve ilerleme verileri; hesap etkin olduğu sürece veya hizmeti sunmak, sıralamaları ve sosyal işlevleri işletmek, hukuki yükümlülükleri yerine getirmek, talepleri ele almak, kötüye kullanımı önlemek, olayları çözmek ya da hakları kullanmak ve savunmak için gerekli olduğu sürece saklanır.",
+        "item3": "Sıralama ve sosyal işlev verileri, kullanıcı tercihlerini değiştirene, hesabını silene veya uygulanabilir bir hakkını kullanana kadar; hesap etkin olduğu veya bu işlevleri işletmek için gerekli olduğu sürece saklanır.",
+        "item4": "Dağıtımlar sırasında oluşturulan yerel yedekler en fazla 30 gün saklanır. Teknik günlükler boyuta göre döndürülür ve hizmeti işletmek, korumak ve teşhis etmek için gerekli olduğu sürece tutulur.",
+        "item5": "Kişisel veriler artık gerekli olmadığında silinir, anonimleştirilir veya uygulanabildiği ölçüde silinmeden önce erişime kapatılır; ancak uygulanabilir bir yükümlülük nedeniyle saklanmaları gerekiyorsa bu kural uygulanmaz."
+      },
+      "rights": {
+        "title": "7. Haklar ve talepler",
+        "paragraph1": "Kişisel verilerinize erişim, bunların düzeltilmesi veya silinmesi için talepte bulunabilir, veri işlemeye itiraz edebilir ve uygulanabildiği durumlarda onaya dayalı faaliyetler için onayınızı geri çekebilirsiniz.",
+        "paragraph2": "Uygulama, profil üzerinden hesapla ilişkili verilerin yapılandırılmış bir kopyasını indirmenize ve mevcut mekanizmalar aracılığıyla bunların silinmesini talep etmenize imkân tanır.",
+        "paragraph3": "Kullanıcılar sıralamalarda veya sosyal işlevlerde görünen verilerin açıklanmasını sınırlayabilir, zorunlu olmayan teknolojilere ilişkin seçimi inceleyebilir veya değiştirebilir ve uygulamadaki kontroller üzerinden diğer kullanıcıları engelleyebilir.",
+        "paragraph4": "Ayrıca bu Bildirimde belirtilen e-posta adresi üzerinden gizlilik, verilerin kullanımının veya açıklanmasının sınırlandırılması ve hakların kullanılmasıyla ilgili taleplerde bulunabilirsiniz."
+      },
+      "children": {
+        "title": "8. Reşit olmayanlar",
+        "paragraph1": "Hizmet reşit olmayan kişilere yönelik değildir.",
+        "paragraph2": "Bir kişinin hesap oluşturması ve hizmeti bağımsız olarak kullanması için ikamet ettiği yerde uygulanabilir mevzuata göre reşit olması gerekir.",
+        "paragraph3": "Kiso Desk bir hesabın reşit olmayan bir kişiye ait olduğunu tespit ederse, gereksiz veri işlemeyi sınırlandırabilir ve uygulanabilir mevzuata ve kişinin haklarının korunmasına uygun olarak hesabın askıya alınmasını, silinmesini, engellenmesini veya uygun hâle getirilmesini değerlendirebilir."
+      },
+      "security": {
+        "title": "9. Güvenlik",
+        "paragraph1": "Kiso Desk kişisel verileri hasar, kayıp, değişiklik, imha, yetkisiz kullanım, erişim veya işlemeye karşı korumayı amaçlayan idari, teknik ve fiziksel önlemler uygular.",
+        "paragraph2": "Bu önlemler erişim kontrollerini, kimlik doğrulamayı, parolaların güvenli şekilde saklanmasını, korumalı oturum yönetimini, HttpOnly çerezlerini, kötüye kullanımın önlenmesini, teknik günlükleri, iç kısıtlamaları ve risk ile teknolojik gelişime orantılı diğer önlemleri içerebilir.",
+        "paragraph3": "Hiçbir sistem kusursuz değildir. Bir olay kullanıcıların haklarını önemli ölçüde etkilerse Kiso Desk uygulanabilir mevzuatın gerektirdiği bildirimleri yapar ve gerekli işlemleri gerçekleştirir."
+      },
+      "changes": {
+        "title": "10. Bu Gizlilik Bildirimindeki değişiklikler",
+        "paragraph1": "Bu Bildirim hukuki, teknik veya operasyonel değişiklikleri yansıtmak için güncellenebilir.",
+        "paragraph2": "Güncellemeler ilgili son güncelleme tarihiyle birlikte bu sayfada yayımlanır.",
+        "paragraph3": "Bir değişiklik önemli olduğunda uygulamada görünür bir bildirim veya başka bir kullanılabilir elektronik yöntem aracılığıyla duyurulur.",
+        "paragraph4": "Yeni bir amaç onay gerektiriyorsa, uygulanabilir mevzuatın gerektirdiği durumlarda ilgili veri işleme onay alınana kadar başlamaz."
+      },
+      "responsible": {
+        "title": "11. Veri sorumlusu ve iletişim",
+        "paragraph3": "Gizlilik e-posta adresi: kisodesk.project@gmail.com."
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "Kullanım Koşulları",
+        "description": "Kiso Desk kullanımına ilişkin kurallar."
+      },
+      "general": {
+        "eyebrow": "Hukuki",
+        "title": "Kullanım Koşulları",
+        "description": "Kiso Desk kullanımına ilişkin kurallar.",
+        "introduction": "Bu koşullar uygulamaya, hesaplara, öğrenme işlevlerine ve mevcut sosyal işlevlere erişimi düzenler.",
+        "lastUpdatedLabel": "Son güncelleme",
+        "lastUpdated": "23 Temmuz 2026",
+        "contentsLabel": "İçindekiler",
+        "relatedLabel": "İlgili belgeler",
+        "relatedPrivacy": "Gizlilik Politikası",
+        "relatedCookies": "Çerez Politikası"
+      },
+      "service": {
+        "title": "1. Hizmetin açıklaması",
+        "paragraph1": "Kiso Desk yazma dersleri ve alıştırmaları, ilerleme takibi, istatistikler, sıralamalar ve klavyeyle yazmayı öğrenme ve alıştırmayla bağlantılı sosyal işlevler sunar.",
+        "paragraph2": "Bir hesap oluşturarak, oturum açarak veya hizmeti kullanarak bu Kullanım Koşullarını kabul etmiş olursunuz.",
+        "paragraph3": "İşlevler, hizmetin geliştirilmesi ve işletilmesi sırasında değiştirilebilir, güncellenebilir, sınırlandırılabilir veya sonlandırılabilir; bu işlemler her zaman uygulanabilir mevzuata uygun olarak ve feragat edilemeyen hakları etkilemeden gerçekleştirilir."
+      },
+      "eligibility": {
+        "title": "2. Yaş ve uygunluk",
+        "paragraph1": "Hesap oluşturmak ve hizmeti bağımsız olarak kullanmak için ikamet ettiğiniz yerde uygulanabilir mevzuata göre reşit olmanız gerekir.",
+        "paragraph2": "Uygulanabilir mevzuat ek ehliyet, izin veya yaş şartları öngörüyorsa hizmeti kullanmadan önce bunları karşılamanız gerekir.",
+        "paragraph3": "Hizmet reşit olmayan kişilere yönelik değildir. Uygulanabilir mevzuata göre reşit değilseniz kendi başınıza hesap oluşturmamalı veya kişisel veri sağlamamalısınız."
+      },
+      "account": {
+        "title": "3. Hesap ve güvenlik",
+        "item1": "Doğru bilgiler sağlamalı ve bunları güncel tutmalısınız.",
+        "item2": "Kimlik bilgilerinizi veya erişim yöntemlerinizi korumaktan ve ortak kullanılan cihazlarda oturumu kapatmaktan siz sorumlusunuz.",
+        "item3": "Başka bir kişinin hesabını devretmemeli, satmamalı, aktarmamalı veya kullanmamalısınız.",
+        "item4": "Her türlü yetkisiz erişimi veya güvenlik olayını bu Koşullarda belirtilen iletişim kanalı üzerinden bildirmelisiniz."
+      },
+      "acceptableUse": {
+        "title": "4. Kabul edilebilir kullanım",
+        "intro": "Hizmeti kullanarak aşağıdaki kurallara uymayı kabul edersiniz:",
+        "item1": "Hizmetin güvenliğine, kullanılabilirliğine veya işleyişine müdahale etmeyin.",
+        "item2": "Yetkilendirme olmadan veri çıkarmayın, istekleri otomatikleştirmeyin, otomatik veri toplamayın, altyapıyı aşırı yüklemeyin veya teknik sınırları aşmayın.",
+        "item3": "Diğer kullanıcıları taciz etmeyin, başkası gibi davranmayın, aldatmayın veya onlardan bilgi almaya çalışmayın.",
+        "item4": "Yeterli haklara sahip olmadığınız içeriği yüklemeyin, çoğaltmayın, dağıtmayın veya kullanmayın.",
+        "item5": "Hizmeti hukuka aykırı, kötüye kullanım niteliğindeki, hileli, zararlı veya bu Koşullara aykırı faaliyetler için kullanmayın."
+      },
+      "social": {
+        "title": "5. Sıralamalar ve sosyal işlevler",
+        "paragraph1": "Hizmet sıralamalar, profiller ve diğer sosyal işlevleri içerir.",
+        "paragraph2": "Bu işlevler mevcut tercihlere göre takma ad, hız, doğruluk, seviye, ilerleme, çevrimiçi durum, son etkinlik veya yazma istatistiklerini gösterebilir.",
+        "paragraph3": "Bir hesap oluşturulduğunda belirli sosyal işlevler varsayılan olarak etkinleştirilir. Bunları profilinizden ayrı ayrı devre dışı bırakabilirsiniz. Gerçek adınız ve e-posta adresiniz yayımlanmaz; çevrimiçi durum veya paylaşılan istatistikler yalnızca Gizlilik Politikası'nda açıklandığı şekilde kabul edilmiş arkadaşlara gösterilir."
+      },
+      "intellectualProperty": {
+        "title": "6. Fikri mülkiyet",
+        "paragraph1": "Yazılım, tasarım, arayüz, metinler, alıştırmalar, görseller, sesler, markalar, logolar ve hizmetin diğer unsurları ilgili hak sahiplerine aittir.",
+        "paragraph2": "Hizmete erişim, uygulama veya içeriği üzerindeki fikri mülkiyet haklarını devretmez.",
+        "paragraph3": "Hizmet üzerinden sunulan içerik, açıkça izin verilmedikçe veya farklı bir lisans uygulanmadıkça yalnızca yazma alıştırması yapmak ve uygulamanın işlevlerini kullanmak amacıyla kullanılabilir."
+      },
+      "availability": {
+        "title": "7. Kullanılabilirlik ve değişiklikler",
+        "paragraph1": "Hizmet bakım, güncellemeler, güvenlik, teknik arızalar, operasyonel değişiklikler veya Kiso Desk'in makul kontrolü dışındaki nedenlerle kesintiye uğrayabilir, sınırlandırılabilir veya değiştirilebilir.",
+        "paragraph2": "Önemli değişiklikler makul olarak mümkün olduğunda duyurulur.",
+        "paragraph3": "Kiso Desk, hizmetin kullanımından kaynaklanan hız, doğruluk, akademik performans, iş performansı, istihdam edilebilirlik veya başka herhangi bir belirli sonuçta özel bir iyileşme garanti etmez."
+      },
+      "suspension": {
+        "title": "8. Askıya alma ve sona erdirme",
+        "paragraph1": "Kiso Desk bu Koşulların ihlali, hizmetin kötüye kullanılması, güvenlik riski, yetkisiz kullanım, diğer kullanıcılara zarar verme veya hukuka aykırı ya da zararlı faaliyet hâlinde bir hesabı sınırlandırabilir, askıya alabilir veya sona erdirebilir.",
+        "paragraph2": "Makul olduğu durumlarda kullanıcı, bu Koşullarda belirtilen iletişim kanalı üzerinden işlemin yeniden incelenmesini talep edebilir.",
+        "paragraph3": "Bir hesabın sona erdirilmesi, askıya alınması veya sınırlandırılması, bu işlemden önce doğmuş yükümlülükleri veya sorumlulukları etkilemez.",
+        "paragraph4": "Hesapla ilişkili kişisel verilerin silinmesi veya saklanması, Gizlilik Politikası ve uygulanabilir mevzuata uygun olarak ele alınır."
+      },
+      "liability": {
+        "title": "9. Sorumluluk",
+        "paragraph1": "Hizmet mevcut kullanılabilirliği ve işleyişi çerçevesinde sunulur.",
+        "paragraph2": "Bu Koşullardaki hiçbir hüküm, kullanıcılara uygulanabilir mevzuatla tanınan feragat edilemeyen hakları sınırlandırmaz veya hukuken sınırlandırılamayan sorumlulukları ortadan kaldırmaz.",
+        "paragraph3": "Uygulanabilir mevzuatın izin verdiği ölçüde Kiso Desk; makul kontrolü dışındaki nedenlerden, hesabın hatalı kullanımından, yanlış veya güncel olmayan bilgilerden, hizmet dışındaki üçüncü taraf arızalarından veya kullanıcının bu Koşulları ihlalinden kaynaklanan dolaylı zararlar, kesintiler, veri kaybı veya zararlar için sorumlu değildir.",
+        "paragraph4": "Yukarıdaki hüküm; Kiso Desk'e atfedilebilen hukuka aykırılık, kasıt, kötü niyet, ağır ihmal, feragat edilemeyen hakların ihlali, güvenlik yükümlülüklerinin yerine getirilmemesi veya kişisel verilerin uygunsuz işlenmesi nedeniyle doğan sorumluluğu ortadan kaldırmaz."
+      },
+      "law": {
+        "title": "10. Uygulanabilir hukuk ve iletişim",
+        "paragraph1": "Bu Koşullar, kullanıcıların ikamet ettikleri yerde uygulanabilir mevzuattan doğabilecek feragat edilemeyen hakları saklı kalmak üzere, hizmet sorumlusuna uygulanabilir hukuka göre yönetilir ve yorumlanır.",
+        "paragraph2": "Bu Koşullardaki hiçbir hüküm, kullanıcının yetkili tüketici koruma, veri koruma veya diğer ilgili makamlara başvurma hakkını sınırlandırmaz.",
+        "paragraph3": "Bu Koşullarla ilgili sorular, talepler, güvenlik bildirimleri, şikâyetler veya diğer iletiler kisodesk.project@gmail.com adresine gönderilebilir."
+      }
+    },
+    "about": {
+      "metadata": {
+        "title": "Kiso Desk Hakkında",
+        "description": "Kiso Desk'i ve pratik bir şekilde klavyede yazmayı öğrenmeye yönelik yaklaşımını keşfedin."
+      },
+      "general": {
+        "title": "Kiso Desk Hakkında",
+        "subtitle": "Açık, düzenli ve ölçülebilir biçimde klavyede yazma pratiği yapmak için bir platform",
+        "project_title": "Proje",
+        "project_text": "Kiso Desk, klavyede yazmayı öğrenmek için açık ve pratik bir deneyim oluşturmaya odaklanan bağımsız bir projedir.",
+        "project_status_text": "Deneyim düzeyi ne olursa olsun herkesin düzenli olarak pratik yapabileceği ve gerçek ilerlemeyi görebileceği bir alan olarak tasarlanmıştır. Günümüz ihtiyaçlarına uygun yararlı bir araç sunmak amacıyla sürekli öğrenmeye, kullanışlılığa ve ayrıntılara özen göstermeye odaklanır.",
+        "mission_title": "Misyonumuz",
+        "mission_text": "Kiso Desk olarak klavyede yazmanın dijital dünyada temel bir beceri olduğuna inanıyoruz. Misyonumuz, deneyim düzeyi ne olursa olsun herkesin hızlı ve doğru yazmayı erişilebilir, pratik ve etkili bir şekilde öğrenmesini sağlamaktır.",
+        "vision_title": "Vizyonumuz",
+        "vision_text": "Modern, açık ve düzenli pratiğe odaklanan bir deneyimle yazma hızını, doğruluğunu ve özgüvenini geliştirmeye yarayan faydalı bir araç oluşturmak.",
+        "history_title": "Hikâyemiz",
+        "history_text": "Kiso Desk, modern bir klavyede yazma pratiği deneyimi oluşturmak için bağımsız bir proje olarak doğdu. Basit bir fikir olarak başlayan proje, bugün derslere, ilerlemeye, istatistiklere ve sürekli gelişime odaklanan bir platform olarak gelişiyor."
+      }
+    },
+    "page": {
+      "metadata": {
+        "title": "Klavyede yazmayı öğrenin",
+        "description": "Etkileşimli yazma dersleriyle hızınızı ve doğruluğunuzu geliştirin."
+      },
+      "general": {
+        "altNight": "Bir kişi ve kedinin bulunduğu gece odası çizimi",
+        "altDay": "Programlama yapan bir kişi ve kedinin bulunduğu gündüz odası çizimi",
+        "interactiveLessons": "Etkileşimli dersler",
+        "interactiveLessonsDescription": "Yapılandırılmış kurslarla öğrenin",
+        "freePractice": "Serbest pratik",
+        "freePracticeDescription": "Kendi hızınızda çalışın",
+        "dashboardDescription": "İstatistiklerinizi görüntüleyin",
+        "rankingDescription": "Dünya çapında yarışın",
+        "title1": "Ustalaşın:",
+        "title2": "klavyede yazma",
+        "subtitle1": "Hızınızı ve doğruluğunuzu geliştirin ",
+        "subtitle2": "etkileşimli derslerle yazarak",
+        "learn": "Öğren",
+        "guidedLessons": "Rehberli dersler",
+        "practiceAction": "Pratik yap",
+        "typingExercises": "Yazma alıştırmaları",
+        "track": "Ölç",
+        "progressAndStats": "İlerleme ve istatistikler",
+        "compete": "Yarış",
+        "globalRanking": "Küresel sıralama"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "metadata": {
+        "title": "Oturum aç",
+        "description": "Yazma pratiğinize devam etmek için Kiso Desk'te oturum açın."
+      },
+      "general": {
+        "googleError": "Google ile oturum açılamadı.",
+        "tooManyAttempts": "Çok fazla deneme yapıldı. Bir dakika bekleyin.",
+        "requiredFields": "Tüm alanları doldurun.",
+        "invalidCredentials": "E-posta adresi veya parola yanlış",
+        "signIn": "Oturum aç",
+        "continueWithGoogle": "Google ile devam et",
+        "or": "veya",
+        "email": "E-posta adresi",
+        "password": "Parola",
+        "sending": "Gönderiliyor...",
+        "noAccount": "Hesabınız yok mu?",
+        "createAccount": "Hesap oluştur",
+        "forgotPassword": "Parolanızı mı unuttunuz?"
+      }
+    },
+    "register": {
+      "metadata": {
+        "title": "Hesap oluştur",
+        "description": "Kiso Desk'te bir hesap oluşturun ve yazma pratiğine başlayın."
+      },
+      "general": {
+        "acceptLegalRequired": "Hesap oluşturmak için Kullanım Koşullarını ve Gizlilik Politikasını kabul etmelisiniz",
+        "googleError": "Google ile kaydolunamadı.",
+        "tooManyAttempts": "Çok fazla deneme yapıldı. Bir dakika bekleyin.",
+        "unknownError": "Bilinmeyen hata",
+        "createAccount": "Hesap oluştur",
+        "registerWithGoogle": "Google ile kaydol",
+        "or": "veya",
+        "name": "Ad",
+        "email": "E-posta adresi",
+        "password": "Parola",
+        "acceptTermsPrefix": "Şunları kabul ediyorum:",
+        "acceptTermsLink": "Kullanım Koşulları",
+        "acceptPrivacyPrefix": "Şunu okudum:",
+        "acceptPrivacyLink": "Gizlilik Politikası",
+        "alreadyHaveAccount": "Zaten hesabınız var mı?",
+        "signIn": "Oturum aç",
+        "socialFeaturesNotice": "Sosyal özellikler isteğe bağlıdır ve gizlilik ayarlarını profilinizden yapılandırabilirsiniz."
+      }
+    },
+    "resetPassword": {
+      "general": {
+        "invalidLink": "Bağlantı geçerli bir belirteç içermiyor.",
+        "passwordTooShort": "Parola en az 8 karakter olmalıdır.",
+        "passwordsDoNotMatch": "Parolalar eşleşmiyor.",
+        "invalidOrExpired": "Bağlantı geçersiz, daha önce kullanılmış veya süresi dolmuş.",
+        "successTitle": "Parola güncellendi",
+        "successMessage": "Artık yeni parolanızla oturum açabilirsiniz.",
+        "backToLogin": "Oturum açma sayfasına dön",
+        "title": "Yeni bir parola oluşturun",
+        "instructions": "En az 8 karakterden oluşan yeni bir parola seçin.",
+        "newPassword": "Yeni parola",
+        "confirmPassword": "Parolayı doğrula",
+        "submit": "Parolayı değiştir",
+        "requestNewLink": "Yeni bağlantı iste"
+      }
+    }
+  },
+  "profile": {
+    "general": {
+      "title": "Profil",
+      "guestModeMessage": "Profilinizi ve istatistiklerinizi görmek için oturum açın.",
+      "signIn": "Oturum aç",
+      "loadError": "Profil yüklenirken hata oluştu",
+      "loadErrorText": "Profil yüklenemedi",
+      "nameRequired": "Adınızı girin",
+      "name": "Ad",
+      "email": "E-posta adresi",
+      "emailReadOnly": "E-posta adresi profilden düzenlenemez.",
+      "editProfile": "Profili düzenle",
+      "changePassword": "Parolayı değiştir",
+      "save": "Kaydet",
+      "savingText": "Kaydediliyor...",
+      "cancel": "İptal",
+      "retry": "Tekrar dene",
+      "savedSuccessfully": "Profil başarıyla güncellendi.",
+      "saveError": "Profil kaydedilemedi. Tekrar deneyin.",
+      "conflictError": "Profil başka bir sekmede değiştirildi. Yeniden kaydetmeden önce verileri yenileyin.",
+      "required": "Bu alan zorunludur.",
+      "accountSection": "Hesap",
+      "preferencesSection": "Tercihler",
+      "securitySection": "Güvenlik",
+      "memberSince": "Üyelik başlangıcı",
+      "lastLogin": "Son oturum açma",
+      "lastUpdate": "Son güncelleme",
+      "interfaceLanguage": "Arayüz dili",
+      "keyboardLayout": "Klavye düzeni",
+      "accessibility": "Erişilebilirlik",
+      "adminRole": "Yönetici",
+      "userRole": "Kullanıcı",
+      "passwordSectionTitle": "Parola",
+      "passwordSectionDescription": "Gerektiğinde parolanızı sıfırlamak için bir bağlantı isteyebilirsiniz.",
+      "dataControlsTitle": "Verileriniz ve hesabınız",
+      "dataControlsDescription": "Verilerinizin bir kopyasını indirin veya hesabınızı geri alınamaz biçimde silin.",
+      "exportTitle": "Verilerimi indir",
+      "exportDescription": "Hesap, ilerleme, pratik, hata ve ilişki verilerinizi içeren bir JSON dosyası oluşturur. Parolalar veya belirteçler dâhil değildir.",
+      "exportButton": "Verileri indir",
+      "exporting": "İndirme hazırlanıyor...",
+      "exportSuccess": "Verilerinizin indirilmesi başarıyla başladı.",
+      "exportError": "Dışa aktarma oluşturulamadı. Tekrar deneyin.",
+      "deleteTitle": "Hesabımı sil",
+      "deleteDescription": "Hesabı ve ilişkili etkin verileri siler. Bu işlem geri alınamaz.",
+      "deleteButton": "Hesabı sil",
+      "deleteModalTitle": "Hesabı kalıcı olarak sil",
+      "deleteModalDescription": "Profiliniz, ilerlemeniz, oturumlarınız, istatistikleriniz, hatalarınız, arkadaşlıklarınız ve erişim oturumlarınız etkin veritabanından silinecektir. Yedekler geçerli saklama döngüsünü izlemeye devam eder.",
+      "deleteConfirmEmailInstruction": "Onaylamak için e-posta adresinizi yazın:",
+      "deleteConfirmEmail": "Onay e-postası",
+      "deleteCurrentPassword": "Mevcut parola",
+      "deleteConfirmButton": "Kalıcı olarak sil",
+      "deleting": "Siliniyor...",
+      "deleteEmailMismatch": "Onay e-posta adresi eşleşmiyor.",
+      "deletePasswordRequired": "Mevcut parolanızı girin",
+      "deleteInvalidPassword": "Mevcut parola yanlış.",
+      "deleteError": "Hesap silinemedi. Tekrar deneyin.",
+      "socialPrivacyTitle": "Sosyal gizlilik",
+      "publicAlias": "Herkese açık takma ad",
+      "publicAliasPlaceholder": "ornek_kullanici",
+      "publicAliasHelp": "3 ile 30 karakter arasında: harf, rakam, kısa çizgi ve alt çizgi.",
+      "publicAliasInvalid": "Sosyal özellikleri etkinleştirmeden önce geçerli bir takma ad belirleyin.",
+      "showInRanking": "Sıralamada görün",
+      "showInRankingHelp": "Takma adınızı ve genel sonuçlarınızı gösterir. Gerçek adınız ve e-posta adresiniz gizli kalır",
+      "searchableByAlias": "Takma adla aramaya izin ver",
+      "searchableByAliasHelp": "Diğer kullanıcılar sizi yalnızca herkese açık takma adınızla bulabilir.",
+      "allowFriendRequests": "Arkadaşlık isteklerini kabul et",
+      "allowFriendRequestsHelp": "Sizi takma adınızla bulan kullanıcıların arkadaşlık isteği göndermesine izin verir.",
+      "showPresenceToFriends": "Çevrimiçi durumumu arkadaşlarla paylaş",
+      "showPresenceToFriendsHelp": "Çevrimiçi durumunuzu ve son etkinliğinizi yalnızca kabul edilmiş arkadaşlara gösterir.",
+      "shareStatsWithFriends": "İstatistikleri arkadaşlarla paylaş",
+      "shareStatsWithFriendsHelp": "Toplu pratik istatistiklerini yalnızca kabul edilmiş arkadaşlara gösterir.",
+      "notConfigured": "Yapılandırılmadı",
+      "enabled": "Etkin",
+      "disabled": "Devre dışı",
+      "spanish": "İspanyolca",
+      "english": "İngilizce",
+      "cookieConsentSaveError": "Çerezlerle ilgili seçiminiz kaydedilemedi. Tekrar deneyin.",
+      "googleReauthFailed": "Google ile yeniden kimlik doğrulama tamamlanamadı.",
+      "googleReauthRequired": "Hesabınızı silmek için Google ile yeniden kimlik doğrulayın.",
+      "privacyCookiesTitle": "Gizlilik ve çerezler",
+      "privacyCookiesDescription": "Zorunlu olmayan teknolojilere ilişkin seçiminizi yönetin.",
+      "cookieConsentAccepted": "Zorunlu olmayan teknolojilerin kullanımını kabul ettiniz.",
+      "cookieConsentRejected": "Zorunlu olmayan teknolojilerin kullanımını reddettiniz.",
+      "cookieConsentUnset": "Zorunlu olmayan teknolojilerle ilgili tercihinizi henüz belirtmediniz.",
+      "cookieConsentUpdatedAt": "Güncelleme tarihi",
+      "cookieConsentAccept": "Kabul et",
+      "cookieConsentReject": "Reddet",
+      "googleReauthButton": "Google ile yeniden kimlik doğrula"
+    }
+  },
+  "friends": {
+    "general": {
+      "title": "Arkadaşlar",
+      "subtitle": "Arkadaşlarınızın çevrimiçi durumunu takip edin ve yalnızca serbest pratik sonuçlarını karşılaştırın.",
+      "guestModeMessage": "Arkadaşlarınızı ve etkinliklerini görmek için oturum açın.",
+      "signIn": "Oturum aç",
+      "refresh": "Yenile",
+      "retry": "Tekrar dene",
+      "snapshotTitle": "Son arkadaşlar",
+      "snapshotDescription": "Kaç arkadaşınızın çevrimiçi olduğunu görün ve ayrıntılı panele geçin.",
+      "openFriends": "Arkadaşları aç",
+      "totalFriends": "Arkadaşlar",
+      "onlineNow": "şu anda çevrimiçi",
+      "requests": "İstekler",
+      "searchTitle": "Kullanıcı ara",
+      "searchLabel": "Herkese açık takma ad",
+      "searchPlaceholder": "Takma adın en az 3 karakterini yazın",
+      "searchButton": "Ara",
+      "searchError": "Arama tamamlanamadı",
+      "noSearchResults": "Kullanıcı bulunamadı.",
+      "statusFriends": "Arkadaşlar",
+      "statusPendingOutgoing": "İstek gönderildi",
+      "statusPendingIncoming": "Size istek gönderdi",
+      "statusNotConnected": "Bağlantı yok",
+      "online": "Çevrimiçi",
+      "offline": "Çevrimdışı",
+      "lastSeen": "Son etkinlik",
+      "requestedAt": "İstek tarihi",
+      "freePractice": "Serbest pratik",
+      "viewStats": "İstatistikleri görüntüle",
+      "sendRequest": "Ekle",
+      "accept": "Kabul et",
+      "reject": "Reddet",
+      "remove": "Kaldır",
+      "incomingRequests": "Gelen istekler",
+      "outgoingRequests": "Gönderilen istekler",
+      "noIncomingRequests": "Gelen isteğiniz yok.",
+      "noOutgoingRequests": "Gönderilmiş isteğiniz yok.",
+      "myFriends": "Arkadaşlarım",
+      "noFriendsYet": "Henüz hiç arkadaş eklemediniz",
+      "block": "Engelle",
+      "unblock": "Engeli kaldır",
+      "blockedUsers": "Engellenen kullanıcılar",
+      "blockedUsersDescription": "Sizi bulamaz, size istek gönderemez veya çevrimiçi durumunuza ya da istatistiklerinize erişemezler.",
+      "noBlockedUsers": "Engellenmiş kullanıcınız yok.",
+      "presenceHidden": "Çevrimiçi durum gizli",
+      "statsHidden": "Bu kullanıcı istatistiklerini paylaşmıyor.",
+      "friendNotFound": "Bu arkadaş bulunamadı.",
+      "backToFriends": "Arkadaşlara dön",
+      "totalSessions": "Oturumlar",
+      "averageWpm": "Ortalama WPM",
+      "averageAccuracy": "Ortalama doğruluk",
+      "bestWpm": "En iyi WPM",
+      "totalPracticeTime": "Toplam pratik süresi",
+      "byLanguage": "Dile göre dağılım"
+    }
+  },
+  "ranking": {
+    "general": {
+      "title": "Sıralama",
+      "subtitle": "Sonuçlarınızı diğer kullanıcıların sonuçlarıyla karşılaştırın.",
+      "yourStats": "İstatistikleriniz",
+      "basedOnLast10": "Son 10 pratiğinize göre.",
+      "score": "Puan",
+      "grossWpm": "Brüt WPM",
+      "accuracy": "Doğruluk",
+      "currentRank": "Mevcut sıra",
+      "level": "Seviye",
+      "topPercent": "İlk %{percent}",
+      "filterByLanguage": "Dile göre filtrele",
+      "allLanguages": "Tüm diller",
+      "user": "Kullanıcı",
+      "noData": "Gösterilecek veri yok",
+      "errorFetchingRanking": "Sıralama yüklenemedi. Tekrar deneyin.",
+      "errorFetchingStats": "İstatistikleriniz yüklenemedi. Tekrar deneyin.",
+      "retry": "Tekrar dene",
+      "privateProfile": "Profiliniz sıralamada görünmüyor. Bunu profilinizdeki Sosyal gizlilik bölümünden değiştirebilirsiniz.",
+      "insufficientData": "Sıralamanızı görmek için en az 5 pratik tamamlayın.",
+      "noDataYet": "Bu dil için henüz sonuç yok.",
+      "currentUser": "Siz",
+      "speedAxis": "Hız (WPM)",
+      "accuracyAxis": "Doğruluk (%)",
+      "showing": "Gösterilen",
+      "of": "/",
+      "previous": "Önceki",
+      "next": "Sonraki",
+      "signInToParticipate": "Sıralamaya katılmak için oturum açın."
+    },
+    "topPerformers": {
+      "general": {
+        "wpm": "Net WPM"
+      }
+    },
+    "userStatsCard": {
+      "general": {
+        "levels": {
+          "bronze": "Bronz",
+          "silver": "Gümüş",
+          "gold": "Altın"
+        }
+      }
+    }
+  },
+  "public": {
+    "courses": {
+      "metadata": {
+        "title": "Yazma kursları | Kiso Desk",
+        "description": "Kursları keşfedin ve yazma derslerini deneyin."
+      },
+      "lessons": {
+        "metadata": {
+          "title": "Yazma dersleri | Kiso Desk",
+          "description": "Hesap oluşturmadan yazma derslerini deneyin."
+        },
+        "lesson": {
+          "metadata": {
+            "title": "Ders pratiği | Kiso Desk",
+            "description": "Kiso Desk'te bir yazma dersiyle pratik yapın."
+          }
+        }
+      }
+    },
+    "practice": {
+      "metadata": {
+        "title": "Yazma hızı ve doğruluk testi | Kiso Desk",
+        "description": "Ücretsiz yazma pratiği yapın ve sonucu bu cihazda kaydedin."
+      }
+    },
+    "progress": {
+      "metadata": {
+        "title": "Yerel ilerleme | Kiso Desk",
+        "description": "Bu tarayıcıda yerel olarak kaydedilen ilerleme."
+      },
+      "general": {
+        "title": "Yerel ilerleme",
+        "description": "Bu ilerleme yalnızca bu tarayıcıda kaydedilir.",
+        "lessonsCompleted": "Tamamlanan dersler",
+        "practiceSessions": "Pratik oturumları",
+        "accuracy": "Doğruluk",
+        "signInNotice": "İlerlemenizi hesabınıza kaydetmek için oturum açın.",
+        "signIn": "Oturum aç"
+      }
+    },
+    "ranking": {
+      "metadata": {
+        "title": "Yazma sıralaması | Kiso Desk",
+        "description": "Herkese açık yazma hızı sıralamasını görüntüleyin."
+      }
+    }
+  },
+  "components": {
+    "courses": {
+      "courseCard": {
+        "general": {
+          "lessons": "ders",
+          "viewCourse": "Kursu görüntüle",
+          "yourProgress": "İlerlemeniz",
+          "loginToSeeProgress": "İlerlemenizi görmek için oturum açın",
+          "lessonsCount": "ders"
+        }
+      }
+    },
+    "dashboard": {
+      "errorTrends": {
+        "general": {
+          "title": "İlerleme paneli",
+          "noData": "Gösterilecek veri yok",
+          "insufficientData": "Yeterli veri yok.",
+          "highestErrorRate": "En yüksek hata oranı",
+          "correctAttempts": "{correctAttempts}/{totalAttempts} doğru"
+        }
+      },
+      "fingerDistribution": {
+        "general": {
+          "title": "İlerleme paneli",
+          "noData": "Gösterilecek veri yok",
+          "leftHand": "Sol",
+          "rightHand": "Sağ",
+          "hand": "{hand} el",
+          "pinky": "Serçe",
+          "ring": "Yüzük",
+          "middle": "Orta",
+          "index": "İşaret",
+          "correctPercentage": "%{percentage} doğru",
+          "noCorrectPercentage": "Veri",
+          "errorPercentage": "%{percentage} hata",
+          "errors": "yok"
+        }
+      },
+      "practiceCalendar": {
+        "general": {
+          "title": "İlerleme paneli",
+          "noData": "Gösterilecek veri yok",
+          "noPractice": "Pratik yok",
+          "minutesShort": "dk",
+          "hoursShort": "sa",
+          "noActivity": "Etkinlik yok",
+          "fiveMinutes": "5 dk",
+          "tenMinutes": "10 dk",
+          "fifteenMinutes": "15+ dakika"
+        }
+      },
+      "progressChart": {
+        "general": {
+          "noData": "Gösterilecek veri yok"
+        }
+      },
+      "authBanner": {
+        "general": {
+          "message": "İstatistiklerinizi görmek için oturum açın.",
+          "signIn": "Oturum aç"
+        }
+      },
+      "recommendationsList": {
+        "general": {
+          "title": "İlerleme paneli",
+          "signIn": "Oturum aç",
+          "noRecommendations": "Öneri bulunmuyor."
+        }
+      },
+      "weakKeysPanel": {
+        "general": {
+          "title": "İlerleme paneli",
+          "overallAccuracy": "Genel doğruluk",
+          "weakestKey": "En zayıf tuş",
+          "lowestAccuracy": "En düşük doğruluk"
+        }
+      }
+    },
+    "friends": {
+      "friendsSnapshot": {
+        "general": {
+          "title": "Arkadaşlar",
+          "description": "Kaç arkadaşınızın çevrimiçi olduğunu görün ve ayrıntılı panele geçin.",
+          "openFriends": "Arkadaşları aç",
+          "totalFriends": "Arkadaşlar",
+          "onlineNow": "şu anda çevrimiçi",
+          "noFriendsYet": "Henüz hiç arkadaş eklemediniz"
+        }
+      }
+    },
+    "layout": {
+      "footer": {
+        "general": {
+          "product": "Ürün",
+          "lessons": "Dersler",
+          "ranking": "Sıralama",
+          "progress": "İlerleme",
+          "project": "Proje",
+          "aboutKisoDesk": "Kiso Desk Hakkında",
+          "github": "GitHub",
+          "legal": "Hukuki",
+          "privacyPolicy": "Gizlilik Politikası",
+          "termsOfUse": "Kullanım Koşulları",
+          "cookiePolicy": "Çerez Politikası",
+          "contact": "İletişim",
+          "copyright": "© {year} Kiso Desk."
+        }
+      },
+      "header": {
+        "general": {
+          "defaultUser": "Kullanıcı",
+          "skipToMainContent": "Ana içeriğe geç",
+          "courses": "Kurslar",
+          "userMenu": "Kullanıcı menüsü",
+          "profile": "Profilim",
+          "logout": "Oturumu kapat",
+          "menuToggle": "Menüyü aç",
+          "login": "Oturum aç",
+          "register": "Kaydol"
+        }
+      },
+      "sidebar": {
+        "general": {
+          "dashboard": "Kontrol paneli",
+          "courses": "Kurslar",
+          "practice": "Pratik",
+          "ranking": "Sıralama",
+          "friends": "Arkadaşlar",
+          "profile": "Profil",
+          "menuToggle": "Gezinme menüsü",
+          "expand": "Genişlet",
+          "collapse": "Daralt"
+        }
+      }
+    },
+    "legal": {
+      "cookieBanner": {
+        "general": {
+          "title": "Çerezler ve Yerel Depolama Politikası",
+          "description": "Uygulamanın mevcut durumunda analiz çerezleri, reklam ağları, yeniden pazarlama veya diğer zorunlu olmayan izleme sistemleri kullanılmamaktadır.",
+          "privacyNotice": "Gizlilik Politikası",
+          "cookiePolicy": "Çerezler ve Yerel Depolama Politikası",
+          "accept": "Kabul et",
+          "reject": "Reddet"
+        }
+      }
+    },
+    "lessons": {
+      "handReference": {
+        "general": {
+          "handReference": "Klavyede el konumu referansı"
+        }
+      },
+      "keyboardDetectionWizard": {
+        "general": {
+          "title": "Klavye düzeni algılayıcı",
+          "subtitle": "Birkaç fiziksel tuşa basarak klavye düzeninizi algılayın ve uygulamanın tamamında kullanın.",
+          "modalTitle": "Düzeni algıla",
+          "currentLayout": "Mevcut düzen",
+          "start": "Algılamayı başlat",
+          "progress": "En fazla {total} adımın {current}. adımı",
+          "progressHint": "Daha erken tamamlanabilir",
+          "progressLabel": "Algılama ilerlemesi",
+          "back": "Geri",
+          "cancel": "İptal",
+          "close": "Kapat",
+          "intro": {
+            "title": "Klavyenizi algılayalım",
+            "help": "Fiziksel klavyenizde yalnızca 1 ile 5 tuşa basmanız yeterlidir."
+          },
+          "capture": {
+            "focus": "Buraya tıklayın ve belirtilen tuşa basın",
+            "instruction": "Bastığınız tuş yalnızca düzeni algılamak için kullanılacaktır.",
+            "captured": "Algılanan tuş: {key}",
+            "deadKey": "aksan tuşu"
+          },
+          "questions": {
+            "rightOfL": {
+              "title": "L tuşunun hemen sağındaki tuşa basın",
+              "help": "Shift kullanmayın. Üzerinde farklı bir simge yazsa bile tuşun fiziksel konumuna göre hareket edin."
+            },
+            "leftOfBackspace": {
+              "title": "Backspace tuşunun hemen solundaki tuşa basın",
+              "help": "Shift kullanmayın. Sayı satırındaki tuşu kullanın."
+            },
+            "shiftDigit2": {
+              "title": "Shift'i basılı tutup 2 tuşuna basın",
+              "help": "Sayısal tuş takımını değil, sayı satırındaki 2 tuşunu kullanın."
+            },
+            "sixthTopRow": {
+              "title": "Üst sıradaki altıncı harf tuşuna basın",
+              "help": "Tab tuşundan sonraki ilk harf tuşundan başlayarak sayın. Shift kullanmayın."
+            },
+            "firstTopRow": {
+              "title": "Tab tuşundan sonraki ilk harf tuşuna basın",
+              "help": "Tuşun fiziksel konumuna göre hareket edin. Shift kullanmayın."
+            },
+            "quoteKey": {
+              "title": "Tırnak tuşuna basın",
+              "help": "Shift kullanmayın. Tuşun fiziksel konumuna göre hareket edin."
+            },
+            "shiftDigit3": {
+              "title": "Shift'i basılı tutup 3 tuşuna basın",
+              "help": "Sayısal tuş takımını değil, sayı satırındaki 3 tuşunu kullanın."
+            }
+          },
+          "errors": {
+            "composition": "Klavye metin oluşturma sürecindeyken bir düzeni belirleyemiyoruz.",
+            "unidentified": "Bu tuş tanımlanamadı. Tekrar deneyin.",
+            "alt-graph": "Bu tuşa basarken AltGr kullanmayın.",
+            "modified": "Bu tuşa basarken değiştirici tuş kullanmayın.",
+            "wrongKey": "Farklı bir tuşa bastınız. Yukarıda belirtilen konumdaki tuşa basın.",
+            "shiftRequired": "Bu tuşa basarken Shift'i basılı tutun.",
+            "shiftNotRequired": "Bu tuşa Shift kullanmadan basın.",
+            "saveFailed": "Düzen kaydedilemedi. Bağlantınızı kontrol edip tekrar deneyin."
+          },
+          "result": {
+            "detectedTitle": "Algılanan düzen",
+            "confidence": "Algılama güveni: {confidence}",
+            "useDetected": "Bu düzeni kullan",
+            "unidentifiedTitle": "Klavye düzeniniz belirlenemedi",
+            "unidentifiedHelp": "Klavyenize karşılık gelen düzeni elle seçin.",
+            "fallbackTitle": "Yeterli güven düzeyiyle algılanamadı",
+            "fallbackHelp": "En yakın eşleşmelerden birini seçin veya mevcut tüm düzenleri görüntüleyin.",
+            "chooseManually": "Elle seç",
+            "retryDetection": "Algılamayı yeniden dene"
+          },
+          "manual": {
+            "title": "Düzeninizi seçin",
+            "help": "Klavyenizdeki tuşlara karşılık gelen düzeni seçin."
+          },
+          "saved": {
+            "title": "Düzen kaydedildi",
+            "description": "Artık uygulamanın tamamında {layout} kullanılacak.",
+            "continueToCourses": "Kurslara devam et",
+            "returnToPractice": "Pratiğe dön"
+          },
+          "physicalFamily": {
+            "title": "Klavyenizin biçimi",
+            "subtitle": "Klavyeyi doğru görüntülemek için tuşların biçimini belirleyin.",
+            "enterQuestion": "Enter tuşunuzun biçimi nedir?",
+            "enterHorizontal": "Yatay Enter",
+            "enterIso": "Standart ISO Enter",
+            "enterBigAss": "ISO BA Enter",
+            "abntQuestion": "/ ile sağ Shift arasında kaç tuş var?",
+            "eastAsianQuestion": "0 ile Backspace arasında kaç tuş var?",
+            "eastAsianCountQuestion": "Boşluk ile sağ Alt arasında kaç tuş var?",
+            "complete": "Klavye biçimi belirlendi: {family}"
+          }
+        }
+      },
+      "keyboard": {
+        "general": {
+          "virtualKeyboard": "Sanal klavye"
+        }
+      },
+      "lessonCard": {
+        "general": {
+          "ariaLabel": "Derse git",
+          "wpm": "WPM",
+          "score": "Puan",
+          "accuracy": "Doğruluk",
+          "time": "Süre",
+          "placeholder": "—",
+          "secondsShort": "sn",
+          "minutesShort": "dk",
+          "minutesCompact": "dk",
+          "approxPrefix": "~",
+          "rankLabel": "Rütbe",
+          "gradeLabel": "Not",
+          "completed": "Tamamlandı",
+          "explanatoryBadge": "Açıklamalı ders",
+          "explanatoryLesson": "Açıklamalı ders",
+          "objectiveAccuracy": "Hedef: %{minAccuracy} doğruluk",
+          "mastered": "Ustalaşıldı",
+          "inProgress": "Devam ediyor",
+          "lessonOrderRecommendationTitle": "Önerilen sırayı izleyin",
+          "lessonOrderRecommendationDescription": "Kademeli ilerlemek için derslerin varsayılan sırasını izlemenizi öneririz.",
+          "lessonOrderRecommendationBack": "Geri dön",
+          "lessonOrderRecommendationContinue": "Devam et",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Acemi",
+            "scout": "İzci",
+            "ranger": "Korucu",
+            "veteran": "Kıdemli",
+            "elite": "Elit",
+            "legend": "Efsane"
+          },
+          "gradesDescriptions": {
+            "novice": "Temel seviye",
+            "scout": "İlk ilerleme",
+            "ranger": "İyi hâkimiyet",
+            "veteran": "İleri seviye",
+            "elite": "Uzman",
+            "legend": "En yüksek seviye"
+          }
+        }
+      },
+      "personalizedLessonCard": {
+        "general": {
+          "title": "Önerilen pratik",
+          "noData": "Gösterilecek veri yok",
+          "error": "Önerileriniz yüklenemedi. Tekrar deneyin.",
+          "retry": "Tekrar dene",
+          "insufficientData": "Güçlendirmeniz gereken tuşları belirlemek için daha fazla pratik yapın.",
+          "noCourse": "Bu dil için henüz bir yazma kursu bulunmuyor.",
+          "noLessons": "Bu kursta henüz kullanılabilir ders yok.",
+          "description": "Belirlenen zayıf noktalarınıza göre.",
+          "weakKeys": "Son oturumlarınızda doğruluğu en düşük olan tuşlar.",
+          "noMatches": "Bu kursta zayıf tuşlarınızla ilgili henüz ders yok.",
+          "worksKeys": "Pratik yapın: {keys}"
+        }
+      },
+      "results": {
+        "general": {
+          "saveWarning": "Sonuçlar kaydedilemedi",
+          "wpm": "WPM",
+          "score": "Puan",
+          "accuracy": "Doğruluk",
+          "correctChars": "Doğru karakterler",
+          "lowResultTitle": "Sonucunuz biraz düşük",
+          "lowResultMessage": "Gelişmeye devam etmek için yazma kursunu tamamlamayı değerlendirin.",
+          "lowResultCourseLink": "Yazma kursuna git",
+          "accuracyFocusTitle": "Doğruluğa öncelik verin",
+          "accuracyFocusMessage": "İyi ilerliyorsunuz. Hızınızı artırmadan önce en az %95 doğruluğa ulaşmaya çalışın.",
+          "masteredResult": "Derste ustalaşıldı",
+          "masteredMessage": "Doğruluk ölçütünü karşıladınız ve devam edebilirsiniz.",
+          "needsReview": "Tekrar gerekli",
+          "reviewMessage": "Hedef: en az %{minAccuracy} doğruluk. Hızınızı azaltın ve bölümü tekrarlayın.",
+          "rankLabel": "Rütbe",
+          "gradeLabel": "Not",
+          "retryAriaLabel": "Dersi yeniden dene",
+          "retry": "Tekrar dene",
+          "next": "Sonraki",
+          "newText": "Yeni metin",
+          "backToCourses": "Kurslara dön",
+          "backToDashboard": "Kontrol paneline dön",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Acemi",
+            "scout": "İzci",
+            "ranger": "Korucu",
+            "veteran": "Kıdemli",
+            "elite": "Elit",
+            "legend": "Efsane"
+          },
+          "gradesDescriptions": {
+            "novice": "Temel seviye",
+            "scout": "İlk ilerleme",
+            "ranger": "İyi hâkimiyet",
+            "veteran": "İleri seviye",
+            "elite": "Uzman",
+            "legend": "En yüksek seviye"
+          }
+        }
+      },
+      "typingArea": {
+        "general": {
+          "wpm": "WPM",
+          "score": "Puan",
+          "accuracy": "Doğruluk",
+          "characters": "Karakterler",
+          "backspace": "Backspace",
+          "backspaceEnabled": "Geri silme etkin",
+          "backspaceDisabled": "Geri silme kilitli",
+          "font": "Yazı tipi",
+          "size": "Boyut",
+          "pixels": "px",
+          "fontAndSize": "Yazı tipi ve boyut",
+          "textToType": "Yazılacak metin",
+          "inactivityPaused": "Etkinlik olmadığı için duraklatıldı",
+          "clickToResume": "Devam etmek için tıklayın",
+          "congratulations": "Tebrikler! Hız: {wpm} WPM, Doğruluk: %{accuracy}",
+          "detectKeyboard": "Klavyeyi algıla",
+          "keyboardConfigTitle": "Klavye yapılandırması",
+          "keyboardPreferenceMissing": "Kaydedilmiş bir klavye tercihi yok. Klavye yapılandırmasından değiştirebilirsiniz.",
+          "recommendedKeyboardLayout": "Önerilen klavye düzeni: {layout}",
+          "useRecommendedKeyboardLayout": "Düzeni değiştir",
+          "detectionHelp": "Mevcut düzeninizi otomatik olarak belirleyin ve tüm pratiklerde kullanın.",
+          "identifyKeyboardShape": "Biçimi belirle",
+          "keyboardShapeHeading": "Klavyenizin biçimi",
+          "logicalDistributionHeading": "Mantıksal düzen",
+          "logicalDistributionHint": "klavye karakterleri"
+        }
+      }
+    },
+    "ui": {
+      "themeToggle": {
+        "general": {
+          "switchToLight": "Tema",
+          "switchToDark": "Tema"
+        }
+      }
+    },
+    "i18n": {
+      "languageSwitcher": {
+        "general": {
+          "interfaceLanguage": "Arayüz dili"
+        }
+      }
+    }
+  },
+  "general": {
+    "Accessibility": {
+      "button": "Düğme",
+      "expandMenu": "Menüyü genişlet",
+      "collapseMenu": "Menüyü daralt"
+    },
+    "Common": {
+      "loading": "Yükleniyor...",
+      "retry": "Tekrar dene",
+      "close": "Kapat"
+    }
+  },
+  "lessonid": {
+    "general": {
+      "lockedLesson": "Kilitli ders",
+      "lockedLessonDescription": "Devam etmeden önce önceki etkinlikte ustalaşın.",
+      "backToLessons": "Derslere dön",
+      "lessonNotFound": "Ders bulunamadı",
+      "typeTheTextBelow": "Aşağıdaki metni yazın",
+      "hideKeyboard": "Klavyeyi gizle",
+      "showKeyboard": "Klavyeyi göster",
+      "exitPractice": "Pratikten çık",
+      "saveError": "Sonuç kaydedilirken hata oluştu",
+      "saveErrorMessage": "Sonuçlarınız ekranda gösteriliyor ancak ilerlemenize kaydedilmedi. Bağlantı kullanılabilir olduğunda dersi tekrar deneyin.",
+      "audioGuide": "Açıklamayı dinle",
+      "audioUnsupported": "Tarayıcınız bu ses kaydını oynatamıyor.",
+      "experimentalGreetings": {
+        "lessonPosition": "Ders {current}/{total}",
+        "supportContent": "Destekleyici içerik",
+        "englishColumn": "İngilizce",
+        "spanishColumn": "İspanyolca",
+        "continue": "Devam et",
+        "dialogue": "Diyalog",
+        "selectEnglishFirst": "Önce İngilizce bir seçenek belirleyin",
+        "tryAgain": "Tekrar deneyin",
+        "correct": "Doğru",
+        "complete": "Etkinlik tamamlandı"
+      },
+      "manualAudioPlay": "Dinle",
+      "manualAudioReplay": "Tekrar dinle",
+      "lessonAudio": "Ders sesi",
+      "interactions": {
+        "dictationPrompt": "Duyduğunuzu yazın",
+        "unitProgress": "Ünite ilerlemesi",
+        "stepProgress": "4 adımdan {step}. adım {current}",
+        "currentStep": "geçerli",
+        "reviewTask": "3 görevden {current}. görev",
+        "completedPairs": "Tamamlanan eşleştirmeler",
+        "availableOptions": "Kullanılabilir seçenekler",
+        "options": "Seçenekler",
+        "answer": "Yanıt",
+        "check": "Kontrol et",
+        "undo": "Geri al",
+        "correct": "Doğru",
+        "incorrect": "Henüz değil. Doğru yanıt: {answer} {detail}",
+        "spellingFeedback": "Yazım: kelime iki harf içerir veya başında",
+        "sentenceFeedback": "Başlangıç büyük harfi ve noktalama: her cümleyi kontrol edin",
+        "dictationFeedback": "Dikte: her kelimeyi dinleyin ve noktalama işaretlerini koruyun",
+        "correctAnswer": "Doğru yanıt",
+        "nextTask": "Sonraki görev"
+      }
+    }
+  },
+  "courses": {
+    "general": {
+      "title": "Kurslar",
+      "subtitle": "Kurslarımızı keşfedin ve yazma becerinizi geliştirin",
+      "searchPlaceholder": "Kurslarda ara...",
+      "allLevels": "Tüm seviyeler",
+      "beginner": "Başlangıç",
+      "intermediate": "Orta",
+      "advanced": "İleri",
+      "guestModeMessage": "İlerlemenizi kaydetmek için oturum açın",
+      "signIn": "Oturum aç",
+      "retry": "Tekrar dene",
+      "noCourseYetTitle": "Henüz kullanılabilir kurs yok",
+      "noCourseYetDescription": "Bu dil için kurslar hazırlıyoruz. Yakında tekrar kontrol edin.",
+      "noCourses": "Kurs bulunamadı",
+      "all": "Tüm kurslar",
+      "completed": "Tamamlananlar",
+      "notCompleted": "Tamamlanmayanlar"
+    }
+  },
+  "lessons": {
+    "general": {
+      "title": "Dersler",
+      "subtitle": "Seviyenize uyarlanmış derslerle pratik yapın",
+      "searchPlaceholder": "Derslerde ara...",
+      "allDifficulties": "Tüm zorluklar",
+      "beginner": "Başlangıç",
+      "intermediate": "Orta",
+      "advanced": "İleri",
+      "guestModeMessage": "İlerlemenizi kaydetmek için oturum açın",
+      "signIn": "Oturum aç",
+      "retry": "Tekrar dene",
+      "errorTitle": "Dersler yüklenirken hata oluştu",
+      "noLessonsTitle": "Kullanılabilir ders yok",
+      "noLessonsDescription": "Bu kursta henüz ders yok. Daha sonra tekrar deneyin veya yöneticiyle iletişime geçin.",
+      "noCompletedLessonsTitle": "Henüz hiçbir dersi tamamlamadınız",
+      "noCompletedLessonsDescription": "Bu listede görmek için bir dersi tamamlayın.",
+      "noPendingLessonsTitle": "Bekleyen dersiniz yok",
+      "noPendingLessonsDescription": "Bu kurstaki tüm dersler tamamlanmış görünüyor.",
+      "all": "Tüm dersler",
+      "completed": "Tamamlananlar",
+      "notCompleted": "Tamamlanmayanlar",
+      "moduleLabel": "Modül {order}",
+      "masteredCount": "{mastered}/{total} ustalaşıldı"
+    }
+  },
+  "dashboard": {
+    "general": {
+      "title": "İlerleme paneli",
+      "subtitle": "İlerlemenizi ve yazma istatistiklerinizi görüntüleyin",
+      "averageWpm": "Ortalama WPM",
+      "wordsPerMinute": "Dakikadaki kelime",
+      "averageAccuracy": "Ortalama doğruluk",
+      "accuracy": "Doğruluk",
+      "totalPracticeTime": "Toplam pratik süresi",
+      "thisWeek": "Bu hafta",
+      "weeklyWpmProgress": "Haftalık WPM ilerlemesi",
+      "monthlyWpmProgress": "Aylık WPM ilerlemesi",
+      "noData": "Veri bulunmuyor",
+      "bestWpm": "En iyi WPM",
+      "grossWpm": "Brüt WPM",
+      "record": "Rekor",
+      "streak": "Seri",
+      "days": "gün",
+      "consecutivePractice": "Aralıksız pratik",
+      "totalKeystrokes": "Toplam tuş vuruşu",
+      "typed": "Yazılan",
+      "recommendations": "Size özel öneriler",
+      "recommendation1": "Hızınızı artırmak için orta seviye derslerle pratik yapın.",
+      "recommendation2": "Doğruluğunuzu %95'in üzerinde tutmaya çalışın.",
+      "recommendation3": "Serinizi korumak için günde en az bir ders tamamlayın.",
+      "retry": "Tekrar dene",
+      "error": "Hata",
+      "completedText": "% tamamlandı",
+      "completedTitle": "Dersler / Kurslar",
+      "lessons": "ders",
+      "courses": "kurs",
+      "completedLessons": "Tamamlanan dersler",
+      "completedCourses": "Tamamlanan kurslar",
+      "guestModeMessage": "İlerlemenizi görmek için oturum açın",
+      "signIn": "Oturum aç",
+      "recommendationsGuest": "İlerlemenize dayalı kişiselleştirilmiş öneriler almak için oturum açın.",
+      "weakKeys": "Zayıf tuşlar",
+      "errorTrends": "Hata eğilimi",
+      "fingerDistribution": "Parmaklara göre dağılım",
+      "personalizedPractice": "Kişiselleştirilmiş pratik",
+      "personalizedPracticeDesc": "Zayıf noktalarınıza göre kişiselleştirilmiş dersler alın.",
+      "signInToSee": "İstatistiklerinizi görmek için oturum açın",
+      "noDataYet": "Zayıf noktalarınızı görmek için dersleri tamamlayın"
+    }
+  },
+  "practice": {
+    "general": {
+      "title": "Yazma testi",
+      "subtitle": "Kişiselleştirilmiş metinlerle hızınızı ve doğruluğunuzu geliştirin",
+      "freeTitle": "Yazma hızı testi",
+      "freeSubtitle": "Kısa bir metinle yazmayı deneyin ve hızınızı ile doğruluğunuzu keşfedin.",
+      "adaptiveTitle": "En çok hata yaptığınız tuşları çalışın",
+      "adaptiveSubtitle": "En çok hataya neden olan karakterlere odaklanın ve daha doğru yazın.",
+      "session": "Pratik oturumu",
+      "newText": "Yeni metin",
+      "perKeyStats": "Tuş bazında istatistikler (yakında)",
+      "loadingText": "Metin yükleniyor...",
+      "errorLoadingText": "Metin yüklenirken hata oluştu.",
+      "errorTitle": "Metin yüklenemedi",
+      "retry": "Tekrar dene",
+      "saving": "Sonuçlar kaydediliyor...",
+      "errorSavingResult": "Sonuçlar kaydedilirken hata oluştu.",
+      "saveWarning": "Sonuçlar kaydedilemedi",
+      "backToDashboard": "Kontrol paneline dön",
+      "guestSavePrompt": "İlerlemenizi kaydetmek ve gelişmeye devam etmek için oturum açın.",
+      "signInToSave": "Oturum aç",
+      "guestPlaceholder": "—",
+      "guestAdaptiveReason": "Bu cihazda kaydedilen hatalara göre",
+      "adaptiveKeys": "Tuşlar: {keys}",
+      "adaptiveBigrams": "Bigramlar: {bigrams}",
+      "modeRandom": "Serbest metin",
+      "modeWords": "Önerilen alıştırma",
+      "modeText": "Uyarlanabilir metin",
+      "adaptivePracticeKeys": "Alıştırmadaki tuşlar"
+    }
+  },
+  "notFound": {
+    "general": {
+      "title": "Sayfa bulunamadı",
+      "description": "Üzgünüz, aradığınız sayfa mevcut değil veya taşınmış.",
+      "backHome": "Ana sayfaya dön",
+      "dashboard": "Kontrol paneli",
+      "lessons": "Dersler",
+      "ranking": "Sıralama"
+    }
+  }
+}

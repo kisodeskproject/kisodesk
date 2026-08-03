@@ -1,0 +1,533 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ================================
+// ENUMS
+// ================================
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum AuthProvider {
+  PASSWORD
+  GOOGLE
+}
+
+enum LanguageCode {
+  es
+  en
+  pt
+  fr
+  cs
+  da
+  de
+  hr
+  hu
+  it
+  nl
+  no
+  pl
+  ro
+  sv
+  tr
+}
+
+enum LayoutCode {
+  QWERTY_US
+  QWERTY_US_INTL
+  QWERTY_ES
+  QWERTY_LATAM
+  QWERTY_UK
+  QWERTY_CA_MULTILINGUAL
+  QWERTY_BR
+  QWERTY_PT
+  QWERTY_IT
+  AZERTY
+  QWERTZ
+  QWERTZ_CS
+  QWERTY_DA
+  QWERTZ_HR
+  QWERTZ_HU
+  QWERTY_NL
+  QWERTY_NO
+  QWERTY_PL
+  QWERTY_RO
+  QWERTY_SV
+  QWERTY_TR
+  DVORAK
+  COLEMAK
+}
+
+enum CourseLevel {
+  BEGINNER
+  INTERMEDIATE
+  ADVANCED
+}
+
+enum LessonType {
+  practice
+  explanatory
+}
+
+enum LessonProgressStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  COMPLETED
+  MASTERED
+  REVIEW_DUE
+}
+
+enum ErrorSessionType {
+  LESSON
+  PRACTICE
+}
+
+enum FriendshipStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  BLOCKED
+}
+
+// ================================
+// MODELOS
+// ================================
+
+model User {
+  id                    String        @id @default(uuid())
+  email                 String        @unique
+  name                  String
+  passwordHash          String?       @map("password_hash")
+  authProvider          AuthProvider  @default(PASSWORD) @map("auth_provider")
+  googleId              String?       @unique @map("google_id")
+  emailVerified         Boolean       @default(false) @map("email_verified")
+  sessionVersion        Int           @default(0) @map("session_version")
+  role                  Role          @default(USER)
+  interfaceLanguage     LanguageCode? @map("interface_language")
+  language              LanguageCode?
+  countryCode           String?       @map("country_code")
+  countryName           String?       @map("country_name")
+  publicAlias           String?       @unique @map("public_alias")
+  showInRanking         Boolean       @default(true) @map("show_in_ranking")
+  searchableByAlias     Boolean       @default(true) @map("searchable_by_alias")
+  showPresenceToFriends Boolean       @default(true) @map("show_presence_to_friends")
+  shareStatsWithFriends Boolean       @default(true) @map("share_stats_with_friends")
+  allowFriendRequests   Boolean       @default(true) @map("allow_friend_requests")
+  termsAcceptedAt       DateTime?     @map("terms_accepted_at")
+  privacyAcceptedAt     DateTime?     @map("privacy_accepted_at")
+  layout                LayoutCode?
+  accessibility         Json?
+  bestGrossWpm          Int?          @map("best_gross_wpm")
+  createdAt             DateTime      @default(now()) @map("created_at")
+  updatedAt             DateTime      @updatedAt @map("updated_at")
+  lastLoginAt           DateTime?     @map("last_login_at")
+
+  lessonProgress      UserLessonProgress[]
+  typingErrors        TypingError[]
+  errorSessions       ErrorSession[]
+  keyStats            KeyStat[]
+  bigramStats         BigramStat[]
+  keyLayoutStats      KeyLayoutStat[]
+  practiceSessions    PracticeSession[]
+  lessonAttempts      LessonAttempt[]
+  practiceDays        PracticeDay[]
+  refreshTokens       RefreshToken[]
+  passwordResetTokens PasswordResetToken[]
+  rankingCache        UserRankingCache[]
+  presence            UserPresence?
+  friendshipsSent     Friendship[]         @relation("FriendshipsRequested")
+  friendshipsReceived Friendship[]         @relation("FriendshipsReceived")
+
+  @@map("users")
+}
+
+model Course {
+  id                String       @id @default(uuid())
+  name              String
+  slug              String       @unique
+  description       String?
+  languageCode      LanguageCode @map("language_code")
+  localeCode        String       @default("es-latam") @map("locale_code")
+  level             CourseLevel  @default(BEGINNER)
+  supportedLayouts  LayoutCode[] @default([]) @map("supported_layouts")
+  curriculumVersion Int          @default(1) @map("curriculum_version")
+  estimatedMinutes  Int?         @map("estimated_minutes")
+  createdAt         DateTime     @default(now()) @map("created_at")
+  updatedAt         DateTime     @updatedAt @map("updated_at")
+
+  courseLessons CourseLesson[]
+
+  @@map("courses")
+}
+
+model Lesson {
+  id                         String     @id @default(uuid())
+  title                      String?
+  slug                       String     @unique
+  content                    String
+  type                       LessonType @default(practice)
+  description                String?
+  objective                  String?
+  instructions               String?
+  fingerPositions            Json?
+  targetKeys                 Json?
+  focusKeys                  String[]   @default([]) @map("focus_keys")
+  reviewKeys                 String[]   @default([]) @map("review_keys")
+  allowedCharacters          String[]   @default([]) @map("allowed_characters")
+  difficulty                 Int        @default(1)
+  estimatedSeconds           Int        @default(60) @map("estimated_seconds")
+  minAccuracy                Int        @default(95) @map("min_accuracy")
+  maxTargetKeyErrors         Int?       @map("max_target_key_errors")
+  requiredSuccessfulAttempts Int        @default(1) @map("required_successful_attempts")
+  hideLiveWpm                Boolean    @default(false) @map("hide_live_wpm")
+  mediaUrl                   String?
+  audioUrl                   String?    @map("audio_url")
+  createdAt                  DateTime   @default(now()) @map("created_at")
+  updatedAt                  DateTime   @updatedAt @map("updated_at")
+
+  courseLessons CourseLesson[]
+  progress      UserLessonProgress[]
+  typingErrors  TypingError[]
+  errorSessions ErrorSession[]
+  attempts      LessonAttempt[]
+
+  @@map("lessons")
+}
+
+model CourseLesson {
+  id                String  @id @default(uuid())
+  courseId          String  @map("course_id")
+  lessonId          String  @map("lesson_id")
+  order             Int
+  moduleSlug        String? @map("module_slug")
+  moduleTitle       String? @map("module_title")
+  moduleDescription String? @map("module_description")
+  moduleOrder       Int?    @map("module_order")
+  required          Boolean @default(true)
+
+  course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  lesson Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@unique([courseId, order])
+  @@unique([courseId, lessonId])
+  @@map("course_lessons")
+}
+
+model UserLessonProgress {
+  id       String @id @default(uuid())
+  userId   String @map("user_id")
+  user     User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lessonId String @map("lesson_id")
+  lesson   Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  localeCode String @default("es-latam") @map("locale_code")
+
+  bestNetWpm          Int                  @map("best_net_wpm")
+  bestGrossWpm        Int                  @map("best_gross_wpm")
+  bestAccuracy        Int                  @map("best_accuracy")
+  timeElapsed         Int                  @map("time_elapsed")
+  bestScore           Int                  @map("best_score")
+  achievedAt          DateTime             @map("achieved_at")
+  status              LessonProgressStatus @default(IN_PROGRESS)
+  attemptsCount       Int                  @default(0) @map("attempts_count")
+  successfulAttempts  Int                  @default(0) @map("successful_attempts")
+  latestNetWpm        Int                  @default(0) @map("latest_net_wpm")
+  latestAccuracy      Int                  @default(0) @map("latest_accuracy")
+  bestQualifiedNetWpm Int                  @default(0) @map("best_qualified_net_wpm")
+  masteredAt          DateTime?            @map("mastered_at")
+  nextReviewAt        DateTime?            @map("next_review_at")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@unique([userId, lessonId, localeCode])
+  @@index([userId, localeCode])
+  @@map("user_lesson_progress")
+}
+
+model LessonAttempt {
+  id             String   @id @default(uuid())
+  userId         String   @map("user_id")
+  lessonId       String   @map("lesson_id")
+  netWpm         Int      @map("net_wpm")
+  grossWpm       Int      @map("gross_wpm")
+  accuracy       Int
+  timeElapsed    Int      @map("time_elapsed")
+  qualified      Boolean  @default(false)
+  usedAssistance Boolean  @default(false) @map("used_assistance")
+  physicalEvents Json?    @map("physical_events")
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+  @@index([lessonId])
+  @@index([userId, lessonId, createdAt])
+  @@map("lesson_attempts")
+}
+
+model PracticeDay {
+  userId       String   @map("user_id")
+  date         DateTime
+  totalSeconds Int      @default(0) @map("total_seconds")
+  localeCode   String   @default("es-latam") @map("locale_code")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, date, localeCode])
+  @@index([userId, localeCode, date])
+  @@map("practice_days")
+}
+
+// ================================
+// SISTEMA DE SEGUIMIENTO DE ERRORES
+// ================================
+
+model TypingError {
+  id                String   @id @default(uuid())
+  userId            String   @map("user_id")
+  lessonId          String?  @map("lesson_id")
+  practiceSessionId String?  @map("practice_session_id")
+  expectedChar      String   @map("expected_char")
+  typedChar         String   @map("typed_char")
+  position          Int
+  createdAt         DateTime @default(now()) @map("created_at")
+
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson          Lesson?          @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  practiceSession PracticeSession? @relation(fields: [practiceSessionId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, createdAt])
+  @@index([userId, expectedChar])
+  @@index([lessonId])
+  @@index([practiceSessionId])
+  @@map("typing_errors")
+}
+
+model ErrorSession {
+  id                String           @id @default(uuid())
+  userId            String           @map("user_id")
+  lessonId          String?          @map("lesson_id")
+  practiceSessionId String?          @map("practice_session_id")
+  type              ErrorSessionType
+  duration          Int
+  totalKeystrokes   Int              @map("total_keystrokes")
+  totalErrors       Int              @map("total_errors")
+  netWpm            Int              @map("net_wpm")
+  grossWpm          Int              @map("gross_wpm")
+  accuracy          Int
+  createdAt         DateTime         @default(now()) @map("created_at")
+
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson          Lesson?          @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  practiceSession PracticeSession? @relation(fields: [practiceSessionId], references: [id], onDelete: Cascade)
+
+  @@unique([practiceSessionId])
+  @@index([userId])
+  @@index([userId, createdAt])
+  @@index([lessonId])
+  @@index([practiceSessionId])
+  @@map("error_sessions")
+}
+
+model KeyStat {
+  userId       String       @map("user_id")
+  languageCode LanguageCode @map("language_code")
+  localeCode   String       @default("es-latam") @map("locale_code")
+  keyChar      String       @map("key_char")
+  totalPresses Int          @default(0) @map("total_presses")
+  totalErrors  Int          @default(0) @map("total_errors")
+  errorRate    Float        @default(0) @map("error_rate")
+  lastErrorAt  DateTime?    @map("last_error_at")
+  updatedAt    DateTime     @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, languageCode, localeCode, keyChar])
+  @@index([userId, localeCode])
+  @@map("key_stats")
+}
+
+// ================================
+// MODELOS PARA PRÁCTICA LIBRE
+// ================================
+
+model PracticeSession {
+  id               String       @id @default(uuid())
+  userId           String       @map("user_id")
+  user             User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  netWpm           Int          @map("net_wpm")
+  grossWpm         Int          @map("gross_wpm")
+  accuracy         Int
+  timeElapsed      Int          @map("time_elapsed")
+  languageCode     LanguageCode @map("language_code")
+  localeCode       String       @default("es-latam") @map("locale_code")
+  layoutId         String?      @map("layout_id")
+  practiceTextId   String?      @map("practice_text_id")
+  keystrokes       Json?
+  telemetryVersion Int?         @map("telemetry_version")
+  telemetry        Json?        @map("telemetry")
+  derivedMetrics   Json?        @map("derived_metrics")
+  clientSessionId  String?      @map("client_session_id")
+  createdAt        DateTime     @default(now()) @map("created_at")
+
+  practiceText PracticeText? @relation(fields: [practiceTextId], references: [id])
+  typingErrors TypingError[]
+  errorSession ErrorSession?
+
+  @@unique([userId, clientSessionId])
+  @@index([userId])
+  @@index([createdAt])
+  @@index([userId, languageCode, createdAt])
+  @@index([userId, localeCode, createdAt])
+  @@index([userId, createdAt])
+  @@map("practice_sessions")
+}
+
+model PracticeText {
+  id           String       @id @default(uuid())
+  languageCode LanguageCode @map("language_code")
+  content      String       @db.Text
+  characterSet String[]     @default([]) @map("character_set")
+  wordIndex    String[]     @default([]) @map("word_index")
+  bigramIndex  String[]     @default([]) @map("bigram_index")
+  accentIndex  String[]     @default([]) @map("accent_index")
+  difficulty   String?
+  createdAt    DateTime     @default(now()) @map("created_at")
+
+  practiceSessions PracticeSession[]
+
+  @@map("practice_texts")
+}
+
+model BigramStat {
+  userId           String       @map("user_id")
+  languageCode     LanguageCode @map("language_code")
+  layoutId         String       @map("layout_id")
+  firstChar        String       @map("first_char")
+  secondChar       String       @map("second_char")
+  totalPresses     Int          @default(0) @map("total_presses")
+  totalErrors      Int          @default(0) @map("total_errors")
+  averageLatencyMs Float        @default(0) @map("average_latency_ms")
+  latencySamples   Int          @default(0) @map("latency_samples")
+  updatedAt        DateTime     @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, languageCode, layoutId, firstChar, secondChar])
+  @@index([userId, languageCode, layoutId, totalErrors])
+  @@map("bigram_stats")
+}
+
+model KeyLayoutStat {
+  userId       String       @map("user_id")
+  languageCode LanguageCode @map("language_code")
+  layoutId     String       @map("layout_id")
+  keyChar      String       @map("key_char")
+  totalPresses Int          @default(0) @map("total_presses")
+  totalErrors  Int          @default(0) @map("total_errors")
+  errorRate    Float        @default(0) @map("error_rate")
+  updatedAt    DateTime     @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, languageCode, layoutId, keyChar])
+  @@index([userId, languageCode, layoutId, errorRate])
+  @@map("key_layout_stats")
+}
+
+// ================================
+// MODELO PARA REFRESH TOKENS
+// ================================
+
+model RefreshToken {
+  id              String    @id @default(uuid())
+  tokenHash       String    @unique @map("token_hash")
+  userId          String    @map("user_id")
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  authenticatedAt DateTime  @map("authenticated_at")
+  expiresAt       DateTime  @map("expires_at")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  revokedAt       DateTime? @map("revoked_at")
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("refresh_tokens")
+}
+
+model PasswordResetToken {
+  id        String    @id @default(uuid())
+  tokenHash String    @unique @map("token_hash")
+  userId    String    @map("user_id")
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime  @map("expires_at")
+  usedAt    DateTime? @map("used_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("password_reset_tokens")
+}
+
+// ================================
+// MODELO PARA CACHÉ DE RANKING
+// ================================
+
+model UserRankingCache {
+  userId            String   @map("user_id")
+  languageCode      String
+  bestWpmNet        Int
+  bestGrossWpm      Int      @map("best_gross_wpm")
+  bestAccuracy      Int      @map("best_accuracy")
+  bestAchievedAt    DateTime @map("best_achieved_at")
+  bestSessionId     String   @map("best_session_id")
+  totalSessionsUsed Int
+  updatedAt         DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, languageCode])
+  @@index([languageCode, bestWpmNet(sort: Desc), bestAchievedAt, userId])
+  @@map("user_ranking_cache")
+}
+
+// ================================
+// AMIGOS Y PRESENCIA
+// ================================
+
+model UserPresence {
+  userId     String   @id @map("user_id")
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lastSeenAt DateTime @default(now()) @map("last_seen_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  @@map("user_presence")
+}
+
+model Friendship {
+  id          String           @id @default(uuid())
+  requesterId String           @map("requester_id")
+  requester   User             @relation("FriendshipsRequested", fields: [requesterId], references: [id], onDelete: Cascade)
+  addresseeId String           @map("addressee_id")
+  addressee   User             @relation("FriendshipsReceived", fields: [addresseeId], references: [id], onDelete: Cascade)
+  status      FriendshipStatus @default(PENDING)
+  acceptedAt  DateTime?        @map("accepted_at")
+  createdAt   DateTime         @default(now()) @map("created_at")
+  updatedAt   DateTime         @updatedAt @map("updated_at")
+
+  @@unique([requesterId, addresseeId])
+  @@index([requesterId, status])
+  @@index([addresseeId, status])
+  @@map("friendships")
+}

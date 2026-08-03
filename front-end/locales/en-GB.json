@@ -1,0 +1,1278 @@
+{
+  "marketing": {
+    "cookies": {
+      "metadata": {
+        "title": "Cookie and Local Storage Policy",
+        "description": "Information about cookies and local storage in Kiso Desk."
+      },
+      "general": {
+        "title": "Cookie and Local Storage Policy",
+        "contentsLabel": "Contents",
+        "relatedLabel": "Related documents",
+        "relatedPrivacy": "Privacy Policy",
+        "relatedTerms": "Terms of Use"
+      },
+      "definition": {
+        "title": "1. What are cookies and local storage?",
+        "paragraph1": "This application uses cookies and browser local storage for necessary service functions and to remember certain usage preferences.",
+        "paragraph2": "Cookies are small text files that websites store in your browser. They are used to remember information about your visit, such as your preferences or authentication status.",
+        "paragraph3": "Local storage, also known as localStorage, is a browser feature that allows data to be stored directly on your device. Unlike cookies, this data is not automatically sent to the server with every request and remains on your device until you, your browser, or your device settings delete it."
+      },
+      "data": {
+        "title": "2. Personal and technical data linked to these technologies",
+        "paragraph1": "To provide the typing service, the application may process personal or technical data linked to the use of cookies, local storage, and network requests.",
+        "paragraph2": "Metrics associated with registered accounts are stored by the service as described in the Privacy Notice. In guest mode, some progress and practice history may be stored locally in the browser.",
+        "paragraph3": "Local storage may contain interface preferences, the decision regarding non-essential technologies, and guest progress. It does not directly contain passwords or authentication tokens.",
+        "item1": "Session identifiers: stored in the access_token and refresh_token cookies, which allow the application to recognise your account, authenticate requests, and keep your session active.",
+        "item2": "IP address and technical connection data: transmitted when interacting with the server and when loading external resources, such as flag images from flagcdn.com.",
+        "item3": "Preferences and local data: may include the theme, keyboard layout, font, text size, keyboard visibility, decision regarding non-essential technologies, guest progress, and local history of texts used."
+      },
+      "necessaryCookies": {
+        "title": "3. Strictly necessary cookies (authentication)",
+        "paragraph1": "The application uses strictly necessary cookies to sign you in, maintain your identity while browsing, renew your session, and protect authenticated requests.",
+        "note": "These cookies are not used for advertising, remarketing, or commercial profiling.",
+        "tableHeaderName": "Name",
+        "tableHeaderPurpose": "Purpose",
+        "tableHeaderDuration": "Maximum duration",
+        "tableHeaderConfiguration": "Technical configuration",
+        "accessTokenName": "access_token",
+        "accessTokenPurpose": "Authenticate your requests and keep the access session active.",
+        "accessTokenDuration": "2 hours",
+        "accessTokenConfiguration": "HttpOnly, SameSite=Lax, Secure in production.",
+        "refreshTokenName": "refresh_token",
+        "refreshTokenPurpose": "Securely renew the session and allow it to be revoked.",
+        "refreshTokenDuration": "7 days",
+        "refreshTokenConfiguration": "HttpOnly, SameSite=Lax, Secure in production."
+      },
+      "localStorage": {
+        "title": "4. Local storage (user preferences)",
+        "paragraph1": "To personalise the experience and retain certain settings, the application stores information in the browser.",
+        "paragraph2": "This data remains on the device and is not automatically sent to the server with every request, although the application may read it to apply preferences or restore local progress.",
+        "tableHeaderKey": "Key",
+        "tableHeaderPurpose": "Purpose",
+        "tableHeaderDuration": "Duration",
+        "themeKey": "theme",
+        "themePurpose": "Remember your preference between light and dark mode.",
+        "themeDuration": "Persistent until manually deleted or overwritten.",
+        "keyboardLayoutKey": "typing-keyboard-layout",
+        "keyboardLayoutPurpose": "Remember the keyboard layout selected for exercises.",
+        "keyboardLayoutDuration": "Persistent until deleted or overwritten.",
+        "typingFontKey": "typing-font",
+        "typingFontPurpose": "Remember the font family used in exercises.",
+        "typingFontDuration": "Persistent until deleted or overwritten.",
+        "typingFontSizeKey": "typing-font-size",
+        "typingFontSizePurpose": "Remember the text size configured for exercises.",
+        "typingFontSizeDuration": "Persistent until deleted or overwritten."
+      },
+      "providers": {
+        "title": "5. External providers, processors, and possible transfers",
+        "paragraph1": "The application uses or may use external providers for necessary service functions, such as infrastructure, authentication, security, and resource delivery. Integrations prepared for future functions are not considered active until they are configured and placed into operation.",
+        "paragraph2": "When a provider processes personal data on behalf of Kiso Desk and under its instructions, it will act as a processor or service provider, as applicable.",
+        "paragraph3": "Kiso Desk uses Google Cloud Platform (GCP) infrastructure to host and operate technical components of the service. Data processed in that infrastructure is used to maintain accounts, preserve progress, and operate the platform.",
+        "paragraph4": "The application allows users to sign in with Google. In that flow, Kiso Desk receives only the authorised data necessary to authenticate the account, such as the Google identifier, email address, verification status, and profile name.",
+        "paragraph5": "The application uses flagcdn.com to load flag images. When those resources are requested, the provider may receive customary technical data, such as the IP address, user agent, date, time, and referrer URL.",
+        "paragraph6": "When data is disclosed or transferred to a third party other than a processor, it will be handled in accordance with applicable law, including cases necessary to provide the service, maintain the relationship with the user, protect rights, or comply with legal obligations.",
+        "paragraph7": "Cloudflare Turnstile may be used conditionally to prevent bots and abuse, which may involve Cloudflare processing technical connection data. Email-based recovery is prepared but is not active until an email provider is configured. Analytics cookies, advertising networks, remarketing, and other non-essential tracking systems are not currently used."
+      },
+      "legalBasis": {
+        "title": "6. Legal basis and privacy principles",
+        "paragraph1": "Processing associated with strictly necessary cookies is carried out to sign users in, keep sessions active, authenticate requests, and protect account operation.",
+        "paragraph2": "Kiso Desk processes data in accordance with applicable law. When information is necessary to provide the requested service or fulfil obligations arising from the relationship with the user, additional consent will not be requested unless required by applicable law.",
+        "paragraph3": "Kiso Desk also uses internationally recognised privacy principles as a reference, including transparency, purpose specification, data minimisation, accuracy, limited retention, security, user control, and accountability. This reference does not constitute certification or a statement of full compliance with foreign laws that do not apply.",
+        "paragraph4": "If non-essential technologies such as analytics, advertising, remarketing, or other tracking mechanisms are introduced in the future, this Policy will be updated and the corresponding consent will be requested before activation when necessary."
+      },
+      "arco": {
+        "title": "7. Data rights and withdrawal of consent",
+        "paragraph1": "You may request access to, correction, deletion, or objection regarding personal data associated with your account, and you may withdraw consent for processing activities that require it, where applicable.",
+        "paragraph2": "To exercise these rights, you may send a request to: kisodesk.project@gmail.com.",
+        "paragraph3": "The controller will communicate its decision within the applicable legal period and, when the request is granted, will implement it within the corresponding period.",
+        "paragraph4": "These periods may be extended when permitted by applicable law and justified by the circumstances.",
+        "paragraph5": "Withdrawal of consent will not affect processing previously carried out or processing that must continue because of a legal obligation, an ongoing relationship, security, the defence of rights, or necessary retention.",
+        "item1": "The alias or account identifier used in the application, if applicable.",
+        "item2": "The email address associated with your account.",
+        "item3": "A method for receiving notifications.",
+        "item4": "Reasonable information to verify your identity or ownership of the account, preferably through the associated email address. If acting through a representative, documentation proving their authority.",
+        "item5": "The right you wish to exercise: access, correction, deletion, objection, or withdrawal of consent.",
+        "item6": "A clear and precise description of the personal data involved in your request, such as the email address, alias, preferences, or typing metrics associated with the account.",
+        "item7": "For correction requests, the correct information and, where necessary, supporting information for the requested correction.",
+        "item8": "Any other information reasonably necessary to identify your account and properly address your request."
+      },
+      "management": {
+        "title": "8. How to manage and delete this data",
+        "paragraph1": "You can manage cookies, local storage, and your decision regarding non-essential technologies.",
+        "item1": "Sign out: when you sign out, the access_token and refresh_token authentication cookies are deleted from the browser.",
+        "item2": "Privacy and cookie preferences: you can review and change your decision regarding non-essential technologies from your profile. You can also delete cookies and local data through your browser settings.",
+        "item3": "Warning: blocking strictly necessary cookies may prevent you from signing in or using functions that require authentication."
+      },
+      "changes": {
+        "title": "9. Changes to this Policy",
+        "paragraph1": "The application may update this Policy to reflect legal, technical, or operational changes. Updates will be published on this page with the corresponding last-updated date.",
+        "paragraph2": "When changes are relevant, they will be communicated through a visible notice in the application, a cookie notice, or another available electronic method."
+      },
+      "contact": {
+        "title": "10. Contact",
+        "paragraph1": "If you have questions, wish to exercise your rights, or need information about data processing, you may write to kisodesk.project@gmail.com.",
+        "paragraph2": "To review the identity and contact information of the controller, general purposes, providers, retention, and other processing details, see the application's Privacy Notice."
+      }
+    },
+    "privacy": {
+      "metadata": {
+        "title": "Privacy Policy",
+        "description": "Information about how Kiso Desk processes personal data."
+      },
+      "general": {
+        "eyebrow": "Legal",
+        "title": "Privacy Notice",
+        "description": "Information about personal data processing under applicable law and internationally recognised privacy principles.",
+        "introduction": "This Notice explains what information Kiso Desk processes, how it is used, with whom it may be shared, and what controls users have. Reference to international principles does not constitute certification or a statement of full compliance with foreign laws that do not apply.",
+        "lastUpdatedLabel": "Last updated",
+        "lastUpdated": "23 July 2026",
+        "contentsLabel": "Contents",
+        "relatedLabel": "Related documents",
+        "relatedTerms": "Terms of Use",
+        "relatedCookies": "Cookie Policy"
+      },
+      "data": {
+        "title": "1. Data we process",
+        "sensitiveNote": "Kiso Desk does not request sensitive personal data. Accessibility or interface preferences are used only as functional application settings and are not intended to collect information about health, disability, ethnic origin, religion, political opinions, sexual orientation, or other sensitive data.",
+        "item1": "Account: email address, profile name when applicable, alias selected by the user, role, language, keyboard layout, and accessibility preferences.",
+        "item2": "Authentication: a password stored as a hash when the account is created with a password, or the data necessary to sign in with Google when that method is used.",
+        "item3": "Learning: courses, lessons, progress, speed, accuracy, practice time, errors, keys used, and events necessary to calculate typing metrics.",
+        "item4": "Social features: friendships, requests, blocks, presence, last connection, and shared statistics according to the available preferences.",
+        "item5": "Ranking: alias, speed, accuracy, level, practice language, position, and result date when applicable.",
+        "item6": "Technical data: IP address, user agent, logs, session identifiers, diagnostic data, and technical requests generated by the infrastructure or providers used.",
+        "item7": "Local data: theme, keyboard layout, font, text size, keyboard visibility, decision regarding non-essential technologies, guest progress, and local text history."
+      },
+      "purposes": {
+        "title": "2. How we use the data",
+        "item1": "Create and manage accounts and sessions.",
+        "item2": "Allow sign-in with a password or Google, depending on the method selected.",
+        "item3": "Provide lessons, save progress, and generate typing statistics.",
+        "item4": "Customise the keyboard layout, interface, font, text size, and other usage preferences.",
+        "item5": "Display general rankings and rankings by language.",
+        "item6": "Operate social features, including friendships, presence, last connection, and statistics visible according to account preferences.",
+        "item7": "Protect accounts, prevent abuse, detect unauthorised activity, and diagnose errors.",
+        "item8": "Allow data downloads and account deletion from the profile.",
+        "item9": "Respond to support, privacy, and security requests.",
+        "item10": "Comply with legal obligations and defend claims.",
+        "item11": "If Google AdSense is activated in the future, display and measure advertising, prevent fraud, and, where applicable, personalise ads with the information and consent required by applicable law."
+      },
+      "legalBasis": {
+        "title": "3. Basis and principles of processing",
+        "paragraph1": "Processing is carried out primarily to provide the requested service, manage accounts, maintain sessions, save progress, generate statistics, operate rankings and social features, allow data downloads or deletion, and protect the platform.",
+        "paragraph2": "Kiso Desk processes data in accordance with applicable law. When information is necessary to provide the service or fulfil obligations arising from the relationship with the user, additional consent will not be requested unless required by applicable law.",
+        "paragraph3": "Kiso Desk also uses internationally recognised privacy principles as a reference, including transparency, purpose specification, data minimisation, accuracy, limited retention, security, user control, and accountability. This reference does not constitute certification or a statement of full compliance with foreign laws that do not apply.",
+        "paragraph4": "For purposes that require consent, consent will be requested where appropriate and may be withdrawn without retroactive effect. If new purposes are added that are different from or unnecessary to provide the service, this Notice will be updated before the new processing begins when required."
+      },
+      "recipients": {
+        "title": "4. Providers and recipients",
+        "paragraph1": "Kiso Desk uses technology providers to operate infrastructure, hosting, authentication, resource delivery, and security. The email integration is prepared but is not active until a provider is configured.",
+        "paragraph2": "When these providers process personal data on behalf of Kiso Desk and under its instructions, they will act as processors or service providers and will use the information only to provide the contracted functions.",
+        "paragraph3": "Google Cloud Platform hosts and operates technical components of the service. Google also acts as an authentication provider when the user chooses to sign in with a Google account.",
+        "paragraph4": "The application loads flag images from flagcdn.com. When those resources are requested, the provider may receive customary technical data, such as the IP address, user agent, date, time, and referrer URL.",
+        "paragraph5": "Cloudflare Turnstile may be used conditionally to prevent bots and abuse. When activated, Cloudflare may receive technical connection data necessary to verify the request. Google AdSense and advertising are not active; before they are enabled, the information will be updated and the necessary controls will be applied.",
+        "paragraph6": "The data subject may object to disclosures or transfers that require consent by using the privacy email address. This objection will not affect disclosures or transfers necessary to provide the service, maintain the relationship with the user, protect rights, prevent abuse, or comply with legal obligations."
+      },
+      "transfers": {
+        "title": "5. Transfers and processing in other jurisdictions",
+        "paragraph1": "Kiso Desk may use technology providers located in different jurisdictions to host, operate, protect, and maintain the service.",
+        "paragraph2": "When those providers act as processors, they will process data on behalf of Kiso Desk and in accordance with the relevant instructions and purposes.",
+        "paragraph3": "When data is disclosed or transferred to a third party other than a processor, it will be handled under the circumstances permitted by applicable law, including cases necessary to provide the service, comply with legal obligations, protect rights, or where consent exists.",
+        "paragraph4": "The use of Google Cloud Platform, Google OAuth, Cloudflare Turnstile when active, and flagcdn.com may involve processing technical or account data in other jurisdictions, according to the service configuration and each provider's applicable policies."
+      },
+      "retention": {
+        "title": "6. Retention",
+        "item1": "The access_token cookie has a maximum duration of 2 hours, and the refresh_token cookie has a maximum duration of 7 days.",
+        "item2": "Account and progress data is retained while the account remains active or while necessary to provide the service, operate rankings and social features, comply with legal obligations, address requests, prevent abuse, resolve incidents, or defend rights.",
+        "item3": "Ranking and social-feature data is retained while the account is active or while necessary to operate those functions, unless the user changes their preferences, deletes the account, or exercises an applicable right.",
+        "item4": "Local backups generated during deployments are retained for up to 30 days. Technical logs are rotated by size and kept for as long as necessary to operate, protect, and diagnose the service.",
+        "item5": "When personal data is no longer necessary, it will be deleted, anonymised, or blocked before deletion, as applicable, unless it must be retained because of an applicable obligation."
+      },
+      "rights": {
+        "title": "7. Rights and requests",
+        "paragraph1": "You may request access to, correction, deletion, or objection regarding your personal data, and you may withdraw consent for processing activities that require it, where applicable.",
+        "paragraph2": "From the profile, the application allows you to download a structured copy of the data associated with the account and request its deletion through the available mechanisms.",
+        "paragraph3": "Users can limit the disclosure of data visible in rankings or social features, review or change the decision regarding non-essential technologies, and block other users through the application's controls.",
+        "paragraph4": "You may also submit requests related to privacy, limitation of data use or disclosure, and the exercise of rights through the email address listed in this Notice."
+      },
+      "children": {
+        "title": "8. Minors",
+        "paragraph1": "The service is not directed to minors.",
+        "paragraph2": "To create an account and use the service independently, a person must have reached the legal age of majority under the law applicable in their place of residence.",
+        "paragraph3": "If Kiso Desk detects that an account belongs to a minor, it may limit unnecessary processing and evaluate suspension, deletion, blocking, or regularisation of the account in accordance with applicable law and the protection of the person's rights."
+      },
+      "security": {
+        "title": "9. Security",
+        "paragraph1": "Kiso Desk applies administrative, technical, and physical measures intended to protect personal data against damage, loss, alteration, destruction, unauthorised use, access, or processing.",
+        "paragraph2": "These measures may include access controls, authentication, secure password storage, protected session management, HttpOnly cookies, abuse prevention, technical logs, internal restrictions, and other measures proportionate to the risk and technological development.",
+        "paragraph3": "No system is infallible. If an incident significantly affects users' rights, Kiso Desk will make the communications and take the actions required under applicable law."
+      },
+      "changes": {
+        "title": "10. Changes to this Privacy Notice",
+        "paragraph1": "This Notice may be updated to reflect legal, technical, or operational changes.",
+        "paragraph2": "Updates will be published on this page with the corresponding last-updated date.",
+        "paragraph3": "When a change is relevant, it will be communicated through a visible notice in the application or another available electronic method.",
+        "paragraph4": "If a new purpose requires consent, the corresponding processing will not begin until consent is obtained when required by applicable law."
+      },
+      "responsible": {
+        "title": "11. Controller and contact",
+        "paragraph3": "Privacy email: kisodesk.project@gmail.com."
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "Terms of Use",
+        "description": "Rules for using Kiso Desk."
+      },
+      "general": {
+        "eyebrow": "Legal",
+        "title": "Terms of Use",
+        "description": "Rules for using Kiso Desk.",
+        "introduction": "These terms govern access to the application, accounts, learning features, and available social features.",
+        "lastUpdatedLabel": "Last updated",
+        "lastUpdated": "23 July 2026",
+        "contentsLabel": "Contents",
+        "relatedLabel": "Related documents",
+        "relatedPrivacy": "Privacy Policy",
+        "relatedCookies": "Cookie Policy"
+      },
+      "service": {
+        "title": "1. Service description",
+        "paragraph1": "Kiso Desk provides typing lessons and practice, progress tracking, statistics, rankings, and social features related to learning and practising touch typing.",
+        "paragraph2": "By creating an account, signing in, or using the service, you agree to these Terms of Use.",
+        "paragraph3": "Features may change, be updated, limited, or discontinued during the development and operation of the service, always in accordance with applicable law and without affecting non-waivable rights."
+      },
+      "eligibility": {
+        "title": "2. Age and eligibility",
+        "paragraph1": "To create an account and use the service independently, you must have reached the legal age of majority under the law applicable in your place of residence.",
+        "paragraph2": "If applicable law requires additional capacity, authorisation, or age requirements, you must meet them before using the service.",
+        "paragraph3": "The service is not directed to minors. If you are a minor under applicable law, you must not create an account or provide personal data on your own."
+      },
+      "account": {
+        "title": "3. Account and security",
+        "item1": "You must provide accurate information and keep it up to date.",
+        "item2": "You are responsible for protecting your credentials or access methods and for signing out on shared devices.",
+        "item3": "You must not assign, sell, transfer, or use another person's account.",
+        "item4": "You must report any unauthorised access or security incident through the contact channel listed in these Terms."
+      },
+      "acceptableUse": {
+        "title": "4. Acceptable use",
+        "intro": "By using the service, you agree to follow these rules:",
+        "item1": "Do not interfere with the security, availability, or operation of the service.",
+        "item2": "Do not extract data, automate requests, scrape, overload the infrastructure, or bypass technical limits without authorisation.",
+        "item3": "Do not harass, impersonate, deceive, or attempt to obtain information from other users.",
+        "item4": "Do not upload, reproduce, distribute, or use content without sufficient rights to do so.",
+        "item5": "Do not use the service for illegal, abusive, fraudulent, harmful activities or activities contrary to these Terms."
+      },
+      "social": {
+        "title": "5. Rankings and social features",
+        "paragraph1": "The service includes rankings, profiles, and other social features.",
+        "paragraph2": "These features may display an alias, speed, accuracy, level, progress, online status, last activity, or typing statistics according to the available preferences.",
+        "paragraph3": "When an account is created, certain social features are enabled by default. You can disable them individually from your profile. Your real name and email address are not published, and presence or shared statistics are shown only to accepted friends as described in the Privacy Notice."
+      },
+      "intellectualProperty": {
+        "title": "6. Intellectual property",
+        "paragraph1": "The software, design, interface, text, exercises, images, audio, trademarks, logos, and other elements of the service belong to their respective owners.",
+        "paragraph2": "Access to the service does not transfer intellectual property rights in the application or its content.",
+        "paragraph3": "Content available through the service may only be used to practise typing and use the application's features, unless expressly authorised or subject to a different licence."
+      },
+      "availability": {
+        "title": "7. Availability and changes",
+        "paragraph1": "The service may be interrupted, limited, or modified because of maintenance, updates, security, technical failures, operational changes, or causes beyond Kiso Desk's reasonable control.",
+        "paragraph2": "Relevant changes will be communicated when reasonably possible.",
+        "paragraph3": "Kiso Desk does not guarantee any specific improvement in speed, accuracy, academic performance, job performance, employability, or any other particular result from using the service."
+      },
+      "suspension": {
+        "title": "8. Suspension and termination",
+        "paragraph1": "Kiso Desk may limit, suspend, or terminate an account when there is a violation of these Terms, abuse of the service, a security risk, unauthorised use, harm to other users, or illegal or harmful activity.",
+        "paragraph2": "When reasonable, the user may request a review of the measure through the contact channel listed in these Terms.",
+        "paragraph3": "Termination, suspension, or limitation of an account does not affect obligations or liabilities arising before the measure.",
+        "paragraph4": "Deletion or retention of personal data associated with the account will be handled in accordance with the Privacy Notice and applicable law."
+      },
+      "liability": {
+        "title": "9. Liability",
+        "paragraph1": "The service is provided according to its current availability and operation.",
+        "paragraph2": "Nothing in these Terms limits non-waivable rights granted to users under applicable law or excludes liabilities that cannot legally be limited.",
+        "paragraph3": "To the extent permitted by applicable law, Kiso Desk will not be liable for indirect damages, interruptions, data loss, or harm resulting from causes beyond its reasonable control, misuse of the account, false or outdated information, failures by third parties outside the service, or the user's violation of these Terms.",
+        "paragraph4": "The foregoing does not exclude liability for a legal violation attributable to Kiso Desk, wilful misconduct, bad faith, gross negligence, infringement of non-waivable rights, failure to meet security obligations, or improper processing of personal data."
+      },
+      "law": {
+        "title": "10. Applicable law and contact",
+        "paragraph1": "These Terms will be governed by and interpreted under the law applicable to the service controller, without prejudice to any non-waivable rights users may have under the law applicable in their place of residence.",
+        "paragraph2": "Nothing in these Terms limits the user's right to contact competent consumer protection, data protection, or other applicable authorities.",
+        "paragraph3": "Questions, requests, security reports, claims, or communications related to these Terms may be sent to kisodesk.project@gmail.com."
+      }
+    },
+    "about": {
+      "metadata": {
+        "title": "About Kiso Desk",
+        "description": "Learn about Kiso Desk and the platform's practical approach to learning touch typing."
+      },
+      "general": {
+        "title": "About Kiso Desk",
+        "subtitle": "A platform for practising touch typing in a clear, consistent, and measurable way",
+        "project_title": "The project",
+        "project_text": "Kiso Desk is an independent project focused on creating a clear and practical experience for learning touch typing.",
+        "project_status_text": "The platform is designed as a place where anyone, regardless of experience, can practise regularly and see genuine improvement. The focus is on continuous learning, ease of use, and attention to detail, making the tool useful in a modern context.",
+        "mission_title": "Our mission",
+        "mission_text": "At Kiso Desk, we believe touch typing is a fundamental skill in the digital world. Our mission is to make learning to type quickly and accurately accessible, practical, and effective for everyone, regardless of experience.",
+        "vision_title": "Our vision",
+        "vision_text": "To develop a useful tool that improves typing speed, accuracy, and confidence through a modern, straightforward experience focused on regular practice.",
+        "history_title": "Our story",
+        "history_text": "Kiso Desk began as an independent project intended to create a modern touch-typing practice experience. What started as a simple idea is now developing into a platform focused on lessons, progress, statistics, and continuous improvement."
+      }
+    },
+    "page": {
+      "metadata": {
+        "title": "Learn touch typing",
+        "description": "Improve your speed and accuracy with interactive typing lessons."
+      },
+      "general": {
+        "altNight": "Illustration of a room at night with a person and a cat",
+        "altDay": "Illustration of a room during the day with a person programming and a cat",
+        "interactiveLessons": "Interactive lessons",
+        "interactiveLessonsDescription": "Learn with structured courses",
+        "freePractice": "Free practice",
+        "freePracticeDescription": "Practise at your own pace",
+        "dashboardDescription": "View your statistics",
+        "rankingDescription": "Compete globally",
+        "title1": "Master",
+        "title2": "touch typing",
+        "subtitle1": "Improve your speed and accuracy ",
+        "subtitle2": "with interactive typing lessons",
+        "learn": "Learn",
+        "guidedLessons": "Guided lessons",
+        "practiceAction": "Practise",
+        "typingExercises": "Typing exercises",
+        "track": "Track",
+        "progressAndStats": "Progress and statistics",
+        "compete": "Compete",
+        "globalRanking": "Global ranking"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "metadata": {
+        "title": "Sign in",
+        "description": "Sign in to Kiso Desk to continue your typing practice."
+      },
+      "general": {
+        "googleError": "Could not sign in with Google.",
+        "tooManyAttempts": "Too many attempts. Wait one minute.",
+        "requiredFields": "Complete all fields.",
+        "invalidCredentials": "Incorrect email address or password",
+        "signIn": "Sign in",
+        "continueWithGoogle": "Continue with Google",
+        "or": "or",
+        "email": "Email address",
+        "password": "Password",
+        "sending": "Sending...",
+        "noAccount": "Don't have an account?",
+        "createAccount": "Create account",
+        "forgotPassword": "Forgot your password?"
+      }
+    },
+    "register": {
+      "metadata": {
+        "title": "Create an account",
+        "description": "Create a Kiso Desk account and start practising touch typing."
+      },
+      "general": {
+        "acceptLegalRequired": "You must accept the Terms of Use and Privacy Policy to create an account",
+        "googleError": "Could not register with Google.",
+        "tooManyAttempts": "Too many attempts. Wait one minute.",
+        "unknownError": "Unknown error",
+        "createAccount": "Create account",
+        "registerWithGoogle": "Register with Google",
+        "or": "or",
+        "name": "Name",
+        "email": "Email address",
+        "password": "Password",
+        "acceptTermsPrefix": "I accept",
+        "acceptTermsLink": "Terms of Use",
+        "acceptPrivacyPrefix": "I have read the",
+        "acceptPrivacyLink": "Privacy Policy",
+        "alreadyHaveAccount": "Already have an account?",
+        "signIn": "Sign in",
+        "socialFeaturesNotice": "Social features are optional, and you can configure their privacy settings from your profile."
+      }
+    },
+    "resetPassword": {
+      "general": {
+        "invalidLink": "The link does not contain a valid token.",
+        "passwordTooShort": "The password must be at least 8 characters long.",
+        "passwordsDoNotMatch": "The passwords do not match.",
+        "invalidOrExpired": "The link is invalid, has already been used, or has expired.",
+        "successTitle": "Password updated",
+        "successMessage": "You can now sign in with your new password.",
+        "backToLogin": "Back to sign in",
+        "title": "Create a new password",
+        "instructions": "Choose a new password of at least 8 characters.",
+        "newPassword": "New password",
+        "confirmPassword": "Confirm password",
+        "submit": "Change password",
+        "requestNewLink": "Request a new link"
+      }
+    }
+  },
+  "profile": {
+    "general": {
+      "title": "Profile",
+      "guestModeMessage": "Sign in to view your profile and statistics.",
+      "signIn": "Sign in",
+      "loadError": "Error loading profile",
+      "loadErrorText": "The profile could not be loaded",
+      "nameRequired": "Enter your name",
+      "name": "Name",
+      "email": "Email address",
+      "emailReadOnly": "The email address cannot be edited from the profile.",
+      "editProfile": "Edit profile",
+      "changePassword": "Change password",
+      "save": "Save",
+      "savingText": "Saving...",
+      "cancel": "Cancel",
+      "retry": "Try again",
+      "savedSuccessfully": "Your profile has been updated.",
+      "saveError": "The profile could not be saved. Try again.",
+      "conflictError": "The profile was changed in another tab. Reload the information before saving again.",
+      "required": "This field is required.",
+      "accountSection": "Account",
+      "preferencesSection": "Preferences",
+      "securitySection": "Security",
+      "memberSince": "Member since",
+      "lastLogin": "Last sign-in",
+      "lastUpdate": "Last updated",
+      "interfaceLanguage": "Interface language",
+      "keyboardLayout": "Keyboard layout",
+      "accessibility": "Accessibility",
+      "adminRole": "Administrator",
+      "userRole": "User",
+      "passwordSectionTitle": "Password",
+      "passwordSectionDescription": "You can request a password reset link whenever you need one.",
+      "dataControlsTitle": "Your data and account",
+      "dataControlsDescription": "Download a copy of your data or permanently delete your account.",
+      "exportTitle": "Download my data",
+      "exportDescription": "Creates a JSON file containing your account details, progress, practice sessions, errors, and relationships. Passwords and tokens are not included.",
+      "exportButton": "Download data",
+      "exporting": "Preparing download...",
+      "exportSuccess": "Your data download has started.",
+      "exportError": "The export could not be created. Try again.",
+      "deleteTitle": "Delete my account",
+      "deleteDescription": "Deletes the account and its associated active data. This action cannot be undone.",
+      "deleteButton": "Delete account",
+      "deleteModalTitle": "Permanently delete account",
+      "deleteModalDescription": "Your profile, progress, sessions, statistics, errors, friendships, and sign-in sessions will be deleted from the active database. Backups follow the applicable retention cycle.",
+      "deleteConfirmEmailInstruction": "Enter your email address to confirm:",
+      "deleteConfirmEmail": "Confirmation email address",
+      "deleteCurrentPassword": "Current password",
+      "deleteConfirmButton": "Delete permanently",
+      "deleting": "Deleting...",
+      "deleteEmailMismatch": "The confirmation email address does not match.",
+      "deletePasswordRequired": "Enter your current password",
+      "deleteInvalidPassword": "The current password is incorrect.",
+      "deleteError": "The account could not be deleted. Try again.",
+      "socialPrivacyTitle": "Social privacy",
+      "publicAlias": "Public alias",
+      "publicAliasPlaceholder": "example_user",
+      "publicAliasHelp": "Between 3 and 30 characters: letters, numbers, hyphens, and underscores.",
+      "publicAliasInvalid": "Enter a valid alias before enabling social features.",
+      "showInRanking": "Show in ranking",
+      "showInRankingHelp": "Displays your alias and overall results. Your real name and email address remain hidden",
+      "searchableByAlias": "Allow search by alias",
+      "searchableByAliasHelp": "Other users can find you only through your public alias.",
+      "allowFriendRequests": "Accept friend requests",
+      "allowFriendRequestsHelp": "Allows users who find you through your alias to send you friend requests.",
+      "showPresenceToFriends": "Share online status with friends",
+      "showPresenceToFriendsHelp": "Shows online status and recent activity only to accepted friends.",
+      "shareStatsWithFriends": "Share statistics with friends",
+      "shareStatsWithFriendsHelp": "Shows aggregate practice statistics only to accepted friends.",
+      "notConfigured": "Not configured",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "spanish": "Spanish",
+      "english": "English",
+      "cookieConsentSaveError": "Your cookie preference could not be saved. Try again.",
+      "googleReauthFailed": "Google reauthentication could not be completed.",
+      "googleReauthRequired": "Reauthenticate with Google to delete your account.",
+      "privacyCookiesTitle": "Privacy and cookies",
+      "privacyCookiesDescription": "Manage your preference for non-essential technologies.",
+      "cookieConsentAccepted": "You have accepted the use of non-essential technologies.",
+      "cookieConsentRejected": "You have rejected the use of non-essential technologies.",
+      "cookieConsentUnset": "You have not yet set your preference for non-essential technologies.",
+      "cookieConsentUpdatedAt": "Updated on",
+      "cookieConsentAccept": "Accept",
+      "cookieConsentReject": "Reject",
+      "googleReauthButton": "Reauthenticate with Google"
+    }
+  },
+  "friends": {
+    "general": {
+      "title": "Friends",
+      "subtitle": "Follow your friends' online status and compare only their free-practice results.",
+      "guestModeMessage": "Sign in to view your friends and their activity.",
+      "signIn": "Sign in",
+      "refresh": "Refresh",
+      "retry": "Try again",
+      "snapshotTitle": "Recent friends",
+      "snapshotDescription": "See how many friends are online and open the full panel.",
+      "openFriends": "Open friends",
+      "totalFriends": "Friends",
+      "onlineNow": "online now",
+      "requests": "Requests",
+      "searchTitle": "Search for users",
+      "searchLabel": "Public alias",
+      "searchPlaceholder": "Enter at least 3 characters from the alias",
+      "searchButton": "Search",
+      "searchError": "The search could not be completed",
+      "noSearchResults": "No users were found.",
+      "statusFriends": "Friends",
+      "statusPendingOutgoing": "Request sent",
+      "statusPendingIncoming": "Sent you a request",
+      "statusNotConnected": "Not connected",
+      "online": "Online",
+      "offline": "Offline",
+      "lastSeen": "Last active",
+      "requestedAt": "Requested on",
+      "freePractice": "Free practice",
+      "viewStats": "View statistics",
+      "sendRequest": "Add",
+      "accept": "Accept",
+      "reject": "Reject",
+      "remove": "Remove",
+      "incomingRequests": "Incoming requests",
+      "outgoingRequests": "Outgoing requests",
+      "noIncomingRequests": "You have no incoming requests.",
+      "noOutgoingRequests": "You have no outgoing requests.",
+      "myFriends": "My friends",
+      "noFriendsYet": "You have not added any friends yet",
+      "block": "Block",
+      "unblock": "Unblock",
+      "blockedUsers": "Blocked users",
+      "blockedUsersDescription": "They cannot find you, send you requests, or access your online status or statistics.",
+      "noBlockedUsers": "You have no blocked users.",
+      "presenceHidden": "Private online status",
+      "statsHidden": "This user does not share their statistics.",
+      "friendNotFound": "We could not find this friend.",
+      "backToFriends": "Back to friends",
+      "totalSessions": "Sessions",
+      "averageWpm": "Average WPM",
+      "averageAccuracy": "Average accuracy",
+      "bestWpm": "Best WPM",
+      "totalPracticeTime": "Total practice time",
+      "byLanguage": "Breakdown by language"
+    }
+  },
+  "ranking": {
+    "general": {
+      "title": "Ranking",
+      "subtitle": "Compare your results with other users' results.",
+      "yourStats": "Your statistics",
+      "basedOnLast10": "Based on your latest 10 practice sessions.",
+      "score": "Score",
+      "grossWpm": "Gross WPM",
+      "accuracy": "Accuracy",
+      "currentRank": "Current position",
+      "level": "Level",
+      "topPercent": "Top {percent}%",
+      "filterByLanguage": "Filter by language",
+      "allLanguages": "All languages",
+      "user": "User",
+      "noData": "No data to display",
+      "errorFetchingRanking": "The ranking could not be loaded. Try again.",
+      "errorFetchingStats": "Your statistics could not be loaded. Try again.",
+      "retry": "Try again",
+      "privateProfile": "Your profile is not shown in the ranking. You can change this under Social privacy in your profile.",
+      "insufficientData": "Complete at least 5 practice sessions to see your position in the ranking.",
+      "noDataYet": "There are no results for this language yet.",
+      "currentUser": "You",
+      "speedAxis": "Speed (WPM)",
+      "accuracyAxis": "Accuracy (%)",
+      "showing": "Showing",
+      "of": "of",
+      "previous": "Previous",
+      "next": "Next",
+      "signInToParticipate": "Sign in to participate in the ranking."
+    },
+    "topPerformers": {
+      "general": {
+        "wpm": "Net WPM"
+      }
+    },
+    "userStatsCard": {
+      "general": {
+        "levels": {
+          "bronze": "Bronze",
+          "silver": "Silver",
+          "gold": "Gold"
+        }
+      }
+    }
+  },
+  "public": {
+    "courses": {
+      "metadata": {
+        "title": "Touch-typing courses | Kiso Desk",
+        "description": "Explore courses and try typing lessons."
+      },
+      "lessons": {
+        "metadata": {
+          "title": "Typing lessons | Kiso Desk",
+          "description": "Try typing lessons without creating an account."
+        },
+        "lesson": {
+          "metadata": {
+            "title": "Lesson practice | Kiso Desk",
+            "description": "Practise a typing lesson in Kiso Desk."
+          }
+        }
+      }
+    },
+    "practice": {
+      "metadata": {
+        "title": "Typing speed and accuracy test | Kiso Desk",
+        "description": "Practise touch typing for free and save the result on this device."
+      }
+    },
+    "progress": {
+      "metadata": {
+        "title": "Local progress | Kiso Desk",
+        "description": "Progress saved locally in this browser."
+      },
+      "general": {
+        "title": "Local progress",
+        "description": "This progress is saved only in this browser.",
+        "lessonsCompleted": "Completed lessons",
+        "practiceSessions": "Practice sessions",
+        "accuracy": "Accuracy",
+        "signInNotice": "Sign in to save your progress to your account.",
+        "signIn": "Sign in"
+      }
+    },
+    "ranking": {
+      "metadata": {
+        "title": "Touch-typing ranking | Kiso Desk",
+        "description": "View the public typing-speed ranking."
+      }
+    }
+  },
+  "components": {
+    "courses": {
+      "courseCard": {
+        "general": {
+          "lessons": "lessons",
+          "viewCourse": "View course",
+          "yourProgress": "Your progress",
+          "loginToSeeProgress": "Sign in to view your progress",
+          "lessonsCount": "lessons"
+        }
+      }
+    },
+    "dashboard": {
+      "errorTrends": {
+        "general": {
+          "title": "Progress dashboard",
+          "noData": "No data to display",
+          "insufficientData": "Not enough data.",
+          "highestErrorRate": "Highest error rate",
+          "correctAttempts": "{correctAttempts}/{totalAttempts} correct"
+        }
+      },
+      "fingerDistribution": {
+        "general": {
+          "title": "Progress dashboard",
+          "noData": "No data to display",
+          "leftHand": "Left",
+          "rightHand": "Right",
+          "hand": "{hand} hand",
+          "pinky": "Little finger",
+          "ring": "Ring finger",
+          "middle": "Middle finger",
+          "index": "Index finger",
+          "correctPercentage": "{percentage}% correct",
+          "noCorrectPercentage": "None",
+          "errorPercentage": "{percentage}% errors",
+          "errors": "data"
+        }
+      },
+      "practiceCalendar": {
+        "general": {
+          "title": "Progress dashboard",
+          "noData": "No data to display",
+          "noPractice": "No practice",
+          "minutesShort": "min",
+          "hoursShort": "hr",
+          "noActivity": "No activity",
+          "fiveMinutes": "5 min",
+          "tenMinutes": "10 min",
+          "fifteenMinutes": "15+ minutes"
+        }
+      },
+      "progressChart": {
+        "general": {
+          "noData": "No data to display"
+        }
+      },
+      "authBanner": {
+        "general": {
+          "message": "Sign in to view your statistics.",
+          "signIn": "Sign in"
+        }
+      },
+      "recommendationsList": {
+        "general": {
+          "title": "Progress dashboard",
+          "signIn": "Sign in",
+          "noRecommendations": "No recommendations available."
+        }
+      },
+      "weakKeysPanel": {
+        "general": {
+          "title": "Progress dashboard",
+          "overallAccuracy": "Overall accuracy",
+          "weakestKey": "Weakest key",
+          "lowestAccuracy": "Lowest accuracy"
+        }
+      }
+    },
+    "friends": {
+      "friendsSnapshot": {
+        "general": {
+          "title": "Friends",
+          "description": "See how many friends are online and open the full panel.",
+          "openFriends": "Open friends",
+          "totalFriends": "Friends",
+          "onlineNow": "online now",
+          "noFriendsYet": "You have not added any friends yet"
+        }
+      }
+    },
+    "layout": {
+      "footer": {
+        "general": {
+          "product": "Product",
+          "lessons": "Lessons",
+          "ranking": "Ranking",
+          "progress": "Progress",
+          "project": "Project",
+          "aboutKisoDesk": "About Kiso Desk",
+          "github": "GitHub",
+          "legal": "Legal",
+          "privacyPolicy": "Privacy Policy",
+          "termsOfUse": "Terms of Use",
+          "cookiePolicy": "Cookie Policy",
+          "contact": "Contact",
+          "copyright": "© {year} Kiso Desk."
+        }
+      },
+      "header": {
+        "general": {
+          "defaultUser": "User",
+          "skipToMainContent": "Skip to main content",
+          "courses": "Courses",
+          "userMenu": "User menu",
+          "profile": "My profile",
+          "logout": "Sign out",
+          "menuToggle": "Open menu",
+          "login": "Sign in",
+          "register": "Register"
+        }
+      },
+      "sidebar": {
+        "general": {
+          "dashboard": "Dashboard",
+          "courses": "Courses",
+          "practice": "Practice",
+          "ranking": "Ranking",
+          "friends": "Friends",
+          "profile": "Profile",
+          "menuToggle": "Navigation menu",
+          "expand": "Expand",
+          "collapse": "Collapse"
+        }
+      }
+    },
+    "legal": {
+      "cookieBanner": {
+        "general": {
+          "title": "Cookie and Local Storage Policy",
+          "description": "In the current version of the application, no analytics cookies, advertising networks, remarketing, or other non-essential tracking systems are used.",
+          "privacyNotice": "Privacy Policy",
+          "cookiePolicy": "Cookie and Local Storage Policy",
+          "accept": "Accept",
+          "reject": "Reject"
+        }
+      }
+    },
+    "lessons": {
+      "handReference": {
+        "general": {
+          "handReference": "Keyboard hand-position reference"
+        }
+      },
+      "keyboardDetectionWizard": {
+        "general": {
+          "title": "Keyboard detector",
+          "subtitle": "Detect your keyboard layout using a few physical keys and use it throughout the application.",
+          "modalTitle": "Detect layout",
+          "currentLayout": "Current layout",
+          "start": "Start detection",
+          "progress": "Step {current} of up to {total}",
+          "progressHint": "May finish earlier",
+          "progressLabel": "Detection progress",
+          "back": "Back",
+          "cancel": "Cancel",
+          "close": "Close",
+          "intro": {
+            "title": "Let's detect your keyboard",
+            "help": "Simply press between 1 and 5 keys on your physical keyboard."
+          },
+          "capture": {
+            "focus": "Click here, then press the specified key",
+            "instruction": "The key you press is used only to detect the layout.",
+            "captured": "Detected key: {key}",
+            "deadKey": "dead key"
+          },
+          "questions": {
+            "rightOfL": {
+              "title": "Press the key immediately to the right of L",
+              "help": "Do not use Shift. Use the physical key position, even if a different symbol is printed on it."
+            },
+            "leftOfBackspace": {
+              "title": "Press the key immediately to the left of Backspace",
+              "help": "Do not use Shift. Use the key on the number row."
+            },
+            "shiftDigit2": {
+              "title": "Hold Shift and press the 2 key",
+              "help": "Use the 2 key on the number row, not the numeric keypad."
+            },
+            "sixthTopRow": {
+              "title": "Press the sixth letter key on the top row",
+              "help": "Count from the first letter key after Tab. Do not use Shift."
+            },
+            "firstTopRow": {
+              "title": "Press the first letter key after Tab",
+              "help": "Use the physical key position. Do not use Shift."
+            },
+            "quoteKey": {
+              "title": "Press the quotation-mark key",
+              "help": "Do not use Shift. Use the physical key position."
+            },
+            "shiftDigit3": {
+              "title": "Hold Shift and press the 3 key",
+              "help": "Use the 3 key on the number row, not the numeric keypad."
+            }
+          },
+          "errors": {
+            "composition": "We cannot identify a layout while the keyboard is composing text.",
+            "unidentified": "The key could not be identified. Try again.",
+            "alt-graph": "Do not use AltGr when pressing this key.",
+            "modified": "Do not use modifier keys when pressing this key.",
+            "wrongKey": "That was a different key. Press the key in the position specified above.",
+            "shiftRequired": "Hold Shift while pressing this key.",
+            "shiftNotRequired": "Press this key without using Shift.",
+            "saveFailed": "The layout could not be saved. Check your connection and try again."
+          },
+          "result": {
+            "detectedTitle": "Layout detected",
+            "confidence": "Detection confidence: {confidence}",
+            "useDetected": "Use this layout",
+            "unidentifiedTitle": "We could not identify your layout",
+            "unidentifiedHelp": "Manually select the layout that matches your keyboard.",
+            "fallbackTitle": "The layout could not be detected with sufficient confidence",
+            "fallbackHelp": "Select one of the closest matches or view all available layouts.",
+            "chooseManually": "Select manually",
+            "retryDetection": "Try detection again"
+          },
+          "manual": {
+            "title": "Select your layout",
+            "help": "Select the layout that matches the keys on your keyboard."
+          },
+          "saved": {
+            "title": "Layout saved",
+            "description": "{layout} is now used throughout the application.",
+            "continueToCourses": "Continue to courses",
+            "returnToPractice": "Back to practice"
+          },
+          "physicalFamily": {
+            "title": "Your keyboard shape",
+            "subtitle": "Identify the shape of your keys to display the keyboard correctly.",
+            "enterQuestion": "What shape is your Enter key?",
+            "enterHorizontal": "Horizontal Enter",
+            "enterIso": "Standard ISO Enter",
+            "enterBigAss": "ISO BA Enter",
+            "abntQuestion": "How many keys are between / and right Shift?",
+            "eastAsianQuestion": "How many keys are between 0 and Backspace?",
+            "eastAsianCountQuestion": "How many keys are between Space and right Alt?",
+            "complete": "Keyboard shape identified: {family}"
+          }
+        }
+      },
+      "keyboard": {
+        "general": {
+          "virtualKeyboard": "Virtual keyboard"
+        }
+      },
+      "lessonCard": {
+        "general": {
+          "ariaLabel": "Go to lesson",
+          "wpm": "WPM",
+          "score": "Score",
+          "accuracy": "Accuracy",
+          "time": "Time",
+          "placeholder": "—",
+          "secondsShort": "sec",
+          "minutesShort": "min",
+          "minutesCompact": "m",
+          "approxPrefix": "~",
+          "rankLabel": "Rank",
+          "gradeLabel": "Grade",
+          "completed": "Completed",
+          "explanatoryBadge": "Explanatory lesson",
+          "explanatoryLesson": "Explanatory lesson",
+          "objectiveAccuracy": "Target: {minAccuracy}% accuracy",
+          "mastered": "Mastered",
+          "inProgress": "In progress",
+          "lessonOrderRecommendationTitle": "Follow the recommended order",
+          "lessonOrderRecommendationDescription": "We recommend following the standard lesson order to make gradual progress.",
+          "lessonOrderRecommendationBack": "Go back",
+          "lessonOrderRecommendationContinue": "Continue",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Novice",
+            "scout": "Scout",
+            "ranger": "Ranger",
+            "veteran": "Veteran",
+            "elite": "Elite",
+            "legend": "Legend"
+          },
+          "gradesDescriptions": {
+            "novice": "Foundation level",
+            "scout": "Early progress",
+            "ranger": "Good command",
+            "veteran": "High level",
+            "elite": "Expert",
+            "legend": "Highest level"
+          }
+        }
+      },
+      "personalizedLessonCard": {
+        "general": {
+          "title": "Recommended practice",
+          "noData": "No data to display",
+          "error": "Your recommendations could not be loaded. Try again.",
+          "retry": "Try again",
+          "insufficientData": "Practise more to identify the keys you need to strengthen.",
+          "noCourse": "A touch-typing course is not yet available in this language.",
+          "noLessons": "This course does not yet have any available lessons.",
+          "description": "Based on your identified weaknesses.",
+          "weakKeys": "Keys with the lowest accuracy in your recent sessions.",
+          "noMatches": "This course does not yet contain any lessons related to your weak keys.",
+          "worksKeys": "Practise: {keys}"
+        }
+      },
+      "results": {
+        "general": {
+          "saveWarning": "The results could not be saved",
+          "wpm": "WPM",
+          "score": "Score",
+          "accuracy": "Accuracy",
+          "correctChars": "Correct characters",
+          "lowResultTitle": "Your result is a little low",
+          "lowResultMessage": "Consider taking the touch-typing course to continue improving.",
+          "lowResultCourseLink": "Go to the touch-typing course",
+          "accuracyFocusTitle": "Prioritise accuracy",
+          "accuracyFocusMessage": "You are making good progress. Before increasing your speed, try to reach at least 95% accuracy.",
+          "masteredResult": "Lesson mastered",
+          "masteredMessage": "You met the accuracy requirement and can continue.",
+          "needsReview": "Needs review",
+          "reviewMessage": "Target: at least {minAccuracy}% accuracy. Slow down and repeat the block.",
+          "rankLabel": "Rank",
+          "gradeLabel": "Grade",
+          "retryAriaLabel": "Try the lesson again",
+          "retry": "Try again",
+          "next": "Next",
+          "newText": "New text",
+          "backToCourses": "Back to courses",
+          "backToDashboard": "Back to dashboard",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Novice",
+            "scout": "Scout",
+            "ranger": "Ranger",
+            "veteran": "Veteran",
+            "elite": "Elite",
+            "legend": "Legend"
+          },
+          "gradesDescriptions": {
+            "novice": "Foundation level",
+            "scout": "Early progress",
+            "ranger": "Good command",
+            "veteran": "High level",
+            "elite": "Expert",
+            "legend": "Highest level"
+          }
+        }
+      },
+      "typingArea": {
+        "general": {
+          "wpm": "WPM",
+          "score": "Score",
+          "accuracy": "Accuracy",
+          "characters": "Characters",
+          "backspace": "Backspace",
+          "backspaceEnabled": "Backspace enabled",
+          "backspaceDisabled": "Backspace disabled",
+          "font": "Font",
+          "size": "Size",
+          "pixels": "px",
+          "fontAndSize": "Font and size",
+          "textToType": "Text to type",
+          "inactivityPaused": "Paused due to inactivity",
+          "clickToResume": "Click to resume",
+          "congratulations": "Congratulations! Speed: {wpm} WPM, accuracy: {accuracy}%",
+          "detectKeyboard": "Detect keyboard",
+          "keyboardConfigTitle": "Keyboard settings",
+          "keyboardPreferenceMissing": "No keyboard preference has been saved. You can change it in the keyboard settings.",
+          "recommendedKeyboardLayout": "Recommended layout: {layout}",
+          "useRecommendedKeyboardLayout": "Change layout",
+          "detectionHelp": "Automatically identify your current layout and use it throughout the practice session.",
+          "identifyKeyboardShape": "Identify shape",
+          "keyboardShapeHeading": "Your keyboard shape",
+          "logicalDistributionHeading": "Logical layout",
+          "logicalDistributionHint": "keyboard characters"
+        }
+      }
+    },
+    "ui": {
+      "themeToggle": {
+        "general": {
+          "switchToLight": "Theme",
+          "switchToDark": "Theme"
+        }
+      }
+    },
+    "i18n": {
+      "languageSwitcher": {
+        "general": {
+          "interfaceLanguage": "Interface language"
+        }
+      }
+    }
+  },
+  "general": {
+    "Accessibility": {
+      "button": "Button",
+      "expandMenu": "Expand menu",
+      "collapseMenu": "Collapse menu"
+    },
+    "Common": {
+      "loading": "Loading...",
+      "retry": "Try again",
+      "close": "Close"
+    }
+  },
+  "lessonid": {
+    "general": {
+      "lockedLesson": "Locked lesson",
+      "lockedLessonDescription": "Master the previous activity before continuing.",
+      "backToLessons": "Back to lessons",
+      "lessonNotFound": "Lesson not found",
+      "typeTheTextBelow": "Type the text below",
+      "hideKeyboard": "Hide keyboard",
+      "showKeyboard": "Show keyboard",
+      "exitPractice": "Exit practice",
+      "saveError": "Error saving result",
+      "saveErrorMessage": "Your results are shown on screen but were not saved to your progress. Try repeating the lesson when a connection is available.",
+      "audioGuide": "Listen to the explanation",
+      "audioUnsupported": "Your browser cannot play this audio track.",
+      "experimentalGreetings": {
+        "lessonPosition": "Lesson {current} of {total}",
+        "supportContent": "Supplementary content",
+        "englishColumn": "English",
+        "spanishColumn": "Spanish",
+        "continue": "Continue",
+        "dialogue": "Dialogue",
+        "selectEnglishFirst": "First select an option in English",
+        "tryAgain": "Try again",
+        "correct": "Correct",
+        "complete": "Activity completed"
+      },
+      "manualAudioPlay": "Listen",
+      "manualAudioReplay": "Listen again",
+      "lessonAudio": "Lesson audio",
+      "interactions": {
+        "dictationPrompt": "Type what you hear",
+        "unitProgress": "Unit progress",
+        "stepProgress": "Step {step} of 4 {current}",
+        "currentStep": "current",
+        "reviewTask": "Task {current} of 3",
+        "completedPairs": "Completed pairs",
+        "availableOptions": "Available options",
+        "options": "Options",
+        "answer": "Answer",
+        "check": "Check",
+        "undo": "Undo",
+        "correct": "Correct",
+        "incorrect": "Not yet. Correct answer: {answer} {detail}",
+        "spellingFeedback": "Spelling: the word has two letters or at the beginning",
+        "sentenceFeedback": "Initial capitalisation and punctuation: review each sentence",
+        "dictationFeedback": "Dictation: listen to each word and keep the punctuation",
+        "correctAnswer": "Correct answer",
+        "nextTask": "Next task"
+      }
+    }
+  },
+  "courses": {
+    "general": {
+      "title": "Courses",
+      "subtitle": "Explore our courses and improve your touch typing",
+      "searchPlaceholder": "Search courses...",
+      "allLevels": "All levels",
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "guestModeMessage": "Sign in to save your progress",
+      "signIn": "Sign in",
+      "retry": "Try again",
+      "noCourseYetTitle": "There are no available courses yet",
+      "noCourseYetDescription": "We are preparing courses for this language. Check back soon.",
+      "noCourses": "No courses were found",
+      "all": "All courses",
+      "completed": "Completed",
+      "notCompleted": "Not completed"
+    }
+  },
+  "lessons": {
+    "general": {
+      "title": "Lessons",
+      "subtitle": "Practise with lessons suited to your level",
+      "searchPlaceholder": "Search lessons...",
+      "allDifficulties": "All difficulty levels",
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "guestModeMessage": "Sign in to save your progress",
+      "signIn": "Sign in",
+      "retry": "Try again",
+      "errorTitle": "Error loading lessons",
+      "noLessonsTitle": "No lessons available",
+      "noLessonsDescription": "This course does not have any lessons yet. Check back later or contact the administrator.",
+      "noCompletedLessonsTitle": "You have not completed any lessons yet",
+      "noCompletedLessonsDescription": "Complete a lesson to see it on this list.",
+      "noPendingLessonsTitle": "You have no pending lessons",
+      "noPendingLessonsDescription": "All lessons in this course are shown as completed.",
+      "all": "All lessons",
+      "completed": "Completed",
+      "notCompleted": "Not completed",
+      "moduleLabel": "Module {order}",
+      "masteredCount": "{mastered}/{total} mastered"
+    }
+  },
+  "dashboard": {
+    "general": {
+      "title": "Progress dashboard",
+      "subtitle": "View your progress and typing statistics",
+      "averageWpm": "Average WPM",
+      "wordsPerMinute": "Words per minute",
+      "averageAccuracy": "Average accuracy",
+      "accuracy": "Accuracy",
+      "totalPracticeTime": "Total practice time",
+      "thisWeek": "This week",
+      "weeklyWpmProgress": "Weekly WPM progress",
+      "monthlyWpmProgress": "Monthly WPM progress",
+      "noData": "No data available",
+      "bestWpm": "Best WPM",
+      "grossWpm": "Gross WPM",
+      "record": "Record",
+      "streak": "Streak",
+      "days": "days",
+      "consecutivePractice": "Consecutive practice",
+      "totalKeystrokes": "Total keystrokes",
+      "typed": "Typed",
+      "recommendations": "Recommendations for you",
+      "recommendation1": "Practise intermediate lessons to improve your speed.",
+      "recommendation2": "Try to keep your accuracy above 95%.",
+      "recommendation3": "Complete at least one lesson each day to maintain your streak.",
+      "retry": "Try again",
+      "error": "Error",
+      "completedText": "% completed",
+      "completedTitle": "Lessons / courses",
+      "lessons": "lessons",
+      "courses": "courses",
+      "completedLessons": "Completed lessons",
+      "completedCourses": "Completed courses",
+      "guestModeMessage": "Sign in to view your progress",
+      "signIn": "Sign in",
+      "recommendationsGuest": "Sign in to receive personalised recommendations based on your progress.",
+      "weakKeys": "Weak keys",
+      "errorTrends": "Error trends",
+      "fingerDistribution": "Distribution by finger",
+      "personalizedPractice": "Personalised practice",
+      "personalizedPracticeDesc": "Receive personalised lessons based on your weaknesses.",
+      "signInToSee": "Sign in to view your statistics",
+      "noDataYet": "Complete lessons to identify your weaknesses"
+    }
+  },
+  "practice": {
+    "general": {
+      "title": "Typing test",
+      "subtitle": "Improve your speed and accuracy with personalised texts",
+      "freeTitle": "Typing speed test",
+      "freeSubtitle": "Try a short text and discover your typing speed and accuracy.",
+      "adaptiveTitle": "Practise the keys you miss most",
+      "adaptiveSubtitle": "Focus on the characters that cause the most errors and type with greater accuracy.",
+      "session": "Practice session",
+      "newText": "New text",
+      "perKeyStats": "Per-key statistics (coming soon)",
+      "loadingText": "Loading text...",
+      "errorLoadingText": "Error loading text.",
+      "errorTitle": "The text could not be loaded",
+      "retry": "Try again",
+      "saving": "Saving results...",
+      "errorSavingResult": "Error saving results.",
+      "saveWarning": "The results could not be saved",
+      "backToDashboard": "Back to dashboard",
+      "guestSavePrompt": "Sign in to save your progress and continue improving.",
+      "signInToSave": "Sign in",
+      "guestPlaceholder": "—",
+      "guestAdaptiveReason": "Based on errors saved on this device",
+      "adaptiveKeys": "Keys: {keys}",
+      "adaptiveBigrams": "Bigrams: {bigrams}",
+      "modeRandom": "Free text",
+      "modeWords": "Recommended practice",
+      "modeText": "Adaptive text",
+      "adaptivePracticeKeys": "Keys in practice"
+    }
+  },
+  "notFound": {
+    "general": {
+      "title": "Page not found",
+      "description": "Sorry, the page you are looking for does not exist or has been moved.",
+      "backHome": "Back to home",
+      "dashboard": "Dashboard",
+      "lessons": "Lessons",
+      "ranking": "Ranking"
+    }
+  }
+}

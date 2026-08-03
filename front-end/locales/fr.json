@@ -1,0 +1,1278 @@
+{
+  "marketing": {
+    "cookies": {
+      "metadata": {
+        "title": "Politique relative aux cookies et au stockage local",
+        "description": "Informations sur les cookies et le stockage local dans Kiso Desk."
+      },
+      "general": {
+        "title": "Politique relative aux cookies et au stockage local",
+        "contentsLabel": "Sommaire",
+        "relatedLabel": "Documents associés",
+        "relatedPrivacy": "Politique de confidentialité",
+        "relatedTerms": "Conditions d’utilisation"
+      },
+      "definition": {
+        "title": "1. Que sont les cookies et le stockage local ?",
+        "paragraph1": "Cette application utilise des cookies et le stockage local du navigateur pour les fonctions nécessaires du service et pour mémoriser certaines préférences d’utilisation.",
+        "paragraph2": "Les cookies sont de petits fichiers texte que les sites web enregistrent dans votre navigateur. Ils servent à mémoriser des informations sur votre visite, telles que vos préférences ou votre statut d’authentification.",
+        "paragraph3": "Le stockage local, également appelé localStorage, est une fonctionnalité du navigateur qui permet d’enregistrer des données directement sur votre appareil. Contrairement aux cookies, ces données ne sont pas envoyées automatiquement au serveur à chaque requête et restent sur votre appareil jusqu’à ce que vous, le navigateur ou les paramètres de l’appareil les supprimiez."
+      },
+      "data": {
+        "title": "2. Données personnelles et techniques liées à ces technologies",
+        "paragraph1": "Pour fournir le service d’entraînement à la frappe, l’application peut traiter des données personnelles ou techniques liées à l’utilisation des cookies, du stockage local et des requêtes réseau.",
+        "paragraph2": "Les mesures associées aux comptes enregistrés sont stockées par le service conformément à l’Avis de confidentialité. En mode invité, une partie de la progression et de l’historique d’entraînement peut être enregistrée localement dans le navigateur.",
+        "paragraph3": "Le stockage local peut contenir des préférences d’interface, la décision concernant les technologies non essentielles et la progression en mode invité. Il ne contient pas directement de mots de passe ni de jetons d’authentification.",
+        "item1": "Identifiants de session : stockés dans les cookies access_token et refresh_token, ils permettent à l’application de reconnaître votre compte, d’authentifier les requêtes et de maintenir votre session active.",
+        "item2": "Adresse IP et données techniques de connexion : transmises lors des échanges avec le serveur et du chargement de ressources externes, comme les images de drapeaux depuis flagcdn.com.",
+        "item3": "Préférences et données locales : peuvent inclure le thème, la disposition du clavier, la police, la taille du texte, l’affichage du clavier, la décision concernant les technologies non essentielles, la progression en mode invité et l’historique local des textes utilisés."
+      },
+      "necessaryCookies": {
+        "title": "3. Cookies strictement nécessaires (authentification)",
+        "paragraph1": "L’application utilise des cookies strictement nécessaires pour vous connecter, maintenir votre identité pendant la navigation, renouveler votre session et protéger les requêtes authentifiées.",
+        "note": "Ces cookies ne sont pas utilisés à des fins publicitaires, de remarketing ou de profilage commercial.",
+        "tableHeaderName": "Nom",
+        "tableHeaderPurpose": "Finalité",
+        "tableHeaderDuration": "Durée maximale",
+        "tableHeaderConfiguration": "Configuration technique",
+        "accessTokenName": "access_token",
+        "accessTokenPurpose": "Authentifier vos requêtes et maintenir la session d’accès active.",
+        "accessTokenDuration": "2 heures",
+        "accessTokenConfiguration": "HttpOnly, SameSite=Lax, Secure en production.",
+        "refreshTokenName": "refresh_token",
+        "refreshTokenPurpose": "Renouveler la session de manière sécurisée et permettre sa révocation.",
+        "refreshTokenDuration": "7 jours",
+        "refreshTokenConfiguration": "HttpOnly, SameSite=Lax, Secure en production."
+      },
+      "localStorage": {
+        "title": "4. Stockage local (préférences de l’utilisateur)",
+        "paragraph1": "Afin de personnaliser l’expérience et de conserver certains réglages, l’application enregistre des informations dans le navigateur.",
+        "paragraph2": "Ces données restent sur l’appareil et ne sont pas envoyées automatiquement au serveur à chaque requête, bien que l’application puisse les lire pour appliquer les préférences ou restaurer la progression locale.",
+        "tableHeaderKey": "Clé",
+        "tableHeaderPurpose": "Finalité",
+        "tableHeaderDuration": "Durée",
+        "themeKey": "theme",
+        "themePurpose": "Mémoriser votre préférence entre le thème clair et le thème sombre.",
+        "themeDuration": "Persistant jusqu’à suppression manuelle ou remplacement.",
+        "keyboardLayoutKey": "typing-keyboard-layout",
+        "keyboardLayoutPurpose": "Mémoriser la disposition du clavier sélectionnée pour les exercices.",
+        "keyboardLayoutDuration": "Persistant jusqu’à suppression ou remplacement.",
+        "typingFontKey": "typing-font",
+        "typingFontPurpose": "Mémoriser la famille de police utilisée dans les exercices.",
+        "typingFontDuration": "Persistant jusqu’à suppression ou remplacement.",
+        "typingFontSizeKey": "typing-font-size",
+        "typingFontSizePurpose": "Mémoriser la taille du texte définie pour les exercices.",
+        "typingFontSizeDuration": "Persistant jusqu’à suppression ou remplacement."
+      },
+      "providers": {
+        "title": "5. Prestataires externes, sous-traitants et transferts possibles",
+        "paragraph1": "L’application utilise ou peut utiliser des prestataires externes pour les fonctions nécessaires du service, notamment l’infrastructure, l’authentification, la sécurité et la fourniture de ressources. Les intégrations préparées pour de futures fonctionnalités ne sont pas considérées comme actives tant qu’elles ne sont pas configurées et mises en service.",
+        "paragraph2": "Lorsqu’un prestataire traite des données personnelles pour le compte de Kiso Desk et selon ses instructions, il agit, selon le cas, en qualité de sous-traitant ou de prestataire de services.",
+        "paragraph3": "Kiso Desk utilise l’infrastructure Google Cloud Platform (GCP) pour héberger et exploiter les composants techniques du service. Les données traitées dans cette infrastructure servent à gérer les comptes, conserver la progression et exploiter la plateforme.",
+        "paragraph4": "L’application permet de se connecter avec Google. Dans ce cadre, Kiso Desk reçoit uniquement les données autorisées et nécessaires à l’authentification du compte, telles que l’identifiant Google, l’adresse e-mail, son statut de vérification et le nom du profil.",
+        "paragraph5": "L’application utilise flagcdn.com pour charger les images de drapeaux. Lors de la demande de ces ressources, le prestataire peut recevoir des données techniques habituelles, telles que l’adresse IP, l’agent utilisateur, la date, l’heure et l’URL de provenance.",
+        "paragraph6": "Lorsque des données sont communiquées ou transférées à un tiers qui n’est pas un sous-traitant, cela se fait conformément au droit applicable, notamment lorsque cela est nécessaire pour fournir le service, maintenir la relation avec l’utilisateur, protéger des droits ou respecter des obligations légales.",
+        "paragraph7": "Cloudflare Turnstile peut être utilisé de manière conditionnelle pour prévenir les robots et les abus, ce qui peut impliquer le traitement de données techniques de connexion par Cloudflare. La récupération de compte par e-mail est préparée, mais elle n’est pas active tant qu’un prestataire de messagerie n’est pas configuré. Aucun cookie d’analyse, réseau publicitaire, système de remarketing ou autre mécanisme de suivi non essentiel n’est actuellement utilisé."
+      },
+      "legalBasis": {
+        "title": "6. Base juridique et principes de confidentialité",
+        "paragraph1": "Le traitement lié aux cookies strictement nécessaires est effectué afin de connecter les utilisateurs, maintenir les sessions actives, authentifier les requêtes et protéger le fonctionnement du compte.",
+        "paragraph2": "Kiso Desk traite les données conformément au droit applicable. Lorsque les informations sont nécessaires pour fournir le service demandé ou remplir les obligations découlant de la relation avec l’utilisateur, aucun consentement supplémentaire n’est demandé, sauf si le droit applicable l’exige.",
+        "paragraph3": "Kiso Desk s’appuie également sur des principes de confidentialité reconnus au niveau international, notamment la transparence, la limitation des finalités, la minimisation des données, l’exactitude, la conservation limitée, la sécurité, le contrôle de l’utilisateur et la responsabilité. Cette référence ne constitue ni une certification ni une déclaration de conformité intégrale à des lois étrangères non applicables.",
+        "paragraph4": "Si des technologies non essentielles telles que l’analyse, la publicité, le remarketing ou d’autres mécanismes de suivi sont introduites à l’avenir, la présente Politique sera mise à jour et le consentement correspondant sera demandé avant leur activation lorsque cela sera nécessaire."
+      },
+      "arco": {
+        "title": "7. Droits relatifs aux données et retrait du consentement",
+        "paragraph1": "Vous pouvez demander l’accès aux données personnelles associées à votre compte, leur rectification ou leur suppression, ou vous opposer à leur traitement. Le cas échéant, vous pouvez également retirer votre consentement pour les traitements qui l’exigent.",
+        "paragraph2": "Pour exercer ces droits, vous pouvez envoyer une demande à l’adresse suivante : kisodesk.project@gmail.com.",
+        "paragraph3": "Le responsable du traitement communiquera sa décision dans le délai légal applicable et, lorsque la demande est acceptée, la mettra en œuvre dans le délai correspondant.",
+        "paragraph4": "Ces délais peuvent être prolongés lorsque le droit applicable le permet et que les circonstances le justifient.",
+        "paragraph5": "Le retrait du consentement n’affecte pas les traitements déjà réalisés ni ceux qui doivent se poursuivre en raison d’une obligation légale, d’une relation en cours, de la sécurité, de la défense de droits ou d’une conservation nécessaire.",
+        "item1": "L’alias ou l’identifiant de compte utilisé dans l’application, le cas échéant.",
+        "item2": "L’adresse e-mail associée à votre compte.",
+        "item3": "Un moyen de recevoir les notifications.",
+        "item4": "Des informations raisonnables permettant de vérifier votre identité ou la propriété du compte, de préférence via l’adresse e-mail associée. Si vous agissez par l’intermédiaire d’un représentant, des documents établissant son pouvoir de représentation.",
+        "item5": "Le droit que vous souhaitez exercer : accès, rectification, suppression, opposition ou retrait du consentement.",
+        "item6": "Une description claire et précise des données personnelles concernées par votre demande, telles que l’adresse e-mail, l’alias, les préférences ou les mesures de frappe associées au compte.",
+        "item7": "Pour une demande de rectification, les informations correctes et, si nécessaire, les éléments justifiant la correction demandée.",
+        "item8": "Toute autre information raisonnablement nécessaire pour identifier le compte et traiter correctement la demande."
+      },
+      "management": {
+        "title": "8. Comment gérer et supprimer ces données",
+        "paragraph1": "Vous pouvez gérer les cookies, le stockage local et votre décision concernant les technologies non essentielles.",
+        "item1": "Déconnexion : lorsque vous vous déconnectez, les cookies d’authentification access_token et refresh_token sont supprimés du navigateur.",
+        "item2": "Préférences de confidentialité et de cookies : vous pouvez consulter et modifier votre décision concernant les technologies non essentielles depuis votre profil. Vous pouvez également supprimer les cookies et les données locales dans les paramètres du navigateur.",
+        "item3": "Avertissement : le blocage des cookies strictement nécessaires peut vous empêcher de vous connecter ou d’utiliser les fonctions nécessitant une authentification."
+      },
+      "changes": {
+        "title": "9. Modifications de la présente Politique",
+        "paragraph1": "L’application peut mettre à jour la présente Politique afin de refléter des changements juridiques, techniques ou opérationnels. Les mises à jour seront publiées sur cette page avec la date correspondante de dernière mise à jour.",
+        "paragraph2": "Lorsque les modifications sont importantes, elles sont communiquées au moyen d’un avis visible dans l’application, d’un avis relatif aux cookies ou d’un autre moyen électronique disponible."
+      },
+      "contact": {
+        "title": "10. Contact",
+        "paragraph1": "Si vous avez des questions, souhaitez exercer vos droits ou obtenir des informations sur le traitement des données, vous pouvez écrire à kisodesk.project@gmail.com.",
+        "paragraph2": "Pour consulter l’identité et les coordonnées du responsable du traitement, les finalités générales, les prestataires, les durées de conservation et les autres détails du traitement, reportez-vous à l’Avis de confidentialité de l’application."
+      }
+    },
+    "privacy": {
+      "metadata": {
+        "title": "Politique de confidentialité",
+        "description": "Informations sur la manière dont Kiso Desk traite les données personnelles."
+      },
+      "general": {
+        "eyebrow": "Mentions légales",
+        "title": "Avis de confidentialité",
+        "description": "Informations sur le traitement des données personnelles conformément au droit applicable et aux principes de confidentialité reconnus au niveau international.",
+        "introduction": "Le présent Avis explique quelles informations Kiso Desk traite, comment elles sont utilisées, avec qui elles peuvent être partagées et quels moyens de contrôle sont offerts aux utilisateurs. La référence à des principes internationaux ne constitue ni une certification ni une déclaration de conformité intégrale à des lois étrangères non applicables.",
+        "lastUpdatedLabel": "Dernière mise à jour",
+        "lastUpdated": "23 juillet 2026",
+        "contentsLabel": "Sommaire",
+        "relatedLabel": "Documents associés",
+        "relatedTerms": "Conditions d’utilisation",
+        "relatedCookies": "Politique relative aux cookies"
+      },
+      "data": {
+        "title": "1. Données que nous traitons",
+        "sensitiveNote": "Kiso Desk ne demande pas de données personnelles sensibles. Les préférences d’accessibilité ou d’interface sont utilisées uniquement comme réglages fonctionnels de l’application et ne visent pas à recueillir des informations sur la santé, le handicap, l’origine ethnique, la religion, les opinions politiques, l’orientation sexuelle ou d’autres données sensibles.",
+        "item1": "Compte : adresse e-mail, nom de profil le cas échéant, alias choisi par l’utilisateur, rôle, langue, disposition du clavier et préférences d’accessibilité.",
+        "item2": "Authentification : mot de passe enregistré sous forme de hachage lorsque le compte est créé avec un mot de passe, ou données nécessaires à la connexion avec Google lorsque cette méthode est utilisée.",
+        "item3": "Apprentissage : cours, leçons, progression, vitesse, précision, temps d’entraînement, erreurs, touches utilisées et événements nécessaires au calcul des mesures de frappe.",
+        "item4": "Fonctions sociales : amitiés, demandes, blocages, présence, dernière connexion et statistiques partagées selon les préférences disponibles.",
+        "item5": "Classement : alias, vitesse, précision, niveau, langue d’entraînement, position et date du résultat, le cas échéant.",
+        "item6": "Données techniques : adresse IP, agent utilisateur, journaux, identifiants de session, données de diagnostic et requêtes techniques générées par l’infrastructure ou les prestataires utilisés.",
+        "item7": "Données locales : thème, disposition du clavier, police, taille du texte, affichage du clavier, décision concernant les technologies non essentielles, progression en mode invité et historique local des textes."
+      },
+      "purposes": {
+        "title": "2. Comment nous utilisons les données",
+        "item1": "Créer et gérer les comptes et les sessions.",
+        "item2": "Permettre la connexion avec un mot de passe ou Google, selon la méthode choisie.",
+        "item3": "Fournir des leçons, enregistrer la progression et produire des statistiques de frappe.",
+        "item4": "Personnaliser la disposition du clavier, l’interface, la police, la taille du texte et d’autres préférences d’utilisation.",
+        "item5": "Afficher des classements généraux et des classements par langue.",
+        "item6": "Exploiter les fonctions sociales, notamment les amitiés, la présence, la dernière connexion et les statistiques visibles selon les préférences du compte.",
+        "item7": "Protéger les comptes, prévenir les abus, détecter les activités non autorisées et diagnostiquer les erreurs.",
+        "item8": "Permettre le téléchargement des données et la suppression du compte depuis le profil.",
+        "item9": "Répondre aux demandes d’assistance, de confidentialité et de sécurité.",
+        "item10": "Respecter les obligations légales et défendre des réclamations.",
+        "item11": "Si Google AdSense est activé à l’avenir, afficher et mesurer la publicité, prévenir la fraude et, le cas échéant, personnaliser les annonces avec les informations et le consentement requis par le droit applicable."
+      },
+      "legalBasis": {
+        "title": "3. Fondement et principes du traitement",
+        "paragraph1": "Le traitement est principalement effectué pour fournir le service demandé, gérer les comptes, maintenir les sessions, enregistrer la progression, produire des statistiques, exploiter les classements et les fonctions sociales, permettre le téléchargement ou la suppression des données et protéger la plateforme.",
+        "paragraph2": "Kiso Desk traite les données conformément au droit applicable. Lorsque les informations sont nécessaires pour fournir le service ou remplir les obligations découlant de la relation avec l’utilisateur, aucun consentement supplémentaire n’est demandé, sauf si le droit applicable l’exige.",
+        "paragraph3": "Kiso Desk s’appuie également sur des principes de confidentialité reconnus au niveau international, notamment la transparence, la limitation des finalités, la minimisation des données, l’exactitude, la conservation limitée, la sécurité, le contrôle de l’utilisateur et la responsabilité. Cette référence ne constitue ni une certification ni une déclaration de conformité intégrale à des lois étrangères non applicables.",
+        "paragraph4": "Pour les finalités nécessitant un consentement, celui-ci est demandé lorsque cela est approprié et peut être retiré sans effet rétroactif. Si de nouvelles finalités, différentes ou non nécessaires à la fourniture du service, sont ajoutées, le présent Avis sera mis à jour avant le début du nouveau traitement lorsque cela sera requis."
+      },
+      "recipients": {
+        "title": "4. Prestataires et destinataires",
+        "paragraph1": "Kiso Desk utilise des prestataires technologiques pour exploiter l’infrastructure, l’hébergement, l’authentification, la fourniture de ressources et la sécurité. L’intégration de messagerie est préparée, mais elle n’est pas active tant qu’un prestataire n’est pas configuré.",
+        "paragraph2": "Lorsque ces prestataires traitent des données personnelles pour le compte de Kiso Desk et selon ses instructions, ils agissent en qualité de sous-traitants ou de prestataires de services et utilisent les informations uniquement pour fournir les fonctions convenues.",
+        "paragraph3": "Google Cloud Platform héberge et exploite les composants techniques du service. Google agit également comme fournisseur d’authentification lorsque l’utilisateur choisit de se connecter avec un compte Google.",
+        "paragraph4": "L’application charge des images de drapeaux depuis flagcdn.com. Lors de la demande de ces ressources, le prestataire peut recevoir des données techniques habituelles, telles que l’adresse IP, l’agent utilisateur, la date, l’heure et l’URL de provenance.",
+        "paragraph5": "Cloudflare Turnstile peut être utilisé de manière conditionnelle pour prévenir les robots et les abus. Lorsqu’il est activé, Cloudflare peut recevoir les données techniques de connexion nécessaires à la vérification de la requête. Google AdSense et la publicité ne sont pas actifs ; avant leur activation, les informations seront mises à jour et les contrôles nécessaires seront appliqués.",
+        "paragraph6": "La personne concernée peut s’opposer aux communications ou transferts nécessitant son consentement en utilisant l’adresse e-mail dédiée à la confidentialité. Cette opposition n’affecte pas les communications ou transferts nécessaires pour fournir le service, maintenir la relation avec l’utilisateur, protéger des droits, prévenir les abus ou respecter des obligations légales."
+      },
+      "transfers": {
+        "title": "5. Transferts et traitement dans d’autres juridictions",
+        "paragraph1": "Kiso Desk peut utiliser des prestataires technologiques situés dans différentes juridictions pour héberger, exploiter, protéger et maintenir le service.",
+        "paragraph2": "Lorsque ces prestataires agissent en qualité de sous-traitants, ils traitent les données pour le compte de Kiso Desk conformément aux instructions et finalités correspondantes.",
+        "paragraph3": "Lorsque des données sont communiquées ou transférées à un tiers qui n’est pas un sous-traitant, cela se fait dans les cas autorisés par le droit applicable, notamment lorsque cela est nécessaire pour fournir le service, respecter des obligations légales, protéger des droits ou lorsqu’un consentement existe.",
+        "paragraph4": "L’utilisation de Google Cloud Platform, Google OAuth, Cloudflare Turnstile lorsqu’il est actif et flagcdn.com peut impliquer le traitement de données techniques ou de compte dans d’autres juridictions, selon la configuration du service et les politiques applicables de chaque prestataire."
+      },
+      "retention": {
+        "title": "6. Conservation",
+        "item1": "Le cookie access_token a une durée maximale de 2 heures et le cookie refresh_token une durée maximale de 7 jours.",
+        "item2": "Les données de compte et de progression sont conservées tant que le compte reste actif ou aussi longtemps que nécessaire pour fournir le service, exploiter les classements et les fonctions sociales, respecter les obligations légales, traiter les demandes, prévenir les abus, résoudre les incidents ou défendre des droits.",
+        "item3": "Les données liées aux classements et aux fonctions sociales sont conservées tant que le compte est actif ou aussi longtemps que nécessaire pour exploiter ces fonctions, sauf si l’utilisateur modifie ses préférences, supprime son compte ou exerce un droit applicable.",
+        "item4": "Les sauvegardes locales générées lors des déploiements sont conservées pendant une durée maximale de 30 jours. Les journaux techniques font l’objet d’une rotation selon leur taille et sont conservés aussi longtemps que nécessaire pour exploiter, protéger et diagnostiquer le service.",
+        "item5": "Lorsque les données personnelles ne sont plus nécessaires, elles sont supprimées, anonymisées ou bloquées avant leur suppression, selon le cas, sauf si une obligation applicable impose leur conservation."
+      },
+      "rights": {
+        "title": "7. Droits et demandes",
+        "paragraph1": "Vous pouvez demander l’accès à vos données personnelles, leur rectification ou leur suppression, ou vous opposer à leur traitement. Le cas échéant, vous pouvez également retirer votre consentement pour les traitements qui l’exigent.",
+        "paragraph2": "Depuis le profil, l’application permet de télécharger une copie structurée des données associées au compte et de demander leur suppression au moyen des mécanismes disponibles.",
+        "paragraph3": "Les utilisateurs peuvent limiter la divulgation des données visibles dans les classements ou les fonctions sociales, consulter ou modifier leur décision concernant les technologies non essentielles et bloquer d’autres utilisateurs au moyen des contrôles de l’application.",
+        "paragraph4": "Vous pouvez également envoyer des demandes relatives à la confidentialité, à la limitation de l’utilisation ou de la divulgation des données et à l’exercice de vos droits à l’adresse e-mail indiquée dans le présent Avis."
+      },
+      "children": {
+        "title": "8. Mineurs",
+        "paragraph1": "Le service ne s’adresse pas aux mineurs.",
+        "paragraph2": "Pour créer un compte et utiliser le service de manière autonome, une personne doit avoir atteint l’âge légal de la majorité selon le droit applicable dans son lieu de résidence.",
+        "paragraph3": "Si Kiso Desk détecte qu’un compte appartient à une personne mineure, il peut limiter les traitements non nécessaires et évaluer la suspension, la suppression, le blocage ou la régularisation du compte conformément au droit applicable et à la protection des droits de cette personne."
+      },
+      "security": {
+        "title": "9. Sécurité",
+        "paragraph1": "Kiso Desk applique des mesures administratives, techniques et physiques destinées à protéger les données personnelles contre les dommages, la perte, l’altération, la destruction, l’utilisation, l’accès ou le traitement non autorisés.",
+        "paragraph2": "Ces mesures peuvent comprendre des contrôles d’accès, l’authentification, le stockage sécurisé des mots de passe, la gestion protégée des sessions, des cookies HttpOnly, la prévention des abus, des journaux techniques, des restrictions internes et d’autres mesures proportionnées au risque et à l’évolution technologique.",
+        "paragraph3": "Aucun système n’est infaillible. Si un incident affecte de manière significative les droits des utilisateurs, Kiso Desk effectuera les notifications et prendra les mesures requises par le droit applicable."
+      },
+      "changes": {
+        "title": "10. Modifications du présent Avis de confidentialité",
+        "paragraph1": "Le présent Avis peut être mis à jour afin de refléter des changements juridiques, techniques ou opérationnels.",
+        "paragraph2": "Les mises à jour seront publiées sur cette page avec la date correspondante de dernière mise à jour.",
+        "paragraph3": "Lorsqu’une modification est importante, elle est communiquée au moyen d’un avis visible dans l’application ou d’un autre moyen électronique disponible.",
+        "paragraph4": "Si une nouvelle finalité nécessite un consentement, le traitement correspondant ne commencera pas avant l’obtention de ce consentement lorsque le droit applicable l’exige."
+      },
+      "responsible": {
+        "title": "11. Responsable du traitement et contact",
+        "paragraph3": "Adresse e-mail pour les questions de confidentialité : kisodesk.project@gmail.com."
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "Conditions d’utilisation",
+        "description": "Règles d’utilisation de Kiso Desk."
+      },
+      "general": {
+        "eyebrow": "Mentions légales",
+        "title": "Conditions d’utilisation",
+        "description": "Règles d’utilisation de Kiso Desk.",
+        "introduction": "Les présentes conditions régissent l’accès à l’application, aux comptes, aux fonctions d’apprentissage et aux fonctions sociales disponibles.",
+        "lastUpdatedLabel": "Dernière mise à jour",
+        "lastUpdated": "23 juillet 2026",
+        "contentsLabel": "Sommaire",
+        "relatedLabel": "Documents associés",
+        "relatedPrivacy": "Politique de confidentialité",
+        "relatedCookies": "Politique relative aux cookies"
+      },
+      "service": {
+        "title": "1. Description du service",
+        "paragraph1": "Kiso Desk propose des leçons et des exercices de frappe, le suivi de la progression, des statistiques, des classements et des fonctions sociales liées à l’apprentissage et à la pratique de la frappe au clavier.",
+        "paragraph2": "En créant un compte, en vous connectant ou en utilisant le service, vous acceptez les présentes Conditions d’utilisation.",
+        "paragraph3": "Les fonctionnalités peuvent être modifiées, mises à jour, limitées ou supprimées pendant le développement et l’exploitation du service, toujours conformément au droit applicable et sans porter atteinte aux droits auxquels il ne peut être renoncé."
+      },
+      "eligibility": {
+        "title": "2. Âge et admissibilité",
+        "paragraph1": "Pour créer un compte et utiliser le service de manière autonome, vous devez avoir atteint l’âge légal de la majorité selon le droit applicable dans votre lieu de résidence.",
+        "paragraph2": "Si le droit applicable impose des exigences supplémentaires en matière de capacité, d’autorisation ou d’âge, vous devez les respecter avant d’utiliser le service.",
+        "paragraph3": "Le service ne s’adresse pas aux mineurs. Si vous êtes mineur selon le droit applicable, vous ne devez pas créer de compte ni fournir de données personnelles de manière autonome."
+      },
+      "account": {
+        "title": "3. Compte et sécurité",
+        "item1": "Vous devez fournir des informations exactes et les maintenir à jour.",
+        "item2": "Vous êtes responsable de la protection de vos identifiants ou méthodes d’accès et de votre déconnexion sur les appareils partagés.",
+        "item3": "Vous ne devez pas céder, vendre, transférer ni utiliser le compte d’une autre personne.",
+        "item4": "Vous devez signaler tout accès non autorisé ou incident de sécurité par le moyen de contact indiqué dans les présentes Conditions."
+      },
+      "acceptableUse": {
+        "title": "4. Utilisation acceptable",
+        "intro": "En utilisant le service, vous acceptez de respecter les règles suivantes :",
+        "item1": "Ne pas perturber la sécurité, la disponibilité ou le fonctionnement du service.",
+        "item2": "Ne pas extraire de données, automatiser des requêtes, effectuer du scraping, surcharger l’infrastructure ou contourner des limites techniques sans autorisation.",
+        "item3": "Ne pas harceler, usurper l’identité, tromper ou tenter d’obtenir des informations auprès d’autres utilisateurs.",
+        "item4": "Ne pas téléverser, reproduire, distribuer ou utiliser du contenu sans disposer des droits suffisants.",
+        "item5": "Ne pas utiliser le service pour des activités illégales, abusives, frauduleuses, préjudiciables ou contraires aux présentes Conditions."
+      },
+      "social": {
+        "title": "5. Classements et fonctions sociales",
+        "paragraph1": "Le service comprend des classements, des profils et d’autres fonctions sociales.",
+        "paragraph2": "Ces fonctions peuvent afficher un alias, la vitesse, la précision, le niveau, la progression, le statut en ligne, la dernière activité ou des statistiques de frappe selon les préférences disponibles.",
+        "paragraph3": "Lors de la création d’un compte, certaines fonctions sociales sont activées par défaut. Vous pouvez les désactiver individuellement depuis votre profil. Votre nom réel et votre adresse e-mail ne sont pas publiés, et la présence ou les statistiques partagées sont visibles uniquement par les amis acceptés, conformément à l’Avis de confidentialité."
+      },
+      "intellectualProperty": {
+        "title": "6. Propriété intellectuelle",
+        "paragraph1": "Le logiciel, la conception, l’interface, les textes, les exercices, les images, les contenus audio, les marques, les logos et les autres éléments du service appartiennent à leurs titulaires respectifs.",
+        "paragraph2": "L’accès au service ne transfère aucun droit de propriété intellectuelle sur l’application ou son contenu.",
+        "paragraph3": "Le contenu accessible par l’intermédiaire du service peut uniquement être utilisé pour pratiquer la frappe et utiliser les fonctions de l’application, sauf autorisation expresse ou licence différente."
+      },
+      "availability": {
+        "title": "7. Disponibilité et modifications",
+        "paragraph1": "Le service peut être interrompu, limité ou modifié en raison d’opérations de maintenance, de mises à jour, de mesures de sécurité, de défaillances techniques, de changements opérationnels ou de causes échappant au contrôle raisonnable de Kiso Desk.",
+        "paragraph2": "Les modifications importantes seront communiquées lorsque cela sera raisonnablement possible.",
+        "paragraph3": "Kiso Desk ne garantit aucune amélioration précise de la vitesse, de la précision, des résultats scolaires, des performances professionnelles, de l’employabilité ou de tout autre résultat particulier découlant de l’utilisation du service."
+      },
+      "suspension": {
+        "title": "8. Suspension et résiliation",
+        "paragraph1": "Kiso Desk peut limiter, suspendre ou fermer un compte en cas de violation des présentes Conditions, d’abus du service, de risque de sécurité, d’utilisation non autorisée, de préjudice causé à d’autres utilisateurs ou d’activité illégale ou nuisible.",
+        "paragraph2": "Lorsque cela est raisonnable, l’utilisateur peut demander un examen de la mesure par le moyen de contact indiqué dans les présentes Conditions.",
+        "paragraph3": "La résiliation, la suspension ou la limitation d’un compte n’affecte pas les obligations ou responsabilités nées avant la mesure.",
+        "paragraph4": "La suppression ou la conservation des données personnelles associées au compte est gérée conformément à l’Avis de confidentialité et au droit applicable."
+      },
+      "liability": {
+        "title": "9. Responsabilité",
+        "paragraph1": "Le service est fourni selon sa disponibilité et son fonctionnement actuels.",
+        "paragraph2": "Aucune disposition des présentes Conditions ne limite les droits auxquels les utilisateurs ne peuvent renoncer en vertu du droit applicable ni n’exclut les responsabilités qui ne peuvent légalement être limitées.",
+        "paragraph3": "Dans la mesure autorisée par le droit applicable, Kiso Desk n’est pas responsable des dommages indirects, interruptions, pertes de données ou préjudices résultant de causes échappant à son contrôle raisonnable, d’une mauvaise utilisation du compte, d’informations fausses ou obsolètes, de défaillances de tiers extérieurs au service ou de la violation des présentes Conditions par l’utilisateur.",
+        "paragraph4": "Ce qui précède n’exclut pas la responsabilité en cas de violation du droit imputable à Kiso Desk, de faute intentionnelle, de mauvaise foi, de négligence grave, d’atteinte à des droits auxquels il ne peut être renoncé, de manquement aux obligations de sécurité ou de traitement abusif de données personnelles."
+      },
+      "law": {
+        "title": "10. Droit applicable et contact",
+        "paragraph1": "Les présentes Conditions sont régies et interprétées conformément au droit applicable au responsable du service, sans préjudice des droits auxquels les utilisateurs ne peuvent renoncer en vertu du droit applicable dans leur lieu de résidence.",
+        "paragraph2": "Aucune disposition des présentes Conditions ne limite le droit de l’utilisateur de contacter les autorités compétentes en matière de protection des consommateurs, de protection des données ou toute autre autorité compétente.",
+        "paragraph3": "Les questions, demandes, signalements de sécurité, réclamations ou communications concernant les présentes Conditions peuvent être envoyés à kisodesk.project@gmail.com."
+      }
+    },
+    "about": {
+      "metadata": {
+        "title": "À propos de Kiso Desk",
+        "description": "Découvrez Kiso Desk et son approche pratique de l’apprentissage de la dactylographie."
+      },
+      "general": {
+        "title": "À propos de Kiso Desk",
+        "subtitle": "Une plateforme pour pratiquer la dactylographie de manière claire, régulière et mesurable",
+        "project_title": "Le projet",
+        "project_text": "Kiso Desk est un projet indépendant visant à offrir une expérience claire et pratique pour apprendre la dactylographie.",
+        "project_status_text": "Il est conçu comme un espace où chacun, quel que soit son niveau d’expérience, peut s’entraîner régulièrement et constater de réels progrès. L’accent est mis sur l’apprentissage continu, l’aspect pratique et le soin apporté aux détails, afin d’offrir un outil adapté aux besoins actuels.",
+        "mission_title": "Notre mission",
+        "mission_text": "Chez Kiso Desk, nous considérons la dactylographie comme une compétence essentielle dans le monde numérique. Notre mission est de rendre l’apprentissage d’une frappe rapide et précise accessible, pratique et efficace pour tous, quel que soit le niveau d’expérience.",
+        "vision_title": "Notre vision",
+        "vision_text": "Créer un outil utile pour améliorer la vitesse, la précision et l’assurance au clavier, grâce à une expérience moderne, claire et axée sur une pratique régulière.",
+        "history_title": "Notre histoire",
+        "history_text": "Kiso Desk est né comme un projet indépendant destiné à créer une expérience moderne d’entraînement à la dactylographie. Ce qui n’était au départ qu’une idée simple évolue aujourd’hui en une plateforme centrée sur les leçons, la progression, les statistiques et l’amélioration continue."
+      }
+    },
+    "page": {
+      "metadata": {
+        "title": "Apprenez la dactylographie",
+        "description": "Améliorez votre vitesse et votre précision grâce à des leçons interactives de dactylographie."
+      },
+      "general": {
+        "altNight": "Illustration d’une chambre de nuit avec une personne et un chat",
+        "altDay": "Illustration d’une pièce en journée avec une personne qui programme et un chat",
+        "interactiveLessons": "Leçons interactives",
+        "interactiveLessonsDescription": "Apprenez grâce à des cours structurés",
+        "freePractice": "Entraînement libre",
+        "freePracticeDescription": "Entraînez-vous à votre rythme",
+        "dashboardDescription": "Consultez vos statistiques",
+        "rankingDescription": "Mesurez-vous au monde entier",
+        "title1": "Maîtrisez la",
+        "title2": "dactylographie",
+        "subtitle1": "Améliorez votre vitesse et votre précision ",
+        "subtitle2": "grâce à des leçons interactives de frappe",
+        "learn": "Apprenez",
+        "guidedLessons": "Leçons guidées",
+        "practiceAction": "Entraînez-vous",
+        "typingExercises": "Exercices de dactylographie",
+        "track": "Mesurez",
+        "progressAndStats": "Progression et statistiques",
+        "compete": "Affrontez",
+        "globalRanking": "Classement mondial"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "metadata": {
+        "title": "Se connecter",
+        "description": "Connectez-vous à Kiso Desk pour poursuivre votre entraînement à la dactylographie."
+      },
+      "general": {
+        "googleError": "La connexion avec Google a échoué.",
+        "tooManyAttempts": "Trop de tentatives. Attendez une minute.",
+        "requiredFields": "Remplissez tous les champs.",
+        "invalidCredentials": "Adresse e-mail ou mot de passe incorrect",
+        "signIn": "Se connecter",
+        "continueWithGoogle": "Continuer avec Google",
+        "or": "ou",
+        "email": "Adresse e-mail",
+        "password": "Mot de passe",
+        "sending": "Envoi en cours...",
+        "noAccount": "Vous n’avez pas de compte ?",
+        "createAccount": "Créer un compte",
+        "forgotPassword": "Mot de passe oublié ?"
+      }
+    },
+    "register": {
+      "metadata": {
+        "title": "Créer un compte",
+        "description": "Créez un compte sur Kiso Desk et commencez à pratiquer la dactylographie."
+      },
+      "general": {
+        "acceptLegalRequired": "Vous devez accepter les Conditions d’utilisation et la Politique de confidentialité pour créer un compte",
+        "googleError": "L’inscription avec Google a échoué.",
+        "tooManyAttempts": "Trop de tentatives. Attendez une minute.",
+        "unknownError": "Erreur inconnue",
+        "createAccount": "Créer un compte",
+        "registerWithGoogle": "S’inscrire avec Google",
+        "or": "ou",
+        "name": "Nom",
+        "email": "Adresse e-mail",
+        "password": "Mot de passe",
+        "acceptTermsPrefix": "J’accepte les",
+        "acceptTermsLink": "Conditions d’utilisation",
+        "acceptPrivacyPrefix": "J’ai lu la",
+        "acceptPrivacyLink": "Politique de confidentialité",
+        "alreadyHaveAccount": "Vous avez déjà un compte ?",
+        "signIn": "Se connecter",
+        "socialFeaturesNotice": "Les fonctions sociales sont facultatives et vous pouvez configurer leur confidentialité depuis votre profil."
+      }
+    },
+    "resetPassword": {
+      "general": {
+        "invalidLink": "Le lien ne contient pas de jeton valide.",
+        "passwordTooShort": "Le mot de passe doit comporter au moins 8 caractères.",
+        "passwordsDoNotMatch": "Les mots de passe ne correspondent pas.",
+        "invalidOrExpired": "Le lien est invalide, a déjà été utilisé ou a expiré.",
+        "successTitle": "Mot de passe mis à jour",
+        "successMessage": "Vous pouvez maintenant vous connecter avec votre nouveau mot de passe.",
+        "backToLogin": "Retour à la connexion",
+        "title": "Créez un nouveau mot de passe",
+        "instructions": "Choisissez un nouveau mot de passe d’au moins 8 caractères.",
+        "newPassword": "Nouveau mot de passe",
+        "confirmPassword": "Confirmer le mot de passe",
+        "submit": "Modifier le mot de passe",
+        "requestNewLink": "Demander un nouveau lien"
+      }
+    }
+  },
+  "profile": {
+    "general": {
+      "title": "Profil",
+      "guestModeMessage": "Connectez-vous pour consulter votre profil et vos statistiques.",
+      "signIn": "Se connecter",
+      "loadError": "Erreur lors du chargement du profil",
+      "loadErrorText": "Impossible de charger le profil",
+      "nameRequired": "Saisissez votre nom",
+      "name": "Nom",
+      "email": "Adresse e-mail",
+      "emailReadOnly": "L’adresse e-mail ne peut pas être modifiée depuis le profil.",
+      "editProfile": "Modifier le profil",
+      "changePassword": "Modifier le mot de passe",
+      "save": "Enregistrer",
+      "savingText": "Enregistrement...",
+      "cancel": "Annuler",
+      "retry": "Réessayer",
+      "savedSuccessfully": "Profil mis à jour.",
+      "saveError": "Impossible d’enregistrer le profil. Réessayez.",
+      "conflictError": "Le profil a été modifié dans un autre onglet. Rechargez les données avant de l’enregistrer à nouveau.",
+      "required": "Ce champ est obligatoire.",
+      "accountSection": "Compte",
+      "preferencesSection": "Préférences",
+      "securitySection": "Sécurité",
+      "memberSince": "Membre depuis",
+      "lastLogin": "Dernière connexion",
+      "lastUpdate": "Dernière mise à jour",
+      "interfaceLanguage": "Langue de l’interface",
+      "keyboardLayout": "Disposition du clavier",
+      "accessibility": "Accessibilité",
+      "adminRole": "Administrateur",
+      "userRole": "Utilisateur",
+      "passwordSectionTitle": "Mot de passe",
+      "passwordSectionDescription": "Vous pouvez demander un lien de réinitialisation de votre mot de passe à tout moment.",
+      "dataControlsTitle": "Vos données et votre compte",
+      "dataControlsDescription": "Téléchargez une copie de vos données ou supprimez définitivement votre compte.",
+      "exportTitle": "Télécharger mes données",
+      "exportDescription": "Générez un fichier JSON contenant les données de votre compte, votre progression, vos entraînements, vos erreurs et vos relations. Il n’inclut ni mots de passe ni jetons.",
+      "exportButton": "Télécharger les données",
+      "exporting": "Préparation du téléchargement...",
+      "exportSuccess": "Le téléchargement de vos données a commencé.",
+      "exportError": "Impossible de générer l’exportation. Réessayez.",
+      "deleteTitle": "Supprimer mon compte",
+      "deleteDescription": "Supprime le compte et les données actives qui lui sont associées. Cette action est irréversible.",
+      "deleteButton": "Supprimer le compte",
+      "deleteModalTitle": "Supprimer définitivement le compte",
+      "deleteModalDescription": "Votre profil, votre progression, vos sessions, vos statistiques, vos erreurs, vos relations d’amitié et vos sessions de connexion seront supprimés de la base de données active. Les sauvegardes restent soumises à leur cycle de conservation applicable.",
+      "deleteConfirmEmailInstruction": "Pour confirmer, saisissez votre adresse e-mail :",
+      "deleteConfirmEmail": "Adresse e-mail de confirmation",
+      "deleteCurrentPassword": "Mot de passe actuel",
+      "deleteConfirmButton": "Supprimer définitivement",
+      "deleting": "Suppression...",
+      "deleteEmailMismatch": "L’adresse e-mail de confirmation ne correspond pas.",
+      "deletePasswordRequired": "Saisissez votre mot de passe actuel",
+      "deleteInvalidPassword": "Le mot de passe actuel est incorrect.",
+      "deleteError": "Impossible de supprimer le compte. Réessayez.",
+      "socialPrivacyTitle": "Confidentialité sociale",
+      "publicAlias": "Alias public",
+      "publicAliasPlaceholder": "exemple_utilisateur",
+      "publicAliasHelp": "Entre 3 et 30 caractères : lettres, chiffres, trait d’union et tiret bas.",
+      "publicAliasInvalid": "Configurez un alias valide avant d’activer les fonctions sociales.",
+      "showInRanking": "Apparaître dans le classement",
+      "showInRankingHelp": "Affiche votre alias et vos résultats généraux. Votre nom réel et votre adresse e-mail restent masqués",
+      "searchableByAlias": "Autoriser la recherche par alias",
+      "searchableByAliasHelp": "Les autres utilisateurs pourront vous trouver uniquement grâce à votre alias public.",
+      "allowFriendRequests": "Accepter les demandes d’amitié",
+      "allowFriendRequestsHelp": "Permet aux utilisateurs qui vous trouvent par votre alias de vous envoyer des demandes.",
+      "showPresenceToFriends": "Partager votre présence avec vos amis",
+      "showPresenceToFriendsHelp": "Affiche votre statut en ligne et votre dernière activité uniquement à vos amis acceptés.",
+      "shareStatsWithFriends": "Partager vos statistiques avec vos amis",
+      "shareStatsWithFriendsHelp": "Affiche des statistiques d’entraînement agrégées uniquement à vos amis acceptés.",
+      "notConfigured": "Non configuré",
+      "enabled": "Activé",
+      "disabled": "Désactivé",
+      "spanish": "Espagnol",
+      "english": "Anglais",
+      "cookieConsentSaveError": "Impossible d’enregistrer votre choix concernant les cookies. Réessayez.",
+      "googleReauthFailed": "La réauthentification avec Google a échoué.",
+      "googleReauthRequired": "Pour supprimer votre compte, authentifiez-vous à nouveau avec Google.",
+      "privacyCookiesTitle": "Confidentialité et cookies",
+      "privacyCookiesDescription": "Gérez votre choix concernant les technologies non essentielles.",
+      "cookieConsentAccepted": "Vous avez accepté l’utilisation de technologies non essentielles.",
+      "cookieConsentRejected": "Vous avez refusé l’utilisation de technologies non essentielles.",
+      "cookieConsentUnset": "Vous n’avez pas encore indiqué votre préférence concernant les technologies non essentielles.",
+      "cookieConsentUpdatedAt": "Mis à jour le",
+      "cookieConsentAccept": "Accepter",
+      "cookieConsentReject": "Refuser",
+      "googleReauthButton": "Se réauthentifier avec Google"
+    }
+  },
+  "friends": {
+    "general": {
+      "title": "Amis",
+      "subtitle": "Suivez le statut en ligne de vos amis et comparez uniquement leurs entraînements libres.",
+      "guestModeMessage": "Connectez-vous pour voir vos amis et leur activité.",
+      "signIn": "Se connecter",
+      "refresh": "Actualiser",
+      "retry": "Réessayer",
+      "snapshotTitle": "Amis récents",
+      "snapshotDescription": "Consultez le nombre d’amis connectés et ouvrez le panneau complet.",
+      "openFriends": "Ouvrir les amis",
+      "totalFriends": "Amis",
+      "onlineNow": "en ligne maintenant",
+      "requests": "Demandes",
+      "searchTitle": "Rechercher des utilisateurs",
+      "searchLabel": "Alias public",
+      "searchPlaceholder": "Saisissez au moins 3 caractères de l’alias",
+      "searchButton": "Rechercher",
+      "searchError": "La recherche a échoué",
+      "noSearchResults": "Aucun utilisateur trouvé.",
+      "statusFriends": "Amis",
+      "statusPendingOutgoing": "Demande envoyée",
+      "statusPendingIncoming": "Vous a envoyé une demande",
+      "statusNotConnected": "Non connecté",
+      "online": "En ligne",
+      "offline": "Hors ligne",
+      "lastSeen": "Dernière activité",
+      "requestedAt": "Demandé le",
+      "freePractice": "Entraînement libre",
+      "viewStats": "Voir les statistiques",
+      "sendRequest": "Ajouter",
+      "accept": "Accepter",
+      "reject": "Refuser",
+      "remove": "Supprimer",
+      "incomingRequests": "Demandes reçues",
+      "outgoingRequests": "Demandes envoyées",
+      "noIncomingRequests": "Vous n’avez aucune demande reçue.",
+      "noOutgoingRequests": "Vous n’avez aucune demande envoyée.",
+      "myFriends": "Mes amis",
+      "noFriendsYet": "Vous n’avez encore ajouté aucun ami",
+      "block": "Bloquer",
+      "unblock": "Débloquer",
+      "blockedUsers": "Utilisateurs bloqués",
+      "blockedUsersDescription": "Ils ne peuvent pas vous trouver, vous envoyer de demandes ni accéder à votre présence ou à vos statistiques.",
+      "noBlockedUsers": "Vous n’avez aucun utilisateur bloqué.",
+      "presenceHidden": "Présence privée",
+      "statsHidden": "Cet utilisateur ne partage pas ses statistiques.",
+      "friendNotFound": "Cet ami est introuvable.",
+      "backToFriends": "Retour aux amis",
+      "totalSessions": "Sessions",
+      "averageWpm": "WPM moyen",
+      "averageAccuracy": "Précision moyenne",
+      "bestWpm": "Meilleur WPM",
+      "totalPracticeTime": "Temps total d’entraînement",
+      "byLanguage": "Répartition par langue"
+    }
+  },
+  "ranking": {
+    "general": {
+      "title": "Classement",
+      "subtitle": "Comparez vos résultats à ceux des autres utilisateurs.",
+      "yourStats": "Vos statistiques",
+      "basedOnLast10": "Basées sur vos 10 derniers entraînements.",
+      "score": "Score",
+      "grossWpm": "WPM brut",
+      "accuracy": "Précision",
+      "currentRank": "Position actuelle",
+      "level": "Niveau",
+      "topPercent": "Top {percent} %",
+      "filterByLanguage": "Filtrer par langue",
+      "allLanguages": "Toutes les langues",
+      "user": "Utilisateur",
+      "noData": "Aucune donnée à afficher",
+      "errorFetchingRanking": "Impossible de charger le classement. Réessayez.",
+      "errorFetchingStats": "Impossible de charger vos statistiques. Réessayez.",
+      "retry": "Réessayer",
+      "privateProfile": "Votre profil n’apparaît pas dans le classement. Vous pouvez modifier ce réglage dans la section Confidentialité sociale de votre profil.",
+      "insufficientData": "Effectuez au moins 5 entraînements pour voir votre position dans le classement.",
+      "noDataYet": "Il n’y a pas encore de résultats pour cette langue.",
+      "currentUser": "Vous",
+      "speedAxis": "Vitesse (WPM)",
+      "accuracyAxis": "Précision (%)",
+      "showing": "Affichage de",
+      "of": "sur",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "signInToParticipate": "Connectez-vous pour participer au classement."
+    },
+    "topPerformers": {
+      "general": {
+        "wpm": "WPM net"
+      }
+    },
+    "userStatsCard": {
+      "general": {
+        "levels": {
+          "bronze": "Bronze",
+          "silver": "Argent",
+          "gold": "Or"
+        }
+      }
+    }
+  },
+  "public": {
+    "courses": {
+      "metadata": {
+        "title": "Cours de dactylographie | Kiso Desk",
+        "description": "Explorez les cours et essayez des leçons de dactylographie."
+      },
+      "lessons": {
+        "metadata": {
+          "title": "Leçons de dactylographie | Kiso Desk",
+          "description": "Essayez des leçons de dactylographie sans créer de compte."
+        },
+        "lesson": {
+          "metadata": {
+            "title": "Entraînement de leçon | Kiso Desk",
+            "description": "Entraînez-vous avec une leçon de dactylographie sur Kiso Desk."
+          }
+        }
+      }
+    },
+    "practice": {
+      "metadata": {
+        "title": "Test de vitesse de frappe et de précision | Kiso Desk",
+        "description": "Pratiquez gratuitement la dactylographie et enregistrez le résultat sur cet appareil."
+      }
+    },
+    "progress": {
+      "metadata": {
+        "title": "Progression locale | Kiso Desk",
+        "description": "Progression enregistrée localement dans ce navigateur."
+      },
+      "general": {
+        "title": "Progression locale",
+        "description": "Cette progression est enregistrée uniquement dans ce navigateur.",
+        "lessonsCompleted": "Leçons terminées",
+        "practiceSessions": "Sessions d’entraînement",
+        "accuracy": "Précision",
+        "signInNotice": "Connectez-vous pour enregistrer votre progression dans votre compte.",
+        "signIn": "Se connecter"
+      }
+    },
+    "ranking": {
+      "metadata": {
+        "title": "Classement de dactylographie | Kiso Desk",
+        "description": "Consultez le classement public de vitesse de frappe."
+      }
+    }
+  },
+  "components": {
+    "courses": {
+      "courseCard": {
+        "general": {
+          "lessons": "leçons",
+          "viewCourse": "Voir le cours",
+          "yourProgress": "Votre progression",
+          "loginToSeeProgress": "Connectez-vous pour voir votre progression",
+          "lessonsCount": "leçons"
+        }
+      }
+    },
+    "dashboard": {
+      "errorTrends": {
+        "general": {
+          "title": "Tableau de progression",
+          "noData": "Aucune donnée à afficher",
+          "insufficientData": "Données insuffisantes.",
+          "highestErrorRate": "Taux d’erreur le plus élevé",
+          "correctAttempts": "{correctAttempts}/{totalAttempts} réussites"
+        }
+      },
+      "fingerDistribution": {
+        "general": {
+          "title": "Tableau de progression",
+          "noData": "Aucune donnée à afficher",
+          "leftHand": "Gauche",
+          "rightHand": "Droite",
+          "hand": "Main {hand}",
+          "pinky": "Auriculaire",
+          "ring": "Annulaire",
+          "middle": "Majeur",
+          "index": "Index",
+          "correctPercentage": "{percentage} % de réussites",
+          "noCorrectPercentage": "Aucune",
+          "errorPercentage": "{percentage} % d’erreurs",
+          "errors": "donnée"
+        }
+      },
+      "practiceCalendar": {
+        "general": {
+          "title": "Tableau de progression",
+          "noData": "Aucune donnée à afficher",
+          "noPractice": "Aucun entraînement",
+          "minutesShort": "min",
+          "hoursShort": "h",
+          "noActivity": "Aucune activité",
+          "fiveMinutes": "5 min",
+          "tenMinutes": "10 min",
+          "fifteenMinutes": "15 min et plus"
+        }
+      },
+      "progressChart": {
+        "general": {
+          "noData": "Aucune donnée à afficher"
+        }
+      },
+      "authBanner": {
+        "general": {
+          "message": "Connectez-vous pour consulter vos statistiques.",
+          "signIn": "Se connecter"
+        }
+      },
+      "recommendationsList": {
+        "general": {
+          "title": "Tableau de progression",
+          "signIn": "Se connecter",
+          "noRecommendations": "Aucune recommandation disponible."
+        }
+      },
+      "weakKeysPanel": {
+        "general": {
+          "title": "Tableau de progression",
+          "overallAccuracy": "Précision globale",
+          "weakestKey": "Touche la plus faible",
+          "lowestAccuracy": "Précision la plus faible"
+        }
+      }
+    },
+    "friends": {
+      "friendsSnapshot": {
+        "general": {
+          "title": "Amis",
+          "description": "Consultez le nombre d’amis connectés et ouvrez le panneau complet.",
+          "openFriends": "Ouvrir les amis",
+          "totalFriends": "Amis",
+          "onlineNow": "en ligne maintenant",
+          "noFriendsYet": "Vous n’avez encore ajouté aucun ami"
+        }
+      }
+    },
+    "layout": {
+      "footer": {
+        "general": {
+          "product": "Produit",
+          "lessons": "Leçons",
+          "ranking": "Classement",
+          "progress": "Progression",
+          "project": "Projet",
+          "aboutKisoDesk": "À propos de Kiso Desk",
+          "github": "GitHub",
+          "legal": "Mentions légales",
+          "privacyPolicy": "Politique de confidentialité",
+          "termsOfUse": "Conditions d’utilisation",
+          "cookiePolicy": "Politique relative aux cookies",
+          "contact": "Contact",
+          "copyright": "© {year} Kiso Desk."
+        }
+      },
+      "header": {
+        "general": {
+          "defaultUser": "Utilisateur",
+          "skipToMainContent": "Aller au contenu principal",
+          "courses": "Cours",
+          "userMenu": "Menu utilisateur",
+          "profile": "Mon profil",
+          "logout": "Se déconnecter",
+          "menuToggle": "Ouvrir le menu",
+          "login": "Se connecter",
+          "register": "S’inscrire"
+        }
+      },
+      "sidebar": {
+        "general": {
+          "dashboard": "Tableau de bord",
+          "courses": "Cours",
+          "practice": "Entraînement",
+          "ranking": "Classement",
+          "friends": "Amis",
+          "profile": "Profil",
+          "menuToggle": "Menu de navigation",
+          "expand": "Développer",
+          "collapse": "Réduire"
+        }
+      }
+    },
+    "legal": {
+      "cookieBanner": {
+        "general": {
+          "title": "Politique relative aux cookies et au stockage local",
+          "description": "Dans l’état actuel de l’application, aucun cookie d’analyse, réseau publicitaire, système de remarketing ni autre mécanisme de suivi non essentiel n’est utilisé.",
+          "privacyNotice": "Politique de confidentialité",
+          "cookiePolicy": "Politique relative aux cookies et au stockage local",
+          "accept": "Accepter",
+          "reject": "Refuser"
+        }
+      }
+    },
+    "lessons": {
+      "handReference": {
+        "general": {
+          "handReference": "Référence pour la position des mains sur le clavier"
+        }
+      },
+      "keyboardDetectionWizard": {
+        "general": {
+          "title": "Détecteur de disposition du clavier",
+          "subtitle": "Détectez la disposition de votre clavier à l’aide de quelques touches physiques et utilisez-la dans toute l’application.",
+          "modalTitle": "Détecter la disposition",
+          "currentLayout": "Disposition actuelle",
+          "start": "Démarrer la détection",
+          "progress": "Étape {current} sur {total} au maximum",
+          "progressHint": "La détection peut se terminer plus tôt",
+          "progressLabel": "Progression de la détection",
+          "back": "Retour",
+          "cancel": "Annuler",
+          "close": "Fermer",
+          "intro": {
+            "title": "Détectons votre clavier",
+            "help": "Il vous suffit d’appuyer sur 1 à 5 touches de votre clavier physique."
+          },
+          "capture": {
+            "focus": "Cliquez ici, puis appuyez sur la touche indiquée",
+            "instruction": "La touche sur laquelle vous appuyez servira uniquement à détecter la disposition.",
+            "captured": "Touche détectée : {key}",
+            "deadKey": "touche d’accent"
+          },
+          "questions": {
+            "rightOfL": {
+              "title": "Appuyez sur la touche située juste à droite de L",
+              "help": "N’utilisez pas Maj. Fiez-vous à sa position physique, même si un autre symbole est imprimé dessus."
+            },
+            "leftOfBackspace": {
+              "title": "Appuyez sur la touche située juste à gauche de Retour arrière",
+              "help": "N’utilisez pas Maj. Utilisez la touche de la rangée des chiffres."
+            },
+            "shiftDigit2": {
+              "title": "Maintenez Maj enfoncée et appuyez sur la touche 2",
+              "help": "Utilisez le 2 de la rangée des chiffres, pas celui du pavé numérique."
+            },
+            "sixthTopRow": {
+              "title": "Appuyez sur la sixième touche de lettre de la rangée supérieure",
+              "help": "Comptez à partir de la première touche de lettre après Tab. N’utilisez pas Maj."
+            },
+            "firstTopRow": {
+              "title": "Appuyez sur la première touche de lettre après Tab",
+              "help": "Fiez-vous à sa position physique. N’utilisez pas Maj."
+            },
+            "quoteKey": {
+              "title": "Appuyez sur la touche des guillemets",
+              "help": "N’utilisez pas Maj. Fiez-vous à la position physique de la touche."
+            },
+            "shiftDigit3": {
+              "title": "Maintenez Maj enfoncée et appuyez sur la touche 3",
+              "help": "Utilisez le 3 de la rangée des chiffres, pas celui du pavé numérique."
+            }
+          },
+          "errors": {
+            "composition": "Impossible d’identifier une disposition pendant que le clavier compose du texte.",
+            "unidentified": "Impossible d’identifier cette touche. Réessayez.",
+            "alt-graph": "N’utilisez pas AltGr lorsque vous appuyez sur cette touche.",
+            "modified": "N’utilisez aucune touche de modification lorsque vous appuyez sur cette touche.",
+            "wrongKey": "Ce n’était pas la bonne touche. Appuyez sur celle qui se trouve à la position indiquée ci-dessus.",
+            "shiftRequired": "Maintenez Maj enfoncée lorsque vous appuyez sur cette touche.",
+            "shiftNotRequired": "Appuyez sur cette touche sans utiliser Maj.",
+            "saveFailed": "Impossible d’enregistrer la disposition. Vérifiez votre connexion et réessayez."
+          },
+          "result": {
+            "detectedTitle": "Disposition détectée",
+            "confidence": "Niveau de confiance de la détection : {confidence}",
+            "useDetected": "Utiliser cette disposition",
+            "unidentifiedTitle": "Nous n’avons pas pu identifier votre disposition",
+            "unidentifiedHelp": "Choisissez manuellement la disposition correspondant à votre clavier.",
+            "fallbackTitle": "La détection n’est pas suffisamment fiable",
+            "fallbackHelp": "Choisissez l’une des correspondances les plus proches ou consultez toutes les dispositions disponibles.",
+            "chooseManually": "Choisir manuellement",
+            "retryDetection": "Relancer la détection"
+          },
+          "manual": {
+            "title": "Choisissez votre disposition",
+            "help": "Sélectionnez la disposition correspondant aux touches de votre clavier."
+          },
+          "saved": {
+            "title": "Disposition enregistrée",
+            "description": "La disposition {layout} sera désormais utilisée dans toute l’application.",
+            "continueToCourses": "Continuer vers les cours",
+            "returnToPractice": "Retour à l’entraînement"
+          },
+          "physicalFamily": {
+            "title": "Forme de votre clavier",
+            "subtitle": "Identifiez la forme de vos touches pour afficher correctement le clavier.",
+            "enterQuestion": "Quelle forme a votre touche Entrée ?",
+            "enterHorizontal": "Entrée horizontale",
+            "enterIso": "Entrée ISO standard",
+            "enterBigAss": "Entrée ISO BA",
+            "abntQuestion": "Combien de touches y a-t-il entre / et Maj droite ?",
+            "eastAsianQuestion": "Combien de touches y a-t-il entre 0 et Retour arrière ?",
+            "eastAsianCountQuestion": "Combien de touches y a-t-il entre Espace et Alt droit ?",
+            "complete": "Forme du clavier identifiée : {family}"
+          }
+        }
+      },
+      "keyboard": {
+        "general": {
+          "virtualKeyboard": "Clavier virtuel"
+        }
+      },
+      "lessonCard": {
+        "general": {
+          "ariaLabel": "Accéder à la leçon",
+          "wpm": "WPM",
+          "score": "Score",
+          "accuracy": "Précision",
+          "time": "Temps",
+          "placeholder": "—",
+          "secondsShort": "s",
+          "minutesShort": "min",
+          "minutesCompact": "min",
+          "approxPrefix": "~",
+          "rankLabel": "Rang",
+          "gradeLabel": "Note",
+          "completed": "Terminé",
+          "explanatoryBadge": "Leçon explicative",
+          "explanatoryLesson": "Leçon explicative",
+          "objectiveAccuracy": "Objectif : {minAccuracy} % de précision",
+          "mastered": "Maîtrisée",
+          "inProgress": "En cours",
+          "lessonOrderRecommendationTitle": "Suivez l’ordre recommandé",
+          "lessonOrderRecommendationDescription": "Nous vous recommandons de suivre l’ordre prédéfini des leçons afin de progresser graduellement.",
+          "lessonOrderRecommendationBack": "Retour",
+          "lessonOrderRecommendationContinue": "Continuer",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Novice",
+            "scout": "Éclaireur",
+            "ranger": "Ranger",
+            "veteran": "Vétéran",
+            "elite": "Élite",
+            "legend": "Légende"
+          },
+          "gradesDescriptions": {
+            "novice": "Niveau débutant",
+            "scout": "Premiers progrès",
+            "ranger": "Bonne maîtrise",
+            "veteran": "Niveau avancé",
+            "elite": "Expert",
+            "legend": "Niveau maximal"
+          }
+        }
+      },
+      "personalizedLessonCard": {
+        "general": {
+          "title": "Entraînement recommandé",
+          "noData": "Aucune donnée à afficher",
+          "error": "Impossible de charger vos recommandations. Réessayez.",
+          "retry": "Réessayer",
+          "insufficientData": "Entraînez-vous davantage afin d’identifier les touches à renforcer.",
+          "noCourse": "Aucun cours de dactylographie n’est encore disponible dans cette langue.",
+          "noLessons": "Ce cours ne comporte encore aucune leçon disponible.",
+          "description": "Basé sur les points faibles détectés.",
+          "weakKeys": "Touches les moins précises lors de vos dernières sessions.",
+          "noMatches": "Aucune leçon de ce cours ne correspond encore à vos touches faibles.",
+          "worksKeys": "À travailler : {keys}"
+        }
+      },
+      "results": {
+        "general": {
+          "saveWarning": "Impossible d’enregistrer les résultats",
+          "wpm": "WPM",
+          "score": "Score",
+          "accuracy": "Précision",
+          "correctChars": "Caractères corrects",
+          "lowResultTitle": "Votre résultat est un peu faible",
+          "lowResultMessage": "Envisagez de suivre le cours de dactylographie pour continuer à progresser.",
+          "lowResultCourseLink": "Accéder au cours de dactylographie",
+          "accuracyFocusTitle": "Privilégiez la précision",
+          "accuracyFocusMessage": "Vous progressez bien. Avant d’augmenter votre vitesse, essayez d’atteindre au moins 95 % de précision.",
+          "masteredResult": "Leçon maîtrisée",
+          "masteredMessage": "Vous avez atteint le niveau de précision requis et pouvez continuer.",
+          "needsReview": "À revoir",
+          "reviewMessage": "Objectif : au moins {minAccuracy} % de précision. Ralentissez et recommencez le bloc.",
+          "rankLabel": "Rang",
+          "gradeLabel": "Note",
+          "retryAriaLabel": "Réessayer la leçon",
+          "retry": "Réessayer",
+          "next": "Suivant",
+          "newText": "Nouveau texte",
+          "backToCourses": "Retour aux cours",
+          "backToDashboard": "Retour au tableau de bord",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Novice",
+            "scout": "Éclaireur",
+            "ranger": "Ranger",
+            "veteran": "Vétéran",
+            "elite": "Élite",
+            "legend": "Légende"
+          },
+          "gradesDescriptions": {
+            "novice": "Niveau débutant",
+            "scout": "Premiers progrès",
+            "ranger": "Bonne maîtrise",
+            "veteran": "Niveau avancé",
+            "elite": "Expert",
+            "legend": "Niveau maximal"
+          }
+        }
+      },
+      "typingArea": {
+        "general": {
+          "wpm": "WPM",
+          "score": "Score",
+          "accuracy": "Précision",
+          "characters": "Caractères",
+          "backspace": "Retour arrière",
+          "backspaceEnabled": "Retour arrière autorisé",
+          "backspaceDisabled": "Retour arrière bloqué",
+          "font": "Police",
+          "size": "Taille",
+          "pixels": "px",
+          "fontAndSize": "Police et taille",
+          "textToType": "Texte à saisir",
+          "inactivityPaused": "En pause pour inactivité",
+          "clickToResume": "Cliquez pour continuer",
+          "congratulations": "Félicitations ! Vitesse : {wpm} WPM, précision : {accuracy} %",
+          "detectKeyboard": "Détecter le clavier",
+          "keyboardConfigTitle": "Configuration du clavier",
+          "keyboardPreferenceMissing": "Aucune préférence de clavier n’est enregistrée. Vous pouvez la modifier dans la configuration du clavier.",
+          "recommendedKeyboardLayout": "Disposition recommandée : {layout}",
+          "useRecommendedKeyboardLayout": "Changer de disposition",
+          "detectionHelp": "Identifiez automatiquement votre disposition actuelle et utilisez-la pendant tout l’entraînement.",
+          "identifyKeyboardShape": "Identifier la forme",
+          "keyboardShapeHeading": "Forme de votre clavier",
+          "logicalDistributionHeading": "Disposition logique",
+          "logicalDistributionHint": "caractères du clavier"
+        }
+      }
+    },
+    "ui": {
+      "themeToggle": {
+        "general": {
+          "switchToLight": "Thème",
+          "switchToDark": "Thème"
+        }
+      }
+    },
+    "i18n": {
+      "languageSwitcher": {
+        "general": {
+          "interfaceLanguage": "Langue de l’interface"
+        }
+      }
+    }
+  },
+  "general": {
+    "Accessibility": {
+      "button": "Bouton",
+      "expandMenu": "Développer le menu",
+      "collapseMenu": "Réduire le menu"
+    },
+    "Common": {
+      "loading": "Chargement...",
+      "retry": "Réessayer",
+      "close": "Fermer"
+    }
+  },
+  "lessonid": {
+    "general": {
+      "lockedLesson": "Leçon verrouillée",
+      "lockedLessonDescription": "Maîtrisez l’activité précédente avant de continuer.",
+      "backToLessons": "Retour aux leçons",
+      "lessonNotFound": "Leçon introuvable",
+      "typeTheTextBelow": "Saisissez le texte ci-dessous",
+      "hideKeyboard": "Masquer le clavier",
+      "showKeyboard": "Afficher le clavier",
+      "exitPractice": "Quitter l’entraînement",
+      "saveError": "Erreur lors de l’enregistrement du résultat",
+      "saveErrorMessage": "Vos résultats sont affichés à l’écran, mais n’ont pas été enregistrés dans votre progression. Essayez de refaire la leçon lorsque la connexion sera disponible.",
+      "audioGuide": "Écouter l’explication",
+      "audioUnsupported": "Votre navigateur ne peut pas lire cette piste audio.",
+      "experimentalGreetings": {
+        "lessonPosition": "Leçon {current} sur {total}",
+        "supportContent": "Contenu complémentaire",
+        "englishColumn": "Anglais",
+        "spanishColumn": "Espagnol",
+        "continue": "Continuer",
+        "dialogue": "Dialogue",
+        "selectEnglishFirst": "Sélectionnez d'abord une option en anglais",
+        "tryAgain": "Réessayez",
+        "correct": "Correct",
+        "complete": "Activité terminée"
+      },
+      "manualAudioPlay": "Écouter",
+      "manualAudioReplay": "Réécouter",
+      "lessonAudio": "Audio de la leçon",
+      "interactions": {
+        "dictationPrompt": "Écrivez ce que vous entendez",
+        "unitProgress": "Progression de l'unité",
+        "stepProgress": "Étape {step} sur 4 {current}",
+        "currentStep": "actuelle",
+        "reviewTask": "Tâche {current} sur 3",
+        "completedPairs": "Paires terminées",
+        "availableOptions": "Options disponibles",
+        "options": "Options",
+        "answer": "Réponse",
+        "check": "Vérifier",
+        "undo": "Annuler",
+        "correct": "Correct",
+        "incorrect": "Pas encore. Réponse correcte : {answer} {detail}",
+        "spellingFeedback": "Orthographe : le mot comporte deux lettres ou au début",
+        "sentenceFeedback": "Majuscule initiale et ponctuation : vérifiez chaque phrase",
+        "dictationFeedback": "Dictée : écoutez chaque mot et conservez la ponctuation",
+        "correctAnswer": "Réponse correcte",
+        "nextTask": "Tâche suivante"
+      }
+    }
+  },
+  "courses": {
+    "general": {
+      "title": "Cours",
+      "subtitle": "Explorez nos cours et améliorez votre dactylographie",
+      "searchPlaceholder": "Rechercher des cours...",
+      "allLevels": "Tous les niveaux",
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé",
+      "guestModeMessage": "Connectez-vous pour enregistrer votre progression",
+      "signIn": "Se connecter",
+      "retry": "Réessayer",
+      "noCourseYetTitle": "Aucun cours n’est encore disponible",
+      "noCourseYetDescription": "Nous préparons des cours dans cette langue. Revenez bientôt.",
+      "noCourses": "Aucun cours trouvé",
+      "all": "Tous les cours",
+      "completed": "Terminés",
+      "notCompleted": "Non terminés"
+    }
+  },
+  "lessons": {
+    "general": {
+      "title": "Leçons",
+      "subtitle": "Entraînez-vous avec des leçons adaptées à votre niveau",
+      "searchPlaceholder": "Rechercher des leçons...",
+      "allDifficulties": "Toutes les difficultés",
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé",
+      "guestModeMessage": "Connectez-vous pour enregistrer votre progression",
+      "signIn": "Se connecter",
+      "retry": "Réessayer",
+      "errorTitle": "Erreur lors du chargement des leçons",
+      "noLessonsTitle": "Aucune leçon disponible",
+      "noLessonsDescription": "Ce cours ne contient encore aucune leçon. Revenez plus tard ou contactez l’administrateur.",
+      "noCompletedLessonsTitle": "Vous n’avez encore terminé aucune leçon",
+      "noCompletedLessonsDescription": "Terminez une leçon pour la voir apparaître dans cette liste.",
+      "noPendingLessonsTitle": "Vous n’avez aucune leçon en attente",
+      "noPendingLessonsDescription": "Toutes les leçons de ce cours sont indiquées comme terminées.",
+      "all": "Toutes les leçons",
+      "completed": "Terminées",
+      "notCompleted": "Non terminées",
+      "moduleLabel": "Module {order}",
+      "masteredCount": "{mastered}/{total} maîtrisées"
+    }
+  },
+  "dashboard": {
+    "general": {
+      "title": "Tableau de progression",
+      "subtitle": "Consultez votre progression et vos statistiques de dactylographie",
+      "averageWpm": "WPM moyen",
+      "wordsPerMinute": "Mots par minute",
+      "averageAccuracy": "Précision moyenne",
+      "accuracy": "Précision",
+      "totalPracticeTime": "Temps total d’entraînement",
+      "thisWeek": "Cette semaine",
+      "weeklyWpmProgress": "Progression hebdomadaire du WPM",
+      "monthlyWpmProgress": "Progression mensuelle du WPM",
+      "noData": "Aucune donnée disponible",
+      "bestWpm": "Meilleur WPM",
+      "grossWpm": "WPM brut",
+      "record": "Record",
+      "streak": "Série",
+      "days": "jours",
+      "consecutivePractice": "Entraînement consécutif",
+      "totalKeystrokes": "Nombre total de frappes",
+      "typed": "Saisies",
+      "recommendations": "Recommandations pour vous",
+      "recommendation1": "Entraînez-vous avec des leçons de niveau intermédiaire pour améliorer votre vitesse.",
+      "recommendation2": "Essayez de maintenir une précision supérieure à 95 %.",
+      "recommendation3": "Terminez au moins une leçon par jour pour maintenir votre série.",
+      "retry": "Réessayer",
+      "error": "Erreur",
+      "completedText": "% terminé",
+      "completedTitle": "Leçons / Cours",
+      "lessons": "leçons",
+      "courses": "cours",
+      "completedLessons": "Leçons terminées",
+      "completedCourses": "Cours terminés",
+      "guestModeMessage": "Connectez-vous pour voir votre progression",
+      "signIn": "Se connecter",
+      "recommendationsGuest": "Connectez-vous pour recevoir des recommandations personnalisées basées sur votre progression.",
+      "weakKeys": "Touches faibles",
+      "errorTrends": "Évolution des erreurs",
+      "fingerDistribution": "Répartition par doigt",
+      "personalizedPractice": "Entraînement personnalisé",
+      "personalizedPracticeDesc": "Recevez des leçons personnalisées basées sur vos points faibles.",
+      "signInToSee": "Connectez-vous pour consulter vos statistiques",
+      "noDataYet": "Terminez des leçons pour identifier vos points faibles"
+    }
+  },
+  "practice": {
+    "general": {
+      "title": "Test de frappe",
+      "subtitle": "Améliorez votre vitesse et votre précision avec des textes personnalisés",
+      "freeTitle": "Test de vitesse de frappe",
+      "freeSubtitle": "Testez votre frappe avec un court texte et découvrez votre vitesse et votre précision.",
+      "adaptiveTitle": "Entraînez les touches qui vous posent le plus de difficultés",
+      "adaptiveSubtitle": "Concentrez-vous sur les caractères qui causent le plus d’erreurs et tapez avec plus de précision.",
+      "session": "Session d’entraînement",
+      "newText": "Nouveau texte",
+      "perKeyStats": "Statistiques par touche (bientôt disponibles)",
+      "loadingText": "Chargement du texte...",
+      "errorLoadingText": "Erreur lors du chargement du texte.",
+      "errorTitle": "Impossible de charger le texte",
+      "retry": "Réessayer",
+      "saving": "Enregistrement des résultats...",
+      "errorSavingResult": "Erreur lors de l’enregistrement des résultats.",
+      "saveWarning": "Impossible d’enregistrer les résultats",
+      "backToDashboard": "Retour au tableau de bord",
+      "guestSavePrompt": "Connectez-vous pour enregistrer votre progression et continuer à vous améliorer.",
+      "signInToSave": "Se connecter",
+      "guestPlaceholder": "—",
+      "guestAdaptiveReason": "Basé sur les erreurs enregistrées sur cet appareil",
+      "adaptiveKeys": "Touches : {keys}",
+      "adaptiveBigrams": "Bigrammes : {bigrams}",
+      "modeRandom": "Texte libre",
+      "modeWords": "Exercice recommandé",
+      "modeText": "Texte adaptatif",
+      "adaptivePracticeKeys": "Touches à pratiquer"
+    }
+  },
+  "notFound": {
+    "general": {
+      "title": "Page introuvable",
+      "description": "Désolé, la page que vous recherchez n’existe pas ou a été déplacée.",
+      "backHome": "Retour à l’accueil",
+      "dashboard": "Tableau de bord",
+      "lessons": "Leçons",
+      "ranking": "Classement"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Salidas de compilación y caché
+dist/
+coverage/
+.turbo/
+.cache/
+.eslintcache
+
+# Archivos de entorno
+.env
+.env.*
+performance/.determinism/
+!.env.test.example
+.env.local
+.env.*.local
+.envrc
+!.env.example
+
+# Sesiones HTTP locales
+/cookies.txt
+
+# Prisma
+prisma/*.db
+prisma/*.db-journal
+prisma/test.db
+prisma/test.db-journal
+.prisma/   # <-- añadido: cliente generado (aunque a veces dentro de node_modules)
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Editores y miscelánea
+*.swp
+*.swo
+.idea/
+.vscode/
+*.tmp
+*.temp
+
+# Archivos de logs del contenedor Docker
+*.log
+
+# Entorno local de desarrollo y despliegue
+.husky/_/
+
+# Documentación interna no destinada a versionarse
+/docs/development/
+/docs/operations/legal-compliance/

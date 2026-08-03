@@ -1,0 +1,1278 @@
+{
+  "auth": {
+    "login": {
+      "metadata": {
+        "title": "Autentificare",
+        "description": "Autentifică-te în Kiso Desk pentru a continua exersarea tastării."
+      },
+      "general": {
+        "googleError": "Autentificarea cu Google nu a reușit.",
+        "tooManyAttempts": "Prea multe încercări. Așteaptă un minut.",
+        "requiredFields": "Completează toate câmpurile.",
+        "invalidCredentials": "Adresă de e-mail sau parolă incorectă",
+        "signIn": "Autentificare",
+        "continueWithGoogle": "Continuă cu Google",
+        "or": "sau",
+        "email": "Adresă de e-mail",
+        "password": "Parolă",
+        "sending": "Se trimite...",
+        "noAccount": "Nu ai un cont?",
+        "createAccount": "Creează un cont",
+        "forgotPassword": "Ți-ai uitat parola?"
+      }
+    },
+    "register": {
+      "metadata": {
+        "title": "Creează un cont",
+        "description": "Creează un cont în Kiso Desk și începe să exersezi tastarea."
+      },
+      "general": {
+        "acceptLegalRequired": "Trebuie să accepți Termenii de utilizare și Politica de confidențialitate pentru a crea un cont",
+        "googleError": "Înregistrarea cu Google nu a reușit.",
+        "tooManyAttempts": "Prea multe încercări. Așteaptă un minut.",
+        "unknownError": "Eroare necunoscută",
+        "createAccount": "Creează un cont",
+        "registerWithGoogle": "Înregistrează-te cu Google",
+        "or": "sau",
+        "name": "Nume",
+        "email": "Adresă de e-mail",
+        "password": "Parolă",
+        "acceptTermsPrefix": "Accept",
+        "acceptTermsLink": "Termeni de utilizare",
+        "acceptPrivacyPrefix": "Am citit",
+        "acceptPrivacyLink": "Politica de confidențialitate",
+        "alreadyHaveAccount": "Ai deja un cont?",
+        "signIn": "Autentificare",
+        "socialFeaturesNotice": "Funcțiile sociale sunt opționale, iar setările lor de confidențialitate pot fi configurate din profil."
+      }
+    },
+    "resetPassword": {
+      "general": {
+        "invalidLink": "Linkul nu conține un token valid.",
+        "passwordTooShort": "Parola trebuie să aibă cel puțin 8 caractere.",
+        "passwordsDoNotMatch": "Parolele nu coincid.",
+        "invalidOrExpired": "Linkul nu este valid, a fost deja utilizat sau a expirat.",
+        "successTitle": "Parolă actualizată",
+        "successMessage": "Acum te poți autentifica folosind noua parolă.",
+        "backToLogin": "Înapoi la autentificare",
+        "title": "Creează o parolă nouă",
+        "instructions": "Alege o parolă nouă de cel puțin 8 caractere.",
+        "newPassword": "Parolă nouă",
+        "confirmPassword": "Confirmă parola",
+        "submit": "Schimbă parola",
+        "requestNewLink": "Solicită un link nou"
+      }
+    }
+  },
+  "profile": {
+    "general": {
+      "title": "Profil",
+      "guestModeMessage": "Autentifică-te pentru a-ți vedea profilul și statisticile.",
+      "signIn": "Autentificare",
+      "loadError": "Eroare la încărcarea profilului",
+      "loadErrorText": "Profilul nu a putut fi încărcat",
+      "nameRequired": "Introdu numele",
+      "name": "Nume",
+      "email": "Adresă de e-mail",
+      "emailReadOnly": "Adresa de e-mail nu poate fi editată din profil.",
+      "editProfile": "Editează profilul",
+      "changePassword": "Schimbă parola",
+      "save": "Salvează",
+      "savingText": "Se salvează...",
+      "cancel": "Anulează",
+      "retry": "Încearcă din nou",
+      "savedSuccessfully": "Profilul a fost actualizat.",
+      "saveError": "Profilul nu a putut fi salvat. Încearcă din nou.",
+      "conflictError": "Profilul a fost modificat într-o altă filă. Reîncarcă datele înainte de a salva din nou.",
+      "required": "Acest câmp este obligatoriu.",
+      "accountSection": "Cont",
+      "preferencesSection": "Preferințe",
+      "securitySection": "Securitate",
+      "memberSince": "Membru din",
+      "lastLogin": "Ultima autentificare",
+      "lastUpdate": "Ultima actualizare",
+      "interfaceLanguage": "Limba interfeței",
+      "keyboardLayout": "Configurația tastaturii",
+      "accessibility": "Accesibilitate",
+      "adminRole": "Administrator",
+      "userRole": "Utilizator",
+      "passwordSectionTitle": "Parolă",
+      "passwordSectionDescription": "Poți solicita oricând un link pentru resetarea parolei.",
+      "dataControlsTitle": "Datele și contul tău",
+      "dataControlsDescription": "Descarcă o copie a datelor tale sau șterge-ți definitiv contul.",
+      "exportTitle": "Descarcă datele mele",
+      "exportDescription": "Generează un fișier JSON cu datele contului, progresul, sesiunile de exersare, erorile și relațiile tale. Nu include parole sau tokenuri.",
+      "exportButton": "Descarcă datele",
+      "exporting": "Se pregătește descărcarea...",
+      "exportSuccess": "Descărcarea datelor tale a început.",
+      "exportError": "Exportul nu a putut fi generat. Încearcă din nou.",
+      "deleteTitle": "Șterge contul meu",
+      "deleteDescription": "Șterge contul și datele active asociate acestuia. Această acțiune nu poate fi anulată.",
+      "deleteButton": "Șterge contul",
+      "deleteModalTitle": "Șterge definitiv contul",
+      "deleteModalDescription": "Profilul, progresul, sesiunile, statisticile, erorile, prieteniile și sesiunile de acces vor fi șterse din baza de date activă. Copiile de siguranță urmează ciclul de păstrare aplicabil.",
+      "deleteConfirmEmailInstruction": "Pentru confirmare, introdu adresa de e-mail:",
+      "deleteConfirmEmail": "Adresă de e-mail pentru confirmare",
+      "deleteCurrentPassword": "Parola actuală",
+      "deleteConfirmButton": "Șterge definitiv",
+      "deleting": "Se șterge...",
+      "deleteEmailMismatch": "Adresa de e-mail pentru confirmare nu coincide.",
+      "deletePasswordRequired": "Introdu parola actuală",
+      "deleteInvalidPassword": "Parola actuală este incorectă.",
+      "deleteError": "Contul nu a putut fi șters. Încearcă din nou.",
+      "socialPrivacyTitle": "Confidențialitate socială",
+      "publicAlias": "Alias public",
+      "publicAliasPlaceholder": "exemplu_utilizator",
+      "publicAliasHelp": "Între 3 și 30 de caractere: litere, cifre, cratimă și caracter de subliniere.",
+      "publicAliasInvalid": "Configurează un alias valid înainte de a activa funcțiile sociale.",
+      "showInRanking": "Apare în clasament",
+      "showInRankingHelp": "Afișează aliasul și rezultatele tale generale. Numele real și adresa de e-mail rămân ascunse",
+      "searchableByAlias": "Permite căutarea după alias",
+      "searchableByAliasHelp": "Alți utilizatori te vor putea găsi doar prin aliasul tău public.",
+      "allowFriendRequests": "Acceptă cereri de prietenie",
+      "allowFriendRequestsHelp": "Permite utilizatorilor care te găsesc după alias să îți trimită cereri.",
+      "showPresenceToFriends": "Partajează prezența cu prietenii",
+      "showPresenceToFriendsHelp": "Afișează starea online și ultima activitate numai prietenilor acceptați.",
+      "shareStatsWithFriends": "Partajează statisticile cu prietenii",
+      "shareStatsWithFriendsHelp": "Afișează statisticile agregate de exersare numai prietenilor acceptați.",
+      "notConfigured": "Neconfigurat",
+      "enabled": "Activat",
+      "disabled": "Dezactivat",
+      "spanish": "Spaniolă",
+      "english": "Engleză",
+      "cookieConsentSaveError": "Opțiunea privind modulele cookie nu a putut fi salvată. Încearcă din nou.",
+      "googleReauthFailed": "Reautentificarea cu Google nu a putut fi finalizată.",
+      "googleReauthRequired": "Pentru a-ți șterge contul, autentifică-te din nou cu Google.",
+      "privacyCookiesTitle": "Confidențialitate și module cookie",
+      "privacyCookiesDescription": "Gestionează opțiunea privind tehnologiile neesențiale.",
+      "cookieConsentAccepted": "Ai acceptat utilizarea tehnologiilor neesențiale.",
+      "cookieConsentRejected": "Ai refuzat utilizarea tehnologiilor neesențiale.",
+      "cookieConsentUnset": "Nu ți-ai indicat încă preferința privind tehnologiile neesențiale.",
+      "cookieConsentUpdatedAt": "Actualizat la",
+      "cookieConsentAccept": "Acceptă",
+      "cookieConsentReject": "Respinge",
+      "googleReauthButton": "Reautentificare cu Google"
+    }
+  },
+  "friends": {
+    "general": {
+      "title": "Prieteni",
+      "subtitle": "Urmărește starea online a prietenilor și compară doar sesiunile lor de exersare liberă.",
+      "guestModeMessage": "Autentifică-te pentru a-ți vedea prietenii și activitatea lor.",
+      "signIn": "Autentificare",
+      "refresh": "Actualizează",
+      "retry": "Încearcă din nou",
+      "snapshotTitle": "Prieteni recenți",
+      "snapshotDescription": "Vezi câți sunt online și deschide panoul complet.",
+      "openFriends": "Deschide lista de prieteni",
+      "totalFriends": "Prieteni",
+      "onlineNow": "online acum",
+      "requests": "Cereri",
+      "searchTitle": "Caută utilizatori",
+      "searchLabel": "Alias public",
+      "searchPlaceholder": "Introdu cel puțin 3 caractere din alias",
+      "searchButton": "Caută",
+      "searchError": "Căutarea nu a putut fi finalizată",
+      "noSearchResults": "Nu au fost găsiți utilizatori.",
+      "statusFriends": "Prieteni",
+      "statusPendingOutgoing": "Cerere trimisă",
+      "statusPendingIncoming": "Ți-a trimis o cerere",
+      "statusNotConnected": "Neconectat",
+      "online": "Online",
+      "offline": "Offline",
+      "lastSeen": "Ultima activitate",
+      "requestedAt": "Solicitat la",
+      "freePractice": "Exersare liberă",
+      "viewStats": "Vezi statisticile",
+      "sendRequest": "Adaugă",
+      "accept": "Acceptă",
+      "reject": "Respinge",
+      "remove": "Elimină",
+      "incomingRequests": "Cereri primite",
+      "outgoingRequests": "Cereri trimise",
+      "noIncomingRequests": "Nu ai cereri primite.",
+      "noOutgoingRequests": "Nu ai cereri trimise.",
+      "myFriends": "Prietenii mei",
+      "noFriendsYet": "Nu ai adăugat încă niciun prieten",
+      "block": "Blochează",
+      "unblock": "Deblochează",
+      "blockedUsers": "Utilizatori blocați",
+      "blockedUsersDescription": "Nu te pot găsi, nu îți pot trimite cereri și nu îți pot accesa prezența sau statisticile.",
+      "noBlockedUsers": "Nu ai utilizatori blocați.",
+      "presenceHidden": "Prezență privată",
+      "statsHidden": "Acest utilizator nu își partajează statisticile.",
+      "friendNotFound": "Nu am găsit acel prieten.",
+      "backToFriends": "Înapoi la prieteni",
+      "totalSessions": "Sesiuni",
+      "averageWpm": "WPM mediu",
+      "averageAccuracy": "Precizie medie",
+      "bestWpm": "Cel mai bun WPM",
+      "totalPracticeTime": "Timp total de exersare",
+      "byLanguage": "Defalcare după limbă"
+    }
+  },
+  "ranking": {
+    "general": {
+      "title": "Clasament",
+      "subtitle": "Compară rezultatele tale cu cele ale altor utilizatori.",
+      "yourStats": "Statisticile tale",
+      "basedOnLast10": "Bazate pe ultimele 10 sesiuni de exersare.",
+      "score": "Scor",
+      "grossWpm": "WPM brut",
+      "accuracy": "Precizie",
+      "currentRank": "Poziția actuală",
+      "level": "Nivel",
+      "topPercent": "Top {percent}%",
+      "filterByLanguage": "Filtrează după limbă",
+      "allLanguages": "Toate limbile",
+      "user": "Utilizator",
+      "noData": "Nu există date de afișat",
+      "errorFetchingRanking": "Clasamentul nu a putut fi încărcat. Încearcă din nou.",
+      "errorFetchingStats": "Statisticile tale nu au putut fi încărcate. Încearcă din nou.",
+      "retry": "Încearcă din nou",
+      "privateProfile": "Profilul tău nu apare în clasament. Poți modifica această opțiune în secțiunea Confidențialitate socială din profil.",
+      "insufficientData": "Finalizează cel puțin 5 sesiuni de exersare pentru a-ți vedea poziția în clasament.",
+      "noDataYet": "Nu există încă rezultate pentru această limbă.",
+      "currentUser": "Tu",
+      "speedAxis": "Viteză (WPM)",
+      "accuracyAxis": "Precizie (%)",
+      "showing": "Se afișează",
+      "of": "din",
+      "previous": "Anterior",
+      "next": "Următorul",
+      "signInToParticipate": "Autentifică-te pentru a participa la clasament."
+    },
+    "topPerformers": {
+      "general": {
+        "wpm": "WPM net"
+      }
+    },
+    "userStatsCard": {
+      "general": {
+        "levels": {
+          "bronze": "Bronz",
+          "silver": "Argint",
+          "gold": "Aur"
+        }
+      }
+    }
+  },
+  "marketing": {
+    "about": {
+      "metadata": {
+        "title": "Despre Kiso Desk",
+        "description": "Descoperă Kiso Desk și abordarea sa practică pentru învățarea tastării."
+      },
+      "general": {
+        "title": "Despre Kiso Desk",
+        "subtitle": "O platformă pentru exersarea tastării într-un mod clar, consecvent și măsurabil",
+        "project_title": "Proiectul",
+        "project_text": "Kiso Desk este un proiect independent axat pe crearea unei experiențe clare și practice pentru învățarea tastării.",
+        "project_status_text": "Este conceput ca un spațiu în care oricine, indiferent de nivelul de experiență, poate exersa constant și poate observa îmbunătățiri reale. Accentul este pus pe învățarea continuă, utilitate și atenția la detalii, oferind un instrument potrivit nevoilor actuale.",
+        "mission_title": "Misiunea noastră",
+        "mission_text": "La Kiso Desk credem că tastarea este o abilitate esențială în lumea digitală. Misiunea noastră este să facem învățarea tastării rapide și precise accesibilă, practică și eficientă pentru oricine, indiferent de nivelul de experiență.",
+        "vision_title": "Viziunea noastră",
+        "vision_text": "Să construim un instrument util pentru îmbunătățirea vitezei, preciziei și încrederii la tastare, printr-o experiență modernă, clară și axată pe exersare constantă.",
+        "history_title": "Povestea noastră",
+        "history_text": "Kiso Desk a început ca un proiect independent menit să creeze o experiență modernă de exersare a tastării. Ceea ce a pornit ca o idee simplă evoluează astăzi într-o platformă axată pe lecții, progres, statistici și îmbunătățire continuă."
+      }
+    },
+    "cookies": {
+      "metadata": {
+        "title": "Politica privind modulele cookie și stocarea locală",
+        "description": "Informații despre modulele cookie și stocarea locală în Kiso Desk."
+      },
+      "general": {
+        "title": "Politica privind modulele cookie și stocarea locală",
+        "contentsLabel": "Cuprins",
+        "relatedLabel": "Documente conexe",
+        "relatedPrivacy": "Politica de confidențialitate",
+        "relatedTerms": "Termeni de utilizare"
+      },
+      "definition": {
+        "title": "1. Ce sunt modulele cookie și stocarea locală?",
+        "paragraph1": "Această aplicație utilizează module cookie și stocarea locală a browserului pentru funcțiile necesare ale serviciului și pentru a reține anumite preferințe de utilizare.",
+        "paragraph2": "Modulele cookie sunt fișiere text de mici dimensiuni pe care site-urile web le stochează în browser. Acestea sunt utilizate pentru a reține informații despre vizită, precum preferințele sau starea autentificării.",
+        "paragraph3": "Stocarea locală, cunoscută și sub denumirea de localStorage, este o funcție a browserului care permite stocarea datelor direct pe dispozitiv. Spre deosebire de modulele cookie, aceste date nu sunt trimise automat serverului la fiecare solicitare și rămân pe dispozitiv până când sunt șterse de utilizator, browser sau prin setările dispozitivului."
+      },
+      "data": {
+        "title": "2. Date personale și tehnice asociate acestor tehnologii",
+        "paragraph1": "Pentru a furniza serviciul de exersare a tastării, aplicația poate prelucra date personale sau tehnice asociate utilizării modulelor cookie, stocării locale și solicitărilor de rețea.",
+        "paragraph2": "Indicatorii asociați conturilor înregistrate sunt stocați de serviciu conform descrierii din Politica de confidențialitate. În modul vizitator, o parte din progres și istoricul exercițiilor poate fi stocată local în browser.",
+        "paragraph3": "Stocarea locală poate conține preferințe ale interfeței, alegerea privind tehnologiile neesențiale și progresul vizitatorului. Aceasta nu conține direct parole sau tokenuri de autentificare.",
+        "item1": "Identificatori de sesiune: stocați în modulele cookie access_token și refresh_token, care permit recunoașterea contului, autentificarea solicitărilor și menținerea sesiunii active.",
+        "item2": "Adresa IP și date tehnice de conexiune: transmise la interacțiunea cu serverul și la încărcarea resurselor externe, precum imaginile cu steaguri de pe flagcdn.com.",
+        "item3": "Preferințe și date locale: pot include tema, configurația tastaturii, fontul, dimensiunea textului, vizibilitatea tastaturii, alegerea privind tehnologiile neesențiale, progresul vizitatorului și istoricul local al textelor utilizate."
+      },
+      "necessaryCookies": {
+        "title": "3. Module cookie strict necesare (autentificare)",
+        "paragraph1": "Aplicația utilizează module cookie strict necesare pentru autentificare, menținerea identității pe durata navigării, reînnoirea sesiunii și protejarea solicitărilor autentificate.",
+        "note": "Aceste module cookie nu sunt utilizate pentru publicitate, remarketing sau creare de profiluri comerciale.",
+        "tableHeaderName": "Denumire",
+        "tableHeaderPurpose": "Scop",
+        "tableHeaderDuration": "Durată maximă",
+        "tableHeaderConfiguration": "Configurație tehnică",
+        "accessTokenName": "access_token",
+        "accessTokenPurpose": "Autentificarea solicitărilor și menținerea activă a sesiunii de acces.",
+        "accessTokenDuration": "2 ore",
+        "accessTokenConfiguration": "HttpOnly, SameSite=Lax, Secure în mediul de producție.",
+        "refreshTokenName": "refresh_token",
+        "refreshTokenPurpose": "Reînnoirea în siguranță a sesiunii și permiterea revocării acesteia.",
+        "refreshTokenDuration": "7 zile",
+        "refreshTokenConfiguration": "HttpOnly, SameSite=Lax, Secure în mediul de producție."
+      },
+      "localStorage": {
+        "title": "4. Stocare locală (preferințele utilizatorului)",
+        "paragraph1": "Pentru personalizarea experienței și păstrarea anumitor setări, aplicația stochează informații în browser.",
+        "paragraph2": "Aceste date rămân pe dispozitiv și nu sunt trimise automat serverului la fiecare solicitare, însă aplicația le poate citi pentru a aplica preferințele sau pentru a restaura progresul local.",
+        "tableHeaderKey": "Cheie",
+        "tableHeaderPurpose": "Scop",
+        "tableHeaderDuration": "Durată",
+        "themeKey": "theme",
+        "themePurpose": "Reținerea preferinței între modul luminos și modul întunecat.",
+        "themeDuration": "Persistent până la ștergerea manuală sau suprascriere.",
+        "keyboardLayoutKey": "typing-keyboard-layout",
+        "keyboardLayoutPurpose": "Reținerea configurației tastaturii selectate pentru exerciții.",
+        "keyboardLayoutDuration": "Persistent până la ștergere sau suprascriere.",
+        "typingFontKey": "typing-font",
+        "typingFontPurpose": "Reținerea familiei de fonturi utilizate în exerciții.",
+        "typingFontDuration": "Persistent până la ștergere sau suprascriere.",
+        "typingFontSizeKey": "typing-font-size",
+        "typingFontSizePurpose": "Reținerea dimensiunii textului configurate pentru exerciții.",
+        "typingFontSizeDuration": "Persistent până la ștergere sau suprascriere."
+      },
+      "providers": {
+        "title": "5. Furnizori externi, persoane împuternicite și posibile transferuri",
+        "paragraph1": "Aplicația utilizează sau poate utiliza furnizori externi pentru funcții necesare ale serviciului, precum infrastructura, autentificarea, securitatea și livrarea resurselor. Integrările pregătite pentru funcții viitoare nu sunt considerate active până când nu sunt configurate și puse în funcțiune.",
+        "paragraph2": "Atunci când un furnizor prelucrează date personale în numele Kiso Desk și conform instrucțiunilor sale, acesta va acționa ca persoană împuternicită sau furnizor de servicii, după caz.",
+        "paragraph3": "Kiso Desk utilizează infrastructura Google Cloud Platform (GCP) pentru găzduirea și operarea componentelor tehnice ale serviciului. Datele prelucrate în această infrastructură sunt utilizate pentru menținerea conturilor, păstrarea progresului și operarea platformei.",
+        "paragraph4": "Aplicația permite autentificarea cu Google. În acest flux, Kiso Desk primește doar datele autorizate necesare autentificării contului, precum identificatorul Google, adresa de e-mail, starea verificării și numele profilului.",
+        "paragraph5": "Aplicația utilizează flagcdn.com pentru încărcarea imaginilor cu steaguri. Atunci când aceste resurse sunt solicitate, furnizorul poate primi date tehnice obișnuite, precum adresa IP, agentul utilizatorului, data, ora și adresa URL de referință.",
+        "paragraph6": "Atunci când datele sunt divulgate sau transferate unui terț care nu este persoană împuternicită, prelucrarea va avea loc în conformitate cu legislația aplicabilă, inclusiv în cazurile necesare pentru furnizarea serviciului, menținerea relației cu utilizatorul, protejarea drepturilor sau respectarea obligațiilor legale.",
+        "paragraph7": "Cloudflare Turnstile poate fi utilizat condiționat pentru prevenirea roboților și abuzurilor, ceea ce poate implica prelucrarea de către Cloudflare a datelor tehnice de conexiune. Recuperarea accesului prin e-mail este pregătită, dar nu este activă până la configurarea unui furnizor de e-mail. În prezent nu sunt utilizate module cookie de analiză, rețele de publicitate, remarketing sau alte sisteme de urmărire neesențiale."
+      },
+      "legalBasis": {
+        "title": "6. Temeiul juridic și principiile de confidențialitate",
+        "paragraph1": "Prelucrarea asociată modulelor cookie strict necesare este efectuată pentru autentificarea utilizatorilor, menținerea sesiunilor active, validarea solicitărilor și protejarea funcționării conturilor.",
+        "paragraph2": "Kiso Desk prelucrează datele în conformitate cu legislația aplicabilă. Atunci când informațiile sunt necesare pentru furnizarea serviciului solicitat sau pentru îndeplinirea obligațiilor rezultate din relația cu utilizatorul, nu va fi solicitat un consimțământ suplimentar, cu excepția cazului în care legislația aplicabilă impune acest lucru.",
+        "paragraph3": "Kiso Desk utilizează, de asemenea, ca reper principii de confidențialitate recunoscute la nivel internațional, inclusiv transparența, specificarea scopului, reducerea la minimum a datelor, exactitatea, păstrarea limitată, securitatea, controlul utilizatorului și responsabilitatea. Această referință nu constituie certificare și nici o declarație de conformitate deplină cu legislații străine care nu sunt aplicabile.",
+        "paragraph4": "Dacă în viitor vor fi introduse tehnologii neesențiale, precum analiza, publicitatea, remarketingul sau alte mecanisme de urmărire, această Politică va fi actualizată, iar consimțământul corespunzător va fi solicitat înainte de activare, atunci când este necesar."
+      },
+      "arco": {
+        "title": "7. Drepturi privind datele și retragerea consimțământului",
+        "paragraph1": "Puteți solicita accesul la datele personale asociate contului, rectificarea sau ștergerea acestora, vă puteți opune prelucrării și puteți retrage consimțământul pentru activitățile de prelucrare care se bazează pe acesta, atunci când este aplicabil.",
+        "paragraph2": "Pentru exercitarea acestor drepturi, puteți trimite o solicitare la: kisodesk.project@gmail.com.",
+        "paragraph3": "Operatorul va comunica decizia sa în termenul prevăzut de legislația aplicabilă și, atunci când solicitarea este aprobată, va lua măsurile corespunzătoare în termenul aplicabil.",
+        "paragraph4": "Aceste termene pot fi prelungite atunci când legislația aplicabilă permite acest lucru și circumstanțele justifică prelungirea.",
+        "paragraph5": "Retragerea consimțământului nu va afecta prelucrările efectuate anterior și nici prelucrările care trebuie să continue din cauza unei obligații legale, a unei relații în curs, a securității, a apărării drepturilor sau a necesității păstrării datelor.",
+        "item1": "Aliasul sau identificatorul contului utilizat în aplicație, dacă este cazul.",
+        "item2": "Adresa de e-mail asociată contului.",
+        "item3": "O modalitate de primire a notificărilor.",
+        "item4": "Informații rezonabile pentru verificarea identității sau a titularului contului, de preferință prin adresa de e-mail asociată. Dacă acționați prin reprezentant, documentația care dovedește împuternicirea acestuia.",
+        "item5": "Dreptul pe care doriți să îl exercitați: acces, rectificare, ștergere, opoziție sau retragerea consimțământului.",
+        "item6": "O descriere clară și precisă a datelor personale la care se referă solicitarea, precum adresa de e-mail, aliasul, preferințele sau indicatorii de tastare asociați contului.",
+        "item7": "Pentru solicitările de rectificare, informațiile corecte și, atunci când este necesar, elementele care susțin rectificarea solicitată.",
+        "item8": "Orice alte informații rezonabil necesare pentru identificarea contului și soluționarea corespunzătoare a solicitării."
+      },
+      "management": {
+        "title": "8. Cum puteți gestiona și șterge aceste date",
+        "paragraph1": "Puteți gestiona modulele cookie, stocarea locală și alegerea privind tehnologiile neesențiale.",
+        "item1": "Deconectare: la închiderea sesiunii, modulele cookie de autentificare access_token și refresh_token sunt șterse din browser.",
+        "item2": "Preferințe privind confidențialitatea și modulele cookie: puteți verifica și modifica alegerea privind tehnologiile neesențiale din profil. De asemenea, puteți șterge modulele cookie și datele locale din setările browserului.",
+        "item3": "Avertisment: blocarea modulelor cookie strict necesare poate împiedica autentificarea sau utilizarea funcțiilor care necesită autentificare."
+      },
+      "changes": {
+        "title": "9. Modificări ale acestei Politici",
+        "paragraph1": "Aplicația poate actualiza această Politică pentru a reflecta modificări juridice, tehnice sau operaționale. Actualizările vor fi publicate pe această pagină împreună cu data corespunzătoare a ultimei actualizări.",
+        "paragraph2": "Atunci când modificările sunt relevante, acestea vor fi comunicate printr-o notificare vizibilă în aplicație, o notificare privind modulele cookie sau printr-un alt mijloc electronic disponibil."
+      },
+      "contact": {
+        "title": "10. Contact",
+        "paragraph1": "Dacă aveți întrebări, doriți să vă exercitați drepturile sau aveți nevoie de informații despre prelucrarea datelor, puteți scrie la kisodesk.project@gmail.com.",
+        "paragraph2": "Pentru a consulta identitatea și datele de contact ale operatorului, scopurile generale, furnizorii, perioadele de păstrare și alte detalii privind prelucrarea, consultați Politica de confidențialitate a aplicației."
+      }
+    },
+    "privacy": {
+      "metadata": {
+        "title": "Politica de confidențialitate",
+        "description": "Informații despre modul în care Kiso Desk prelucrează datele personale."
+      },
+      "general": {
+        "eyebrow": "Informații juridice",
+        "title": "Notificare de confidențialitate",
+        "description": "Informații despre prelucrarea datelor personale în conformitate cu legislația aplicabilă și cu principii de confidențialitate recunoscute la nivel internațional.",
+        "introduction": "Această Notificare explică ce informații prelucrează Kiso Desk, cum sunt utilizate, cui pot fi divulgate și ce opțiuni de control au utilizatorii. Referirea la principii internaționale nu constituie certificare și nici o declarație de conformitate deplină cu legislații străine care nu sunt aplicabile.",
+        "lastUpdatedLabel": "Ultima actualizare",
+        "lastUpdated": "23 iulie 2026",
+        "contentsLabel": "Cuprins",
+        "relatedLabel": "Documente conexe",
+        "relatedTerms": "Termeni de utilizare",
+        "relatedCookies": "Politica privind modulele cookie"
+      },
+      "data": {
+        "title": "1. Datele pe care le prelucrăm",
+        "sensitiveNote": "Kiso Desk nu solicită date personale sensibile. Preferințele de accesibilitate sau de interfață sunt utilizate numai ca setări funcționale ale aplicației și nu au ca scop colectarea de informații privind sănătatea, dizabilitățile, originea etnică, religia, opiniile politice, orientarea sexuală sau alte date sensibile.",
+        "item1": "Cont: adresa de e-mail, numele profilului dacă este cazul, aliasul ales de utilizator, rolul, limba, configurația tastaturii și preferințele de accesibilitate.",
+        "item2": "Autentificare: parola stocată sub formă de hash atunci când contul este creat cu parolă sau datele necesare autentificării cu Google atunci când este utilizată această metodă.",
+        "item3": "Învățare: cursuri, lecții, progres, viteză, precizie, timp de exersare, erori, taste utilizate și evenimente necesare calculării indicatorilor de tastare.",
+        "item4": "Funcții sociale: prietenii, solicitări, blocări, prezență, ultima conectare și statistici partajate conform preferințelor disponibile.",
+        "item5": "Clasament: alias, viteză, precizie, nivel, limba de exersare, poziție și data rezultatului, dacă este cazul.",
+        "item6": "Date tehnice: adresa IP, agentul utilizatorului, jurnale, identificatori de sesiune, date de diagnostic și solicitări tehnice generate de infrastructură sau de furnizorii utilizați.",
+        "item7": "Date locale: tema, configurația tastaturii, fontul, dimensiunea textului, vizibilitatea tastaturii, alegerea privind tehnologiile neesențiale, progresul vizitatorului și istoricul local al textelor."
+      },
+      "purposes": {
+        "title": "2. Cum utilizăm datele",
+        "item1": "Crearea și gestionarea conturilor și sesiunilor.",
+        "item2": "Permiterea autentificării cu parolă sau Google, în funcție de metoda selectată.",
+        "item3": "Furnizarea lecțiilor, salvarea progresului și generarea statisticilor de tastare.",
+        "item4": "Personalizarea configurației tastaturii, interfeței, fontului, dimensiunii textului și a altor preferințe de utilizare.",
+        "item5": "Afișarea clasamentelor generale și a clasamentelor pe limbi.",
+        "item6": "Operarea funcțiilor sociale, inclusiv prieteniile, prezența, ultima conectare și statisticile vizibile conform preferințelor contului.",
+        "item7": "Protejarea conturilor, prevenirea abuzurilor, detectarea activităților neautorizate și diagnosticarea erorilor.",
+        "item8": "Permiterea descărcării datelor și ștergerii contului din profil.",
+        "item9": "Răspunsul la solicitările de asistență, confidențialitate și securitate.",
+        "item10": "Respectarea obligațiilor legale și exercitarea sau apărarea drepturilor.",
+        "item11": "Dacă Google AdSense va fi activat în viitor, afișarea și măsurarea publicității, prevenirea fraudei și, dacă este cazul, personalizarea anunțurilor folosind informațiile și consimțământul impuse de legislația aplicabilă."
+      },
+      "legalBasis": {
+        "title": "3. Temeiul și principiile prelucrării",
+        "paragraph1": "Prelucrarea este efectuată în principal pentru furnizarea serviciului solicitat, gestionarea conturilor, menținerea sesiunilor, salvarea progresului, generarea statisticilor, operarea clasamentelor și funcțiilor sociale, permiterea descărcării sau ștergerii datelor și protejarea platformei.",
+        "paragraph2": "Kiso Desk prelucrează datele în conformitate cu legislația aplicabilă. Atunci când informațiile sunt necesare pentru furnizarea serviciului sau îndeplinirea obligațiilor rezultate din relația cu utilizatorul, nu va fi solicitat un consimțământ suplimentar, cu excepția cazului în care legislația aplicabilă impune acest lucru.",
+        "paragraph3": "Kiso Desk utilizează, de asemenea, ca reper principii de confidențialitate recunoscute la nivel internațional, inclusiv transparența, specificarea scopului, reducerea la minimum a datelor, exactitatea, păstrarea limitată, securitatea, controlul utilizatorului și responsabilitatea. Această referință nu constituie certificare și nici o declarație de conformitate deplină cu legislații străine care nu sunt aplicabile.",
+        "paragraph4": "Pentru scopurile care necesită consimțământ, acesta va fi solicitat atunci când este necesar și poate fi retras fără efect retroactiv. Dacă vor fi adăugate scopuri noi, diferite de cele actuale sau care nu sunt necesare pentru furnizarea serviciului, această Notificare va fi actualizată înainte de începerea noii prelucrări, atunci când este necesar."
+      },
+      "recipients": {
+        "title": "4. Furnizori și destinatari",
+        "paragraph1": "Kiso Desk utilizează furnizori de tehnologie pentru operarea infrastructurii, găzduirii, autentificării, livrării resurselor și securității. Integrarea pentru e-mail este pregătită, dar nu este activă până când nu este configurat un furnizor.",
+        "paragraph2": "Atunci când acești furnizori prelucrează date personale în numele Kiso Desk și conform instrucțiunilor sale, aceștia acționează ca persoane împuternicite sau furnizori de servicii și utilizează informațiile numai pentru executarea funcțiilor contractate.",
+        "paragraph3": "Google Cloud Platform găzduiește și operează componente tehnice ale serviciului. Google acționează și ca furnizor de autentificare atunci când utilizatorul alege să se conecteze cu un cont Google.",
+        "paragraph4": "Aplicația încarcă imagini cu steaguri de pe flagcdn.com. Atunci când aceste resurse sunt solicitate, furnizorul poate primi date tehnice obișnuite, precum adresa IP, agentul utilizatorului, data, ora și adresa URL de referință.",
+        "paragraph5": "Cloudflare Turnstile poate fi utilizat condiționat pentru prevenirea roboților și abuzurilor. Atunci când este activat, Cloudflare poate primi date tehnice de conexiune necesare verificării solicitării. Google AdSense și publicitatea nu sunt active; înainte de activare, informațiile vor fi actualizate și vor fi aplicate măsurile de control necesare.",
+        "paragraph6": "Persoana vizată se poate opune divulgărilor sau transferurilor care necesită consimțământ, utilizând adresa de e-mail pentru confidențialitate. Această opoziție nu va afecta divulgările sau transferurile necesare pentru furnizarea serviciului, menținerea relației cu utilizatorul, protejarea drepturilor, prevenirea abuzurilor sau respectarea obligațiilor legale."
+      },
+      "transfers": {
+        "title": "5. Transferuri și prelucrare în alte jurisdicții",
+        "paragraph1": "Kiso Desk poate utiliza furnizori de tehnologie aflați în jurisdicții diferite pentru găzduirea, operarea, protejarea și menținerea serviciului.",
+        "paragraph2": "Atunci când acești furnizori acționează ca persoane împuternicite, vor prelucra datele în numele Kiso Desk și conform instrucțiunilor și scopurilor corespunzătoare.",
+        "paragraph3": "Atunci când datele sunt divulgate sau transferate unui terț care nu acționează ca persoană împuternicită, acest lucru va avea loc în situațiile permise de legislația aplicabilă, inclusiv atunci când este necesar pentru furnizarea serviciului, respectarea obligațiilor legale, protejarea drepturilor sau atunci când există consimțământ.",
+        "paragraph4": "Utilizarea Google Cloud Platform, Google OAuth, Cloudflare Turnstile atunci când este activ și flagcdn.com poate implica prelucrarea datelor tehnice sau ale contului în alte jurisdicții, în funcție de configurația serviciului și de politicile aplicabile ale fiecărui furnizor."
+      },
+      "retention": {
+        "title": "6. Păstrarea datelor",
+        "item1": "Modulul cookie access_token are o durată maximă de 2 ore, iar modulul cookie refresh_token are o durată maximă de 7 zile.",
+        "item2": "Datele contului și ale progresului sunt păstrate cât timp contul rămâne activ sau atât timp cât este necesar pentru furnizarea serviciului, operarea clasamentelor și funcțiilor sociale, respectarea obligațiilor legale, soluționarea solicitărilor, prevenirea abuzurilor, rezolvarea incidentelor sau exercitarea și apărarea drepturilor.",
+        "item3": "Datele privind clasamentele și funcțiile sociale sunt păstrate cât timp contul este activ sau cât timp sunt necesare pentru operarea acestor funcții, cu excepția cazului în care utilizatorul își modifică preferințele, șterge contul sau își exercită un drept aplicabil.",
+        "item4": "Copiile de rezervă locale generate în timpul implementărilor sunt păstrate până la 30 de zile. Jurnalele tehnice sunt rotite în funcție de dimensiune și păstrate atât timp cât este necesar pentru operarea, protejarea și diagnosticarea serviciului.",
+        "item5": "Atunci când datele personale nu mai sunt necesare, acestea vor fi șterse, anonimizate sau blocate înainte de ștergere, după caz, cu excepția situațiilor în care trebuie păstrate în temeiul unei obligații aplicabile."
+      },
+      "rights": {
+        "title": "7. Drepturi și solicitări",
+        "paragraph1": "Puteți solicita accesul la datele personale, rectificarea sau ștergerea acestora, vă puteți opune prelucrării și puteți retrage consimțământul pentru activitățile care se bazează pe acesta, atunci când este aplicabil.",
+        "paragraph2": "Din profil, aplicația permite descărcarea unei copii structurate a datelor asociate contului și solicitarea ștergerii acestuia prin mecanismele disponibile.",
+        "paragraph3": "Utilizatorii pot limita divulgarea datelor vizibile în clasamente sau în funcțiile sociale, pot verifica ori modifica alegerea privind tehnologiile neesențiale și pot bloca alți utilizatori prin comenzile aplicației.",
+        "paragraph4": "De asemenea, puteți transmite solicitări privind confidențialitatea, limitarea utilizării sau divulgării datelor și exercitarea drepturilor prin adresa de e-mail indicată în această Notificare."
+      },
+      "children": {
+        "title": "8. Minori",
+        "paragraph1": "Serviciul nu este destinat minorilor.",
+        "paragraph2": "Pentru a crea un cont și a utiliza serviciul în mod independent, persoana trebuie să fi atins vârsta legală a majoratului conform legislației aplicabile în locul său de reședință.",
+        "paragraph3": "Dacă Kiso Desk identifică faptul că un cont aparține unui minor, poate limita prelucrările care nu sunt necesare și poate evalua suspendarea, ștergerea, blocarea sau regularizarea contului în conformitate cu legislația aplicabilă și cu protejarea drepturilor persoanei."
+      },
+      "security": {
+        "title": "9. Securitate",
+        "paragraph1": "Kiso Desk aplică măsuri administrative, tehnice și fizice destinate protejării datelor personale împotriva deteriorării, pierderii, modificării, distrugerii, utilizării, accesului sau prelucrării neautorizate.",
+        "paragraph2": "Aceste măsuri pot include controale de acces, autentificare, stocarea sigură a parolelor, gestionarea protejată a sesiunilor, module cookie HttpOnly, prevenirea abuzurilor, jurnale tehnice, restricții interne și alte măsuri proporționale cu riscul și dezvoltarea tehnologică.",
+        "paragraph3": "Niciun sistem nu este infailibil. Dacă un incident afectează în mod semnificativ drepturile utilizatorilor, Kiso Desk va efectua comunicările și va lua măsurile impuse de legislația aplicabilă."
+      },
+      "changes": {
+        "title": "10. Modificări ale acestei Notificări de confidențialitate",
+        "paragraph1": "Această Notificare poate fi actualizată pentru a reflecta modificări juridice, tehnice sau operaționale.",
+        "paragraph2": "Actualizările vor fi publicate pe această pagină împreună cu data corespunzătoare a ultimei actualizări.",
+        "paragraph3": "Atunci când o modificare este relevantă, aceasta va fi comunicată printr-o notificare vizibilă în aplicație sau printr-un alt mijloc electronic disponibil.",
+        "paragraph4": "Dacă un scop nou necesită consimțământ, prelucrarea corespunzătoare nu va începe până la obținerea consimțământului, atunci când legislația aplicabilă impune acest lucru."
+      },
+      "responsible": {
+        "title": "11. Operatorul și datele de contact",
+        "paragraph3": "E-mail pentru confidențialitate: kisodesk.project@gmail.com."
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "Termeni de utilizare",
+        "description": "Reguli pentru utilizarea Kiso Desk."
+      },
+      "general": {
+        "eyebrow": "Informații juridice",
+        "title": "Termeni de utilizare",
+        "description": "Reguli pentru utilizarea Kiso Desk.",
+        "introduction": "Acești termeni reglementează accesul la aplicație, conturi, funcțiile de învățare și funcțiile sociale disponibile.",
+        "lastUpdatedLabel": "Ultima actualizare",
+        "lastUpdated": "23 iulie 2026",
+        "contentsLabel": "Cuprins",
+        "relatedLabel": "Documente conexe",
+        "relatedPrivacy": "Politica de confidențialitate",
+        "relatedCookies": "Politica privind modulele cookie"
+      },
+      "service": {
+        "title": "1. Descrierea serviciului",
+        "paragraph1": "Kiso Desk oferă lecții și exerciții de tastare, urmărirea progresului, statistici, clasamente și funcții sociale legate de învățarea și exersarea tastării.",
+        "paragraph2": "Prin crearea unui cont, autentificare sau utilizarea serviciului, acceptați acești Termeni de utilizare.",
+        "paragraph3": "Funcțiile pot fi modificate, actualizate, limitate sau întrerupte pe durata dezvoltării și operării serviciului, întotdeauna în conformitate cu legislația aplicabilă și fără a afecta drepturile la care nu se poate renunța."
+      },
+      "eligibility": {
+        "title": "2. Vârstă și eligibilitate",
+        "paragraph1": "Pentru a crea un cont și a utiliza serviciul în mod independent, trebuie să fi atins vârsta legală a majoratului conform legislației aplicabile în locul de reședință.",
+        "paragraph2": "Dacă legislația aplicabilă impune cerințe suplimentare privind capacitatea, autorizarea sau vârsta, trebuie să le îndepliniți înainte de utilizarea serviciului.",
+        "paragraph3": "Serviciul nu este destinat minorilor. Dacă sunteți minor conform legislației aplicabile, nu trebuie să creați un cont și nici să furnizați date personale pe cont propriu."
+      },
+      "account": {
+        "title": "3. Cont și securitate",
+        "item1": "Trebuie să furnizați informații corecte și să le mențineți actualizate.",
+        "item2": "Sunteți responsabil pentru protejarea datelor de autentificare sau a metodelor de acces și pentru închiderea sesiunii pe dispozitivele partajate.",
+        "item3": "Nu trebuie să cedați, să vindeți, să transferați sau să utilizați contul altei persoane.",
+        "item4": "Trebuie să raportați orice acces neautorizat sau incident de securitate prin canalul de contact indicat în acești Termeni."
+      },
+      "acceptableUse": {
+        "title": "4. Utilizare acceptabilă",
+        "intro": "Prin utilizarea serviciului, acceptați să respectați următoarele reguli:",
+        "item1": "Nu interferați cu securitatea, disponibilitatea sau funcționarea serviciului.",
+        "item2": "Nu extrageți date, nu automatizați solicitări, nu efectuați colectare automată, nu supraîncărcați infrastructura și nu evitați limitele tehnice fără autorizare.",
+        "item3": "Nu hărțuiți, nu vă prezentați drept altă persoană, nu înșelați și nu încercați să obțineți informații de la alți utilizatori.",
+        "item4": "Nu încărcați, reproduceți, distribuiți sau utilizați conținut fără a deține drepturi suficiente.",
+        "item5": "Nu utilizați serviciul pentru activități ilegale, abuzive, frauduloase, prejudiciabile sau contrare acestor Termeni."
+      },
+      "social": {
+        "title": "5. Clasamente și funcții sociale",
+        "paragraph1": "Serviciul include clasamente, profiluri și alte funcții sociale.",
+        "paragraph2": "Aceste funcții pot afișa aliasul, viteza, precizia, nivelul, progresul, starea online, ultima activitate sau statisticile de tastare, conform preferințelor disponibile.",
+        "paragraph3": "La crearea unui cont, anumite funcții sociale sunt activate în mod implicit. Le puteți dezactiva individual din profil. Numele real și adresa de e-mail nu sunt publicate, iar prezența sau statisticile partajate sunt afișate numai prietenilor acceptați, conform descrierii din Politica de confidențialitate."
+      },
+      "intellectualProperty": {
+        "title": "6. Proprietate intelectuală",
+        "paragraph1": "Software-ul, designul, interfața, textele, exercițiile, imaginile, materialele audio, mărcile, siglele și celelalte elemente ale serviciului aparțin titularilor respectivi.",
+        "paragraph2": "Accesul la serviciu nu transferă drepturi de proprietate intelectuală asupra aplicației sau conținutului acesteia.",
+        "paragraph3": "Conținutul disponibil prin serviciu poate fi utilizat numai pentru exersarea tastării și folosirea funcțiilor aplicației, cu excepția cazului în care există o autorizare expresă sau se aplică o licență diferită."
+      },
+      "availability": {
+        "title": "7. Disponibilitate și modificări",
+        "paragraph1": "Serviciul poate fi întrerupt, limitat sau modificat din cauza întreținerii, actualizărilor, măsurilor de securitate, defecțiunilor tehnice, modificărilor operaționale sau cauzelor aflate în afara controlului rezonabil al Kiso Desk.",
+        "paragraph2": "Modificările relevante vor fi comunicate atunci când acest lucru este posibil în mod rezonabil.",
+        "paragraph3": "Kiso Desk nu garantează o anumită îmbunătățire a vitezei, preciziei, performanței academice, performanței profesionale, capacității de angajare sau orice alt rezultat specific ca urmare a utilizării serviciului."
+      },
+      "suspension": {
+        "title": "8. Suspendare și încetare",
+        "paragraph1": "Kiso Desk poate limita, suspenda sau închide un cont în cazul încălcării acestor Termeni, al utilizării abuzive a serviciului, al unui risc de securitate, al utilizării neautorizate, al prejudicierii altor utilizatori sau al unei activități ilegale ori dăunătoare.",
+        "paragraph2": "Atunci când este rezonabil, utilizatorul poate solicita revizuirea măsurii prin canalul de contact indicat în acești Termeni.",
+        "paragraph3": "Închiderea, suspendarea sau limitarea unui cont nu afectează obligațiile sau răspunderile apărute înainte de aplicarea măsurii.",
+        "paragraph4": "Ștergerea sau păstrarea datelor personale asociate contului va fi gestionată în conformitate cu Politica de confidențialitate și cu legislația aplicabilă."
+      },
+      "liability": {
+        "title": "9. Răspundere",
+        "paragraph1": "Serviciul este furnizat în funcție de disponibilitatea și funcționarea sa actuală.",
+        "paragraph2": "Nicio prevedere din acești Termeni nu limitează drepturile la care utilizatorii nu pot renunța potrivit legislației aplicabile și nu exclude răspunderi care nu pot fi limitate legal.",
+        "paragraph3": "În măsura permisă de legislația aplicabilă, Kiso Desk nu va răspunde pentru daune indirecte, întreruperi, pierderi de date sau prejudicii rezultate din cauze aflate în afara controlului său rezonabil, utilizarea necorespunzătoare a contului, informații false sau neactualizate, defecțiuni ale terților din afara serviciului sau încălcarea acestor Termeni de către utilizator.",
+        "paragraph4": "Cele de mai sus nu exclud răspunderea pentru o încălcare a legii imputabilă Kiso Desk, intenție, rea-credință, neglijență gravă, încălcarea drepturilor la care nu se poate renunța, nerespectarea obligațiilor de securitate sau prelucrarea necorespunzătoare a datelor personale."
+      },
+      "law": {
+        "title": "10. Legislație aplicabilă și contact",
+        "paragraph1": "Acești Termeni vor fi guvernați și interpretați în conformitate cu legislația aplicabilă responsabilului serviciului, fără a aduce atingere drepturilor la care utilizatorii nu pot renunța potrivit legislației aplicabile în locul lor de reședință.",
+        "paragraph2": "Nicio prevedere din acești Termeni nu limitează dreptul utilizatorului de a se adresa autorităților competente pentru protecția consumatorilor, protecția datelor sau altor autorități aplicabile.",
+        "paragraph3": "Întrebările, solicitările, raportările de securitate, reclamațiile sau comunicările privind acești Termeni pot fi trimise la kisodesk.project@gmail.com."
+      }
+    },
+    "page": {
+      "metadata": {
+        "title": "Învață să tastezi",
+        "description": "Îmbunătățește-ți viteza și precizia cu lecții interactive de tastare."
+      },
+      "general": {
+        "altNight": "Ilustrație a unei camere pe timp de noapte, cu o persoană și o pisică",
+        "altDay": "Ilustrație a unei camere pe timp de zi, cu o persoană care programează și o pisică",
+        "interactiveLessons": "Lecții interactive",
+        "interactiveLessonsDescription": "Învață cu ajutorul cursurilor structurate",
+        "freePractice": "Exersare liberă",
+        "freePracticeDescription": "Exersează în ritmul tău",
+        "dashboardDescription": "Vezi statisticile tale",
+        "rankingDescription": "Concurează la nivel global",
+        "title1": "Stăpânește",
+        "title2": "tastarea",
+        "subtitle1": "Îmbunătățește-ți viteza și precizia ",
+        "subtitle2": "prin lecții interactive de tastare",
+        "learn": "Învață",
+        "guidedLessons": "Lecții ghidate",
+        "practiceAction": "Exersează",
+        "typingExercises": "Exerciții de tastare",
+        "track": "Măsoară",
+        "progressAndStats": "Progres și statistici",
+        "compete": "Concurează",
+        "globalRanking": "Clasament global"
+      }
+    }
+  },
+  "public": {
+    "courses": {
+      "metadata": {
+        "title": "Cursuri de tastare | Kiso Desk",
+        "description": "Explorează cursuri și încearcă lecții de tastare."
+      },
+      "lessons": {
+        "metadata": {
+          "title": "Lecții de tastare | Kiso Desk",
+          "description": "Încearcă lecții de tastare fără să creezi un cont."
+        },
+        "lesson": {
+          "metadata": {
+            "title": "Exersarea lecției | Kiso Desk",
+            "description": "Exersează o lecție de tastare în Kiso Desk."
+          }
+        }
+      }
+    },
+    "practice": {
+      "metadata": {
+        "title": "Test de viteză și precizie la tastare | Kiso Desk",
+        "description": "Exersează gratuit tastarea și salvează rezultatul pe acest dispozitiv."
+      }
+    },
+    "progress": {
+      "metadata": {
+        "title": "Progres local | Kiso Desk",
+        "description": "Progres salvat local în acest browser."
+      },
+      "general": {
+        "title": "Progres local",
+        "description": "Acest progres este salvat numai în acest browser.",
+        "lessonsCompleted": "Lecții finalizate",
+        "practiceSessions": "Sesiuni de exersare",
+        "accuracy": "Precizie",
+        "signInNotice": "Autentifică-te pentru a salva progresul în cont.",
+        "signIn": "Autentificare"
+      }
+    },
+    "ranking": {
+      "metadata": {
+        "title": "Clasament de tastare | Kiso Desk",
+        "description": "Consultă clasamentul public al vitezei de tastare."
+      }
+    }
+  },
+  "components": {
+    "courses": {
+      "courseCard": {
+        "general": {
+          "lessons": "lecții",
+          "viewCourse": "Vezi cursul",
+          "yourProgress": "Progresul tău",
+          "loginToSeeProgress": "Autentifică-te pentru a-ți vedea progresul",
+          "lessonsCount": "lecții"
+        }
+      }
+    },
+    "dashboard": {
+      "errorTrends": {
+        "general": {
+          "title": "Panou de progres",
+          "noData": "Nu există date de afișat",
+          "insufficientData": "Date insuficiente.",
+          "highestErrorRate": "Cea mai mare rată de eroare",
+          "correctAttempts": "{correctAttempts}/{totalAttempts} corecte"
+        }
+      },
+      "fingerDistribution": {
+        "general": {
+          "title": "Panou de progres",
+          "noData": "Nu există date de afișat",
+          "leftHand": "Stânga",
+          "rightHand": "Dreapta",
+          "hand": "Mâna {hand}",
+          "pinky": "Deget mic",
+          "ring": "Inelar",
+          "middle": "Mijlociu",
+          "index": "Arătător",
+          "correctPercentage": "{percentage}% corecte",
+          "noCorrectPercentage": "Fără",
+          "errorPercentage": "{percentage}% erori",
+          "errors": "date"
+        }
+      },
+      "practiceCalendar": {
+        "general": {
+          "title": "Panou de progres",
+          "noData": "Nu există date de afișat",
+          "noPractice": "Fără exersare",
+          "minutesShort": "min",
+          "hoursShort": "h",
+          "noActivity": "Fără activitate",
+          "fiveMinutes": "5 min",
+          "tenMinutes": "10 min",
+          "fifteenMinutes": "15+ minute"
+        }
+      },
+      "progressChart": {
+        "general": {
+          "noData": "Nu există date de afișat"
+        }
+      },
+      "authBanner": {
+        "general": {
+          "message": "Autentifică-te pentru a-ți vedea statisticile.",
+          "signIn": "Autentificare"
+        }
+      },
+      "recommendationsList": {
+        "general": {
+          "title": "Panou de progres",
+          "signIn": "Autentifică-te",
+          "noRecommendations": "Nu există recomandări disponibile."
+        }
+      },
+      "weakKeysPanel": {
+        "general": {
+          "title": "Panou de progres",
+          "overallAccuracy": "Precizie generală",
+          "weakestKey": "Cea mai slabă tastă",
+          "lowestAccuracy": "Cea mai scăzută precizie"
+        }
+      }
+    },
+    "friends": {
+      "friendsSnapshot": {
+        "general": {
+          "title": "Prieteni",
+          "description": "Vezi câți sunt online și deschide panoul complet.",
+          "openFriends": "Deschide lista de prieteni",
+          "totalFriends": "Prieteni",
+          "onlineNow": "online acum",
+          "noFriendsYet": "Nu ai adăugat încă niciun prieten"
+        }
+      }
+    },
+    "layout": {
+      "footer": {
+        "general": {
+          "product": "Produs",
+          "lessons": "Lecții",
+          "ranking": "Clasament",
+          "progress": "Progres",
+          "project": "Proiect",
+          "aboutKisoDesk": "Despre Kiso Desk",
+          "github": "GitHub",
+          "legal": "Informații juridice",
+          "privacyPolicy": "Politica de confidențialitate",
+          "termsOfUse": "Termeni de utilizare",
+          "cookiePolicy": "Politica privind modulele cookie",
+          "contact": "Contact",
+          "copyright": "© {year} Kiso Desk."
+        }
+      },
+      "header": {
+        "general": {
+          "defaultUser": "Utilizator",
+          "skipToMainContent": "Sari la conținutul principal",
+          "courses": "Cursuri",
+          "userMenu": "Meniu utilizator",
+          "profile": "Profilul meu",
+          "logout": "Deconectare",
+          "menuToggle": "Deschide meniul",
+          "login": "Autentificare",
+          "register": "Înregistrare"
+        }
+      },
+      "sidebar": {
+        "general": {
+          "dashboard": "Panou de control",
+          "courses": "Cursuri",
+          "practice": "Exersare",
+          "ranking": "Clasament",
+          "friends": "Prieteni",
+          "profile": "Profil",
+          "menuToggle": "Meniu de navigare",
+          "expand": "Extinde",
+          "collapse": "Restrânge"
+        }
+      }
+    },
+    "legal": {
+      "cookieBanner": {
+        "general": {
+          "title": "Politica privind modulele cookie și stocarea locală",
+          "description": "În starea actuală a aplicației, nu sunt utilizate module cookie de analiză, rețele publicitare, remarketing sau alte sisteme de urmărire neesențiale.",
+          "privacyNotice": "Politica de confidențialitate",
+          "cookiePolicy": "Politica privind modulele cookie și stocarea locală",
+          "accept": "Acceptă",
+          "reject": "Respinge"
+        }
+      }
+    },
+    "lessons": {
+      "handReference": {
+        "general": {
+          "handReference": "Referință pentru poziția mâinilor pe tastatură"
+        }
+      },
+      "keyboardDetectionWizard": {
+        "general": {
+          "title": "Detector de tastatură",
+          "subtitle": "Detectează configurația tastaturii folosind câteva taste fizice și aplic-o în întreaga aplicație.",
+          "modalTitle": "Detectează configurația",
+          "currentLayout": "Configurația actuală",
+          "start": "Începe detectarea",
+          "progress": "Pasul {current} din maximum {total}",
+          "progressHint": "Se poate încheia mai devreme",
+          "progressLabel": "Progresul detectării",
+          "back": "Înapoi",
+          "cancel": "Anulează",
+          "close": "Închide",
+          "intro": {
+            "title": "Să detectăm tastatura",
+            "help": "Trebuie doar să apeși între 1 și 5 taste de pe tastatura fizică."
+          },
+          "capture": {
+            "focus": "Fă clic aici și apasă tasta indicată",
+            "instruction": "Tasta apăsată va fi utilizată numai pentru detectarea configurației.",
+            "captured": "Tastă detectată: {key}",
+            "deadKey": "tastă de accent"
+          },
+          "questions": {
+            "rightOfL": {
+              "title": "Apasă tasta aflată imediat la dreapta literei L",
+              "help": "Nu folosi Shift. Orientează-te după poziția fizică, chiar dacă pe tastă este imprimat un alt simbol."
+            },
+            "leftOfBackspace": {
+              "title": "Apasă tasta aflată imediat la stânga tastei Backspace",
+              "help": "Nu folosi Shift. Utilizează tasta de pe rândul cu cifre."
+            },
+            "shiftDigit2": {
+              "title": "Ține apăsat Shift și apasă tasta 2",
+              "help": "Folosește tasta 2 de pe rândul cu cifre, nu tastatura numerică."
+            },
+            "sixthTopRow": {
+              "title": "Apasă a șasea tastă cu literă de pe rândul superior",
+              "help": "Numără începând cu prima tastă cu literă de după Tab. Nu folosi Shift."
+            },
+            "firstTopRow": {
+              "title": "Apasă prima tastă cu literă de după Tab",
+              "help": "Orientează-te după poziția fizică. Nu folosi Shift."
+            },
+            "quoteKey": {
+              "title": "Apasă tasta pentru ghilimele",
+              "help": "Nu folosi Shift. Orientează-te după poziția fizică a tastei."
+            },
+            "shiftDigit3": {
+              "title": "Ține apăsat Shift și apasă tasta 3",
+              "help": "Folosește tasta 3 de pe rândul cu cifre, nu tastatura numerică."
+            }
+          },
+          "errors": {
+            "composition": "Nu putem identifica o configurație în timp ce tastatura compune text.",
+            "unidentified": "Tasta nu a putut fi identificată. Încearcă din nou.",
+            "alt-graph": "Nu folosi AltGr când apeși această tastă.",
+            "modified": "Nu folosi taste modificatoare când apeși această tastă.",
+            "wrongKey": "Ai apăsat altă tastă. Apasă tasta aflată în poziția indicată mai sus.",
+            "shiftRequired": "Ține apăsat Shift în timp ce apeși tasta respectivă.",
+            "shiftNotRequired": "Apasă tasta respectivă fără Shift.",
+            "saveFailed": "Configurația nu a putut fi salvată. Verifică conexiunea și încearcă din nou."
+          },
+          "result": {
+            "detectedTitle": "Configurație detectată",
+            "confidence": "Nivel de încredere al detectării: {confidence}",
+            "useDetected": "Folosește această configurație",
+            "unidentifiedTitle": "Configurația tastaturii nu a putut fi identificată",
+            "unidentifiedHelp": "Alege manual configurația corespunzătoare tastaturii tale.",
+            "fallbackTitle": "Detectarea nu a avut un nivel suficient de încredere",
+            "fallbackHelp": "Alege una dintre cele mai apropiate potriviri sau consultă toate configurațiile disponibile.",
+            "chooseManually": "Alege manual",
+            "retryDetection": "Încearcă din nou detectarea"
+          },
+          "manual": {
+            "title": "Alege configurația tastaturii",
+            "help": "Selectează configurația care corespunde tastelor tastaturii tale."
+          },
+          "saved": {
+            "title": "Configurație salvată",
+            "description": "Configurația {layout} va fi folosită acum în întreaga aplicație.",
+            "continueToCourses": "Continuă la cursuri",
+            "returnToPractice": "Înapoi la exersare"
+          },
+          "physicalFamily": {
+            "title": "Forma tastaturii",
+            "subtitle": "Identifică forma tastelor pentru a afișa corect tastatura.",
+            "enterQuestion": "Ce formă are tasta Enter?",
+            "enterHorizontal": "Enter orizontal",
+            "enterIso": "Enter ISO standard",
+            "enterBigAss": "Enter ISO BA",
+            "abntQuestion": "Câte taste sunt între / și Shift dreapta?",
+            "eastAsianQuestion": "Câte taste sunt între 0 și Backspace?",
+            "eastAsianCountQuestion": "Câte taste sunt între Spațiu și Alt dreapta?",
+            "complete": "Forma tastaturii a fost identificată: {family}"
+          }
+        }
+      },
+      "keyboard": {
+        "general": {
+          "virtualKeyboard": "Tastatură virtuală"
+        }
+      },
+      "lessonCard": {
+        "general": {
+          "ariaLabel": "Mergi la lecție",
+          "wpm": "WPM",
+          "score": "Scor",
+          "accuracy": "Precizie",
+          "time": "Timp",
+          "placeholder": "—",
+          "secondsShort": "s",
+          "minutesShort": "min",
+          "minutesCompact": "m",
+          "approxPrefix": "~",
+          "rankLabel": "Rang",
+          "gradeLabel": "Notă",
+          "completed": "Finalizat",
+          "explanatoryBadge": "Lecție explicativă",
+          "explanatoryLesson": "Lecție explicativă",
+          "objectiveAccuracy": "Obiectiv: precizie de {minAccuracy}%",
+          "mastered": "Stăpânită",
+          "inProgress": "În curs",
+          "lessonOrderRecommendationTitle": "Urmează ordinea recomandată",
+          "lessonOrderRecommendationDescription": "Îți recomandăm să urmezi ordinea prestabilită a lecțiilor pentru a progresa treptat.",
+          "lessonOrderRecommendationBack": "Înapoi",
+          "lessonOrderRecommendationContinue": "Continuă",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Începător",
+            "scout": "Cercetaș",
+            "ranger": "Ranger",
+            "veteran": "Veteran",
+            "elite": "Elită",
+            "legend": "Legendă"
+          },
+          "gradesDescriptions": {
+            "novice": "Nivel de bază",
+            "scout": "Progres inițial",
+            "ranger": "Stăpânire bună",
+            "veteran": "Nivel avansat",
+            "elite": "Expert",
+            "legend": "Nivel maxim"
+          }
+        }
+      },
+      "personalizedLessonCard": {
+        "general": {
+          "title": "Exersare recomandată",
+          "noData": "Nu există date de afișat",
+          "error": "Recomandările tale nu au putut fi încărcate. Încearcă din nou.",
+          "retry": "Încearcă din nou",
+          "insufficientData": "Exersează mai mult pentru a identifica tastele pe care trebuie să le consolidezi.",
+          "noCourse": "Nu există încă un curs de tastare disponibil pentru această limbă.",
+          "noLessons": "Acest curs nu are încă lecții disponibile.",
+          "description": "Bazată pe punctele slabe identificate.",
+          "weakKeys": "Tastele cu cea mai scăzută precizie în ultimele sesiuni.",
+          "noMatches": "Nu există încă lecții în acest curs asociate tastelor tale slabe.",
+          "worksKeys": "Exersează: {keys}"
+        }
+      },
+      "results": {
+        "general": {
+          "saveWarning": "Rezultatele nu au putut fi salvate",
+          "wpm": "WPM",
+          "score": "Scor",
+          "accuracy": "Precizie",
+          "correctChars": "Caractere corecte",
+          "lowResultTitle": "Rezultatul tău este puțin scăzut",
+          "lowResultMessage": "Ia în considerare parcurgerea cursului de tastare pentru a continua să te îmbunătățești.",
+          "lowResultCourseLink": "Mergi la cursul de tastare",
+          "accuracyFocusTitle": "Acordă prioritate preciziei",
+          "accuracyFocusMessage": "Progresezi bine. Înainte de a mări viteza, încearcă să atingi o precizie de cel puțin 95%.",
+          "masteredResult": "Lecție stăpânită",
+          "masteredMessage": "Ai îndeplinit criteriul de precizie și poți continua.",
+          "needsReview": "Necesită recapitulare",
+          "reviewMessage": "Obiectiv: precizie de cel puțin {minAccuracy}%. Redu ritmul și repetă blocul.",
+          "rankLabel": "Rang",
+          "gradeLabel": "Notă",
+          "retryAriaLabel": "Încearcă din nou lecția",
+          "retry": "Încearcă din nou",
+          "next": "Următorul",
+          "newText": "Text nou",
+          "backToCourses": "Înapoi la cursuri",
+          "backToDashboard": "Înapoi la panoul de control",
+          "gradesLetters": {
+            "F": "F",
+            "D": "D",
+            "C": "C",
+            "B": "B",
+            "A": "A",
+            "S": "S",
+            "SS": "SS",
+            "SSS": "SSS",
+            "SSSPlus": "SSS+"
+          },
+          "gradesRanks": {
+            "novice": "Începător",
+            "scout": "Cercetaș",
+            "ranger": "Ranger",
+            "veteran": "Veteran",
+            "elite": "Elită",
+            "legend": "Legendă"
+          },
+          "gradesDescriptions": {
+            "novice": "Nivel de bază",
+            "scout": "Progres inițial",
+            "ranger": "Stăpânire bună",
+            "veteran": "Nivel avansat",
+            "elite": "Expert",
+            "legend": "Nivel maxim"
+          }
+        }
+      },
+      "typingArea": {
+        "general": {
+          "wpm": "WPM",
+          "score": "Scor",
+          "accuracy": "Precizie",
+          "characters": "Caractere",
+          "backspace": "Backspace",
+          "backspaceEnabled": "Tasta Backspace activată",
+          "backspaceDisabled": "Tasta Backspace blocată",
+          "font": "Font",
+          "size": "Dimensiune",
+          "pixels": "px",
+          "fontAndSize": "Font și dimensiune",
+          "textToType": "Text de tastat",
+          "inactivityPaused": "Întrerupt din cauza inactivității",
+          "clickToResume": "Fă clic pentru a continua",
+          "congratulations": "Felicitări! Viteză: {wpm} WPM, Precizie: {accuracy}%",
+          "detectKeyboard": "Detectează tastatura",
+          "keyboardConfigTitle": "Configurarea tastaturii",
+          "keyboardPreferenceMissing": "Nu există nicio preferință salvată pentru tastatură. O poți modifica din configurarea tastaturii.",
+          "recommendedKeyboardLayout": "Aspect recomandat al tastaturii: {layout}",
+          "useRecommendedKeyboardLayout": "Schimbă aspectul",
+          "detectionHelp": "Identifică automat configurația actuală și folosește-o pe parcursul întregii sesiuni de exersare.",
+          "identifyKeyboardShape": "Identifică forma",
+          "keyboardShapeHeading": "Forma tastaturii",
+          "logicalDistributionHeading": "Aranjament logic",
+          "logicalDistributionHint": "caracterele tastaturii"
+        }
+      }
+    },
+    "ui": {
+      "themeToggle": {
+        "general": {
+          "switchToLight": "Temă",
+          "switchToDark": "Temă"
+        }
+      }
+    },
+    "i18n": {
+      "languageSwitcher": {
+        "general": {
+          "interfaceLanguage": "Limba interfeței"
+        }
+      }
+    }
+  },
+  "general": {
+    "Accessibility": {
+      "button": "Buton",
+      "expandMenu": "Extinde meniul",
+      "collapseMenu": "Restrânge meniul"
+    },
+    "Common": {
+      "loading": "Se încarcă...",
+      "retry": "Încearcă din nou",
+      "close": "Închide"
+    }
+  },
+  "lessonid": {
+    "general": {
+      "lockedLesson": "Lecție blocată",
+      "lockedLessonDescription": "Stăpânește activitatea anterioară înainte de a continua.",
+      "backToLessons": "Înapoi la lecții",
+      "lessonNotFound": "Lecția nu a fost găsită",
+      "typeTheTextBelow": "Tastează textul de mai jos",
+      "hideKeyboard": "Ascunde tastatura",
+      "showKeyboard": "Afișează tastatura",
+      "exitPractice": "Ieși din sesiunea de exersare",
+      "saveError": "Eroare la salvarea rezultatului",
+      "saveErrorMessage": "Rezultatele sunt afișate pe ecran, dar nu au fost salvate în progresul tău. Încearcă să repeți lecția când conexiunea este disponibilă.",
+      "audioGuide": "Ascultă explicația",
+      "audioUnsupported": "Browserul tău nu poate reda această pistă audio.",
+      "experimentalGreetings": {
+        "lessonPosition": "Lecția {current} din {total}",
+        "supportContent": "Conținut suplimentar",
+        "englishColumn": "Engleză",
+        "spanishColumn": "Spaniolă",
+        "continue": "Continuă",
+        "dialogue": "Dialog",
+        "selectEnglishFirst": "Selectează mai întâi o opțiune în limba engleză",
+        "tryAgain": "Încearcă din nou",
+        "correct": "Corect",
+        "complete": "Activitate finalizată"
+      },
+      "manualAudioPlay": "Ascultă",
+      "manualAudioReplay": "Ascultă din nou",
+      "lessonAudio": "Audio lecție",
+      "interactions": {
+        "dictationPrompt": "Scrie ce auzi",
+        "unitProgress": "Progresul unității",
+        "stepProgress": "Pasul {step} din 4 {current}",
+        "currentStep": "curent",
+        "reviewTask": "Sarcina {current} din 3",
+        "completedPairs": "Perechi finalizate",
+        "availableOptions": "Opțiuni disponibile",
+        "options": "Opțiuni",
+        "answer": "Răspuns",
+        "check": "Verifică",
+        "undo": "Anulează",
+        "correct": "Corect",
+        "incorrect": "Încă nu. Răspuns corect: {answer} {detail}",
+        "spellingFeedback": "Ortografie: cuvântul are două litere sau la început",
+        "sentenceFeedback": "Majusculă inițială și punctuație: verifică fiecare propoziție",
+        "dictationFeedback": "Dictare: ascultă fiecare cuvânt și păstrează punctuația",
+        "correctAnswer": "Răspuns corect",
+        "nextTask": "Sarcina următoare"
+      }
+    }
+  },
+  "courses": {
+    "general": {
+      "title": "Cursuri",
+      "subtitle": "Explorează cursurile noastre și îmbunătățește-ți tastarea",
+      "searchPlaceholder": "Caută cursuri...",
+      "allLevels": "Toate nivelurile",
+      "beginner": "Începător",
+      "intermediate": "Intermediar",
+      "advanced": "Avansat",
+      "guestModeMessage": "Autentifică-te pentru a-ți salva progresul",
+      "signIn": "Autentificare",
+      "retry": "Încearcă din nou",
+      "noCourseYetTitle": "Nu există încă niciun curs disponibil",
+      "noCourseYetDescription": "Pregătim cursuri pentru această limbă. Revino în curând.",
+      "noCourses": "Nu au fost găsite cursuri",
+      "all": "Toate cursurile",
+      "completed": "Finalizate",
+      "notCompleted": "Nefinalizate"
+    }
+  },
+  "lessons": {
+    "general": {
+      "title": "Lecții",
+      "subtitle": "Exersează cu lecții adaptate nivelului tău",
+      "searchPlaceholder": "Caută lecții...",
+      "allDifficulties": "Toate dificultățile",
+      "beginner": "Începător",
+      "intermediate": "Intermediar",
+      "advanced": "Avansat",
+      "guestModeMessage": "Autentifică-te pentru a-ți salva progresul",
+      "signIn": "Autentificare",
+      "retry": "Încearcă din nou",
+      "errorTitle": "Eroare la încărcarea lecțiilor",
+      "noLessonsTitle": "Nu există lecții disponibile",
+      "noLessonsDescription": "Acest curs nu are încă lecții. Revino mai târziu sau contactează administratorul.",
+      "noCompletedLessonsTitle": "Nu ai finalizat încă nicio lecție",
+      "noCompletedLessonsDescription": "Finalizează o lecție pentru a o vedea în această listă.",
+      "noPendingLessonsTitle": "Nu ai lecții în așteptare",
+      "noPendingLessonsDescription": "Toate lecțiile acestui curs apar ca finalizate.",
+      "all": "Toate lecțiile",
+      "completed": "Finalizate",
+      "notCompleted": "Nefinalizate",
+      "moduleLabel": "Modulul {order}",
+      "masteredCount": "{mastered}/{total} stăpânite"
+    }
+  },
+  "dashboard": {
+    "general": {
+      "title": "Panou de progres",
+      "subtitle": "Vezi progresul și statisticile tale de tastare",
+      "averageWpm": "WPM mediu",
+      "wordsPerMinute": "Cuvinte pe minut",
+      "averageAccuracy": "Precizie medie",
+      "accuracy": "Precizie",
+      "totalPracticeTime": "Timp total de exersare",
+      "thisWeek": "Săptămâna aceasta",
+      "weeklyWpmProgress": "Progres săptămânal al WPM",
+      "monthlyWpmProgress": "Progres lunar al WPM",
+      "noData": "Nu există date disponibile",
+      "bestWpm": "Cel mai bun WPM",
+      "grossWpm": "WPM brut",
+      "record": "Record",
+      "streak": "Serie",
+      "days": "zile",
+      "consecutivePractice": "Exersare consecutivă",
+      "totalKeystrokes": "Număr total de apăsări",
+      "typed": "Tastate",
+      "recommendations": "Recomandări pentru tine",
+      "recommendation1": "Exersează lecții de nivel intermediar pentru a-ți îmbunătăți viteza.",
+      "recommendation2": "Încearcă să menții o precizie de peste 95%.",
+      "recommendation3": "Finalizează cel puțin o lecție pe zi pentru a-ți menține seria.",
+      "retry": "Încearcă din nou",
+      "error": "Eroare",
+      "completedText": "% finalizat",
+      "completedTitle": "Lecții / Cursuri",
+      "lessons": "lecții",
+      "courses": "cursuri",
+      "completedLessons": "Lecții finalizate",
+      "completedCourses": "Cursuri finalizate",
+      "guestModeMessage": "Autentifică-te pentru a-ți vedea progresul",
+      "signIn": "Autentificare",
+      "recommendationsGuest": "Autentifică-te pentru a primi recomandări personalizate bazate pe progresul tău.",
+      "weakKeys": "Taste slabe",
+      "errorTrends": "Evoluția erorilor",
+      "fingerDistribution": "Distribuție pe degete",
+      "personalizedPractice": "Exersare personalizată",
+      "personalizedPracticeDesc": "Primește lecții personalizate bazate pe punctele tale slabe.",
+      "signInToSee": "Autentifică-te pentru a-ți vedea statisticile",
+      "noDataYet": "Finalizează lecții pentru a-ți vedea punctele slabe"
+    }
+  },
+  "practice": {
+    "general": {
+      "title": "Test de tastare",
+      "subtitle": "Îmbunătățește-ți viteza și precizia cu texte personalizate",
+      "freeTitle": "Test de viteză de tastare",
+      "freeSubtitle": "Încearcă un text scurt și descoperă viteza și precizia ta de tastare.",
+      "adaptiveTitle": "Exersează tastele la care greșești cel mai des",
+      "adaptiveSubtitle": "Concentrează-te pe caracterele care provoacă cele mai multe erori și tastează mai precis.",
+      "session": "Sesiune de exersare",
+      "newText": "Text nou",
+      "perKeyStats": "Statistici pe taste (în curând)",
+      "loadingText": "Se încarcă textul...",
+      "errorLoadingText": "Eroare la încărcarea textului.",
+      "errorTitle": "Textul nu a putut fi încărcat",
+      "retry": "Încearcă din nou",
+      "saving": "Se salvează rezultatele...",
+      "errorSavingResult": "Eroare la salvarea rezultatelor.",
+      "saveWarning": "Rezultatele nu au putut fi salvate",
+      "backToDashboard": "Înapoi la panoul de control",
+      "guestSavePrompt": "Autentifică-te pentru a-ți salva progresul și a continua să te îmbunătățești.",
+      "signInToSave": "Autentificare",
+      "guestPlaceholder": "—",
+      "guestAdaptiveReason": "Pe baza erorilor salvate pe acest dispozitiv",
+      "adaptiveKeys": "Taste: {keys}",
+      "adaptiveBigrams": "Bigrame: {bigrams}",
+      "modeRandom": "Text liber",
+      "modeWords": "Exercițiu recomandat",
+      "modeText": "Text adaptiv",
+      "adaptivePracticeKeys": "Taste în exercițiu"
+    }
+  },
+  "notFound": {
+    "general": {
+      "title": "Pagina nu a fost găsită",
+      "description": "Ne pare rău, pagina pe care o cauți nu există sau a fost mutată.",
+      "backHome": "Înapoi la pagina principală",
+      "dashboard": "Panou de control",
+      "lessons": "Lecții",
+      "ranking": "Clasament"
+    }
+  }
+}
