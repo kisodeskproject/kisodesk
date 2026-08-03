@@ -28,9 +28,9 @@ describe('FrontendTelemetryService', () => {
     const service = new FrontendTelemetryService(
       { get: () => undefined } as any,
       { $executeRawUnsafe: jest.fn() } as any,
-      metric() as any, metric() as any, metric() as any, metric() as any, metric() as any,
-      failed as any, requests as any, metric() as any, metric() as any, metric() as any,
       metric() as any, metric() as any, metric() as any, metric() as any,
+      failed as any, requests as any, metric() as any, metric() as any, metric() as any,
+      metric() as any, metric() as any, metric() as any, metric() as any, metric() as any,
     );
 
     service.record([{ type: 'request', route: '/es-latam/practice', statusClass: '5xx', value: 0.5 }]);
