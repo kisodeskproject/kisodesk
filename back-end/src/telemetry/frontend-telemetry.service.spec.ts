@@ -14,7 +14,7 @@ describe('FrontendTelemetryService', () => {
       { $executeRawUnsafe: jest.fn() } as any,
       vitals as any, metric() as any, metric() as any, metric() as any,
       metric() as any, metric() as any, metric() as any, metric() as any, metric() as any,
-      metric() as any, metric() as any, metric() as any, metric() as any,
+      metric() as any, metric() as any, metric() as any, metric() as any, metric() as any,
     );
 
     service.record([{ type: 'vital', route: '/es-latam/users/secret?token=hidden', metricName: 'lcp', value: 1 }]);
@@ -28,7 +28,7 @@ describe('FrontendTelemetryService', () => {
     const service = new FrontendTelemetryService(
       { get: () => undefined } as any,
       { $executeRawUnsafe: jest.fn() } as any,
-      metric() as any, metric() as any, metric() as any, metric() as any,
+      metric() as any, metric() as any, metric() as any, metric() as any, metric() as any,
       failed as any, requests as any, metric() as any, metric() as any, metric() as any,
       metric() as any, metric() as any, metric() as any, metric() as any,
     );
