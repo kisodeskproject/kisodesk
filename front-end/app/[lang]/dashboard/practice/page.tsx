@@ -30,7 +30,7 @@ type PageStatus = 'loading' | 'ready' | 'error' | 'completed' | 'saving';
 type SaveStatus = 'idle' | 'saving' | 'saved' | 'failed' | 'skipped';
 const SHOW_KEYBOARD_STORAGE_KEY = 'typing-show-keyboard';
 
-export default function PracticaPage({ showHeading = true }: { showHeading?: boolean }) {
+export function PracticePageContent({ showHeading = true }: { showHeading?: boolean }) {
   const params = useParams();
   const pathname = usePathname();
   const router = useRouter();
@@ -408,4 +408,8 @@ export default function PracticaPage({ showHeading = true }: { showHeading?: boo
       </div>
     </DashboardBackground>
   );
+}
+
+export default function Page() {
+  return <PracticePageContent />;
 }

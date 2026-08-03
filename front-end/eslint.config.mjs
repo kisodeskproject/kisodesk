@@ -86,9 +86,15 @@ export default defineConfig([
   },
 
   {
-    files: ['**/*.test.{ts,tsx,js,jsx}'],
-    languageOptions: { globals: { ...globals.jest } },
-    rules: { 'import/no-default-export': 'off' },
+    files: ['**/*.test.{ts,tsx,js,jsx}', 'e2e/**/*.{ts,tsx,js,jsx}'],
+    languageOptions: {
+      parserOptions: { project: false },
+      globals: { ...globals.jest },
+    },
+    rules: {
+      'import/no-default-export': 'off',
+      'no-undef': 'off',
+    },
   },
 
   {
