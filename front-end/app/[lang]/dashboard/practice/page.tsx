@@ -119,7 +119,7 @@ export function PracticePageContent({ showHeading = true }: { showHeading?: bool
       setErrorMessage(err instanceof Error ? err.message : t('practice.general.errorLoadingText'));
       setStatus('error');
     }
-  }, [activeLayout.id, contentLanguage, isAuthenticated, practiceMode, t, user?.id]);
+  }, [activeLayout.id, contentLanguage, isAuthenticated, lang, practiceMode, t, user?.id]);
 
   useEffect(() => {
     if (isLayoutReady) loadText();
