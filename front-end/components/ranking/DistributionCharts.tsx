@@ -34,7 +34,7 @@ export default function DistributionCharts({
     const w = canvas.width;
     const h = canvas.height;
     const padding = 60;
-    const minWpm = 40;
+    const minWpm = 0;
     const maxWpm = 160;
     const minAcc = 85;
     const maxAcc = 100;
@@ -68,7 +68,7 @@ export default function DistributionCharts({
       ctx.font = '10px sans-serif';
       ctx.fillText(`${accVal}%`, padding - 35, y + 4);
     });
-    [40, 80, 120, 160].forEach((wpmVal) => {
+    [0, 40, 80, 120, 160].forEach((wpmVal) => {
       const x = getX(wpmVal);
       ctx.moveTo(x, padding);
       ctx.lineTo(x, h - padding);

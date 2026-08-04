@@ -36,7 +36,6 @@ import { Hourglass, Keyboard as KeyboardIcon, MousePointer2, RefreshCw } from 'l
 interface TypingAreaProps {
   text: string;
   onComplete?: (stats: TypingStats) => void;
-  onProgress?: (stats: TypingStats) => void;
   onError?: (key: string, expected: string) => void;
   onExpectedKeyChange?: (key: string | null) => void;
   selectedLayout: KeyboardLayout;
@@ -141,7 +140,6 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
   {
     text,
     onComplete,
-    onProgress,
     onError,
     onExpectedKeyChange,
     selectedLayout,
@@ -195,7 +193,6 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
   const correctCharsRef = useRef(0);
   const pendingDeadKeyRef = useRef<PendingDeadKey | null>(null);
   const onCompleteRef = useRef(onComplete);
-  const onProgressRef = useRef(onProgress);
   const keystrokesRef = useRef<KeystrokeEvent[]>([]);
   const physicalEventsRef = useRef<PhysicalKeyEvent[]>([]);
   const telemetryEventsRef = useRef<TypingTelemetryEvent[]>([]);
@@ -308,10 +305,6 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
     onCompleteRef.current = onComplete;
   }, [onComplete]);
   useEffect(() => {
-    onProgressRef.current = onProgress;
-  }, [onProgress]);
-
-  useEffect(() => {
     onExpectedKeyChange?.(isCompleted ? null : (text[input.length] ?? null));
   }, [input.length, isCompleted, onExpectedKeyChange, text]);
 
@@ -378,11 +371,27 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
         },
       };
       setStats(newStats);
-      onProgressRef.current?.(newStats);
       if (input.length >= text.length && !isCompleted) {
         setIsCompleted(true);
+        const finalInput = splitGraphemes(normalizeCommittedText(input));
+        const expectedInput = splitGraphemes(normalizedText);
+        const finalCorrectChars = finalInput.reduce(
+          (total, character, index) => total + Number(character === expectedInput[index]),
+          0,
+        );
+        const finalTotalChars = finalInput.length;
+        const finalAccuracy =
+          finalTotalChars > 0 ? Math.round((finalCorrectChars / finalTotalChars) * 100) : 100;
+        const finalGrossWpm = calculateGrossWPM(finalTotalChars, elapsed);
+        const finalNetWpm = Math.round(finalGrossWpm * (finalAccuracy / 100) ** 3);
         const finalStats: TypingStats = {
           ...newStats,
+          grossWpm: finalGrossWpm,
+          netWpm: finalNetWpm,
+          score: Math.round(finalNetWpm * 100),
+          accuracy: finalAccuracy,
+          correctChars: finalCorrectChars,
+          totalChars: finalTotalChars,
           keystrokes: keystrokesRef.current,
           physicalEvents: physicalEventsRef.current,
           telemetry: {

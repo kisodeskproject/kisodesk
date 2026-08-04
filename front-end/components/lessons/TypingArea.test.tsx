@@ -13,7 +13,6 @@ const latam = getEnabledLayoutById('qwerty-latam')!;
 const danish = getEnabledLayoutById('qwerty-da')!;
 
 function renderTyping(text: string, layout = spanish, hasLayoutPreference = true) {
-  const onProgress = jest.fn();
   const onComplete = jest.fn();
   const onError = jest.fn();
   const onExpectedKeyChange = jest.fn();
@@ -41,7 +40,6 @@ function renderTyping(text: string, layout = spanish, hasLayoutPreference = true
         text={text}
         selectedLayout={layout}
         onLayoutChange={onLayoutChange}
-        onProgress={onProgress}
         onComplete={onComplete}
         onError={onError}
         onExpectedKeyChange={onExpectedKeyChange}
@@ -53,7 +51,6 @@ function renderTyping(text: string, layout = spanish, hasLayoutPreference = true
     onComplete,
     onError,
     onExpectedKeyChange,
-    onProgress,
     onLayoutChange,
     onOpenDetection,
   };

@@ -1415,7 +1415,6 @@ export default function LessonPracticePage() {
             key={`${currentLesson.id}-${retryKey}`}
             text={currentLesson.text}
             onComplete={handlePracticeComplete}
-            onProgress={setStats}
             onExpectedKeyChange={setExpectedPracticeKey}
             selectedLayout={activeLayout}
             onLayoutChange={setSelectedLayout}

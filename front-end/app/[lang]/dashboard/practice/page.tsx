@@ -53,8 +53,6 @@ export function PracticePageContent({ showHeading = true }: { showHeading?: bool
   const [saveMessage, setSaveMessage] = useState<string | null>(null);
   const [showKeyboard, setShowKeyboard] = useState(true);
   const clientSessionIdRef = useRef<string | null>(null);
-  const practiceObservedRef = useRef(false);
-  const practiceCompletedRef = useRef(false);
   const practiceMode = getPracticeMode(searchParams.get('mode'));
   const [adaptiveDetails, setAdaptiveDetails] = useState<{
     targets: { keys: string[]; bigrams: string[] };
@@ -118,8 +116,6 @@ export function PracticePageContent({ showHeading = true }: { showHeading?: bool
         data.text = guestWords.join(' ');
       setPracticeText(data.text);
       clientSessionIdRef.current = crypto.randomUUID();
-      practiceObservedRef.current = false;
-      practiceCompletedRef.current = false;
       setPracticeTextId(data.id);
       const adaptive = practiceMode === 'adaptive' && isAuthenticated ? (data as AdaptivePracticeText) : null;
       setAdaptiveDetails(
@@ -149,7 +145,6 @@ export function PracticePageContent({ showHeading = true }: { showHeading?: bool
       recordObservedPractice('practice_completed', {
         authState: isAuthenticated ? 'authenticated' : 'anonymous', language: contentLanguage, layout: activeLayout.id,
       });
-      practiceCompletedRef.current = true;
       if (!isAuthenticated) {
         recordGuestPracticeResult({
           netWpm: Math.round(finalStats.netWpm),
@@ -196,11 +191,6 @@ export function PracticePageContent({ showHeading = true }: { showHeading?: bool
   );
 
   const handleNewText = () => {
-    if (practiceObservedRef.current && !practiceCompletedRef.current) {
-      recordObservedPractice('practice_abandoned', {
-        authState: isAuthenticated ? 'authenticated' : 'anonymous', language: contentLanguage, layout: activeLayout.id,
-      });
-    }
     setStats(null);
     setSaveStatus('idle');
     setSaveMessage(null);
@@ -369,15 +359,6 @@ export function PracticePageContent({ showHeading = true }: { showHeading?: bool
           <TypingArea
             text={practiceText}
             onComplete={handleComplete}
-            onProgress={(nextStats) => {
-              if (!practiceObservedRef.current) {
-                practiceObservedRef.current = true;
-                recordObservedPractice('practice_started', {
-                  authState: isAuthenticated ? 'authenticated' : 'anonymous', language: contentLanguage, layout: activeLayout.id,
-                });
-              }
-              setStats(nextStats);
-            }}
             onExpectedKeyChange={setExpectedPracticeKey}
             selectedLayout={activeLayout}
             onLayoutChange={setSelectedLayout}
