@@ -29,6 +29,7 @@ describe('LessonsService mastery', () => {
     const tx = {
       lessonAttempt: {
         create: jest.fn().mockResolvedValue({ id: 'attempt-1' }),
+        findUnique: jest.fn().mockResolvedValue(null),
       },
       userLessonProgress: {
         findUnique: jest.fn().mockResolvedValue(existingProgress),
@@ -49,23 +50,26 @@ describe('LessonsService mastery', () => {
     const errorTracking = {
       processLessonErrors: jest.fn().mockResolvedValue(undefined),
       processLessonErrorsInTransaction: jest.fn().mockResolvedValue(undefined),
+      processLessonLayoutStatsInTransaction: jest.fn().mockResolvedValue(undefined),
     };
     const progressService = {
       recordPracticeTimeInTransaction: jest.fn().mockResolvedValue(undefined),
     };
+    const telemetryService = { derive: jest.fn() };
     const counter = { inc: jest.fn() };
     const service = new LessonsService(
       prisma as any,
       errorTracking as any,
       progressService as any,
+      telemetryService as any,
       counter as any,
     );
 
-    return { service, tx, counter, errorTracking, progressService };
+    return { service, tx, counter, errorTracking, progressService, telemetryService };
   }
 
   it('domina la lección en el primer intento calificado aunque el currículo histórico pida más', async () => {
-    const { service, tx, counter } = createService(null);
+    const { service, tx, counter, errorTracking } = createService(null);
 
     const result = await service.saveProgress('user-1', lesson.slug, {
       grossWpm: 40,
@@ -75,6 +79,7 @@ describe('LessonsService mastery', () => {
       targetKeyErrors: 1,
       usedAssistance: false,
       errorSummary,
+      layoutId: 'qwerty-latam',
     });
 
     expect(result.qualified).toBe(true);
@@ -104,6 +109,14 @@ describe('LessonsService mastery', () => {
       }),
     );
     expect(counter.inc).toHaveBeenCalledTimes(1);
+    expect(errorTracking.processLessonErrorsInTransaction).toHaveBeenCalledTimes(1);
+    expect(errorTracking.processLessonLayoutStatsInTransaction).toHaveBeenCalledWith(
+      tx,
+      'user-1',
+      'es',
+      'qwerty-latam',
+      errorSummary,
+    );
   });
 
   it('no califica cuando excede los errores permitidos en teclas objetivo', async () => {
@@ -142,5 +155,56 @@ describe('LessonsService mastery', () => {
       }),
     );
     expect(counter.inc).not.toHaveBeenCalled();
+  });
+
+  it('no duplica estadísticas cuando se reintenta un clientSessionId sincronizado', async () => {
+    const { service, tx, errorTracking, telemetryService } = createService(null);
+    tx.lessonAttempt.findUnique.mockResolvedValue({ id: 'attempt-1' });
+
+    const result = await service.saveProgress('user-1', lesson.slug, {
+      grossWpm: 40, netWpm: 36, accuracy: 97, timeElapsed: 60,
+      errorSummary, layoutId: 'qwerty-latam',
+      clientSessionId: '72c6ac60-572c-43b5-b84b-c321fb4c6a22',
+    });
+
+    expect(result).toEqual({ result: 'duplicate' });
+    expect(tx.lessonAttempt.create).not.toHaveBeenCalled();
+    expect(errorTracking.processLessonErrorsInTransaction).not.toHaveBeenCalled();
+    expect(errorTracking.processLessonLayoutStatsInTransaction).not.toHaveBeenCalled();
+  });
+
+  it('envía un resumen corregido sin errores al agregado de la distribución seleccionada', async () => {
+    const { service, tx, errorTracking, telemetryService } = createService(null);
+    const correctedSummary = {
+      totalKeystrokes: 3,
+      totalErrors: 0,
+      keys: [{ expected: 'a', totalPresses: 3, totalErrors: 0 }],
+    };
+    telemetryService.derive.mockReturnValue({
+      totalFinalInputs: 3,
+      uncorrectedErrors: 0,
+      keyStats: new Map([['a', { presses: 3, errors: 0 }]]),
+    });
+
+    await service.saveProgress('user-1', lesson.slug, {
+      grossWpm: 40,
+      netWpm: 36,
+      accuracy: 100,
+      timeElapsed: 60,
+      targetKeyErrors: 0,
+      errorSummary: correctedSummary,
+      telemetry: { version: 1, text: 'aaa', pausedMs: 0, events: [] },
+      layoutId: 'qwerty-en',
+    });
+
+    expect(errorTracking.processLessonLayoutStatsInTransaction).toHaveBeenCalledWith(
+      tx,
+      'user-1',
+      'es',
+      'qwerty-en',
+      correctedSummary,
+    );
+    expect(errorTracking.processLessonErrorsInTransaction).toHaveBeenCalledTimes(1);
+    expect(telemetryService.derive).toHaveBeenCalledTimes(1);
   });
 });

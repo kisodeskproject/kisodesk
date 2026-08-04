@@ -63,6 +63,7 @@ export interface LessonResult {
   usedAssistance?: boolean;
   errorSummary?: ErrorSummary;
   locale?: Locale;
+  layoutId?: string;
 }
 
 export interface LessonProgressResult {

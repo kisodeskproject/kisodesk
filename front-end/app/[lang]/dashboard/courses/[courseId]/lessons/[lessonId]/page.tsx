@@ -134,6 +134,7 @@ export default function LessonPracticePage() {
   const coursesPath = `/${lang}/${isPublicTrial ? 'courses' : 'dashboard/courses'}`;
 
   const initializedRef = useRef(false);
+  const guestLessonAttemptIdRef = useRef<string | null>(null);
   useEffect(() => {
     if (!lessons.length && courseSlug && !initializedRef.current) {
       initializedRef.current = true;
@@ -223,6 +224,7 @@ export default function LessonPracticePage() {
     setBranchTurn(0);
     setReviewStep(0);
     explanatoryNavigationRef.current = null;
+    guestLessonAttemptIdRef.current = null;
   }, [currentLesson?.id, currentLesson?.text]);
 
   const handleLessonAudioPlay = useCallback(() => {
@@ -293,6 +295,12 @@ export default function LessonPracticePage() {
         bestScore: finalStats.score,
         bestAccuracy: finalStats.accuracy,
         timeElapsed: finalStats.timeElapsed,
+        layoutId: activeLayout.id,
+        errorSummary: buildErrorSummary(finalStats.keystrokes),
+        telemetry: finalStats.telemetry,
+        clientSessionId:
+          guestLessonAttemptIdRef.current ??
+          (guestLessonAttemptIdRef.current = crypto.randomUUID()),
       });
       setSaveStatus('skipped');
       return;
@@ -328,6 +336,7 @@ export default function LessonPracticePage() {
           usedAssistance: showKeyboard,
           errorSummary,
           locale: toSupportedLocale(lang),
+          layoutId: activeLayout.id,
         });
         setProgressResult(savedProgress);
         setSaveStatus(savedProgress ? 'saved' : 'failed');

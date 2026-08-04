@@ -9,17 +9,30 @@ import {
   IsOptional,
   IsIn,
   Max,
+  MaxLength,
   Min,
+  IsString,
+  IsUUID,
   ValidateNested,
 } from 'class-validator';
 
 import { ErrorSummaryDto } from '../../errors/dto/error-summary.dto';
+import { TypingTelemetryDto } from '../../practice/dto/save-practice.dto';
 import { SUPPORTED_INTERFACE_LOCALES } from '../../practice/dto/save-practice.dto';
 
 export class CompleteLessonDto {
   @IsOptional()
+  @IsUUID()
+  clientSessionId?: string;
+
+  @IsOptional()
   @IsIn(SUPPORTED_INTERFACE_LOCALES)
   locale?: string;
+
+  @IsString()
+  @MaxLength(64)
+  @IsOptional()
+  layoutId?: string;
   @IsBoolean()
   @IsOptional()
   completed?: boolean;
@@ -64,4 +77,9 @@ export class CompleteLessonDto {
   @Type(() => ErrorSummaryDto)
   @IsOptional()
   errorSummary?: ErrorSummaryDto;
+
+  @ValidateNested()
+  @Type(() => TypingTelemetryDto)
+  @IsOptional()
+  telemetry?: TypingTelemetryDto;
 }

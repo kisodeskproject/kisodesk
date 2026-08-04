@@ -14,6 +14,7 @@ import DashboardBackground from '@/components/layout/DashboardBackground';
 import { RefreshCw, AlertTriangle, WifiOff, Keyboard as KeyboardIcon } from 'lucide-react';
 import {
   fetchAdaptivePracticeText,
+  fetchGuestAdaptivePracticeText,
   fetchPracticeText,
   savePracticeResult,
   type AdaptivePracticeText,
@@ -92,40 +93,25 @@ export function PracticePageContent({ showHeading = true }: { showHeading?: bool
     setExpectedPracticeKey(null);
     try {
       const historyScope = user?.id ? `user:${user.id}` : 'guest';
-      const data =
-        practiceMode === 'adaptive' && isAuthenticated
+      const guestProfile = getGuestAdaptiveProfile(contentLanguage, lang, activeLayout.id);
+      const data = practiceMode === 'adaptive'
+        ? isAuthenticated
           ? await fetchAdaptivePracticeText(contentLanguage, activeLayout.id, 'words')
-          : await fetchPracticeText(contentLanguage, historyScope);
-      const guestProfile =
-        !isAuthenticated && practiceMode === 'adaptive'
-          ? getGuestAdaptiveProfile(contentLanguage, activeLayout.id)
-          : { keys: [] as string[], bigrams: [] as string[] };
-      const guestSourceWords: string[] = data.text.match(/[\p{L}\p{M}]+/gu) ?? [];
-      const guestTargets: string[] = guestProfile.keys.length
-        ? [...guestProfile.keys]
-        : [...guestProfile.bigrams];
-      const guestWords = guestTargets.flatMap((target) => {
-        const matchingWords = guestSourceWords.filter((word) =>
-          word.toLocaleLowerCase().includes(target.toLocaleLowerCase()),
-        );
-        if (matchingWords.length === 0) return [];
-
-        return Array.from({ length: 3 }, (_, index) => matchingWords[index % matchingWords.length]);
-      });
-      if (!isAuthenticated && practiceMode === 'adaptive' && guestWords.length > 0)
-        data.text = guestWords.join(' ');
+          : await fetchGuestAdaptivePracticeText(guestProfile ?? {
+              language: contentLanguage, locale: lang, layoutId: activeLayout.id, sampleSessions: 0,
+              totalInputs: 0, totalFinalInputs: 0, correctFinalInputs: 0, totalIncorrectAttempts: 0,
+              correctedErrors: 0, uncorrectedErrors: 0, totalActiveDurationMs: 0, finalAccuracy: 100,
+              keyStats: {}, bigramStats: {},
+            }, 'words')
+        : await fetchPracticeText(contentLanguage, historyScope);
       setPracticeText(data.text);
       clientSessionIdRef.current = crypto.randomUUID();
       setPracticeTextId(data.id);
-      const adaptive = practiceMode === 'adaptive' && isAuthenticated ? (data as AdaptivePracticeText) : null;
+      const adaptive = practiceMode === 'adaptive' ? (data as AdaptivePracticeText) : null;
       setAdaptiveDetails(
         adaptive
           ? { targets: adaptive.targets }
-          : practiceMode === 'adaptive'
-            ? {
-                targets: guestProfile,
-              }
-            : null,
+          : null,
       );
       setExpectedPracticeKey(data.text[0] ?? null);
       setStatus('ready');

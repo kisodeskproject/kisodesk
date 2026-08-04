@@ -8,9 +8,11 @@ import { PrismaService } from '../prisma/prisma.service';
 import { ErrorTrackingService } from '../errors/error-tracking.service';
 import { ProgressService } from '../progress/progress.service';
 import { SavePracticeDto } from './dto/save-practice.dto';
-import { TelemetryService } from './telemetry.service';
+import { DerivedTelemetry, TelemetryService } from './telemetry.service';
 import { SUPPORTED_LAYOUT_IDS } from './keyboard-layout-catalog';
 import { getFallbackPracticeText, getRandomPracticeText } from './practice-texts';
+import { buildAdaptiveExercise } from './adaptive-prioritizer';
+import { GetGuestAdaptiveExerciseDto } from './dto/get-guest-adaptive-exercise.dto';
 
 type PracticeSessionSelect = {
   id: string;
@@ -22,15 +24,16 @@ type PracticeSessionSelect = {
   languageCode: LanguageCode;
 };
 
-const ALPHANUMERIC_CHARACTER = /^[\p{L}\p{N}]$/u;
-const ADAPTIVE_WORDS_PER_TARGET = 3;
-
-function normalizePracticeCharacter(value: string) {
-  return value.normalize('NFC').toLocaleLowerCase();
-}
-
-function isAlphanumericCharacter(value: string) {
-  return ALPHANUMERIC_CHARACTER.test(normalizePracticeCharacter(value));
+function buildFinalErrorSummary(derived: DerivedTelemetry) {
+  return {
+    totalKeystrokes: derived.totalFinalInputs,
+    totalErrors: derived.uncorrectedErrors,
+    keys: Array.from(derived.keyStats.entries()).map(([expected, value]) => ({
+      expected,
+      totalPresses: value.presses,
+      totalErrors: value.errors,
+    })),
+  };
 }
 
 @Injectable()
@@ -154,7 +157,8 @@ export class PracticeService {
       dto.timeElapsed = Math.max(1, Math.round(derived.activeDurationMs / 1000));
       dto.grossWpm = Math.round(derived.grossWpm);
       dto.netWpm = Math.round(derived.effectiveWpm);
-      dto.accuracy = Math.round(derived.accuracy);
+      dto.accuracy = Math.round(derived.finalAccuracy);
+      dto.errorSummary = buildFinalErrorSummary(derived);
     }
     this.validatePractice(dto);
 
@@ -200,8 +204,10 @@ export class PracticeService {
           derivedMetrics: derived
             ? ({
                 ...derived,
-                keys: Object.fromEntries(derived.keys),
-                bigrams: Array.from(derived.bigrams.values()),
+                keyStats: Object.fromEntries(derived.keyStats),
+                bigramStats: Array.from(derived.bigramStats.values()),
+                keyErrors: Object.fromEntries(derived.keyErrors),
+                bigramErrors: Object.fromEntries(derived.bigramErrors),
               } as Prisma.InputJsonValue)
             : undefined,
           clientSessionId: dto.clientSessionId,
@@ -230,7 +236,6 @@ export class PracticeService {
           tx,
           userId,
           dto.language,
-          dto.locale ?? 'es-latam',
           dto.layoutId ?? 'unknown',
           derived,
         );
@@ -402,9 +407,13 @@ export class PracticeService {
         where: { userId, languageCode: language, layoutId },
       }),
       this.prisma.bigramStat.findMany({
-        where: { userId, languageCode: language, layoutId, totalPresses: { gte: 12 } },
+        where: {
+          userId,
+          languageCode: language,
+          layoutId,
+        },
         orderBy: [{ totalErrors: 'desc' }, { averageLatencyMs: 'desc' }],
-        take: 5,
+        take: 30,
       }),
       this.prisma.practiceSession.findMany({
         where: { userId, languageCode: language, layoutId },
@@ -425,135 +434,34 @@ export class PracticeService {
       }),
     ]);
 
-    const availableCharacters = new Map<string, number>();
-    for (const text of texts) {
-      for (const character of text.content.normalize('NFC')) {
-        const normalizedCharacter = normalizePracticeCharacter(character);
-        if (!isAlphanumericCharacter(normalizedCharacter)) continue;
-        availableCharacters.set(
-          normalizedCharacter,
-          (availableCharacters.get(normalizedCharacter) ?? 0) + 1,
-        );
-      }
-    }
-
-    const practicedCharacters = new Set(
-      keyStats
-        .filter((item) => item.totalPresses > 0 && isAlphanumericCharacter(item.keyChar))
-        .map((item) => normalizePracticeCharacter(item.keyChar)),
-    );
-    const unpracticedKeys = Array.from(availableCharacters.entries())
-      .filter(([character]) => !practicedCharacters.has(character))
-      .sort(
-        ([leftCharacter, leftCount], [rightCharacter, rightCount]) =>
-          rightCount - leftCount || leftCharacter.localeCompare(rightCharacter),
-      )
-      .slice(0, 5)
-      .map(([character]) => character);
-    const weakKeyStats = keyStats
-      .filter((item) => item.totalPresses >= 20 && isAlphanumericCharacter(item.keyChar))
-      .sort(
-        (left, right) =>
-          right.errorRate - left.errorRate || right.totalPresses - left.totalPresses,
-      )
-      .slice(0, 8);
-    const weakBigramStats = bigramStats.filter(
-      (item) =>
-        isAlphanumericCharacter(item.firstChar) && isAlphanumericCharacter(item.secondChar),
-    );
-    const targetKeys = unpracticedKeys.length
-      ? unpracticedKeys
-      : weakKeyStats.slice(0, 5).map((item) => normalizePracticeCharacter(item.keyChar));
-    const targetBigrams = unpracticedKeys.length
-      ? []
-      : weakBigramStats.map((item) =>
-          `${normalizePracticeCharacter(item.firstChar)}${normalizePracticeCharacter(item.secondChar)}`,
-        );
-    const keyWeights = unpracticedKeys.length
-      ? new Map(targetKeys.map((key) => [key, 100]))
-      : new Map(
-          weakKeyStats.map((item) => [
-            normalizePracticeCharacter(item.keyChar),
-            item.errorRate * Math.min(1, item.totalPresses / 100),
-          ]),
-        );
-    const bigramWeights = unpracticedKeys.length
-      ? new Map<string, number>()
-      : new Map(
-          weakBigramStats.map((item) => [
-            `${normalizePracticeCharacter(item.firstChar)}${normalizePracticeCharacter(item.secondChar)}`,
-            (item.totalErrors / item.totalPresses) * 100,
-          ]),
-        );
-    const scoreText = (content: string) => {
-      const lower = content.normalize('NFC').toLocaleLowerCase();
-      let score = 0;
-      for (const [key, weight] of keyWeights) score += (lower.split(key).length - 1) * weight;
-      for (const [bigram, weight] of bigramWeights)
-        score += (lower.split(bigram).length - 1) * weight * 2;
-      return score;
-    };
-    const selected = texts
-      .map((text) => ({ ...text, score: scoreText(text.content) }))
-      .sort((a, b) => b.score - a.score || a.content.length - b.content.length)[0] ?? {
-      id: 'fallback',
-      content: getFallbackPracticeText(language).content,
-      difficulty: null,
-      characterSet: [],
-      wordIndex: [],
-      bigramIndex: [],
-      score: 0,
-    };
-    const adaptiveTargets = targetKeys.length ? targetKeys : targetBigrams;
-    const sourceTexts = [
-      selected,
-      ...texts.filter((text) => text.id !== selected.id),
-    ];
-    const sourceWords = sourceTexts.flatMap(
-      (text) => text.content.normalize('NFC').match(/[\p{L}\p{M}]+/gu) ?? [],
-    );
-    const adaptiveWords = adaptiveTargets.flatMap((target) => {
-      const normalizedTarget = normalizePracticeCharacter(target);
-      const matchingWords = sourceWords.filter((word) =>
-        normalizePracticeCharacter(word).includes(normalizedTarget),
-      );
-
-      if (matchingWords.length === 0) return [];
-
-      return Array.from(
-        { length: ADAPTIVE_WORDS_PER_TARGET },
-        (_, index) => matchingWords[index % matchingWords.length],
-      );
-    });
-    const content =
-      mode === 'words' && adaptiveWords.length ? adaptiveWords.join(' ') : selected.content;
     const averageAccuracy = recentSessions.length
       ? recentSessions.reduce((sum, item) => sum + item.accuracy, 0) / recentSessions.length
       : null;
-    return {
-      mode,
-      id: selected.id,
-      text: content,
-      language,
-      layoutId,
-      targets: { keys: targetKeys, bigrams: targetBigrams },
-      reason: unpracticedKeys.length
-        ? 'Prioriza caracteres alfanuméricos del idioma que aún no has practicado.'
-        : targetBigrams.length
-        ? 'Prioriza bigramas con errores o latencia elevada.'
-        : targetKeys.length
-          ? 'Prioriza teclas con error recurrente.'
-          : 'Aún no hay volumen suficiente; se seleccionó un texto real del idioma.',
-      profile: {
-        sampleSessions: recentSessions.length,
-        averageAccuracy,
-        confidence: Math.min(
-          1,
-          (keyStats.reduce((sum, item) => sum + item.totalPresses, 0) +
-            bigramStats.reduce((sum, item) => sum + item.totalPresses, 0)) /
-            300,
-        ),
-      },
+    return buildAdaptiveExercise({ language, layoutId, mode, keyStats, bigramStats, texts: texts.length ? texts : [getFallbackPracticeText(language)], sampleSessions: recentSessions.length, averageAccuracy });
+  }
+
+  async getGuestAdaptiveExercise(dto: GetGuestAdaptiveExerciseDto) {
+    const profile = dto.profile;
+    if (!SUPPORTED_LAYOUT_IDS.has(profile.layoutId)) throw new BadRequestException('layoutId no soportado');
+    const toStats = (source: Record<string, unknown>, kind: 'key' | 'bigram') => {
+      const entries = Object.entries(source);
+      if (entries.length > 256) throw new BadRequestException('Demasiadas estadísticas adaptativas');
+      return entries.map(([value, raw]) => {
+        if (!raw || typeof raw !== 'object') throw new BadRequestException('Estadística adaptativa inválida');
+        const stat = raw as Record<string, unknown>;
+        const fields = ['attempts', 'errors', 'latencyTotalMs', 'latencySamples', 'recurrence'];
+        if (!fields.every((field) => Number.isInteger(stat[field]) && Number(stat[field]) >= 0 && Number(stat[field]) <= 1_000_000) || Number(stat.errors) > Number(stat.attempts) || Number(stat.latencySamples) > Number(stat.attempts)) throw new BadRequestException('Estadística adaptativa inválida');
+        if ((kind === 'key' && [...value].length !== 1) || (kind === 'bigram' && [...value].length !== 2)) throw new BadRequestException('Clave adaptativa inválida');
+        return kind === 'key'
+          ? { keyChar: value, totalPresses: Number(stat.attempts), totalErrors: Number(stat.errors), averageLatencyMs: Number(stat.latencySamples) ? Number(stat.latencyTotalMs) / Number(stat.latencySamples) : 0 }
+          : { firstChar: [...value][0], secondChar: [...value][1], totalPresses: Number(stat.attempts), totalErrors: Number(stat.errors), averageLatencyMs: Number(stat.latencySamples) ? Number(stat.latencyTotalMs) / Number(stat.latencySamples) : 0 };
+      });
     };
+    const [keyStats, bigramStats, texts] = await Promise.all([
+      Promise.resolve(toStats(profile.keyStats, 'key')),
+      Promise.resolve(toStats(profile.bigramStats, 'bigram')),
+      this.prisma.practiceText.findMany({ where: { languageCode: profile.language }, select: { id: true, content: true } }),
+    ]);
+    return buildAdaptiveExercise({ language: profile.language, layoutId: profile.layoutId, mode: dto.mode === 'text' ? 'text' : 'words', keyStats, bigramStats, texts: texts.length ? texts : [getFallbackPracticeText(profile.language)], sampleSessions: profile.sampleSessions, averageAccuracy: profile.sampleSessions ? profile.finalAccuracy : null });
   }
 }

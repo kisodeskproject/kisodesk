@@ -94,12 +94,18 @@ describe('guestDashboardProgress', () => {
     };
 
     expect(getGuestProgressForLanguage(multilingualProgress, 'es-latam')).toEqual({
+      version: 2,
       lessons: progress.lessons,
       practice: [progress.practice[0]],
+      lessonAdaptiveAttempts: [],
+      adaptiveProfiles: {},
     });
     expect(getGuestProgressForLanguage(multilingualProgress, 'es-ES')).toEqual({
+      version: 2,
       lessons: {},
       practice: [],
+      lessonAdaptiveAttempts: [],
+      adaptiveProfiles: {},
     });
     expect(getGuestProgressForLanguage(multilingualProgress, 'fr').practice).toHaveLength(1);
   });

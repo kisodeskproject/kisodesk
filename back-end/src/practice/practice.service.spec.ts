@@ -21,6 +21,10 @@ describe('PracticeService', () => {
 
     const prisma = {
       $transaction: jest.fn(async (callback: (value: typeof tx) => Promise<unknown>) => callback(tx)),
+      keyLayoutStat: { findMany: jest.fn().mockResolvedValue([]) },
+      bigramStat: { findMany: jest.fn().mockResolvedValue([]) },
+      practiceSession: { findMany: jest.fn().mockResolvedValue([]) },
+      practiceText: { findMany: jest.fn().mockResolvedValue([]) },
     };
 
     const errorTracking = {
@@ -160,5 +164,107 @@ describe('PracticeService', () => {
     expect(result).toEqual(expect.objectContaining({ result: 'duplicate' }));
     expect(tx.practiceSession.create).not.toHaveBeenCalled();
     expect(counter.labels).toHaveBeenCalledWith('direct');
+  });
+
+  it('prioriza errores recurrentes no corregidos antes que caracteres nuevos', async () => {
+    const { service, prisma } = createService();
+    prisma.keyLayoutStat.findMany.mockResolvedValue([
+      { keyChar: 'a', totalPresses: 10, totalErrors: 4, errorRate: 40 },
+    ]);
+    prisma.practiceText.findMany.mockResolvedValue([
+      { id: 'text-1', content: 'alpha atlas beta', difficulty: null, characterSet: [], wordIndex: [], bigramIndex: [] },
+    ]);
+
+    const exercise = await service.getNextAdaptiveExercise('user-1', 'es', 'qwerty-latam', 'words');
+
+    expect(exercise.targets.keys).toContain('a');
+    expect(exercise.composition.persistentErrors).toBe(1);
+    expect(exercise.reason).toBe('Prioriza errores recurrentes no corregidos.');
+    expect(exercise.text).toContain('a');
+  });
+
+  it('no clasifica una tecla sin errores como débil', async () => {
+    const { service, prisma } = createService();
+    prisma.keyLayoutStat.findMany.mockResolvedValue([
+      { keyChar: 'z', totalPresses: 20, totalErrors: 0, errorRate: 0 },
+    ]);
+    prisma.practiceText.findMany.mockResolvedValue([
+      { id: 'text-1', content: 'zoo zebra', difficulty: null, characterSet: [], wordIndex: [], bigramIndex: [] },
+    ]);
+
+    const exercise = await service.getNextAdaptiveExercise('user-1', 'es', 'qwerty-latam', 'words');
+
+    expect(exercise.targets.keys).not.toContain('z');
+    expect(exercise.composition.weakKeys).toBe(0);
+  });
+
+  it('genera palabras que contienen el bigrama débil y explica ese objetivo', async () => {
+    const { service, prisma } = createService();
+    prisma.keyLayoutStat.findMany.mockResolvedValue([
+      { keyChar: 'a', totalPresses: 5, totalErrors: 0, errorRate: 0 },
+      { keyChar: 'b', totalPresses: 5, totalErrors: 0, errorRate: 0 },
+    ]);
+    prisma.bigramStat.findMany.mockResolvedValue([
+      { firstChar: 'a', secondChar: 'b', totalPresses: 8, totalErrors: 2, averageLatencyMs: 380 },
+    ]);
+    prisma.practiceText.findMany.mockResolvedValue([
+      { id: 'text-1', content: 'caba baba casa', difficulty: null, characterSet: [], wordIndex: [], bigramIndex: [] },
+    ]);
+
+    const exercise = await service.getNextAdaptiveExercise('user-1', 'es', 'qwerty-latam', 'words');
+
+    expect(exercise.targets.bigrams).toEqual(['ab']);
+    expect(exercise.text.toLocaleLowerCase()).toContain('ab');
+    expect(exercise.reason).toBe('Prioriza bigramas débiles con errores recurrentes.');
+  });
+
+  it('introduce como máximo un carácter nuevo y completa el resto con repaso', async () => {
+    const { service, prisma } = createService();
+    prisma.practiceText.findMany.mockResolvedValue([
+      { id: 'text-1', content: 'alpha beta gamma', difficulty: null, characterSet: [], wordIndex: [], bigramIndex: [] },
+    ]);
+
+    const exercise = await service.getNextAdaptiveExercise('user-1', 'es', 'qwerty-latam', 'words');
+
+    expect(exercise.composition.newCharacters).toBe(1);
+    expect(exercise.composition.newCharacters / 5).toBeLessThanOrEqual(0.2);
+    expect(exercise.composition.review).toBe(4);
+    expect(exercise.reason).toBe(
+      'Introduce un carácter nuevo de forma gradual y conserva repaso general.',
+    );
+  });
+
+  it('usa el mismo priorizador para el perfil anónimo sin persistirlo', async () => {
+    const { service, prisma } = createService();
+    prisma.practiceText.findMany.mockResolvedValue([
+      { id: 'text-1', content: 'casa cama cacao' },
+    ]);
+
+    const exercise = await service.getGuestAdaptiveExercise({
+      mode: 'words',
+      profile: {
+        language: 'es', locale: 'es-latam', layoutId: 'qwerty-latam', sampleSessions: 2,
+        totalInputs: 10, totalFinalInputs: 8, correctFinalInputs: 8, totalIncorrectAttempts: 2,
+        correctedErrors: 2, uncorrectedErrors: 0, totalActiveDurationMs: 5000, finalAccuracy: 100,
+        keyStats: { x: { attempts: 10, errors: 2, latencyTotalMs: 2400, latencySamples: 10, recurrence: 2 } },
+        bigramStats: {},
+      },
+    } as any);
+
+    expect(exercise.targets.keys).not.toContain('x');
+    expect(exercise.reason).toContain('carácter nuevo');
+    expect(prisma.$transaction).not.toHaveBeenCalled();
+  });
+
+  it('rechaza perfiles anónimos con más estadísticas de las permitidas', async () => {
+    const { service } = createService();
+    await expect(service.getGuestAdaptiveExercise({
+      profile: {
+        language: 'es', locale: 'es-latam', layoutId: 'qwerty-latam', sampleSessions: 0,
+        totalInputs: 0, totalFinalInputs: 0, correctFinalInputs: 0, totalIncorrectAttempts: 0,
+        correctedErrors: 0, uncorrectedErrors: 0, totalActiveDurationMs: 0, finalAccuracy: 100,
+        keyStats: Object.fromEntries(Array.from({ length: 257 }, (_, index) => [`x${index}`, {}])), bigramStats: {},
+      },
+    } as any)).rejects.toThrow('Demasiadas estadísticas adaptativas');
   });
 });

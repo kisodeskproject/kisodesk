@@ -5,6 +5,7 @@ import { apiGet, apiPost } from '@/lib/apiClient';
 import type { ErrorSummary } from '@/lib/errorSummary';
 import type { ContentLanguage, Locale } from '@/lib/locales';
 import type { TypingTelemetry } from '@/lib/typingTelemetry';
+import type { GuestAdaptiveProfile } from '@/lib/guestProgressStore';
 
 // ─── Tipos ───
 export interface PracticeText {
@@ -15,8 +16,13 @@ export interface PracticeText {
 export interface AdaptivePracticeText extends PracticeText {
   mode: 'words' | 'text';
   targets: { keys: string[]; bigrams: string[] };
+  composition: { persistentErrors: number; weakBigrams: number; weakKeys: number; newCharacters: number; review: number };
   reason: string;
   profile: { sampleSessions: number; averageAccuracy: number | null; confidence: number };
+}
+
+export async function fetchGuestAdaptivePracticeText(profile: GuestAdaptiveProfile, mode: 'words' | 'text'): Promise<AdaptivePracticeText> {
+  return apiPost<AdaptivePracticeText>('/practice/adaptive/guest', { profile, mode });
 }
 
 export interface SavePracticePayload {

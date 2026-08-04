@@ -95,6 +95,47 @@ export class ErrorTrackingService {
     );
   }
 
+  async processLessonLayoutStatsInTransaction(
+    tx: any,
+    userId: string,
+    languageCode: LanguageCode,
+    layoutId: string,
+    summary: ErrorSummaryDto,
+  ) {
+    const normalizedKeys = new Map<string, { totalPresses: number; totalErrors: number }>();
+    for (const key of summary.keys) {
+      const current = normalizedKeys.get(key.expected) ?? { totalPresses: 0, totalErrors: 0 };
+      current.totalPresses += key.totalPresses;
+      current.totalErrors += key.totalErrors;
+      normalizedKeys.set(key.expected, current);
+    }
+
+    for (const [keyChar, value] of normalizedKeys) {
+      await tx.$executeRaw`
+        INSERT INTO "key_layout_stats" (
+          "user_id", "language_code", "layout_id", "key_char",
+          "total_presses", "total_errors", "error_rate", "updated_at"
+        )
+        VALUES (
+          ${userId}, ${languageCode}::"LanguageCode", ${layoutId}, ${keyChar},
+          ${value.totalPresses}, ${value.totalErrors},
+          ${value.totalErrors > 0 ? (value.totalErrors / value.totalPresses) * 100 : 0}, NOW()
+        )
+        ON CONFLICT ("user_id", "language_code", "layout_id", "key_char")
+        DO UPDATE SET
+          "total_presses" = "key_layout_stats"."total_presses" + ${value.totalPresses},
+          "total_errors" = "key_layout_stats"."total_errors" + ${value.totalErrors},
+          "error_rate" = CASE
+            WHEN ("key_layout_stats"."total_presses" + ${value.totalPresses}) > 0
+            THEN (("key_layout_stats"."total_errors" + ${value.totalErrors})::float /
+              ("key_layout_stats"."total_presses" + ${value.totalPresses})::float) * 100
+            ELSE 0
+          END,
+          "updated_at" = NOW()
+      `;
+    }
+  }
+
   createSummaryFromKeystrokes(keystrokes: KeystrokeInput[]): ErrorSummaryDto {
     const map = new Map<string, { totalPresses: number; totalErrors: number }>();
 

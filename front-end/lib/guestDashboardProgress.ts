@@ -47,10 +47,19 @@ export function getGuestProgressForLanguage(
   locale: Locale,
 ): GuestProgress {
   return {
+    version: progress.version ?? 2,
     lessons: Object.fromEntries(
       Object.entries(progress.lessons).filter(([, lesson]) => lesson.locale === locale),
     ),
     practice: progress.practice.filter((session) => session.locale === locale),
+    lessonAdaptiveAttempts: (progress.lessonAdaptiveAttempts ?? []).filter(
+      (attempt) => attempt.locale === locale,
+    ),
+    adaptiveProfiles: Object.fromEntries(
+      Object.entries(progress.adaptiveProfiles ?? {}).filter(
+        ([, profile]) => profile.locale === locale,
+      ),
+    ),
   };
 }
 

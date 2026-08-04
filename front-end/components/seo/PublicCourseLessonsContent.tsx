@@ -1,10 +1,12 @@
 import Link from 'next/link';
 
+import JsonLd from '@/components/seo/JsonLd';
 import { buildCourseBreadcrumbJsonLd } from '@/lib/courseBreadcrumbs';
 import { getTranslation } from '@/lib/i18n';
 import { CONTENT_LANGUAGE_OPTIONS, type Locale } from '@/lib/locales';
 import type { PublicCourse, PublicLesson } from '@/lib/publicCourses';
 import { LESSON_LABELS } from '@/lib/publicCitationContent';
+import { buildCourseJsonLd } from '@/lib/structuredData';
 
 type Labels = {
   language: string;
@@ -197,15 +199,12 @@ export default function PublicCourseLessonsContent({
     coursesLabel: coursesTitle,
     lessonsLabel: lessonsTitle,
   });
+  const courseJsonLd = buildCourseJsonLd(locale, course, objectives);
 
   return (
     <article className="mx-auto max-w-5xl px-6 py-6 text-(--text-primary)">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, '\\u003c'),
-        }}
-      />
+      <JsonLd data={breadcrumbJsonLd} />
+      <JsonLd data={courseJsonLd} />
       <nav aria-label="Breadcrumb" className="text-sm text-(--text-secondary)">
         <ol className="flex flex-wrap gap-2">
           <li>

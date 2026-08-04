@@ -4,10 +4,12 @@ import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 
 import LessonPracticePage from '@/app/[lang]/dashboard/courses/[courseId]/lessons/[lessonId]/page';
+import JsonLd from '@/components/seo/JsonLd';
 import { localizedMetadata } from '@/lib/seo';
 import { getTranslation } from '@/lib/i18n';
 import { toSupportedLocale } from '@/lib/locales';
-import { getPublicCourseBySlug } from '@/lib/publicCourses';
+import { getPublicCourseBySlug, getPublicCourseListing } from '@/lib/publicCourses';
+import { buildLearningResourceJsonLd } from '@/lib/structuredData';
 
 interface LessonPracticePageProps {
   params: Promise<{
@@ -44,5 +46,13 @@ export default async function Page({ params }: LessonPracticePageProps) {
     );
   }
 
-  return <LessonPracticePage />;
+  const listing = await getPublicCourseListing(locale, courseId);
+  const lesson = listing?.lessons.find((item) => item.slug === lessonId);
+
+  return (
+    <>
+      {listing && lesson && <JsonLd data={buildLearningResourceJsonLd(locale, listing.course, lesson)} />}
+      <LessonPracticePage />
+    </>
+  );
 }

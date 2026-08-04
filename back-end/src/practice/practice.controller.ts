@@ -15,6 +15,7 @@ import { IsEnum, IsOptional, IsString } from 'class-validator';
 import { FastifyRequest } from 'fastify';
 
 import { SavePracticeDto } from './dto/save-practice.dto';
+import { GetGuestAdaptiveExerciseDto } from './dto/get-guest-adaptive-exercise.dto';
 import { PracticeService } from './practice.service';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 
@@ -78,5 +79,10 @@ export class PracticeController {
       query.layoutId,
       query.mode === 'words' ? 'words' : 'text',
     );
+  }
+
+  @Post('adaptive/guest')
+  async getGuestAdaptiveExercise(@Body() dto: GetGuestAdaptiveExerciseDto) {
+    return this.practiceService.getGuestAdaptiveExercise(dto);
   }
 }

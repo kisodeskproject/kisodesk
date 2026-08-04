@@ -13,7 +13,9 @@ import { buildUniqueSlug, isUuid } from '../common/utils/slug.utils';
 import { ErrorTrackingService } from '../errors/error-tracking.service';
 import { ProgressService } from '../progress/progress.service';
 import { PrismaService } from '../prisma/prisma.service';
+import { SUPPORTED_LAYOUT_IDS } from '../practice/keyboard-layout-catalog';
 import { CompleteLessonDto } from './dto/complete-lesson.dto';
+import { TelemetryService } from '../practice/telemetry.service';
 import { CreateLessonDto } from './dto/create-lesson.dto';
 import { SubmitLessonErrorsDto } from './dto/submit-lesson-errors.dto';
 import { UpdateLessonDto } from './dto/update-lesson.dto';
@@ -24,6 +26,7 @@ export class LessonsService {
     private prisma: PrismaService,
     private errorTracking: ErrorTrackingService,
     private progressService: ProgressService,
+    private telemetryService: TelemetryService,
     @InjectMetric('typing_lessons_completed_total')
     private readonly lessonsCompletedCounter: Counter,
   ) {}
@@ -426,7 +429,7 @@ export class LessonsService {
     return { id: lesson.id };
   }
 
-  async saveProgress(userId: string, lessonIdentifier: string, dto: CompleteLessonDto) {
+  async saveProgress(userId: string, lessonIdentifier: string, dto: CompleteLessonDto): Promise<any> {
     const lesson = await this.findLessonEntity(lessonIdentifier);
     const lessonId = lesson.id;
     const localeCode = dto.locale ?? 'es-latam';
@@ -505,8 +508,29 @@ export class LessonsService {
     if (!languageCode) {
       throw new BadRequestException('La lección no tiene un curso asociado con idioma');
     }
+    if (dto.layoutId && !SUPPORTED_LAYOUT_IDS.has(dto.layoutId)) {
+      throw new BadRequestException('layoutId no soportado');
+    }
+    const derived = dto.telemetry ? this.telemetryService.derive(dto.telemetry) : null;
+    const errorSummary = derived
+      ? {
+          totalKeystrokes: derived.totalFinalInputs,
+          totalErrors: derived.uncorrectedErrors,
+          keys: Array.from(derived.keyStats.entries()).map(([expected, value]) => ({
+            expected,
+            totalPresses: value.presses,
+            totalErrors: value.errors,
+          })),
+        }
+      : dto.errorSummary!;
 
     const result = await this.prisma.$transaction(async (tx) => {
+      const duplicate = dto.clientSessionId
+        ? await tx.lessonAttempt.findUnique({
+            where: { userId_clientSessionId: { userId, clientSessionId: dto.clientSessionId } },
+          })
+        : null;
+      if (duplicate) return { duplicate: true };
       const existing = await tx.userLessonProgress.findUnique({
         where: { userId_lessonId_localeCode: { userId, lessonId, localeCode } },
       });
@@ -521,6 +545,7 @@ export class LessonsService {
           timeElapsed: dto.timeElapsed!,
           qualified,
           usedAssistance: dto.usedAssistance ?? false,
+          clientSessionId: dto.clientSessionId,
         },
       });
 
@@ -583,8 +608,18 @@ export class LessonsService {
         timeElapsed: dto.timeElapsed!,
         languageCode,
         localeCode,
-        errorSummary: dto.errorSummary!,
+        errorSummary,
       });
+
+      if (dto.layoutId) {
+        await this.errorTracking.processLessonLayoutStatsInTransaction(
+          tx,
+          userId,
+          languageCode,
+          dto.layoutId,
+          errorSummary,
+        );
+      }
 
       await this.progressService.recordPracticeTimeInTransaction(
         tx,
@@ -600,6 +635,8 @@ export class LessonsService {
         becameMastered: mastered && existing?.status !== LessonProgressStatus.MASTERED,
       };
     });
+
+    if ('duplicate' in result) return { result: 'duplicate' };
 
     if (result.becameMastered) this.lessonsCompletedCounter.inc();
 

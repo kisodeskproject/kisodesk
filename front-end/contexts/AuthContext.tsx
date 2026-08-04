@@ -12,7 +12,7 @@ import {
 } from '@/lib/authClient';
 import type { User } from '@/lib/authClient';
 import type { Locale } from '@/lib/locales';
-import { syncGuestPracticeResults } from '@/lib/guestProgressStore';
+import { syncGuestLessonAttempts, syncGuestPracticeResults } from '@/lib/guestProgressStore';
 
 // ============================================================
 // TIPOS
@@ -70,7 +70,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     try {
       const currentUser = await getCurrentUser();
       try {
-        await syncGuestPracticeResults();
+        await Promise.all([syncGuestPracticeResults(), syncGuestLessonAttempts()]);
       } catch {
         // El almacenamiento local no debe impedir restaurar una sesión válida.
       }
@@ -99,7 +99,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         // Obtener el usuario directamente
         const currentUser = await getCurrentUser();
         try {
-          await syncGuestPracticeResults();
+          await Promise.all([syncGuestPracticeResults(), syncGuestLessonAttempts()]);
         } catch {
           // El inicio de sesión no depende de que localStorage esté disponible.
         }

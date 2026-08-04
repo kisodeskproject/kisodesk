@@ -7,7 +7,7 @@ import { useTranslations } from '@/lib/i18n';
 import { CONTENT_LANGUAGE_OPTIONS } from '@/lib/locales';
 import { getCountryOptions } from '@/lib/countries';
 import { useAuth } from '@/hooks/useAuth';
-import { deleteMyAccount, exportMyData, loginWithGoogle, updateMyPreferences } from '@/lib/authClient';
+import { deleteMyAccount, loginWithGoogle, updateMyPreferences } from '@/lib/authClient';
 import type { Locale } from '@/lib/locales';
 import { APIError, apiGet } from '@/lib/apiClient';
 import {
@@ -37,7 +37,7 @@ import {
   type CookieConsentDecision,
 } from '@/components/legal/cookieConsent';
 import type { ProfileUser } from '@/types/user';
-import { Award, Download, Edit3, Save, Trash2, X } from 'lucide-react';
+import { Award, Edit3, Save, Trash2, X } from 'lucide-react';
 
 function formatDate(value: string | null | undefined, locale: string): string {
   if (!value) return '—';
@@ -83,9 +83,6 @@ export default function ProfilePage() {
   const [saving, setSaving] = useState(false);
   const savingRef = useRef(false);
   const [saveSuccess, setSaveSuccess] = useState(false);
-  const [exporting, setExporting] = useState(false);
-  const exportingRef = useRef(false);
-  const [exportSuccess, setExportSuccess] = useState(false);
   const [deleteOpen, setDeleteOpen] = useState(false);
   const [deletePassword, setDeletePassword] = useState('');
   const [deleteEmail, setDeleteEmail] = useState('');
@@ -255,37 +252,6 @@ export default function ProfilePage() {
       setFormData(profileToFormData(profile));
     }
     setEditing(false);
-  };
-
-  const handleExport = async () => {
-    if (exportingRef.current) return;
-
-    exportingRef.current = true;
-    setExporting(true);
-    setExportSuccess(false);
-    setAccountActionError(null);
-
-    try {
-      const data = await exportMyData();
-      const blob = new Blob([JSON.stringify(data, null, 2)], {
-        type: 'application/json;charset=utf-8',
-      });
-      const url = URL.createObjectURL(blob);
-      const anchor = document.createElement('a');
-      anchor.href = url;
-      anchor.download = `account-data-${new Date().toISOString().slice(0, 10)}.json`;
-      document.body.appendChild(anchor);
-      anchor.click();
-      anchor.remove();
-      URL.revokeObjectURL(url);
-      setExportSuccess(true);
-      setTimeout(() => setExportSuccess(false), 3000);
-    } catch {
-      setAccountActionError(t('profile.general.exportError'));
-    } finally {
-      exportingRef.current = false;
-      setExporting(false);
-    }
   };
 
   const closeDeleteModal = () => {
@@ -758,70 +724,46 @@ export default function ProfilePage() {
           </div>
         </div>
 
-        <div className={`${cardClasses} p-6`}>
-          <h2 className="text-lg font-semibold text-(--text-primary)">
-            {t('profile.general.privacyCookiesTitle')}
-          </h2>
-          <p className="mt-1 text-sm text-(--text-secondary)">
-            {t('profile.general.privacyCookiesDescription')}
-          </p>
-          <p className="mt-4 text-sm text-(--text-secondary)">
-            {cookieConsent?.status === 'accepted'
-              ? t('profile.general.cookieConsentAccepted')
-              : cookieConsent?.status === 'rejected'
-                ? t('profile.general.cookieConsentRejected')
-                : t('profile.general.cookieConsentUnset')}
-            {cookieConsent?.updatedAt
-              ? ` ${t('profile.general.cookieConsentUpdatedAt')} ${formatDate(cookieConsent.updatedAt, lang)}`
-              : ''}
-          </p>
-          <div className="mt-4 flex flex-wrap gap-3">
-            <Button onClick={() => updateCookieConsent('accepted')}>
-              {t('profile.general.cookieConsentAccept')}
-            </Button>
-            <Button variant="secondary" onClick={() => updateCookieConsent('rejected')}>
-              {t('profile.general.cookieConsentReject')}
-            </Button>
-          </div>
-        </div>
-
-        <div className={`${cardClasses} p-6`}>
-          <h2 className="text-lg font-semibold text-(--text-primary)">
-            {t('profile.general.dataControlsTitle')}
-          </h2>
-          <p className="mt-1 text-sm text-(--text-secondary)">
-            {t('profile.general.dataControlsDescription')}
-          </p>
-
-          {accountActionError && (
-            <div className="mt-4">
-              <ErrorMessage error={accountActionError} />
-            </div>
-          )}
-          {exportSuccess && (
-            <p aria-live="polite" className="mt-4 text-sm text-green-300">
-              {t('profile.general.exportSuccess')}
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div className={`${cardClasses} p-6`}>
+            <h2 className="text-lg font-semibold text-(--text-primary)">
+              {t('profile.general.privacyCookiesTitle')}
+            </h2>
+            <p className="mt-1 text-sm text-(--text-secondary)">
+              {t('profile.general.privacyCookiesDescription')}
             </p>
-          )}
-
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <div className={`${sectionBg} rounded-lg border border-(--border-card) p-4`}>
-              <Download className="h-5 w-5 text-blue-400" />
-              <h3 className="mt-3 font-medium text-(--text-primary)">{t('profile.general.exportTitle')}</h3>
-              <p className="mt-1 text-sm text-(--text-secondary)">
-                {t('profile.general.exportDescription')}
-              </p>
-              <Button
-                variant="secondary"
-                className="mt-4"
-                onClick={handleExport}
-                loading={exporting}
-              >
-                {exporting ? t('profile.general.exporting') : t('profile.general.exportButton')}
+            <p className="mt-4 text-sm text-(--text-secondary)">
+              {cookieConsent?.status === 'accepted'
+                ? t('profile.general.cookieConsentAccepted')
+                : cookieConsent?.status === 'rejected'
+                  ? t('profile.general.cookieConsentRejected')
+                  : t('profile.general.cookieConsentUnset')}
+              {cookieConsent?.updatedAt
+                ? ` ${t('profile.general.cookieConsentUpdatedAt')} ${formatDate(cookieConsent.updatedAt, lang)}`
+                : ''}
+            </p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <Button onClick={() => updateCookieConsent('accepted')}>
+                {t('profile.general.cookieConsentAccept')}
+              </Button>
+              <Button variant="secondary" onClick={() => updateCookieConsent('rejected')}>
+                {t('profile.general.cookieConsentReject')}
               </Button>
             </div>
+          </div>
 
-            <div className="rounded-lg border border-(--accent-red-border) bg-red-500/5 p-4">
+          <div className={`${cardClasses} p-6`}>
+            <h2 className="text-lg font-semibold text-(--text-primary)">
+              {t('profile.general.dataControlsTitle')}
+            </h2>
+
+            {accountActionError && (
+              <div className="mt-4">
+                <ErrorMessage error={accountActionError} />
+              </div>
+            )}
+
+            <div className="mt-5 rounded-lg border border-(--accent-red-border) bg-red-500/5 p-4">
               <Trash2 className="h-5 w-5 text-red-400" />
               <h3 className="mt-3 font-medium text-(--text-primary)">{t('profile.general.deleteTitle')}</h3>
               <p className="mt-1 text-sm text-(--text-secondary)">

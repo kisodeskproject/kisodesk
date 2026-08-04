@@ -3,10 +3,12 @@
 import type { Metadata } from 'next';
 
 import MarketingPage from './MarketingPageClient';
+import JsonLd from '@/components/seo/JsonLd';
 import PublicPageLinks from '@/components/seo/PublicPageLinks';
 import { localizedMetadata } from '@/lib/seo';
 import { getTranslation } from '@/lib/i18n';
 import { toSupportedLocale } from '@/lib/locales';
+import { buildWebApplicationJsonLd } from '@/lib/structuredData';
 
 interface MarketingPageProps {
   params: Promise<{ lang: string }>;
@@ -27,9 +29,11 @@ export async function generateMetadata({ params }: MarketingPageProps): Promise<
 export default async function Page({ params }: MarketingPageProps) {
   const { lang } = await params;
   const locale = toSupportedLocale(lang);
+  const description = getTranslation(locale, 'marketing.page.metadata.description');
 
   return (
     <>
+      <JsonLd data={buildWebApplicationJsonLd(locale, description)} />
       <MarketingPage />
       <PublicPageLinks locale={locale} current="home" />
     </>

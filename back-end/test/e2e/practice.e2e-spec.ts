@@ -91,6 +91,7 @@ describe('Practice (e2e)', () => {
 import { PrismaClient } from '@prisma/client';
 import { PracticeService } from '../../src/practice/practice.service';
 import { TelemetryService } from '../../src/practice/telemetry.service';
+import { ErrorTrackingService } from '../../src/errors/error-tracking.service';
 
 describe('Practice telemetry schema (e2e)', () => {
   const prisma = new PrismaClient();
@@ -129,7 +130,7 @@ describe('PracticeService behavior (e2e)', () => {
   const userId = 'e2e-adaptive-user';
   const service = new PracticeService(
     prisma as any,
-    { processPracticeErrorsInTransaction: jest.fn() } as any,
+    new ErrorTrackingService(prisma as any),
     { recordPracticeTimeInTransaction: jest.fn() } as any,
     new TelemetryService(),
     { labels: () => ({ inc: jest.fn() }) } as any,
@@ -148,7 +149,9 @@ describe('PracticeService behavior (e2e)', () => {
     await prisma.practiceText.create({ data: { id: 'adaptive-e2e-text', languageCode: 'es', content: 'ababa casa prueba real', characterSet: ['a','b'] } }).catch(() => undefined);
   });
   afterAll(async () => {
+    await prisma.errorSession.deleteMany({ where: { userId } });
     await prisma.practiceSession.deleteMany({ where: { userId } });
+    await prisma.keyStat.deleteMany({ where: { userId } });
     await prisma.keyLayoutStat.deleteMany({ where: { userId } });
     await prisma.bigramStat.deleteMany({ where: { userId } });
     await prisma.user.delete({ where: { id: userId } });
@@ -166,6 +169,57 @@ describe('PracticeService behavior (e2e)', () => {
   it('controla dos envíos concurrentes', async () => {
     await Promise.all([service.savePractice(userId, telemetry('22222222-2222-4222-8222-222222222222') as any), service.savePractice(userId, telemetry('22222222-2222-4222-8222-222222222222') as any)]);
     expect(await prisma.practiceSession.count({ where: { userId, clientSessionId: '22222222-2222-4222-8222-222222222222' } })).toBe(1);
+  });
+
+  it('no persiste como débil un error corregido con Backspace', async () => {
+    const clientSessionId = '33333333-3333-4333-8333-333333333333';
+    await service.savePractice(userId, {
+      clientSessionId,
+      netWpm: 0,
+      grossWpm: 0,
+      accuracy: 0,
+      timeElapsed: 1,
+      language: 'es',
+      layoutId: 'qwerty-latam',
+      errorSummary: {
+        totalKeystrokes: 4,
+        totalErrors: 1,
+        keys: [{ expected: 'a', totalPresses: 2, totalErrors: 1 }],
+      },
+      telemetry: {
+        version: 1,
+        text: 'cat',
+        startedAt: 1000,
+        pausedMs: 0,
+        events: [
+          { sequence: 0, kind: 'input', timestamp: 1000, code: 'KeyC', key: 'c', position: 0, expected: 'c', typed: 'c', correct: true },
+          { sequence: 1, kind: 'input', timestamp: 1100, code: 'KeyX', key: 'x', position: 1, expected: 'a', typed: 'x', correct: false },
+          { sequence: 2, kind: 'backspace', timestamp: 1150, code: 'Backspace', key: 'Backspace', position: 2 },
+          { sequence: 3, kind: 'input', timestamp: 1200, code: 'KeyA', key: 'a', position: 1, expected: 'a', typed: 'a', correct: true },
+          { sequence: 4, kind: 'input', timestamp: 1300, code: 'KeyT', key: 't', position: 2, expected: 't', typed: 't', correct: true },
+        ],
+      },
+    } as any);
+
+    const session = await prisma.practiceSession.findUnique({
+      where: { userId_clientSessionId: { userId, clientSessionId } },
+    });
+    const key = await prisma.keyLayoutStat.findUnique({
+      where: { userId_languageCode_layoutId_keyChar: { userId, languageCode: 'es', layoutId: 'qwerty-latam', keyChar: 'a' } },
+    });
+    const globalKey = await prisma.keyStat.findUnique({
+      where: { userId_languageCode_localeCode_keyChar: { userId, languageCode: 'es', localeCode: 'es-latam', keyChar: 'a' } },
+    });
+    const bigram = await prisma.bigramStat.findUnique({
+      where: { userId_languageCode_layoutId_firstChar_secondChar: { userId, languageCode: 'es', layoutId: 'qwerty-latam', firstChar: 'c', secondChar: 'a' } },
+    });
+
+    expect(session?.accuracy).toBe(100);
+    expect((session?.derivedMetrics as { correctedErrors?: number })?.correctedErrors).toBe(1);
+    expect(key?.totalErrors).toBe(0);
+    expect(globalKey?.totalErrors).toBe(0);
+    expect(bigram?.totalErrors).toBe(0);
+    expect(await prisma.keyLayoutStat.findFirst({ where: { userId, keyChar: 'x' } })).toBeNull();
   });
 
   it('devuelve ejercicio adaptativo separado por layout e idioma', async () => {

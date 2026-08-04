@@ -99,13 +99,6 @@
       "passwordSectionTitle": "Contraseña",
       "passwordSectionDescription": "Puedes solicitar un enlace para restablecer tu contraseña cuando lo necesites.",
       "dataControlsTitle": "Tus datos y tu cuenta",
-      "dataControlsDescription": "Descarga una copia de tus datos o elimina tu cuenta de forma irreversible.",
-      "exportTitle": "Descargar mis datos",
-      "exportDescription": "Genera un archivo JSON con tus datos de cuenta, progreso, prácticas, errores y relaciones. No incluye contraseñas ni tokens.",
-      "exportButton": "Descargar datos",
-      "exporting": "Preparando descarga...",
-      "exportSuccess": "La descarga de tus datos comenzó correctamente.",
-      "exportError": "No se pudo generar la exportación. Vuelve a intentarlo.",
       "deleteTitle": "Eliminar mi cuenta",
       "deleteDescription": "Elimina la cuenta y sus datos activos asociados. Esta acción no se puede deshacer.",
       "deleteButton": "Eliminar cuenta",
@@ -1290,6 +1283,31 @@
       "dashboard": "Dashboard",
       "lessons": "Lecciones",
       "ranking": "Ranking"
+    }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "Cómo funciona KisoDesk",
+      "description": "Descubre cómo KisoDesk combina práctica de mecanografía, idioma, teclado y señales de escritura para orientar tu aprendizaje."
+    },
+    "general": {
+      "footerLink": "Cómo funciona",
+      "title": "Cómo funciona KisoDesk",
+      "subtitle": "KisoDesk está pensado para que la práctica de mecanografía se relacione con tu idioma, tu teclado y lo que necesitas reforzar.",
+      "whyTitle": "No es solo una prueba de velocidad",
+      "whyText": "Una prueba de velocidad muestra un resultado puntual. KisoDesk también considera la precisión y la forma en que resuelves cada práctica para orientar los siguientes ejercicios.",
+      "processTitle": "El proceso de práctica",
+      "stepPracticeTitle": "Practicas con un texto y una distribución de teclado",
+      "stepPracticeText": "La práctica parte del idioma seleccionado y de la distribución de teclado que utilizas, para que las teclas y los textos correspondan a tu contexto.",
+      "stepSignalsTitle": "La práctica genera señales de aprendizaje",
+      "stepSignalsText": "Los errores, la latencia y las combinaciones difíciles ayudan a identificar qué partes de la escritura requieren más atención.",
+      "stepPriorityTitle": "Se prioriza lo que necesitas reforzar",
+      "stepPriorityText": "En lugar de repetir siempre los mismos ejercicios, la práctica puede dar prioridad a los patrones que más necesitas mejorar.",
+      "languageTitle": "Qué significa que el contenido sea nativo de tu idioma",
+      "languageText": "No se trata solo de traducir la interfaz. El idioma del contenido, los caracteres que se practican y la distribución de teclado forman parte de la experiencia de escritura.",
+      "differenceTitle": "Una práctica orientada a mejorar",
+      "differenceText": "Las plataformas genéricas suelen ofrecer el mismo ejercicio para todas las personas. KisoDesk busca que la práctica tenga en cuenta tus resultados para que cada sesión tenga un propósito claro.",
+      "practiceAction": "Empezar una práctica"
     }
   }
 }

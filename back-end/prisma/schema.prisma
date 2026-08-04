@@ -263,6 +263,7 @@ model LessonAttempt {
   qualified      Boolean  @default(false)
   usedAssistance Boolean  @default(false) @map("used_assistance")
   physicalEvents Json?    @map("physical_events")
+  clientSessionId String? @map("client_session_id")
   createdAt      DateTime @default(now()) @map("created_at")
 
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -271,6 +272,7 @@ model LessonAttempt {
   @@index([userId, createdAt])
   @@index([lessonId])
   @@index([userId, lessonId, createdAt])
+  @@unique([userId, clientSessionId])
   @@map("lesson_attempts")
 }
 

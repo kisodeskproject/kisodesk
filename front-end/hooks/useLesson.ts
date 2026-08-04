@@ -132,6 +132,7 @@ export function useLesson() {
           usedAssistance: result.usedAssistance,
           errorSummary: result.errorSummary,
           locale: result.locale,
+          layoutId: result.layoutId,
         });
       }
     } catch (err) {

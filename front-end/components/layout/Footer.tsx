@@ -62,6 +62,17 @@ export default function Footer() {
                 </Link>
               </li>
 
+              {toSupportedLocale(lang) === 'es-latam' && (
+                <li>
+                  <Link
+                    href="/es-latam/how-it-works"
+                    className="text-slate-300 transition-colors hover:text-sky-400"
+                  >
+                    {t('howItWorks.general.footerLink')}
+                  </Link>
+                </li>
+              )}
+
               <li>
                 <a
                   href={githubUrl}
