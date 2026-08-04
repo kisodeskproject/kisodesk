@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals';
 
-import { getPublicCourseListing, getPublicCourses } from './publicCourses';
+import { getPublicCourseListing, getPublicCourses, getPublicCoursesWithStatus } from './publicCourses';
 
 describe('getPublicCourses', () => {
   const fetchMock = jest.fn();
@@ -18,6 +18,7 @@ describe('getPublicCourses', () => {
     fetchMock.mockResolvedValue({
       json: async () => [
         {
+          id: 'english-typing-course',
           slug: 'english-typing-course',
           name: 'English Typing Course',
           description: 'Learn touch typing.',
@@ -28,14 +29,15 @@ describe('getPublicCourses', () => {
           supportedLayouts: ['QWERTY_US'],
           estimatedMinutes: 60,
         },
-        { slug: 'alias-course', name: 'Alias', localeCode: 'en', level: 'beginner' },
-        { slug: 'spanish-course', name: 'Spanish', localeCode: 'es-latam', level: 'advanced' },
+        { id: 'alias-course', slug: 'alias-course', name: 'Alias', localeCode: 'en', level: 'beginner' },
+        { id: 'spanish-course', slug: 'spanish-course', name: 'Spanish', localeCode: 'es-latam', level: 'advanced' },
       ],
       ok: true,
     });
 
     await expect(getPublicCourses('en-US')).resolves.toEqual([
       {
+        id: 'english-typing-course',
         slug: 'english-typing-course',
         name: 'English Typing Course',
         description: 'Learn touch typing.',
@@ -53,12 +55,22 @@ describe('getPublicCourses', () => {
     );
   });
 
+  it('reports an unavailable API instead of treating it as an empty catalog', async () => {
+    fetchMock.mockResolvedValue({ ok: false });
+
+    await expect(getPublicCoursesWithStatus('en-US')).resolves.toEqual({
+      courses: [],
+      error: 'unavailable',
+    });
+  });
+
   it('returns the public lessons for the exact course and locale', async () => {
     fetchMock
       .mockResolvedValueOnce({
         ok: true,
         json: async () => [
           {
+            id: 'english-typing-course',
             slug: 'english-typing-course',
             name: 'English Typing Course',
             description: 'Learn touch typing.',

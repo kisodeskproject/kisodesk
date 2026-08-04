@@ -72,8 +72,8 @@ function normalizeCourse(course: RawCourse): Course {
   };
 }
 
-export function useCourses() {
-  const [courses, setCourses] = useState<Course[]>([]);
+export function useCourses(initialCourses: Course[] = []) {
+  const [courses, setCourses] = useState<Course[]>(initialCourses);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 

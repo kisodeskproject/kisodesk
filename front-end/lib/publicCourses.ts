@@ -1,11 +1,12 @@
-import { SUPPORTED_LOCALES, type Locale } from './locales';
+import { SUPPORTED_LOCALES, toContentLanguage, type ContentLanguage, type Locale } from './locales';
 import { getServerApiBaseUrl } from './serverApi';
 
 export type PublicCourse = {
+  id: string;
   slug: string;
   name: string;
   description: string;
-  languageCode: string;
+  languageCode: ContentLanguage;
   localeCode: Locale;
   level: 'beginner' | 'intermediate' | 'advanced';
   lessonsCount: number;
@@ -27,6 +28,7 @@ export type PublicLesson = {
 };
 
 type RawCourse = {
+  id?: unknown;
   slug?: unknown;
   name?: unknown;
   description?: unknown;
@@ -61,6 +63,8 @@ function toLevel(value: unknown): PublicCourse['level'] {
 
 function toPublicCourse(value: RawCourse): PublicCourse | null {
   if (
+    typeof value.id !== 'string' ||
+    !value.id.trim() ||
     typeof value.slug !== 'string' ||
     !value.slug.trim() ||
     typeof value.name !== 'string' ||
@@ -71,10 +75,11 @@ function toPublicCourse(value: RawCourse): PublicCourse | null {
   }
 
   return {
+    id: value.id,
     slug: value.slug,
     name: value.name,
     description: typeof value.description === 'string' ? value.description : '',
-    languageCode: typeof value.languageCode === 'string' ? value.languageCode : value.localeCode,
+    languageCode: toContentLanguage(typeof value.languageCode === 'string' ? value.languageCode : value.localeCode),
     localeCode: value.localeCode,
     level: toLevel(value.level),
     lessonsCount: typeof value.lessonsCount === 'number' ? value.lessonsCount : 0,
@@ -84,6 +89,10 @@ function toPublicCourse(value: RawCourse): PublicCourse | null {
     estimatedMinutes: typeof value.estimatedMinutes === 'number' ? value.estimatedMinutes : null,
   };
 }
+
+export type PublicCoursesLoadResult =
+  | { courses: PublicCourse[]; error: null }
+  | { courses: PublicCourse[]; error: 'unavailable' };
 
 function toPublicLesson(value: RawLesson): PublicLesson | null {
   if (
@@ -112,27 +121,33 @@ function toPublicLesson(value: RawLesson): PublicLesson | null {
 }
 
 export async function getPublicCourses(locale: Locale): Promise<PublicCourse[]> {
-  const courses = await getAllPublicCourses();
-  return courses.filter((course) => course.localeCode === locale);
+  return (await getPublicCoursesWithStatus(locale)).courses;
+}
+
+export async function getPublicCoursesWithStatus(locale: Locale): Promise<PublicCoursesLoadResult> {
+  try {
+    const courses = await getAllPublicCourses();
+    return { courses: courses.filter((course) => course.localeCode === locale), error: null };
+  } catch {
+    return { courses: [], error: 'unavailable' };
+  }
 }
 
 export async function getPublicCourseBySlug(courseSlug: string): Promise<PublicCourse | null> {
-  return (await getAllPublicCourses()).find((course) => course.slug === courseSlug) ?? null;
+  try {
+    return (await getAllPublicCourses()).find((course) => course.slug === courseSlug) ?? null;
+  } catch {
+    return null;
+  }
 }
 
 async function getAllPublicCourses(): Promise<PublicCourse[]> {
-  try {
-    const response = await fetch(`${getServerApiBaseUrl()}/courses`, { next: { revalidate: 3600 } });
-    if (!response.ok) return [];
-
-    const body = (await response.json()) as RawCourse[] | { courses?: RawCourse[] };
-    const courses = Array.isArray(body) ? body : body.courses;
-    if (!Array.isArray(courses)) return [];
-
-    return courses.map(toPublicCourse).filter((course): course is PublicCourse => course !== null);
-  } catch {
-    return [];
-  }
+  const response = await fetch(`${getServerApiBaseUrl()}/courses`, { next: { revalidate: 3600 } });
+  if (!response.ok) throw new Error('Public courses request failed');
+  const body = (await response.json()) as RawCourse[] | { courses?: RawCourse[] };
+  const courses = Array.isArray(body) ? body : body.courses;
+  if (!Array.isArray(courses)) throw new Error('Public courses response is invalid');
+  return courses.map(toPublicCourse).filter((course): course is PublicCourse => course !== null);
 }
 
 export async function getPublicCourseListing(

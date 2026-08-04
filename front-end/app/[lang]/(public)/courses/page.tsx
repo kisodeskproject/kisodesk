@@ -2,10 +2,11 @@
 
 import type { Metadata } from 'next';
 
-import CoursesPage from '@/app/[lang]/dashboard/courses/page';
+import PublicCoursesCatalog from '@/components/courses/PublicCoursesCatalog';
 import { localizedMetadata } from '@/lib/seo';
 import { getTranslation } from '@/lib/i18n';
 import { toSupportedLocale } from '@/lib/locales';
+import { getPublicCoursesWithStatus } from '@/lib/publicCourses';
 
 interface CoursesPageProps {
   params: Promise<{ lang: string }>;
@@ -23,6 +24,9 @@ export async function generateMetadata({ params }: CoursesPageProps): Promise<Me
   });
 }
 
-export default function Page() {
-  return <CoursesPage />;
+export default async function Page({ params }: CoursesPageProps) {
+  const { lang } = await params;
+  const locale = toSupportedLocale(lang);
+  const result = await getPublicCoursesWithStatus(locale);
+  return <PublicCoursesCatalog locale={locale} initialCourses={result.courses} loadError={result.error !== null} />;
 }
