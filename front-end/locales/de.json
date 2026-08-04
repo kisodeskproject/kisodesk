@@ -306,46 +306,64 @@
     "about": {
       "metadata": {
         "title": "Über Kiso Desk",
-        "description": "Erfahre mehr über Kiso Desk und seinen praxisnahen Ansatz zum Erlernen des Zehnfingerschreibens."
+        "description": "Lerne Kiso Desk und seinen praxisorientierten Ansatz zum Erlernen des Tippens kennen."
       },
       "general": {
         "title": "Über Kiso Desk",
-        "subtitle": "Eine Plattform für übersichtliches, regelmäßiges und messbares Tipptraining",
+        "subtitle": "Eine Plattform, um das Tippen übersichtlich, regelmäßig und messbar zu üben",
         "project_title": "Das Projekt",
-        "project_text": "Kiso Desk ist ein unabhängiges Projekt mit dem Ziel, eine übersichtliche und praxisnahe Lernerfahrung für das Zehnfingerschreiben zu schaffen.",
-        "project_status_text": "Die Plattform ist als Ort gedacht, an dem alle Menschen unabhängig von ihrer Erfahrung regelmäßig üben und echte Fortschritte erkennen können. Im Mittelpunkt stehen kontinuierliches Lernen, praktische Anwendbarkeit und Liebe zum Detail, um ein zeitgemäßes und nützliches Werkzeug bereitzustellen.",
+        "project_text": "Kiso Desk ist ein unabhängiges Projekt, das darauf ausgerichtet ist, eine übersichtliche und praktische Lernumgebung für das Tippen zu schaffen.",
+        "project_status_text": "Die Plattform ist als Ort konzipiert, an dem jeder unabhängig vom Erfahrungsstand regelmäßig üben und echte Fortschritte erkennen kann. Der Schwerpunkt liegt auf kontinuierlichem Lernen, praktischer Anwendbarkeit und Liebe zum Detail, um ein nützliches Werkzeug für die heutigen Anforderungen bereitzustellen.",
         "mission_title": "Unsere Mission",
-        "mission_text": "Bei Kiso Desk sind wir überzeugt, dass das Zehnfingerschreiben eine wesentliche Fähigkeit in der digitalen Welt ist. Unsere Mission ist es, das Erlernen des schnellen und präzisen Tippens für alle Menschen unabhängig von ihrer Erfahrung zugänglich, praktisch und wirksam zu machen.",
+        "mission_text": "Bei Kiso Desk sind wir überzeugt, dass schnelles und sicheres Tippen eine unverzichtbare Fähigkeit in der digitalen Welt ist. Unsere Mission ist es, das Erlernen des schnellen und präzisen Tippens für jeden zugänglich, praktisch und effektiv zu machen – unabhängig vom Erfahrungsstand.",
         "vision_title": "Unsere Vision",
-        "vision_text": "Ein nützliches Werkzeug zu entwickeln, das Tippgeschwindigkeit, Genauigkeit und Sicherheit durch eine moderne, übersichtliche und auf regelmäßiges Üben ausgerichtete Erfahrung verbessert.",
+        "vision_text": "Ein nützliches Werkzeug zu entwickeln, das Schreibgeschwindigkeit, Genauigkeit und Sicherheit beim Tippen verbessert und dabei eine moderne, übersichtliche und auf regelmäßiges Üben ausgerichtete Erfahrung bietet.",
         "history_title": "Unsere Geschichte",
-        "history_text": "Kiso Desk entstand als unabhängiges Projekt, um eine moderne Umgebung für das Tipptraining zu schaffen. Was als einfache Idee begann, entwickelt sich heute zu einer Plattform mit Schwerpunkt auf Lektionen, Fortschritt, Statistiken und kontinuierlicher Verbesserung."
+        "history_text": "Kiso Desk entstand als unabhängiges Projekt mit dem Ziel, eine moderne Umgebung zum Üben des Tippens zu schaffen. Was als einfache Idee begann, entwickelt sich heute zu einer Plattform mit Fokus auf Lektionen, Lernfortschritt, Statistiken und kontinuierliche Verbesserung."
       }
     },
     "page": {
       "metadata": {
-        "title": "Zehnfingerschreiben lernen",
-        "description": "Verbessere deine Geschwindigkeit und Genauigkeit mit interaktiven Tippübungen."
+        "title": "Tippen lernen",
+        "description": "Verbessere deine Geschwindigkeit und Genauigkeit."
       },
       "general": {
         "altNight": "Illustration eines nächtlichen Zimmers mit einer Person und einer Katze",
         "altDay": "Illustration eines Zimmers bei Tag mit einer programmierenden Person und einer Katze",
         "interactiveLessons": "Interaktive Lektionen",
-        "interactiveLessonsDescription": "Lerne mit strukturierten Kursen",
+        "coursesTitle": "Strukturierte Kurse",
+        "interactiveLessonsDescription": "Lerne mit schrittweise aufgebauten Lektionen",
         "freePractice": "Freies Üben",
-        "freePracticeDescription": "Übe in deinem eigenen Tempo",
-        "dashboardDescription": "Sieh dir deine Statistiken an",
-        "rankingDescription": "Tritt weltweit an",
+        "freePracticeDescription": "Trainiere in deinem eigenen Tempo",
+        "dashboardTitle": "Verfolge deinen Fortschritt",
+        "dashboardDescription": "Geschwindigkeit, Genauigkeit und Fehler",
+        "rankingDescription": "Vergleiche deine Ergebnisse und bleibe motiviert",
         "title1": "Meistere das",
-        "title2": "Zehnfingerschreiben",
-        "subtitle1": "Verbessere deine Geschwindigkeit und Genauigkeit ",
-        "learn": "Lerne",
+        "title2": "Tippen",
+        "subtitle1": "Verbessere deine Geschwindigkeit und Genauigkeit mit Übungen, die auf deine Sprache, deine Tastatur und deine häufigsten Fehler abgestimmt sind.",
+        "benefitFree": "100 % kostenlos",
+        "benefitNoRegistration": "Keine Registrierung erforderlich",
+        "benefitBrowser": "Direkt in deinem Browser",
+        "benefitLanguageKeyboard": "An deine Sprache und Tastatur angepasst",
+        "immediateAccessTitle": "Sofortiger Zugriff",
+        "learningTitle": "Mehr als nur ein Geschwindigkeitstest",
+        "learningDescription": "KisoDesk ist ein adaptiver Tipptrainer. Du misst nicht nur, wie viele Wörter du pro Minute schreibst, sondern übst gezielt das, was du wirklich verbessern musst, um schneller voranzukommen.",
+        "resultsTitle": "Ergebnisse, die dir helfen, dich zu verbessern",
+        "metricWpm": "Wörter pro Minute (WPM)",
+        "metricAccuracy": "Tippgenauigkeit",
+        "metricErrors": "Fehler und zu übende Buchstaben",
+        "metricHistory": "Verlauf und Entwicklung",
+        "learn": "Lernen",
         "guidedLessons": "Geführte Lektionen",
-        "practiceAction": "Übe",
-        "typingExercises": "Tippübungen",
-        "track": "Miss",
+        "practiceAction": "Personalisiertes Training",
+        "typingExercises": "Erkennt deine Schwierigkeiten und erstellt Übungen, die auf dich zugeschnitten sind",
+        "languageKeyboardTitle": "Deine Sprache und deine Tastatur sind wichtig",
+        "languageKeyboardInterface": "Benutzeroberfläche in deiner Sprache",
+        "languageKeyboardContent": "An deine Sprache angepasste Inhalte",
+        "languageKeyboardLayouts": "Anpassbare Tastaturlayouts",
+        "track": "Verfolgen",
         "progressAndStats": "Fortschritt und Statistiken",
-        "compete": "Tritt an",
+        "compete": "Wettbewerb",
         "globalRanking": "Globale Rangliste"
       }
     }
@@ -1236,7 +1254,7 @@
   "practice": {
     "general": {
       "title": "Tipp-Test",
-      "subtitle": "Verbessere deine Geschwindigkeit und Genauigkeit mit personalisierten Texten",
+      "subtitle": "Verbessere deine Geschwindigkeit und Genauigkeit mit Übungen, die auf deine Sprache, deine Tastatur und deine häufigsten Fehler abgestimmt sind.",
       "freeTitle": "Schreibgeschwindigkeitstest",
       "freeSubtitle": "Tippe einen kurzen Text und entdecke deine Geschwindigkeit und Genauigkeit.",
       "adaptiveTitle": "Übe die Tasten, bei denen du die meisten Fehler machst",

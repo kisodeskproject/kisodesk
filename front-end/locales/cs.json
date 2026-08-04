@@ -306,47 +306,65 @@
     "about": {
       "metadata": {
         "title": "O Kiso Desk",
-        "description": "Poznejte Kiso Desk a jeho praktický přístup k výuce psaní na klávesnici."
+        "description": "Seznamte se s Kiso Desk a jeho praktickým přístupem k výuce psaní na klávesnici."
       },
       "general": {
         "title": "O Kiso Desk",
-        "subtitle": "Platforma pro srozumitelné, pravidelné a měřitelné procvičování psaní na klávesnici",
+        "subtitle": "Platforma pro přehledné, pravidelné a měřitelné procvičování psaní na klávesnici",
         "project_title": "Projekt",
-        "project_text": "Kiso Desk je nezávislý projekt zaměřený na vytvoření srozumitelného a praktického prostředí pro výuku psaní na klávesnici.",
-        "project_status_text": "Je navržen jako prostor, kde může kdokoli bez ohledu na úroveň zkušeností pravidelně procvičovat a zaznamenávat skutečné zlepšení. Důraz je kladen na průběžné učení, praktičnost a pozornost k detailům, aby nástroj odpovídal současným potřebám.",
+        "project_text": "Kiso Desk je nezávislý projekt zaměřený na vytvoření přehledného a praktického prostředí pro výuku psaní na klávesnici.",
+        "project_status_text": "Je navržen jako prostor, kde může každý bez ohledu na úroveň zkušeností pravidelně trénovat a pozorovat skutečné zlepšení. Důraz je kladen na průběžné učení, praktičnost a smysl pro detail, aby nástroj odpovídal potřebám dnešní doby.",
         "mission_title": "Naše poslání",
-        "mission_text": "V Kiso Desk věříme, že psaní na klávesnici je v digitálním světě zásadní dovedností. Naším posláním je zpřístupnit rychlé a přesné psaní všem a učinit jeho výuku praktickou a účinnou bez ohledu na úroveň zkušeností.",
+        "mission_text": "V Kiso Desk věříme, že psaní na klávesnici je v digitálním světě nezbytnou dovedností. Naším posláním je zpřístupnit každému praktickou a efektivní výuku rychlého a přesného psaní bez ohledu na úroveň zkušeností.",
         "vision_title": "Naše vize",
-        "vision_text": "Vytvořit užitečný nástroj pro zlepšování rychlosti, přesnosti a jistoty při psaní s moderním, srozumitelným prostředím zaměřeným na pravidelné procvičování.",
+        "vision_text": "Vytvořit užitečný nástroj pro zlepšování rychlosti, přesnosti a jistoty při psaní s moderním, přehledným prostředím zaměřeným na pravidelné procvičování.",
         "history_title": "Náš příběh",
-        "history_text": "Kiso Desk vznikl jako nezávislý projekt s cílem vytvořit moderní prostředí pro procvičování psaní na klávesnici. Z jednoduchého nápadu se dnes vyvíjí platforma zaměřená na lekce, pokrok, statistiky a neustálé zlepšování."
+        "history_text": "Kiso Desk vznikl jako nezávislý projekt s cílem vytvořit moderní prostředí pro procvičování psaní na klávesnici. To, co začalo jako jednoduchý nápad, se dnes rozvíjí v platformu zaměřenou na lekce, sledování pokroku, statistiky a průběžné zlepšování."
       }
     },
     "page": {
       "metadata": {
-        "title": "Naučte se psát na klávesnici",
-        "description": "Zlepšete rychlost a přesnost pomocí interaktivních lekcí psaní na klávesnici."
+        "title": "Naučte se psát všemi deseti",
+        "description": "Zlepšete svou rychlost a přesnost."
       },
       "general": {
         "altNight": "Ilustrace nočního pokoje s člověkem a kočkou",
-        "altDay": "Ilustrace denního pokoje s programujícím člověkem a kočkou",
+        "altDay": "Ilustrace denního pokoje s člověkem, který programuje, a kočkou",
         "interactiveLessons": "Interaktivní lekce",
-        "interactiveLessonsDescription": "Učte se pomocí strukturovaných kurzů",
+        "coursesTitle": "Strukturované kurzy",
+        "interactiveLessonsDescription": "Učte se pomocí lekcí s postupně rostoucí obtížností",
         "freePractice": "Volné procvičování",
         "freePracticeDescription": "Trénujte vlastním tempem",
-        "dashboardDescription": "Prohlížejte si své statistiky",
-        "rankingDescription": "Soutěžte celosvětově",
+        "dashboardTitle": "Sledujte svůj pokrok",
+        "dashboardDescription": "Rychlost, přesnost a chyby",
+        "rankingDescription": "Porovnávejte své výsledky a motivujte se",
         "title1": "Ovládněte",
-        "title2": "psaní na klávesnici",
-        "subtitle1": "Zlepšete svou rychlost a přesnost ",
+        "title2": "psaní všemi deseti",
+        "subtitle1": "Zlepšete svou rychlost a přesnost pomocí cvičení přizpůsobených vašemu jazyku, klávesnici a častým chybám.",
+        "benefitFree": "100% zdarma",
+        "benefitNoRegistration": "Bez povinné registrace",
+        "benefitBrowser": "Přímo ve vašem prohlížeči",
+        "benefitLanguageKeyboard": "Přizpůsobeno vašemu jazyku a klávesnici",
+        "immediateAccessTitle": "Okamžitý přístup",
+        "learningTitle": "Více než jen test rychlosti",
+        "learningDescription": "KisoDesk je adaptivní trenér psaní všemi deseti. Nejenže měří, kolik slov napíšete za minutu, ale také vám umožňuje procvičovat právě to, co potřebujete zlepšit, abyste postupovali rychleji.",
+        "resultsTitle": "Výsledky, které vám pomohou se zlepšovat",
+        "metricWpm": "Slova za minutu (WPM)",
+        "metricAccuracy": "Přesnost psaní",
+        "metricErrors": "Chyby a písmena k procvičení",
+        "metricHistory": "Historie a vývoj",
         "learn": "Učte se",
-        "guidedLessons": "Vedené lekce",
-        "practiceAction": "Procvičujte",
-        "typingExercises": "Cvičení psaní na klávesnici",
+        "guidedLessons": "Lekce s průvodcem",
+        "practiceAction": "Personalizované procvičování",
+        "typingExercises": "Odhalí vaše obtíže a vytvoří cvičení přímo pro vás",
+        "languageKeyboardTitle": "Na vašem jazyku a klávesnici záleží",
+        "languageKeyboardInterface": "Rozhraní lokalizované do vašeho jazyka",
+        "languageKeyboardContent": "Obsah přizpůsobený vašemu jazyku",
+        "languageKeyboardLayouts": "Přizpůsobitelné rozložení klávesnice",
         "track": "Sledujte",
         "progressAndStats": "Pokrok a statistiky",
         "compete": "Soutěžte",
-        "globalRanking": "Globální žebříček"
+        "globalRanking": "Celosvětový žebříček"
       }
     }
   },
@@ -1236,7 +1254,7 @@
   "practice": {
     "general": {
       "title": "Test psaní na klávesnici",
-      "subtitle": "Zlepšujte rychlost a přesnost s personalizovanými texty",
+      "subtitle": "Zlepšete svou rychlost a přesnost pomocí cvičení přizpůsobených vašemu jazyku, klávesnici a častým chybám.",
       "freeTitle": "Test rychlosti psaní",
       "freeSubtitle": "Vyzkoušejte si psaní na krátkém textu a zjistěte svou rychlost a přesnost.",
       "adaptiveTitle": "Procvičujte klávesy, ve kterých nejvíce chybujete",

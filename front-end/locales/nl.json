@@ -265,16 +265,16 @@
       },
       "general": {
         "title": "Over Kiso Desk",
-        "subtitle": "Een platform om duidelijk, consequent en meetbaar te leren typen",
+        "subtitle": "Een platform om typen op een duidelijke, consistente en meetbare manier te oefenen",
         "project_title": "Het project",
-        "project_text": "Kiso Desk is een onafhankelijk project dat is gericht op een duidelijke en praktische ervaring om te leren typen.",
-        "project_status_text": "Het is bedoeld als een plek waar iedereen, ongeacht ervaringsniveau, regelmatig kan oefenen en echte vooruitgang kan merken. De nadruk ligt op voortdurend leren, praktische bruikbaarheid en aandacht voor detail, met een hulpmiddel dat aansluit bij de huidige context.",
+        "project_text": "Kiso Desk is een onafhankelijk project dat gericht is op het creëren van een duidelijke en praktische leerervaring voor het leren typen.",
+        "project_status_text": "Het is ontwikkeld als een plek waar iedereen, ongeacht het ervaringsniveau, regelmatig kan oefenen en echte vooruitgang kan merken. De nadruk ligt op voortdurend leren, praktische toepasbaarheid en aandacht voor detail, met als doel een nuttig hulpmiddel te bieden dat aansluit bij de huidige behoeften.",
         "mission_title": "Onze missie",
-        "mission_text": "Bij Kiso Desk geloven we dat typen een essentiële vaardigheid is in de digitale wereld. Onze missie is om snel en nauwkeurig leren typen toegankelijk, praktisch en effectief te maken voor iedereen, ongeacht ervaringsniveau.",
+        "mission_text": "Bij Kiso Desk geloven we dat typen een essentiële vaardigheid is in de digitale wereld. Onze missie is om snel en nauwkeurig leren typen toegankelijk, praktisch en effectief te maken voor iedereen, ongeacht het ervaringsniveau.",
         "vision_title": "Onze visie",
-        "vision_text": "Een nuttig hulpmiddel bouwen om snelheid, nauwkeurigheid en vertrouwen tijdens het typen te verbeteren, met een moderne, duidelijke ervaring die is gericht op regelmatig oefenen.",
+        "vision_text": "Een nuttig hulpmiddel ontwikkelen om de typesnelheid, nauwkeurigheid en het zelfvertrouwen tijdens het typen te verbeteren, met een moderne en duidelijke ervaring die gericht is op regelmatig oefenen.",
         "history_title": "Ons verhaal",
-        "history_text": "Kiso Desk is ontstaan als een onafhankelijk project om een moderne type-oefenomgeving te creëren. Wat begon als een eenvoudig idee, ontwikkelt zich nu tot een platform dat is gericht op lessen, voortgang, statistieken en voortdurende verbetering."
+        "history_text": "Kiso Desk is ontstaan als een onafhankelijk project met als doel een moderne ervaring voor het oefenen van typen te creëren. Wat begon als een eenvoudig idee, ontwikkelt zich vandaag tot een platform dat gericht is op lessen, voortgang, statistieken en voortdurende verbetering."
       }
     },
     "cookies": {
@@ -582,28 +582,46 @@
     },
     "page": {
       "metadata": {
-        "title": "Leer typen",
-        "description": "Verbeter je snelheid en nauwkeurigheid met interactieve typelessen."
+        "title": "Leer blind typen",
+        "description": "Verbeter je snelheid en nauwkeurigheid."
       },
       "general": {
         "altNight": "Illustratie van een kamer bij nacht met een persoon en een kat",
         "altDay": "Illustratie van een kamer overdag met een programmerende persoon en een kat",
         "interactiveLessons": "Interactieve lessen",
-        "interactiveLessonsDescription": "Leer met gestructureerde cursussen",
+        "coursesTitle": "Gestructureerde cursussen",
+        "interactiveLessonsDescription": "Leer met stapsgewijs opgebouwde lessen",
         "freePractice": "Vrij oefenen",
-        "freePracticeDescription": "Train in je eigen tempo",
-        "dashboardDescription": "Bekijk je statistieken",
-        "rankingDescription": "Neem het wereldwijd tegen anderen op",
+        "freePracticeDescription": "Oefen in je eigen tempo",
+        "dashboardTitle": "Volg je voortgang",
+        "dashboardDescription": "Snelheid, nauwkeurigheid en fouten",
+        "rankingDescription": "Vergelijk je resultaten en blijf gemotiveerd",
         "title1": "Beheers het",
-        "title2": "typen",
-        "subtitle1": "Verbeter je snelheid en nauwkeurigheid ",
+        "title2": "blind typen",
+        "subtitle1": "Verbeter je snelheid en nauwkeurigheid met oefeningen die zijn afgestemd op je taal, toetsenbord en meest voorkomende fouten.",
+        "benefitFree": "100% gratis",
+        "benefitNoRegistration": "Geen registratie verplicht",
+        "benefitBrowser": "In je browser",
+        "benefitLanguageKeyboard": "Aangepast aan je taal en toetsenbord",
+        "immediateAccessTitle": "Directe toegang",
+        "learningTitle": "Meer dan alleen een snelheidstest",
+        "learningDescription": "KisoDesk is een adaptieve typetrainer. Je meet niet alleen hoeveel woorden je per minuut typt, maar oefent ook precies wat je moet verbeteren om sneller vooruitgang te boeken.",
+        "resultsTitle": "Resultaten die je helpen verbeteren",
+        "metricWpm": "Woorden per minuut (WPM)",
+        "metricAccuracy": "Typnauwkeurigheid",
+        "metricErrors": "Fouten en letters om extra te oefenen",
+        "metricHistory": "Geschiedenis en voortgang",
         "learn": "Leer",
         "guidedLessons": "Begeleide lessen",
-        "practiceAction": "Oefen",
-        "typingExercises": "Type-oefeningen",
-        "track": "Meet",
+        "practiceAction": "Gepersonaliseerde oefeningen",
+        "typingExercises": "Herkent je knelpunten en maakt oefeningen die op jou zijn afgestemd",
+        "languageKeyboardTitle": "Je taal en toetsenbord zijn belangrijk",
+        "languageKeyboardInterface": "Interface beschikbaar in je taal",
+        "languageKeyboardContent": "Inhoud aangepast aan je taal",
+        "languageKeyboardLayouts": "Aanpasbare toetsenbordindelingen",
+        "track": "Volg",
         "progressAndStats": "Voortgang en statistieken",
-        "compete": "Daag uit",
+        "compete": "Neem het op",
         "globalRanking": "Wereldwijde ranglijst"
       }
     }
@@ -1236,7 +1254,7 @@
   "practice": {
     "general": {
       "title": "Typetest",
-      "subtitle": "Verbeter je snelheid en nauwkeurigheid met gepersonaliseerde teksten",
+      "subtitle": "Verbeter je snelheid en nauwkeurigheid met oefeningen die zijn afgestemd op je taal, toetsenbord en meest voorkomende fouten.",
       "freeTitle": "Typesnelheidstest",
       "freeSubtitle": "Probeer een korte tekst en ontdek je typesnelheid en nauwkeurigheid.",
       "adaptiveTitle": "Oefen de toetsen waarop je het vaakst fouten maakt",

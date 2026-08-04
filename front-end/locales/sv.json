@@ -306,47 +306,65 @@
     "about": {
       "metadata": {
         "title": "Om Kiso Desk",
-        "description": "Läs mer om Kiso Desk och dess praktiska metod för att lära sig skriva på tangentbord."
+        "description": "Upptäck Kiso Desk och dess praktiska metod för att lära sig skriva på tangentbord."
       },
       "general": {
         "title": "Om Kiso Desk",
-        "subtitle": "En plattform för tydlig, regelbunden och mätbar skrivträning",
+        "subtitle": "En plattform för att öva på tangentbordsskrivning på ett tydligt, regelbundet och mätbart sätt",
         "project_title": "Projektet",
         "project_text": "Kiso Desk är ett oberoende projekt med fokus på att skapa en tydlig och praktisk upplevelse för att lära sig skriva på tangentbord.",
-        "project_status_text": "Det är utformat som en plats där vem som helst, oavsett erfarenhetsnivå, kan träna regelbundet och se verkliga förbättringar. Fokus ligger på kontinuerligt lärande, praktisk användning och omsorg om detaljer, med ett verktyg som är användbart i dagens sammanhang.",
+        "project_status_text": "Det är utformat som en plats där vem som helst, oavsett erfarenhetsnivå, kan öva regelbundet och se verkliga förbättringar. Fokus ligger på kontinuerligt lärande, praktisk nytta och omsorg om detaljer, vilket ger ett användbart verktyg anpassat till dagens behov.",
         "mission_title": "Vårt uppdrag",
-        "mission_text": "På Kiso Desk anser vi att god tangentbordsskrivning är en grundläggande färdighet i den digitala världen. Vårt uppdrag är att göra det tillgängligt, praktiskt och effektivt för alla att lära sig skriva snabbt och exakt, oavsett erfarenhetsnivå.",
+        "mission_text": "På Kiso Desk anser vi att tangentbordsskrivning är en grundläggande färdighet i den digitala världen. Vårt uppdrag är att göra det tillgängligt, praktiskt och effektivt för alla att lära sig skriva snabbt och korrekt, oavsett erfarenhetsnivå.",
         "vision_title": "Vår vision",
-        "vision_text": "Att bygga ett användbart verktyg för att förbättra hastighet, precision och självförtroende vid skrivning, med en modern och tydlig upplevelse som fokuserar på regelbunden träning.",
+        "vision_text": "Att skapa ett användbart verktyg för att förbättra skrivhastighet, noggrannhet och självförtroende, med en modern och tydlig upplevelse som fokuserar på regelbunden övning.",
         "history_title": "Vår historia",
-        "history_text": "Kiso Desk startade som ett oberoende projekt för att skapa en modern upplevelse för skrivträning. Det som började som en enkel idé utvecklas i dag till en plattform med fokus på lektioner, framsteg, statistik och kontinuerlig förbättring."
+        "history_text": "Kiso Desk startade som ett oberoende projekt med målet att skapa en modern upplevelse för att öva på tangentbordsskrivning. Det som började som en enkel idé utvecklas i dag till en plattform med fokus på lektioner, framsteg, statistik och kontinuerlig förbättring."
       }
     },
     "page": {
       "metadata": {
         "title": "Lär dig skriva på tangentbord",
-        "description": "Förbättra din hastighet och precision med interaktiva skrivlektioner."
+        "description": "Förbättra din hastighet och precision."
       },
       "general": {
         "altNight": "Illustration av ett rum på natten med en person och en katt",
         "altDay": "Illustration av ett rum på dagen med en person som programmerar och en katt",
         "interactiveLessons": "Interaktiva lektioner",
-        "interactiveLessonsDescription": "Lär dig med strukturerade kurser",
-        "freePractice": "Fri övning",
-        "freePracticeDescription": "Träna i din egen takt",
-        "dashboardDescription": "Se din statistik",
-        "rankingDescription": "Tävla globalt",
+        "coursesTitle": "Strukturerade kurser",
+        "interactiveLessonsDescription": "Lär dig med stegvis uppbyggda lektioner",
+        "freePractice": "Fri träning",
+        "freePracticeDescription": "Öva i din egen takt",
+        "dashboardTitle": "Följ dina framsteg",
+        "dashboardDescription": "Hastighet, precision och fel",
+        "rankingDescription": "Jämför dina resultat och håll motivationen uppe",
         "title1": "Bemästra",
         "title2": "tangentbordsskrivning",
-        "subtitle1": "Förbättra din hastighet och precision ",
+        "subtitle1": "Förbättra din hastighet och precision med övningar som anpassas efter ditt språk, tangentbord och dina vanligaste fel.",
+        "benefitFree": "100 % gratis",
+        "benefitNoRegistration": "Ingen registrering krävs",
+        "benefitBrowser": "I din webbläsare",
+        "benefitLanguageKeyboard": "Anpassad efter ditt språk och tangentbord",
+        "immediateAccessTitle": "Omedelbar tillgång",
+        "learningTitle": "Mer än bara ett hastighetstest",
+        "learningDescription": "KisoDesk är en adaptiv skrivtränare. Den mäter inte bara hur många ord du skriver per minut, utan hjälper dig också att öva på det du verkligen behöver förbättra för att utvecklas snabbare.",
+        "resultsTitle": "Resultat som hjälper dig att bli bättre",
+        "metricWpm": "Ord per minut (WPM)",
+        "metricAccuracy": "Skrivprecision",
+        "metricErrors": "Fel och bokstäver att öva mer på",
+        "metricHistory": "Historik och utveckling",
         "learn": "Lär dig",
-        "guidedLessons": "Guidade lektioner",
-        "practiceAction": "Öva",
-        "typingExercises": "Skrivövningar",
-        "track": "Mät",
+        "guidedLessons": "Vägledda lektioner",
+        "practiceAction": "Personligt anpassad träning",
+        "typingExercises": "Identifierar dina svårigheter och skapar övningar anpassade efter dig",
+        "languageKeyboardTitle": "Ditt språk och tangentbord spelar roll",
+        "languageKeyboardInterface": "Gränssnitt på ditt språk",
+        "languageKeyboardContent": "Innehåll anpassat efter ditt språk",
+        "languageKeyboardLayouts": "Anpassningsbara tangentbordslayouter",
+        "track": "Följ",
         "progressAndStats": "Framsteg och statistik",
         "compete": "Tävla",
-        "globalRanking": "Global rankning"
+        "globalRanking": "Global topplista"
       }
     }
   },
@@ -1236,7 +1254,7 @@
   "practice": {
     "general": {
       "title": "Skrivtest",
-      "subtitle": "Förbättra din hastighet och precision med personliga texter",
+      "subtitle": "Förbättra din hastighet och precision med övningar som anpassas efter ditt språk, tangentbord och dina vanligaste fel.",
       "freeTitle": "Skrivhastighetstest",
       "freeSubtitle": "Prova en kort text och upptäck din skrivhastighet och noggrannhet.",
       "adaptiveTitle": "Öva på tangenterna där du gör flest fel",

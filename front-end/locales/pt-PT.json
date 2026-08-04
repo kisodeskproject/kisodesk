@@ -305,48 +305,66 @@
     },
     "about": {
       "metadata": {
-        "title": "Acerca do Kiso Desk",
-        "description": "Conheça o Kiso Desk e a sua abordagem prática à aprendizagem da escrita no teclado."
+        "title": "Sobre o Kiso Desk",
+        "description": "Conheça o Kiso Desk e a sua abordagem prática à aprendizagem da digitação."
       },
       "general": {
-        "title": "Acerca do Kiso Desk",
-        "subtitle": "Uma plataforma para praticar escrita no teclado de forma clara, constante e mensurável",
+        "title": "Sobre o Kiso Desk",
+        "subtitle": "Uma plataforma para praticar digitação de forma clara, consistente e mensurável",
         "project_title": "O projeto",
-        "project_text": "O Kiso Desk é um projeto independente centrado na criação de uma experiência clara e prática para aprender a escrever no teclado.",
-        "project_status_text": "Foi concebido como um espaço onde qualquer pessoa, independentemente do seu nível de experiência, possa praticar com regularidade e observar melhorias reais. O foco está na aprendizagem contínua, no caráter prático e na atenção aos detalhes, oferecendo uma ferramenta útil no contexto atual.",
+        "project_text": "O Kiso Desk é um projeto independente centrado na criação de uma experiência clara e prática para aprender digitação.",
+        "project_status_text": "Foi concebido como um espaço onde qualquer pessoa, independentemente do seu nível de experiência, pode praticar com regularidade e observar melhorias reais. O foco está na aprendizagem contínua, na utilidade prática e na atenção aos detalhes, oferecendo uma ferramenta adaptada às necessidades atuais.",
         "mission_title": "A nossa missão",
-        "mission_text": "No Kiso Desk, acreditamos que a escrita no teclado é uma competência essencial no mundo digital. A nossa missão é tornar a aprendizagem de uma escrita rápida e precisa acessível, prática e eficaz para qualquer pessoa, independentemente do seu nível de experiência.",
+        "mission_text": "No Kiso Desk, acreditamos que a digitação é uma competência essencial no mundo digital. A nossa missão é tornar a aprendizagem de uma digitação rápida e precisa acessível, prática e eficaz para qualquer pessoa, independentemente do seu nível de experiência.",
         "vision_title": "A nossa visão",
-        "vision_text": "Criar uma ferramenta útil para melhorar a velocidade, a precisão e a confiança ao escrever, com uma experiência moderna, clara e centrada na prática constante.",
+        "vision_text": "Criar uma ferramenta útil para melhorar a velocidade, a precisão e a confiança ao digitar, através de uma experiência moderna, clara e centrada na prática regular.",
         "history_title": "A nossa história",
-        "history_text": "O Kiso Desk nasceu como um projeto independente para criar uma experiência moderna de prática de escrita no teclado. O que começou como uma ideia simples evolui hoje como uma plataforma centrada em lições, progresso, estatísticas e melhoria contínua."
+        "history_text": "O Kiso Desk nasceu como um projeto independente com o objetivo de criar uma experiência moderna de prática de digitação. O que começou como uma ideia simples evolui hoje para uma plataforma centrada em lições, progresso, estatísticas e melhoria contínua."
       }
     },
     "page": {
       "metadata": {
-        "title": "Aprenda a escrever no teclado",
-        "description": "Melhore a sua velocidade e precisão ao escrever com lições interativas."
+        "title": "Aprenda dactilografia",
+        "description": "Melhore a sua velocidade e precisão."
       },
       "general": {
         "altNight": "Ilustração de um quarto à noite com uma pessoa e um gato",
         "altDay": "Ilustração de um quarto durante o dia com uma pessoa a programar e um gato",
         "interactiveLessons": "Lições interativas",
-        "interactiveLessonsDescription": "Aprenda com cursos estruturados",
+        "coursesTitle": "Cursos estruturados",
+        "interactiveLessonsDescription": "Aprenda com lições progressivas",
         "freePractice": "Prática livre",
-        "freePracticeDescription": "Treine ao seu próprio ritmo",
-        "dashboardDescription": "Consulte as suas estatísticas",
-        "rankingDescription": "Compita globalmente",
+        "freePracticeDescription": "Pratique ao seu próprio ritmo",
+        "dashboardTitle": "Acompanhe o seu progresso",
+        "dashboardDescription": "Velocidade, precisão e erros",
+        "rankingDescription": "Compare os seus resultados e mantenha-se motivado",
         "title1": "Domine a",
-        "title2": "escrita no teclado",
-        "subtitle1": "Melhore a sua velocidade e precisão",
+        "title2": "dactilografia",
+        "subtitle1": "Melhore a sua velocidade e precisão com exercícios personalizados de acordo com o seu idioma, teclado e erros mais frequentes.",
+        "benefitFree": "100% gratuito",
+        "benefitNoRegistration": "Sem registo obrigatório",
+        "benefitBrowser": "No seu navegador",
+        "benefitLanguageKeyboard": "Adaptada ao seu idioma e teclado",
+        "immediateAccessTitle": "Acesso imediato",
+        "learningTitle": "Mais do que um teste de velocidade",
+        "learningDescription": "O KisoDesk é um treinador adaptativo de dactilografia. Não se limita a medir quantas palavras escreve por minuto, permitindo-lhe também praticar exatamente aquilo que precisa de melhorar para progredir mais rapidamente.",
+        "resultsTitle": "Resultados que o ajudam a melhorar",
+        "metricWpm": "Palavras por minuto (PPM)",
+        "metricAccuracy": "Precisão de escrita",
+        "metricErrors": "Erros e letras a reforçar",
+        "metricHistory": "Histórico e evolução",
         "learn": "Aprenda",
         "guidedLessons": "Lições guiadas",
-        "practiceAction": "Pratique",
-        "typingExercises": "Exercícios de escrita no teclado",
+        "practiceAction": "Prática personalizada",
+        "typingExercises": "Identifica as suas dificuldades e cria exercícios adaptados a si",
+        "languageKeyboardTitle": "O seu idioma e o seu teclado são importantes",
+        "languageKeyboardInterface": "Interface disponível no seu idioma",
+        "languageKeyboardContent": "Conteúdo adaptado ao seu idioma",
+        "languageKeyboardLayouts": "Disposições de teclado personalizáveis",
         "track": "Acompanhe",
         "progressAndStats": "Progresso e estatísticas",
         "compete": "Compita",
-        "globalRanking": "Ranking global"
+        "globalRanking": "Classificação global"
       }
     }
   },
@@ -1236,7 +1254,7 @@
   "practice": {
     "general": {
       "title": "Teste de escrita",
-      "subtitle": "Melhore a sua velocidade e precisão com textos personalizados",
+      "subtitle": "Melhore a sua velocidade e precisão com exercícios personalizados de acordo com o seu idioma, teclado e erros mais frequentes.",
       "freeTitle": "Teste de velocidade de escrita",
       "freeSubtitle": "Experimente um texto curto e descubra a sua velocidade e precisão ao escrever.",
       "adaptiveTitle": "Pratique as teclas em que mais erra",

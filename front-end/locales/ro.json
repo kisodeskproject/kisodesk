@@ -268,13 +268,13 @@
         "subtitle": "O platformă pentru exersarea tastării într-un mod clar, consecvent și măsurabil",
         "project_title": "Proiectul",
         "project_text": "Kiso Desk este un proiect independent axat pe crearea unei experiențe clare și practice pentru învățarea tastării.",
-        "project_status_text": "Este conceput ca un spațiu în care oricine, indiferent de nivelul de experiență, poate exersa constant și poate observa îmbunătățiri reale. Accentul este pus pe învățarea continuă, utilitate și atenția la detalii, oferind un instrument potrivit nevoilor actuale.",
+        "project_status_text": "Este conceput ca un spațiu în care oricine, indiferent de nivelul de experiență, poate exersa constant și poate observa îmbunătățiri reale. Accentul este pus pe învățarea continuă, utilitatea practică și atenția la detalii, oferind un instrument adaptat nevoilor actuale.",
         "mission_title": "Misiunea noastră",
-        "mission_text": "La Kiso Desk credem că tastarea este o abilitate esențială în lumea digitală. Misiunea noastră este să facem învățarea tastării rapide și precise accesibilă, practică și eficientă pentru oricine, indiferent de nivelul de experiență.",
+        "mission_text": "La Kiso Desk, credem că tastarea este o abilitate esențială în lumea digitală. Misiunea noastră este să facem învățarea tastării rapide și precise accesibilă, practică și eficientă pentru oricine, indiferent de nivelul de experiență.",
         "vision_title": "Viziunea noastră",
-        "vision_text": "Să construim un instrument util pentru îmbunătățirea vitezei, preciziei și încrederii la tastare, printr-o experiență modernă, clară și axată pe exersare constantă.",
+        "vision_text": "Să construim un instrument util pentru îmbunătățirea vitezei, preciziei și încrederii la tastare, printr-o experiență modernă, clară și axată pe exersarea constantă.",
         "history_title": "Povestea noastră",
-        "history_text": "Kiso Desk a început ca un proiect independent menit să creeze o experiență modernă de exersare a tastării. Ceea ce a pornit ca o idee simplă evoluează astăzi într-o platformă axată pe lecții, progres, statistici și îmbunătățire continuă."
+        "history_text": "Kiso Desk a luat naștere ca un proiect independent pentru a crea o experiență modernă de exersare a tastării. Ceea ce a început ca o idee simplă evoluează astăzi într-o platformă axată pe lecții, progres, statistici și îmbunătățire continuă."
       }
     },
     "cookies": {
@@ -583,25 +583,43 @@
     "page": {
       "metadata": {
         "title": "Învață să tastezi",
-        "description": "Îmbunătățește-ți viteza și precizia cu lecții interactive de tastare."
+        "description": "Îmbunătățește-ți viteza și precizia."
       },
       "general": {
         "altNight": "Ilustrație a unei camere pe timp de noapte, cu o persoană și o pisică",
         "altDay": "Ilustrație a unei camere pe timp de zi, cu o persoană care programează și o pisică",
         "interactiveLessons": "Lecții interactive",
-        "interactiveLessonsDescription": "Învață cu ajutorul cursurilor structurate",
+        "coursesTitle": "Cursuri structurate",
+        "interactiveLessonsDescription": "Învață cu ajutorul unor lecții progresive",
         "freePractice": "Exersare liberă",
         "freePracticeDescription": "Exersează în ritmul tău",
-        "dashboardDescription": "Vezi statisticile tale",
-        "rankingDescription": "Concurează la nivel global",
+        "dashboardTitle": "Urmărește-ți progresul",
+        "dashboardDescription": "Viteză, precizie și greșeli",
+        "rankingDescription": "Compară-ți rezultatele și menține-ți motivația",
         "title1": "Stăpânește",
         "title2": "tastarea",
-        "subtitle1": "Îmbunătățește-ți viteza și precizia ",
+        "subtitle1": "Îmbunătățește-ți viteza și precizia cu exerciții personalizate în funcție de limba, tastatura și greșelile tale frecvente.",
+        "benefitFree": "100% gratuit",
+        "benefitNoRegistration": "Fără înregistrare obligatorie",
+        "benefitBrowser": "Direct în browserul tău",
+        "benefitLanguageKeyboard": "Adaptată limbii și tastaturii tale",
+        "immediateAccessTitle": "Acces imediat",
+        "learningTitle": "Mai mult decât un test de viteză",
+        "learningDescription": "KisoDesk este un antrenor adaptiv de tastare. Nu doar măsoară câte cuvinte tastezi pe minut, ci te ajută să exersezi exact ceea ce trebuie să îmbunătățești pentru a progresa mai rapid.",
+        "resultsTitle": "Rezultate care te ajută să progresezi",
+        "metricWpm": "Cuvinte pe minut (CPM)",
+        "metricAccuracy": "Precizia tastării",
+        "metricErrors": "Greșeli și litere care trebuie exersate",
+        "metricHistory": "Istoric și evoluție",
         "learn": "Învață",
         "guidedLessons": "Lecții ghidate",
-        "practiceAction": "Exersează",
-        "typingExercises": "Exerciții de tastare",
-        "track": "Măsoară",
+        "practiceAction": "Exersare personalizată",
+        "typingExercises": "Îți identifică dificultățile și generează exerciții adaptate nevoilor tale",
+        "languageKeyboardTitle": "Limba și tastatura ta contează",
+        "languageKeyboardInterface": "Interfață disponibilă în limba ta",
+        "languageKeyboardContent": "Conținut adaptat limbii tale",
+        "languageKeyboardLayouts": "Aspecte de tastatură personalizabile",
+        "track": "Urmărește",
         "progressAndStats": "Progres și statistici",
         "compete": "Concurează",
         "globalRanking": "Clasament global"
@@ -1236,7 +1254,7 @@
   "practice": {
     "general": {
       "title": "Test de tastare",
-      "subtitle": "Îmbunătățește-ți viteza și precizia cu texte personalizate",
+      "subtitle": "Îmbunătățește-ți viteza și precizia cu exerciții personalizate în funcție de limba, tastatura și greșelile tale frecvente.",
       "freeTitle": "Test de viteză de tastare",
       "freeSubtitle": "Încearcă un text scurt și descoperă viteza și precizia ta de tastare.",
       "adaptiveTitle": "Exersează tastele la care greșești cel mai des",

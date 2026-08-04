@@ -261,20 +261,20 @@
     "about": {
       "metadata": {
         "title": "A Kiso Deskről",
-        "description": "Ismerje meg a Kiso Desket és a vakírás tanulásának gyakorlatias megközelítését."
+        "description": "Ismerd meg a Kiso Desket és a gépeléstanulás gyakorlatias megközelítését."
       },
       "general": {
         "title": "A Kiso Deskről",
-        "subtitle": "Platform az átlátható, rendszeres és mérhető gépelési gyakorláshoz",
+        "subtitle": "Egy platform a gépelés átlátható, rendszeres és mérhető gyakorlásához",
         "project_title": "A projekt",
-        "project_text": "A Kiso Desk egy független projekt, amelynek célja egy átlátható és gyakorlatias vakírástanulási élmény létrehozása.",
-        "project_status_text": "Olyan térnek készült, ahol tapasztalati szinttől függetlenül bárki rendszeresen gyakorolhat és valódi fejlődést érhet el. A hangsúly a folyamatos tanuláson, a gyakorlatias használaton és a részletekre való odafigyelésen van, a mai igényekhez hasznos eszközt kínálva.",
+        "project_text": "A Kiso Desk egy független projekt, amelynek célja, hogy átlátható és gyakorlatias tanulási élményt nyújtson a gépelés elsajátításához.",
+        "project_status_text": "Olyan felületnek készült, ahol tapasztalati szinttől függetlenül bárki rendszeresen gyakorolhat, és valódi fejlődést érhet el. A hangsúly a folyamatos tanuláson, a gyakorlatiasságon és a részletekre való odafigyelésen van, így a platform a mai igényekhez igazodó, hasznos eszközt kínál.",
         "mission_title": "Küldetésünk",
-        "mission_text": "A Kiso Desknél úgy véljük, hogy a vakírás alapvető készség a digitális világban. Küldetésünk, hogy a gyors és pontos gépelés elsajátítása mindenki számára hozzáférhető, gyakorlatias és hatékony legyen, tapasztalati szinttől függetlenül.",
+        "mission_text": "A Kiso Desknél úgy gondoljuk, hogy a gépelés alapvető készség a digitális világban. Küldetésünk, hogy a gyors és pontos gépelés elsajátítását mindenki számára elérhetővé, gyakorlatiasabbá és hatékonyabbá tegyük, tapasztalati szinttől függetlenül.",
         "vision_title": "Jövőképünk",
-        "vision_text": "Hasznos eszköz létrehozása a gépelési sebesség, pontosság és magabiztosság javításához, modern, átlátható és rendszeres gyakorlásra épülő élménnyel.",
+        "vision_text": "Egy hasznos eszköz létrehozása, amely modern, átlátható és a rendszeres gyakorlásra összpontosító élményen keresztül segít fejleszteni a gépelési sebességet, pontosságot és magabiztosságot.",
         "history_title": "Történetünk",
-        "history_text": "A Kiso Desk független projektként indult, hogy modern gépelésgyakorlási élményt hozzon létre. Ami egyszerű ötletként kezdődött, mára leckékre, előrehaladásra, statisztikákra és folyamatos fejlődésre összpontosító platformmá alakul."
+        "history_text": "A Kiso Desk független projektként indult azzal a céllal, hogy modern gépelésgyakorlási élményt teremtsen. Ami egyszerű ötletként kezdődött, mára leckékre, fejlődésre, statisztikákra és folyamatos fejlesztésre összpontosító platformmá fejlődik."
       }
     },
     "cookies": {
@@ -582,28 +582,46 @@
     },
     "page": {
       "metadata": {
-        "title": "Tanuljon vakon gépelni",
-        "description": "Javítsa sebességét és pontosságát interaktív gépelési leckékkel."
+        "title": "Tanulj meg gépelni",
+        "description": "Javítsd a sebességedet és a pontosságodat."
       },
       "general": {
-        "altNight": "Éjszakai szoba illusztrációja egy személlyel és egy macskával",
-        "altDay": "Nappali szoba illusztrációja egy programozó személlyel és egy macskával",
+        "altNight": "Éjszakai szobát ábrázoló illusztráció egy személlyel és egy macskával",
+        "altDay": "Nappali szobát ábrázoló illusztráció egy programozó személlyel és egy macskával",
         "interactiveLessons": "Interaktív leckék",
-        "interactiveLessonsDescription": "Tanuljon strukturált kurzusokkal",
+        "coursesTitle": "Strukturált tanfolyamok",
+        "interactiveLessonsDescription": "Tanulj fokozatosan felépített leckékkel",
         "freePractice": "Szabad gyakorlás",
-        "freePracticeDescription": "Gyakoroljon a saját tempójában",
-        "dashboardDescription": "Tekintse meg statisztikáit",
-        "rankingDescription": "Versenyezzen világszerte",
-        "title1": "Sajátítsa el a",
-        "title2": "vakírást",
-        "subtitle1": "Javítsa sebességét és pontosságát ",
-        "learn": "Tanulás",
+        "freePracticeDescription": "Gyakorolj a saját tempódban",
+        "dashboardTitle": "Kövesd a fejlődésedet",
+        "dashboardDescription": "Sebesség, pontosság és hibák",
+        "rankingDescription": "Hasonlítsd össze az eredményeidet, és maradj motivált",
+        "title1": "Sajátítsd el a",
+        "title2": "tízujjas gépelést",
+        "subtitle1": "Javítsd a sebességedet és a pontosságodat a nyelvedhez, billentyűzetedhez és leggyakoribb hibáidhoz igazított gyakorlatokkal.",
+        "benefitFree": "100%-ban ingyenes",
+        "benefitNoRegistration": "Nem kötelező regisztrálni",
+        "benefitBrowser": "A böngésződben",
+        "benefitLanguageKeyboard": "A nyelvedhez és billentyűzetedhez igazítva",
+        "immediateAccessTitle": "Azonnali hozzáférés",
+        "learningTitle": "Több mint egy sebességteszt",
+        "learningDescription": "A KisoDesk egy adaptív gépelésoktató. Nemcsak azt méri, hány szót gépelsz percenként, hanem abban is segít, hogy azt gyakorold, amin valóban javítanod kell a gyorsabb fejlődéshez.",
+        "resultsTitle": "Eredmények, amelyek segítenek fejlődni",
+        "metricWpm": "Szó percenként (WPM)",
+        "metricAccuracy": "Gépelési pontosság",
+        "metricErrors": "Hibák és gyakorlásra szoruló betűk",
+        "metricHistory": "Előzmények és fejlődés",
+        "learn": "Tanulj",
         "guidedLessons": "Vezetett leckék",
-        "practiceAction": "Gyakorlás",
-        "typingExercises": "Gépelési gyakorlatok",
-        "track": "Követés",
-        "progressAndStats": "Előrehaladás és statisztikák",
-        "compete": "Versenyzés",
+        "practiceAction": "Személyre szabott gyakorlás",
+        "typingExercises": "Felismeri a nehézségeidet, és személyre szabott gyakorlatokat készít",
+        "languageKeyboardTitle": "A nyelved és a billentyűzeted is számít",
+        "languageKeyboardInterface": "A nyelvedre lokalizált felület",
+        "languageKeyboardContent": "A nyelvedhez igazított tartalom",
+        "languageKeyboardLayouts": "Testreszabható billentyűzetkiosztások",
+        "track": "Kövesd",
+        "progressAndStats": "Fejlődés és statisztikák",
+        "compete": "Versenyezz",
         "globalRanking": "Globális ranglista"
       }
     }
@@ -1236,7 +1254,7 @@
   "practice": {
     "general": {
       "title": "Gépelési teszt",
-      "subtitle": "Javítsa sebességét és pontosságát személyre szabott szövegekkel",
+      "subtitle": "Javítsd a sebességedet és a pontosságodat a nyelvedhez, billentyűzetedhez és leggyakoribb hibáidhoz igazított gyakorlatokkal.",
       "freeTitle": "Gépelési sebességteszt",
       "freeSubtitle": "Próbáljon ki egy rövid szöveget, és ismerje meg gépelési sebességét és pontosságát.",
       "adaptiveTitle": "Gyakorolja azokat a billentyűket, amelyeknél a legtöbbet hibázik",

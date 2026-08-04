@@ -306,44 +306,62 @@
     "about": {
       "metadata": {
         "title": "Om Kiso Desk",
-        "description": "Lær Kiso Desk og platformens praktiske tilgang til blindskrift at kende."
+        "description": "Lær Kiso Desk at kende og se, hvordan platformen gør det praktisk at lære at skrive på tastatur."
       },
       "general": {
         "title": "Om Kiso Desk",
-        "subtitle": "En platform til tydelig, regelmæssig og målbar træning i blindskrift",
+        "subtitle": "En platform til overskuelig, regelmæssig og målbar træning i tastaturskrivning",
         "project_title": "Projektet",
-        "project_text": "Kiso Desk er et uafhængigt projekt, der fokuserer på at skabe en overskuelig og praktisk oplevelse til at lære blindskrift.",
-        "project_status_text": "Det er tænkt som et sted, hvor alle uanset erfaringsniveau kan træne regelmæssigt og opleve mærkbare fremskridt. Fokus er på løbende læring, anvendelighed og sans for detaljer, så værktøjet passer til nutidens behov.",
+        "project_text": "Kiso Desk er et uafhængigt projekt, der fokuserer på at skabe en overskuelig og praktisk oplevelse til at lære at skrive på tastatur.",
+        "project_status_text": "Det er udviklet som et sted, hvor alle, uanset erfaringsniveau, kan træne regelmæssigt og opleve reelle forbedringer. Fokus er på løbende læring, praktisk anvendelighed og sans for detaljer, så platformen tilbyder et nyttigt værktøj, der passer til nutidens behov.",
         "mission_title": "Vores mission",
-        "mission_text": "Hos Kiso Desk mener vi, at blindskrift er en vigtig færdighed i den digitale verden. Vores mission er at gøre det tilgængeligt, praktisk og effektivt for alle at lære at skrive hurtigt og præcist, uanset erfaringsniveau.",
+        "mission_text": "Hos Kiso Desk mener vi, at tastaturskrivning er en vigtig færdighed i den digitale verden. Vores mission er at gøre det tilgængeligt, praktisk og effektivt for alle at lære at skrive hurtigt og præcist, uanset erfaringsniveau.",
         "vision_title": "Vores vision",
-        "vision_text": "At skabe et nyttigt værktøj, der forbedrer skrivehastighed, præcision og selvtillid gennem en moderne, overskuelig oplevelse med fokus på regelmæssig træning.",
+        "vision_text": "At skabe et nyttigt værktøj til at forbedre skrivehastighed, præcision og selvsikkerhed gennem en moderne og overskuelig oplevelse med fokus på regelmæssig træning.",
         "history_title": "Vores historie",
-        "history_text": "Kiso Desk begyndte som et uafhængigt projekt med det formål at skabe en moderne oplevelse til træning i blindskrift. Det, der startede som en enkel idé, udvikler sig i dag til en platform med fokus på lektioner, fremskridt, statistik og løbende forbedring."
+        "history_text": "Kiso Desk begyndte som et uafhængigt projekt med det formål at skabe en moderne oplevelse til træning i tastaturskrivning. Det, der startede som en enkel idé, udvikler sig i dag til en platform med fokus på lektioner, fremskridt, statistik og løbende forbedring."
       }
     },
     "page": {
       "metadata": {
         "title": "Lær blindskrift",
-        "description": "Forbedr din hastighed og præcision med interaktive lektioner i blindskrift."
+        "description": "Forbedr din hastighed og præcision."
       },
       "general": {
         "altNight": "Illustration af et værelse om natten med en person og en kat",
         "altDay": "Illustration af et værelse om dagen med en person, der programmerer, og en kat",
         "interactiveLessons": "Interaktive lektioner",
-        "interactiveLessonsDescription": "Lær med strukturerede kurser",
+        "coursesTitle": "Strukturerede kurser",
+        "interactiveLessonsDescription": "Lær med lektioner, der gradvist bliver sværere",
         "freePractice": "Fri træning",
         "freePracticeDescription": "Træn i dit eget tempo",
-        "dashboardDescription": "Se din statistik",
-        "rankingDescription": "Konkurrér globalt",
+        "dashboardTitle": "Følg dine fremskridt",
+        "dashboardDescription": "Hastighed, præcision og fejl",
+        "rankingDescription": "Sammenlign dine resultater, og hold motivationen oppe",
         "title1": "Mestr",
         "title2": "blindskrift",
-        "subtitle1": "Forbedr din hastighed og præcision ",
+        "subtitle1": "Forbedr din hastighed og præcision med øvelser, der er tilpasset dit sprog, dit tastatur og dine hyppigste fejl.",
+        "benefitFree": "100 % gratis",
+        "benefitNoRegistration": "Ingen obligatorisk registrering",
+        "benefitBrowser": "Direkte i din browser",
+        "benefitLanguageKeyboard": "Tilpasset dit sprog og tastatur",
+        "immediateAccessTitle": "Øjeblikkelig adgang",
+        "learningTitle": "Mere end blot en hastighedstest",
+        "learningDescription": "KisoDesk er et adaptivt træningsværktøj til blindskrift. Du måler ikke kun, hvor mange ord du skriver i minuttet, men træner også præcis det, du har brug for at forbedre, så du kan udvikle dig hurtigere.",
+        "resultsTitle": "Resultater, der hjælper dig med at blive bedre",
+        "metricWpm": "Ord pr. minut (WPM)",
+        "metricAccuracy": "Skrivepræcision",
+        "metricErrors": "Fejl og bogstaver, du bør øve",
+        "metricHistory": "Historik og udvikling",
         "learn": "Lær",
         "guidedLessons": "Guidede lektioner",
-        "practiceAction": "Træn",
-        "typingExercises": "Skriveøvelser",
-        "track": "Mål",
+        "practiceAction": "Personlig træning",
+        "typingExercises": "Finder dine udfordringer og opretter øvelser, der er skræddersyet til dig",
+        "languageKeyboardTitle": "Dit sprog og dit tastatur gør en forskel",
+        "languageKeyboardInterface": "Brugerflade på dit sprog",
+        "languageKeyboardContent": "Indhold tilpasset dit sprog",
+        "languageKeyboardLayouts": "Tastaturlayouts, der kan tilpasses",
+        "track": "Følg",
         "progressAndStats": "Fremskridt og statistik",
         "compete": "Konkurrér",
         "globalRanking": "Global rangliste"
@@ -1236,7 +1254,7 @@
   "practice": {
     "general": {
       "title": "Skrivetest",
-      "subtitle": "Forbedr din hastighed og nøjagtighed med tilpassede tekster",
+      "subtitle": "Forbedr din hastighed og præcision med øvelser, der er tilpasset dit sprog, dit tastatur og dine hyppigste fejl.",
       "freeTitle": "Test af skrivehastighed",
       "freeSubtitle": "Prøv at skrive en kort tekst, og se din hastighed og nøjagtighed.",
       "adaptiveTitle": "Øv de taster, du oftest laver fejl på",

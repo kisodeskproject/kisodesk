@@ -306,47 +306,65 @@
     "about": {
       "metadata": {
         "title": "O Kiso Desku",
-        "description": "Saznajte više o Kiso Desku i njegovu praktičnom pristupu učenju slijepog tipkanja."
+        "description": "Upoznajte Kiso Desk i njegov praktičan pristup učenju tipkanja."
       },
       "general": {
         "title": "O Kiso Desku",
-        "subtitle": "Platforma za jasno, dosljedno i mjerljivo vježbanje tipkanja",
+        "subtitle": "Platforma za jasno, redovito i mjerljivo vježbanje tipkanja",
         "project_title": "Projekt",
-        "project_text": "Kiso Desk neovisan je projekt usmjeren na stvaranje jasnog i praktičnog iskustva za učenje slijepog tipkanja.",
-        "project_status_text": "Osmišljen je kao prostor u kojem svatko, bez obzira na razinu iskustva, može redovito vježbati i primijetiti stvaran napredak. Naglasak je na kontinuiranom učenju, praktičnosti i pažnji prema detaljima, uz koristan alat prilagođen današnjim potrebama.",
+        "project_text": "Kiso Desk je neovisan projekt usmjeren na stvaranje jasnog i praktičnog iskustva za učenje tipkanja.",
+        "project_status_text": "Zamišljen je kao prostor u kojem svatko, bez obzira na razinu iskustva, može redovito vježbati i primijetiti stvarni napredak. Naglasak je na kontinuiranom učenju, praktičnosti i posvećenosti detaljima, čime se pruža koristan alat prilagođen današnjim potrebama.",
         "mission_title": "Naša misija",
-        "mission_text": "U Kiso Desku vjerujemo da je slijepo tipkanje ključna vještina u digitalnom svijetu. Naša je misija učiniti učenje brzog i preciznog tipkanja dostupnim, praktičnim i učinkovitim za sve, bez obzira na razinu iskustva.",
+        "mission_text": "U Kiso Desku vjerujemo da je tipkanje ključna vještina u digitalnom svijetu. Naša je misija učiniti učenje brzog i preciznog tipkanja dostupnim, praktičnim i učinkovitim za svakoga, bez obzira na razinu iskustva.",
         "vision_title": "Naša vizija",
-        "vision_text": "Izgraditi koristan alat za poboljšanje brzine, preciznosti i samopouzdanja pri tipkanju kroz moderno i jasno iskustvo usmjereno na redovitu vježbu.",
+        "vision_text": "Izraditi koristan alat za poboljšanje brzine, preciznosti i samopouzdanja pri tipkanju, uz moderno i jasno iskustvo usmjereno na redovito vježbanje.",
         "history_title": "Naša priča",
-        "history_text": "Kiso Desk započeo je kao neovisan projekt za stvaranje modernog iskustva vježbanja tipkanja. Ono što je počelo kao jednostavna ideja danas se razvija u platformu usmjerenu na lekcije, napredak, statistiku i kontinuirano poboljšanje."
+        "history_text": "Kiso Desk nastao je kao neovisan projekt s ciljem stvaranja modernog iskustva za vježbanje tipkanja. Ono što je započelo kao jednostavna ideja danas se razvija u platformu usmjerenu na lekcije, napredak, statistiku i kontinuirano poboljšavanje."
       }
     },
     "page": {
       "metadata": {
-        "title": "Naučite slijepo tipkati",
-        "description": "Poboljšajte brzinu i preciznost interaktivnim lekcijama tipkanja."
+        "title": "Nauči tipkati",
+        "description": "Poboljšaj svoju brzinu i preciznost."
       },
       "general": {
-        "altNight": "Ilustracija noćne sobe s osobom i mačkom",
-        "altDay": "Ilustracija dnevne sobe s osobom koja programira i mačkom",
+        "altNight": "Ilustracija sobe noću s osobom i mačkom",
+        "altDay": "Ilustracija sobe tijekom dana s osobom koja programira i mačkom",
         "interactiveLessons": "Interaktivne lekcije",
-        "interactiveLessonsDescription": "Učite uz strukturirane tečajeve",
-        "freePractice": "Slobodna vježba",
-        "freePracticeDescription": "Vježbajte vlastitim tempom",
-        "dashboardDescription": "Pregledajte svoju statistiku",
-        "rankingDescription": "Natječite se globalno",
-        "title1": "Svladajte",
-        "title2": "slijepo tipkanje",
-        "subtitle1": "Poboljšajte brzinu i preciznost ",
-        "learn": "Učite",
+        "coursesTitle": "Strukturirani tečajevi",
+        "interactiveLessonsDescription": "Uči uz lekcije koje postupno napreduju",
+        "freePractice": "Slobodno vježbanje",
+        "freePracticeDescription": "Vježbaj vlastitim tempom",
+        "dashboardTitle": "Prati svoj napredak",
+        "dashboardDescription": "Brzina, preciznost i pogreške",
+        "rankingDescription": "Usporedi svoje rezultate i ostani motiviran",
+        "title1": "Ovladaj",
+        "title2": "tipkanjem",
+        "subtitle1": "Poboljšaj svoju brzinu i preciznost uz vježbe prilagođene tvojem jeziku, tipkovnici i najčešćim pogreškama.",
+        "benefitFree": "100 % besplatno",
+        "benefitNoRegistration": "Bez obvezne registracije",
+        "benefitBrowser": "U tvojem pregledniku",
+        "benefitLanguageKeyboard": "Prilagođeno tvojem jeziku i tipkovnici",
+        "immediateAccessTitle": "Trenutačni pristup",
+        "learningTitle": "Više od testa brzine",
+        "learningDescription": "KisoDesk je prilagodljiv trener tipkanja. Ne mjeri samo koliko riječi napišeš u minuti, već ti omogućuje da vježbaš upravo ono što trebaš poboljšati kako bi brže napredovao.",
+        "resultsTitle": "Rezultati koji ti pomažu da napreduješ",
+        "metricWpm": "Riječi u minuti (WPM)",
+        "metricAccuracy": "Preciznost tipkanja",
+        "metricErrors": "Pogreške i slova koja treba dodatno vježbati",
+        "metricHistory": "Povijest i napredak",
+        "learn": "Uči",
         "guidedLessons": "Vođene lekcije",
-        "practiceAction": "Vježbajte",
-        "typingExercises": "Vježbe tipkanja",
-        "track": "Pratite",
+        "practiceAction": "Personalizirano vježbanje",
+        "typingExercises": "Prepoznaje tvoje poteškoće i izrađuje vježbe prilagođene tebi",
+        "languageKeyboardTitle": "Tvoj jezik i tipkovnica su važni",
+        "languageKeyboardInterface": "Sučelje dostupno na tvojem jeziku",
+        "languageKeyboardContent": "Sadržaj prilagođen tvojem jeziku",
+        "languageKeyboardLayouts": "Prilagodljivi rasporedi tipkovnice",
+        "track": "Prati",
         "progressAndStats": "Napredak i statistika",
-        "compete": "Natječite se",
-        "globalRanking": "Globalna rang-lista"
+        "compete": "Natječi se",
+        "globalRanking": "Globalna ljestvica"
       }
     }
   },
@@ -1236,7 +1254,7 @@
   "practice": {
     "general": {
       "title": "Test tipkanja",
-      "subtitle": "Poboljšajte brzinu i preciznost prilagođenim tekstovima",
+      "subtitle": "Poboljšaj svoju brzinu i preciznost uz vježbe prilagođene tvojem jeziku, tipkovnici i najčešćim pogreškama.",
       "freeTitle": "Test brzine tipkanja",
       "freeSubtitle": "Isprobajte tipkanje kratkog teksta i otkrijte svoju brzinu i točnost.",
       "adaptiveTitle": "Vježbajte tipke na kojima najviše griješite",

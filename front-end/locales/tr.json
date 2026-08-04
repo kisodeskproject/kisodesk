@@ -306,44 +306,62 @@
     "about": {
       "metadata": {
         "title": "Kiso Desk Hakkında",
-        "description": "Kiso Desk'i ve pratik bir şekilde klavyede yazmayı öğrenmeye yönelik yaklaşımını keşfedin."
+        "description": "Kiso Desk'i ve klavye kullanımını öğrenmeye yönelik pratik yaklaşımını keşfedin."
       },
       "general": {
         "title": "Kiso Desk Hakkında",
-        "subtitle": "Açık, düzenli ve ölçülebilir biçimde klavyede yazma pratiği yapmak için bir platform",
+        "subtitle": "Klavye kullanımını açık, düzenli ve ölçülebilir bir şekilde geliştirmek için bir platform",
         "project_title": "Proje",
-        "project_text": "Kiso Desk, klavyede yazmayı öğrenmek için açık ve pratik bir deneyim oluşturmaya odaklanan bağımsız bir projedir.",
-        "project_status_text": "Deneyim düzeyi ne olursa olsun herkesin düzenli olarak pratik yapabileceği ve gerçek ilerlemeyi görebileceği bir alan olarak tasarlanmıştır. Günümüz ihtiyaçlarına uygun yararlı bir araç sunmak amacıyla sürekli öğrenmeye, kullanışlılığa ve ayrıntılara özen göstermeye odaklanır.",
+        "project_text": "Kiso Desk, klavye kullanımını öğrenmek için açık ve pratik bir deneyim oluşturmayı amaçlayan bağımsız bir projedir.",
+        "project_status_text": "Deneyim seviyesi ne olursa olsun herkesin düzenli olarak pratik yapabileceği ve gerçek gelişimini görebileceği bir alan olarak tasarlanmıştır. Sürekli öğrenmeye, pratikliğe ve ayrıntılara gösterilen özene odaklanarak günümüzün ihtiyaçlarına uygun, kullanışlı bir araç sunar.",
         "mission_title": "Misyonumuz",
-        "mission_text": "Kiso Desk olarak klavyede yazmanın dijital dünyada temel bir beceri olduğuna inanıyoruz. Misyonumuz, deneyim düzeyi ne olursa olsun herkesin hızlı ve doğru yazmayı erişilebilir, pratik ve etkili bir şekilde öğrenmesini sağlamaktır.",
+        "mission_text": "Kiso Desk olarak klavye kullanımının dijital dünyada temel bir beceri olduğuna inanıyoruz. Misyonumuz, hızlı ve doğru yazmayı öğrenmeyi deneyim seviyesi ne olursa olsun herkes için erişilebilir, pratik ve etkili hâle getirmektir.",
         "vision_title": "Vizyonumuz",
-        "vision_text": "Modern, açık ve düzenli pratiğe odaklanan bir deneyimle yazma hızını, doğruluğunu ve özgüvenini geliştirmeye yarayan faydalı bir araç oluşturmak.",
+        "vision_text": "Düzenli pratiğe odaklanan modern ve anlaşılır bir deneyimle yazma hızını, doğruluğunu ve özgüvenini geliştirmeye yardımcı olan kullanışlı bir araç oluşturmak.",
         "history_title": "Hikâyemiz",
-        "history_text": "Kiso Desk, modern bir klavyede yazma pratiği deneyimi oluşturmak için bağımsız bir proje olarak doğdu. Basit bir fikir olarak başlayan proje, bugün derslere, ilerlemeye, istatistiklere ve sürekli gelişime odaklanan bir platform olarak gelişiyor."
+        "history_text": "Kiso Desk, modern bir klavye pratiği deneyimi oluşturmak amacıyla bağımsız bir proje olarak doğdu. Basit bir fikir olarak başlayan proje, bugün derslere, ilerlemeye, istatistiklere ve sürekli gelişime odaklanan bir platforma dönüşüyor."
       }
     },
     "page": {
       "metadata": {
-        "title": "Klavyede yazmayı öğrenin",
-        "description": "Etkileşimli yazma dersleriyle hızınızı ve doğruluğunuzu geliştirin."
+        "title": "On parmak yazmayı öğren",
+        "description": "Hızını ve doğruluğunu geliştir."
       },
       "general": {
-        "altNight": "Bir kişi ve kedinin bulunduğu gece odası çizimi",
-        "altDay": "Programlama yapan bir kişi ve kedinin bulunduğu gündüz odası çizimi",
+        "altNight": "Gece vakti bir odada bir kişi ve bir kedinin bulunduğu illüstrasyon",
+        "altDay": "Gündüz vakti bir odada kod yazan bir kişi ve bir kedinin bulunduğu illüstrasyon",
         "interactiveLessons": "Etkileşimli dersler",
-        "interactiveLessonsDescription": "Yapılandırılmış kurslarla öğrenin",
-        "freePractice": "Serbest pratik",
-        "freePracticeDescription": "Kendi hızınızda çalışın",
-        "dashboardDescription": "İstatistiklerinizi görüntüleyin",
-        "rankingDescription": "Dünya çapında yarışın",
-        "title1": "Ustalaşın:",
-        "title2": "klavyede yazma",
-        "subtitle1": "Hızınızı ve doğruluğunuzu geliştirin ",
+        "coursesTitle": "Yapılandırılmış kurslar",
+        "interactiveLessonsDescription": "Aşamalı derslerle öğren",
+        "freePractice": "Serbest alıştırma",
+        "freePracticeDescription": "Kendi hızında çalış",
+        "dashboardTitle": "İlerlemeni takip et",
+        "dashboardDescription": "Hız, doğruluk ve hatalar",
+        "rankingDescription": "Sonuçlarını karşılaştır ve motivasyonunu koru",
+        "title1": "On parmak",
+        "title2": "yazmada ustalaş",
+        "subtitle1": "Diline, klavyene ve en sık yaptığın hatalara göre kişiselleştirilmiş alıştırmalarla hızını ve doğruluğunu geliştir.",
+        "benefitFree": "%100 ücretsiz",
+        "benefitNoRegistration": "Kayıt zorunluluğu yok",
+        "benefitBrowser": "Doğrudan tarayıcında",
+        "benefitLanguageKeyboard": "Diline ve klavyene uyarlanmış",
+        "immediateAccessTitle": "Anında erişim",
+        "learningTitle": "Bir hız testinden daha fazlası",
+        "learningDescription": "KisoDesk, uyarlanabilir bir on parmak yazma eğitmenidir. Yalnızca dakikada kaç kelime yazdığını ölçmekle kalmaz, daha hızlı ilerleyebilmen için gerçekten geliştirmen gereken alanlarda çalışmana da yardımcı olur.",
+        "resultsTitle": "Gelişmene yardımcı olan sonuçlar",
+        "metricWpm": "Dakikadaki kelime sayısı (WPM)",
+        "metricAccuracy": "Yazma doğruluğu",
+        "metricErrors": "Hatalar ve geliştirilmesi gereken harfler",
+        "metricHistory": "Geçmiş ve gelişim",
         "learn": "Öğren",
         "guidedLessons": "Rehberli dersler",
-        "practiceAction": "Pratik yap",
-        "typingExercises": "Yazma alıştırmaları",
-        "track": "Ölç",
+        "practiceAction": "Kişiselleştirilmiş alıştırmalar",
+        "typingExercises": "Zorlandığın noktaları belirler ve sana özel alıştırmalar oluşturur",
+        "languageKeyboardTitle": "Dilin ve klavyen önemlidir",
+        "languageKeyboardInterface": "Diline uyarlanmış arayüz",
+        "languageKeyboardContent": "Diline uyarlanmış içerik",
+        "languageKeyboardLayouts": "Özelleştirilebilir klavye düzenleri",
+        "track": "Takip et",
         "progressAndStats": "İlerleme ve istatistikler",
         "compete": "Yarış",
         "globalRanking": "Küresel sıralama"
@@ -1236,7 +1254,7 @@
   "practice": {
     "general": {
       "title": "Yazma testi",
-      "subtitle": "Kişiselleştirilmiş metinlerle hızınızı ve doğruluğunuzu geliştirin",
+      "subtitle": "Diline, klavyene ve en sık yaptığın hatalara göre kişiselleştirilmiş alıştırmalarla hızını ve doğruluğunu geliştir.",
       "freeTitle": "Yazma hızı testi",
       "freeSubtitle": "Kısa bir metinle yazmayı deneyin ve hızınızı ile doğruluğunuzu keşfedin.",
       "adaptiveTitle": "En çok hata yaptığınız tuşları çalışın",

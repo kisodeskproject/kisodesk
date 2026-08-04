@@ -306,44 +306,62 @@
     "about": {
       "metadata": {
         "title": "O Kiso Desk",
-        "description": "Poznaj Kiso Desk i jego praktyczne podejście do nauki pisania bezwzrokowego."
+        "description": "Poznaj Kiso Desk i jego praktyczne podejście do nauki pisania na klawiaturze."
       },
       "general": {
         "title": "O Kiso Desk",
-        "subtitle": "Platforma do przejrzystego, regularnego i mierzalnego ćwiczenia pisania bezwzrokowego",
+        "subtitle": "Platforma do przejrzystego, regularnego i mierzalnego ćwiczenia pisania na klawiaturze",
         "project_title": "Projekt",
-        "project_text": "Kiso Desk to niezależny projekt skupiony na tworzeniu przejrzystego i praktycznego środowiska do nauki pisania bezwzrokowego.",
-        "project_status_text": "Został pomyślany jako miejsce, w którym każdy, niezależnie od poziomu doświadczenia, może regularnie ćwiczyć i dostrzegać rzeczywiste postępy. Nacisk położono na ciągłą naukę, praktyczność i dbałość o szczegóły, aby zapewnić narzędzie przydatne we współczesnym świecie.",
+        "project_text": "Kiso Desk to niezależny projekt, którego celem jest stworzenie przejrzystego i praktycznego środowiska do nauki pisania na klawiaturze.",
+        "project_status_text": "Platforma została zaprojektowana jako miejsce, w którym każdy, niezależnie od poziomu doświadczenia, może regularnie ćwiczyć i zauważać rzeczywiste postępy. Skupia się na ciągłej nauce, praktyczności i dbałości o szczegóły, oferując narzędzie dostosowane do współczesnych potrzeb.",
         "mission_title": "Nasza misja",
-        "mission_text": "W Kiso Desk wierzymy, że umiejętność sprawnego pisania na klawiaturze jest niezbędna w cyfrowym świecie. Naszą misją jest sprawienie, aby nauka szybkiego i dokładnego pisania była dostępna, praktyczna i skuteczna dla każdego, niezależnie od poziomu doświadczenia.",
+        "mission_text": "W Kiso Desk wierzymy, że sprawne pisanie na klawiaturze jest niezbędną umiejętnością w cyfrowym świecie. Naszą misją jest sprawienie, aby nauka szybkiego i precyzyjnego pisania była dostępna, praktyczna i skuteczna dla każdego, niezależnie od poziomu doświadczenia.",
         "vision_title": "Nasza wizja",
-        "vision_text": "Stworzyć przydatne narzędzie do zwiększania szybkości, dokładności i pewności podczas pisania, oferujące nowoczesne, przejrzyste doświadczenie nastawione na regularną praktykę.",
+        "vision_text": "Stworzyć przydatne narzędzie do poprawy szybkości, precyzji i pewności podczas pisania, zapewniające nowoczesne, przejrzyste środowisko skoncentrowane na regularnej praktyce.",
         "history_title": "Nasza historia",
-        "history_text": "Kiso Desk powstał jako niezależny projekt mający zapewnić nowoczesne środowisko do ćwiczenia pisania bezwzrokowego. To, co zaczęło się od prostego pomysłu, rozwija się dziś w platformę skupioną na lekcjach, postępach, statystykach i ciągłym doskonaleniu."
+        "history_text": "Kiso Desk powstał jako niezależny projekt mający na celu stworzenie nowoczesnego środowiska do ćwiczenia pisania na klawiaturze. To, co zaczęło się jako prosty pomysł, rozwija się dziś w platformę skupioną na lekcjach, postępach, statystykach i ciągłym doskonaleniu."
       }
     },
     "page": {
       "metadata": {
         "title": "Naucz się pisać bezwzrokowo",
-        "description": "Zwiększ szybkość i dokładność pisania dzięki interaktywnym lekcjom pisania bezwzrokowego."
+        "description": "Popraw swoją szybkość i dokładność."
       },
       "general": {
-        "altNight": "Ilustracja nocnego pokoju z osobą i kotem",
-        "altDay": "Ilustracja dziennego pokoju z osobą programującą i kotem",
+        "altNight": "Ilustracja pokoju nocą z osobą i kotem",
+        "altDay": "Ilustracja pokoju w ciągu dnia z programującą osobą i kotem",
         "interactiveLessons": "Interaktywne lekcje",
-        "interactiveLessonsDescription": "Ucz się dzięki uporządkowanym kursom",
-        "freePractice": "Ćwiczenie swobodne",
+        "coursesTitle": "Uporządkowane kursy",
+        "interactiveLessonsDescription": "Ucz się dzięki lekcjom o stopniowo rosnącym poziomie trudności",
+        "freePractice": "Swobodne ćwiczenia",
         "freePracticeDescription": "Ćwicz we własnym tempie",
-        "dashboardDescription": "Przeglądaj swoje statystyki",
-        "rankingDescription": "Rywalizuj z użytkownikami z całego świata",
+        "dashboardTitle": "Śledź swoje postępy",
+        "dashboardDescription": "Szybkość, dokładność i błędy",
+        "rankingDescription": "Porównuj swoje wyniki i utrzymuj motywację",
         "title1": "Opanuj",
         "title2": "pisanie bezwzrokowe",
-        "subtitle1": "Zwiększ szybkość i dokładność ",
+        "subtitle1": "Popraw swoją szybkość i dokładność dzięki ćwiczeniom dostosowanym do Twojego języka, klawiatury i najczęstszych błędów.",
+        "benefitFree": "W 100% za darmo",
+        "benefitNoRegistration": "Bez obowiązkowej rejestracji",
+        "benefitBrowser": "W Twojej przeglądarce",
+        "benefitLanguageKeyboard": "Dostosowane do Twojego języka i klawiatury",
+        "immediateAccessTitle": "Natychmiastowy dostęp",
+        "learningTitle": "Więcej niż test szybkości",
+        "learningDescription": "KisoDesk to adaptacyjny trener pisania na klawiaturze. Nie tylko mierzy liczbę słów wpisywanych na minutę, ale także pozwala ćwiczyć dokładnie to, co wymaga poprawy, aby szybciej robić postępy.",
+        "resultsTitle": "Wyniki, które pomagają Ci się doskonalić",
+        "metricWpm": "Słowa na minutę (WPM)",
+        "metricAccuracy": "Dokładność pisania",
+        "metricErrors": "Błędy i litery wymagające dodatkowych ćwiczeń",
+        "metricHistory": "Historia i postępy",
         "learn": "Ucz się",
         "guidedLessons": "Lekcje z przewodnikiem",
-        "practiceAction": "Ćwicz",
-        "typingExercises": "Ćwiczenia pisania",
-        "track": "Mierz",
+        "practiceAction": "Spersonalizowane ćwiczenia",
+        "typingExercises": "Wykrywa Twoje trudności i tworzy ćwiczenia dostosowane do Twoich potrzeb",
+        "languageKeyboardTitle": "Twój język i klawiatura mają znaczenie",
+        "languageKeyboardInterface": "Interfejs dostępny w Twoim języku",
+        "languageKeyboardContent": "Treści dostosowane do Twojego języka",
+        "languageKeyboardLayouts": "Konfigurowalne układy klawiatury",
+        "track": "Śledź",
         "progressAndStats": "Postępy i statystyki",
         "compete": "Rywalizuj",
         "globalRanking": "Ranking globalny"
@@ -1236,7 +1254,7 @@
   "practice": {
     "general": {
       "title": "Test pisania",
-      "subtitle": "Zwiększ szybkość i dokładność dzięki spersonalizowanym tekstom",
+      "subtitle": "Popraw swoją szybkość i dokładność dzięki ćwiczeniom dostosowanym do Twojego języka, klawiatury i najczęstszych błędów.",
       "freeTitle": "Test szybkości pisania",
       "freeSubtitle": "Napisz krótki tekst i poznaj swoją szybkość oraz dokładność pisania.",
       "adaptiveTitle": "Ćwicz klawisze, przy których najczęściej popełniasz błędy",

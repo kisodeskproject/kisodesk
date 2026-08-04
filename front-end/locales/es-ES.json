@@ -261,20 +261,20 @@
     "about": {
       "metadata": {
         "title": "Acerca de Kiso Desk",
-        "description": "Conoce Kiso Desk y su enfoque para aprender mecanografía de forma práctica."
+        "description": "Conoce Kiso Desk y su enfoque práctico para aprender mecanografía."
       },
       "general": {
         "title": "Sobre Kiso Desk",
         "subtitle": "Una plataforma para practicar mecanografía de forma clara, constante y medible",
         "project_title": "El proyecto",
-        "project_text": "Kiso Desk es un proyecto independiente enfocado en crear una experiencia clara y práctica para aprender mecanografía.",
-        "project_status_text": "Está pensado como un espacio donde cualquier persona, sin importar su nivel de experiencia, pueda practicar con constancia y notar mejoras reales. El enfoque está en el aprendizaje continuo, la practicidad y el cuidado por los detalles, ofreciendo una herramienta útil al contexto actual.",
-        "mission_title": "Nuestra Misión",
-        "mission_text": "En Kiso Desk creemos que la mecanografía es una habilidad esencial en el mundo digital. Nuestra misión es hacer que aprender a escribir rápido y con precisión sea accesible, práctico y efectivo para cualquier persona, sin importar su nivel de experiencia.",
-        "vision_title": "Nuestra Visión",
-        "vision_text": "Construir una herramienta útil para mejorar la velocidad, precisión y confianza al escribir, con una experiencia moderna, clara y enfocada en la práctica constante.",
-        "history_title": "Nuestra Historia",
-        "history_text": "Kiso Desk nació como un proyecto independiente para crear una experiencia moderna de práctica de mecanografía. Lo que comenzó como una idea simple, hoy evoluciona como una plataforma enfocada en lecciones, progreso, estadísticas y mejora continua."
+        "project_text": "Kiso Desk es un proyecto independiente centrado en crear una experiencia clara y práctica para aprender mecanografía.",
+        "project_status_text": "Está concebido como un espacio donde cualquier persona, independientemente de su nivel de experiencia, pueda practicar con constancia y observar mejoras reales. El enfoque se centra en el aprendizaje continuo, la utilidad práctica y el cuidado de los detalles, ofreciendo una herramienta adaptada a las necesidades actuales.",
+        "mission_title": "Nuestra misión",
+        "mission_text": "En Kiso Desk creemos que la mecanografía es una habilidad esencial en el mundo digital. Nuestra misión es hacer que aprender a escribir con rapidez y precisión sea accesible, práctico y eficaz para cualquier persona, independientemente de su nivel de experiencia.",
+        "vision_title": "Nuestra visión",
+        "vision_text": "Crear una herramienta útil para mejorar la velocidad, la precisión y la confianza al escribir, con una experiencia moderna, clara y centrada en la práctica constante.",
+        "history_title": "Nuestra historia",
+        "history_text": "Kiso Desk nació como un proyecto independiente para crear una experiencia moderna de práctica de mecanografía. Lo que comenzó como una idea sencilla evoluciona hoy como una plataforma centrada en las lecciones, el progreso, las estadísticas y la mejora continua."
       }
     },
     "cookies": {
@@ -583,24 +583,42 @@
     "page": {
       "metadata": {
         "title": "Aprende mecanografía",
-        "description": "Mejora tu velocidad y precisión ."
+        "description": "Mejora tu velocidad y precisión."
       },
       "general": {
-        "altNight": "Ilustración de una habitación nocturna con persona y un gato",
-        "altDay": "Ilustración de una habitación diurna con persona programando y un gato",
+        "altNight": "Ilustración de una habitación nocturna con una persona y un gato",
+        "altDay": "Ilustración de una habitación diurna con una persona programando y un gato",
         "interactiveLessons": "Lecciones interactivas",
-        "interactiveLessonsDescription": "Aprende con cursos estructurados",
+        "coursesTitle": "Cursos estructurados",
+        "interactiveLessonsDescription": "Aprende con lecciones progresivas",
         "freePractice": "Práctica libre",
-        "freePracticeDescription": "Entrena a tu propio ritmo",
-        "dashboardDescription": "Visualiza tus estadísticas",
-        "rankingDescription": "Compite globalmente",
+        "freePracticeDescription": "Practica a tu propio ritmo",
+        "dashboardTitle": "Mide tu progreso",
+        "dashboardDescription": "Velocidad, precisión y errores",
+        "rankingDescription": "Compara tus resultados y mantén la motivación",
         "title1": "Domina la",
         "title2": "mecanografía",
-        "subtitle1": "Mejora tu velocidad y precisión ",
+        "subtitle1": "Mejora tu velocidad y precisión con ejercicios personalizados según tu idioma, teclado y errores más frecuentes.",
+        "benefitFree": "100 % gratuita",
+        "benefitNoRegistration": "Sin registro obligatorio",
+        "benefitBrowser": "En tu navegador",
+        "benefitLanguageKeyboard": "Adaptada a tu idioma y teclado",
+        "immediateAccessTitle": "Acceso inmediato",
+        "learningTitle": "Más que una prueba de velocidad",
+        "learningDescription": "KisoDesk es un entrenador de mecanografía adaptativo. No solo mide cuántas palabras escribes por minuto, sino que también te permite practicar lo que realmente necesitas mejorar para avanzar más rápido.",
+        "resultsTitle": "Resultados que te ayudan a mejorar",
+        "metricWpm": "Palabras por minuto (PPM)",
+        "metricAccuracy": "Precisión de escritura",
+        "metricErrors": "Errores y letras que debes reforzar",
+        "metricHistory": "Historial y evolución",
         "learn": "Aprende",
         "guidedLessons": "Lecciones guiadas",
-        "practiceAction": "Practica",
-        "typingExercises": "Ejercicios de mecanografía",
+        "practiceAction": "Práctica personalizada",
+        "typingExercises": "Detecta tus dificultades y genera ejercicios adaptados a ti",
+        "languageKeyboardTitle": "Tu idioma y tu teclado importan",
+        "languageKeyboardInterface": "Interfaz adaptada a tu idioma",
+        "languageKeyboardContent": "Contenido adaptado a tu idioma",
+        "languageKeyboardLayouts": "Distribuciones de teclado personalizables",
         "track": "Mide",
         "progressAndStats": "Progreso y estadísticas",
         "compete": "Compite",
@@ -1236,7 +1254,7 @@
   "practice": {
     "general": {
       "title": "Prueba de mecanografía",
-      "subtitle": "Mejora tu velocidad y precisión con textos personalizados",
+      "subtitle": "Mejora tu velocidad y precisión con ejercicios personalizados según tu idioma, teclado y errores más frecuentes.",
       "freeTitle": "Prueba de velocidad de escritura",
       "freeSubtitle": "Pon a prueba tu escritura con un texto corto y descubre qué velocidad y precisión tienes al teclear.",
       "adaptiveTitle": "Practica las teclas en las que más fallas",
