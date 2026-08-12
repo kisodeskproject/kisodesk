@@ -1320,6 +1320,8 @@
       "stepSignalsText": "Los errores, la latencia y las combinaciones difíciles ayudan a identificar qué partes de la escritura requieren más atención.",
       "stepPriorityTitle": "Se prioriza lo que necesitas reforzar",
       "stepPriorityText": "En lugar de repetir siempre los mismos ejercicios, la práctica puede dar prioridad a los patrones que más necesitas mejorar.",
+      "algorithmTitle": "Cómo se arma cada ejercicio",
+      "algorithmText": "Cada ejercicio combina hasta 6 objetivos de práctica, ordenados por prioridad: primero los errores que se repiten una y otra vez, luego las combinaciones de teclas difíciles, después las teclas con errores puntuales y, si corresponde, hasta 2 caracteres nuevos dentro de tu idioma (primero letras, luego números y luego símbolos). El resto del ejercicio se completa con repaso general. Esta lógica funciona igual si practicas con una cuenta o como invitado.",
       "languageTitle": "Qué significa que el contenido sea nativo de tu idioma",
       "languageText": "No se trata solo de traducir la interfaz. El idioma del contenido, los caracteres que se practican y la distribución de teclado forman parte de la experiencia de escritura.",
       "differenceTitle": "Una práctica orientada a mejorar",

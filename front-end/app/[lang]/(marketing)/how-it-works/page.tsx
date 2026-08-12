@@ -31,6 +31,7 @@ export default async function HowItWorksPage({ params }: HowItWorksPageProps) {
     ['stepPracticeTitle', 'stepPracticeText'],
     ['stepSignalsTitle', 'stepSignalsText'],
     ['stepPriorityTitle', 'stepPriorityText'],
+    ['algorithmTitle', 'algorithmText'],
   ] as const;
 
   return (
