@@ -218,7 +218,45 @@ describe('PracticeService', () => {
     expect(exercise.reason).toBe('Prioriza bigramas débiles con errores recurrentes.');
   });
 
-  it('introduce como máximo un carácter nuevo y completa el resto con repaso', async () => {
+  it('introduce como máximo dos caracteres nuevos y completa el resto con repaso', async () => {
+    const { service, prisma } = createService();
+    // Presiones suficientes (sin errores, tecla ausente del corpus) para que la
+    // confianza del perfil supere el umbral y habilite los 2 cupos de caracteres nuevos.
+    prisma.keyLayoutStat.findMany.mockResolvedValue([
+      { keyChar: 'z', totalPresses: 200, totalErrors: 0 },
+    ]);
+    prisma.practiceText.findMany.mockResolvedValue([
+      { id: 'text-1', content: 'alpha beta gamma', difficulty: null, characterSet: [], wordIndex: [], bigramIndex: [] },
+    ]);
+
+    const exercise = await service.getNextAdaptiveExercise('user-1', 'es', 'qwerty-latam', 'words');
+
+    expect(exercise.composition.newCharacters).toBe(2);
+    expect(exercise.composition.newCharacters / 6).toBeLessThanOrEqual(1 / 3);
+    expect(exercise.composition.review).toBe(4);
+    expect(exercise.reason).toBe(
+      'Introduce caracteres nuevos de forma gradual y conserva repaso general.',
+    );
+  });
+
+  it('prioriza caracteres nuevos por tipo: letras, luego números, luego símbolos', async () => {
+    const { service, prisma } = createService();
+    prisma.keyLayoutStat.findMany.mockResolvedValue([
+      { keyChar: 'q', totalPresses: 200, totalErrors: 0 },
+    ]);
+    prisma.practiceText.findMany.mockResolvedValue([
+      { id: 'text-1', content: 'x : 4 c', difficulty: null, characterSet: [], wordIndex: [], bigramIndex: [] },
+    ]);
+
+    const exercise = await service.getNextAdaptiveExercise('user-1', 'es', 'qwerty-latam', 'words');
+
+    // Con 4 candidatos (x, :, 4, c) y solo 2 cupos, se eligen las dos letras
+    // en orden alfabético antes que el número o el símbolo.
+    expect(exercise.targets.keys).toEqual(['c', 'x']);
+    expect(exercise.composition.newCharacters).toBe(2);
+  });
+
+  it('con confianza baja (perfil sin historial) introduce un solo carácter nuevo', async () => {
     const { service, prisma } = createService();
     prisma.practiceText.findMany.mockResolvedValue([
       { id: 'text-1', content: 'alpha beta gamma', difficulty: null, characterSet: [], wordIndex: [], bigramIndex: [] },
@@ -226,12 +264,62 @@ describe('PracticeService', () => {
 
     const exercise = await service.getNextAdaptiveExercise('user-1', 'es', 'qwerty-latam', 'words');
 
+    expect(exercise.profile.confidence).toBeLessThan(0.5);
     expect(exercise.composition.newCharacters).toBe(1);
-    expect(exercise.composition.newCharacters / 5).toBeLessThanOrEqual(0.2);
-    expect(exercise.composition.review).toBe(4);
     expect(exercise.reason).toBe(
       'Introduce un carácter nuevo de forma gradual y conserva repaso general.',
     );
+  });
+
+  it('da hasta 2 cupos al bigrama débil cuando no hay errores persistentes ni teclas débiles', async () => {
+    const { service, prisma } = createService();
+    prisma.bigramStat.findMany.mockResolvedValue([
+      { firstChar: 'a', secondChar: 'b', totalPresses: 8, totalErrors: 2, averageLatencyMs: 380 },
+      { firstChar: 'c', secondChar: 'd', totalPresses: 8, totalErrors: 2, averageLatencyMs: 380 },
+    ]);
+    prisma.practiceText.findMany.mockResolvedValue([
+      { id: 'text-1', content: 'abcd abcd abcd', difficulty: null, characterSet: [], wordIndex: [], bigramIndex: [] },
+    ]);
+
+    const exercise = await service.getNextAdaptiveExercise('user-1', 'es', 'qwerty-latam', 'words');
+
+    expect(exercise.composition.persistentErrors).toBe(0);
+    expect(exercise.composition.weakKeys).toBe(0);
+    expect(exercise.composition.weakBigrams).toBe(2);
+    expect(exercise.targets.bigrams).toEqual(['ab', 'cd']);
+  });
+
+  it('rota el punto de partida del repaso según las sesiones ya practicadas', async () => {
+    const { service, prisma } = createService();
+    prisma.practiceText.findMany.mockResolvedValue([
+      { id: 'text-1', content: 'alpha beta gamma delta epsilon zeta', difficulty: null, characterSet: [], wordIndex: [], bigramIndex: [] },
+    ]);
+    const baseProfile = {
+      language: 'es',
+      locale: 'es-latam',
+      layoutId: 'qwerty-latam',
+      totalInputs: 0,
+      totalFinalInputs: 0,
+      correctFinalInputs: 0,
+      totalIncorrectAttempts: 0,
+      correctedErrors: 0,
+      uncorrectedErrors: 0,
+      totalActiveDurationMs: 0,
+      finalAccuracy: 100,
+      keyStats: {},
+      bigramStats: {},
+    };
+
+    const first = await service.getGuestAdaptiveExercise({
+      mode: 'words',
+      profile: { ...baseProfile, sampleSessions: 0 },
+    } as any);
+    const second = await service.getGuestAdaptiveExercise({
+      mode: 'words',
+      profile: { ...baseProfile, sampleSessions: 3 },
+    } as any);
+
+    expect(first.text).not.toBe(second.text);
   });
 
   it('usa el mismo priorizador para el perfil anónimo sin persistirlo', async () => {
@@ -246,13 +334,14 @@ describe('PracticeService', () => {
         language: 'es', locale: 'es-latam', layoutId: 'qwerty-latam', sampleSessions: 2,
         totalInputs: 10, totalFinalInputs: 8, correctFinalInputs: 8, totalIncorrectAttempts: 2,
         correctedErrors: 2, uncorrectedErrors: 0, totalActiveDurationMs: 5000, finalAccuracy: 100,
-        keyStats: { x: { attempts: 10, errors: 2, latencyTotalMs: 2400, latencySamples: 10, recurrence: 2 } },
+        keyStats: { x: { attempts: 200, errors: 2, latencyTotalMs: 2400, latencySamples: 10, recurrence: 2 } },
         bigramStats: {},
       },
     } as any);
 
     expect(exercise.targets.keys).not.toContain('x');
-    expect(exercise.reason).toContain('carácter nuevo');
+    expect(exercise.targets.keys).toEqual(['a', 'c']);
+    expect(exercise.reason).toContain('nuevo');
     expect(prisma.$transaction).not.toHaveBeenCalled();
   });
 
