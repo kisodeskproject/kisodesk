@@ -89,6 +89,10 @@ const FONT_OPTIONS = [
 const MIN_FONT_SIZE = 12;
 const MAX_FONT_SIZE = 32;
 const INACTIVITY_PAUSE_DELAY = 6000;
+const TYPING_AREA_LINE_HEIGHT_MULTIPLIER = 1.8;
+const TYPING_AREA_VISIBLE_LINES = 3;
+const TYPING_AREA_VERTICAL_PADDING_PX = 48;
+const TYPING_AREA_BORDER_WIDTH_PX = 2;
 const LEFT_HAND_LETTER_KEY_IDS = new Set<PhysicalKeyId>([
   'P16', 'P17', 'P18', 'P19', 'P20', 'P30', 'P31', 'P32', 'P33', 'P34',
   'P43', 'P44', 'P45', 'P46', 'P47', 'P48',
@@ -133,7 +137,7 @@ function getCharacterClass({
     return 'inline-flex min-w-[0.625em] items-center justify-center px-[0.05em] text-(--typing-area-correct-text)';
   }
 
-  return 'inline-flex min-w-[0.625em] items-center justify-center px-[0.05em] text-(--text-secondary) dark:text-(--text-inverse)';
+  return 'inline-flex min-w-[0.625em] items-center justify-center px-[0.05em] text-(--text-secondary) dark:text-(--text-inverse) light:text-(--typing-area-text-light-color)';
 }
 
 const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingArea(
@@ -188,6 +192,7 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
   const [isFontDropdownOpen, setIsFontDropdownOpen] = useState(false);
   const inputRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const scrollTextRef = useRef<string | null>(null);
   const inactivityTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lastActivityTimeRef = useRef<number>(Date.now());
   const correctCharsRef = useRef(0);
@@ -291,12 +296,30 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
   }));
 
   useLayoutEffect(() => {
-    if (!inputRef.current) return;
-    const el = inputRef.current;
-    const lastChild = el.lastChild;
-    if (!lastChild) return;
-    el.scrollTop = el.scrollHeight;
-  }, [input]);
+    const container = inputRef.current;
+    if (!container) return;
+
+    const currentEl = container.querySelector<HTMLElement>('[data-current-char="true"]');
+    const targetEl = currentEl ?? (container.lastElementChild as HTMLElement | null);
+    if (!targetEl) return;
+
+    const lineHeightPx = fontSize * TYPING_AREA_LINE_HEIGHT_MULTIPLIER;
+    const relativeTop =
+      targetEl.getBoundingClientRect().top -
+      container.getBoundingClientRect().top +
+      container.scrollTop;
+    const lineIndex = Math.round(relativeTop / lineHeightPx);
+    const targetScrollTop = Math.max(0, (lineIndex - 1) * lineHeightPx);
+
+    const isNewText = scrollTextRef.current !== text;
+    scrollTextRef.current = text;
+
+    if (isNewText) {
+      container.scrollTop = targetScrollTop;
+    } else {
+      container.scrollTo({ top: targetScrollTop, behavior: 'smooth' });
+    }
+  }, [input, text, fontSize]);
 
   useEffect(() => {
     if (inputRef.current && !isCompleted) inputRef.current.focus();
@@ -635,6 +658,7 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
     const nodes: ReactNode[] = [];
     let currentWordChars: ReactNode[] = [];
     let currentWordStart = 0;
+    let pendingSpace = false;
 
     const flushWord = (endIndex: number) => {
       if (currentWordChars.length === 0) return;
@@ -649,6 +673,7 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
       );
 
       currentWordChars = [];
+      pendingSpace = false;
     };
 
     for (let index = 0; index < text.length; index++) {
@@ -667,21 +692,37 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
       }
 
       if (char === ' ') {
-        flushWord(index);
-        nodes.push(
-          <span key={`space-${index}`} className={className}>
+        if (currentWordChars.length === 0) {
+          currentWordStart = index;
+        }
+
+        currentWordChars.push(
+          <span
+            key={`space-${index}`}
+            className={className}
+            data-current-char={isCurrent ? 'true' : undefined}
+          >
             {getRenderedChar(displayedChar)}
           </span>,
         );
+        pendingSpace = true;
         continue;
       }
 
       if (currentWordChars.length === 0) {
         currentWordStart = index;
+      } else if (pendingSpace) {
+        flushWord(index - 1);
+        currentWordStart = index;
       }
+      pendingSpace = false;
 
       currentWordChars.push(
-        <span key={`char-${index}`} className={className}>
+        <span
+          key={`char-${index}`}
+          className={className}
+          data-current-char={isCurrent ? 'true' : undefined}
+        >
           {getRenderedChar(displayedChar)}
         </span>,
       );
@@ -723,7 +764,7 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
               <span className="inline-flex min-w-[4ch] justify-end font-bold tabular-nums text-(--accent-green) light:text-(--typing-area-accuracy-stat-light-color) text-base sm:text-lg">
                 {stats.accuracy}%
               </span>
-              <span className="text-white">
+              <span className="text-white light:text-(--typing-area-text-light-color)">
                 {t('components.lessons.typingArea.general.accuracy')}
               </span>
             </div>
@@ -732,7 +773,7 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
               <span className="inline-flex min-w-[5ch] justify-end font-bold tabular-nums text-(--accent-purple) light:text-(--typing-area-score-stat-light-color) text-base sm:text-lg">
                 {stats.score}
               </span>
-              <span className="text-white">
+              <span className="text-white light:text-(--typing-area-text-light-color)">
                 {t('components.lessons.typingArea.general.score')}
               </span>
             </div>
@@ -743,7 +784,7 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
                   <span className="inline-flex min-w-[3ch] justify-end font-bold tabular-nums text-(--accent-blue) light:text-(--typing-area-wpm-stat-light-color) text-base sm:text-lg">
                     {stats.grossWpm}
                   </span>
-                  <span className="text-white">
+                  <span className="text-white light:text-(--typing-area-text-light-color)">
                     {t('components.lessons.typingArea.general.wpm')}
                   </span>
                 </div>
@@ -754,7 +795,7 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
               <span className="inline-flex min-w-[3ch] justify-end font-bold tabular-nums text-(--text-primary) light:text-(--typing-area-characters-stat-light-color) text-base sm:text-lg">
                 {stats.correctChars}
               </span>
-              <span className="text-(--text-secondary)">
+              <span className="text-(--text-secondary) light:text-(--typing-area-text-light-color)">
                 {t('components.lessons.typingArea.general.characters')}
               </span>
             </div>
@@ -786,7 +827,7 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
                 aria-label={t('components.lessons.typingArea.general.fontAndSize')}
                 aria-expanded={isFontDropdownOpen}
                 aria-controls="typing-font-settings"
-                className="flex items-center gap-1 px-2 py-1 rounded-md text-white hover:text-white hover:bg-(--bg-secondary) transition-colors"
+                className="flex items-center gap-1 px-2 py-1 rounded-md text-white hover:text-white hover:bg-(--bg-secondary) transition-colors border border-transparent dark:bg-(--typing-area-toolbar-button-dark-background) dark:border-(--typing-area-toolbar-button-dark-border) light:text-(--typing-area-text-light-color) light:bg-(--typing-area-toolbar-button-light-background) light:border-(--typing-area-toolbar-button-light-border) light:hover:bg-(--bg-card-hover) light:hover:text-(--typing-area-text-light-color)"
                 title={t('components.lessons.typingArea.general.fontAndSize')}
               >
                 <span className="text-sm font-medium">Aa</span>
@@ -883,7 +924,7 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
                 aria-label={t('components.lessons.typingArea.general.keyboardConfigTitle')}
                 aria-expanded={isKeyboardDropdownOpen}
                 aria-controls="typing-keyboard-settings"
-                className="flex items-center gap-1 px-2 py-1 rounded-md text-white hover:text-white hover:bg-(--bg-secondary) transition-colors"
+                className="flex items-center gap-1 px-2 py-1 rounded-md text-white hover:text-white hover:bg-(--bg-secondary) transition-colors border border-transparent dark:bg-(--typing-area-toolbar-button-dark-background) dark:border-(--typing-area-toolbar-button-dark-border) light:text-(--typing-area-text-light-color) light:bg-(--typing-area-toolbar-button-light-background) light:border-(--typing-area-toolbar-button-light-border) light:hover:bg-(--bg-card-hover) light:hover:text-(--typing-area-text-light-color)"
                 title={t('components.lessons.typingArea.general.keyboardConfigTitle')}
               >
                 <span className="text-lg">⌨️</span>
@@ -964,7 +1005,7 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
               <button
                 type="button"
                 onClick={onNewText}
-                className="flex items-center gap-1 px-2 py-1 rounded-md text-white hover:text-white hover:bg-(--bg-secondary) transition-colors"
+                className="flex items-center gap-1 px-2 py-1 rounded-md text-white hover:text-white hover:bg-(--bg-secondary) transition-colors border border-transparent dark:bg-(--typing-area-toolbar-button-dark-background) dark:border-(--typing-area-toolbar-button-dark-border) light:text-(--typing-area-text-light-color) light:bg-(--typing-area-toolbar-button-light-background) light:border-(--typing-area-toolbar-button-light-border) light:hover:bg-(--bg-card-hover) light:hover:text-(--typing-area-text-light-color)"
                 title={newTextLabel}
                 aria-label={newTextLabel}
               >
@@ -1019,8 +1060,13 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
           setIsFocused(false);
           pauseForBlur();
         }}
-        className={`select-text w-full p-6 bg-(--bg-secondary) border rounded-xl min-h-[180px] leading-[1.8] whitespace-pre-wrap break-normal [overflow-wrap:normal] text-(--text-primary) shadow-inner outline-none transition-all ${isFocused && !isCompleted ? 'border-(--accent-blue) ring-2 ring-(--accent-blue-border)' : 'border-(--border-card)'} ${isCompleted ? 'cursor-not-allowed opacity-80' : ''}`}
-        style={{ fontFamily: selectedFont, fontSize: `${fontSize}px`, caretColor: 'transparent' }}
+        className={`select-text w-full p-6 bg-(--bg-secondary) border rounded-xl overflow-hidden leading-[1.8] whitespace-pre-wrap break-normal [overflow-wrap:normal] text-(--text-primary) shadow-inner outline-none transition-all ${isFocused && !isCompleted ? 'border-(--accent-blue) ring-2 ring-(--accent-blue-border)' : 'border-(--border-card)'} ${isCompleted ? 'cursor-not-allowed opacity-80' : ''}`}
+        style={{
+          fontFamily: selectedFont,
+          fontSize: `${fontSize}px`,
+          caretColor: 'transparent',
+          height: `${fontSize * TYPING_AREA_LINE_HEIGHT_MULTIPLIER * TYPING_AREA_VISIBLE_LINES + TYPING_AREA_VERTICAL_PADDING_PX + TYPING_AREA_BORDER_WIDTH_PX}px`,
+        }}
         aria-label={t('components.lessons.typingArea.general.textToType')}
       >
         {renderedText}

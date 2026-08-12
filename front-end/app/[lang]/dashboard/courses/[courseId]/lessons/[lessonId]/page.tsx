@@ -272,6 +272,18 @@ export default function LessonPracticePage() {
     });
   }, []);
 
+  const hasMountedKeyboardScrollRef = useRef(false);
+
+  useEffect(() => {
+    if (!hasMountedKeyboardScrollRef.current) {
+      hasMountedKeyboardScrollRef.current = true;
+      return;
+    }
+    if (!showKeyboard) return;
+    const scrollHeight = document.documentElement.scrollHeight;
+    window.scrollTo({ top: scrollHeight * 0.9, behavior: 'smooth' });
+  }, [showKeyboard]);
+
   useEffect(() => {
     const storedShowKeyboard = localStorage.getItem(SHOW_KEYBOARD_STORAGE_KEY);
     if (storedShowKeyboard !== null) {
@@ -1466,6 +1478,7 @@ export default function LessonPracticePage() {
                 layoutId={activeLayout.id}
                 activeKeys={practiceGuideKeys}
                 guideKeys={practiceGuideKeys}
+                expectedChar={expectedPracticeKey}
                 leftHandSrc={practiceHandReferences.left}
                 rightHandSrc={practiceHandReferences.right}
               />

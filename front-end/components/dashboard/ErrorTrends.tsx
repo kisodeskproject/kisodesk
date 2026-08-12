@@ -47,7 +47,7 @@ export default function ErrorTrends({
   const isGuest = !isAuthenticated;
   const hasData = weakKeys.length > 0 && (isGuest || Boolean(data && !data.insufficientData));
 
-  const top5 =
+  const topKeys =
     weakKeys.length > 0
       ? Object.values(
           weakKeys.reduce<Record<string, (typeof weakKeys)[number]>>((accumulator, item) => {
@@ -61,12 +61,12 @@ export default function ErrorTrends({
           }, {}),
         )
           .sort((a, b) => a.accuracy - b.accuracy)
-          .slice(0, 5)
+          .slice(0, 8)
       : [];
 
   return (
-    <div className="rounded-lg border border-(--border-card) bg-(--bg-card) p-6">
-      <div className="mb-4 flex items-center justify-between">
+    <div className="rounded-lg border border-(--border-card) bg-(--bg-card)">
+      <div className="flex items-center justify-between rounded-t-lg bg-(--bg-primary) px-6 py-3 light:bg-(--bg-secondary)">
         <h2 className="text-lg font-semibold text-(--text-primary)">
           {t('components.dashboard.errorTrends.general.title')}
         </h2>
@@ -84,6 +84,7 @@ export default function ErrorTrends({
         )}
       </div>
 
+      <div className="p-6">
       {!hasData ? (
         <div
           className="space-y-3"
@@ -106,7 +107,7 @@ export default function ErrorTrends({
             {t('components.dashboard.errorTrends.general.highestErrorRate')}
           </p>
 
-          {top5.map((key) => {
+          {topKeys.map((key) => {
             const errorRate = 100 - key.accuracy;
 
             return (
@@ -144,6 +145,7 @@ export default function ErrorTrends({
           })}
         </div>
       )}
+      </div>
     </div>
   );
 }

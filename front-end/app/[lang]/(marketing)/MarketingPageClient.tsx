@@ -28,8 +28,6 @@ export default function MarketingPage() {
   const lang = toSupportedLocale(params.lang);
   const t = useTranslations(lang);
 
-  const altNight = t('marketing.page.general.altNight');
-  const altDay = t('marketing.page.general.altDay');
   const benefits = [
     {
       Icon: Gift,
@@ -152,10 +150,10 @@ export default function MarketingPage() {
 
       <Image
         src="/noche.png"
-        alt={altNight}
+        alt=""
+        aria-hidden="true"
         width={1448}
         height={1086}
-        priority
         unoptimized
         sizes="1900px"
         className="absolute top-[-70px] left-[calc(50%-10px)] h-[1100px] w-[1900px] max-w-none -translate-x-1/2 object-contain z-0 light:hidden"
@@ -163,7 +161,8 @@ export default function MarketingPage() {
 
       <Image
         src="/dia.png"
-        alt={altDay}
+        alt=""
+        aria-hidden="true"
         width={1448}
         height={1086}
         unoptimized
@@ -203,7 +202,7 @@ export default function MarketingPage() {
         </div>
       </section>
 
-      <section className="relative z-10 mt-[220px] lg:mt-[70px] mb-20px">
+      <section className="relative z-10 mt-[220px] lg:mt-[70px] mb-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="kisodesk-surface light:border-(--landing-card-border) p-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex gap-6 lg:gap-0">

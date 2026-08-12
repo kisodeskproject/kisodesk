@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "Framstegspanel",
+          "title": "Övningskalender",
           "noData": "Inga data att visa",
           "noPractice": "Ingen övning",
           "minutesShort": "min",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "Framstegspanel",
-          "signIn": "Logga in",
+          "title": "Rekommendationer",
+          "noData": "Inga data att visa",
           "noRecommendations": "Inga rekommendationer tillgängliga."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "Framstegspanel",
+          "title": "Svaga tangenter",
           "overallAccuracy": "Övergripande precision",
           "weakestKey": "Svagaste tangenten",
           "lowestAccuracy": "Lägsta precision"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Månadsvis WPM-utveckling",
       "noData": "Inga data tillgängliga",
       "bestWpm": "Bästa WPM",
+      "bestAccuracy": "Bästa precision",
       "grossWpm": "Brutto-WPM",
       "record": "Rekord",
       "streak": "Svit",
+      "longestStreak": "Längsta sviten",
       "days": "dagar",
       "consecutivePractice": "Sammanhängande övning",
       "totalKeystrokes": "Totalt antal tangenttryckningar",
@@ -1232,6 +1234,8 @@
       "courses": "kurser",
       "completedLessons": "Slutförda lektioner",
       "completedCourses": "Slutförda kurser",
+      "courseInProgress": "Kurs pågår",
+      "continueCourse": "Fortsätt",
       "guestModeMessage": "Logga in för att se dina framsteg",
       "signIn": "Logga in",
       "recommendationsGuest": "Logga in för att få personliga rekommendationer baserade på dina framsteg.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Få personliga lektioner baserade på dina svaga områden.",
       "signInToSee": "Logga in för att se din statistik",
       "noDataYet": "Slutför lektioner för att se dina svaga områden"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "Din svagaste tangent är '{key}' med bara {accuracy}% precision. Öva på den för att förbättras snabbt.",
+      "weakKeyImprove": "Tangenten '{key}' har {accuracy}% precision. Med lite mer övning bemästrar du den.",
+      "streakMilestone": "Du har övat {streak} dagar i rad! Fortsätt så.",
+      "accuracyTrendDown": "Din precision har sjunkit jämfört med föregående period. Sakta ner och undvik misstag.",
+      "wpmTrendDown": "Din hastighet har sjunkit jämfört med föregående period. Försök öva lite oftare.",
+      "accuracyLow": "Din genomsnittliga precision är {accuracy}%. Skriv långsammare för att minska misstag.",
+      "speedLow": "Din genomsnittliga hastighet är {wpm} ord/min. Regelbunden övning hjälper dig bli snabbare.",
+      "noviceGrade": "Du är precis i startgroparna. Öva lite varje dag för att gå upp i nivå.",
+      "lowPracticeTime": "Du har övat {time} totalt. Ju mer du övar, desto snabbare förbättras du.",
+      "legendGrade": "Du är på legendnivå! Fortsätt öva för att stanna där.",
+      "insufficientWeakData": "Slutför fler övningspass så vi kan identifiera dina svagaste tangenter."
     }
   },
   "practice": {

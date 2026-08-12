@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "Voortgangsoverzicht",
+          "title": "Oefenkalender",
           "noData": "Geen gegevens om weer te geven",
           "noPractice": "Niet geoefend",
           "minutesShort": "min",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "Voortgangsoverzicht",
-          "signIn": "Inloggen",
+          "title": "Aanbevelingen",
+          "noData": "Geen gegevens om weer te geven",
           "noRecommendations": "Geen aanbevelingen beschikbaar."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "Voortgangsoverzicht",
+          "title": "Zwakke toetsen",
           "overallAccuracy": "Algemene nauwkeurigheid",
           "weakestKey": "Zwakste toets",
           "lowestAccuracy": "Laagste nauwkeurigheid"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Maandelijkse WPM-voortgang",
       "noData": "Geen gegevens beschikbaar",
       "bestWpm": "Beste WPM",
+      "bestAccuracy": "Beste nauwkeurigheid",
       "grossWpm": "Bruto WPM",
       "record": "Record",
       "streak": "Reeks",
+      "longestStreak": "Langste reeks",
       "days": "dagen",
       "consecutivePractice": "Opeenvolgend geoefend",
       "totalKeystrokes": "Totaal aantal toetsaanslagen",
@@ -1232,6 +1234,8 @@
       "courses": "cursussen",
       "completedLessons": "Voltooide lessen",
       "completedCourses": "Voltooide cursussen",
+      "courseInProgress": "Cursus in uitvoering",
+      "continueCourse": "Doorgaan",
       "guestModeMessage": "Log in om je voortgang te bekijken",
       "signIn": "Inloggen",
       "recommendationsGuest": "Log in om gepersonaliseerde aanbevelingen te ontvangen op basis van je voortgang.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Ontvang gepersonaliseerde lessen op basis van je zwakke punten.",
       "signInToSee": "Log in om je statistieken te bekijken",
       "noDataYet": "Voltooi lessen om je zwakke punten te bekijken"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "Je zwakste toets is '{key}' met slechts {accuracy}% nauwkeurigheid. Oefen hem om snel te verbeteren.",
+      "weakKeyImprove": "De toets '{key}' staat op {accuracy}% nauwkeurigheid. Met wat meer oefening beheers je hem.",
+      "streakMilestone": "Je oefent al {streak} dagen op rij! Ga zo door.",
+      "accuracyTrendDown": "Je nauwkeurigheid is gedaald ten opzichte van de vorige periode. Typ rustiger en vermijd fouten.",
+      "wpmTrendDown": "Je snelheid is gedaald ten opzichte van de vorige periode. Probeer wat vaker te oefenen.",
+      "accuracyLow": "Je gemiddelde nauwkeurigheid is {accuracy}%. Typ langzamer om fouten te verminderen.",
+      "speedLow": "Je gemiddelde snelheid is {wpm} WPM. Regelmatig oefenen helpt je sneller te worden.",
+      "noviceGrade": "Je bent net begonnen. Oefen elke dag een beetje om te stijgen.",
+      "lowPracticeTime": "Je hebt in totaal {time} geoefend. Hoe meer je oefent, hoe sneller je verbetert.",
+      "legendGrade": "Je bent legende-niveau! Blijf oefenen om dat te blijven.",
+      "insufficientWeakData": "Voltooi meer oefensessies zodat we je zwakste toetsen kunnen bepalen."
     }
   },
   "practice": {

@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "Panel de progreso",
+          "title": "Calendario de práctica",
           "noData": "Sin datos",
           "noPractice": "Sin práctica",
           "minutesShort": "min",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "Panel de progreso",
-          "signIn": "Inicia sesión",
+          "title": "Recomendaciones",
+          "noData": "Sin datos",
           "noRecommendations": "Sin recomendaciones disponibles."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "Panel de progreso",
+          "title": "Teclas débiles",
           "overallAccuracy": "Precisión general",
           "weakestKey": "Tecla más débil",
           "lowestAccuracy": "Precisión más baja"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Progreso mensual de WPM",
       "noData": "Sin datos disponibles",
       "bestWpm": "Mejor WPM",
+      "bestAccuracy": "Mejor precisión",
       "grossWpm": "WPM bruto",
       "record": "Récord",
       "streak": "Racha",
+      "longestStreak": "Racha más larga",
       "days": "días",
       "consecutivePractice": "Práctica consecutiva",
       "totalKeystrokes": "Pulsaciones totales",
@@ -1232,6 +1234,8 @@
       "courses": "cursos",
       "completedLessons": "Lecciones completadas",
       "completedCourses": "Cursos completados",
+      "courseInProgress": "Curso en progreso",
+      "continueCourse": "Continuar",
       "guestModeMessage": "Inicia sesión para ver tu progreso",
       "signIn": "Iniciar sesión",
       "recommendationsGuest": "Inicia sesión para recibir recomendaciones personalizadas basadas en tu progreso.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Recibe lecciones personalizadas basadas en tus puntos débiles.",
       "signInToSee": "Inicia sesión para ver tus estadísticas",
       "noDataYet": "Completa lecciones para ver tus puntos débiles"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "Tu tecla más débil es '{key}' con solo {accuracy}% de precisión. Practícala para mejorar rápido.",
+      "weakKeyImprove": "La tecla '{key}' tiene {accuracy}% de precisión. Con un poco más de práctica la dominarás.",
+      "streakMilestone": "¡Llevas {streak} días seguidos practicando! Sigue así.",
+      "accuracyTrendDown": "Tu precisión bajó respecto al período anterior. Baja el ritmo y enfócate en no cometer errores.",
+      "wpmTrendDown": "Tu velocidad bajó respecto al período anterior. Prueba practicar un poco más seguido.",
+      "accuracyLow": "Tu precisión promedio es {accuracy}%. Escribe más despacio para reducir errores.",
+      "speedLow": "Tu velocidad promedio es {wpm} PPM. La práctica constante te ayudará a acelerar.",
+      "noviceGrade": "Estás empezando. Practica un poco cada día para subir de nivel.",
+      "lowPracticeTime": "Llevas {time} de práctica en total. Cuanto más practiques, más rápido mejorarás.",
+      "legendGrade": "¡Eres nivel leyenda! Sigue practicando para mantener tu nivel.",
+      "insufficientWeakData": "Completa más prácticas para que podamos identificar tus teclas más débiles."
     }
   },
   "practice": {

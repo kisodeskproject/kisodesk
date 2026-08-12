@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "Painel de progresso",
+          "title": "Calendário de prática",
           "noData": "Sem dados para apresentar",
           "noPractice": "Sem prática",
           "minutesShort": "min",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "Painel de progresso",
-          "signIn": "Iniciar sessão",
+          "title": "Recomendações",
+          "noData": "Sem dados para apresentar",
           "noRecommendations": "Nenhuma recomendação disponível."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "Painel de progresso",
+          "title": "Teclas fracas",
           "overallAccuracy": "Precisão geral",
           "weakestKey": "Tecla mais fraca",
           "lowestAccuracy": "Menor precisão"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Progresso mensal de WPM",
       "noData": "Sem dados disponíveis",
       "bestWpm": "Melhor WPM",
+      "bestAccuracy": "Melhor precisão",
       "grossWpm": "WPM bruto",
       "record": "Recorde",
       "streak": "Sequência",
+      "longestStreak": "Sequência mais longa",
       "days": "dias",
       "consecutivePractice": "Prática consecutiva",
       "totalKeystrokes": "Total de teclas premidas",
@@ -1232,6 +1234,8 @@
       "courses": "cursos",
       "completedLessons": "Lições concluídas",
       "completedCourses": "Cursos concluídos",
+      "courseInProgress": "Curso em curso",
+      "continueCourse": "Continuar",
       "guestModeMessage": "Inicie sessão para ver o seu progresso",
       "signIn": "Iniciar sessão",
       "recommendationsGuest": "Inicie sessão para receber recomendações personalizadas com base no seu progresso.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Receba lições personalizadas com base nos seus pontos fracos.",
       "signInToSee": "Inicie sessão para ver as suas estatísticas",
       "noDataYet": "Conclua lições para ver os seus pontos fracos"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "A tua tecla mais fraca é '{key}' com apenas {accuracy}% de precisão. Pratica-a para melhorares depressa.",
+      "weakKeyImprove": "A tecla '{key}' está com {accuracy}% de precisão. Com mais um pouco de prática vais dominá-la.",
+      "streakMilestone": "Estás há {streak} dias seguidos a praticar! Continua assim.",
+      "accuracyTrendDown": "A tua precisão baixou em relação ao período anterior. Abranda e evita erros.",
+      "wpmTrendDown": "A tua velocidade baixou em relação ao período anterior. Tenta praticar um pouco mais.",
+      "accuracyLow": "A tua precisão média é {accuracy}%. Escreve mais devagar para reduzir erros.",
+      "speedLow": "A tua velocidade média é {wpm} PPM. A prática constante vai ajudar-te a acelerar.",
+      "noviceGrade": "Estás a começar. Pratica um pouco todos os dias para subires de nível.",
+      "lowPracticeTime": "Praticaste {time} no total. Quanto mais praticares, mais depressa vais melhorar.",
+      "legendGrade": "És nível lenda! Continua a praticar para te manteres assim.",
+      "insufficientWeakData": "Completa mais práticas para identificarmos as tuas teclas mais fracas."
     }
   },
   "practice": {

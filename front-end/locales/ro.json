@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "Panou de progres",
+          "title": "Calendar de exersare",
           "noData": "Nu există date de afișat",
           "noPractice": "Fără exersare",
           "minutesShort": "min",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "Panou de progres",
-          "signIn": "Autentifică-te",
+          "title": "Recomandări",
+          "noData": "Nu există date de afișat",
           "noRecommendations": "Nu există recomandări disponibile."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "Panou de progres",
+          "title": "Taste slabe",
           "overallAccuracy": "Precizie generală",
           "weakestKey": "Cea mai slabă tastă",
           "lowestAccuracy": "Cea mai scăzută precizie"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Progres lunar al WPM",
       "noData": "Nu există date disponibile",
       "bestWpm": "Cel mai bun WPM",
+      "bestAccuracy": "Cea mai bună precizie",
       "grossWpm": "WPM brut",
       "record": "Record",
       "streak": "Serie",
+      "longestStreak": "Cea mai lungă serie",
       "days": "zile",
       "consecutivePractice": "Exersare consecutivă",
       "totalKeystrokes": "Număr total de apăsări",
@@ -1232,6 +1234,8 @@
       "courses": "cursuri",
       "completedLessons": "Lecții finalizate",
       "completedCourses": "Cursuri finalizate",
+      "courseInProgress": "Curs în desfășurare",
+      "continueCourse": "Continuă",
       "guestModeMessage": "Autentifică-te pentru a-ți vedea progresul",
       "signIn": "Autentificare",
       "recommendationsGuest": "Autentifică-te pentru a primi recomandări personalizate bazate pe progresul tău.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Primește lecții personalizate bazate pe punctele tale slabe.",
       "signInToSee": "Autentifică-te pentru a-ți vedea statisticile",
       "noDataYet": "Finalizează lecții pentru a-ți vedea punctele slabe"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "Cea mai slabă tastă a ta este '{key}' cu doar {accuracy}% precizie. Exersează-o pentru a te îmbunătăți rapid.",
+      "weakKeyImprove": "Tasta '{key}' are {accuracy}% precizie. Cu puțin mai mult exercițiu o vei stăpâni.",
+      "streakMilestone": "Ești la {streak} zile consecutive de exersare! Continuă tot așa.",
+      "accuracyTrendDown": "Precizia ta a scăzut față de perioada anterioară. Încetinește și evită greșelile.",
+      "wpmTrendDown": "Viteza ta a scăzut față de perioada anterioară. Încearcă să exersezi mai des.",
+      "accuracyLow": "Precizia ta medie este {accuracy}%. Scrie mai încet pentru a reduce greșelile.",
+      "speedLow": "Viteza ta medie este {wpm} CPM. Exercițiul constant te va ajuta să accelerezi.",
+      "noviceGrade": "Abia începi. Exersează puțin în fiecare zi pentru a urca de nivel.",
+      "lowPracticeTime": "Ai exersat în total {time}. Cu cât exersezi mai mult, cu atât te îmbunătățești mai repede.",
+      "legendGrade": "Ești la nivel de legendă! Continuă să exersezi pentru a rămâne acolo.",
+      "insufficientWeakData": "Completează mai multe sesiuni pentru a putea identifica tastele tale cele mai slabe."
     }
   },
   "practice": {

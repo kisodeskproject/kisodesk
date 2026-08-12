@@ -1,5 +1,5 @@
 // hooks/useRecommendations.ts
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { toSupportedLocale, useTranslations } from '@/lib/i18n';
 import { toContentLanguage } from '@/lib/locales';
 import { useParams } from 'next/navigation';
@@ -13,7 +13,12 @@ export function useRecommendations() {
   const params = useParams();
   const lang = toSupportedLocale(params.lang);
   const t = useTranslations(lang);
-  const { normalized, loading: progressLoading, error: progressError } = useNormalizedProgress();
+  const {
+    normalized,
+    loading: progressLoading,
+    error: progressError,
+    fetchProgress,
+  } = useNormalizedProgress(lang);
   const { user, isAuthenticated, loading: authLoading } = useAuth();
   const {
     data: weakKeys,
@@ -24,6 +29,12 @@ export function useRecommendations() {
     days: 30,
     language: toContentLanguage(lang),
   });
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      fetchProgress();
+    }
+  }, [isAuthenticated, fetchProgress]);
 
   const recommendations: Recommendation[] = useMemo(() => {
     // Solo si tenemos datos suficientes y está autenticado

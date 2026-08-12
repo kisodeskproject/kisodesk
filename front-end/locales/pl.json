@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "Panel postępów",
+          "title": "Kalendarz ćwiczeń",
           "noData": "Brak danych do wyświetlenia",
           "noPractice": "Brak ćwiczeń",
           "minutesShort": "min",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "Panel postępów",
-          "signIn": "Zaloguj się",
+          "title": "Rekomendacje",
+          "noData": "Brak danych do wyświetlenia",
           "noRecommendations": "Brak dostępnych rekomendacji."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "Panel postępów",
+          "title": "Słabe klawisze",
           "overallAccuracy": "Ogólna dokładność",
           "weakestKey": "Najsłabszy klawisz",
           "lowestAccuracy": "Najniższa dokładność"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Miesięczny postęp WPM",
       "noData": "Brak dostępnych danych",
       "bestWpm": "Najlepsze WPM",
+      "bestAccuracy": "Najlepsza dokładność",
       "grossWpm": "WPM brutto",
       "record": "Rekord",
       "streak": "Seria",
+      "longestStreak": "Najdłuższa seria",
       "days": "dni",
       "consecutivePractice": "Kolejne dni ćwiczeń",
       "totalKeystrokes": "Łączna liczba naciśnięć klawiszy",
@@ -1232,6 +1234,8 @@
       "courses": "kursy",
       "completedLessons": "Ukończone lekcje",
       "completedCourses": "Ukończone kursy",
+      "courseInProgress": "Kurs w trakcie",
+      "continueCourse": "Kontynuuj",
       "guestModeMessage": "Zaloguj się, aby zobaczyć swoje postępy",
       "signIn": "Zaloguj się",
       "recommendationsGuest": "Zaloguj się, aby otrzymywać spersonalizowane rekomendacje oparte na Twoich postępach.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Otrzymuj spersonalizowane lekcje na podstawie swoich słabych stron.",
       "signInToSee": "Zaloguj się, aby zobaczyć swoje statystyki",
       "noDataYet": "Ukończ lekcje, aby zobaczyć swoje słabe strony"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "Twój najsłabszy klawisz to '{key}' z zaledwie {accuracy}% dokładności. Poćwicz go, aby szybko się poprawić.",
+      "weakKeyImprove": "Klawisz '{key}' ma {accuracy}% dokładności. Jeszcze trochę ćwiczeń i go opanujesz.",
+      "streakMilestone": "Ćwiczysz {streak} dni z rzędu! Tak trzymaj.",
+      "accuracyTrendDown": "Twoja dokładność spadła w porównaniu z poprzednim okresem. Zwolnij i unikaj błędów.",
+      "wpmTrendDown": "Twoja prędkość spadła w porównaniu z poprzednim okresem. Spróbuj ćwiczyć trochę częściej.",
+      "accuracyLow": "Twoja średnia dokładność to {accuracy}%. Pisz wolniej, aby zmniejszyć liczbę błędów.",
+      "speedLow": "Twoja średnia prędkość to {wpm} SNM. Regularne ćwiczenia pomogą ci przyspieszyć.",
+      "noviceGrade": "Dopiero zaczynasz. Ćwicz trochę każdego dnia, aby awansować.",
+      "lowPracticeTime": "Łącznie ćwiczyłeś/aś {time}. Im więcej ćwiczysz, tym szybciej się poprawisz.",
+      "legendGrade": "Jesteś na poziomie legendy! Ćwicz dalej, aby na nim pozostać.",
+      "insufficientWeakData": "Ukończ więcej sesji, abyśmy mogli określić twoje najsłabsze klawisze."
     }
   },
   "practice": {

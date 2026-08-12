@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "Pannello dei progressi",
+          "title": "Calendario di pratica",
           "noData": "Nessun dato da mostrare",
           "noPractice": "Nessuna esercitazione",
           "minutesShort": "min",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "Pannello dei progressi",
-          "signIn": "Accedi",
+          "title": "Consigli",
+          "noData": "Nessun dato da mostrare",
           "noRecommendations": "Nessun consiglio disponibile."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "Pannello dei progressi",
+          "title": "Tasti deboli",
           "overallAccuracy": "Precisione complessiva",
           "weakestKey": "Tasto più debole",
           "lowestAccuracy": "Precisione più bassa"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Andamento mensile dei WPM",
       "noData": "Nessun dato disponibile",
       "bestWpm": "Miglior WPM",
+      "bestAccuracy": "Migliore precisione",
       "grossWpm": "WPM lordo",
       "record": "Record",
       "streak": "Serie",
+      "longestStreak": "Serie più lunga",
       "days": "giorni",
       "consecutivePractice": "Esercitazione consecutiva",
       "totalKeystrokes": "Battute totali",
@@ -1232,6 +1234,8 @@
       "courses": "corsi",
       "completedLessons": "Lezioni completate",
       "completedCourses": "Corsi completati",
+      "courseInProgress": "Corso in corso",
+      "continueCourse": "Continua",
       "guestModeMessage": "Accedi per vedere i tuoi progressi",
       "signIn": "Accedi",
       "recommendationsGuest": "Accedi per ricevere consigli personalizzati in base ai tuoi progressi.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Ricevi lezioni personalizzate in base ai tuoi punti deboli.",
       "signInToSee": "Accedi per visualizzare le tue statistiche",
       "noDataYet": "Completa le lezioni per vedere i tuoi punti deboli"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "Il tuo tasto più debole è '{key}' con solo il {accuracy}% di precisione. Esercitati per migliorare in fretta.",
+      "weakKeyImprove": "Il tasto '{key}' è al {accuracy}% di precisione. Con un po' più di pratica lo padroneggerai.",
+      "streakMilestone": "Sei a {streak} giorni consecutivi di pratica! Continua così.",
+      "accuracyTrendDown": "La tua precisione è calata rispetto al periodo precedente. Rallenta e concentrati sugli errori.",
+      "wpmTrendDown": "La tua velocità è calata rispetto al periodo precedente. Prova a esercitarti più spesso.",
+      "accuracyLow": "La tua precisione media è del {accuracy}%. Scrivi più lentamente per ridurre gli errori.",
+      "speedLow": "La tua velocità media è {wpm} PPM. La pratica costante ti aiuterà ad accelerare.",
+      "noviceGrade": "Stai iniziando. Esercitati un po' ogni giorno per salire di livello.",
+      "lowPracticeTime": "Hai praticato {time} in totale. Più ti eserciti, più veloce migliorerai.",
+      "legendGrade": "Sei di livello leggenda! Continua a esercitarti per restarci.",
+      "insufficientWeakData": "Completa altre sessioni per permetterci di individuare i tuoi tasti più deboli."
     }
   },
   "practice": {

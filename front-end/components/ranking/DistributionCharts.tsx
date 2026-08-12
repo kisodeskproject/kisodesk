@@ -36,7 +36,7 @@ export default function DistributionCharts({
     const padding = 60;
     const minWpm = 0;
     const maxWpm = 160;
-    const minAcc = 85;
+    const minAcc = 80;
     const maxAcc = 100;
 
     const getX = (wpm: number) => {
@@ -53,14 +53,10 @@ export default function DistributionCharts({
     ctx.fillStyle = color('--chart-background');
     ctx.fillRect(0, 0, w, h);
 
-    if (!userData.length) {
-      return;
-    }
-
     ctx.strokeStyle = color('--chart-grid');
     ctx.lineWidth = 1;
     ctx.beginPath();
-    [85, 90, 95, 100].forEach((accVal) => {
+    [80, 85, 90, 95, 100].forEach((accVal) => {
       const y = getY(accVal);
       ctx.moveTo(padding, y);
       ctx.lineTo(w - padding, y);
@@ -68,7 +64,7 @@ export default function DistributionCharts({
       ctx.font = '10px sans-serif';
       ctx.fillText(`${accVal}%`, padding - 35, y + 4);
     });
-    [0, 40, 80, 120, 160].forEach((wpmVal) => {
+    [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160].forEach((wpmVal) => {
       const x = getX(wpmVal);
       ctx.moveTo(x, padding);
       ctx.lineTo(x, h - padding);

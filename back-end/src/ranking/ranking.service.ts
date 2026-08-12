@@ -86,14 +86,24 @@ export class RankingService {
   async getUserStats(userId: string, language?: string) {
     const cacheLanguage = this.resolveCacheLanguage(language);
 
-    const userCache = await this.prisma.userRankingCache.findUnique({
-      where: { userId_languageCode: { userId, languageCode: cacheLanguage } },
-    });
+    const [userCache, user, recentSessions] = await Promise.all([
+      this.prisma.userRankingCache.findUnique({
+        where: { userId_languageCode: { userId, languageCode: cacheLanguage } },
+      }),
+      this.prisma.user.findUnique({
+        where: { id: userId },
+        select: { showInRanking: true, publicAlias: true },
+      }),
+      this.prisma.practiceSession.findMany({
+        where:
+          cacheLanguage === 'global' ? { userId } : { userId, localeCode: cacheLanguage },
+        orderBy: { createdAt: 'desc' },
+        take: 10,
+        select: { netWpm: true, grossWpm: true, accuracy: true },
+      }),
+    ]);
 
-    const user = await this.prisma.user.findUnique({
-      where: { id: userId },
-      select: { showInRanking: true, publicAlias: true },
-    });
+    const recentAverage = this.getRecentAverage(recentSessions);
 
     if (!userCache || userCache.totalSessionsUsed === 0) {
       return {
@@ -106,6 +116,7 @@ export class RankingService {
         rank: 0,
         topPercent: 0,
         insufficientData: true,
+        recentAverage,
       };
     }
 
@@ -126,6 +137,7 @@ export class RankingService {
         topPercent: 0,
         insufficientData: false,
         rankingVisible: false,
+        recentAverage,
       };
     }
 
@@ -157,6 +169,7 @@ export class RankingService {
         rank: 0,
         topPercent: 0,
         insufficientData: true,
+        recentAverage,
       };
     }
 
@@ -183,6 +196,7 @@ export class RankingService {
       topPercent,
       insufficientData: false,
       rankingVisible: true,
+      recentAverage,
     };
   }
 
@@ -201,5 +215,28 @@ export class RankingService {
 
   private getScore(bestWpmNet: number): number {
     return bestWpmNet * 100;
+  }
+
+  private getRecentAverage(
+    sessions: Array<{ netWpm: number; grossWpm: number; accuracy: number }>,
+  ): { score: number; wpm: number; grossWpm: number; accuracy: number } | null {
+    if (sessions.length === 0) return null;
+
+    const avgNetWpm = Math.round(
+      sessions.reduce((sum, s) => sum + s.netWpm, 0) / sessions.length,
+    );
+    const avgGrossWpm = Math.round(
+      sessions.reduce((sum, s) => sum + s.grossWpm, 0) / sessions.length,
+    );
+    const avgAccuracy = Math.round(
+      sessions.reduce((sum, s) => sum + s.accuracy, 0) / sessions.length,
+    );
+
+    return {
+      score: this.getScore(avgNetWpm),
+      wpm: avgNetWpm,
+      grossWpm: avgGrossWpm,
+      accuracy: avgAccuracy,
+    };
   }
 }

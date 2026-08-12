@@ -14,6 +14,8 @@ import DistributionCharts from '@/components/ranking/DistributionCharts';
 import Button from '@/components/ui/Button';
 import DashboardBackground from '@/components/layout/DashboardBackground';
 import AuthBanner from '@/components/dashboard/AuthBanner';
+import { readGuestProgress } from '@/lib/guestProgressStore';
+import { getGuestProgressForLanguage, getGuestRecentAverage } from '@/lib/guestDashboardProgress';
 
 const RANKING_LIMIT = 20;
 
@@ -100,33 +102,35 @@ export default function RankingPage() {
     setPage(1);
   }, [selectedLanguage]);
 
+  const [recentAverage, setRecentAverage] = useState<{
+    score: number;
+    wpm: number;
+    grossWpm: number;
+    accuracy: number;
+  } | null>(null);
+
+  useEffect(() => {
+    if (authLoading) return;
+
+    if (isAuthenticated) {
+      setRecentAverage(userStats?.recentAverage ?? null);
+      return;
+    }
+
+    const guestProgress = readGuestProgress();
+    const scopedProgress =
+      selectedLanguage === 'global'
+        ? guestProgress
+        : getGuestProgressForLanguage(guestProgress, selectedLanguage);
+    setRecentAverage(getGuestRecentAverage(scopedProgress));
+  }, [authLoading, isAuthenticated, userStats, selectedLanguage]);
+
   const scatterData = useMemo(() => distribution, [distribution]);
   const currentUserPoint = useMemo(() => {
-    if (userStats && isAuthenticated)
-      return { wpm: userStats.bestWpmNet, accuracy: userStats.bestAccuracy };
-    return undefined;
-  }, [userStats, isAuthenticated]);
+    if (!recentAverage) return undefined;
+    return { wpm: recentAverage.wpm, accuracy: recentAverage.accuracy };
+  }, [recentAverage]);
 
-  const getLevelIcon = (level: string) => {
-    switch (level) {
-      case 'gold':
-        return '🥇';
-      case 'silver':
-        return '🥈';
-      default:
-        return '🥉';
-    }
-  };
-  const getLevelColor = (level: string) => {
-    switch (level) {
-      case 'gold':
-        return 'text-yellow-400';
-      case 'silver':
-        return 'text-gray-300';
-      default:
-        return 'text-orange-400';
-    }
-  };
   const getMedal = (index: number) => {
     if (page === 1 && index === 0) return '🥇';
     if (page === 1 && index === 1) return '🥈';
@@ -168,7 +172,7 @@ export default function RankingPage() {
                 <h2 className="text-lg font-semibold text-(--text-primary)">
                   {t('ranking.general.yourStats')}
                 </h2>
-                {!isAuthenticated && (
+                {!recentAverage && (
                   <span className="text-xs px-2 py-1 bg-(--dashboard-sign-in-badge-background) text-(--dashboard-sign-in-badge-text) rounded">
                     {t('ranking.general.noData')}
                   </span>
@@ -181,13 +185,12 @@ export default function RankingPage() {
                 stats={
                   userStats ? { ...userStats, topPercent: Math.round(userStats.topPercent) } : null
                 }
+                recentAverage={recentAverage}
                 loading={userStatsLoading}
                 error={userStatsError}
                 isAuthenticated={isAuthenticated}
                 onRetry={() => fetchUserStats(selectedLanguage)}
                 t={t}
-                getLevelIcon={getLevelIcon}
-                getLevelColor={getLevelColor}
               />
             </div>
           </div>
@@ -204,7 +207,6 @@ export default function RankingPage() {
             onRetry={() => fetchRanking(selectedLanguage, page)}
             t={t}
             getMedal={getMedal}
-            getLevelIcon={getLevelIcon}
           />
           {!rankingLoading && totalPages > 1 && (
             <div className="flex items-center justify-between px-6 py-3 border-t border-(--border-card)">

@@ -1,6 +1,3 @@
-// app/layout.tsx
-// Layout raíz de la aplicación con configuración de fuentes y tema oscuro
-
 import type { Metadata } from 'next';
 import { headers } from 'next/headers';
 import { getHtmlLang, toSupportedLocale } from '@/lib/locales';
@@ -41,9 +38,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                   var stored = localStorage.getItem('theme');
                   var theme = stored === 'light' || stored === 'dark' ? stored : 'dark';
                   var root = document.documentElement;
-                  root.classList.remove('dark', 'light', 'gray');
+                  root.classList.remove('dark', 'light');
                   root.classList.add(theme);
-                  root.style.colorScheme = theme;
+                  root.style.colorScheme = theme === 'dark' ? 'dark' : 'light';
                   if (stored !== theme) {
                     localStorage.setItem('theme', theme);
                   }

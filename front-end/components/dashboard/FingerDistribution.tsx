@@ -9,6 +9,7 @@ import { useKeyboardLayout } from '@/hooks/useKeyboardLayout';
 import { useWeakKeys } from '@/hooks/useWeakKeys';
 import { toSupportedLocale, useTranslations } from '@/lib/i18n';
 import type { KeyboardLayout } from '@/lib/keyboardLayouts';
+import { getPhysicalKeyIdForCode } from '@/lib/keyboardPhysical';
 import type { WeakKey } from '@/types/weakKeys';
 import type { Locale } from '@/lib/locales';
 
@@ -91,7 +92,14 @@ function getFingerDefinitions(layout: KeyboardLayout): FingerDefinition[] {
     assignedKeys: [
       ...new Set(
         codes
-          .flatMap((code) => [layout.keys[code], layout.shiftedKeys?.[code]])
+          .map((code) => getPhysicalKeyIdForCode(code))
+          .filter((id): id is NonNullable<typeof id> => id !== null)
+          .flatMap((id) => [
+            layout.keys[id],
+            layout.shiftedKeys?.[id],
+            layout.altGrKeys?.[id],
+            layout.shiftAltGrKeys?.[id],
+          ])
           .filter((key): key is string => Boolean(key)),
       ),
     ],
@@ -209,8 +217,8 @@ export default function FingerDistribution({
   const rightHand = fingerData.filter((finger) => finger.hand === 'right');
 
   return (
-    <div className="rounded-lg border border-(--border-card) bg-(--bg-card) p-6">
-      <div className="mb-6 flex items-center justify-between">
+    <div className="rounded-lg border border-(--border-card) bg-(--bg-card)">
+      <div className="flex items-center justify-between rounded-t-lg bg-(--bg-primary) px-6 py-3 light:bg-(--bg-secondary)">
         <h2 className="text-lg font-semibold text-(--text-primary)">
           {t('components.dashboard.fingerDistribution.general.title')}
         </h2>
@@ -228,7 +236,7 @@ export default function FingerDistribution({
         )}
       </div>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 gap-6 p-6">
         <FingerList
           fingers={leftHand}
           hand={t('components.dashboard.fingerDistribution.general.leftHand')}

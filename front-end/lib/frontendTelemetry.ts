@@ -4,7 +4,17 @@ import { onCLS, onINP, onLCP } from 'web-vitals';
 import { readCookieConsent } from '@/components/legal/cookieConsent';
 
 type TelemetryEvent = {
-  type: 'vital' | 'navigation' | 'error' | 'request' | 'session' | 'page_view' | 'analytics_session_started' | 'practice_started' | 'practice_completed' | 'practice_abandoned';
+  type:
+    | 'vital'
+    | 'navigation'
+    | 'error'
+    | 'request'
+    | 'session'
+    | 'page_view'
+    | 'analytics_session_started'
+    | 'practice_started'
+    | 'practice_completed'
+    | 'practice_abandoned';
   route: string;
   metricName?: 'lcp' | 'inp' | 'cls';
   errorCategory?: 'runtime' | 'promise' | 'resource';
@@ -31,7 +41,9 @@ function hasAnalyticsConsent() {
 function ensureAnalyticsSession() {
   if (!hasAnalyticsConsent()) return false;
   const now = Date.now();
-  const current = document.cookie.split('; ').find((item) => item.startsWith(`${ANALYTICS_SESSION_COOKIE}=`));
+  const current = document.cookie
+    .split('; ')
+    .find((item) => item.startsWith(`${ANALYTICS_SESSION_COOKIE}=`));
   const expiry = current ? Number(current.split('=')[1]?.split('.').at(-1)) : 0;
   const isNew = !Number.isFinite(expiry) || expiry <= now;
   const sessionValue = current?.split('=')[1]?.split('.')[0] || crypto.randomUUID();
@@ -106,47 +118,88 @@ export function recordObservedPractice(
   const event: TelemetryEvent = { type, route: route(), ...attributes };
   const payload = JSON.stringify({ events: [event] });
   void fetch(TELEMETRY_ENDPOINT, {
-    method: 'POST', body: payload, headers: { 'content-type': 'application/json' }, credentials: 'omit', keepalive: true,
+    method: 'POST',
+    body: payload,
+    headers: { 'content-type': 'application/json' },
+    credentials: 'omit',
+    keepalive: true,
   }).catch(() => undefined);
 }
 
 export function recordObservedPageView(pathname: string) {
   if (!hasAnalyticsConsent()) return;
-  const payload = JSON.stringify({ events: [{ type: 'page_view', route: pathname.split(/[?#]/, 1)[0] || 'unknown' }] });
+  const payload = JSON.stringify({
+    events: [{ type: 'page_view', route: pathname.split(/[?#]/, 1)[0] || 'unknown' }],
+  });
   void fetch(TELEMETRY_ENDPOINT, {
-    method: 'POST', body: payload, headers: { 'content-type': 'application/json' }, credentials: 'omit', keepalive: true,
+    method: 'POST',
+    body: payload,
+    headers: { 'content-type': 'application/json' },
+    credentials: 'omit',
+    keepalive: true,
   }).catch(() => undefined);
 }
 
 export function recordObservedAnonymousSessionStart() {
   if (!hasAnalyticsConsent()) return;
-  const payload = JSON.stringify({ events: [{ type: 'analytics_session_started', route: route() }] });
+  const payload = JSON.stringify({
+    events: [{ type: 'analytics_session_started', route: route() }],
+  });
   void fetch(TELEMETRY_ENDPOINT, {
-    method: 'POST', body: payload, headers: { 'content-type': 'application/json' }, credentials: 'omit', keepalive: true,
+    method: 'POST',
+    body: payload,
+    headers: { 'content-type': 'application/json' },
+    credentials: 'omit',
+    keepalive: true,
   }).catch(() => undefined);
 }
 
-export function startFrontendTelemetry() {
+export function startFrontendTelemetry(
+  authState?: 'anonymous' | 'authenticated',
+  language?: string,
+) {
   if (typeof window === 'undefined' || sampled) return;
   ensureAnalyticsSession();
   sampled = Math.random() < samplingRate();
   if (!sampled) return;
 
-  enqueue({ type: 'session', route: route() });
-  onLCP((metric) => enqueue({ type: 'vital', metricName: 'lcp', route: route(), value: metric.value / 1000 }));
-  onINP((metric) => enqueue({ type: 'vital', metricName: 'inp', route: route(), value: metric.value / 1000 }));
-  onCLS((metric) => enqueue({ type: 'vital', metricName: 'cls', route: route(), value: metric.value }));
+  enqueue({
+    type: 'session',
+    route: route(),
+    authState: authState || 'anonymous',
+    language: language || document.documentElement.lang || 'unknown',
+  });
+  onLCP((metric) =>
+    enqueue({ type: 'vital', metricName: 'lcp', route: route(), value: metric.value / 1000 }),
+  );
+  onINP((metric) =>
+    enqueue({ type: 'vital', metricName: 'inp', route: route(), value: metric.value / 1000 }),
+  );
+  onCLS((metric) =>
+    enqueue({ type: 'vital', metricName: 'cls', route: route(), value: metric.value }),
+  );
 
   window.addEventListener('error', (event) => {
-    enqueue({ type: 'error', route: route(), errorCategory: event.target instanceof HTMLScriptElement ? 'resource' : 'runtime' });
+    enqueue({
+      type: 'error',
+      route: route(),
+      errorCategory: event.target instanceof HTMLScriptElement ? 'resource' : 'runtime',
+    });
   });
   window.addEventListener('unhandledrejection', () => {
     enqueue({ type: 'error', route: route(), errorCategory: 'promise' });
   });
-  window.addEventListener('load', () => {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
-    if (navigation) enqueue({ type: 'navigation', route: route(), value: navigation.duration / 1000 });
-  }, { once: true });
+  window.addEventListener(
+    'load',
+    () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as
+        | PerformanceNavigationTiming
+        | undefined;
+      if (navigation)
+        enqueue({ type: 'navigation', route: route(), value: navigation.duration / 1000 });
+    },
+    { once: true },
+  );
   window.addEventListener('pagehide', flush);
 }
 

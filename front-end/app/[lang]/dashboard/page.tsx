@@ -1,27 +1,33 @@
 // app/[lang]/dashboard/page.tsx
 'use client';
 
-import { useEffect, useCallback, useState } from 'react';
+import { useEffect, useCallback, useMemo, useState } from 'react';
 import dynamic from 'next/dynamic';
-import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { toSupportedLocale, useTranslations } from '@/lib/i18n';
 import { useNormalizedProgress, usePracticeCalendar } from '@/hooks/useProgress';
 import { useAuth } from '@/hooks/useAuth';
+import { useRecommendations } from '@/hooks/useRecommendations';
+import { generateRecommendations } from '@/lib/recommendations/engine';
 import StatsGrid from '@/components/dashboard/StatsGrid';
 import DashboardTitle from '@/components/dashboard/DashboardTitle';
 import ErrorBanner from '@/components/dashboard/ErrorBanner';
 import DashboardSkeleton from '@/components/dashboard/DashboardSkeleton';
 import DashboardBackground from '@/components/layout/DashboardBackground';
+import PersonalRecordCard from '@/components/dashboard/PersonalRecordCard';
+import RecommendationsList from '@/components/dashboard/RecommendationsList';
+import CourseInProgressCard from '@/components/dashboard/CourseInProgressCard';
+import RankingPositionCard from '@/components/dashboard/RankingPositionCard';
 import { readGuestProgress } from '@/lib/guestProgressStore';
 import {
   getGuestDashboardProgress,
   getGuestPracticeDays,
   getGuestProgressForLanguage,
   getGuestWeakKeys,
+  getGuestWeakKeysResponse,
 } from '@/lib/guestDashboardProgress';
 import type { PracticeDay, ProgressData } from '@/types/progress';
-import type { WeakKey } from '@/types/weakKeys';
+import type { WeakKey, WeakKeysResponse } from '@/types/weakKeys';
 
 const ProgressChart = dynamic(() => import('@/components/dashboard/ProgressChart'), { ssr: false });
 const ErrorTrends = dynamic(() => import('@/components/dashboard/ErrorTrends'), { ssr: false });
@@ -53,6 +59,16 @@ export default function ProgressPage() {
   const [guestProgress, setGuestProgress] = useState<ProgressData | null>(null);
   const [guestPracticeDays, setGuestPracticeDays] = useState<PracticeDay[]>([]);
   const [guestWeakKeys, setGuestWeakKeys] = useState<WeakKey[]>([]);
+  const [guestWeakKeysResponse, setGuestWeakKeysResponse] = useState<WeakKeysResponse | null>(
+    null,
+  );
+
+  const { recommendations } = useRecommendations();
+
+  const guestRecommendations = useMemo(() => {
+    if (isAuthenticated || !guestProgress) return [];
+    return generateRecommendations(guestProgress, null, guestWeakKeysResponse, t);
+  }, [isAuthenticated, guestProgress, guestWeakKeysResponse, t]);
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -66,6 +82,7 @@ export default function ProgressPage() {
       setGuestProgress(null);
       setGuestPracticeDays([]);
       setGuestWeakKeys([]);
+      setGuestWeakKeysResponse(null);
       return;
     }
 
@@ -75,6 +92,7 @@ export default function ProgressPage() {
     setGuestProgress(hasLocalData ? getGuestDashboardProgress(localProgress) : null);
     setGuestPracticeDays(getGuestPracticeDays(localProgress));
     setGuestWeakKeys(getGuestWeakKeys(localProgress));
+    setGuestWeakKeysResponse(getGuestWeakKeysResponse(localProgress));
   }, [isAuthenticated, locale]);
 
   const handleRetry = useCallback(() => {
@@ -103,8 +121,18 @@ export default function ProgressPage() {
     signIn: t('dashboard.general.signIn'),
   };
 
+  const personalRecordTranslations = {
+    record: t('dashboard.general.record'),
+    bestWpm: t('dashboard.general.bestWpm'),
+    bestAccuracy: t('dashboard.general.bestAccuracy'),
+    longestStreak: t('dashboard.general.longestStreak'),
+    days: t('dashboard.general.days'),
+  };
+
   const isLoading =
     authLoading || (isAuthenticated && progressLoading) || (isAuthenticated && calendarLoading);
+
+  const showNoDataBadge = isAuthenticated ? !normalized : !guestProgress;
 
   if (isLoading) {
     return (
@@ -168,35 +196,42 @@ export default function ProgressPage() {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <PersonalRecordCard
+            bestWpm={normalized?.bestWpm ?? guestProgress?.bestWpm}
+            bestAccuracy={normalized?.bestAccuracy ?? guestProgress?.bestAccuracy}
+            longestStreak={normalized?.longestStreak ?? guestProgress?.longestStreak}
+            translations={personalRecordTranslations}
+          />
+          <CourseInProgressCard />
+          {isAuthenticated && <RankingPositionCard />}
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <ProgressChart
             data={normalized?.weeklyProgress ?? guestProgress?.weeklyProgress ?? emptyWeeklyData}
             title={t('dashboard.general.weeklyWpmProgress')}
-            showStatusBadge={!isAuthenticated && !guestProgress}
+            showStatusBadge={showNoDataBadge}
           />
           <ProgressChart
             data={normalized?.monthlyProgress ?? guestProgress?.monthlyProgress ?? emptyMonthlyData}
             title={t('dashboard.general.monthlyWpmProgress')}
-            showStatusBadge={!isAuthenticated && !guestProgress}
+            showStatusBadge={showNoDataBadge}
           />
           <PracticeCalendar
             data={isAuthenticated ? practiceDays : guestPracticeDays}
-            showStatusBadge={!isAuthenticated && !guestProgress}
+            showStatusBadge={showNoDataBadge}
           />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <ErrorTrends guestWeakKeys={guestWeakKeys} locale={locale} />
           <FingerDistribution guestWeakKeys={guestWeakKeys} locale={locale} />
+          <RecommendationsList
+            recommendations={isAuthenticated ? recommendations : guestRecommendations}
+            showStatusBadge={showNoDataBadge}
+            practiceHref={`/${locale}/dashboard/practice?mode=adaptive`}
+          />
         </div>
-
-        <Link
-          href={`/${locale}/dashboard/practice?mode=adaptive`}
-          className="block rounded-lg border border-(--accent-blue-border) bg-(--bg-card) p-6 transition-colors hover:bg-(--bg-card-hover) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent-blue)"
-        >
-          <h2 className="text-lg font-semibold text-(--text-primary)">
-            {t('practice.general.modeWords')}
-          </h2>
-        </Link>
       </div>
     </DashboardBackground>
   );

@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "Progress dashboard",
+          "title": "Practice calendar",
           "noData": "No data to display",
           "noPractice": "No practice",
           "minutesShort": "min",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "Progress dashboard",
-          "signIn": "Sign in",
+          "title": "Recommendations",
+          "noData": "No data to display",
           "noRecommendations": "No recommendations available."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "Progress dashboard",
+          "title": "Weak keys",
           "overallAccuracy": "Overall accuracy",
           "weakestKey": "Weakest key",
           "lowestAccuracy": "Lowest accuracy"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Monthly WPM progress",
       "noData": "No data available",
       "bestWpm": "Best WPM",
+      "bestAccuracy": "Best Accuracy",
       "grossWpm": "Gross WPM",
       "record": "Record",
       "streak": "Streak",
+      "longestStreak": "Longest streak",
       "days": "days",
       "consecutivePractice": "Consecutive practice",
       "totalKeystrokes": "Total keystrokes",
@@ -1232,6 +1234,8 @@
       "courses": "courses",
       "completedLessons": "Completed lessons",
       "completedCourses": "Completed courses",
+      "courseInProgress": "Course in progress",
+      "continueCourse": "Continue",
       "guestModeMessage": "Sign in to view your progress",
       "signIn": "Sign in",
       "recommendationsGuest": "Sign in to receive personalised recommendations based on your progress.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Receive personalised lessons based on your weaknesses.",
       "signInToSee": "Sign in to view your statistics",
       "noDataYet": "Complete lessons to identify your weaknesses"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "Your weakest key is '{key}' with only {accuracy}% accuracy. Practise it to improve fast.",
+      "weakKeyImprove": "The '{key}' key is at {accuracy}% accuracy. A bit more practice and you'll master it.",
+      "streakMilestone": "You're on a {streak}-day streak! Keep it up.",
+      "accuracyTrendDown": "Your accuracy dropped compared to the previous period. Slow down and focus on avoiding mistakes.",
+      "wpmTrendDown": "Your speed dropped compared to the previous period. Try practising a bit more often.",
+      "accuracyLow": "Your average accuracy is {accuracy}%. Type slower to reduce mistakes.",
+      "speedLow": "Your average speed is {wpm} WPM. Consistent practice will help you speed up.",
+      "noviceGrade": "You're just getting started. Practise a little every day to level up.",
+      "lowPracticeTime": "You've practised {time} in total. The more you practise, the faster you'll improve.",
+      "legendGrade": "You're at legend level! Keep practising to stay there.",
+      "insufficientWeakData": "Complete more practice sessions so we can identify your weakest keys."
     }
   },
   "practice": {

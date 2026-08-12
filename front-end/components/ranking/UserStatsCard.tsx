@@ -1,28 +1,27 @@
 'use client';
 
 import { AlertTriangle } from 'lucide-react';
+import { getGradeFromScore } from '@/lib/grades';
 import { UserStatsResponse } from '@/types/ranking';
 
 interface UserStatsCardProps {
   stats: UserStatsResponse | null;
+  recentAverage: { score: number; grossWpm: number; accuracy: number } | null;
   loading: boolean;
   error: string | null;
   isAuthenticated: boolean;
   onRetry: () => void;
   t: (key: string, values?: Record<string, string | number>) => string;
-  getLevelIcon: (level: string) => string;
-  getLevelColor: (level: string) => string;
 }
 
 export default function UserStatsCard({
   stats,
+  recentAverage,
   loading,
   error,
   isAuthenticated,
   onRetry,
   t,
-  getLevelIcon,
-  getLevelColor,
 }: UserStatsCardProps) {
   if (loading) {
     return (
@@ -50,77 +49,54 @@ export default function UserStatsCard({
     );
   }
 
-  if (isAuthenticated && stats && !stats.insufficientData) {
-    if (stats.rankingVisible === false) {
-      return (
-        <div className="text-center py-6">
-          <p className="text-(--text-secondary) text-sm">{t('ranking.general.privateProfile')}</p>
-        </div>
-      );
-    }
-
+  if (isAuthenticated && stats && !stats.insufficientData && stats.rankingVisible === false) {
     return (
-      <div className="space-y-4">
-        <div className="flex justify-between items-center border-b border-(--border-card) pb-2">
-          <span className="text-(--text-secondary)">{t('ranking.general.score')}</span>
-          <span className="text-2xl font-bold text-(--accent-purple)">{stats.score}</span>
-        </div>
-        <div className="flex justify-between items-center border-b border-(--border-card) pb-2">
-          <span className="text-(--text-secondary)">{t('ranking.general.grossWpm')}</span>
-          <span className="text-2xl font-bold text-(--accent-blue)">
-            {stats.bestGrossWpm ?? '—'}
-          </span>
-        </div>
-        <div className="flex justify-between items-center border-b border-(--border-card) pb-2">
-          <span className="text-(--text-secondary)">{t('ranking.general.accuracy')}</span>
-          <span className="text-2xl font-bold text-(--accent-green)">{stats.bestAccuracy}%</span>
-        </div>
-        <div className="flex justify-between items-center border-b border-(--border-card) pb-2">
-          <span className="text-(--text-secondary)">{t('ranking.general.currentRank')}</span>
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-(--text-tertiary)">
-              {t('ranking.general.topPercent', { percent: stats.topPercent })}
-            </span>
-            <span className="text-2xl font-bold text-(--accent-yellow)">#{stats.rank}</span>
-          </div>
-        </div>
-        <div className="flex justify-between items-center">
-          <span className="text-(--text-secondary)">{t('ranking.general.level')}</span>
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">{getLevelIcon(stats.level)}</span>
-            <span className={`font-semibold ${getLevelColor(stats.level)}`}>
-              {t(`ranking.userStatsCard.general.levels.${stats.level}`)}
-            </span>
-          </div>
-        </div>
+      <div className="text-center py-6">
+        <p className="text-(--text-secondary) text-sm">{t('ranking.general.privateProfile')}</p>
       </div>
     );
   }
 
+  const showRankLevel = isAuthenticated && !!stats && !stats.insufficientData;
+
   return (
-    <div className="space-y-4 opacity-70">
+    <div className="space-y-4">
       <div className="flex justify-between items-center border-b border-(--border-card) pb-2">
         <span className="text-(--text-secondary)">{t('ranking.general.score')}</span>
-        <span className="text-2xl font-bold text-(--accent-purple)">—</span>
+        <span className="text-2xl font-bold text-(--accent-purple)">
+          {recentAverage ? recentAverage.score : '—'}
+        </span>
       </div>
       <div className="flex justify-between items-center border-b border-(--border-card) pb-2">
         <span className="text-(--text-secondary)">{t('ranking.general.grossWpm')}</span>
-        <span className="text-2xl font-bold text-(--accent-blue)">—</span>
+        <span className="text-2xl font-bold text-(--accent-blue)">
+          {recentAverage ? recentAverage.grossWpm : '—'}
+        </span>
       </div>
       <div className="flex justify-between items-center border-b border-(--border-card) pb-2">
         <span className="text-(--text-secondary)">{t('ranking.general.accuracy')}</span>
-        <span className="text-2xl font-bold text-(--accent-green)">—</span>
+        <span className="text-2xl font-bold text-(--accent-green)">
+          {recentAverage ? `${recentAverage.accuracy}%` : '—'}
+        </span>
       </div>
       <div className="flex justify-between items-center border-b border-(--border-card) pb-2">
         <span className="text-(--text-secondary)">{t('ranking.general.currentRank')}</span>
-        <span className="text-2xl font-bold text-(--accent-yellow)">—</span>
+        {showRankLevel ? (
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-(--text-tertiary)">
+              {t('ranking.general.topPercent', { percent: stats!.topPercent })}
+            </span>
+            <span className="text-2xl font-bold text-(--accent-yellow)">#{stats!.rank}</span>
+          </div>
+        ) : (
+          <span className="text-2xl font-bold text-(--accent-yellow)">—</span>
+        )}
       </div>
       <div className="flex justify-between items-center">
         <span className="text-(--text-secondary)">{t('ranking.general.level')}</span>
-        <div className="flex items-center gap-2">
-          <span className="text-2xl">—</span>
-          <span className="font-semibold text-(--text-secondary)">—</span>
-        </div>
+        <span className="text-2xl font-mono font-bold text-(--accent-amber)">
+          {recentAverage ? getGradeFromScore(recentAverage.score).letter : '—'}
+        </span>
       </div>
     </div>
   );

@@ -39,5 +39,8 @@ export function normalizeProgress(stats: ProgressStats, userStats: UserStats): P
     monthlyProgress: stats.monthlyProgress,
     wpmTrend,
     accuracyTrend,
+    bestWpm: userStats.bestWpm,
+    bestAccuracy: userStats.bestAccuracy,
+    longestStreak: userStats.longestStreak,
   };
 }

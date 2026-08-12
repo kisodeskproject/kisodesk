@@ -3,6 +3,7 @@
 
 import { AlertTriangle } from 'lucide-react';
 import Button from '@/components/ui/Button';
+import { getGradeFromScore } from '@/lib/grades';
 import { RankUser } from '@/types/ranking';
 
 interface RankingTableProps {
@@ -12,7 +13,6 @@ interface RankingTableProps {
   onRetry: () => void;
   t: (key: string) => string;
   getMedal: (index: number) => string;
-  getLevelIcon: (level: string) => string;
 }
 
 export default function RankingTable({
@@ -22,7 +22,6 @@ export default function RankingTable({
   onRetry,
   t,
   getMedal,
-  getLevelIcon,
 }: RankingTableProps) {
   if (loading) {
     return (
@@ -108,10 +107,8 @@ export default function RankingTable({
                 {user.score}
               </td>
               <td className="px-6 py-4 whitespace-nowrap">{user.bestAccuracy}%</td>
-              <td className="px-6 py-4 whitespace-nowrap">
-                <span className="flex items-center gap-1">
-                  {getLevelIcon(user.level)} {user.level}
-                </span>
+              <td className="px-6 py-4 whitespace-nowrap font-mono font-bold text-(--accent-amber)">
+                {getGradeFromScore(user.score).letter}
               </td>
             </tr>
           ))}

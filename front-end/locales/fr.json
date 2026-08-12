@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "Tableau de progression",
+          "title": "Calendrier de pratique",
           "noData": "Aucune donnée à afficher",
           "noPractice": "Aucun entraînement",
           "minutesShort": "min",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "Tableau de progression",
-          "signIn": "Se connecter",
+          "title": "Recommandations",
+          "noData": "Aucune donnée à afficher",
           "noRecommendations": "Aucune recommandation disponible."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "Tableau de progression",
+          "title": "Touches faibles",
           "overallAccuracy": "Précision globale",
           "weakestKey": "Touche la plus faible",
           "lowestAccuracy": "Précision la plus faible"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Progression mensuelle du WPM",
       "noData": "Aucune donnée disponible",
       "bestWpm": "Meilleur WPM",
+      "bestAccuracy": "Meilleure précision",
       "grossWpm": "WPM brut",
       "record": "Record",
       "streak": "Série",
+      "longestStreak": "Plus longue série",
       "days": "jours",
       "consecutivePractice": "Entraînement consécutif",
       "totalKeystrokes": "Nombre total de frappes",
@@ -1232,6 +1234,8 @@
       "courses": "cours",
       "completedLessons": "Leçons terminées",
       "completedCourses": "Cours terminés",
+      "courseInProgress": "Cours en cours",
+      "continueCourse": "Continuer",
       "guestModeMessage": "Connectez-vous pour voir votre progression",
       "signIn": "Se connecter",
       "recommendationsGuest": "Connectez-vous pour recevoir des recommandations personnalisées basées sur votre progression.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Recevez des leçons personnalisées basées sur vos points faibles.",
       "signInToSee": "Connectez-vous pour consulter vos statistiques",
       "noDataYet": "Terminez des leçons pour identifier vos points faibles"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "Votre touche la plus faible est '{key}' avec seulement {accuracy}% de précision. Entraînez-vous dessus pour progresser vite.",
+      "weakKeyImprove": "La touche '{key}' est à {accuracy}% de précision. Encore un peu de pratique et vous la maîtriserez.",
+      "streakMilestone": "Vous en êtes à {streak} jours de suite ! Continuez comme ça.",
+      "accuracyTrendDown": "Votre précision a baissé par rapport à la période précédente. Ralentissez et évitez les erreurs.",
+      "wpmTrendDown": "Votre vitesse a baissé par rapport à la période précédente. Essayez de pratiquer un peu plus souvent.",
+      "accuracyLow": "Votre précision moyenne est de {accuracy}%. Tapez plus lentement pour réduire les erreurs.",
+      "speedLow": "Votre vitesse moyenne est de {wpm} MPM. Une pratique régulière vous aidera à accélérer.",
+      "noviceGrade": "Vous débutez. Pratiquez un peu chaque jour pour progresser.",
+      "lowPracticeTime": "Vous avez pratiqué {time} au total. Plus vous pratiquez, plus vite vous progressez.",
+      "legendGrade": "Vous êtes niveau légende ! Continuez à pratiquer pour le rester.",
+      "insufficientWeakData": "Complétez plus de sessions pour que nous puissions identifier vos touches les plus faibles."
     }
   },
   "practice": {

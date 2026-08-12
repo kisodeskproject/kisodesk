@@ -19,49 +19,56 @@ export default function WeakKeysPanel({ data }: WeakKeysPanelProps) {
   if (!weakKeys.length) return null;
 
   const maxAccuracy = 100;
+  const displayedKeys = weakKeys.slice(0, 12);
 
   return (
-    <div className="rounded-lg border border-(--border-card) bg-(--bg-card) p-6">
-      <h2 className="mb-4 text-lg font-semibold text-(--text-primary)">
-        {t('components.dashboard.weakKeysPanel.general.title' as TranslationKey)}
-      </h2>
+    <div className="overflow-hidden rounded-lg border border-(--border-card) bg-(--bg-card)">
+      <div className="rounded-t-lg bg-(--bg-primary) px-6 py-3 light:bg-(--bg-secondary)">
+        <h2 className="text-lg font-semibold text-(--text-primary)">
+          {t('components.dashboard.weakKeysPanel.general.title' as TranslationKey)}
+        </h2>
+      </div>
 
-      {summary && (
-        <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
-          <div className="rounded-lg bg-(--bg-secondary) p-4">
-            <p className="text-sm text-(--text-secondary)">
-              {t('components.dashboard.weakKeysPanel.general.overallAccuracy' as TranslationKey)}
-            </p>
+      <div className="p-6">
+        {summary && (
+          <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="rounded-lg bg-(--bg-secondary) p-4">
+              <p className="text-sm text-(--text-secondary)">
+                {t(
+                  'components.dashboard.weakKeysPanel.general.overallAccuracy' as TranslationKey,
+                )}
+              </p>
 
-            <p className="text-2xl font-bold text-(--text-primary)">
-              {summary.overallAccuracy.toFixed(1)}%
-            </p>
+              <p className="text-2xl font-bold text-(--text-primary)">
+                {summary.overallAccuracy.toFixed(1)}%
+              </p>
+            </div>
+
+            <div className="rounded-lg bg-(--bg-secondary) p-4">
+              <p className="text-sm text-(--text-secondary)">
+                {t('components.dashboard.weakKeysPanel.general.weakestKey' as TranslationKey)}
+              </p>
+
+              <p className="text-2xl font-bold text-(--accent-red)">{summary.weakestKey}</p>
+            </div>
+
+            <div className="rounded-lg bg-(--bg-secondary) p-4">
+              <p className="text-sm text-(--text-secondary)">
+                {t('components.dashboard.weakKeysPanel.general.lowestAccuracy' as TranslationKey)}
+              </p>
+
+              <p className="text-2xl font-bold text-(--accent-red)">
+                {summary.weakestAccuracy.toFixed(1)}%
+              </p>
+            </div>
           </div>
+        )}
 
-          <div className="rounded-lg bg-(--bg-secondary) p-4">
-            <p className="text-sm text-(--text-secondary)">
-              {t('components.dashboard.weakKeysPanel.general.weakestKey' as TranslationKey)}
-            </p>
-
-            <p className="text-2xl font-bold text-(--accent-red)">{summary.weakestKey}</p>
-          </div>
-
-          <div className="rounded-lg bg-(--bg-secondary) p-4">
-            <p className="text-sm text-(--text-secondary)">
-              {t('components.dashboard.weakKeysPanel.general.lowestAccuracy' as TranslationKey)}
-            </p>
-
-            <p className="text-2xl font-bold text-(--accent-red)">
-              {summary.weakestAccuracy.toFixed(1)}%
-            </p>
-          </div>
+        <div className="grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2 lg:grid-cols-4">
+          {displayedKeys.map((weakKey) => (
+            <WeakKeyRow key={weakKey.key} weakKey={weakKey} maxAccuracy={maxAccuracy} />
+          ))}
         </div>
-      )}
-
-      <div className="space-y-3">
-        {weakKeys.map((weakKey) => (
-          <WeakKeyRow key={weakKey.key} weakKey={weakKey} maxAccuracy={maxAccuracy} />
-        ))}
       </div>
     </div>
   );

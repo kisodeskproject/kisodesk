@@ -3,7 +3,13 @@
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
-import { recordObservedAnonymousSessionStart, recordObservedPageView, renewFrontendAnalyticsSession, startFrontendTelemetry, stopFrontendAnalytics } from '@/lib/frontendTelemetry';
+import {
+  recordObservedAnonymousSessionStart,
+  recordObservedPageView,
+  renewFrontendAnalyticsSession,
+  startFrontendTelemetry,
+  stopFrontendAnalytics,
+} from '@/lib/frontendTelemetry';
 import { readCookieConsent } from '@/components/legal/cookieConsent';
 import { useAuth } from '@/hooks/useAuth';
 
@@ -12,7 +18,11 @@ export default function FrontendObservability() {
   const { isAuthenticated, loading } = useAuth();
 
   useEffect(() => {
-    startFrontendTelemetry();
+    // Obtener el idioma actual
+    const language = document.documentElement.lang || 'unknown';
+    const authState = isAuthenticated ? 'authenticated' : 'anonymous';
+
+    startFrontendTelemetry(authState, language);
     const renew = () => {
       const isNew = renewFrontendAnalyticsSession();
       if (isNew && !loading && !isAuthenticated) recordObservedAnonymousSessionStart();
@@ -34,7 +44,7 @@ export default function FrontendObservability() {
   }, [isAuthenticated, loading]);
 
   useEffect(() => {
-    // La navegación interna mantiene la misma cookie de sesión; no crea una sesión nueva.
+    // La navegación interna mantiene la misma cookie de sesión
     const isNew = renewFrontendAnalyticsSession();
     if (loading || isAuthenticated) return;
     if (isNew) recordObservedAnonymousSessionStart();

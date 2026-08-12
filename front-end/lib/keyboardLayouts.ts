@@ -348,8 +348,8 @@ export const KEYBOARD_LAYOUTS = [
     id: 'qwerty-us-intl',
     name: 'US International',
     description: 'Distribución estadounidense con teclas muertas para acentos',
-    enabled: false,
-    languageCodes: [],
+    enabled: true,
+    languageCodes: ['en-US'],
     physicalType: 'ANSI',
     keys: {
       ...QWERTY_KEYS,
@@ -443,8 +443,8 @@ export const KEYBOARD_LAYOUTS = [
     id: 'qwerty-ca-multilingual',
     name: 'Canadian Multilingual',
     description: 'Distribución canadiense multilingüe',
-    enabled: false,
-    languageCodes: [],
+    enabled: true,
+    languageCodes: ['fr', 'en-US', 'en-GB'],
     physicalType: 'ISO',
     keys: {
       ...QWERTY_KEYS,
@@ -1256,8 +1256,8 @@ export const KEYBOARD_LAYOUTS = [
     id: 'dvorak',
     name: 'Dvorak',
     description: 'Distribución ergonómica Dvorak',
-    enabled: false,
-    languageCodes: [],
+    enabled: true,
+    languageCodes: ['en-US', 'en-GB'],
     physicalType: 'ANSI',
     keys: {
       ...QWERTY_KEYS,
@@ -1329,8 +1329,8 @@ export const KEYBOARD_LAYOUTS = [
     id: 'colemak',
     name: 'Colemak',
     description: 'Distribución ergonómica Colemak',
-    enabled: false,
-    languageCodes: [],
+    enabled: true,
+    languageCodes: ['en-US', 'en-GB'],
     physicalType: 'ANSI',
     keys: {
       ...QWERTY_KEYS,

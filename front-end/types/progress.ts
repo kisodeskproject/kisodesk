@@ -28,6 +28,7 @@ export interface UserStats {
   bestAccuracy: number;
   totalKeystrokes: number;
   streak: number;
+  longestStreak: number;
 }
 
 // Datos normalizados para el dashboard
@@ -43,6 +44,9 @@ export interface ProgressData {
   monthlyProgress: ChartData;
   wpmTrend?: ProgressTrend;
   accuracyTrend?: ProgressTrend;
+  bestWpm?: number;
+  bestAccuracy?: number;
+  longestStreak?: number;
 }
 export interface PracticeDay {
   date: string;

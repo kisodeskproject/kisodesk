@@ -166,7 +166,7 @@ export default function ProgressChart({
   return (
     <div className="rounded-xl border border-(--border-card) bg-(--bg-card) backdrop-blur-sm light:backdrop-blur-none">
       {title && (
-        <div className="flex items-center justify-between p-6 pb-4">
+        <div className="flex items-center justify-between rounded-t-xl bg-(--bg-primary) px-6 py-3 light:bg-(--bg-secondary)">
           <h2 className="text-lg font-semibold text-(--text-primary)">{title}</h2>
 
           {showStatusBadge && (

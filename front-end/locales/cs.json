@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "Panel pokroku",
+          "title": "Kalendář cvičení",
           "noData": "Žádná data k zobrazení",
           "noPractice": "Bez procvičování",
           "minutesShort": "min",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "Panel pokroku",
-          "signIn": "Přihlaste se",
+          "title": "Doporučení",
+          "noData": "Žádná data k zobrazení",
           "noRecommendations": "Nejsou k dispozici žádná doporučení."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "Panel pokroku",
+          "title": "Slabé klávesy",
           "overallAccuracy": "Celková přesnost",
           "weakestKey": "Nejslabší klávesa",
           "lowestAccuracy": "Nejnižší přesnost"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Měsíční vývoj WPM",
       "noData": "Nejsou k dispozici žádná data",
       "bestWpm": "Nejlepší WPM",
+      "bestAccuracy": "Nejlepší přesnost",
       "grossWpm": "Hrubé WPM",
       "record": "Rekord",
       "streak": "Série",
+      "longestStreak": "Nejdelší série",
       "days": "dní",
       "consecutivePractice": "Po sobě jdoucí procvičování",
       "totalKeystrokes": "Celkový počet úhozů",
@@ -1232,6 +1234,8 @@
       "courses": "kurzy",
       "completedLessons": "Dokončené lekce",
       "completedCourses": "Dokončené kurzy",
+      "courseInProgress": "Kurz v průběhu",
+      "continueCourse": "Pokračovat",
       "guestModeMessage": "Přihlaste se, abyste zobrazili svůj pokrok",
       "signIn": "Přihlásit se",
       "recommendationsGuest": "Přihlaste se, abyste získali personalizovaná doporučení podle svého pokroku.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Získejte personalizované lekce podle svých slabých míst.",
       "signInToSee": "Přihlaste se, abyste zobrazili své statistiky",
       "noDataYet": "Dokončete lekce, abyste zobrazili svá slabá místa"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "Tvá nejslabší klávesa je '{key}' s pouhými {accuracy}% přesnosti. Procvič si ji, abys rychle zlepšil/a výkon.",
+      "weakKeyImprove": "Klávesa '{key}' má přesnost {accuracy}%. S trochou další praxe ji zvládneš.",
+      "streakMilestone": "Cvičíš už {streak} dní v řadě! Tak dál.",
+      "accuracyTrendDown": "Tvá přesnost klesla oproti předchozímu období. Zpomal a vyhýbej se chybám.",
+      "wpmTrendDown": "Tvá rychlost klesla oproti předchozímu období. Zkus cvičit o něco častěji.",
+      "accuracyLow": "Tvá průměrná přesnost je {accuracy}%. Piš pomaleji, abys omezil/a chyby.",
+      "speedLow": "Tvá průměrná rychlost je {wpm} SZM. Pravidelné cvičení ti pomůže zrychlit se.",
+      "noviceGrade": "Teprve začínáš. Cvič trochu každý den, abys postoupil/a na vyšší úroveň.",
+      "lowPracticeTime": "Celkem jsi cvičil/a {time}. Čím víc cvičíš, tím rychleji se zlepšíš.",
+      "legendGrade": "Jsi na legendární úrovni! Pokračuj v cvičení, abys na ní zůstal/a.",
+      "insufficientWeakData": "Dokonči více cvičení, abychom mohli určit tvé nejslabší klávesy."
     }
   },
   "practice": {

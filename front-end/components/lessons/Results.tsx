@@ -1,7 +1,7 @@
 // components/lessons/Results.tsx
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useRouter, useParams } from 'next/navigation';
 import { AlertTriangle } from 'lucide-react';
@@ -67,6 +67,7 @@ export default function Results({
   saveStatus = 'idle',
   saveMessage,
 }: ResultsProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const params = useParams();
   const lang = params.lang as string;
@@ -103,6 +104,12 @@ export default function Results({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [onNext]);
 
+  useEffect(() => {
+    if (typeof containerRef.current?.scrollIntoView === 'function') {
+      containerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
+
   const handleBackDefault = () => {
     if (mode === 'practice')
       router.push(`/${lang}/${isPublicTrial ? 'practice' : 'dashboard/practice'}`);
@@ -115,7 +122,7 @@ export default function Results({
     'text-center p-4 bg-(--bg-secondary) rounded-xl border border-(--border-card)';
 
   return (
-    <div className={cardClasses}>
+    <div ref={containerRef} className={cardClasses}>
       <h2 className="text-2xl font-bold text-center bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
         {lessonTitle}
       </h2>

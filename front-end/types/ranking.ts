@@ -27,6 +27,7 @@ export interface UserStatsResponse {
   topPercent: number;
   insufficientData?: boolean;
   rankingVisible?: boolean;
+  recentAverage?: { score: number; wpm: number; grossWpm: number; accuracy: number } | null;
 }
 
 export interface RankingResponse {

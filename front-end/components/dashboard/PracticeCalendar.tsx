@@ -155,8 +155,8 @@ export default function PracticeCalendar({
   }, [data, locale, weeks]);
 
   return (
-    <div className="rounded-xl border border-(--border-card) bg-(--bg-card) p-6 backdrop-blur-sm light:backdrop-blur-none">
-      <div className="mb-4 flex items-center justify-between">
+    <div className="rounded-xl border border-(--border-card) bg-(--bg-card) backdrop-blur-sm light:backdrop-blur-none">
+      <div className="flex items-center justify-between rounded-t-xl bg-(--bg-primary) px-6 py-3 light:bg-(--bg-secondary)">
         <h3 className="text-lg font-semibold text-(--text-primary)">
           {t('components.dashboard.practiceCalendar.general.title' as TranslationKey)}
         </h3>
@@ -168,7 +168,7 @@ export default function PracticeCalendar({
         )}
       </div>
 
-      <div className="-mx-6 overflow-x-auto px-6">
+      <div className="overflow-x-auto p-6">
         <div className="flex gap-4">
           {months.map((month, monthIndex) => (
             <div key={`${month.label}-${monthIndex}`} className="flex flex-col gap-1">

@@ -3,7 +3,6 @@
 import type { Metadata } from 'next';
 
 import PracticePage from '@/app/[lang]/dashboard/practice/page';
-import PublicPageLinks from '@/components/seo/PublicPageLinks';
 import { localizedMetadata } from '@/lib/seo';
 import { getTranslation } from '@/lib/i18n';
 import { toSupportedLocale } from '@/lib/locales';
@@ -25,14 +24,6 @@ export async function generateMetadata({ params }: PracticePageProps): Promise<M
   });
 }
 
-export default async function Page({ params }: PracticePageProps) {
-  const { lang } = await params;
-  const locale = toSupportedLocale(lang);
-
-  return (
-    <>
-      <PracticePage />
-      <PublicPageLinks locale={locale} current="practice" />
-    </>
-  );
+export default async function Page() {
+  return <PracticePage />;
 }

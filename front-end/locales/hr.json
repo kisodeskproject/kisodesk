@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "Nadzorna ploča napretka",
+          "title": "Kalendar vježbanja",
           "noData": "Nema podataka za prikaz",
           "noPractice": "Nema vježbanja",
           "minutesShort": "min",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "Nadzorna ploča napretka",
-          "signIn": "Prijava",
+          "title": "Preporuke",
+          "noData": "Nema podataka za prikaz",
           "noRecommendations": "Nema dostupnih preporuka."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "Nadzorna ploča napretka",
+          "title": "Slabe tipke",
           "overallAccuracy": "Ukupna preciznost",
           "weakestKey": "Najslabija tipka",
           "lowestAccuracy": "Najniža preciznost"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Mjesečni napredak WPM-a",
       "noData": "Nema dostupnih podataka",
       "bestWpm": "Najbolji WPM",
+      "bestAccuracy": "Najbolja preciznost",
       "grossWpm": "Bruto WPM",
       "record": "Rekord",
       "streak": "Niz",
+      "longestStreak": "Najduži niz",
       "days": "dana",
       "consecutivePractice": "Uzastopno vježbanje",
       "totalKeystrokes": "Ukupan broj pritisaka tipki",
@@ -1232,6 +1234,8 @@
       "courses": "tečajevi",
       "completedLessons": "Dovršene lekcije",
       "completedCourses": "Dovršeni tečajevi",
+      "courseInProgress": "Tečaj u tijeku",
+      "continueCourse": "Nastavi",
       "guestModeMessage": "Prijavite se kako biste vidjeli svoj napredak",
       "signIn": "Prijava",
       "recommendationsGuest": "Prijavite se kako biste primali personalizirane preporuke na temelju svog napretka.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Dobijte personalizirane lekcije na temelju svojih slabih točaka.",
       "signInToSee": "Prijavite se kako biste vidjeli svoju statistiku",
       "noDataYet": "Dovršite lekcije kako biste vidjeli svoje slabe točke"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "Tvoja najslabija tipka je '{key}' s tek {accuracy}% točnosti. Vježbaj je da se brzo poboljšaš.",
+      "weakKeyImprove": "Tipka '{key}' ima {accuracy}% točnosti. S malo više vježbe savladat ćeš je.",
+      "streakMilestone": "Vježbaš već {streak} dana zaredom! Nastavi tako.",
+      "accuracyTrendDown": "Tvoja točnost je pala u odnosu na prethodno razdoblje. Uspori i izbjegavaj pogreške.",
+      "wpmTrendDown": "Tvoja brzina je pala u odnosu na prethodno razdoblje. Pokušaj vježbati malo češće.",
+      "accuracyLow": "Tvoja prosječna točnost je {accuracy}%. Piši sporije kako bi smanjio/la pogreške.",
+      "speedLow": "Tvoja prosječna brzina je {wpm} RUM. Redovita vježba pomoći će ti da ubrzaš.",
+      "noviceGrade": "Tek počinješ. Vježbaj malo svaki dan da napreduješ.",
+      "lowPracticeTime": "Ukupno si vježbao/la {time}. Što više vježbaš, brže napreduješ.",
+      "legendGrade": "Na legendarnoj si razini! Nastavi vježbati da to ostaneš.",
+      "insufficientWeakData": "Dovrši više vježbi kako bismo mogli prepoznati tvoje najslabije tipke."
     }
   },
   "practice": {

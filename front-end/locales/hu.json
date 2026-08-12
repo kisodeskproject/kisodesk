@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "Előrehaladási panel",
+          "title": "Gyakorlási naptár",
           "noData": "Nincs megjeleníthető adat",
           "noPractice": "Nincs gyakorlás",
           "minutesShort": "perc",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "Előrehaladási panel",
-          "signIn": "Bejelentkezés",
+          "title": "Ajánlások",
+          "noData": "Nincs megjeleníthető adat",
           "noRecommendations": "Nincsenek elérhető ajánlások."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "Előrehaladási panel",
+          "title": "Gyenge billentyűk",
           "overallAccuracy": "Összesített pontosság",
           "weakestKey": "Leggyengébb billentyű",
           "lowestAccuracy": "Legalacsonyabb pontosság"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Havi WPM-előrehaladás",
       "noData": "Nincs elérhető adat",
       "bestWpm": "Legjobb WPM",
+      "bestAccuracy": "Legjobb pontosság",
       "grossWpm": "Bruttó WPM",
       "record": "Rekord",
       "streak": "Sorozat",
+      "longestStreak": "Leghosszabb sorozat",
       "days": "nap",
       "consecutivePractice": "Egymást követő gyakorlás",
       "totalKeystrokes": "Összes billentyűleütés",
@@ -1232,6 +1234,8 @@
       "courses": "kurzusok",
       "completedLessons": "Teljesített leckék",
       "completedCourses": "Teljesített kurzusok",
+      "courseInProgress": "Folyamatban lévő kurzus",
+      "continueCourse": "Folytatás",
       "guestModeMessage": "Jelentkezzen be előrehaladása megtekintéséhez",
       "signIn": "Bejelentkezés",
       "recommendationsGuest": "Jelentkezzen be, hogy előrehaladása alapján személyre szabott ajánlásokat kapjon.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Kapjon személyre szabott leckéket gyenge pontjai alapján.",
       "signInToSee": "Jelentkezzen be statisztikái megtekintéséhez",
       "noDataYet": "Teljesítsen leckéket gyenge pontjai megtekintéséhez"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "A leggyengébb billentyűd a '{key}', mindössze {accuracy}% pontossággal. Gyakorold, hogy gyorsan javulj.",
+      "weakKeyImprove": "A(z) '{key}' billentyű pontossága {accuracy}%. Egy kis további gyakorlással elsajátítod.",
+      "streakMilestone": "Már {streak} napja gyakorolsz egymás után! Csak így tovább.",
+      "accuracyTrendDown": "A pontosságod csökkent az előző időszakhoz képest. Lassíts, és kerüld a hibákat.",
+      "wpmTrendDown": "A sebességed csökkent az előző időszakhoz képest. Próbálj gyakrabban gyakorolni.",
+      "accuracyLow": "Az átlagos pontosságod {accuracy}%. Írj lassabban a hibák csökkentése érdekében.",
+      "speedLow": "Az átlagos sebességed {wpm} szó/perc. A rendszeres gyakorlás segít felgyorsulni.",
+      "noviceGrade": "Még csak most kezded. Gyakorolj naponta egy kicsit, hogy szintet lépj.",
+      "lowPracticeTime": "Összesen {time} gyakoroltál. Minél többet gyakorolsz, annál gyorsabban fejlődsz.",
+      "legendGrade": "Legenda szinten vagy! Gyakorolj tovább, hogy ott is maradj.",
+      "insufficientWeakData": "Fejezz be több gyakorlást, hogy azonosíthassuk a leggyengébb billentyűidet."
     }
   },
   "practice": {

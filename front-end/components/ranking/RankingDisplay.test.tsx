@@ -28,7 +28,6 @@ describe('ranking display contract', () => {
         onRetry={jest.fn()}
         t={t}
         getMedal={() => '#1'}
-        getLevelIcon={() => '🥈'}
       />,
     );
 
@@ -41,13 +40,12 @@ describe('ranking display contract', () => {
     render(
       <UserStatsCard
         stats={{ ...user, rank: 1, topPercent: 0, rankingVisible: true }}
+        recentAverage={{ score: 6000, grossWpm: 72, accuracy: 98 }}
         loading={false}
         error={null}
         isAuthenticated
         onRetry={jest.fn()}
         t={t as any}
-        getLevelIcon={() => '🥈'}
-        getLevelColor={() => ''}
       />,
     );
 
@@ -61,17 +59,16 @@ describe('ranking display contract', () => {
     render(
       <UserStatsCard
         stats={{ ...user, rank: 0, topPercent: 0, rankingVisible: true, insufficientData: true }}
+        recentAverage={null}
         loading={false}
         error={null}
         isAuthenticated
         onRetry={jest.fn()}
         t={t as any}
-        getLevelIcon={() => '🥈'}
-        getLevelColor={() => ''}
       />,
     );
 
     expect(screen.queryByText('ranking.general.insufficientData')).toBeNull();
-    expect(screen.getAllByText('—')).toHaveLength(6);
+    expect(screen.getAllByText('—')).toHaveLength(5);
   });
 });

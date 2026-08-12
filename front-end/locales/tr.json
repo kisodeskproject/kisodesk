@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "İlerleme paneli",
+          "title": "Alıştırma takvimi",
           "noData": "Gösterilecek veri yok",
           "noPractice": "Pratik yok",
           "minutesShort": "dk",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "İlerleme paneli",
-          "signIn": "Oturum aç",
+          "title": "Öneriler",
+          "noData": "Gösterilecek veri yok",
           "noRecommendations": "Öneri bulunmuyor."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "İlerleme paneli",
+          "title": "Zayıf tuşlar",
           "overallAccuracy": "Genel doğruluk",
           "weakestKey": "En zayıf tuş",
           "lowestAccuracy": "En düşük doğruluk"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Aylık WPM ilerlemesi",
       "noData": "Veri bulunmuyor",
       "bestWpm": "En iyi WPM",
+      "bestAccuracy": "En iyi doğruluk",
       "grossWpm": "Brüt WPM",
       "record": "Rekor",
       "streak": "Seri",
+      "longestStreak": "En uzun seri",
       "days": "gün",
       "consecutivePractice": "Aralıksız pratik",
       "totalKeystrokes": "Toplam tuş vuruşu",
@@ -1232,6 +1234,8 @@
       "courses": "kurs",
       "completedLessons": "Tamamlanan dersler",
       "completedCourses": "Tamamlanan kurslar",
+      "courseInProgress": "Devam eden kurs",
+      "continueCourse": "Devam et",
       "guestModeMessage": "İlerlemenizi görmek için oturum açın",
       "signIn": "Oturum aç",
       "recommendationsGuest": "İlerlemenize dayalı kişiselleştirilmiş öneriler almak için oturum açın.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Zayıf noktalarınıza göre kişiselleştirilmiş dersler alın.",
       "signInToSee": "İstatistiklerinizi görmek için oturum açın",
       "noDataYet": "Zayıf noktalarınızı görmek için dersleri tamamlayın"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "En zayıf tuşun '{key}', sadece %{accuracy} doğrulukla. Hızlı gelişmek için onu çalış.",
+      "weakKeyImprove": "'{key}' tuşu %{accuracy} doğrulukta. Biraz daha pratikle onu ustalaşacaksın.",
+      "streakMilestone": "{streak} gündür aralıksız pratik yapıyorsun! Böyle devam et.",
+      "accuracyTrendDown": "Doğruluğun önceki döneme göre düştü. Yavaşla ve hatalardan kaçın.",
+      "wpmTrendDown": "Hızın önceki döneme göre düştü. Biraz daha sık pratik yapmayı dene.",
+      "accuracyLow": "Ortalama doğruluğun %{accuracy}. Hataları azaltmak için daha yavaş yaz.",
+      "speedLow": "Ortalama hızın {wpm} DKK. Düzenli pratik hızlanmana yardımcı olur.",
+      "noviceGrade": "Daha yeni başlıyorsun. Seviye atlamak için her gün biraz pratik yap.",
+      "lowPracticeTime": "Toplamda {time} pratik yaptın. Ne kadar çok pratik yaparsan o kadar hızlı gelişirsin.",
+      "legendGrade": "Efsane seviyesindesin! Orada kalmak için pratik yapmaya devam et.",
+      "insufficientWeakData": "En zayıf tuşlarını belirleyebilmemiz için daha fazla pratik tamamla."
     }
   },
   "practice": {

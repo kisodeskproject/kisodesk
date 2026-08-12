@@ -18,6 +18,7 @@ import {
   getKeyboardPhysicalFamily,
   getSvgKeyIdForPhysicalKeyId,
   getVisualKeyForPhysicalKeyId,
+  resolveCharacterToPhysicalKey,
 } from '@/lib/keyMappings';
 import { getDeadKey, getKeyOutput, getLayoutById } from '@/lib/keyboardLayouts';
 import type { KeyboardPhysicalFamily } from '@/lib/keyboardLayouts';
@@ -30,6 +31,7 @@ interface KeyboardProps {
   correctFlashKeys?: PhysicalKeyId[];
   incorrectFlashKeys?: PhysicalKeyId[];
   guideKeys?: PhysicalKeyId[];
+  expectedChar?: string | null;
   leftHandSrc?: string;
   rightHandSrc?: string;
 }
@@ -824,6 +826,7 @@ export default function Keyboard({
   correctFlashKeys = [],
   incorrectFlashKeys = [],
   guideKeys = [],
+  expectedChar,
   leftHandSrc,
   rightHandSrc,
 }: KeyboardProps) {
@@ -888,13 +891,20 @@ export default function Keyboard({
   const hasShiftSequence =
     shiftSequenceGuideKeys.size > 0 &&
     normalizedConfiguredGuideKeys.size > shiftSequenceGuideKeys.size;
-  const accentSequenceKey = useMemo(
-    () =>
+  const resolvedExpectedKey = useMemo(
+    () => (expectedChar ? resolveCharacterToPhysicalKey(expectedChar, keyboardLayout) : null),
+    [expectedChar, keyboardLayout],
+  );
+  const accentSequenceKey = useMemo(() => {
+    if (resolvedExpectedKey?.deadKey) return resolvedExpectedKey.deadKey.physicalKeyId;
+    return (
       [...normalizedConfiguredGuideKeys].find((key) =>
         Boolean(getKeyOutput(keyboardLayout, key) && getDeadKey(keyboardLayout, key, false)),
-      ) ?? null,
-    [keyboardLayout, normalizedConfiguredGuideKeys],
-  );
+      ) ?? null
+    );
+  }, [keyboardLayout, normalizedConfiguredGuideKeys, resolvedExpectedKey]);
+  const accentSequenceRequiresShift = resolvedExpectedKey?.deadKey?.requiresShift ?? false;
+  const accentSequenceShiftKeyId = resolvedExpectedKey?.deadKey?.shiftPhysicalKeyId ?? null;
   const hasAccentSequence = accentSequenceKey !== null && normalizedConfiguredGuideKeys.size > 1;
   const guideSignature = useMemo(
     () => [...normalizedConfiguredGuideKeys].sort().join('|'),
@@ -909,16 +919,28 @@ export default function Keyboard({
   );
   const normalizedGuideKeys = useMemo(() => {
     if (hasAccentSequence && !accentGuideCompleted) {
-      return new Set([accentSequenceKey]);
+      const keys = [accentSequenceKey as PhysicalKeyId];
+      if (accentSequenceRequiresShift && accentSequenceShiftKeyId) {
+        keys.push(accentSequenceShiftKeyId);
+      }
+      return new Set(keys);
     }
     if (hasAccentSequence && accentGuideCompleted) {
-      return new Set([...normalizedConfiguredGuideKeys].filter((key) => key !== accentSequenceKey));
+      return new Set(
+        [...normalizedConfiguredGuideKeys].filter(
+          (key) =>
+            key !== accentSequenceKey &&
+            !(accentSequenceRequiresShift && key === accentSequenceShiftKeyId),
+        ),
+      );
     }
     if (!hasShiftSequence || isRequiredShiftHeld) return normalizedConfiguredGuideKeys;
     return shiftSequenceGuideKeys;
   }, [
     accentGuideCompleted,
     accentSequenceKey,
+    accentSequenceRequiresShift,
+    accentSequenceShiftKeyId,
     hasAccentSequence,
     hasShiftSequence,
     isRequiredShiftHeld,

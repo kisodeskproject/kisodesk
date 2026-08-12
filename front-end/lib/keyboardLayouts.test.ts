@@ -28,13 +28,11 @@ describe('keyboard layout resolution', () => {
     expect(getDefaultLayoutForLocale('pt-BR')).toHaveProperty('id', 'qwerty-br');
   });
 
-  it('asigna exactamente una distribución habilitada a cada idioma de interfaz', () => {
+  it('asigna al menos una distribución habilitada a cada idioma de interfaz', () => {
     const enabledLayouts = KEYBOARD_LAYOUTS.filter((layout) => layout.enabled);
-    const assignedLocales = enabledLayouts.flatMap((layout) => layout.languageCodes);
+    const assignedLocales = new Set(enabledLayouts.flatMap((layout) => layout.languageCodes));
 
-    expect(enabledLayouts).toHaveLength(SUPPORTED_LOCALES.length);
-    expect(new Set(assignedLocales).size).toBe(SUPPORTED_LOCALES.length);
-    expect(new Set(assignedLocales)).toEqual(new Set(SUPPORTED_LOCALES));
+    expect(assignedLocales).toEqual(new Set(SUPPORTED_LOCALES));
   });
 
   it('conserva la selección explícita y usa español como fallback seguro', () => {

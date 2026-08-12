@@ -10,18 +10,10 @@ const THEME_STORAGE_KEY = 'theme';
 
 function applyTheme(theme: Theme) {
   const html = document.documentElement;
-  html.classList.remove('dark', 'light', 'gray');
+  html.classList.remove('dark', 'light');
   html.classList.add(theme);
-  html.style.colorScheme = theme;
+  html.style.colorScheme = theme === 'dark' ? 'dark' : 'light';
   localStorage.setItem(THEME_STORAGE_KEY, theme);
-}
-
-function getNextTheme(current: Theme): Theme {
-  return current === 'dark' ? 'light' : 'dark';
-}
-
-function getIcon(theme: Theme) {
-  return theme === 'dark' ? <Moon size={20} /> : <Sun size={20} />;
 }
 
 export default function ThemeToggle() {
@@ -37,7 +29,7 @@ export default function ThemeToggle() {
   }, []);
 
   const toggle = () => {
-    const next = getNextTheme(theme);
+    const next = theme === 'dark' ? 'light' : 'dark';
     applyTheme(next);
     setTheme(next);
   };
@@ -50,10 +42,10 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      className="rounded-lg bg-slate-700/60 light:bg-slate-700 p-2 text-slate-200 hover:bg-slate-600/80 light:hover:bg-slate-600 hover:text-white transition-colors"
+      className="rounded-lg bg-slate-700/60 light:bg-slate-700 p-2 text-slate-200 light:text-white hover:bg-slate-600/80 light:hover:bg-slate-600 hover:text-white transition-colors"
       aria-label={ariaLabel}
     >
-      {getIcon(theme)}
+      {theme === 'dark' ? <Moon size={20} /> : <Sun size={20} />}
     </button>
   );
 }

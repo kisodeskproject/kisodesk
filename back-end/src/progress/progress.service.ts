@@ -151,7 +151,9 @@ export class ProgressService {
     const weeklyProgress = this.getWeeklyProgress(allAchievements);
     const weeklyAccuracy = this.getWeeklyAccuracy(allAchievements);
     const monthlyProgress = this.getMonthlyProgress(allAchievements);
-    const { currentStreak } = this.calculateStreaks(allAchievements.map((a) => a.date));
+    const { currentStreak, bestStreak } = this.calculateStreaks(
+      allAchievements.map((a) => a.date),
+    );
 
     const totalKeystrokes = null;
 
@@ -160,6 +162,7 @@ export class ProgressService {
       bestAccuracy,
       totalKeystrokes,
       streak: currentStreak,
+      longestStreak: bestStreak,
     };
 
     return {

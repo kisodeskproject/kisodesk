@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "Fortschrittsübersicht",
+          "title": "Übungskalender",
           "noData": "Keine Daten verfügbar",
           "noPractice": "Keine Übung",
           "minutesShort": "Min.",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "Fortschrittsübersicht",
-          "signIn": "Melde dich an",
+          "title": "Empfehlungen",
+          "noData": "Keine Daten verfügbar",
           "noRecommendations": "Keine Empfehlungen verfügbar."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "Fortschrittsübersicht",
+          "title": "Schwache Tasten",
           "overallAccuracy": "Gesamtgenauigkeit",
           "weakestKey": "Schwächste Taste",
           "lowestAccuracy": "Niedrigste Genauigkeit"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Monatlicher WPM-Fortschritt",
       "noData": "Keine Daten verfügbar",
       "bestWpm": "Beste WPM",
+      "bestAccuracy": "Beste Genauigkeit",
       "grossWpm": "Brutto-WPM",
       "record": "Bestwert",
       "streak": "Serie",
+      "longestStreak": "Längste Serie",
       "days": "Tage",
       "consecutivePractice": "Übungsserie",
       "totalKeystrokes": "Tastenanschläge insgesamt",
@@ -1232,6 +1234,8 @@
       "courses": "Kurse",
       "completedLessons": "Abgeschlossene Lektionen",
       "completedCourses": "Abgeschlossene Kurse",
+      "courseInProgress": "Kurs in Bearbeitung",
+      "continueCourse": "Fortsetzen",
       "guestModeMessage": "Melde dich an, um deinen Fortschritt anzusehen",
       "signIn": "Anmelden",
       "recommendationsGuest": "Melde dich an, um personalisierte Empfehlungen auf Grundlage deines Fortschritts zu erhalten.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Erhalte personalisierte Lektionen auf Grundlage deiner Schwachstellen.",
       "signInToSee": "Melde dich an, um deine Statistiken anzusehen",
       "noDataYet": "Schließe Lektionen ab, um deine Schwachstellen zu sehen"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "Deine schwächste Taste ist '{key}' mit nur {accuracy}% Genauigkeit. Übe sie, um schnell besser zu werden.",
+      "weakKeyImprove": "Die Taste '{key}' liegt bei {accuracy}% Genauigkeit. Mit etwas mehr Übung beherrschst du sie.",
+      "streakMilestone": "Du übst seit {streak} Tagen in Folge! Weiter so.",
+      "accuracyTrendDown": "Deine Genauigkeit ist im Vergleich zum vorherigen Zeitraum gesunken. Tippe langsamer und vermeide Fehler.",
+      "wpmTrendDown": "Deine Geschwindigkeit ist im Vergleich zum vorherigen Zeitraum gesunken. Übe etwas häufiger.",
+      "accuracyLow": "Deine durchschnittliche Genauigkeit liegt bei {accuracy}%. Tippe langsamer, um Fehler zu vermeiden.",
+      "speedLow": "Deine durchschnittliche Geschwindigkeit liegt bei {wpm} WPM. Regelmäßiges Üben hilft dir, schneller zu werden.",
+      "noviceGrade": "Du fängst gerade erst an. Übe jeden Tag ein wenig, um aufzusteigen.",
+      "lowPracticeTime": "Du hast insgesamt {time} geübt. Je mehr du übst, desto schneller wirst du besser.",
+      "legendGrade": "Du bist auf Legenden-Niveau! Übe weiter, um es zu bleiben.",
+      "insufficientWeakData": "Absolviere mehr Übungen, damit wir deine schwächsten Tasten erkennen können."
     }
   },
   "practice": {

@@ -707,7 +707,7 @@
       },
       "practiceCalendar": {
         "general": {
-          "title": "Fremskridtspanel",
+          "title": "Øvelseskalender",
           "noData": "Ingen data at vise",
           "noPractice": "Ingen træning",
           "minutesShort": "min.",
@@ -731,14 +731,14 @@
       },
       "recommendationsList": {
         "general": {
-          "title": "Fremskridtspanel",
-          "signIn": "Log ind",
+          "title": "Anbefalinger",
+          "noData": "Ingen data at vise",
           "noRecommendations": "Ingen anbefalinger tilgængelige."
         }
       },
       "weakKeysPanel": {
         "general": {
-          "title": "Fremskridtspanel",
+          "title": "Svage taster",
           "overallAccuracy": "Samlet præcision",
           "weakestKey": "Svageste tast",
           "lowestAccuracy": "Laveste præcision"
@@ -1213,9 +1213,11 @@
       "monthlyWpmProgress": "Månedlig WPM-udvikling",
       "noData": "Ingen data tilgængelige",
       "bestWpm": "Bedste WPM",
+      "bestAccuracy": "Bedste præcision",
       "grossWpm": "Brutto-WPM",
       "record": "Rekord",
       "streak": "Serie",
+      "longestStreak": "Længste serie",
       "days": "dage",
       "consecutivePractice": "Sammenhængende træning",
       "totalKeystrokes": "Samlet antal tastetryk",
@@ -1232,6 +1234,8 @@
       "courses": "kurser",
       "completedLessons": "Gennemførte lektioner",
       "completedCourses": "Gennemførte kurser",
+      "courseInProgress": "Kursus i gang",
+      "continueCourse": "Fortsæt",
       "guestModeMessage": "Log ind for at se dine fremskridt",
       "signIn": "Log ind",
       "recommendationsGuest": "Log ind for at få personlige anbefalinger baseret på dine fremskridt.",
@@ -1242,6 +1246,19 @@
       "personalizedPracticeDesc": "Få personlige lektioner baseret på dine svage punkter.",
       "signInToSee": "Log ind for at se din statistik",
       "noDataYet": "Gennemfør lektioner for at se dine svage punkter"
+    },
+    "Recommendations": {
+      "weakKeyCritical": "Din svageste tast er '{key}' med kun {accuracy}% præcision. Øv den for at forbedre dig hurtigt.",
+      "weakKeyImprove": "Tasten '{key}' har {accuracy}% præcision. Med lidt mere øvelse mestrer du den.",
+      "streakMilestone": "Du har øvet {streak} dage i træk! Bliv ved.",
+      "accuracyTrendDown": "Din præcision er faldet i forhold til den forrige periode. Sæt farten ned og undgå fejl.",
+      "wpmTrendDown": "Din hastighed er faldet i forhold til den forrige periode. Prøv at øve lidt oftere.",
+      "accuracyLow": "Din gennemsnitlige præcision er {accuracy}%. Skriv langsommere for at reducere fejl.",
+      "speedLow": "Din gennemsnitlige hastighed er {wpm} OPM. Jævnlig øvelse hjælper dig med at blive hurtigere.",
+      "noviceGrade": "Du er lige startet. Øv lidt hver dag for at rykke op i niveau.",
+      "lowPracticeTime": "Du har øvet {time} i alt. Jo mere du øver, jo hurtigere forbedrer du dig.",
+      "legendGrade": "Du er på legende-niveau! Bliv ved med at øve for at forblive der.",
+      "insufficientWeakData": "Gennemfør flere øvelser, så vi kan finde dine svageste taster."
     }
   },
   "practice": {
