@@ -55,6 +55,11 @@ export class FrontendTelemetryEventDto {
   @IsString()
   @MaxLength(64)
   layout?: string;
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(512)
+  userAgent?: string;
 }
 
 export class FrontendTelemetryBatchDto {

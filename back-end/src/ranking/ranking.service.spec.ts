@@ -7,6 +7,7 @@ describe('RankingService', () => {
     const prisma = {
       userRankingCache: { count: jest.fn(), findMany: jest.fn(), findUnique: jest.fn() },
       user: { findUnique: jest.fn() },
+      practiceSession: { findMany: jest.fn().mockResolvedValue([]) },
     };
     return { prisma, service: new RankingService(prisma as any) };
   }
