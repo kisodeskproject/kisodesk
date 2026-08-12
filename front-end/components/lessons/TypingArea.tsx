@@ -314,7 +314,7 @@ const TypingArea = forwardRef<TypingAreaRef, TypingAreaProps>(function TypingAre
     const isNewText = scrollTextRef.current !== text;
     scrollTextRef.current = text;
 
-    if (isNewText) {
+    if (isNewText || typeof container.scrollTo !== 'function') {
       container.scrollTop = targetScrollTop;
     } else {
       container.scrollTo({ top: targetScrollTop, behavior: 'smooth' });
