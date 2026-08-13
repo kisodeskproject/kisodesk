@@ -1,5 +1,6 @@
 // src/progress/progress.controller.ts
 import { Controller, Get, Query, Req, UseGuards } from '@nestjs/common';
+import { LanguageCode } from '@prisma/client';
 import { FastifyRequest } from 'fastify';
 
 import { ProgressService } from './progress.service';
@@ -20,5 +21,16 @@ export class ProgressController {
   async getCalendar(@Req() req: FastifyRequest, @Query('locale') locale?: string) {
     const userId = req.user!.id;
     return this.progressService.getCalendar(userId, locale);
+  }
+
+  @Get('today')
+  async getTodaySummary(
+    @Req() req: FastifyRequest,
+    @Query('locale') locale?: string,
+    @Query('language') language?: LanguageCode,
+    @Query('layoutId') layoutId?: string,
+  ) {
+    const userId = req.user!.id;
+    return this.progressService.getTodaySummary(userId, locale, language, layoutId);
   }
 }

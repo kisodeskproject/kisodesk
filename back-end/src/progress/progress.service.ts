@@ -1,9 +1,13 @@
 // src/progress/progress.service.ts
 import { Injectable } from '@nestjs/common';
-import { Prisma } from '@prisma/client';
+import { LanguageCode, Prisma } from '@prisma/client';
 
 import { PrismaService } from '../prisma/prisma.service';
 import { SUPPORTED_INTERFACE_LOCALES } from '../practice/dto/save-practice.dto';
+
+const MINIMUM_WEAK_POINT_ATTEMPTS = 5;
+
+type WeakPoint = { type: 'key' | 'bigram'; value: string; accuracy: number };
 
 @Injectable()
 export class ProgressService {
@@ -279,5 +283,94 @@ export class ProgressService {
     currentStreak = current;
 
     return { currentStreak, bestStreak };
+  }
+
+  private async getTopWeakPoints(
+    userId: string,
+    limit: number,
+    languageCode?: LanguageCode,
+    layoutId?: string,
+  ): Promise<WeakPoint[]> {
+    const [keyStats, bigramStats] = await Promise.all([
+      this.prisma.keyStat.findMany({
+        where: {
+          userId,
+          totalPresses: { gte: MINIMUM_WEAK_POINT_ATTEMPTS },
+          ...(languageCode ? { languageCode } : {}),
+        },
+        orderBy: { errorRate: 'desc' },
+        take: limit,
+      }),
+      this.prisma.bigramStat.findMany({
+        where: {
+          userId,
+          totalPresses: { gte: MINIMUM_WEAK_POINT_ATTEMPTS },
+          ...(languageCode ? { languageCode } : {}),
+          ...(layoutId ? { layoutId } : {}),
+        },
+        orderBy: { totalErrors: 'desc' },
+        take: limit,
+      }),
+    ]);
+
+    const points: WeakPoint[] = [
+      ...keyStats.map((stat) => ({
+        type: 'key' as const,
+        value: stat.keyChar,
+        accuracy: Math.round((100 - stat.errorRate) * 10) / 10,
+      })),
+      ...bigramStats.map((stat) => ({
+        type: 'bigram' as const,
+        value: `${stat.firstChar}${stat.secondChar}`,
+        accuracy: Math.round((100 - (stat.totalErrors / stat.totalPresses) * 100) * 10) / 10,
+      })),
+    ];
+
+    return points.sort((a, b) => a.accuracy - b.accuracy).slice(0, limit);
+  }
+
+  async getTodaySummary(
+    userId: string,
+    locale?: string,
+    languageCode?: LanguageCode,
+    layoutId?: string,
+  ) {
+    const localeCode = this.getLocale(locale);
+    const todayStart = this.getUtcDayStart(new Date());
+
+    const [practiceDay, todaySessions, user, weakPoints] = await Promise.all([
+      this.prisma.practiceDay.findUnique({
+        where: { userId_date_localeCode: { userId, date: todayStart, localeCode } },
+        select: { totalSeconds: true },
+      }),
+      this.prisma.practiceSession.findMany({
+        where: { userId, localeCode, createdAt: { gte: todayStart } },
+        orderBy: { createdAt: 'asc' },
+        select: { netWpm: true, accuracy: true },
+      }),
+      this.prisma.user.findUnique({ where: { id: userId }, select: { dailyGoalMinutes: true } }),
+      this.getTopWeakPoints(userId, 3, languageCode, layoutId),
+    ]);
+
+    const minutesTrained = Math.floor((practiceDay?.totalSeconds ?? 0) / 60);
+    const first = todaySessions[0];
+    const last = todaySessions[todaySessions.length - 1];
+
+    return {
+      minutesTrained,
+      dailyGoalMinutes: user?.dailyGoalMinutes ?? 15,
+      sessionsToday: todaySessions.length,
+      wpm: {
+        start: first?.netWpm ?? null,
+        end: last?.netWpm ?? null,
+        delta: first && last ? last.netWpm - first.netWpm : 0,
+      },
+      accuracy: {
+        start: first?.accuracy ?? null,
+        end: last?.accuracy ?? null,
+        delta: first && last ? last.accuracy - first.accuracy : 0,
+      },
+      weakPoints,
+    };
   }
 }

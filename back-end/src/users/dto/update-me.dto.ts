@@ -3,12 +3,15 @@ import { LanguageCode, LayoutCode } from '@prisma/client';
 import {
   IsBoolean,
   IsDateString,
+  IsInt,
   IsNotEmpty,
   IsString,
   IsOptional,
   IsEnum,
   IsObject,
   IsIn,
+  Max,
+  Min,
   ValidateIf,
   Matches,
   MaxLength,
@@ -72,6 +75,12 @@ export class UpdateMeDto {
   @IsBoolean()
   @IsOptional()
   allowFriendRequests?: boolean;
+
+  @IsInt()
+  @Min(5)
+  @Max(180)
+  @IsOptional()
+  dailyGoalMinutes?: number;
 
   @IsDateString()
   @IsOptional()
