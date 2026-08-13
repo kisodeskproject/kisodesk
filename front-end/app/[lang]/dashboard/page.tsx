@@ -8,6 +8,7 @@ import { toSupportedLocale, useTranslations } from '@/lib/i18n';
 import { useNormalizedProgress, usePracticeCalendar } from '@/hooks/useProgress';
 import { useAuth } from '@/hooks/useAuth';
 import { useRecommendations } from '@/hooks/useRecommendations';
+import { useWeakKeys } from '@/hooks/useWeakKeys';
 import { generateRecommendations } from '@/lib/recommendations/engine';
 import StatsGrid from '@/components/dashboard/StatsGrid';
 import DashboardTitle from '@/components/dashboard/DashboardTitle';
@@ -40,6 +41,9 @@ const FingerDistribution = dynamic(() => import('@/components/dashboard/FingerDi
 const PracticeCalendar = dynamic(() => import('@/components/dashboard/PracticeCalendar'), {
   ssr: false,
 });
+const WeakKeysPanel = dynamic(() => import('@/components/dashboard/WeakKeysPanel'), {
+  ssr: false,
+});
 
 export default function ProgressPage() {
   const params = useParams();
@@ -66,6 +70,8 @@ export default function ProgressPage() {
     null,
   );
   const [guestTodaySummary, setGuestTodaySummary] = useState<TodayTrainingSummary | null>(null);
+  const { data: authWeakKeysResponse } = useWeakKeys({ locale, limit: 12 });
+  const weakKeysPanelData = isAuthenticated ? authWeakKeysResponse : guestWeakKeysResponse;
 
   const { recommendations } = useRecommendations();
 
@@ -244,6 +250,8 @@ export default function ProgressPage() {
             practiceHref={`/${locale}/dashboard/practice?mode=adaptive`}
           />
         </div>
+
+        {weakKeysPanelData && <WeakKeysPanel data={weakKeysPanelData} />}
       </div>
     </DashboardBackground>
   );
