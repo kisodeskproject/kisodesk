@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
-import { getHreflangAlternates, SUPPORTED_LOCALES, type Locale } from '@/lib/locales';
+import { getHrefLang, getHreflangAlternates, SUPPORTED_LOCALES, type Locale } from '@/lib/locales';
+import { LEARN_TYPING_SEO_CONTENT } from '@/lib/learnTypingSeoContent';
 import { getServerApiBaseUrl } from '@/lib/serverApi';
 
 const baseUrl = 'https://kisodesk.online';
@@ -42,6 +43,21 @@ async function getCourseListingEntries(): Promise<MetadataRoute.Sitemap> {
   }
 }
 
+function getLearnTouchTypingEntries(): MetadataRoute.Sitemap {
+  const path = '/learn-touch-typing';
+  const publishedLocales = Object.keys(LEARN_TYPING_SEO_CONTENT) as Locale[];
+  const languages = Object.fromEntries(
+    publishedLocales.map((locale) => [getHrefLang(locale), `${baseUrl}/${locale}${path}`]),
+  );
+
+  return publishedLocales.map((locale) => ({
+    url: `${baseUrl}/${locale}${path}`,
+    changeFrequency: 'monthly',
+    priority: 0.6,
+    alternates: { languages },
+  }));
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticEntries: MetadataRoute.Sitemap = publicRoutes.flatMap((route) =>
     SUPPORTED_LOCALES.map((lang) => {
@@ -58,5 +74,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
   );
 
-  return [...staticEntries, ...(await getCourseListingEntries())];
+  return [...staticEntries, ...(await getCourseListingEntries()), ...getLearnTouchTypingEntries()];
 }

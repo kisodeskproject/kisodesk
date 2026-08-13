@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import DashboardBackground from '@/components/layout/DashboardBackground';
 import { getTranslation } from '@/lib/i18n';
+import { LEARN_TYPING_SEO_CONTENT } from '@/lib/learnTypingSeoContent';
 import { toSupportedLocale } from '@/lib/locales';
 import { localizedMetadata } from '@/lib/seo';
 
@@ -91,13 +92,21 @@ export default async function HowItWorksPage({ params }: HowItWorksPageProps) {
           </p>
         </section>
 
-        <div className="mt-12">
+        <div className="mt-12 flex flex-wrap items-center gap-4">
           <Link
             href={`/${locale}/practice`}
             className="inline-flex rounded-lg bg-(--accent-blue) px-5 py-3 font-semibold text-(--text-inverse) transition-colors hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent-blue)"
           >
             {t('howItWorks.general.practiceAction')}
           </Link>
+          {LEARN_TYPING_SEO_CONTENT[locale] && (
+            <Link
+              href={`/${locale}/learn-touch-typing`}
+              className="inline-flex rounded-lg border border-(--border-card) px-5 py-3 font-semibold text-(--text-primary) transition-colors hover:bg-(--bg-card-hover)"
+            >
+              {LEARN_TYPING_SEO_CONTENT[locale]!.title}
+            </Link>
+          )}
         </div>
       </main>
     </DashboardBackground>

@@ -54,6 +54,35 @@ export function buildCourseJsonLd(
     isAccessibleForFree: true,
     provider,
     ...(learningOutcomes.length ? { teaches: learningOutcomes } : {}),
+    // NOTE: price is hardcoded to free. If the pricing/monetization model
+    // ever changes, this must be revisited — see docs/seo-pricing-review.md.
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      category: 'Free',
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'Online',
+      inLanguage: course.languageCode,
+    },
+  };
+}
+
+export function buildFaqPageJsonLd(url: string, faq: { question: string; answer: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${url}#faq`,
+    mainEntity: faq.map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: answer,
+      },
+    })),
   };
 }
 
