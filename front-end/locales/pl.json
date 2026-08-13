@@ -1301,5 +1301,32 @@
       "lessons": "Lekcje",
       "ranking": "Ranking"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "Jak działa KisoDesk",
+      "description": "Dowiedz się, jak KisoDesk łączy ćwiczenia z pisania, język, układ klawiatury i dane z ćwiczeń, aby dopasować naukę do Twoich potrzeb."
+    },
+    "general": {
+      "footerLink": "Jak to działa",
+      "title": "Jak działa KisoDesk",
+      "subtitle": "KisoDesk został zaprojektowany tak, aby ćwiczenia z pisania uwzględniały Twój język, układ klawiatury i to, co naprawdę musisz poćwiczyć.",
+      "whyTitle": "To nie jest tylko test szybkości",
+      "whyText": "Test szybkości daje wynik tylko z jednej próby. KisoDesk uwzględnia też dokładność oraz to, jak radzisz sobie z każdym ćwiczeniem, aby odpowiednio dopasować kolejne ćwiczenia.",
+      "processTitle": "Jak przebiega ćwiczenie",
+      "stepPracticeTitle": "Ćwiczysz z tekstem dopasowanym do układu klawiatury",
+      "stepPracticeText": "Ćwiczenie opiera się na wybranym języku i układzie klawiatury, którego używasz, dzięki czemu tekst i ćwiczone klawisze są dopasowane do Twoich ustawień.",
+      "stepSignalsTitle": "Ćwiczenie dostarcza danych o Twojej praktyce",
+      "stepSignalsText": "Błędy, czas reakcji i trudne kombinacje klawiszy pomagają określić, nad czym warto jeszcze popracować.",
+      "stepPriorityTitle": "Priorytet ma to, nad czym musisz jeszcze popracować",
+      "stepPriorityText": "Zamiast ciągle powtarzać te same ćwiczenia, system może nadać priorytet obszarom, które najbardziej wymagają poprawy.",
+      "algorithmTitle": "Jak powstaje każde ćwiczenie",
+      "algorithmText": "Każde ćwiczenie może obejmować do 6 celów treningowych, uporządkowanych według priorytetu: najpierw błędy, które wciąż się powtarzają, potem trudne kombinacje klawiszy, następnie klawisze, przy których pojawiają się pojedyncze błędy, a jeśli to zasadne, do dwóch nowych znaków w Twoim języku (najpierw litery, potem cyfry, a na końcu symbole). Pozostała część ćwiczenia to ogólna powtórka. Działa to tak samo niezależnie od tego, czy ćwiczysz z kontem, czy jako gość.",
+      "languageTitle": "Co oznacza naturalna treść w Twoim języku",
+      "languageText": "Nie chodzi tylko o przetłumaczenie interfejsu. Język treści, znaki, które ćwiczysz, oraz układ klawiatury wpływają na sposób, w jaki ćwiczysz pisanie.",
+      "differenceTitle": "Ćwiczenie nastawione na postęp",
+      "differenceText": "Typowe platformy zwykle oferują wszystkim te same ćwiczenia. KisoDesk stara się uwzględniać Twoje wyniki, aby każda sesja miała jasny cel.",
+      "practiceAction": "Zacznij ćwiczyć"
+    }
   }
 }

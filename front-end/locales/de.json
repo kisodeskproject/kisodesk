@@ -1301,5 +1301,32 @@
       "lessons": "Lektionen",
       "ranking": "Rangliste"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "So funktioniert KisoDesk",
+      "description": "Erfahre, wie KisoDesk Tippübungen, Sprache, Tastaturlayout und Lernsignale kombiniert, um dich beim Lernen zu unterstützen."
+    },
+    "general": {
+      "footerLink": "So funktioniert's",
+      "title": "So funktioniert KisoDesk",
+      "subtitle": "KisoDesk passt deine Tippübungen an deine Sprache, dein Tastaturlayout und das an, was du tatsächlich üben musst.",
+      "whyTitle": "Nicht nur ein Geschwindigkeitstest",
+      "whyText": "Ein Geschwindigkeitstest zeigt dir nur ein einzelnes Ergebnis. KisoDesk berücksichtigt zusätzlich deine Genauigkeit und wie du die einzelnen Übungen bewältigst, um die nächsten Übungen darauf abzustimmen.",
+      "processTitle": "So funktioniert das Üben",
+      "stepPracticeTitle": "Du übst mit einem Text und einem Tastaturlayout",
+      "stepPracticeText": "Die Übung basiert auf der ausgewählten Sprache und dem Tastaturlayout, damit die verwendeten Tasten und Texte zu deinen Einstellungen passen.",
+      "stepSignalsTitle": "Deine Übungen liefern Lernsignale",
+      "stepSignalsText": "Fehler, Reaktionszeit und schwierige Tastenkombinationen helfen dabei zu erkennen, welche Bereiche beim Tippen mehr Aufmerksamkeit brauchen.",
+      "stepPriorityTitle": "Was du am meisten üben musst, hat Vorrang",
+      "stepPriorityText": "Statt immer dieselben Übungen zu wiederholen, kann das System die Muster priorisieren, bei denen du dich am meisten verbessern musst.",
+      "algorithmTitle": "So wird jede Übung zusammengestellt",
+      "algorithmText": "Jede Übung kombiniert bis zu 6 Übungsziele, die nach Priorität geordnet sind: zuerst wiederkehrende Fehler, dann schwierige Tastenkombinationen, danach Tasten mit einzelnen Fehlern und, wenn es passt, bis zu 2 neue Zeichen in deiner Sprache (zuerst Buchstaben, dann Zahlen und zuletzt Symbole). Der Rest der Übung wird mit allgemeiner Wiederholung aufgefüllt. Das funktioniert genauso, egal ob du mit einem Konto oder als Gast übst.",
+      "languageTitle": "Was es bedeutet, dass Inhalte in deiner Sprache natürlich sind",
+      "languageText": "Es geht nicht nur darum, die Benutzeroberfläche zu übersetzen. Die Sprache der Inhalte, die Zeichen, die du übst, und das Tastaturlayout sind alle Teil deines Tipperlebnisses.",
+      "differenceTitle": "Übungen mit Fokus auf Verbesserung",
+      "differenceText": "Allgemeine Plattformen geben meist allen dieselbe Übung. KisoDesk bezieht deine Ergebnisse mit ein, damit jede Übung einen klaren Zweck hat.",
+      "practiceAction": "Jetzt üben"
+    }
   }
 }

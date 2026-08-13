@@ -1301,5 +1301,32 @@
       "lessons": "Dersler",
       "ranking": "Sıralama"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "KisoDesk nasıl çalışır",
+      "description": "KisoDesk'in öğrenmenizi yönlendirmek için yazma pratiğini, dili, klavye düzenini ve yazma sinyallerini nasıl birleştirdiğini keşfedin."
+    },
+    "general": {
+      "footerLink": "Nasıl çalışır",
+      "title": "KisoDesk nasıl çalışır",
+      "subtitle": "KisoDesk, yazma pratiğinizin dilinizle, klavyenizle ve gerçekten geliştirmeniz gereken şeylerle uyumlu olması için tasarlandı.",
+      "whyTitle": "Bu sadece bir hız testi değil",
+      "whyText": "Bir hız testi size tek seferlik bir sonuç verir. KisoDesk ayrıca doğruluğu ve her alıştırmayı nasıl tamamladığınızı dikkate alarak sonraki alıştırmaları yönlendirir.",
+      "processTitle": "Pratik nasıl işler",
+      "stepPracticeTitle": "Bir metin ve klavye düzeniyle pratik yaparsınız",
+      "stepPracticeText": "Alıştırma, seçtiğiniz dil ve kullandığınız klavye düzeninden başlar; böylece tuşlar ve metinler kurulumunuza uygun olur.",
+      "stepSignalsTitle": "Pratik, öğrenme sinyalleri üretir",
+      "stepSignalsText": "Hatalar, tepki süresi ve zor tuş kombinasyonları, yazmanızın hangi bölümlerinin daha fazla dikkat gerektirdiğini belirlemeye yardımcı olur.",
+      "stepPriorityTitle": "Güçlendirmeniz gereken şeye öncelik verilir",
+      "stepPriorityText": "Sistem, her seferinde aynı alıştırmaları tekrarlamak yerine en çok geliştirmeniz gereken kalıplara öncelik verebilir.",
+      "algorithmTitle": "Her alıştırma nasıl oluşturulur",
+      "algorithmText": "Her alıştırma, önceliğe göre sıralanmış en fazla 6 pratik hedefini birleştirir: önce sürekli tekrar eden hatalar, ardından zor tuş kombinasyonları, sonra ara sıra hata yapılan tuşlar ve uygunsa dilinizde en fazla 2 yeni karakter (önce harfler, sonra rakamlar, en son semboller). Alıştırmanın geri kalanı genel tekrarla tamamlanır. Bu, ister bir hesapla ister misafir olarak pratik yapın, aynı şekilde çalışır.",
+      "languageTitle": "İçeriğin dilinizde doğal olması ne anlama gelir",
+      "languageText": "Bu sadece arayüzü çevirmekle ilgili değildir. İçeriğin dili, pratik yaptığınız karakterler ve klavye düzeni yazma deneyiminin bir parçasıdır.",
+      "differenceTitle": "Gelişime yönelik bir pratik",
+      "differenceText": "Genel platformlar genellikle herkese aynı alıştırmayı sunar. KisoDesk, her oturumun net bir amacı olması için sonuçlarınızı dikkate almaya çalışır.",
+      "practiceAction": "Pratiğe başlayın"
+    }
   }
 }

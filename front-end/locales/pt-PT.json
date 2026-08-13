@@ -1301,5 +1301,32 @@
       "lessons": "Lições",
       "ranking": "Ranking"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "Como funciona o KisoDesk",
+      "description": "Descubra como o KisoDesk combina a prática de escrita, o idioma, o layout do teclado e os sinais de escrita para orientar a sua aprendizagem."
+    },
+    "general": {
+      "footerLink": "Como funciona",
+      "title": "Como funciona o KisoDesk",
+      "subtitle": "O KisoDesk foi pensado para que a prática de escrita tenha em conta o seu idioma, o seu teclado e aquilo que realmente precisa de reforçar.",
+      "whyTitle": "Não é apenas um teste de velocidade",
+      "whyText": "Um teste de velocidade apresenta um resultado pontual. O KisoDesk também tem em conta a sua precisão e a forma como resolve cada exercício para orientar os exercícios seguintes.",
+      "processTitle": "Como funciona a prática",
+      "stepPracticeTitle": "Pratica com um texto e um layout de teclado",
+      "stepPracticeText": "A prática parte do idioma escolhido e do layout de teclado que utiliza, para que as teclas e os textos correspondam ao seu contexto.",
+      "stepSignalsTitle": "A prática gera sinais de aprendizagem",
+      "stepSignalsText": "Os erros, o tempo de resposta e as combinações de teclas difíceis ajudam a identificar quais as partes da sua escrita que precisam de mais atenção.",
+      "stepPriorityTitle": "É dada prioridade ao que precisa de reforçar",
+      "stepPriorityText": "Em vez de repetir sempre os mesmos exercícios, a prática pode dar prioridade aos padrões que mais precisa de melhorar.",
+      "algorithmTitle": "Como é composto cada exercício",
+      "algorithmText": "Cada exercício combina até 6 objetivos de prática, ordenados por prioridade: primeiro os erros que se repetem, depois as combinações de teclas difíceis, em seguida as teclas com erros pontuais e, quando fizer sentido, até 2 caracteres novos no seu idioma (primeiro letras, depois números e, por último, símbolos). O resto do exercício é completado com revisão geral. Isto funciona da mesma forma, quer pratique com uma conta, quer como visitante.",
+      "languageTitle": "O que significa o conteúdo ser nativo no seu idioma",
+      "languageText": "Não se trata apenas de traduzir a interface. O idioma do conteúdo, os caracteres que pratica e o layout do teclado fazem parte da experiência de escrita.",
+      "differenceTitle": "Uma prática orientada para melhorar",
+      "differenceText": "As plataformas genéricas costumam oferecer o mesmo exercício a toda a gente. O KisoDesk procura ter em conta os seus resultados para que cada sessão tenha um propósito claro.",
+      "practiceAction": "Começar a praticar"
+    }
   }
 }

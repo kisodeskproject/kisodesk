@@ -7,6 +7,7 @@ import { useParams } from 'next/navigation';
 import { FaEnvelope, FaGithub } from 'react-icons/fa6';
 
 import { toSupportedLocale, useTranslations } from '@/lib/i18n';
+import { LEARN_TYPING_SEO_CONTENT } from '@/lib/learnTypingSeoContent';
 
 export default function Footer() {
   const params = useParams();
@@ -15,6 +16,8 @@ export default function Footer() {
 
   const contactEmail = 'kisodesk.project@gmail.com';
   const githubUrl = 'https://github.com/kisodeskproject/kisodesk';
+  const locale = toSupportedLocale(lang);
+  const learnTypingContent = LEARN_TYPING_SEO_CONTENT[locale];
 
   return (
     <footer className="relative z-10 mt-[-50px] border-t border-slate-700 bg-slate-900">
@@ -62,13 +65,22 @@ export default function Footer() {
                 </Link>
               </li>
 
-              {toSupportedLocale(lang) === 'es-latam' && (
+              <li>
+                <Link
+                  href={`/${locale}/how-it-works`}
+                  className="text-slate-300 transition-colors hover:text-sky-400"
+                >
+                  {t('howItWorks.general.footerLink')}
+                </Link>
+              </li>
+
+              {learnTypingContent && (
                 <li>
                   <Link
-                    href="/es-latam/how-it-works"
+                    href={`/${locale}/learn-touch-typing`}
                     className="text-slate-300 transition-colors hover:text-sky-400"
                   >
-                    {t('howItWorks.general.footerLink')}
+                    {learnTypingContent.title}
                   </Link>
                 </li>
               )}

@@ -1301,5 +1301,32 @@
       "lessons": "Lektioner",
       "ranking": "Rangliste"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "Sådan fungerer KisoDesk",
+      "description": "Se hvordan KisoDesk kombinerer skriveøvelser, sprog, tastaturlayout og skrivesignaler for at guide din læring."
+    },
+    "general": {
+      "footerLink": "Sådan fungerer det",
+      "title": "Sådan fungerer KisoDesk",
+      "subtitle": "KisoDesk er bygget, så dine skriveøvelser hænger sammen med dit sprog, dit tastatur og det, du faktisk har brug for at øve.",
+      "whyTitle": "Det er ikke bare en hastighedstest",
+      "whyText": "En hastighedstest giver dig ét resultat. KisoDesk kigger også på nøjagtighed og på, hvordan du klarer hver øvelse, for at finde ud af, hvad du skal øve næste gang.",
+      "processTitle": "Sådan foregår øvelserne",
+      "stepPracticeTitle": "Du øver med en tekst og et tastaturlayout",
+      "stepPracticeText": "Øvelsen tager udgangspunkt i det valgte sprog og tastaturlayout, så tasterne og teksterne passer til din opsætning.",
+      "stepSignalsTitle": "Øvelsen giver læringssignaler",
+      "stepSignalsText": "Fejl, reaktionstid og svære tastekombinationer hjælper med at finde ud af, hvilke dele af din skrivning der kræver mere opmærksomhed.",
+      "stepPriorityTitle": "Det, du har mest brug for at øve, kommer først",
+      "stepPriorityText": "I stedet for at gentage de samme øvelser hver gang kan systemet prioritere de mønstre, du mest har brug for at forbedre.",
+      "algorithmTitle": "Sådan sættes hver øvelse sammen",
+      "algorithmText": "Hver øvelse kombinerer op til 6 øvelsesmål, sorteret efter prioritet: først fejl, der bliver ved med at gentage sig, derefter svære tastekombinationer, så taster med enkelte fejl og, hvis det er relevant, op til 2 nye tegn på dit sprog (først bogstaver, så tal og til sidst symboler). Resten af øvelsen fyldes op med generel gennemgang. Det fungerer på samme måde, uanset om du øver med en konto eller som gæst.",
+      "languageTitle": "Hvad det betyder, at indholdet er naturligt på dit sprog",
+      "languageText": "Det handler ikke kun om at oversætte grænsefladen. Sproget i indholdet, de tegn du øver, og tastaturlayoutet er alle en del af selve skriveoplevelsen.",
+      "differenceTitle": "Øvelser med fokus på forbedring",
+      "differenceText": "Generelle platforme tilbyder som regel den samme øvelse til alle. KisoDesk forsøger at tage udgangspunkt i dine resultater, så hver session har et klart formål.",
+      "practiceAction": "Begynd at øve"
+    }
   }
 }

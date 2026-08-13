@@ -1301,5 +1301,32 @@
       "lessons": "Lektioner",
       "ranking": "Rankning"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "Så fungerar KisoDesk",
+      "description": "Se hur KisoDesk kombinerar skrivövningar, språk, tangentbordslayout och skrivsignaler för att anpassa din träning."
+    },
+    "general": {
+      "footerLink": "Så fungerar det",
+      "title": "Så fungerar KisoDesk",
+      "subtitle": "KisoDesk är byggt så att dina skrivövningar hänger ihop med ditt språk, ditt tangentbord och det du faktiskt behöver öva på.",
+      "whyTitle": "Det är inte bara ett hastighetstest",
+      "whyText": "Ett hastighetstest ger dig ett enstaka resultat. KisoDesk tar även hänsyn till noggrannhet och hur du löser varje övning för att anpassa de kommande övningarna.",
+      "processTitle": "Så fungerar övningen",
+      "stepPracticeTitle": "Du övar med en text och en tangentbordslayout",
+      "stepPracticeText": "Övningen utgår från det valda språket och den tangentbordslayout du använder, så att tangenterna och texterna passar det tangentbord du använder.",
+      "stepSignalsTitle": "Övningen visar vad du behöver träna på",
+      "stepSignalsText": "Fel, reaktionstid och svåra tangentkombinationer hjälper till att identifiera vad du behöver träna mer på.",
+      "stepPriorityTitle": "Det du behöver förbättra prioriteras",
+      "stepPriorityText": "I stället för att upprepa samma övningar varje gång kan systemet prioritera det du behöver förbättra mest.",
+      "algorithmTitle": "Så byggs varje övning upp",
+      "algorithmText": "Varje övning kombinerar upp till 6 övningsmål, sorterade efter prioritet: först återkommande fel, sedan svåra tangentkombinationer, därefter tangenter med enstaka fel och, när det är relevant, upp till 2 nya tecken som används i ditt språk (först bokstäver, sedan siffror och till sist symboler). Resten av övningen består av vanlig repetition. Det fungerar likadant oavsett om du övar med ett konto eller som gäst.",
+      "languageTitle": "Vad det innebär att innehållet är anpassat till ditt språk",
+      "languageText": "Det handlar inte bara om att översätta gränssnittet. Språket i innehållet, tecknen du övar på och tangentbordslayouten är alla en del av skrivupplevelsen.",
+      "differenceTitle": "Träning med fokus på förbättring",
+      "differenceText": "Generella plattformar erbjuder ofta samma övning till alla. KisoDesk försöker ta hänsyn till dina resultat så att varje session har ett tydligt syfte.",
+      "practiceAction": "Börja öva"
+    }
   }
 }

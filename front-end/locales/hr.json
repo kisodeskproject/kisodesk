@@ -1301,5 +1301,32 @@
       "lessons": "Lekcije",
       "ranking": "Rang-lista"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "Kako KisoDesk funkcionira",
+      "description": "Saznajte kako KisoDesk kombinira vježbanje tipkanja, jezik, raspored tipkovnice i podatke o vašem tipkanju kako bi prilagodio vaše učenje."
+    },
+    "general": {
+      "footerLink": "Kako funkcionira",
+      "title": "Kako KisoDesk funkcionira",
+      "subtitle": "KisoDesk je osmišljen tako da se vježbanje tipkanja prilagodi vašem jeziku, rasporedu tipkovnice i onome što vam je potrebno dodatno uvježbati.",
+      "whyTitle": "Ovo nije samo test brzine",
+      "whyText": "Test brzine daje vam rezultat u jednom trenutku. KisoDesk uzima u obzir i točnost te način na koji rješavate svaku vježbu kako bi odredio što ćete vježbati sljedeće.",
+      "processTitle": "Kako izgleda vježbanje",
+      "stepPracticeTitle": "Vježbate s tekstom i rasporedom tipkovnice",
+      "stepPracticeText": "Vježbe se temelje na odabranom jeziku i rasporedu tipkovnice koji koristite, tako da tipke i tekstovi odgovaraju vašem načinu rada.",
+      "stepSignalsTitle": "Vježbanje otkriva što trebate poboljšati",
+      "stepSignalsText": "Pogreške, vrijeme reakcije i zahtjevne kombinacije tipki pomažu prepoznati dijelove tipkanja kojima trebate posvetiti više pažnje.",
+      "stepPriorityTitle": "Prednost dobiva ono što trebate uvježbati",
+      "stepPriorityText": "Umjesto da stalno ponavlja iste vježbe, sustav može dati prednost obrascima koje trebate najviše poboljšati.",
+      "algorithmTitle": "Kako nastaje svaka vježba",
+      "algorithmText": "Svaka vježba kombinira do 6 ciljeva vježbanja poredanih po prioritetu: najprije pogreške koje se stalno ponavljaju, zatim zahtjevne kombinacije tipki, potom tipke kod kojih se povremeno pojavljuju pogreške i, ako je primjenjivo, do 2 nova znaka u vašem jeziku (najprije slova, zatim brojevi pa simboli). Ostatak vježbe popunjava se općim ponavljanjem. Sve to funkcionira jednako bez obzira na to vježbate li s računom ili kao gost.",
+      "languageTitle": "Što znači da je sadržaj prirodan na vašem jeziku",
+      "languageText": "Ne radi se samo o prijevodu sučelja. Jezik sadržaja, znakovi koje vježbate i raspored tipkovnice dio su iskustva tipkanja.",
+      "differenceTitle": "Vježbanje usmjereno na napredak",
+      "differenceText": "Generičke platforme obično svima nude iste zadatke. KisoDesk nastoji uzeti u obzir vaše rezultate kako bi svaka sesija imala jasnu svrhu.",
+      "practiceAction": "Počnite vježbati"
+    }
   }
 }

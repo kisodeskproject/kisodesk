@@ -1301,5 +1301,32 @@
       "lessons": "Lessen",
       "ranking": "Ranglijst"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "Hoe KisoDesk werkt",
+      "description": "Ontdek hoe KisoDesk typeoefeningen, taal, toetsenbordindeling en oefensignalen combineert om je te helpen gerichter te leren."
+    },
+    "general": {
+      "footerLink": "Hoe het werkt",
+      "title": "Hoe KisoDesk werkt",
+      "subtitle": "KisoDesk is zo ontworpen dat je typeoefeningen aansluiten bij je taal, je toetsenbord en wat je daadwerkelijk moet oefenen.",
+      "whyTitle": "Het is meer dan alleen een snelheidstest",
+      "whyText": "Een snelheidstest geeft je een eenmalig resultaat. KisoDesk kijkt ook naar je nauwkeurigheid en naar hoe je elke oefening uitvoert, zodat de volgende oefeningen daarop kunnen worden afgestemd.",
+      "processTitle": "Hoe het oefenen werkt",
+      "stepPracticeTitle": "Je oefent met een tekst en een toetsenbordindeling",
+      "stepPracticeText": "Elke oefening is afgestemd op de gekozen taal en de toetsenbordindeling die je gebruikt, zodat de toetsen en teksten aansluiten bij jouw situatie.",
+      "stepSignalsTitle": "Elke oefening levert informatie op over je leerproces",
+      "stepSignalsText": "Fouten, reactietijd en lastige toetscombinaties helpen bepalen welke onderdelen van je typevaardigheid extra aandacht nodig hebben.",
+      "stepPriorityTitle": "Wat je moet verbeteren krijgt voorrang",
+      "stepPriorityText": "In plaats van steeds dezelfde oefeningen te herhalen, kan het systeem voorrang geven aan de patronen die je het meest moet verbeteren.",
+      "algorithmTitle": "Hoe elke oefening wordt samengesteld",
+      "algorithmText": "Elke oefening combineert maximaal 6 oefendoelen, gerangschikt op prioriteit: eerst terugkerende fouten, daarna lastige toetscombinaties, vervolgens toetsen waarop je af en toe fouten maakt en, indien van toepassing, maximaal 2 nieuwe tekens in jouw taal (eerst letters, daarna cijfers en tot slot symbolen). De rest van de oefening wordt aangevuld met algemene herhaling. Dit werkt hetzelfde, of je nu met een account of als gast oefent.",
+      "languageTitle": "Wat het betekent dat de inhoud natuurlijk aanvoelt in jouw taal",
+      "languageText": "Het gaat niet alleen om het vertalen van de interface. De taal van de inhoud, de tekens die je oefent en de toetsenbordindeling bepalen allemaal hoe natuurlijk de type-ervaring aanvoelt.",
+      "differenceTitle": "Gericht oefenen om vooruitgang te boeken",
+      "differenceText": "Algemene platforms bieden meestal iedereen dezelfde oefeningen. KisoDesk probeert rekening te houden met jouw resultaten, zodat elke sessie een duidelijk doel heeft.",
+      "practiceAction": "Begin met oefenen"
+    }
   }
 }

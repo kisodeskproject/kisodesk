@@ -1301,5 +1301,32 @@
       "lessons": "Leckék",
       "ranking": "Ranglista"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "Hogyan működik a KisoDesk",
+      "description": "Ismerje meg, hogyan hangolja össze a KisoDesk a gépelési gyakorlást, a nyelvet, a billentyűzetkiosztást és a gépelésből származó visszajelzéseket, hogy támogassa a fejlődését."
+    },
+    "general": {
+      "footerLink": "Hogyan működik",
+      "title": "Hogyan működik a KisoDesk",
+      "subtitle": "A KisoDesk a gépelési gyakorlást a nyelvéhez, a billentyűzetéhez és az aktuális gyakorlási igényeihez igazítja.",
+      "whyTitle": "Ez nem csak egy sebességteszt",
+      "whyText": "Egy sebességteszt egyetlen eredményt mutat. A KisoDesk emellett figyelembe veszi a pontosságot és azt is, hogyan teljesít az egyes gyakorlatokban, és ezek alapján alakítja a következő gyakorlatokat.",
+      "processTitle": "Hogyan zajlik a gyakorlás",
+      "stepPracticeTitle": "A gyakorlás a kiválasztott szövegre és billentyűzetkiosztásra épül",
+      "stepPracticeText": "A gyakorlat a kiválasztott nyelvre és az Ön által használt billentyűzetkiosztásra épül, így a billentyűk és a szövegek megfelelnek a beállításainak.",
+      "stepSignalsTitle": "A gyakorlás során visszajelzést kap a fejlődéséről",
+      "stepSignalsText": "A hibák, a reakcióidő és a nehéz billentyűkombinációk segítenek megmutatni, hogy a gépelés mely részei igényelnek több figyelmet.",
+      "stepPriorityTitle": "Nagyobb hangsúlyt kap, amit még gyakorolnia kell",
+      "stepPriorityText": "Ahelyett, hogy mindig ugyanazokat a gyakorlatokat ismételné, a rendszer azokat a mintákat helyezheti előtérbe, amelyek több gyakorlást igényelnek.",
+      "algorithmTitle": "Hogyan áll össze minden egyes gyakorlat",
+      "algorithmText": "Minden gyakorlat legfeljebb 6 gyakorlási célt kombinál, fontossági sorrendben: elsőként az újra és újra ismétlődő hibák, majd a nehéz billentyűkombinációk, ezután azok a billentyűk, amelyeknél időnként hibázik, és ha szükséges, legfeljebb 2 új karakter az Ön nyelvén (először betűk, majd számok, végül szimbólumok). A gyakorlat fennmaradó részét általános ismétlés tölti ki. Ez ugyanígy működik akkor is, ha fiókkal rendelkezik, és akkor is, ha vendégként gyakorol.",
+      "languageTitle": "Mit jelent az, hogy a tartalom az Ön nyelvéhez igazodik",
+      "languageText": "Nem csupán a felület lefordításáról van szó. A tartalom nyelve, a gyakorolt karakterek és a billentyűzetkiosztás mind részei a gépelési élménynek.",
+      "differenceTitle": "A fejlődésre összpontosító gyakorlás",
+      "differenceText": "A legtöbb általános platform mindenkinek ugyanazt a gyakorlatot kínálja. A KisoDesk figyelembe veszi az Ön eredményeit, hogy minden gyakorlásnak világos célja legyen.",
+      "practiceAction": "Gyakorlás megkezdése"
+    }
   }
 }

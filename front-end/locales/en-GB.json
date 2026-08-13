@@ -1301,5 +1301,32 @@
       "lessons": "Lessons",
       "ranking": "Ranking"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "How KisoDesk works",
+      "description": "Find out how KisoDesk combines typing practice, language, keyboard layout and typing signals to guide your learning."
+    },
+    "general": {
+      "footerLink": "How it works",
+      "title": "How KisoDesk works",
+      "subtitle": "KisoDesk is designed to make your typing practice reflect your language, your keyboard and what you actually need to work on.",
+      "whyTitle": "It's not just a speed test",
+      "whyText": "A speed test gives you a single result. KisoDesk also takes accuracy into account, along with how you perform in each session, to shape what comes next.",
+      "processTitle": "How practice sessions work",
+      "stepPracticeTitle": "You practise with a text and a keyboard layout",
+      "stepPracticeText": "Each session is based on your chosen language and keyboard layout, so the keys and texts match your setup.",
+      "stepSignalsTitle": "Practice sessions generate learning signals",
+      "stepSignalsText": "Errors, response time and difficult key combinations help pinpoint which parts of your typing need more attention.",
+      "stepPriorityTitle": "We prioritise what you need to reinforce",
+      "stepPriorityText": "Rather than repeating the same exercises every time, the system can prioritise the patterns you most need to improve.",
+      "algorithmTitle": "How each exercise is put together",
+      "algorithmText": "Each exercise combines up to 6 practice targets, ranked by priority: first recurring errors, then difficult key combinations, followed by keys with occasional errors and, where relevant, up to 2 new characters in your language (letters first, then numbers, then symbols). The rest of the exercise is filled with general review. This works the same way whether you practise with an account or as a guest.",
+      "languageTitle": "What it means for content to feel native in your language",
+      "languageText": "It isn't just about translating the interface. The language of the content, the characters you practise and the keyboard layout are all part of the typing experience.",
+      "differenceTitle": "Practice built around improvement",
+      "differenceText": "Generic platforms tend to give everyone the same exercise. KisoDesk takes your results into account so that every session has a clear purpose.",
+      "practiceAction": "Start practising"
+    }
   }
 }

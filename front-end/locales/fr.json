@@ -1301,5 +1301,32 @@
       "lessons": "Leçons",
       "ranking": "Classement"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "Comment fonctionne KisoDesk",
+      "description": "Découvrez comment KisoDesk combine la pratique de la frappe, la langue, la disposition du clavier et les signaux de frappe pour guider votre apprentissage."
+    },
+    "general": {
+      "footerLink": "Comment ça marche",
+      "title": "Comment fonctionne KisoDesk",
+      "subtitle": "KisoDesk est conçu pour que votre pratique de la frappe corresponde à votre langue, à votre clavier et à ce que vous devez réellement travailler.",
+      "whyTitle": "Ce n’est pas seulement un test de vitesse",
+      "whyText": "Un test de vitesse vous donne un résultat à un instant donné. KisoDesk prend aussi en compte votre précision et la façon dont vous réalisez chaque exercice pour guider les suivants.",
+      "processTitle": "Comment se déroule la pratique",
+      "stepPracticeTitle": "Vous pratiquez avec un texte et une disposition de clavier",
+      "stepPracticeText": "L’exercice tient compte de la langue choisie et de la disposition du clavier que vous utilisez, afin que les touches et les textes correspondent à votre contexte.",
+      "stepSignalsTitle": "Votre pratique génère des signaux d’apprentissage",
+      "stepSignalsText": "Les erreurs, le temps de réponse et les combinaisons de touches difficiles permettent d’identifier les aspects de votre frappe qui demandent le plus d’attention.",
+      "stepPriorityTitle": "La priorité est donnée à ce que vous devez renforcer",
+      "stepPriorityText": "Plutôt que de répéter toujours les mêmes exercices, la pratique peut donner la priorité aux points que vous devez le plus améliorer.",
+      "algorithmTitle": "Comment chaque exercice est construit",
+      "algorithmText": "Chaque exercice combine jusqu’à 6 objectifs de pratique, classés par priorité : d’abord les erreurs qui se répètent, puis les combinaisons de touches difficiles, ensuite les touches sur lesquelles vous faites des erreurs ponctuelles et, si nécessaire, jusqu’à 2 nouveaux caractères dans votre langue (d’abord les lettres, puis les chiffres et enfin les symboles). Le reste de l’exercice est complété par une révision générale. Le fonctionnement est le même que vous pratiquiez avec un compte ou en tant qu’invité.",
+      "languageTitle": "Ce qu’implique un contenu natif dans votre langue",
+      "languageText": "Il ne s’agit pas seulement de traduire l’interface. La langue du contenu, les caractères que vous pratiquez et la disposition du clavier font tous partie de votre expérience de frappe.",
+      "differenceTitle": "Une pratique orientée vers le progrès",
+      "differenceText": "Les plateformes génériques proposent généralement les mêmes exercices à tout le monde. KisoDesk tient compte de vos résultats pour que chaque session ait un objectif clair.",
+      "practiceAction": "Commencer à pratiquer"
+    }
   }
 }

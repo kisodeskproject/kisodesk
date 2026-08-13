@@ -1301,5 +1301,32 @@
       "lessons": "Lekce",
       "ranking": "Žebříček"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "Jak KisoDesk funguje",
+      "description": "Zjistěte, jak KisoDesk propojuje procvičování psaní, váš jazyk, rozložení klávesnice a výsledky vašeho psaní, aby vás při učení vedl."
+    },
+    "general": {
+      "footerLink": "Jak to funguje",
+      "title": "Jak KisoDesk funguje",
+      "subtitle": "KisoDesk je navržen tak, aby procvičování odpovídalo vašemu jazyku, rozložení klávesnice a tomu, co skutečně potřebujete zlepšit.",
+      "whyTitle": "Není to jen test rychlosti",
+      "whyText": "Test rychlosti ukáže jednorázový výsledek. KisoDesk navíc sleduje přesnost a to, jak si vedete v jednotlivých cvičeních, a podle toho vybírá další cvičení.",
+      "processTitle": "Jak probíhá procvičování",
+      "stepPracticeTitle": "Píšete v rozložení klávesnice, které používáte",
+      "stepPracticeText": "Cvičení vycházejí z vybraného jazyka a rozložení klávesnice, takže klávesy i texty odpovídají vašemu nastavení.",
+      "stepSignalsTitle": "Cvičení poskytují informace o vašem výkonu",
+      "stepSignalsText": "Chyby, rychlost reakcí a obtížné kombinace kláves pomáhají určit, kterým částem psaní je potřeba věnovat více pozornosti.",
+      "stepPriorityTitle": "Nejdřív procvičujete to, co potřebujete zlepšit",
+      "stepPriorityText": "Místo opakování stejných cvičení systém upřednostňuje to, co potřebujete nejvíc zlepšit.",
+      "algorithmTitle": "Jak vzniká každé cvičení",
+      "algorithmText": "Každé cvičení kombinuje až 6 oblastí, které je potřeba procvičit, seřazených podle priority: nejdříve opakující se chyby, potom obtížné kombinace kláves, dále klávesy, u kterých občas chybujete, a případně až 2 nové znaky ve vašem jazyce — nejprve písmena, potom čísla a nakonec symboly. Zbytek cvičení doplňuje běžné opakování. Funguje to stejně, ať cvičíte s účtem, nebo jako host.",
+      "languageTitle": "Co znamená přirozený obsah ve vašem jazyce",
+      "languageText": "Nejde jen o přeložené rozhraní. Důležitý je také jazyk obsahu, znaky, které procvičujete, a rozložení klávesnice, protože to vše ovlivňuje způsob, jakým píšete.",
+      "differenceTitle": "Procvičování zaměřené na to, co chcete zlepšit",
+      "differenceText": "Běžné platformy obvykle nabízejí všem stejná cvičení. KisoDesk vychází z vašich výsledků, aby každé cvičení odpovídalo tomu, co právě potřebujete zlepšit.",
+      "practiceAction": "Začít procvičovat"
+    }
   }
 }

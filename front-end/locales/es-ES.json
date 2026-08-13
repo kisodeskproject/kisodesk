@@ -1301,5 +1301,32 @@
       "lessons": "Lecciones",
       "ranking": "Ranking"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "Cómo funciona KisoDesk",
+      "description": "Descubre cómo KisoDesk combina la práctica de mecanografía, el idioma, la distribución del teclado y las señales de escritura para guiar tu aprendizaje."
+    },
+    "general": {
+      "footerLink": "Cómo funciona",
+      "title": "Cómo funciona KisoDesk",
+      "subtitle": "KisoDesk está diseñado para adaptar la práctica de mecanografía a tu idioma, tu teclado y aquello que necesitas reforzar.",
+      "whyTitle": "No es solo una prueba de velocidad",
+      "whyText": "Una prueba de velocidad te da un resultado puntual. KisoDesk también tiene en cuenta la precisión y cómo realizas cada práctica para adaptar los siguientes ejercicios.",
+      "processTitle": "Cómo funciona la práctica",
+      "stepPracticeTitle": "Practicas con un texto y una distribución de teclado",
+      "stepPracticeText": "Cada práctica parte del idioma que elijas y de la distribución de teclado que utilices, para que las teclas y los textos se adapten a tu configuración.",
+      "stepSignalsTitle": "La práctica genera señales de aprendizaje",
+      "stepSignalsText": "Los errores, el tiempo de respuesta y las combinaciones de teclas más difíciles ayudan a identificar qué aspectos de tu escritura necesitan más atención.",
+      "stepPriorityTitle": "Se da prioridad a lo que necesitas reforzar",
+      "stepPriorityText": "En lugar de repetir siempre los mismos ejercicios, el sistema puede priorizar los patrones que más necesitas mejorar.",
+      "algorithmTitle": "Cómo se compone cada ejercicio",
+      "algorithmText": "Cada ejercicio combina hasta 6 objetivos de práctica, ordenados por prioridad: primero los errores que se repiten, después las combinaciones de teclas más difíciles, luego las teclas con errores puntuales y, cuando corresponde, hasta 2 caracteres nuevos de tu idioma (primero letras, después números y, por último, símbolos). El resto del ejercicio se completa con repaso general. Funciona igual tanto si practicas con una cuenta como si lo haces como invitado.",
+      "languageTitle": "Qué significa que el contenido sea natural en tu idioma",
+      "languageText": "No se trata solo de traducir la interfaz. El idioma del contenido, los caracteres que practicas y la distribución del teclado forman parte de la experiencia de mecanografía.",
+      "differenceTitle": "Una práctica orientada a mejorar",
+      "differenceText": "Las plataformas genéricas suelen ofrecer el mismo ejercicio a todo el mundo. KisoDesk tiene en cuenta tus resultados para que cada sesión tenga un propósito claro.",
+      "practiceAction": "Empezar a practicar"
+    }
   }
 }

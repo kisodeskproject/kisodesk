@@ -1301,5 +1301,32 @@
       "lessons": "Lezioni",
       "ranking": "Classifica"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "Come funziona KisoDesk",
+      "description": "Scopri come KisoDesk unisce la pratica di digitazione, la lingua, la disposizione della tastiera e i segnali di digitazione per guidare il tuo apprendimento."
+    },
+    "general": {
+      "footerLink": "Come funziona",
+      "title": "Come funziona KisoDesk",
+      "subtitle": "KisoDesk è pensato per far sì che la tua pratica di digitazione tenga conto della tua lingua, della tua tastiera e di ciò che devi davvero rafforzare.",
+      "whyTitle": "Non è solo un test di velocità",
+      "whyText": "Un test di velocità ti dà un risultato isolato. KisoDesk considera anche la precisione e il modo in cui affronti ogni esercizio, per orientare quelli successivi.",
+      "processTitle": "Come funziona la pratica",
+      "stepPracticeTitle": "Ti eserciti con un testo e una disposizione di tastiera",
+      "stepPracticeText": "L'esercizio parte dalla lingua scelta e dalla disposizione di tastiera che usi, in modo che tasti e testi corrispondano al tuo contesto.",
+      "stepSignalsTitle": "La pratica genera segnali di apprendimento",
+      "stepSignalsText": "Gli errori, i tempi di risposta e le combinazioni di tasti difficili aiutano a individuare quali parti della tua scrittura richiedono più attenzione.",
+      "stepPriorityTitle": "Viene data priorità a ciò che devi rafforzare",
+      "stepPriorityText": "Invece di ripetere sempre gli stessi esercizi, la pratica può dare priorità agli schemi che hai più bisogno di migliorare.",
+      "algorithmTitle": "Come viene costruito ogni esercizio",
+      "algorithmText": "Ogni esercizio combina fino a 6 obiettivi di pratica, ordinati per priorità: prima gli errori che si ripetono più volte, poi le combinazioni di tasti difficili, quindi i tasti con errori occasionali e, se pertinente, fino a 2 nuovi caratteri nella tua lingua (prima le lettere, poi i numeri e infine i simboli). Il resto dell'esercizio viene completato con un ripasso generale. Funziona allo stesso modo sia che tu pratichi con un account sia come ospite.",
+      "languageTitle": "Cosa significa che il contenuto è nativo nella tua lingua",
+      "languageText": "Non si tratta solo di tradurre l'interfaccia. La lingua del contenuto, i caratteri che pratichi e la disposizione della tastiera fanno tutti parte dell'esperienza di scrittura.",
+      "differenceTitle": "Una pratica orientata al miglioramento",
+      "differenceText": "Le piattaforme generiche offrono di solito lo stesso esercizio a tutti. KisoDesk cerca di tenere conto dei tuoi risultati, in modo che ogni sessione abbia uno scopo chiaro.",
+      "practiceAction": "Inizia a esercitarti"
+    }
   }
 }

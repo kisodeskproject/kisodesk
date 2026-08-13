@@ -1301,5 +1301,32 @@
       "lessons": "Lecții",
       "ranking": "Clasament"
     }
+  },
+  "howItWorks": {
+    "metadata": {
+      "title": "Cum funcționează KisoDesk",
+      "description": "Află cum combină KisoDesk exercițiile de tastare, limba, aspectul tastaturii și semnalele de tastare pentru a-ți ghida învățarea."
+    },
+    "general": {
+      "footerLink": "Cum funcționează",
+      "title": "Cum funcționează KisoDesk",
+      "subtitle": "KisoDesk este conceput astfel încât exercițiile de tastare să țină cont de limba ta, de tastatura pe care o folosești și de ceea ce ai nevoie să exersezi.",
+      "whyTitle": "Nu este doar un test de viteză",
+      "whyText": "Un test de viteză îți arată doar rezultatul din acel moment. KisoDesk ține cont și de precizie și de modul în care parcurgi fiecare exercițiu, pentru a adapta exercițiile următoare.",
+      "processTitle": "Cum funcționează exersarea",
+      "stepPracticeTitle": "Exersezi cu un text și un aspect de tastatură",
+      "stepPracticeText": "Exercițiul pornește de la limba aleasă și de la aspectul de tastatură pe care îl folosești, astfel încât tastele și textele să se potrivească modului în care scrii.",
+      "stepSignalsTitle": "Exersarea generează semnale de învățare",
+      "stepSignalsText": "Erorile, timpul de reacție și combinațiile dificile de taste ajută la identificarea aspectelor scrierii tale care au nevoie de mai multă atenție.",
+      "stepPriorityTitle": "Este prioritizat ceea ce trebuie să consolidezi",
+      "stepPriorityText": "În loc să repete mereu aceleași exerciții, sistemul poate prioritiza tiparele pe care trebuie să le îmbunătățești cel mai mult.",
+      "algorithmTitle": "Cum este alcătuit fiecare exercițiu",
+      "algorithmText": "Fiecare exercițiu combină până la 6 obiective de exersare, ordonate după prioritate: mai întâi erorile care se repetă constant, apoi combinațiile dificile de taste, apoi tastele cu erori ocazionale și, dacă este cazul, până la 2 caractere noi specifice limbii tale (mai întâi litere, apoi cifre și, în final, simboluri). Restul exercițiului este completat cu recapitulare generală. Funcționează la fel indiferent dacă exersezi cu un cont sau ca vizitator.",
+      "languageTitle": "Ce înseamnă un conținut natural în limba ta",
+      "languageText": "Nu este vorba doar despre traducerea interfeței. Limba conținutului, caracterele pe care le exersezi și aspectul tastaturii fac parte din experiența ta de scriere.",
+      "differenceTitle": "O practică orientată spre progres",
+      "differenceText": "Platformele generice oferă de obicei același exercițiu tuturor. KisoDesk încearcă să țină cont de rezultatele tale, astfel încât fiecare sesiune să aibă un scop clar.",
+      "practiceAction": "Începe să exersezi"
+    }
   }
 }
