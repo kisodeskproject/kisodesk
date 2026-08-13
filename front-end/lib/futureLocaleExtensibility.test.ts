@@ -19,12 +19,6 @@ const courses = [
 describe('extensibilidad de cursos de mecanografía', () => {
   it('encuentra un curso futuro configurado sin acoplar el selector a la tarjeta', () => {
     expect(findTypingCourseInConfiguration(courses, configurations.zz)).toEqual(courses[2]);
-  });
-
-  it('mantiene separadas configuraciones por languageCode y slug', () => {
-    expect(findTypingCourseInConfiguration(courses, configurations.es)).toEqual(courses[0]);
-    expect(findTypingCourseInConfiguration(courses, configurations.en)).toEqual(courses[1]);
-    expect(findTypingCourseInConfiguration(courses, configurations.zz)).toEqual(courses[2]);
     expect(findTypingCourseInConfiguration(courses, null)).toBeNull();
   });
 

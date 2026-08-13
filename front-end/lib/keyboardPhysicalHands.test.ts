@@ -25,12 +25,6 @@ describe('physical keyboard hand guides', () => {
     );
   });
 
-  it('uses the same finger for a physical code regardless of the logical language', () => {
-    expect(getHandReferencesForPhysicalKeyId(getPhysicalKeyIdForCode('Semicolon'), 'ISO')).toEqual(
-      getHandReferencesForPhysicalKeyId(getPhysicalKeyIdForCode('Semicolon'), 'ISO'),
-    );
-  });
-
   it('assigns a finger to ISO and ABNT2-only codes', () => {
     expect(
       getHandReferencesForPhysicalKeyId(getPhysicalKeyIdForCode('IntlBackslash'), 'ISO').left,
@@ -54,9 +48,6 @@ describe('physical keyboard hand guides', () => {
         '/svg/P36-P39-Space.svg',
       );
     }
-    expect(getHandReferencesForPhysicalKeyId(getPhysicalKeyIdForCode('Semicolon'), 'ISO')).toEqual(
-      getHandReferencesForPhysicalKeyId(getPhysicalKeyIdForCode('Semicolon'), 'ISO'),
-    );
   });
 
   it('keeps ANSI symbol postures separated by one physical key pitch', () => {

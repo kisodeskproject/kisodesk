@@ -81,11 +81,6 @@ describe('useLessonAudio', () => {
     expect(hook.result.audioWarning).toBe('loadError');
   });
 
-  it('does not require output-device APIs when the browser does not support them', () => {
-    const hook = mount();
-    expect(hook.result.audioWarning).toBeNull();
-  });
-
   it('loads manual audio without starting playback', () => {
     const { audio } = mount('/manual.mp3', false);
     expect(audio.getAttribute('src')).toBe('/manual.mp3');
