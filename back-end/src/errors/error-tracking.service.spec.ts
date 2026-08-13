@@ -8,34 +8,29 @@ describe('ErrorTrackingService layout statistics', () => {
     return { service: new ErrorTrackingService(prisma as any), tx, executeRaw };
   }
 
-  it('actualiza únicamente key_layout_stats para un error no corregido', async () => {
-    const { service, tx, executeRaw } = createService();
+  it.each([
+    { totalPresses: 5, totalErrors: 2 },
+    { totalPresses: 3, totalErrors: 0 },
+  ])(
+    'actualiza únicamente key_layout_stats para totalErrors=$totalErrors',
+    async ({ totalPresses, totalErrors }) => {
+      const { service, tx, executeRaw } = createService();
 
-    await service.processLessonLayoutStatsInTransaction(tx, 'user-1', 'es', 'qwerty-latam', {
-      totalKeystrokes: 5,
-      totalErrors: 2,
-      keys: [{ expected: 'a', totalPresses: 5, totalErrors: 2 }],
-    });
+      await service.processLessonLayoutStatsInTransaction(tx, 'user-1', 'es', 'qwerty-latam', {
+        totalKeystrokes: totalPresses,
+        totalErrors,
+        keys: [{ expected: 'a', totalPresses, totalErrors }],
+      });
 
-    expect(executeRaw).toHaveBeenCalledTimes(1);
-    const [query, ...values] = executeRaw.mock.calls[0];
-    expect(query.join('')).toContain('"key_layout_stats"');
-    expect(query.join('')).not.toContain('"key_stats"');
-    expect(values).toEqual(expect.arrayContaining(['user-1', 'es', 'qwerty-latam', 'a', 5, 2]));
-  });
-
-  it('conserva cero errores para una corrección resuelta con Backspace', async () => {
-    const { service, tx, executeRaw } = createService();
-
-    await service.processLessonLayoutStatsInTransaction(tx, 'user-1', 'es', 'qwerty-latam', {
-      totalKeystrokes: 3,
-      totalErrors: 0,
-      keys: [{ expected: 'a', totalPresses: 3, totalErrors: 0 }],
-    });
-
-    const [, ...values] = executeRaw.mock.calls[0];
-    expect(values).toEqual(expect.arrayContaining(['qwerty-latam', 'a', 3, 0]));
-  });
+      expect(executeRaw).toHaveBeenCalledTimes(1);
+      const [query, ...values] = executeRaw.mock.calls[0];
+      expect(query.join('')).toContain('"key_layout_stats"');
+      expect(query.join('')).not.toContain('"key_stats"');
+      expect(values).toEqual(
+        expect.arrayContaining(['user-1', 'es', 'qwerty-latam', 'a', totalPresses, totalErrors]),
+      );
+    },
+  );
 
   it('mantiene agregados separados por distribución', async () => {
     const { service, tx, executeRaw } = createService();

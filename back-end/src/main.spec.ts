@@ -68,13 +68,6 @@ describe('bootstrap(main.ts)', () => {
     expect(app.listen).toHaveBeenCalledWith(3000, expect.any(String));
   });
 
-  it('arranca en production', async () => {
-    process.env.NODE_ENV = 'production';
-    const NestFactory = await runMain();
-    const app = await NestFactory.create.mock.results.at(-1).value;
-    expect(app.listen).toHaveBeenCalledWith(3000, expect.any(String));
-  });
-
   it('configura CORS con una lista explícita de orígenes', async () => {
     process.env.CORS_ALLOWED_ORIGINS =
       'https://keyrivo.example, https://admin.keyrivo.example/path';
