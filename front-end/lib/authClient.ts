@@ -100,6 +100,7 @@ export async function updateMyPreferences(
       | 'showPresenceToFriends'
       | 'shareStatsWithFriends'
       | 'allowFriendRequests'
+      | 'dailyGoalMinutes'
       | 'updatedAt'
     >
   >,

@@ -18,15 +18,18 @@ import PersonalRecordCard from '@/components/dashboard/PersonalRecordCard';
 import RecommendationsList from '@/components/dashboard/RecommendationsList';
 import CourseInProgressCard from '@/components/dashboard/CourseInProgressCard';
 import RankingPositionCard from '@/components/dashboard/RankingPositionCard';
-import { readGuestProgress } from '@/lib/guestProgressStore';
+import TodayTrainingCard from '@/components/dashboard/TodayTrainingCard';
+import { readGuestDailyGoalMinutes, readGuestProgress } from '@/lib/guestProgressStore';
 import {
   getGuestDashboardProgress,
   getGuestPracticeDays,
   getGuestProgressForLanguage,
+  getGuestTodaySummary,
   getGuestWeakKeys,
   getGuestWeakKeysResponse,
 } from '@/lib/guestDashboardProgress';
 import type { PracticeDay, ProgressData } from '@/types/progress';
+import type { TodayTrainingSummary } from '@/types/todayTraining';
 import type { WeakKey, WeakKeysResponse } from '@/types/weakKeys';
 
 const ProgressChart = dynamic(() => import('@/components/dashboard/ProgressChart'), { ssr: false });
@@ -62,6 +65,7 @@ export default function ProgressPage() {
   const [guestWeakKeysResponse, setGuestWeakKeysResponse] = useState<WeakKeysResponse | null>(
     null,
   );
+  const [guestTodaySummary, setGuestTodaySummary] = useState<TodayTrainingSummary | null>(null);
 
   const { recommendations } = useRecommendations();
 
@@ -83,6 +87,7 @@ export default function ProgressPage() {
       setGuestPracticeDays([]);
       setGuestWeakKeys([]);
       setGuestWeakKeysResponse(null);
+      setGuestTodaySummary(null);
       return;
     }
 
@@ -93,6 +98,9 @@ export default function ProgressPage() {
     setGuestPracticeDays(getGuestPracticeDays(localProgress));
     setGuestWeakKeys(getGuestWeakKeys(localProgress));
     setGuestWeakKeysResponse(getGuestWeakKeysResponse(localProgress));
+    setGuestTodaySummary(
+      getGuestTodaySummary(localProgress, readGuestDailyGoalMinutes()),
+    );
   }, [isAuthenticated, locale]);
 
   const handleRetry = useCallback(() => {
@@ -194,6 +202,10 @@ export default function ProgressPage() {
           data={normalized ?? guestProgress ?? undefined}
           translations={translations}
         />
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <TodayTrainingCard guestSummary={guestTodaySummary} locale={locale} />
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <PersonalRecordCard

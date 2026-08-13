@@ -4,7 +4,9 @@ import {
   getGuestDashboardProgress,
   getGuestPracticeDays,
   getGuestProgressForLanguage,
+  getGuestTodaySummary,
   getGuestWeakKeys,
+  getGuestWeakPoints,
 } from './guestDashboardProgress';
 
 const progress = {
@@ -108,5 +110,85 @@ describe('guestDashboardProgress', () => {
       adaptiveProfiles: {},
     });
     expect(getGuestProgressForLanguage(multilingualProgress, 'fr').practice).toHaveLength(1);
+  });
+});
+
+describe('getGuestWeakPoints', () => {
+  it('combina teclas y bigramas y ordena por menor precisión', () => {
+    const withStats = {
+      ...progress,
+      practice: [
+        {
+          ...progress.practice[0],
+          errorSummary: {
+            totalKeystrokes: 10,
+            totalErrors: 2,
+            keys: [{ expected: 'p', totalPresses: 8, totalErrors: 1 }],
+          },
+        },
+      ],
+      adaptiveProfiles: {
+        'es:es-latam:qwerty-latam': {
+          language: 'es' as const,
+          locale: 'es-latam' as const,
+          layoutId: 'qwerty-latam',
+          sampleSessions: 3,
+          totalInputs: 0,
+          totalFinalInputs: 0,
+          correctFinalInputs: 0,
+          totalIncorrectAttempts: 0,
+          correctedErrors: 0,
+          uncorrectedErrors: 0,
+          totalActiveDurationMs: 0,
+          finalAccuracy: 0,
+          keyStats: {},
+          bigramStats: {
+            th: { attempts: 20, errors: 4, latencyTotalMs: 0, latencySamples: 0, recurrence: 0 },
+            qu: { attempts: 10, errors: 1, latencyTotalMs: 0, latencySamples: 0, recurrence: 0 },
+          },
+        },
+      },
+    };
+
+    expect(getGuestWeakPoints(withStats)).toEqual([
+      { type: 'bigram', value: 'th', accuracy: 80 },
+      { type: 'key', value: 'p', accuracy: 87.5 },
+      { type: 'bigram', value: 'qu', accuracy: 90 },
+    ]);
+  });
+
+  it('ignora teclas y bigramas con muy pocos intentos', () => {
+    expect(getGuestWeakPoints(progress)).toEqual([]);
+  });
+});
+
+describe('getGuestTodaySummary', () => {
+  it('calcula minutos, deltas y meta diaria solo con sesiones de hoy', () => {
+    const now = new Date('2026-07-21T20:00:00.000Z');
+    const todayProgress = {
+      ...progress,
+      practice: [
+        { ...progress.practice[0], completedAt: '2026-07-21T10:00:00.000Z', netWpm: 47, accuracy: 94, timeElapsed: 360 },
+        { ...progress.practice[0], completedAt: '2026-07-21T12:00:00.000Z', netWpm: 51, accuracy: 96, timeElapsed: 360 },
+        { ...progress.practice[0], completedAt: '2026-07-20T10:00:00.000Z', netWpm: 30, accuracy: 90, timeElapsed: 600 },
+      ],
+    };
+
+    const summary = getGuestTodaySummary(todayProgress, 15, now);
+
+    expect(summary.minutesTrained).toBe(12);
+    expect(summary.dailyGoalMinutes).toBe(15);
+    expect(summary.sessionsToday).toBe(2);
+    expect(summary.wpm).toEqual({ start: 47, end: 51, delta: 4 });
+    expect(summary.accuracy).toEqual({ start: 94, end: 96, delta: 2 });
+  });
+
+  it('devuelve valores nulos cuando no hay sesiones hoy', () => {
+    const summary = getGuestTodaySummary(progress, 15, new Date('2026-08-01T00:00:00.000Z'));
+
+    expect(summary.minutesTrained).toBe(0);
+    expect(summary.sessionsToday).toBe(0);
+    expect(summary.wpm).toEqual({ start: null, end: null, delta: 0 });
+    expect(summary.accuracy).toEqual({ start: null, end: null, delta: 0 });
   });
 });
