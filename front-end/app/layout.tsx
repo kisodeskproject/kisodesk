@@ -1,7 +1,28 @@
 import type { Metadata } from 'next';
 import { headers } from 'next/headers';
+import {
+  Courier_Prime,
+  Fira_Code,
+  IBM_Plex_Mono,
+  JetBrains_Mono,
+  Source_Code_Pro,
+} from 'next/font/google';
 import { getHtmlLang, toSupportedLocale } from '@/lib/locales';
 import './globals.css';
+
+const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains' });
+const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-fira' });
+const sourceCodePro = Source_Code_Pro({ subsets: ['latin'], variable: '--font-source' });
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-ibm',
+});
+const courierPrime = Courier_Prime({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-courier',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kisodesk.online'),
@@ -24,7 +45,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html
       lang={getHtmlLang(lang)}
       suppressHydrationWarning
-      className="h-full dark"
+      className={`h-full dark ${jetbrainsMono.variable} ${firaCode.variable} ${sourceCodePro.variable} ${ibmPlexMono.variable} ${courierPrime.variable}`}
       style={{ colorScheme: 'dark' }}
     >
       <head>
