@@ -1,12 +1,8 @@
 import type { PracticeDay, ProgressData } from '@/types/progress';
-import type { TodayTrainingSummary, WeakPoint } from '@/types/todayTraining';
 import type { WeakKey, WeakKeysResponse } from '@/types/weakKeys';
 
 import type { GuestProgress } from './guestProgressStore';
 import type { Locale } from './locales';
-
-const MINIMUM_WEAK_POINT_ATTEMPTS = 5;
-const DEFAULT_DAILY_GOAL_MINUTES = 15;
 
 type GuestActivity = {
   completedAt: string;
@@ -212,69 +208,6 @@ export function getGuestWeakKeysResponse(progress: GuestProgress): WeakKeysRespo
       weakestAccuracy: weakest.accuracy,
     },
     insufficientData: false,
-  };
-}
-
-export function getGuestWeakPoints(progress: GuestProgress, limit = 3): WeakPoint[] {
-  const weakKeys = getGuestWeakKeys(progress).filter(
-    (key) => key.totalAttempts >= MINIMUM_WEAK_POINT_ATTEMPTS,
-  );
-
-  const bigramTotals = new Map<string, { attempts: number; errors: number }>();
-  for (const profile of Object.values(progress.adaptiveProfiles ?? {})) {
-    for (const [bigram, stat] of Object.entries(profile.bigramStats ?? {})) {
-      const current = bigramTotals.get(bigram) ?? { attempts: 0, errors: 0 };
-      current.attempts += stat.attempts;
-      current.errors += stat.errors;
-      bigramTotals.set(bigram, current);
-    }
-  }
-
-  const points: WeakPoint[] = [
-    ...weakKeys.map((key) => ({ type: 'key' as const, value: key.key, accuracy: key.accuracy })),
-    ...[...bigramTotals.entries()]
-      .filter(([, stat]) => stat.attempts >= MINIMUM_WEAK_POINT_ATTEMPTS)
-      .map(([value, stat]) => ({
-        type: 'bigram' as const,
-        value,
-        accuracy: Math.round((100 - (stat.errors / stat.attempts) * 100) * 10) / 10,
-      })),
-  ];
-
-  return points.sort((a, b) => a.accuracy - b.accuracy).slice(0, limit);
-}
-
-export function getGuestTodaySummary(
-  progress: GuestProgress,
-  dailyGoalMinutes = DEFAULT_DAILY_GOAL_MINUTES,
-  now = new Date(),
-): TodayTrainingSummary {
-  const todayKey = dateKey(now);
-  const todaySessions = progress.practice
-    .filter((session) => dateKey(new Date(session.completedAt)) === todayKey)
-    .sort((a, b) => new Date(a.completedAt).getTime() - new Date(b.completedAt).getTime());
-
-  const minutesTrained = Math.floor(
-    todaySessions.reduce((sum, session) => sum + session.timeElapsed, 0) / 60,
-  );
-  const first = todaySessions[0];
-  const last = todaySessions[todaySessions.length - 1];
-
-  return {
-    minutesTrained,
-    dailyGoalMinutes,
-    sessionsToday: todaySessions.length,
-    wpm: {
-      start: first?.netWpm ?? null,
-      end: last?.netWpm ?? null,
-      delta: first && last ? last.netWpm - first.netWpm : 0,
-    },
-    accuracy: {
-      start: first?.accuracy ?? null,
-      end: last?.accuracy ?? null,
-      delta: first && last ? last.accuracy - first.accuracy : 0,
-    },
-    weakPoints: getGuestWeakPoints(progress),
   };
 }
 

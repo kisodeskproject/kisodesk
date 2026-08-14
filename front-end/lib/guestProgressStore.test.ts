@@ -16,13 +16,11 @@ import {
   getGuestAdaptiveProfile,
   getGuestCourseProgress,
   getGuestLessonProgress,
-  readGuestDailyGoalMinutes,
   readGuestProgress,
   recordGuestLessonProgress,
   recordGuestPracticeResult,
   syncGuestPracticeResults,
   syncGuestLessonAttempts,
-  writeGuestDailyGoalMinutes,
 } from './guestProgressStore';
 
 const mockSavePracticeResult = savePracticeResult as MockedFunction<typeof savePracticeResult>;
@@ -372,29 +370,5 @@ describe('guestProgressStore', () => {
     });
 
     expect(getGuestAdaptiveProfile('es', 'es-latam', 'qwerty-latam')).toBeNull();
-  });
-});
-
-describe('meta diaria de invitado', () => {
-  beforeEach(() => {
-    window.localStorage.clear();
-  });
-
-  it('usa 15 minutos por defecto cuando no hay valor guardado', () => {
-    expect(readGuestDailyGoalMinutes()).toBe(15);
-  });
-
-  it('guarda y recupera la meta diaria elegida', () => {
-    writeGuestDailyGoalMinutes(30);
-
-    expect(readGuestDailyGoalMinutes()).toBe(30);
-  });
-
-  it('recorta la meta diaria al rango permitido (5-180 min)', () => {
-    writeGuestDailyGoalMinutes(500);
-    expect(readGuestDailyGoalMinutes()).toBe(180);
-
-    writeGuestDailyGoalMinutes(1);
-    expect(readGuestDailyGoalMinutes()).toBe(5);
   });
 });

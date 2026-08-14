@@ -18,7 +18,6 @@ export interface User {
   showPresenceToFriends?: boolean;
   shareStatsWithFriends?: boolean;
   allowFriendRequests?: boolean;
-  dailyGoalMinutes?: number;
   createdAt?: string;
   updatedAt?: string;
 }

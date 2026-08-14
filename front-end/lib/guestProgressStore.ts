@@ -406,38 +406,6 @@ export function readGuestProgress(): GuestProgress {
   }
 }
 
-const GUEST_DAILY_GOAL_STORAGE_KEY = 'kiso-guest-daily-goal-minutes';
-const DEFAULT_GUEST_DAILY_GOAL_MINUTES = 15;
-const MIN_GUEST_DAILY_GOAL_MINUTES = 5;
-const MAX_GUEST_DAILY_GOAL_MINUTES = 180;
-
-export function readGuestDailyGoalMinutes(): number {
-  if (!isBrowser()) return DEFAULT_GUEST_DAILY_GOAL_MINUTES;
-  try {
-    const stored = window.localStorage.getItem(GUEST_DAILY_GOAL_STORAGE_KEY);
-    const value = stored ? Number(stored) : NaN;
-    if (!Number.isFinite(value)) return DEFAULT_GUEST_DAILY_GOAL_MINUTES;
-    return Math.min(MAX_GUEST_DAILY_GOAL_MINUTES, Math.max(MIN_GUEST_DAILY_GOAL_MINUTES, value));
-  } catch {
-    return DEFAULT_GUEST_DAILY_GOAL_MINUTES;
-  }
-}
-
-export function writeGuestDailyGoalMinutes(minutes: number): number {
-  const clamped = Math.min(
-    MAX_GUEST_DAILY_GOAL_MINUTES,
-    Math.max(MIN_GUEST_DAILY_GOAL_MINUTES, Math.round(minutes)),
-  );
-  if (isBrowser()) {
-    try {
-      window.localStorage.setItem(GUEST_DAILY_GOAL_STORAGE_KEY, String(clamped));
-    } catch {
-      // localStorage puede no estar disponible.
-    }
-  }
-  return clamped;
-}
-
 export function recordGuestLessonProgress(
   input: Omit<GuestLessonProgress, 'completedAt' | 'attempts' | 'totalTimeElapsed'> & {
     timeElapsed?: number;

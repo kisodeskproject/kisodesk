@@ -126,7 +126,6 @@ model User {
   layout                LayoutCode?
   accessibility         Json?
   bestGrossWpm          Int?          @map("best_gross_wpm")
-  dailyGoalMinutes      Int           @default(15) @map("daily_goal_minutes")
   createdAt             DateTime      @default(now()) @map("created_at")
   updatedAt             DateTime      @updatedAt @map("updated_at")
   lastLoginAt           DateTime?     @map("last_login_at")

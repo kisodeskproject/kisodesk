@@ -688,23 +688,6 @@
           "correctAttempts": "{correctAttempts}/{totalAttempts} aciertos"
         }
       },
-      "todayTrainingCard": {
-        "general": {
-          "title": "Tu entrenamiento de hoy",
-          "minutesTrained": "{minutes} min entrenados",
-          "wpmLabel": "PPM",
-          "accuracyLabel": "Precisión",
-          "noSessionsToday": "Todavía no practicaste hoy.",
-          "weakPointsTitle": "Tus 3 puntos débiles",
-          "keyLabel": "tecla \"{key}\"",
-          "recommendedTitle": "Entrenamiento recomendado",
-          "dailyGoalLabel": "Meta diaria",
-          "goalOption": "{minutes} min",
-          "minutesRemaining": "{completed}/{goal} min completados",
-          "goalCompleted": "¡Meta diaria completada!",
-          "startTrainingCta": "Comenzar entrenamiento"
-        }
-      },
       "fingerDistribution": {
         "general": {
           "title": "Distribución por dedo",

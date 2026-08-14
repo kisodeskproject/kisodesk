@@ -33,7 +33,6 @@ const USER_SELECT = {
   showPresenceToFriends: true,
   shareStatsWithFriends: true,
   allowFriendRequests: true,
-  dailyGoalMinutes: true,
   createdAt: true,
   updatedAt: true,
   lastLoginAt: true,
@@ -53,7 +52,6 @@ type UserUpdateData = {
   showPresenceToFriends?: boolean;
   shareStatsWithFriends?: boolean;
   allowFriendRequests?: boolean;
-  dailyGoalMinutes?: number;
   passwordHash?: string;
 };
 
@@ -416,8 +414,6 @@ export class UsersService {
     if (dto.allowFriendRequests !== undefined) {
       data.allowFriendRequests = dto.allowFriendRequests;
     }
-    if (dto.dailyGoalMinutes !== undefined) data.dailyGoalMinutes = dto.dailyGoalMinutes;
-
     const hasPublicFeatureEnabled =
       (dto.showInRanking ?? currentUser.showInRanking) ||
       (dto.searchableByAlias ?? currentUser.searchableByAlias) ||
@@ -543,7 +539,6 @@ export class UsersService {
         showPresenceToFriends: true,
         shareStatsWithFriends: true,
         allowFriendRequests: true,
-        dailyGoalMinutes: true,
         createdAt: true,
         updatedAt: true,
         lastLoginAt: true,
@@ -563,7 +558,6 @@ export class UsersService {
       showPresenceToFriends: user.showPresenceToFriends,
       shareStatsWithFriends: user.shareStatsWithFriends,
       allowFriendRequests: user.allowFriendRequests,
-      dailyGoalMinutes: user.dailyGoalMinutes,
       layout: user.layout,
       interfaceLanguage: user.interfaceLanguage,
       createdAt: user.createdAt,

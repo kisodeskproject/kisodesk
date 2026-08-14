@@ -6,4 +6,3 @@ export { default as RecommendationsList } from './RecommendationsList';
 export { default as WeakKeysPanel } from './WeakKeysPanel';
 export { default as ErrorTrends } from './ErrorTrends';
 export { default as FingerDistribution } from './FingerDistribution';
-export { default as TodayTrainingCard } from './TodayTrainingCard';
